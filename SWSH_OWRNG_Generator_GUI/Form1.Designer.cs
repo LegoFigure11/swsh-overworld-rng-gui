@@ -37,11 +37,11 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMin = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.hpFilter = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.atkFilter = new System.Windows.Forms.Label();
+            this.defFilter = new System.Windows.Forms.Label();
+            this.spaFilter = new System.Windows.Forms.Label();
+            this.spdFilter = new System.Windows.Forms.Label();
+            this.speFilter = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.hpMinFilter = new System.Windows.Forms.Button();
             this.hpMaxFilter = new System.Windows.Forms.Button();
@@ -176,52 +176,53 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpFilter.TabIndex = 16;
             this.hpFilter.Text = "HP:";
             this.hpFilter.Click += new System.EventHandler(this.hpFilter_Click);
+            this.hpFilter.Click += new System.EventHandler(this.resetFilters);
             // 
-            // label5
+            // atkFilter
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(321, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Atk:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.atkFilter.AutoSize = true;
+            this.atkFilter.Location = new System.Drawing.Point(321, 35);
+            this.atkFilter.Name = "atkFilter";
+            this.atkFilter.Size = new System.Drawing.Size(26, 13);
+            this.atkFilter.TabIndex = 17;
+            this.atkFilter.Text = "Atk:";
+            this.atkFilter.Click += new System.EventHandler(this.atkFilter_Click);
             // 
-            // label6
+            // defFilter
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(320, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Def:";
+            this.defFilter.AutoSize = true;
+            this.defFilter.Location = new System.Drawing.Point(320, 61);
+            this.defFilter.Name = "defFilter";
+            this.defFilter.Size = new System.Drawing.Size(27, 13);
+            this.defFilter.TabIndex = 18;
+            this.defFilter.Text = "Def:";
             // 
-            // label7
+            // spaFilter
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(317, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "SpA:";
+            this.spaFilter.AutoSize = true;
+            this.spaFilter.Location = new System.Drawing.Point(317, 87);
+            this.spaFilter.Name = "spaFilter";
+            this.spaFilter.Size = new System.Drawing.Size(30, 13);
+            this.spaFilter.TabIndex = 19;
+            this.spaFilter.Text = "SpA:";
             // 
-            // label8
+            // spdFilter
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(316, 113);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "SpD:";
+            this.spdFilter.AutoSize = true;
+            this.spdFilter.Location = new System.Drawing.Point(316, 113);
+            this.spdFilter.Name = "spdFilter";
+            this.spdFilter.Size = new System.Drawing.Size(31, 13);
+            this.spdFilter.TabIndex = 20;
+            this.spdFilter.Text = "SpD:";
             // 
-            // label9
+            // speFilter
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(316, 139);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 13);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Spe:";
+            this.speFilter.AutoSize = true;
+            this.speFilter.Location = new System.Drawing.Point(316, 139);
+            this.speFilter.Name = "speFilter";
+            this.speFilter.Size = new System.Drawing.Size(29, 13);
+            this.speFilter.TabIndex = 21;
+            this.speFilter.Text = "Spe:";
             // 
             // label10
             // 
@@ -963,11 +964,11 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.speFilter);
+            this.Controls.Add(this.spdFilter);
+            this.Controls.Add(this.spaFilter);
+            this.Controls.Add(this.defFilter);
+            this.Controls.Add(this.atkFilter);
             this.Controls.Add(this.hpFilter);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox13);
@@ -1001,11 +1002,11 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.TextBox hpMin;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label hpFilter;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label atkFilter;
+        private System.Windows.Forms.Label defFilter;
+        private System.Windows.Forms.Label spaFilter;
+        private System.Windows.Forms.Label spdFilter;
+        private System.Windows.Forms.Label speFilter;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button hpMinFilter;
         private System.Windows.Forms.Button hpMaxFilter;

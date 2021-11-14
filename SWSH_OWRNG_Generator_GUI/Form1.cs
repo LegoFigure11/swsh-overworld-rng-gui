@@ -56,6 +56,16 @@ namespace SWSH_OWRNG_Generator_GUI
             }
         }
 
+        private void resetFilters(object sender, EventArgs e)
+        {
+            Label label = (Label)sender;
+            string boxName = label.Name.Substring(0,label.Name.Length-6);
+            string minFilter = boxName + "MinFilter";
+            var result = this.GetType().GetField(minFilter);
+            
+            Console.WriteLine($"< {result} >");
+        }
+
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
@@ -103,7 +113,7 @@ namespace SWSH_OWRNG_Generator_GUI
             textBox8.Text = "31";
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void atkFilter_Click(object sender, EventArgs e)
         {
             textBox7.Clear();
             textBox7.Text = "0";
