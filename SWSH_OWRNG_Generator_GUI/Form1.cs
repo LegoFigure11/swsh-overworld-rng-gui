@@ -38,7 +38,7 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 textBox.Text = "0";
             }
-            
+
         }
 
         private void LevelSlot_TextChanged(object sender, EventArgs e)
@@ -318,10 +318,13 @@ namespace SWSH_OWRNG_Generator_GUI
             bool ExtraRoll = CheckExtraRoll.Checked;
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
+            uint[] MinIVs = { UInt16.Parse(hpMin.Text), UInt16.Parse(atkMin.Text), UInt16.Parse(defMin.Text), UInt16.Parse(spaMin.Text), UInt16.Parse(spdMin.Text), UInt16.Parse(speMin.Text) };
+            uint[] MaxIVs = { UInt16.Parse(hpMax.Text), UInt16.Parse(atkMax.Text), UInt16.Parse(defMax.Text), UInt16.Parse(spaMax.Text), UInt16.Parse(spdMax.Text), UInt16.Parse(speMax.Text) };
+
 
             Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, ExtraRoll, DesiredMark, DesiredShiny,
-                LevelMin, LevelMax, SlotMin, SlotMax
+                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs
             );
         }
 
