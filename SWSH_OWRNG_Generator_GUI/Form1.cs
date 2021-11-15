@@ -32,7 +32,7 @@ namespace SWSH_OWRNG_Generator_GUI
             hpMax.Text = "0";
         }
 
-        private void Filter_TextChanged(object sender, EventArgs e)
+        private void Filter_LostFocus(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             if (Int32.TryParse(textBox.Text, out int i))
@@ -40,10 +40,12 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (i < 0) textBox.Text = "0";
                 if (i > 31) textBox.Text = "31";
             }
+
             else
             {
                 textBox.Text = "0";
             }
+            
         }
 
         private void LevelSlot_TextChanged(object sender, EventArgs e)
@@ -141,13 +143,6 @@ namespace SWSH_OWRNG_Generator_GUI
             atkMax.Text = "31";
         }
 
-        private void AtkFilter_Click(object sender, EventArgs e)
-        {
-            atkMin.Clear();
-            atkMin.Text = "0";
-            atkMax.Clear();
-            atkMax.Text = "31";
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

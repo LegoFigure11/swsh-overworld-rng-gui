@@ -161,7 +161,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMin.TabIndex = 4;
             this.hpMin.Text = "0";
             this.hpMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.hpMin.TextChanged += new System.EventHandler(this.Filter_TextChanged);
+            this.hpMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // hpMax
             // 
@@ -171,6 +171,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMax.TabIndex = 5;
             this.hpMax.Text = "31";
             this.hpMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.hpMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // hpFilter
             // 
@@ -190,7 +191,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkFilter.Size = new System.Drawing.Size(26, 13);
             this.atkFilter.TabIndex = 17;
             this.atkFilter.Text = "Atk:";
-            this.atkFilter.Click += new System.EventHandler(this.AtkFilter_Click);
+            this.atkFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // defFilter
             // 
@@ -200,6 +201,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defFilter.Size = new System.Drawing.Size(27, 13);
             this.defFilter.TabIndex = 18;
             this.defFilter.Text = "Def:";
+            this.defFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // spaFilter
             // 
@@ -209,6 +211,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaFilter.Size = new System.Drawing.Size(30, 13);
             this.spaFilter.TabIndex = 19;
             this.spaFilter.Text = "SpA:";
+            this.spaFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // spdFilter
             // 
@@ -218,6 +221,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdFilter.Size = new System.Drawing.Size(31, 13);
             this.spdFilter.TabIndex = 20;
             this.spdFilter.Text = "SpD:";
+            this.spdFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // speFilter
             // 
@@ -227,6 +231,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speFilter.Size = new System.Drawing.Size(29, 13);
             this.speFilter.TabIndex = 21;
             this.speFilter.Text = "Spe:";
+            this.speFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // label10
             // 
