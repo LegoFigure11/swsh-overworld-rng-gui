@@ -171,7 +171,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMax.TabIndex = 5;
             this.hpMax.Text = "31";
             this.hpMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.hpMax.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // hpFilter
             // 
@@ -266,7 +265,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputTID.Size = new System.Drawing.Size(102, 20);
             this.InputTID.TabIndex = 45;
             this.InputTID.Text = "1390";
-            this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
+            this.InputTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // InputSID
             // 
@@ -276,7 +275,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSID.Size = new System.Drawing.Size(102, 20);
             this.InputSID.TabIndex = 46;
             this.InputSID.Text = "42069";
-            this.InputSID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
+            this.InputSID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // LabelTID
             // 
@@ -314,7 +313,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelMaxAdv.Size = new System.Drawing.Size(55, 13);
             this.LabelMaxAdv.TabIndex = 50;
             this.LabelMaxAdv.Text = "Max Adv.:";
-            this.LabelMaxAdv.Click += new System.EventHandler(this.label18_Click);
             // 
             // LabelMark
             // 
@@ -839,7 +837,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMax.TabIndex = 23;
             this.atkMax.Text = "31";
             this.atkMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.atkMax.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // atkMaxFilter
             // 
@@ -916,7 +913,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMin.TabIndex = 6;
             this.atkMin.Text = "0";
             this.atkMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.atkMin.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // spaMaxFilter
             // 

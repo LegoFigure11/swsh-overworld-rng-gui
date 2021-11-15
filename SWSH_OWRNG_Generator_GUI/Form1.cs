@@ -24,16 +24,6 @@ namespace SWSH_OWRNG_Generator_GUI
 
         }
 
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
         private void HpMinFilter_Click(object sender, EventArgs e)
         {
             hpMin.Clear();
@@ -107,11 +97,6 @@ namespace SWSH_OWRNG_Generator_GUI
             Console.WriteLine($"< {result} >");
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void HpMaxFilter_Click(object sender, EventArgs e)
         {
             hpMin.Clear();
@@ -126,16 +111,6 @@ namespace SWSH_OWRNG_Generator_GUI
             hpMin.Text = "0";
             hpMax.Clear();
             hpMax.Text = "31";
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void AtkMinFilter_Click(object sender, EventArgs e)
@@ -296,6 +271,25 @@ namespace SWSH_OWRNG_Generator_GUI
                 else
                 {
                     e.KeyChar = char.ToUpper(e.KeyChar);
+                }
+            }
+        }
+
+        private void DecInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string s = "";
+
+            s += e.KeyChar;
+
+            byte[] b = Encoding.ASCII.GetBytes(s);
+
+            if (e.KeyChar != (char)Keys.Back && !char.IsControl(e.KeyChar))
+            {
+                if (!(((0x30 <= b[0]) && (b[0] <= 0x39)) ||
+                      (('z' <= b[0]) && (b[0] <= 'a')) ||
+                      (('Z' <= b[0]) && (b[0] <= 'A'))))
+                {
+                    e.Handled = true;
                 }
             }
         }
