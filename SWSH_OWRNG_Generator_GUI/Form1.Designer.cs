@@ -30,12 +30,12 @@ namespace SWSH_OWRNG_Generator_GUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LabelState0 = new System.Windows.Forms.Label();
+            this.InputState0 = new System.Windows.Forms.TextBox();
+            this.InputState1 = new System.Windows.Forms.TextBox();
+            this.LabelState1 = new System.Windows.Forms.Label();
             this.hpMin = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.hpMax = new System.Windows.Forms.TextBox();
             this.hpFilter = new System.Windows.Forms.Label();
             this.atkFilter = new System.Windows.Forms.Label();
             this.defFilter = new System.Windows.Forms.Label();
@@ -45,33 +45,33 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label10 = new System.Windows.Forms.Label();
             this.hpMinFilter = new System.Windows.Forms.Button();
             this.hpMaxFilter = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.InputTID = new System.Windows.Forms.TextBox();
+            this.InputSID = new System.Windows.Forms.TextBox();
+            this.LabelTID = new System.Windows.Forms.Label();
+            this.LabelSID = new System.Windows.Forms.Label();
+            this.InputMaxAdv = new System.Windows.Forms.TextBox();
+            this.LabelMaxAdv = new System.Windows.Forms.Label();
+            this.LabelMark = new System.Windows.Forms.Label();
+            this.ImageRareMark = new System.Windows.Forms.PictureBox();
+            this.SelectedMark = new System.Windows.Forms.ComboBox();
+            this.CheckShinyCharm = new System.Windows.Forms.CheckBox();
+            this.CheckMarkCharm = new System.Windows.Forms.CheckBox();
+            this.CheckWeather = new System.Windows.Forms.CheckBox();
+            this.CheckStatic = new System.Windows.Forms.CheckBox();
+            this.CheckFishing = new System.Windows.Forms.CheckBox();
+            this.CheckHeldItem = new System.Windows.Forms.CheckBox();
+            this.CheckExtraRoll = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.LevelMax = new System.Windows.Forms.TextBox();
+            this.LevelMin = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.SlotMax = new System.Windows.Forms.TextBox();
+            this.SlotMin = new System.Windows.Forms.TextBox();
+            this.LabelLevel = new System.Windows.Forms.Label();
+            this.LabelSlot = new System.Windows.Forms.Label();
+            this.ButtonSearch = new System.Windows.Forms.Button();
+            this.SelectedShiny = new System.Windows.Forms.ComboBox();
+            this.LabelShiny = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,64 +88,64 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.speMinFilter = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.defMax = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.spdMinFilter = new System.Windows.Forms.Button();
             this.spdMaxFilter = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.speMaxFilter = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.spaMin = new System.Windows.Forms.TextBox();
             this.atkMinFilter = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.spdMin = new System.Windows.Forms.TextBox();
+            this.spdMax = new System.Windows.Forms.TextBox();
+            this.speMin = new System.Windows.Forms.TextBox();
+            this.speMax = new System.Windows.Forms.TextBox();
+            this.atkMax = new System.Windows.Forms.TextBox();
             this.atkMaxFilter = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.defMin = new System.Windows.Forms.TextBox();
             this.defMinFilter = new System.Windows.Forms.Button();
             this.spaMinFilter = new System.Windows.Forms.Button();
             this.defMaxFilter = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.spaMax = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.atkMin = new System.Windows.Forms.TextBox();
             this.spaMaxFilter = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // LabelState0
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "State[0]: ";
+            this.LabelState0.AutoSize = true;
+            this.LabelState0.Location = new System.Drawing.Point(15, 9);
+            this.LabelState0.Name = "LabelState0";
+            this.LabelState0.Size = new System.Drawing.Size(50, 13);
+            this.LabelState0.TabIndex = 0;
+            this.LabelState0.Text = "State[0]: ";
             // 
-            // textBox3
+            // InputState0
             // 
-            this.textBox3.Location = new System.Drawing.Point(68, 6);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(205, 20);
-            this.textBox3.TabIndex = 1;
+            this.InputState0.Location = new System.Drawing.Point(68, 6);
+            this.InputState0.Name = "InputState0";
+            this.InputState0.Size = new System.Drawing.Size(205, 20);
+            this.InputState0.TabIndex = 1;
             // 
-            // textBox4
+            // InputState1
             // 
-            this.textBox4.Location = new System.Drawing.Point(68, 32);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(205, 20);
-            this.textBox4.TabIndex = 2;
+            this.InputState1.Location = new System.Drawing.Point(68, 32);
+            this.InputState1.Name = "InputState1";
+            this.InputState1.Size = new System.Drawing.Size(205, 20);
+            this.InputState1.TabIndex = 2;
             // 
-            // label3
+            // LabelState1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "State[1]:";
+            this.LabelState1.AutoSize = true;
+            this.LabelState1.Location = new System.Drawing.Point(15, 35);
+            this.LabelState1.Name = "LabelState1";
+            this.LabelState1.Size = new System.Drawing.Size(47, 13);
+            this.LabelState1.TabIndex = 3;
+            this.LabelState1.Text = "State[1]:";
             // 
             // hpMin
             // 
@@ -157,15 +157,15 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hpMin.TextChanged += new System.EventHandler(this.filter_TextChanged);
             // 
-            // textBox6
+            // hpMax
             // 
-            this.textBox6.Location = new System.Drawing.Point(403, 6);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(28, 20);
-            this.textBox6.TabIndex = 5;
-            this.textBox6.Text = "31";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.hpMax.Location = new System.Drawing.Point(403, 6);
+            this.hpMax.Name = "hpMax";
+            this.hpMax.Size = new System.Drawing.Size(28, 20);
+            this.hpMax.TabIndex = 5;
+            this.hpMax.Text = "31";
+            this.hpMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.hpMax.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // hpFilter
             // 
@@ -175,7 +175,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpFilter.Size = new System.Drawing.Size(25, 13);
             this.hpFilter.TabIndex = 16;
             this.hpFilter.Text = "HP:";
-            this.hpFilter.Click += new System.EventHandler(this.hpFilter_Click);
             this.hpFilter.Click += new System.EventHandler(this.resetFilters);
             // 
             // atkFilter
@@ -253,81 +252,81 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMaxFilter.UseVisualStyleBackColor = true;
             this.hpMaxFilter.Click += new System.EventHandler(this.hpMaxFilter_Click);
             // 
-            // textBox17
+            // InputTID
             // 
-            this.textBox17.Location = new System.Drawing.Point(68, 84);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(102, 20);
-            this.textBox17.TabIndex = 45;
-            this.textBox17.Text = "1390";
+            this.InputTID.Location = new System.Drawing.Point(68, 84);
+            this.InputTID.Name = "InputTID";
+            this.InputTID.Size = new System.Drawing.Size(102, 20);
+            this.InputTID.TabIndex = 45;
+            this.InputTID.Text = "1390";
             // 
-            // textBox18
+            // InputSID
             // 
-            this.textBox18.Location = new System.Drawing.Point(68, 110);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(102, 20);
-            this.textBox18.TabIndex = 46;
-            this.textBox18.Text = "42069";
+            this.InputSID.Location = new System.Drawing.Point(68, 110);
+            this.InputSID.Name = "InputSID";
+            this.InputSID.Size = new System.Drawing.Size(102, 20);
+            this.InputSID.TabIndex = 46;
+            this.InputSID.Text = "42069";
             // 
-            // label16
+            // LabelTID
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(34, 87);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(28, 13);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "TID:";
+            this.LabelTID.AutoSize = true;
+            this.LabelTID.Location = new System.Drawing.Point(34, 87);
+            this.LabelTID.Name = "LabelTID";
+            this.LabelTID.Size = new System.Drawing.Size(28, 13);
+            this.LabelTID.TabIndex = 47;
+            this.LabelTID.Text = "TID:";
             // 
-            // label17
+            // LabelSID
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(34, 113);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 13);
-            this.label17.TabIndex = 48;
-            this.label17.Text = "SID:";
+            this.LabelSID.AutoSize = true;
+            this.LabelSID.Location = new System.Drawing.Point(34, 113);
+            this.LabelSID.Name = "LabelSID";
+            this.LabelSID.Size = new System.Drawing.Size(28, 13);
+            this.LabelSID.TabIndex = 48;
+            this.LabelSID.Text = "SID:";
             // 
-            // textBox19
+            // InputMaxAdv
             // 
-            this.textBox19.Location = new System.Drawing.Point(68, 136);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(102, 20);
-            this.textBox19.TabIndex = 49;
-            this.textBox19.Text = "50000000";
+            this.InputMaxAdv.Location = new System.Drawing.Point(68, 136);
+            this.InputMaxAdv.Name = "InputMaxAdv";
+            this.InputMaxAdv.Size = new System.Drawing.Size(102, 20);
+            this.InputMaxAdv.TabIndex = 49;
+            this.InputMaxAdv.Text = "50000000";
             // 
-            // label18
+            // LabelMaxAdv
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 140);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 13);
-            this.label18.TabIndex = 50;
-            this.label18.Text = "Max Adv.:";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
+            this.LabelMaxAdv.AutoSize = true;
+            this.LabelMaxAdv.Location = new System.Drawing.Point(7, 140);
+            this.LabelMaxAdv.Name = "LabelMaxAdv";
+            this.LabelMaxAdv.Size = new System.Drawing.Size(55, 13);
+            this.LabelMaxAdv.TabIndex = 50;
+            this.LabelMaxAdv.Text = "Max Adv.:";
+            this.LabelMaxAdv.Click += new System.EventHandler(this.label18_Click);
             // 
-            // label19
+            // LabelMark
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(313, 165);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(34, 13);
-            this.label19.TabIndex = 52;
-            this.label19.Text = "Mark:";
+            this.LabelMark.AutoSize = true;
+            this.LabelMark.Location = new System.Drawing.Point(313, 165);
+            this.LabelMark.Name = "LabelMark";
+            this.LabelMark.Size = new System.Drawing.Size(34, 13);
+            this.LabelMark.TabIndex = 52;
+            this.LabelMark.Text = "Mark:";
             // 
-            // pictureBox1
+            // ImageRareMark
             // 
-            this.pictureBox1.Image = global::SWSH_OWRNG_Generator_GUI.Properties.Resources.raremark;
-            this.pictureBox1.Location = new System.Drawing.Point(182, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
+            this.ImageRareMark.Image = global::SWSH_OWRNG_Generator_GUI.Properties.Resources.raremark;
+            this.ImageRareMark.Location = new System.Drawing.Point(182, 58);
+            this.ImageRareMark.Name = "ImageRareMark";
+            this.ImageRareMark.Size = new System.Drawing.Size(128, 128);
+            this.ImageRareMark.TabIndex = 53;
+            this.ImageRareMark.TabStop = false;
             // 
-            // comboBox1
+            // SelectedMark
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.SelectedMark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectedMark.FormattingEnabled = true;
+            this.SelectedMark.Items.AddRange(new object[] {
             "Any",
             "None",
             "Uncommon",
@@ -363,82 +362,82 @@ namespace SWSH_OWRNG_Generator_GUI
             "Thorny",
             "Vigor",
             "Slump"});
-            this.comboBox1.Location = new System.Drawing.Point(353, 162);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 21);
-            this.comboBox1.TabIndex = 54;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.SelectedMark.Location = new System.Drawing.Point(353, 162);
+            this.SelectedMark.Name = "SelectedMark";
+            this.SelectedMark.Size = new System.Drawing.Size(147, 21);
+            this.SelectedMark.TabIndex = 54;
+            this.SelectedMark.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // checkBox1
+            // CheckShinyCharm
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 162);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(85, 17);
-            this.checkBox1.TabIndex = 55;
-            this.checkBox1.Text = "Shiny Charm";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CheckShinyCharm.AutoSize = true;
+            this.CheckShinyCharm.Location = new System.Drawing.Point(12, 162);
+            this.CheckShinyCharm.Name = "CheckShinyCharm";
+            this.CheckShinyCharm.Size = new System.Drawing.Size(85, 17);
+            this.CheckShinyCharm.TabIndex = 55;
+            this.CheckShinyCharm.Text = "Shiny Charm";
+            this.CheckShinyCharm.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // CheckMarkCharm
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(12, 185);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(83, 17);
-            this.checkBox2.TabIndex = 56;
-            this.checkBox2.Text = "Mark Charm";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.CheckMarkCharm.AutoSize = true;
+            this.CheckMarkCharm.Location = new System.Drawing.Point(12, 185);
+            this.CheckMarkCharm.Name = "CheckMarkCharm";
+            this.CheckMarkCharm.Size = new System.Drawing.Size(83, 17);
+            this.CheckMarkCharm.TabIndex = 56;
+            this.CheckMarkCharm.Text = "Mark Charm";
+            this.CheckMarkCharm.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // CheckWeather
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(12, 208);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(67, 17);
-            this.checkBox3.TabIndex = 57;
-            this.checkBox3.Text = "Weather";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.CheckWeather.AutoSize = true;
+            this.CheckWeather.Location = new System.Drawing.Point(12, 208);
+            this.CheckWeather.Name = "CheckWeather";
+            this.CheckWeather.Size = new System.Drawing.Size(67, 17);
+            this.CheckWeather.TabIndex = 57;
+            this.CheckWeather.Text = "Weather";
+            this.CheckWeather.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // CheckStatic
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(98, 162);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(53, 17);
-            this.checkBox4.TabIndex = 58;
-            this.checkBox4.Text = "Static";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.CheckStatic.AutoSize = true;
+            this.CheckStatic.Location = new System.Drawing.Point(98, 162);
+            this.CheckStatic.Name = "CheckStatic";
+            this.CheckStatic.Size = new System.Drawing.Size(53, 17);
+            this.CheckStatic.TabIndex = 58;
+            this.CheckStatic.Text = "Static";
+            this.CheckStatic.UseVisualStyleBackColor = true;
+            this.CheckStatic.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
-            // checkBox5
+            // CheckFishing
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(98, 185);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(59, 17);
-            this.checkBox5.TabIndex = 59;
-            this.checkBox5.Text = "Fishing";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.CheckFishing.AutoSize = true;
+            this.CheckFishing.Location = new System.Drawing.Point(98, 185);
+            this.CheckFishing.Name = "CheckFishing";
+            this.CheckFishing.Size = new System.Drawing.Size(59, 17);
+            this.CheckFishing.TabIndex = 59;
+            this.CheckFishing.Text = "Fishing";
+            this.CheckFishing.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // CheckHeldItem
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(98, 208);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(111, 17);
-            this.checkBox6.TabIndex = 60;
-            this.checkBox6.Text = "Random held item";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.CheckHeldItem.AutoSize = true;
+            this.CheckHeldItem.Location = new System.Drawing.Point(98, 208);
+            this.CheckHeldItem.Name = "CheckHeldItem";
+            this.CheckHeldItem.Size = new System.Drawing.Size(111, 17);
+            this.CheckHeldItem.TabIndex = 60;
+            this.CheckHeldItem.Text = "Random held item";
+            this.CheckHeldItem.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // CheckExtraRoll
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(12, 231);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(76, 17);
-            this.checkBox7.TabIndex = 61;
-            this.checkBox7.Text = "On a route";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.CheckExtraRoll.AutoSize = true;
+            this.CheckExtraRoll.Location = new System.Drawing.Point(12, 231);
+            this.CheckExtraRoll.Name = "CheckExtraRoll";
+            this.CheckExtraRoll.Size = new System.Drawing.Size(147, 17);
+            this.CheckExtraRoll.TabIndex = 61;
+            this.CheckExtraRoll.Text = "Unknown Extra Mark Roll";
+            this.CheckExtraRoll.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
@@ -449,25 +448,25 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label20.TabIndex = 64;
             this.label20.Text = "-";
             // 
-            // textBox20
+            // LevelMax
             // 
-            this.textBox20.Location = new System.Drawing.Point(260, 229);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(28, 20);
-            this.textBox20.TabIndex = 63;
-            this.textBox20.Text = "0";
-            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox20.TextChanged += new System.EventHandler(this.textBox20_TextChanged);
+            this.LevelMax.Location = new System.Drawing.Point(260, 229);
+            this.LevelMax.Name = "LevelMax";
+            this.LevelMax.Size = new System.Drawing.Size(28, 20);
+            this.LevelMax.TabIndex = 63;
+            this.LevelMax.Text = "0";
+            this.LevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LevelMax.TextChanged += new System.EventHandler(this.textBox20_TextChanged);
             // 
-            // textBox21
+            // LevelMin
             // 
-            this.textBox21.Location = new System.Drawing.Point(210, 229);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(28, 20);
-            this.textBox21.TabIndex = 62;
-            this.textBox21.Text = "0";
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox21.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
+            this.LevelMin.Location = new System.Drawing.Point(210, 229);
+            this.LevelMin.Name = "LevelMin";
+            this.LevelMin.Size = new System.Drawing.Size(28, 20);
+            this.LevelMin.TabIndex = 62;
+            this.LevelMin.Text = "0";
+            this.LevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LevelMin.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             // 
             // label21
             // 
@@ -478,74 +477,74 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label21.TabIndex = 67;
             this.label21.Text = "-";
             // 
-            // textBox22
+            // SlotMax
             // 
-            this.textBox22.Location = new System.Drawing.Point(438, 229);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(28, 20);
-            this.textBox22.TabIndex = 66;
-            this.textBox22.Text = "99";
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SlotMax.Location = new System.Drawing.Point(438, 229);
+            this.SlotMax.Name = "SlotMax";
+            this.SlotMax.Size = new System.Drawing.Size(28, 20);
+            this.SlotMax.TabIndex = 66;
+            this.SlotMax.Text = "99";
+            this.SlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox23
+            // SlotMin
             // 
-            this.textBox23.Location = new System.Drawing.Point(388, 229);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(28, 20);
-            this.textBox23.TabIndex = 65;
-            this.textBox23.Text = "0";
-            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SlotMin.Location = new System.Drawing.Point(388, 229);
+            this.SlotMin.Name = "SlotMin";
+            this.SlotMin.Size = new System.Drawing.Size(28, 20);
+            this.SlotMin.TabIndex = 65;
+            this.SlotMin.Text = "0";
+            this.SlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label22
+            // LabelLevel
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(168, 232);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(36, 13);
-            this.label22.TabIndex = 68;
-            this.label22.Text = "Level:";
+            this.LabelLevel.AutoSize = true;
+            this.LabelLevel.Location = new System.Drawing.Point(168, 232);
+            this.LabelLevel.Name = "LabelLevel";
+            this.LabelLevel.Size = new System.Drawing.Size(36, 13);
+            this.LabelLevel.TabIndex = 68;
+            this.LabelLevel.Text = "Level:";
             // 
-            // label23
+            // LabelSlot
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(354, 232);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(28, 13);
-            this.label23.TabIndex = 69;
-            this.label23.Text = "Slot:";
+            this.LabelSlot.AutoSize = true;
+            this.LabelSlot.Location = new System.Drawing.Point(354, 232);
+            this.LabelSlot.Name = "LabelSlot";
+            this.LabelSlot.Size = new System.Drawing.Size(28, 13);
+            this.LabelSlot.TabIndex = 69;
+            this.LabelSlot.Text = "Slot:";
             // 
-            // button13
+            // ButtonSearch
             // 
-            this.button13.Location = new System.Drawing.Point(12, 273);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(488, 37);
-            this.button13.TabIndex = 70;
-            this.button13.Text = "Search!";
-            this.button13.UseVisualStyleBackColor = true;
+            this.ButtonSearch.Location = new System.Drawing.Point(12, 273);
+            this.ButtonSearch.Name = "ButtonSearch";
+            this.ButtonSearch.Size = new System.Drawing.Size(488, 37);
+            this.ButtonSearch.TabIndex = 70;
+            this.ButtonSearch.Text = "Search!";
+            this.ButtonSearch.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // SelectedShiny
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.SelectedShiny.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectedShiny.FormattingEnabled = true;
+            this.SelectedShiny.Items.AddRange(new object[] {
             "Any",
             "No",
             "Square",
             "Star",
             "Star/Square"});
-            this.comboBox2.Location = new System.Drawing.Point(353, 189);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(147, 21);
-            this.comboBox2.TabIndex = 72;
+            this.SelectedShiny.Location = new System.Drawing.Point(353, 189);
+            this.SelectedShiny.Name = "SelectedShiny";
+            this.SelectedShiny.Size = new System.Drawing.Size(147, 21);
+            this.SelectedShiny.TabIndex = 72;
             // 
-            // label24
+            // LabelShiny
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(309, 192);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(36, 13);
-            this.label24.TabIndex = 71;
-            this.label24.Text = "Shiny:";
+            this.LabelShiny.AutoSize = true;
+            this.LabelShiny.Location = new System.Drawing.Point(309, 192);
+            this.LabelShiny.Name = "LabelShiny";
+            this.LabelShiny.Size = new System.Drawing.Size(36, 13);
+            this.LabelShiny.TabIndex = 71;
+            this.LabelShiny.Text = "Shiny:";
             // 
             // dataGridView1
             // 
@@ -693,14 +692,14 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speMinFilter.UseVisualStyleBackColor = true;
             this.speMinFilter.Click += new System.EventHandler(this.speMinFilter_Click);
             // 
-            // textBox10
+            // defMax
             // 
-            this.textBox10.Location = new System.Drawing.Point(403, 58);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(28, 20);
-            this.textBox10.TabIndex = 25;
-            this.textBox10.Text = "31";
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.defMax.Location = new System.Drawing.Point(403, 58);
+            this.defMax.Name = "defMax";
+            this.defMax.Size = new System.Drawing.Size(28, 20);
+            this.defMax.TabIndex = 25;
+            this.defMax.Text = "31";
+            this.defMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
             // 
@@ -759,14 +758,14 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speMaxFilter.UseVisualStyleBackColor = true;
             this.speMaxFilter.Click += new System.EventHandler(this.speMaxFilter_Click);
             // 
-            // textBox11
+            // spaMin
             // 
-            this.textBox11.Location = new System.Drawing.Point(353, 84);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(28, 20);
-            this.textBox11.TabIndex = 10;
-            this.textBox11.Text = "0";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spaMin.Location = new System.Drawing.Point(353, 84);
+            this.spaMin.Name = "spaMin";
+            this.spaMin.Size = new System.Drawing.Size(28, 20);
+            this.spaMin.TabIndex = 10;
+            this.spaMin.Text = "0";
+            this.spaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // atkMinFilter
             // 
@@ -778,51 +777,51 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMinFilter.UseVisualStyleBackColor = true;
             this.atkMinFilter.Click += new System.EventHandler(this.atkMinFilter_Click);
             // 
-            // textBox13
+            // spdMin
             // 
-            this.textBox13.Location = new System.Drawing.Point(353, 110);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(28, 20);
-            this.textBox13.TabIndex = 12;
-            this.textBox13.Text = "0";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spdMin.Location = new System.Drawing.Point(353, 110);
+            this.spdMin.Name = "spdMin";
+            this.spdMin.Size = new System.Drawing.Size(28, 20);
+            this.spdMin.TabIndex = 12;
+            this.spdMin.Text = "0";
+            this.spdMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox14
+            // spdMax
             // 
-            this.textBox14.Location = new System.Drawing.Point(403, 110);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(28, 20);
-            this.textBox14.TabIndex = 29;
-            this.textBox14.Text = "31";
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spdMax.Location = new System.Drawing.Point(403, 110);
+            this.spdMax.Name = "spdMax";
+            this.spdMax.Size = new System.Drawing.Size(28, 20);
+            this.spdMax.TabIndex = 29;
+            this.spdMax.Text = "31";
+            this.spdMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox15
+            // speMin
             // 
-            this.textBox15.Location = new System.Drawing.Point(353, 136);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(28, 20);
-            this.textBox15.TabIndex = 14;
-            this.textBox15.Text = "0";
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.speMin.Location = new System.Drawing.Point(353, 136);
+            this.speMin.Name = "speMin";
+            this.speMin.Size = new System.Drawing.Size(28, 20);
+            this.speMin.TabIndex = 14;
+            this.speMin.Text = "0";
+            this.speMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox16
+            // speMax
             // 
-            this.textBox16.Location = new System.Drawing.Point(403, 136);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(28, 20);
-            this.textBox16.TabIndex = 31;
-            this.textBox16.Text = "31";
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.speMax.Location = new System.Drawing.Point(403, 136);
+            this.speMax.Name = "speMax";
+            this.speMax.Size = new System.Drawing.Size(28, 20);
+            this.speMax.TabIndex = 31;
+            this.speMax.Text = "31";
+            this.speMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox8
+            // atkMax
             // 
-            this.textBox8.Location = new System.Drawing.Point(403, 32);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(28, 20);
-            this.textBox8.TabIndex = 23;
-            this.textBox8.Text = "31";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.atkMax.Location = new System.Drawing.Point(403, 32);
+            this.atkMax.Name = "atkMax";
+            this.atkMax.Size = new System.Drawing.Size(28, 20);
+            this.atkMax.TabIndex = 23;
+            this.atkMax.Text = "31";
+            this.atkMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.atkMax.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // atkMaxFilter
             // 
@@ -834,14 +833,14 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMaxFilter.UseVisualStyleBackColor = true;
             this.atkMaxFilter.Click += new System.EventHandler(this.atkMaxFilter_Click);
             // 
-            // textBox9
+            // defMin
             // 
-            this.textBox9.Location = new System.Drawing.Point(353, 58);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(28, 20);
-            this.textBox9.TabIndex = 8;
-            this.textBox9.Text = "0";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.defMin.Location = new System.Drawing.Point(353, 58);
+            this.defMin.Name = "defMin";
+            this.defMin.Size = new System.Drawing.Size(28, 20);
+            this.defMin.TabIndex = 8;
+            this.defMin.Text = "0";
+            this.defMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // defMinFilter
             // 
@@ -873,14 +872,14 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defMaxFilter.UseVisualStyleBackColor = true;
             this.defMaxFilter.Click += new System.EventHandler(this.defMaxFilter_Click);
             // 
-            // textBox12
+            // spaMax
             // 
-            this.textBox12.Location = new System.Drawing.Point(403, 84);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(28, 20);
-            this.textBox12.TabIndex = 27;
-            this.textBox12.Text = "31";
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spaMax.Location = new System.Drawing.Point(403, 84);
+            this.spaMax.Name = "spaMax";
+            this.spaMax.Size = new System.Drawing.Size(28, 20);
+            this.spaMax.TabIndex = 27;
+            this.spaMax.Text = "31";
+            this.spaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label14
             // 
@@ -891,15 +890,15 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label14.TabIndex = 30;
             this.label14.Text = "-";
             // 
-            // textBox7
+            // atkMin
             // 
-            this.textBox7.Location = new System.Drawing.Point(353, 32);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(28, 20);
-            this.textBox7.TabIndex = 6;
-            this.textBox7.Text = "0";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.atkMin.Location = new System.Drawing.Point(353, 32);
+            this.atkMin.Name = "atkMin";
+            this.atkMin.Size = new System.Drawing.Size(28, 20);
+            this.atkMin.TabIndex = 6;
+            this.atkMin.Text = "0";
+            this.atkMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.atkMin.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // spaMaxFilter
             // 
@@ -915,32 +914,32 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.ClientSize = new System.Drawing.Size(509, 482);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label22);
+            this.Controls.Add(this.SelectedShiny);
+            this.Controls.Add(this.LabelShiny);
+            this.Controls.Add(this.ButtonSearch);
+            this.Controls.Add(this.LabelSlot);
+            this.Controls.Add(this.LabelLevel);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox23);
+            this.Controls.Add(this.SlotMax);
+            this.Controls.Add(this.SlotMin);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.LevelMax);
+            this.Controls.Add(this.LevelMin);
+            this.Controls.Add(this.CheckExtraRoll);
+            this.Controls.Add(this.CheckHeldItem);
+            this.Controls.Add(this.CheckFishing);
+            this.Controls.Add(this.CheckStatic);
+            this.Controls.Add(this.CheckWeather);
+            this.Controls.Add(this.CheckMarkCharm);
+            this.Controls.Add(this.CheckShinyCharm);
+            this.Controls.Add(this.SelectedMark);
+            this.Controls.Add(this.LabelMark);
+            this.Controls.Add(this.LabelMaxAdv);
+            this.Controls.Add(this.InputMaxAdv);
+            this.Controls.Add(this.LabelSID);
+            this.Controls.Add(this.LabelTID);
+            this.Controls.Add(this.InputSID);
+            this.Controls.Add(this.InputTID);
             this.Controls.Add(this.speMaxFilter);
             this.Controls.Add(this.speMinFilter);
             this.Controls.Add(this.spdMaxFilter);
@@ -954,15 +953,15 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.hpMaxFilter);
             this.Controls.Add(this.hpMinFilter);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.speMax);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.spdMax);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.spaMax);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.defMax);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.atkMax);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.speFilter);
             this.Controls.Add(this.spdFilter);
@@ -970,23 +969,23 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.defFilter);
             this.Controls.Add(this.atkFilter);
             this.Controls.Add(this.hpFilter);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.speMin);
+            this.Controls.Add(this.spdMin);
+            this.Controls.Add(this.spaMin);
+            this.Controls.Add(this.defMin);
+            this.Controls.Add(this.atkMin);
+            this.Controls.Add(this.hpMax);
             this.Controls.Add(this.hpMin);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.LabelState1);
+            this.Controls.Add(this.InputState1);
+            this.Controls.Add(this.InputState0);
+            this.Controls.Add(this.LabelState0);
+            this.Controls.Add(this.ImageRareMark);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "SwSh OWRNG Generator GUI";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -995,12 +994,12 @@ namespace SWSH_OWRNG_Generator_GUI
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LabelState0;
+        private System.Windows.Forms.TextBox InputState0;
+        private System.Windows.Forms.TextBox InputState1;
+        private System.Windows.Forms.Label LabelState1;
         private System.Windows.Forms.TextBox hpMin;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox hpMax;
         private System.Windows.Forms.Label hpFilter;
         private System.Windows.Forms.Label atkFilter;
         private System.Windows.Forms.Label defFilter;
@@ -1010,33 +1009,33 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button hpMinFilter;
         private System.Windows.Forms.Button hpMaxFilter;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.TextBox InputTID;
+        private System.Windows.Forms.TextBox InputSID;
+        private System.Windows.Forms.Label LabelTID;
+        private System.Windows.Forms.Label LabelSID;
+        private System.Windows.Forms.TextBox InputMaxAdv;
+        private System.Windows.Forms.Label LabelMaxAdv;
+        private System.Windows.Forms.Label LabelMark;
+        private System.Windows.Forms.PictureBox ImageRareMark;
+        private System.Windows.Forms.ComboBox SelectedMark;
+        private System.Windows.Forms.CheckBox CheckShinyCharm;
+        private System.Windows.Forms.CheckBox CheckMarkCharm;
+        private System.Windows.Forms.CheckBox CheckWeather;
+        private System.Windows.Forms.CheckBox CheckStatic;
+        private System.Windows.Forms.CheckBox CheckFishing;
+        private System.Windows.Forms.CheckBox CheckHeldItem;
+        private System.Windows.Forms.CheckBox CheckExtraRoll;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox LevelMax;
+        private System.Windows.Forms.TextBox LevelMin;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox SlotMax;
+        private System.Windows.Forms.TextBox SlotMin;
+        private System.Windows.Forms.Label LabelLevel;
+        private System.Windows.Forms.Label LabelSlot;
+        private System.Windows.Forms.Button ButtonSearch;
+        private System.Windows.Forms.ComboBox SelectedShiny;
+        private System.Windows.Forms.Label LabelShiny;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frame;
         private System.Windows.Forms.DataGridViewTextBoxColumn Level;
@@ -1053,28 +1052,28 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Mark;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button speMinFilter;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox defMax;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button spdMinFilter;
         private System.Windows.Forms.Button spdMaxFilter;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button speMaxFilter;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox spaMin;
         private System.Windows.Forms.Button atkMinFilter;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox spdMin;
+        private System.Windows.Forms.TextBox spdMax;
+        private System.Windows.Forms.TextBox speMin;
+        private System.Windows.Forms.TextBox speMax;
+        private System.Windows.Forms.TextBox atkMax;
         private System.Windows.Forms.Button atkMaxFilter;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox defMin;
         private System.Windows.Forms.Button defMinFilter;
         private System.Windows.Forms.Button spaMinFilter;
         private System.Windows.Forms.Button defMaxFilter;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox spaMax;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox atkMin;
         private System.Windows.Forms.Button spaMaxFilter;
     }
 }

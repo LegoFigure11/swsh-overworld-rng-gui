@@ -37,8 +37,8 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             hpMin.Clear();
             hpMin.Text = "0";
-            textBox6.Clear();
-            textBox6.Text = "0";
+            hpMax.Clear();
+            hpMax.Text = "0";
         }
 
         private void filter_TextChanged(object sender, EventArgs e)
@@ -75,16 +75,16 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             hpMin.Clear();
             hpMin.Text = "31";
-            textBox6.Clear();
-            textBox6.Text = "31";
+            hpMax.Clear();
+            hpMax.Text = "31";
         }
 
         private void hpFilter_Click(object sender, EventArgs e)
         {
             hpMin.Clear();
             hpMin.Text = "0";
-            textBox6.Clear();
-            textBox6.Text = "31";
+            hpMax.Clear();
+            hpMax.Text = "31";
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
@@ -99,26 +99,26 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void atkMinFilter_Click(object sender, EventArgs e)
         {
-            textBox7.Clear();
-            textBox7.Text = "0";
-            textBox8.Clear();
-            textBox8.Text = "0";
+            atkMin.Clear();
+            atkMin.Text = "0";
+            atkMax.Clear();
+            atkMax.Text = "0";
         }
 
         private void atkMaxFilter_Click(object sender, EventArgs e)
         {
-            textBox7.Clear();
-            textBox7.Text = "31";
-            textBox8.Clear();
-            textBox8.Text = "31";
+            atkMin.Clear();
+            atkMin.Text = "31";
+            atkMax.Clear();
+            atkMax.Text = "31";
         }
 
         private void atkFilter_Click(object sender, EventArgs e)
         {
-            textBox7.Clear();
-            textBox7.Text = "0";
-            textBox8.Clear();
-            textBox8.Text = "31";
+            atkMin.Clear();
+            atkMin.Text = "0";
+            atkMax.Clear();
+            atkMax.Text = "31";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,19 +128,19 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox4.Checked)
+            if (CheckStatic.Checked)
             {
-                textBox20.ReadOnly = true;
-                textBox21.ReadOnly = true;
-                textBox22.ReadOnly = true;
-                textBox23.ReadOnly = true;
+                LevelMax.ReadOnly = true;
+                LevelMin.ReadOnly = true;
+                SlotMax.ReadOnly = true;
+                SlotMin.ReadOnly = true;
             }
             else
             {
-                textBox20.ReadOnly = false;
-                textBox21.ReadOnly = false;
-                textBox22.ReadOnly = false;
-                textBox23.ReadOnly = false;
+                LevelMax.ReadOnly = false;
+                LevelMin.ReadOnly = false;
+                SlotMax.ReadOnly = false;
+                SlotMin.ReadOnly = false;
             }
             
         }
@@ -158,68 +158,68 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void defMinFilter_Click(object sender, EventArgs e)
         {
-            textBox9.Clear();
-            textBox9.Text = "0";
-            textBox10.Clear();
-            textBox10.Text = "0";
+            defMin.Clear();
+            defMin.Text = "0";
+            defMax.Clear();
+            defMax.Text = "0";
         }
 
 
 
         private void spaMinFilter_Click(object sender, EventArgs e)
         {
-            textBox11.Clear();
-            textBox11.Text = "0";
-            textBox12.Clear();
-            textBox12.Text = "0";
+            spaMin.Clear();
+            spaMin.Text = "0";
+            spaMax.Clear();
+            spaMax.Text = "0";
         }
 
         private void defMaxFilter_Click(object sender, EventArgs e)
         {
-            textBox9.Clear();
-            textBox9.Text = "31";
-            textBox10.Clear();
-            textBox10.Text = "31";
+            defMin.Clear();
+            defMin.Text = "31";
+            defMax.Clear();
+            defMax.Text = "31";
         }
 
         private void spaMaxFilter_Click(object sender, EventArgs e)
         {
-            textBox11.Clear();
-            textBox11.Text = "31";
-            textBox12.Clear();
-            textBox12.Text = "31";
+            spaMin.Clear();
+            spaMin.Text = "31";
+            spaMax.Clear();
+            spaMax.Text = "31";
         }
 
         private void spdMinFilter_Click(object sender, EventArgs e)
         {
-            textBox13.Clear();
-            textBox13.Text = "0";
-            textBox14.Clear();
-            textBox14.Text = "0";
+            spdMin.Clear();
+            spdMin.Text = "0";
+            spdMax.Clear();
+            spdMax.Text = "0";
         }
 
         private void spdMaxFilter_Click(object sender, EventArgs e)
         {
-            textBox13.Clear();
-            textBox13.Text = "31";
-            textBox14.Clear();
-            textBox14.Text = "31";
+            spdMin.Clear();
+            spdMin.Text = "31";
+            spdMax.Clear();
+            spdMax.Text = "31";
         }
 
         private void speMinFilter_Click(object sender, EventArgs e)
         {
-            textBox15.Clear();
-            textBox15.Text = "0";
-            textBox16.Clear();
-            textBox16.Text = "0";
+            speMin.Clear();
+            speMin.Text = "0";
+            speMax.Clear();
+            speMax.Text = "0";
         }
 
         private void speMaxFilter_Click(object sender, EventArgs e)
         {
-            textBox15.Clear();
-            textBox15.Text = "31";
-            textBox16.Clear();
-            textBox16.Text = "31";
+            speMin.Clear();
+            speMin.Text = "31";
+            speMax.Clear();
+            speMax.Text = "31";
         }
     }
 }
