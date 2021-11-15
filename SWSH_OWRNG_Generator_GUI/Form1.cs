@@ -142,17 +142,17 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             if (CheckStatic.Checked)
             {
-                LevelMax.ReadOnly = true;
-                LevelMin.ReadOnly = true;
-                SlotMax.ReadOnly = true;
-                SlotMin.ReadOnly = true;
+                InputLevelMax.ReadOnly = true;
+                InputLevelMin.ReadOnly = true;
+                InputSlotMax.ReadOnly = true;
+                InputSlotMin.ReadOnly = true;
             }
             else
             {
-                LevelMax.ReadOnly = false;
-                LevelMin.ReadOnly = false;
-                SlotMax.ReadOnly = false;
-                SlotMin.ReadOnly = false;
+                InputLevelMax.ReadOnly = false;
+                InputLevelMin.ReadOnly = false;
+                InputSlotMax.ReadOnly = false;
+                InputSlotMin.ReadOnly = false;
             }
 
         }
@@ -288,6 +288,46 @@ namespace SWSH_OWRNG_Generator_GUI
                     e.Handled = true;
                 }
             }
+        }
+
+        private void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            Pad(InputState0, '0', 16);
+            Pad(InputState1, '0', 16);
+            Pad(InputTID, '0', 5);
+            Pad(InputSID, '0', 5);
+            Pad(InputSlotMin, '0', 1);
+            Pad(InputSlotMax, '0', 1);
+            Pad(InputLevelMin, '0', 1);
+            Pad(InputLevelMax, '0', 1);
+            ulong s0 = UInt64.Parse(InputState0.Text, System.Globalization.NumberStyles.AllowHexSpecifier);
+            ulong s1 = UInt64.Parse(InputState1.Text, System.Globalization.NumberStyles.AllowHexSpecifier);
+            ulong advances = UInt64.Parse(InputMaxAdv.Text);
+            uint TID = UInt16.Parse(InputTID.Text);
+            uint SID = UInt16.Parse(InputSID.Text);
+            uint SlotMin = UInt16.Parse(InputSlotMin.Text);
+            uint SlotMax = UInt16.Parse(InputSlotMax.Text);
+            uint LevelMin = UInt16.Parse(InputLevelMin.Text);
+            uint LevelMax = UInt16.Parse(InputLevelMax.Text);
+            bool ShinyCharm = CheckShinyCharm.Checked;
+            bool MarkCharm = CheckMarkCharm.Checked;
+            bool Weather = CheckWeather.Checked;
+            bool Static = CheckStatic.Checked;
+            bool Fishing = CheckFishing.Checked;
+            bool HeldItem = CheckHeldItem.Checked;
+            bool ExtraRoll = CheckExtraRoll.Checked;
+            string DesiredMark = (string)SelectedMark.SelectedItem;
+            string DesiredShiny = (string)SelectedShiny.SelectedItem;
+
+            Generator.Generate(
+                s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, ExtraRoll, DesiredMark, DesiredShiny,
+                LevelMin, LevelMax, SlotMin, SlotMax
+            );
+        }
+
+        private void Pad(object sender, char s, int length)
+        {
+            ((TextBox)sender).Text = ((TextBox)sender).Text.PadLeft(length, s);
         }
     }
 }

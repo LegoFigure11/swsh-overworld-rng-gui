@@ -62,11 +62,11 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckHeldItem = new System.Windows.Forms.CheckBox();
             this.CheckExtraRoll = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.LevelMax = new System.Windows.Forms.TextBox();
-            this.LevelMin = new System.Windows.Forms.TextBox();
+            this.InputLevelMax = new System.Windows.Forms.TextBox();
+            this.InputLevelMin = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.SlotMax = new System.Windows.Forms.TextBox();
-            this.SlotMin = new System.Windows.Forms.TextBox();
+            this.InputSlotMax = new System.Windows.Forms.TextBox();
+            this.InputSlotMin = new System.Windows.Forms.TextBox();
             this.LabelLevel = new System.Windows.Forms.Label();
             this.LabelSlot = new System.Windows.Forms.Label();
             this.ButtonSearch = new System.Windows.Forms.Button();
@@ -464,29 +464,29 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label20.TabIndex = 64;
             this.label20.Text = "-";
             // 
-            // LevelMax
+            // InputLevelMax
             // 
-            this.LevelMax.Location = new System.Drawing.Point(260, 229);
-            this.LevelMax.MaxLength = 2;
-            this.LevelMax.Name = "LevelMax";
-            this.LevelMax.Size = new System.Drawing.Size(28, 20);
-            this.LevelMax.TabIndex = 63;
-            this.LevelMax.Text = "0";
-            this.LevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LevelMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.LevelMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputLevelMax.Location = new System.Drawing.Point(260, 229);
+            this.InputLevelMax.MaxLength = 2;
+            this.InputLevelMax.Name = "InputLevelMax";
+            this.InputLevelMax.Size = new System.Drawing.Size(28, 20);
+            this.InputLevelMax.TabIndex = 63;
+            this.InputLevelMax.Text = "0";
+            this.InputLevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputLevelMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.InputLevelMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
-            // LevelMin
+            // InputLevelMin
             // 
-            this.LevelMin.Location = new System.Drawing.Point(210, 229);
-            this.LevelMin.MaxLength = 2;
-            this.LevelMin.Name = "LevelMin";
-            this.LevelMin.Size = new System.Drawing.Size(28, 20);
-            this.LevelMin.TabIndex = 62;
-            this.LevelMin.Text = "0";
-            this.LevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LevelMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.LevelMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputLevelMin.Location = new System.Drawing.Point(210, 229);
+            this.InputLevelMin.MaxLength = 2;
+            this.InputLevelMin.Name = "InputLevelMin";
+            this.InputLevelMin.Size = new System.Drawing.Size(28, 20);
+            this.InputLevelMin.TabIndex = 62;
+            this.InputLevelMin.Text = "0";
+            this.InputLevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputLevelMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.InputLevelMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // label21
             // 
@@ -497,29 +497,29 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label21.TabIndex = 67;
             this.label21.Text = "-";
             // 
-            // SlotMax
+            // InputSlotMax
             // 
-            this.SlotMax.Location = new System.Drawing.Point(438, 229);
-            this.SlotMax.MaxLength = 2;
-            this.SlotMax.Name = "SlotMax";
-            this.SlotMax.Size = new System.Drawing.Size(28, 20);
-            this.SlotMax.TabIndex = 66;
-            this.SlotMax.Text = "99";
-            this.SlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SlotMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.SlotMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputSlotMax.Location = new System.Drawing.Point(438, 229);
+            this.InputSlotMax.MaxLength = 2;
+            this.InputSlotMax.Name = "InputSlotMax";
+            this.InputSlotMax.Size = new System.Drawing.Size(28, 20);
+            this.InputSlotMax.TabIndex = 66;
+            this.InputSlotMax.Text = "99";
+            this.InputSlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputSlotMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.InputSlotMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
-            // SlotMin
+            // InputSlotMin
             // 
-            this.SlotMin.Location = new System.Drawing.Point(388, 229);
-            this.SlotMin.MaxLength = 2;
-            this.SlotMin.Name = "SlotMin";
-            this.SlotMin.Size = new System.Drawing.Size(28, 20);
-            this.SlotMin.TabIndex = 65;
-            this.SlotMin.Text = "0";
-            this.SlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SlotMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.SlotMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputSlotMin.Location = new System.Drawing.Point(388, 229);
+            this.InputSlotMin.MaxLength = 2;
+            this.InputSlotMin.Name = "InputSlotMin";
+            this.InputSlotMin.Size = new System.Drawing.Size(28, 20);
+            this.InputSlotMin.TabIndex = 65;
+            this.InputSlotMin.Text = "0";
+            this.InputSlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputSlotMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.InputSlotMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // LabelLevel
             // 
@@ -547,6 +547,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.ButtonSearch.TabIndex = 70;
             this.ButtonSearch.Text = "Search!";
             this.ButtonSearch.UseVisualStyleBackColor = true;
+            this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // SelectedShiny
             // 
@@ -945,11 +946,11 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.LabelSlot);
             this.Controls.Add(this.LabelLevel);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.SlotMax);
-            this.Controls.Add(this.SlotMin);
+            this.Controls.Add(this.InputSlotMax);
+            this.Controls.Add(this.InputSlotMin);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.LevelMax);
-            this.Controls.Add(this.LevelMin);
+            this.Controls.Add(this.InputLevelMax);
+            this.Controls.Add(this.InputLevelMin);
             this.Controls.Add(this.CheckExtraRoll);
             this.Controls.Add(this.CheckHeldItem);
             this.Controls.Add(this.CheckFishing);
@@ -1052,11 +1053,11 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.CheckBox CheckHeldItem;
         private System.Windows.Forms.CheckBox CheckExtraRoll;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox LevelMax;
-        private System.Windows.Forms.TextBox LevelMin;
+        private System.Windows.Forms.TextBox InputLevelMax;
+        private System.Windows.Forms.TextBox InputLevelMin;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox SlotMax;
-        private System.Windows.Forms.TextBox SlotMin;
+        private System.Windows.Forms.TextBox InputSlotMax;
+        private System.Windows.Forms.TextBox InputSlotMin;
         private System.Windows.Forms.Label LabelLevel;
         private System.Windows.Forms.Label LabelSlot;
         private System.Windows.Forms.Button ButtonSearch;
