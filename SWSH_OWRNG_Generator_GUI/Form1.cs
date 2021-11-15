@@ -34,7 +34,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         }
 
-        private void hpMinFilter_Click(object sender, EventArgs e)
+        private void HpMinFilter_Click(object sender, EventArgs e)
         {
             hpMin.Clear();
             hpMin.Text = "0";
@@ -42,7 +42,7 @@ namespace SWSH_OWRNG_Generator_GUI
             hpMax.Text = "0";
         }
 
-        private void filter_TextChanged(object sender, EventArgs e)
+        private void Filter_TextChanged(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             if (Int32.TryParse(textBox.Text, out int i))
@@ -56,7 +56,48 @@ namespace SWSH_OWRNG_Generator_GUI
             }
         }
 
-        private void resetFilters(object sender, EventArgs e)
+        private void LevelSlot_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (Int32.TryParse(textBox.Text, out int i))
+            {
+                if (i < 0) textBox.Text = "0";
+                if (i > 99) textBox.Text = "99";
+            }
+            else
+            {
+                textBox.Text = "0";
+            }
+        }
+
+        private void TIDSID_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (Int32.TryParse(textBox.Text, out int i))
+            {
+                if (i < 0) textBox.Text = "0";
+                if (i > 0xFFFF) textBox.Text = "65535";
+            }
+            else
+            {
+                textBox.Text = "0";
+            }
+        }
+
+        private void Decimal_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (Int32.TryParse(textBox.Text, out int i))
+            {
+                if (i < 0) textBox.Text = "0";
+            }
+            else
+            {
+                textBox.Text = "0";
+            }
+        }
+
+        private void ResetFilters(object sender, EventArgs e)
         {
             Label label = (Label)sender;
             string boxName = label.Name.Substring(0,label.Name.Length-6);
@@ -71,7 +112,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         }
 
-        private void hpMaxFilter_Click(object sender, EventArgs e)
+        private void HpMaxFilter_Click(object sender, EventArgs e)
         {
             hpMin.Clear();
             hpMin.Text = "31";
@@ -79,7 +120,7 @@ namespace SWSH_OWRNG_Generator_GUI
             hpMax.Text = "31";
         }
 
-        private void hpFilter_Click(object sender, EventArgs e)
+        private void HpFilter_Click(object sender, EventArgs e)
         {
             hpMin.Clear();
             hpMin.Text = "0";
@@ -97,7 +138,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         }
 
-        private void atkMinFilter_Click(object sender, EventArgs e)
+        private void AtkMinFilter_Click(object sender, EventArgs e)
         {
             atkMin.Clear();
             atkMin.Text = "0";
@@ -105,7 +146,7 @@ namespace SWSH_OWRNG_Generator_GUI
             atkMax.Text = "0";
         }
 
-        private void atkMaxFilter_Click(object sender, EventArgs e)
+        private void AtkMaxFilter_Click(object sender, EventArgs e)
         {
             atkMin.Clear();
             atkMin.Text = "31";
@@ -113,7 +154,7 @@ namespace SWSH_OWRNG_Generator_GUI
             atkMax.Text = "31";
         }
 
-        private void atkFilter_Click(object sender, EventArgs e)
+        private void AtkFilter_Click(object sender, EventArgs e)
         {
             atkMin.Clear();
             atkMin.Text = "0";
@@ -126,7 +167,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        private void CheckStatic_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckStatic.Checked)
             {
@@ -145,18 +186,8 @@ namespace SWSH_OWRNG_Generator_GUI
             
         }
 
-        private void textBox21_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void textBox20_TextChanged(object sender, EventArgs e)
-        { 
-        
-        }
-
-
-        private void defMinFilter_Click(object sender, EventArgs e)
+        private void DefMinFilter_Click(object sender, EventArgs e)
         {
             defMin.Clear();
             defMin.Text = "0";
@@ -166,7 +197,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
 
 
-        private void spaMinFilter_Click(object sender, EventArgs e)
+        private void SpaMinFilter_Click(object sender, EventArgs e)
         {
             spaMin.Clear();
             spaMin.Text = "0";
@@ -174,7 +205,7 @@ namespace SWSH_OWRNG_Generator_GUI
             spaMax.Text = "0";
         }
 
-        private void defMaxFilter_Click(object sender, EventArgs e)
+        private void DefMaxFilter_Click(object sender, EventArgs e)
         {
             defMin.Clear();
             defMin.Text = "31";
@@ -182,7 +213,7 @@ namespace SWSH_OWRNG_Generator_GUI
             defMax.Text = "31";
         }
 
-        private void spaMaxFilter_Click(object sender, EventArgs e)
+        private void SpaMaxFilter_Click(object sender, EventArgs e)
         {
             spaMin.Clear();
             spaMin.Text = "31";
@@ -190,7 +221,7 @@ namespace SWSH_OWRNG_Generator_GUI
             spaMax.Text = "31";
         }
 
-        private void spdMinFilter_Click(object sender, EventArgs e)
+        private void SpdMinFilter_Click(object sender, EventArgs e)
         {
             spdMin.Clear();
             spdMin.Text = "0";
@@ -198,7 +229,7 @@ namespace SWSH_OWRNG_Generator_GUI
             spdMax.Text = "0";
         }
 
-        private void spdMaxFilter_Click(object sender, EventArgs e)
+        private void SpdMaxFilter_Click(object sender, EventArgs e)
         {
             spdMin.Clear();
             spdMin.Text = "31";
@@ -206,7 +237,7 @@ namespace SWSH_OWRNG_Generator_GUI
             spdMax.Text = "31";
         }
 
-        private void speMinFilter_Click(object sender, EventArgs e)
+        private void SpeMinFilter_Click(object sender, EventArgs e)
         {
             speMin.Clear();
             speMin.Text = "0";
@@ -214,7 +245,7 @@ namespace SWSH_OWRNG_Generator_GUI
             speMax.Text = "0";
         }
 
-        private void speMaxFilter_Click(object sender, EventArgs e)
+        private void SpeMaxFilter_Click(object sender, EventArgs e)
         {
             speMin.Clear();
             speMin.Text = "31";
