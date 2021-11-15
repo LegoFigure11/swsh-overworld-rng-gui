@@ -54,10 +54,6 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (i < 0) textBox.Text = "0";
                 if (i > 99) textBox.Text = "99";
             }
-            else
-            {
-                textBox.Text = "0";
-            }
         }
 
         private void TIDSID_TextChanged(object sender, EventArgs e)
@@ -67,23 +63,6 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 if (i < 0) textBox.Text = "0";
                 if (i > 0xFFFF) textBox.Text = "65535";
-            }
-            else
-            {
-                textBox.Text = "0";
-            }
-        }
-
-        private void Decimal_TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            if (Int32.TryParse(textBox.Text, out int i))
-            {
-                if (i < 0) textBox.Text = "0";
-            }
-            else
-            {
-                textBox.Text = "0";
             }
         }
 

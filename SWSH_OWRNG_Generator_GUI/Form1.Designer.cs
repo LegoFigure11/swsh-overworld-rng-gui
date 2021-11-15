@@ -266,6 +266,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputTID.TabIndex = 45;
             this.InputTID.Text = "1390";
             this.InputTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             // 
             // InputSID
             // 
@@ -276,6 +277,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSID.TabIndex = 46;
             this.InputSID.Text = "42069";
             this.InputSID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputSID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             // 
             // LabelTID
             // 
@@ -303,7 +305,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputMaxAdv.Size = new System.Drawing.Size(102, 20);
             this.InputMaxAdv.TabIndex = 49;
             this.InputMaxAdv.Text = "50000000";
-            this.InputMaxAdv.TextChanged += new System.EventHandler(this.Decimal_TextChanged);
             // 
             // LabelMaxAdv
             // 
@@ -467,6 +468,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LevelMax.TabIndex = 63;
             this.LevelMax.Text = "0";
             this.LevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LevelMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.LevelMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             // 
             // LevelMin
@@ -478,6 +480,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LevelMin.TabIndex = 62;
             this.LevelMin.Text = "0";
             this.LevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LevelMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.LevelMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             // 
             // label21
@@ -498,6 +501,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SlotMax.TabIndex = 66;
             this.SlotMax.Text = "99";
             this.SlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SlotMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.SlotMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             // 
             // SlotMin
@@ -509,6 +513,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SlotMin.TabIndex = 65;
             this.SlotMin.Text = "0";
             this.SlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SlotMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.SlotMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             // 
             // LabelLevel
