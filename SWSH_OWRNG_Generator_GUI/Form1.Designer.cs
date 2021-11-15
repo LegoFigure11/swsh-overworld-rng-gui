@@ -128,15 +128,22 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.InputState0.Location = new System.Drawing.Point(68, 6);
             this.InputState0.Name = "InputState0";
+            this.InputState0.MaxLength = 16;
             this.InputState0.Size = new System.Drawing.Size(205, 20);
             this.InputState0.TabIndex = 1;
+            this.InputState0.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
+            this.InputState0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
+
             // 
             // InputState1
             // 
             this.InputState1.Location = new System.Drawing.Point(68, 32);
             this.InputState1.Name = "InputState1";
+            this.InputState1.MaxLength = 16;
             this.InputState1.Size = new System.Drawing.Size(205, 20);
             this.InputState1.TabIndex = 2;
+            this.InputState1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
+            this.InputState1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
             // 
             // LabelState1
             // 
@@ -912,6 +919,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // Form1
             // 
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(509, 482);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.SelectedShiny);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,7 +53,6 @@ namespace SWSH_OWRNG_Generator_GUI
             else
             {
                 textBox.Text = "0";
-                
             }
         }
 
@@ -220,6 +220,53 @@ namespace SWSH_OWRNG_Generator_GUI
             speMin.Text = "31";
             speMax.Clear();
             speMax.Text = "31";
+        }
+
+
+        private void InputStatePaste_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.V || e.Modifiers == Keys.Shift && e.KeyCode == Keys.Insert)
+            {
+                string NewText = "";
+
+                foreach (char a in Clipboard.GetText())
+                {
+                    if ((a >= 'a' && a <= 'f') || (a >= 'A' && a <= 'F') || (a >= '0' && a <= '9'))
+                    {
+                        NewText = NewText + char.ToUpper(a);
+                    }
+                }
+
+                if (NewText != "")
+                {
+                    Clipboard.SetText(NewText);
+                }
+                else
+                { Clipboard.Clear(); }
+            }
+        }
+
+        private void HexInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string s = "";
+
+            s += e.KeyChar;
+
+            byte[] b = Encoding.ASCII.GetBytes(s);
+
+            if (e.KeyChar != (char)Keys.Back && !char.IsControl(e.KeyChar))
+            {
+                if (!(((0x30 <= b[0]) && (b[0] <= 0x39)) ||
+                      ((0x41 <= b[0]) && (b[0] <= 0x46)) ||
+                      ((0x61 <= b[0]) && (b[0] <= 0x66))))
+                {
+                    e.Handled = true;
+                }
+                else
+                {
+                    e.KeyChar = char.ToUpper(e.KeyChar);
+                }
+            }
         }
     }
 }
