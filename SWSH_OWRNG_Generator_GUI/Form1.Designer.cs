@@ -265,8 +265,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputTID.Size = new System.Drawing.Size(102, 20);
             this.InputTID.TabIndex = 45;
             this.InputTID.Text = "1390";
-            this.InputTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
+            this.InputTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // InputSID
             // 
@@ -276,8 +276,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSID.Size = new System.Drawing.Size(102, 20);
             this.InputSID.TabIndex = 46;
             this.InputSID.Text = "42069";
-            this.InputSID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputSID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
+            this.InputSID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // LabelTID
             // 
@@ -468,8 +468,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LevelMax.TabIndex = 63;
             this.LevelMax.Text = "0";
             this.LevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LevelMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.LevelMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.LevelMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // LevelMin
             // 
@@ -480,8 +480,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LevelMin.TabIndex = 62;
             this.LevelMin.Text = "0";
             this.LevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LevelMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.LevelMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.LevelMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // label21
             // 
@@ -501,8 +501,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SlotMax.TabIndex = 66;
             this.SlotMax.Text = "99";
             this.SlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SlotMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.SlotMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.SlotMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // SlotMin
             // 
@@ -513,8 +513,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SlotMin.TabIndex = 65;
             this.SlotMin.Text = "0";
             this.SlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SlotMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.SlotMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.SlotMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // LabelLevel
             // 
@@ -932,7 +932,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // Form1
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(509, 482);
+            this.ClientSize = new System.Drawing.Size(509, 464);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.SelectedShiny);
             this.Controls.Add(this.LabelShiny);
@@ -1001,6 +1001,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.InputState0);
             this.Controls.Add(this.LabelState0);
             this.Controls.Add(this.ImageRareMark);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "SwSh OWRNG Generator GUI";
