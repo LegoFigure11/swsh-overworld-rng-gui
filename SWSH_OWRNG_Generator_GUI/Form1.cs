@@ -108,14 +108,6 @@ namespace SWSH_OWRNG_Generator_GUI
             hpMax.Text = "31";
         }
 
-        private void HpFilter_Click(object sender, EventArgs e)
-        {
-            hpMin.Clear();
-            hpMin.Text = "0";
-            hpMax.Clear();
-            hpMax.Text = "31";
-        }
-
         private void AtkMinFilter_Click(object sender, EventArgs e)
         {
             atkMin.Clear();
@@ -235,7 +227,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     if ((a >= 'a' && a <= 'f') || (a >= 'A' && a <= 'F') || (a >= '0' && a <= '9'))
                     {
-                        NewText = NewText + char.ToUpper(a);
+                        NewText += char.ToUpper(a);
                     }
                 }
 
