@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SWSH_OWRNG_Generator_GUI
@@ -72,7 +65,7 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             Label label = (Label)sender;
             string stat = label.Name;
-                        
+
             switch (stat)
             {
                 case "hpFilter":
@@ -105,10 +98,6 @@ namespace SWSH_OWRNG_Generator_GUI
                     speMax.Text = "31";
                     break;
             }
-
-            
-            
-            
         }
 
         private void HpMaxFilter_Click(object sender, EventArgs e)
@@ -165,7 +154,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 SlotMax.ReadOnly = false;
                 SlotMin.ReadOnly = false;
             }
-            
+
         }
 
 
