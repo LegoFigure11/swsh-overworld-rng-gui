@@ -100,11 +100,44 @@ namespace SWSH_OWRNG_Generator_GUI
         private void ResetFilters(object sender, EventArgs e)
         {
             Label label = (Label)sender;
-            string boxName = label.Name.Substring(0,label.Name.Length-6);
-            string minFilter = boxName + "MinFilter";
-            var result = this.GetType().GetField(minFilter);
+            string stat = label.Name;
+                        
+            switch (stat)
+            {
+                case "hpFilter":
+                    hpMin.Text = "0";
+                    hpMax.Text = "31";
+                    break;
+
+                case "atkFilter":
+                    atkMin.Text = "0";
+                    atkMax.Text = "31";
+                    break;
+
+                case "defFilter":
+                    defMin.Text = "0";
+                    defMax.Text = "31";
+                    break;
+
+                case "spaFilter":
+                    spaMin.Text = "0";
+                    spaMax.Text = "31";
+                    break;
+
+                case "spdFilter":
+                    spdMin.Text = "0";
+                    spdMax.Text = "31";
+                    break;
+
+                case "speFilter":
+                    speMin.Text = "0";
+                    speMax.Text = "31";
+                    break;
+            }
+
             
-            Console.WriteLine($"< {result} >");
+            
+            
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
