@@ -5,8 +5,8 @@
         public ulong Advances { get; set; }
         public uint Level { get; set; }
         public uint Slot { get; set; }
-        public uint PID { get; set; }
-        public uint EC { get; set; }
+        public string PID { get; set; }
+        public string EC { get; set; }
         public string Shiny { get; set; }
         public int Ability { get; set; }
         public string Nature { get; set; }
@@ -17,8 +17,8 @@
         public uint SpD { get; set; }
         public uint Spe { get; set; }
         public string Mark { get; set; }
-        public ulong State0 { get; set; }
-        public ulong State1 { get; set; }
+        public string State0 { get; set; }
+        public string State1 { get; set; }
 
     }
 }

@@ -141,8 +141,8 @@ namespace SWSH_OWRNG_Generator_GUI
                         Advances = advance,
                         Level = Level,
                         Slot = SlotRand,
-                        PID = PID,
-                        EC = EC,
+                        PID = PID.ToString("X8"),
+                        EC = EC.ToString("X8"),
                         Shiny = ShinyXOR == 0 ? "Square" : (ShinyXOR < 16 ? "Star" : "No"),
                         Ability = AbilityRoll == 0 ? 1 : 0,
                         Nature = Natures[Nature],
@@ -153,8 +153,8 @@ namespace SWSH_OWRNG_Generator_GUI
                         SpD = IVs[4],
                         Spe = IVs[5],
                         Mark = Mark,
-                        State0 = go.state0,
-                        State1 = go.state1,
+                        State0 = go.state0.ToString("X16"),
+                        State1 = go.state1.ToString("X16"),
                     }
                 );
 
