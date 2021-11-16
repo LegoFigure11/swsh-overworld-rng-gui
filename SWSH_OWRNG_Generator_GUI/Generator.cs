@@ -50,7 +50,8 @@ namespace SWSH_OWRNG_Generator_GUI
                 }
                 else
                 {
-                    rng.rand(Max);
+                    if (!Fishing)
+                        rng.rand(Max);
                     rng.rand(100);
                     rng.rand(100);
 
