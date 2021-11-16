@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SWSH_OWRNG_Generator_GUI
@@ -299,7 +300,7 @@ namespace SWSH_OWRNG_Generator_GUI
             }
         }
 
-        private void ButtonSearch_Click(object sender, EventArgs e)
+        private async void ButtonSearch_Click(object sender, EventArgs e)
         {
             Pad(InputState0, '0', 16);
             Pad(InputState1, '0', 16);
@@ -369,10 +370,20 @@ namespace SWSH_OWRNG_Generator_GUI
             Results.Columns["Level"].Visible = !Static;
             Results.Columns["Slot"].Visible = !Static;
 
-            List<Frame> Frames = Generator.Generate(
+            progressBar1.Maximum = (int)advances;
+            progressBar1.Step = 1;
+
+            var progress = new Progress<int>(v =>
+            {
+                progressBar1.Value = v;
+            });
+
+            List<Frame> Frames = await Task.Run(() => Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, ExtraRoll, DesiredMark, DesiredShiny,
-                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs
-            );
+                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, progress
+            ));
+
+            progressBar1.Value = progressBar1.Maximum;
 
             BindingSource Source = new BindingSource { DataSource = Frames };
             Results.DataSource = Source;

@@ -91,7 +91,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.speMinFilter = new System.Windows.Forms.Button();
             this.defMax = new System.Windows.Forms.TextBox();
@@ -117,6 +116,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label14 = new System.Windows.Forms.Label();
             this.atkMin = new System.Windows.Forms.TextBox();
             this.spaMaxFilter = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -612,11 +613,11 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State0,
             this.State1});
             this.Results.DataSource = this.generatorBindingSource;
-            this.Results.Location = new System.Drawing.Point(12, 334);
+            this.Results.Location = new System.Drawing.Point(12, 343);
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(486, 281);
+            this.Results.Size = new System.Drawing.Size(486, 306);
             this.Results.TabIndex = 73;
             // 
             // Frame
@@ -783,10 +784,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State1.Name = "State1";
             this.State1.ReadOnly = true;
             this.State1.Width = 150;
-            // 
-            // generatorBindingSource
-            // 
-            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
             // 
             // label12
             // 
@@ -1043,10 +1040,23 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaMaxFilter.UseVisualStyleBackColor = true;
             this.spaMaxFilter.Click += new System.EventHandler(this.SpaMaxFilter_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.progressBar1.Location = new System.Drawing.Point(12, 316);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(488, 21);
+            this.progressBar1.TabIndex = 74;
+            // 
+            // generatorBindingSource
+            // 
+            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
+            // 
             // Form
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(509, 627);
+            this.ClientSize = new System.Drawing.Size(509, 661);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Results);
             this.Controls.Add(this.SelectedShiny);
             this.Controls.Add(this.LabelShiny);
@@ -1216,6 +1226,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Mark;
         private System.Windows.Forms.DataGridViewTextBoxColumn State0;
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
