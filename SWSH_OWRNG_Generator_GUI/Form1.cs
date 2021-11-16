@@ -316,6 +316,8 @@ namespace SWSH_OWRNG_Generator_GUI
             uint[] MaxIVs = { UInt16.Parse(hpMax.Text), UInt16.Parse(atkMax.Text), UInt16.Parse(defMax.Text), UInt16.Parse(spaMax.Text), UInt16.Parse(spdMax.Text), UInt16.Parse(speMax.Text) };
 
             Results.Rows.Clear();
+            Results.Columns["Level"].Visible = !Static;
+            Results.Columns["Slot"].Visible = !Static;
 
             List<Frame> Frames = Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, ExtraRoll, DesiredMark, DesiredShiny,
@@ -332,6 +334,8 @@ namespace SWSH_OWRNG_Generator_GUI
                 Row.Cells["PID"].Value = Frame.PID.ToString("X8");
                 Row.Cells["EC"].Value = Frame.EC.ToString("X8");
                 Row.Cells["Shiny"].Value = Frame.Shiny;
+                Row.Cells["Ability"].Value = Frame.Ability;
+                Row.Cells["Nature"].Value = Frame.Nature;
                 Row.Cells["HP"].Value = Frame.HP;
                 Row.Cells["Atk"].Value = Frame.Atk;
                 Row.Cells["Def"].Value = Frame.Def;

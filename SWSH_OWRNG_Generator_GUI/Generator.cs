@@ -144,6 +144,8 @@ namespace SWSH_OWRNG_Generator_GUI
                         PID = PID,
                         EC = EC,
                         Shiny = ShinyXOR == 0 ? "Square" : (ShinyXOR < 16 ? "Star" : "No"),
+                        Ability = AbilityRoll == 0 ? 1 : 0,
+                        Nature = Natures[Nature],
                         HP = IVs[0],
                         Atk = IVs[1],
                         Def = IVs[2],
