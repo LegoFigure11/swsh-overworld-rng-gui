@@ -314,6 +314,30 @@ namespace SWSH_OWRNG_Generator_GUI
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
             uint[] MinIVs = { UInt16.Parse(hpMin.Text), UInt16.Parse(atkMin.Text), UInt16.Parse(defMin.Text), UInt16.Parse(spaMin.Text), UInt16.Parse(spdMin.Text), UInt16.Parse(speMin.Text) };
             uint[] MaxIVs = { UInt16.Parse(hpMax.Text), UInt16.Parse(atkMax.Text), UInt16.Parse(defMax.Text), UInt16.Parse(spaMax.Text), UInt16.Parse(spdMax.Text), UInt16.Parse(speMax.Text) };
+            int[] WrongIVs = new int[6];
+            string message = "";
+            string[] stats = { "HP", "Atk", "Def", "SpA", "SpD", "Spe" };
+            int err = 0;
+
+            for (int i = 0; i < MinIVs.Length; i++)
+            {
+                if (MinIVs[i] > MaxIVs[i])
+                {
+                    message += $"Error in stat filter: {stats[i]}!\n";
+                    err = 1;
+                }
+            }
+
+            if (err != 0)
+            {
+                message += "\nMin IV filter cannot be greater than Max IV filter!";
+                string caption = "Error!";
+                DialogResult result;
+                result = MessageBox.Show(message, caption);
+                return;
+            }
+            
+
 
             Results.Rows.Clear();
 
