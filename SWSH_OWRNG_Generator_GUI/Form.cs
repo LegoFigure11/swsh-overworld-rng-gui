@@ -11,8 +11,9 @@ namespace SWSH_OWRNG_Generator_GUI
     {
         public Form()
         {
+            var v = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             InitializeComponent();
-            this.Text = "SwSh OWRNG Generator GUI git#" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            this.Text = "SwSh OWRNG Generator GUI v" + v.Major + "." + v.Minor + "." + v.Build;
         }
 
         private void Form1_Load(object sender, EventArgs e)
