@@ -742,6 +742,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defMax.TabIndex = 25;
             this.defMax.Text = "31";
             this.defMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.defMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // label13
             // 
@@ -808,6 +809,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaMin.TabIndex = 10;
             this.spaMin.Text = "0";
             this.spaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spaMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // atkMinFilter
             // 
@@ -827,6 +829,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdMin.TabIndex = 12;
             this.spdMin.Text = "0";
             this.spdMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spdMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // spdMax
             // 
@@ -836,6 +839,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdMax.TabIndex = 29;
             this.spdMax.Text = "31";
             this.spdMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spdMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // speMin
             // 
@@ -845,6 +849,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speMin.TabIndex = 14;
             this.speMin.Text = "0";
             this.speMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.speMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // speMax
             // 
@@ -854,6 +859,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speMax.TabIndex = 31;
             this.speMax.Text = "31";
             this.speMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.speMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // atkMax
             // 
@@ -863,6 +869,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMax.TabIndex = 23;
             this.atkMax.Text = "31";
             this.atkMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.atkMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // atkMaxFilter
             // 
@@ -882,6 +889,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defMin.TabIndex = 8;
             this.defMin.Text = "0";
             this.defMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.defMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // defMinFilter
             // 
@@ -921,6 +929,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaMax.TabIndex = 27;
             this.spaMax.Text = "31";
             this.spaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spaMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // label14
             // 
@@ -939,6 +948,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMin.TabIndex = 6;
             this.atkMin.Text = "0";
             this.atkMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.atkMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
             // 
             // spaMaxFilter
             // 
