@@ -547,6 +547,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.ButtonSearch.TabIndex = 70;
             this.ButtonSearch.Text = "Search!";
             this.ButtonSearch.UseVisualStyleBackColor = true;
+            
             // 
             // SelectedShiny
             // 
