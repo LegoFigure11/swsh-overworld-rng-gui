@@ -137,7 +137,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputState0.MaxLength = 16;
             this.InputState0.Name = "InputState0";
             this.InputState0.Size = new System.Drawing.Size(205, 26);
-            this.InputState0.TabIndex = 1;
+            this.InputState0.TabIndex = 0;
             this.InputState0.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
             this.InputState0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
             // 
@@ -147,7 +147,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputState1.MaxLength = 16;
             this.InputState1.Name = "InputState1";
             this.InputState1.Size = new System.Drawing.Size(205, 26);
-            this.InputState1.TabIndex = 2;
+            this.InputState1.TabIndex = 1;
             this.InputState1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
             this.InputState1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
             // 
@@ -165,7 +165,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMin.Location = new System.Drawing.Point(353, 6);
             this.hpMin.Name = "hpMin";
             this.hpMin.Size = new System.Drawing.Size(28, 26);
-            this.hpMin.TabIndex = 4;
+            this.hpMin.TabIndex = 5;
             this.hpMin.Text = "0";
             this.hpMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hpMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -175,7 +175,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMax.Location = new System.Drawing.Point(403, 6);
             this.hpMax.Name = "hpMax";
             this.hpMax.Size = new System.Drawing.Size(28, 26);
-            this.hpMax.TabIndex = 5;
+            this.hpMax.TabIndex = 6;
             this.hpMax.Text = "31";
             this.hpMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hpMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -254,7 +254,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMinFilter.Location = new System.Drawing.Point(437, 5);
             this.hpMinFilter.Name = "hpMinFilter";
             this.hpMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.hpMinFilter.TabIndex = 33;
+            this.hpMinFilter.TabIndex = 17;
             this.hpMinFilter.Text = "0";
             this.hpMinFilter.UseVisualStyleBackColor = true;
             this.hpMinFilter.Click += new System.EventHandler(this.HpMinFilter_Click);
@@ -264,7 +264,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMaxFilter.Location = new System.Drawing.Point(471, 5);
             this.hpMaxFilter.Name = "hpMaxFilter";
             this.hpMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.hpMaxFilter.TabIndex = 34;
+            this.hpMaxFilter.TabIndex = 18;
             this.hpMaxFilter.Text = "31";
             this.hpMaxFilter.UseVisualStyleBackColor = true;
             this.hpMaxFilter.Click += new System.EventHandler(this.HpMaxFilter_Click);
@@ -275,7 +275,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputTID.MaxLength = 5;
             this.InputTID.Name = "InputTID";
             this.InputTID.Size = new System.Drawing.Size(102, 26);
-            this.InputTID.TabIndex = 45;
+            this.InputTID.TabIndex = 2;
             this.InputTID.Text = "1390";
             this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             this.InputTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
@@ -286,7 +286,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSID.MaxLength = 5;
             this.InputSID.Name = "InputSID";
             this.InputSID.Size = new System.Drawing.Size(102, 26);
-            this.InputSID.TabIndex = 46;
+            this.InputSID.TabIndex = 3;
             this.InputSID.Text = "1337";
             this.InputSID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             this.InputSID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
@@ -315,7 +315,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputMaxAdv.MaxLength = 13;
             this.InputMaxAdv.Name = "InputMaxAdv";
             this.InputMaxAdv.Size = new System.Drawing.Size(102, 26);
-            this.InputMaxAdv.TabIndex = 49;
+            this.InputMaxAdv.TabIndex = 4;
             this.InputMaxAdv.Text = "5000000";
             // 
             // LabelMaxAdv
@@ -388,8 +388,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedMark.Location = new System.Drawing.Point(353, 162);
             this.SelectedMark.Name = "SelectedMark";
             this.SelectedMark.Size = new System.Drawing.Size(147, 28);
-            this.SelectedMark.TabIndex = 54;
             this.SelectedMark.SelectedIndex = 0;
+            this.SelectedMark.TabIndex = 29;
             this.SelectedMark.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // CheckShinyCharm
@@ -398,7 +398,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckShinyCharm.Location = new System.Drawing.Point(12, 162);
             this.CheckShinyCharm.Name = "CheckShinyCharm";
             this.CheckShinyCharm.Size = new System.Drawing.Size(125, 24);
-            this.CheckShinyCharm.TabIndex = 55;
+            this.CheckShinyCharm.TabIndex = 31;
             this.CheckShinyCharm.Text = "Shiny Charm";
             this.CheckShinyCharm.UseVisualStyleBackColor = true;
             // 
@@ -408,7 +408,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckMarkCharm.Location = new System.Drawing.Point(12, 185);
             this.CheckMarkCharm.Name = "CheckMarkCharm";
             this.CheckMarkCharm.Size = new System.Drawing.Size(121, 24);
-            this.CheckMarkCharm.TabIndex = 56;
+            this.CheckMarkCharm.TabIndex = 33;
             this.CheckMarkCharm.Text = "Mark Charm";
             this.CheckMarkCharm.UseVisualStyleBackColor = true;
             // 
@@ -418,7 +418,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckWeather.Location = new System.Drawing.Point(12, 208);
             this.CheckWeather.Name = "CheckWeather";
             this.CheckWeather.Size = new System.Drawing.Size(96, 24);
-            this.CheckWeather.TabIndex = 57;
+            this.CheckWeather.TabIndex = 35;
             this.CheckWeather.Text = "Weather";
             this.CheckWeather.UseVisualStyleBackColor = true;
             // 
@@ -428,7 +428,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckStatic.Location = new System.Drawing.Point(98, 162);
             this.CheckStatic.Name = "CheckStatic";
             this.CheckStatic.Size = new System.Drawing.Size(76, 24);
-            this.CheckStatic.TabIndex = 58;
+            this.CheckStatic.TabIndex = 32;
             this.CheckStatic.Text = "Static";
             this.CheckStatic.UseVisualStyleBackColor = true;
             this.CheckStatic.CheckedChanged += new System.EventHandler(this.CheckStatic_CheckedChanged);
@@ -439,7 +439,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckFishing.Location = new System.Drawing.Point(98, 185);
             this.CheckFishing.Name = "CheckFishing";
             this.CheckFishing.Size = new System.Drawing.Size(86, 24);
-            this.CheckFishing.TabIndex = 59;
+            this.CheckFishing.TabIndex = 34;
             this.CheckFishing.Text = "Fishing";
             this.CheckFishing.UseVisualStyleBackColor = true;
             // 
@@ -449,7 +449,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckHeldItem.Location = new System.Drawing.Point(98, 208);
             this.CheckHeldItem.Name = "CheckHeldItem";
             this.CheckHeldItem.Size = new System.Drawing.Size(164, 24);
-            this.CheckHeldItem.TabIndex = 60;
+            this.CheckHeldItem.TabIndex = 36;
             this.CheckHeldItem.Text = "Random held item";
             this.CheckHeldItem.UseVisualStyleBackColor = true;
             // 
@@ -459,7 +459,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckExtraRoll.Location = new System.Drawing.Point(12, 231);
             this.CheckExtraRoll.Name = "CheckExtraRoll";
             this.CheckExtraRoll.Size = new System.Drawing.Size(213, 24);
-            this.CheckExtraRoll.TabIndex = 61;
+            this.CheckExtraRoll.TabIndex = 37;
             this.CheckExtraRoll.Text = "Unknown Extra Mark Roll";
             this.CheckExtraRoll.UseVisualStyleBackColor = true;
             // 
@@ -478,7 +478,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputLevelMax.MaxLength = 2;
             this.InputLevelMax.Name = "InputLevelMax";
             this.InputLevelMax.Size = new System.Drawing.Size(28, 26);
-            this.InputLevelMax.TabIndex = 63;
+            this.InputLevelMax.TabIndex = 39;
             this.InputLevelMax.Text = "0";
             this.InputLevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputLevelMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
@@ -490,7 +490,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputLevelMin.MaxLength = 2;
             this.InputLevelMin.Name = "InputLevelMin";
             this.InputLevelMin.Size = new System.Drawing.Size(28, 26);
-            this.InputLevelMin.TabIndex = 62;
+            this.InputLevelMin.TabIndex = 38;
             this.InputLevelMin.Text = "0";
             this.InputLevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputLevelMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
@@ -511,7 +511,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSlotMax.MaxLength = 2;
             this.InputSlotMax.Name = "InputSlotMax";
             this.InputSlotMax.Size = new System.Drawing.Size(28, 26);
-            this.InputSlotMax.TabIndex = 66;
+            this.InputSlotMax.TabIndex = 41;
             this.InputSlotMax.Text = "99";
             this.InputSlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputSlotMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
@@ -523,7 +523,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSlotMin.MaxLength = 2;
             this.InputSlotMin.Name = "InputSlotMin";
             this.InputSlotMin.Size = new System.Drawing.Size(28, 26);
-            this.InputSlotMin.TabIndex = 65;
+            this.InputSlotMin.TabIndex = 40;
             this.InputSlotMin.Text = "0";
             this.InputSlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputSlotMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
@@ -552,7 +552,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.ButtonSearch.Location = new System.Drawing.Point(12, 273);
             this.ButtonSearch.Name = "ButtonSearch";
             this.ButtonSearch.Size = new System.Drawing.Size(488, 37);
-            this.ButtonSearch.TabIndex = 70;
+            this.ButtonSearch.TabIndex = 42;
             this.ButtonSearch.Text = "Search!";
             this.ButtonSearch.UseVisualStyleBackColor = true;
             this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
@@ -570,8 +570,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedShiny.Location = new System.Drawing.Point(353, 189);
             this.SelectedShiny.Name = "SelectedShiny";
             this.SelectedShiny.Size = new System.Drawing.Size(147, 28);
-            this.SelectedShiny.TabIndex = 72;
             this.SelectedShiny.SelectedIndex = 0;
+            this.SelectedShiny.TabIndex = 30;
             // 
             // LabelShiny
             // 
@@ -631,7 +631,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speMinFilter.Location = new System.Drawing.Point(436, 136);
             this.speMinFilter.Name = "speMinFilter";
             this.speMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.speMinFilter.TabIndex = 43;
+            this.speMinFilter.TabIndex = 27;
             this.speMinFilter.Text = "0";
             this.speMinFilter.UseVisualStyleBackColor = true;
             this.speMinFilter.Click += new System.EventHandler(this.SpeMinFilter_Click);
@@ -641,7 +641,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defMax.Location = new System.Drawing.Point(403, 58);
             this.defMax.Name = "defMax";
             this.defMax.Size = new System.Drawing.Size(28, 26);
-            this.defMax.TabIndex = 25;
+            this.defMax.TabIndex = 10;
             this.defMax.Text = "31";
             this.defMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.defMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -669,7 +669,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdMinFilter.Location = new System.Drawing.Point(436, 110);
             this.spdMinFilter.Name = "spdMinFilter";
             this.spdMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.spdMinFilter.TabIndex = 41;
+            this.spdMinFilter.TabIndex = 25;
             this.spdMinFilter.Text = "0";
             this.spdMinFilter.UseVisualStyleBackColor = true;
             this.spdMinFilter.Click += new System.EventHandler(this.SpdMinFilter_Click);
@@ -679,7 +679,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdMaxFilter.Location = new System.Drawing.Point(471, 110);
             this.spdMaxFilter.Name = "spdMaxFilter";
             this.spdMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.spdMaxFilter.TabIndex = 42;
+            this.spdMaxFilter.TabIndex = 26;
             this.spdMaxFilter.Text = "31";
             this.spdMaxFilter.UseVisualStyleBackColor = true;
             this.spdMaxFilter.Click += new System.EventHandler(this.SpdMaxFilter_Click);
@@ -698,7 +698,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speMaxFilter.Location = new System.Drawing.Point(471, 136);
             this.speMaxFilter.Name = "speMaxFilter";
             this.speMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.speMaxFilter.TabIndex = 44;
+            this.speMaxFilter.TabIndex = 28;
             this.speMaxFilter.Text = "31";
             this.speMaxFilter.UseVisualStyleBackColor = true;
             this.speMaxFilter.Click += new System.EventHandler(this.SpeMaxFilter_Click);
@@ -708,7 +708,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaMin.Location = new System.Drawing.Point(353, 84);
             this.spaMin.Name = "spaMin";
             this.spaMin.Size = new System.Drawing.Size(28, 26);
-            this.spaMin.TabIndex = 10;
+            this.spaMin.TabIndex = 11;
             this.spaMin.Text = "0";
             this.spaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spaMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -718,7 +718,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMinFilter.Location = new System.Drawing.Point(437, 32);
             this.atkMinFilter.Name = "atkMinFilter";
             this.atkMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.atkMinFilter.TabIndex = 35;
+            this.atkMinFilter.TabIndex = 19;
             this.atkMinFilter.Text = "0";
             this.atkMinFilter.UseVisualStyleBackColor = true;
             this.atkMinFilter.Click += new System.EventHandler(this.AtkMinFilter_Click);
@@ -728,7 +728,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdMin.Location = new System.Drawing.Point(353, 110);
             this.spdMin.Name = "spdMin";
             this.spdMin.Size = new System.Drawing.Size(28, 26);
-            this.spdMin.TabIndex = 12;
+            this.spdMin.TabIndex = 13;
             this.spdMin.Text = "0";
             this.spdMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spdMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -738,7 +738,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdMax.Location = new System.Drawing.Point(403, 110);
             this.spdMax.Name = "spdMax";
             this.spdMax.Size = new System.Drawing.Size(28, 26);
-            this.spdMax.TabIndex = 29;
+            this.spdMax.TabIndex = 14;
             this.spdMax.Text = "31";
             this.spdMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spdMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -748,7 +748,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speMin.Location = new System.Drawing.Point(353, 136);
             this.speMin.Name = "speMin";
             this.speMin.Size = new System.Drawing.Size(28, 26);
-            this.speMin.TabIndex = 14;
+            this.speMin.TabIndex = 15;
             this.speMin.Text = "0";
             this.speMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.speMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -758,7 +758,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speMax.Location = new System.Drawing.Point(403, 136);
             this.speMax.Name = "speMax";
             this.speMax.Size = new System.Drawing.Size(28, 26);
-            this.speMax.TabIndex = 31;
+            this.speMax.TabIndex = 16;
             this.speMax.Text = "31";
             this.speMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.speMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -768,7 +768,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMax.Location = new System.Drawing.Point(403, 32);
             this.atkMax.Name = "atkMax";
             this.atkMax.Size = new System.Drawing.Size(28, 26);
-            this.atkMax.TabIndex = 23;
+            this.atkMax.TabIndex = 8;
             this.atkMax.Text = "31";
             this.atkMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.atkMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -778,7 +778,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMaxFilter.Location = new System.Drawing.Point(471, 32);
             this.atkMaxFilter.Name = "atkMaxFilter";
             this.atkMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.atkMaxFilter.TabIndex = 36;
+            this.atkMaxFilter.TabIndex = 20;
             this.atkMaxFilter.Text = "31";
             this.atkMaxFilter.UseVisualStyleBackColor = true;
             this.atkMaxFilter.Click += new System.EventHandler(this.AtkMaxFilter_Click);
@@ -788,7 +788,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defMin.Location = new System.Drawing.Point(353, 58);
             this.defMin.Name = "defMin";
             this.defMin.Size = new System.Drawing.Size(28, 26);
-            this.defMin.TabIndex = 8;
+            this.defMin.TabIndex = 9;
             this.defMin.Text = "0";
             this.defMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.defMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -798,7 +798,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defMinFilter.Location = new System.Drawing.Point(437, 58);
             this.defMinFilter.Name = "defMinFilter";
             this.defMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.defMinFilter.TabIndex = 37;
+            this.defMinFilter.TabIndex = 21;
             this.defMinFilter.Text = "0";
             this.defMinFilter.UseVisualStyleBackColor = true;
             this.defMinFilter.Click += new System.EventHandler(this.DefMinFilter_Click);
@@ -808,7 +808,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaMinFilter.Location = new System.Drawing.Point(437, 84);
             this.spaMinFilter.Name = "spaMinFilter";
             this.spaMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.spaMinFilter.TabIndex = 39;
+            this.spaMinFilter.TabIndex = 23;
             this.spaMinFilter.Text = "0";
             this.spaMinFilter.UseVisualStyleBackColor = true;
             this.spaMinFilter.Click += new System.EventHandler(this.SpaMinFilter_Click);
@@ -818,7 +818,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defMaxFilter.Location = new System.Drawing.Point(471, 58);
             this.defMaxFilter.Name = "defMaxFilter";
             this.defMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.defMaxFilter.TabIndex = 38;
+            this.defMaxFilter.TabIndex = 22;
             this.defMaxFilter.Text = "31";
             this.defMaxFilter.UseVisualStyleBackColor = true;
             this.defMaxFilter.Click += new System.EventHandler(this.DefMaxFilter_Click);
@@ -828,7 +828,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaMax.Location = new System.Drawing.Point(403, 84);
             this.spaMax.Name = "spaMax";
             this.spaMax.Size = new System.Drawing.Size(28, 26);
-            this.spaMax.TabIndex = 27;
+            this.spaMax.TabIndex = 12;
             this.spaMax.Text = "31";
             this.spaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spaMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -847,7 +847,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMin.Location = new System.Drawing.Point(353, 32);
             this.atkMin.Name = "atkMin";
             this.atkMin.Size = new System.Drawing.Size(28, 26);
-            this.atkMin.TabIndex = 6;
+            this.atkMin.TabIndex = 7;
             this.atkMin.Text = "0";
             this.atkMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.atkMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
@@ -857,7 +857,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaMaxFilter.Location = new System.Drawing.Point(471, 84);
             this.spaMaxFilter.Name = "spaMaxFilter";
             this.spaMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.spaMaxFilter.TabIndex = 40;
+            this.spaMaxFilter.TabIndex = 24;
             this.spaMaxFilter.Text = "31";
             this.spaMaxFilter.UseVisualStyleBackColor = true;
             this.spaMaxFilter.Click += new System.EventHandler(this.SpaMaxFilter_Click);
@@ -945,63 +945,63 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // HP
             // 
-            this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.HP.DataPropertyName = "HP";
             this.HP.HeaderText = "HP";
             this.HP.MinimumWidth = 8;
             this.HP.Name = "HP";
             this.HP.ReadOnly = true;
-            this.HP.Width = 67;
+            this.HP.Width = 34;
             // 
             // Atk
             // 
-            this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Atk.DataPropertyName = "Atk";
             this.Atk.HeaderText = "Atk";
             this.Atk.MinimumWidth = 8;
             this.Atk.Name = "Atk";
             this.Atk.ReadOnly = true;
-            this.Atk.Width = 69;
+            this.Atk.Width = 34;
             // 
             // Def
             // 
-            this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Def.DataPropertyName = "Def";
             this.Def.HeaderText = "Def";
             this.Def.MinimumWidth = 8;
             this.Def.Name = "Def";
             this.Def.ReadOnly = true;
-            this.Def.Width = 71;
+            this.Def.Width = 34;
             // 
             // SpA
             // 
-            this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.SpA.DataPropertyName = "SpA";
             this.SpA.HeaderText = "SpA";
             this.SpA.MinimumWidth = 8;
             this.SpA.Name = "SpA";
             this.SpA.ReadOnly = true;
-            this.SpA.Width = 76;
+            this.SpA.Width = 34;
             // 
             // SpD
             // 
-            this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.SpD.DataPropertyName = "SpD";
             this.SpD.HeaderText = "SpD";
             this.SpD.MinimumWidth = 8;
             this.SpD.Name = "SpD";
             this.SpD.ReadOnly = true;
-            this.SpD.Width = 77;
+            this.SpD.Width = 34;
             // 
             // Spe
             // 
-            this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Spe.DataPropertyName = "Spe";
             this.Spe.HeaderText = "Spe";
             this.Spe.MinimumWidth = 8;
             this.Spe.Name = "Spe";
             this.Spe.ReadOnly = true;
-            this.Spe.Width = 74;
+            this.Spe.Width = 34;
             // 
             // Mark
             // 
