@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 using System.Windows.Forms;
 
@@ -16,7 +17,8 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            InputTID.Text = Properties.Settings.Default.TID;
+            InputSID.Text = Properties.Settings.Default.SID;
         }
 
         private void HpMinFilter_Click(object sender, EventArgs e)
@@ -61,6 +63,10 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (i < 0) textBox.Text = "0";
                 if (i > 0xFFFF) textBox.Text = "65535";
             }
+            //Pad(sender, '0', 5);
+            Properties.Settings.Default.TID = InputTID.Text;
+            Properties.Settings.Default.SID = InputSID.Text;
+            Properties.Settings.Default.Save();
         }
 
         private void ResetFilters(object sender, EventArgs e)
@@ -294,8 +300,20 @@ namespace SWSH_OWRNG_Generator_GUI
             Pad(InputSlotMax, '0', 1);
             Pad(InputLevelMin, '0', 1);
             Pad(InputLevelMax, '0', 1);
-            ulong s0 = UInt64.Parse(InputState0.Text, System.Globalization.NumberStyles.AllowHexSpecifier);
-            ulong s1 = UInt64.Parse(InputState1.Text, System.Globalization.NumberStyles.AllowHexSpecifier);
+            ulong s0 = UInt64.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
+            ulong s1 = UInt64.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
+            if (s0 == 0)
+            {
+                InputState0.Text = "1";
+                Pad(InputState0, '0', 16);
+                s0 = 1;
+            }
+            if (s1 == 0)
+            {
+                InputState1.Text = "1";
+                Pad(InputState1, '0', 16);
+                s1 = 1;
+            }
             ulong advances = UInt64.Parse(InputMaxAdv.Text);
             uint TID = UInt16.Parse(InputTID.Text);
             uint SID = UInt16.Parse(InputSID.Text);
@@ -351,6 +369,6 @@ namespace SWSH_OWRNG_Generator_GUI
             ((TextBox)sender).Text = ((TextBox)sender).Text.PadLeft(length, s);
         }
 
-   
+
     }
 }
