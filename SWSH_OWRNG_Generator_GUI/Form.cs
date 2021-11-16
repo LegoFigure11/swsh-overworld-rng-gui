@@ -11,7 +11,7 @@ namespace SWSH_OWRNG_Generator_GUI
         public Form()
         {
             InitializeComponent();
-            this.Text = "SwSh OWRNG Generator GUI git#" + Application.ProductVersion.ToString();
+            this.Text = "SwSh OWRNG Generator GUI git#" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -353,9 +353,8 @@ namespace SWSH_OWRNG_Generator_GUI
                 result = MessageBox.Show(message, caption);
                 return;
             }
-            
 
-
+            Results.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.EnableResizing;
             Results.Rows.Clear();
             Results.Columns["Level"].Visible = !Static;
             Results.Columns["Slot"].Visible = !Static;
@@ -365,33 +364,14 @@ namespace SWSH_OWRNG_Generator_GUI
                 LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs
             );
 
-            foreach (Frame Frame in Frames)
-            {
-                int RowID = Results.Rows.Add();
-                DataGridViewRow Row = Results.Rows[RowID];
-                Row.Cells["Frame"].Value = Frame.Advances;
-                Row.Cells["Level"].Value = Frame.Level;
-                Row.Cells["Slot"].Value = Frame.Slot;
-                Row.Cells["PID"].Value = Frame.PID.ToString("X8");
-                Row.Cells["EC"].Value = Frame.EC.ToString("X8");
-                Row.Cells["Shiny"].Value = Frame.Shiny;
-                Row.Cells["Ability"].Value = Frame.Ability;
-                Row.Cells["Nature"].Value = Frame.Nature;
-                Row.Cells["HP"].Value = Frame.HP;
-                Row.Cells["Atk"].Value = Frame.Atk;
-                Row.Cells["Def"].Value = Frame.Def;
-                Row.Cells["SpA"].Value = Frame.SpA;
-                Row.Cells["SpD"].Value = Frame.SpD;
-                Row.Cells["Spe"].Value = Frame.Spe;
-                Row.Cells["Mark"].Value = Frame.Mark;
-            }
+            BindingSource Source = new BindingSource { DataSource = Frames };
+            Results.DataSource = Source;
+            Source.ResetBindings(false);
         }
 
         private void Pad(object sender, char s, int length)
         {
             ((TextBox)sender).Text = ((TextBox)sender).Text.PadLeft(length, s);
         }
-
-
     }
 }

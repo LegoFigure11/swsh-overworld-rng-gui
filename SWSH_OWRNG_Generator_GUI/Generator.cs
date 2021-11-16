@@ -152,7 +152,9 @@ namespace SWSH_OWRNG_Generator_GUI
                         SpA = IVs[3],
                         SpD = IVs[4],
                         Spe = IVs[5],
-                        Mark = Mark
+                        Mark = Mark,
+                        State0 = go.state0,
+                        State1 = go.state1,
                     }
                 );
 
