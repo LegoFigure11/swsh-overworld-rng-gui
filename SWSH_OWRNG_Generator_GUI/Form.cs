@@ -75,8 +75,15 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (i > 0xFFFF) textBox.Text = "65535";
             }
 
-            Properties.Settings.Default.TID = InputTID.Text;
-            Properties.Settings.Default.SID = InputSID.Text;
+            if (textBox.Name == "InputTID")
+            {
+                Properties.Settings.Default.TID = InputTID.Text;
+            }
+            else
+            {
+                Properties.Settings.Default.SID = InputSID.Text;
+            }
+            
             Properties.Settings.Default.Save();
         }
 
