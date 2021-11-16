@@ -7,6 +7,7 @@ namespace SWSH_OWRNG_Generator_GUI
 {
     public partial class Form1 : Form
     {
+        //private rng calc;
         public Form1()
         {
             InitializeComponent();
@@ -345,5 +346,7 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             ((TextBox)sender).Text = ((TextBox)sender).Text.PadLeft(length, s);
         }
+
+   
     }
 }
