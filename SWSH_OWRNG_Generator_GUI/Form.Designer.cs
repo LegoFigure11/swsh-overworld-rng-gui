@@ -1,7 +1,7 @@
 ﻿
 namespace SWSH_OWRNG_Generator_GUI
 {
-    partial class Form1
+    partial class Form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace SWSH_OWRNG_Generator_GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.LabelState0 = new System.Windows.Forms.Label();
             this.InputState0 = new System.Windows.Forms.TextBox();
             this.InputState1 = new System.Windows.Forms.TextBox();

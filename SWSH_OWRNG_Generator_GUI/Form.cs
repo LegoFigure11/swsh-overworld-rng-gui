@@ -6,13 +6,12 @@ using System.Windows.Forms;
 
 namespace SWSH_OWRNG_Generator_GUI
 {
-    public partial class Form1 : Form
+    public partial class Form : System.Windows.Forms.Form
     {
-        //private rng calc;
-        public Form1()
+        public Form()
         {
             InitializeComponent();
-            this.Text = "SwSh OWRNG Generator GUI";
+            this.Text = "SwSh OWRNG Generator GUI git#" + Application.ProductVersion.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,7 +62,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (i < 0) textBox.Text = "0";
                 if (i > 0xFFFF) textBox.Text = "65535";
             }
-            //Pad(sender, '0', 5);
+
             Properties.Settings.Default.TID = InputTID.Text;
             Properties.Settings.Default.SID = InputSID.Text;
             Properties.Settings.Default.Save();
