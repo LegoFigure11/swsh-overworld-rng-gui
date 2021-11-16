@@ -62,17 +62,17 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckHeldItem = new System.Windows.Forms.CheckBox();
             this.CheckExtraRoll = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.LevelMax = new System.Windows.Forms.TextBox();
-            this.LevelMin = new System.Windows.Forms.TextBox();
+            this.InputLevelMax = new System.Windows.Forms.TextBox();
+            this.InputLevelMin = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.SlotMax = new System.Windows.Forms.TextBox();
-            this.SlotMin = new System.Windows.Forms.TextBox();
+            this.InputSlotMax = new System.Windows.Forms.TextBox();
+            this.InputSlotMin = new System.Windows.Forms.TextBox();
             this.LabelLevel = new System.Windows.Forms.Label();
             this.LabelSlot = new System.Windows.Forms.Label();
             this.ButtonSearch = new System.Windows.Forms.Button();
             this.SelectedShiny = new System.Windows.Forms.ComboBox();
             this.LabelShiny = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Results = new System.Windows.Forms.DataGridView();
             this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,7 +112,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMin = new System.Windows.Forms.TextBox();
             this.spaMaxFilter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelState0
@@ -120,7 +120,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelState0.AutoSize = true;
             this.LabelState0.Location = new System.Drawing.Point(15, 9);
             this.LabelState0.Name = "LabelState0";
-            this.LabelState0.Size = new System.Drawing.Size(50, 13);
+            this.LabelState0.Size = new System.Drawing.Size(73, 20);
             this.LabelState0.TabIndex = 0;
             this.LabelState0.Text = "State[0]: ";
             // 
@@ -129,7 +129,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputState0.Location = new System.Drawing.Point(68, 6);
             this.InputState0.MaxLength = 16;
             this.InputState0.Name = "InputState0";
-            this.InputState0.Size = new System.Drawing.Size(205, 20);
+            this.InputState0.Size = new System.Drawing.Size(205, 26);
             this.InputState0.TabIndex = 1;
             this.InputState0.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
             this.InputState0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
@@ -139,7 +139,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputState1.Location = new System.Drawing.Point(68, 32);
             this.InputState1.MaxLength = 16;
             this.InputState1.Name = "InputState1";
-            this.InputState1.Size = new System.Drawing.Size(205, 20);
+            this.InputState1.Size = new System.Drawing.Size(205, 26);
             this.InputState1.TabIndex = 2;
             this.InputState1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
             this.InputState1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
@@ -149,7 +149,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelState1.AutoSize = true;
             this.LabelState1.Location = new System.Drawing.Point(15, 35);
             this.LabelState1.Name = "LabelState1";
-            this.LabelState1.Size = new System.Drawing.Size(47, 13);
+            this.LabelState1.Size = new System.Drawing.Size(69, 20);
             this.LabelState1.TabIndex = 3;
             this.LabelState1.Text = "State[1]:";
             // 
@@ -157,7 +157,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.hpMin.Location = new System.Drawing.Point(353, 6);
             this.hpMin.Name = "hpMin";
-            this.hpMin.Size = new System.Drawing.Size(28, 20);
+            this.hpMin.Size = new System.Drawing.Size(28, 26);
             this.hpMin.TabIndex = 4;
             this.hpMin.Text = "0";
             this.hpMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -167,7 +167,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.hpMax.Location = new System.Drawing.Point(403, 6);
             this.hpMax.Name = "hpMax";
-            this.hpMax.Size = new System.Drawing.Size(28, 20);
+            this.hpMax.Size = new System.Drawing.Size(28, 26);
             this.hpMax.TabIndex = 5;
             this.hpMax.Text = "31";
             this.hpMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -178,7 +178,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpFilter.AutoSize = true;
             this.hpFilter.Location = new System.Drawing.Point(322, 9);
             this.hpFilter.Name = "hpFilter";
-            this.hpFilter.Size = new System.Drawing.Size(25, 13);
+            this.hpFilter.Size = new System.Drawing.Size(35, 20);
             this.hpFilter.TabIndex = 16;
             this.hpFilter.Text = "HP:";
             this.hpFilter.Click += new System.EventHandler(this.ResetFilters);
@@ -188,7 +188,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkFilter.AutoSize = true;
             this.atkFilter.Location = new System.Drawing.Point(321, 35);
             this.atkFilter.Name = "atkFilter";
-            this.atkFilter.Size = new System.Drawing.Size(26, 13);
+            this.atkFilter.Size = new System.Drawing.Size(37, 20);
             this.atkFilter.TabIndex = 17;
             this.atkFilter.Text = "Atk:";
             this.atkFilter.Click += new System.EventHandler(this.ResetFilters);
@@ -198,7 +198,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defFilter.AutoSize = true;
             this.defFilter.Location = new System.Drawing.Point(320, 61);
             this.defFilter.Name = "defFilter";
-            this.defFilter.Size = new System.Drawing.Size(27, 13);
+            this.defFilter.Size = new System.Drawing.Size(39, 20);
             this.defFilter.TabIndex = 18;
             this.defFilter.Text = "Def:";
             this.defFilter.Click += new System.EventHandler(this.ResetFilters);
@@ -208,7 +208,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaFilter.AutoSize = true;
             this.spaFilter.Location = new System.Drawing.Point(317, 87);
             this.spaFilter.Name = "spaFilter";
-            this.spaFilter.Size = new System.Drawing.Size(30, 13);
+            this.spaFilter.Size = new System.Drawing.Size(44, 20);
             this.spaFilter.TabIndex = 19;
             this.spaFilter.Text = "SpA:";
             this.spaFilter.Click += new System.EventHandler(this.ResetFilters);
@@ -218,7 +218,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdFilter.AutoSize = true;
             this.spdFilter.Location = new System.Drawing.Point(316, 113);
             this.spdFilter.Name = "spdFilter";
-            this.spdFilter.Size = new System.Drawing.Size(31, 13);
+            this.spdFilter.Size = new System.Drawing.Size(45, 20);
             this.spdFilter.TabIndex = 20;
             this.spdFilter.Text = "SpD:";
             this.spdFilter.Click += new System.EventHandler(this.ResetFilters);
@@ -228,7 +228,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speFilter.AutoSize = true;
             this.speFilter.Location = new System.Drawing.Point(316, 139);
             this.speFilter.Name = "speFilter";
-            this.speFilter.Size = new System.Drawing.Size(29, 13);
+            this.speFilter.Size = new System.Drawing.Size(42, 20);
             this.speFilter.TabIndex = 21;
             this.speFilter.Text = "Spe:";
             this.speFilter.Click += new System.EventHandler(this.ResetFilters);
@@ -238,7 +238,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(387, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(10, 13);
+            this.label10.Size = new System.Drawing.Size(14, 20);
             this.label10.TabIndex = 22;
             this.label10.Text = "-";
             // 
@@ -267,7 +267,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputTID.Location = new System.Drawing.Point(68, 84);
             this.InputTID.MaxLength = 5;
             this.InputTID.Name = "InputTID";
-            this.InputTID.Size = new System.Drawing.Size(102, 20);
+            this.InputTID.Size = new System.Drawing.Size(102, 26);
             this.InputTID.TabIndex = 45;
             this.InputTID.Text = "1390";
             this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
@@ -278,7 +278,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSID.Location = new System.Drawing.Point(68, 110);
             this.InputSID.MaxLength = 5;
             this.InputSID.Name = "InputSID";
-            this.InputSID.Size = new System.Drawing.Size(102, 20);
+            this.InputSID.Size = new System.Drawing.Size(102, 26);
             this.InputSID.TabIndex = 46;
             this.InputSID.Text = "42069";
             this.InputSID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
@@ -289,7 +289,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelTID.AutoSize = true;
             this.LabelTID.Location = new System.Drawing.Point(34, 87);
             this.LabelTID.Name = "LabelTID";
-            this.LabelTID.Size = new System.Drawing.Size(28, 13);
+            this.LabelTID.Size = new System.Drawing.Size(39, 20);
             this.LabelTID.TabIndex = 47;
             this.LabelTID.Text = "TID:";
             // 
@@ -298,7 +298,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelSID.AutoSize = true;
             this.LabelSID.Location = new System.Drawing.Point(34, 113);
             this.LabelSID.Name = "LabelSID";
-            this.LabelSID.Size = new System.Drawing.Size(28, 13);
+            this.LabelSID.Size = new System.Drawing.Size(41, 20);
             this.LabelSID.TabIndex = 48;
             this.LabelSID.Text = "SID:";
             // 
@@ -307,7 +307,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputMaxAdv.Location = new System.Drawing.Point(68, 136);
             this.InputMaxAdv.MaxLength = 13;
             this.InputMaxAdv.Name = "InputMaxAdv";
-            this.InputMaxAdv.Size = new System.Drawing.Size(102, 20);
+            this.InputMaxAdv.Size = new System.Drawing.Size(102, 26);
             this.InputMaxAdv.TabIndex = 49;
             this.InputMaxAdv.Text = "50000000";
             // 
@@ -316,7 +316,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelMaxAdv.AutoSize = true;
             this.LabelMaxAdv.Location = new System.Drawing.Point(7, 140);
             this.LabelMaxAdv.Name = "LabelMaxAdv";
-            this.LabelMaxAdv.Size = new System.Drawing.Size(55, 13);
+            this.LabelMaxAdv.Size = new System.Drawing.Size(77, 20);
             this.LabelMaxAdv.TabIndex = 50;
             this.LabelMaxAdv.Text = "Max Adv.:";
             // 
@@ -325,7 +325,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelMark.AutoSize = true;
             this.LabelMark.Location = new System.Drawing.Point(313, 165);
             this.LabelMark.Name = "LabelMark";
-            this.LabelMark.Size = new System.Drawing.Size(34, 13);
+            this.LabelMark.Size = new System.Drawing.Size(48, 20);
             this.LabelMark.TabIndex = 52;
             this.LabelMark.Text = "Mark:";
             // 
@@ -380,7 +380,7 @@ namespace SWSH_OWRNG_Generator_GUI
             "Slump"});
             this.SelectedMark.Location = new System.Drawing.Point(353, 162);
             this.SelectedMark.Name = "SelectedMark";
-            this.SelectedMark.Size = new System.Drawing.Size(147, 21);
+            this.SelectedMark.Size = new System.Drawing.Size(147, 28);
             this.SelectedMark.TabIndex = 54;
             this.SelectedMark.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -389,7 +389,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckShinyCharm.AutoSize = true;
             this.CheckShinyCharm.Location = new System.Drawing.Point(12, 162);
             this.CheckShinyCharm.Name = "CheckShinyCharm";
-            this.CheckShinyCharm.Size = new System.Drawing.Size(85, 17);
+            this.CheckShinyCharm.Size = new System.Drawing.Size(125, 24);
             this.CheckShinyCharm.TabIndex = 55;
             this.CheckShinyCharm.Text = "Shiny Charm";
             this.CheckShinyCharm.UseVisualStyleBackColor = true;
@@ -399,7 +399,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckMarkCharm.AutoSize = true;
             this.CheckMarkCharm.Location = new System.Drawing.Point(12, 185);
             this.CheckMarkCharm.Name = "CheckMarkCharm";
-            this.CheckMarkCharm.Size = new System.Drawing.Size(83, 17);
+            this.CheckMarkCharm.Size = new System.Drawing.Size(121, 24);
             this.CheckMarkCharm.TabIndex = 56;
             this.CheckMarkCharm.Text = "Mark Charm";
             this.CheckMarkCharm.UseVisualStyleBackColor = true;
@@ -409,7 +409,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckWeather.AutoSize = true;
             this.CheckWeather.Location = new System.Drawing.Point(12, 208);
             this.CheckWeather.Name = "CheckWeather";
-            this.CheckWeather.Size = new System.Drawing.Size(67, 17);
+            this.CheckWeather.Size = new System.Drawing.Size(96, 24);
             this.CheckWeather.TabIndex = 57;
             this.CheckWeather.Text = "Weather";
             this.CheckWeather.UseVisualStyleBackColor = true;
@@ -419,7 +419,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckStatic.AutoSize = true;
             this.CheckStatic.Location = new System.Drawing.Point(98, 162);
             this.CheckStatic.Name = "CheckStatic";
-            this.CheckStatic.Size = new System.Drawing.Size(53, 17);
+            this.CheckStatic.Size = new System.Drawing.Size(76, 24);
             this.CheckStatic.TabIndex = 58;
             this.CheckStatic.Text = "Static";
             this.CheckStatic.UseVisualStyleBackColor = true;
@@ -430,7 +430,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckFishing.AutoSize = true;
             this.CheckFishing.Location = new System.Drawing.Point(98, 185);
             this.CheckFishing.Name = "CheckFishing";
-            this.CheckFishing.Size = new System.Drawing.Size(59, 17);
+            this.CheckFishing.Size = new System.Drawing.Size(86, 24);
             this.CheckFishing.TabIndex = 59;
             this.CheckFishing.Text = "Fishing";
             this.CheckFishing.UseVisualStyleBackColor = true;
@@ -440,7 +440,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckHeldItem.AutoSize = true;
             this.CheckHeldItem.Location = new System.Drawing.Point(98, 208);
             this.CheckHeldItem.Name = "CheckHeldItem";
-            this.CheckHeldItem.Size = new System.Drawing.Size(111, 17);
+            this.CheckHeldItem.Size = new System.Drawing.Size(164, 24);
             this.CheckHeldItem.TabIndex = 60;
             this.CheckHeldItem.Text = "Random held item";
             this.CheckHeldItem.UseVisualStyleBackColor = true;
@@ -450,7 +450,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckExtraRoll.AutoSize = true;
             this.CheckExtraRoll.Location = new System.Drawing.Point(12, 231);
             this.CheckExtraRoll.Name = "CheckExtraRoll";
-            this.CheckExtraRoll.Size = new System.Drawing.Size(147, 17);
+            this.CheckExtraRoll.Size = new System.Drawing.Size(213, 24);
             this.CheckExtraRoll.TabIndex = 61;
             this.CheckExtraRoll.Text = "Unknown Extra Mark Roll";
             this.CheckExtraRoll.UseVisualStyleBackColor = true;
@@ -460,73 +460,73 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(244, 232);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(10, 13);
+            this.label20.Size = new System.Drawing.Size(14, 20);
             this.label20.TabIndex = 64;
             this.label20.Text = "-";
             // 
-            // LevelMax
+            // InputLevelMax
             // 
-            this.LevelMax.Location = new System.Drawing.Point(260, 229);
-            this.LevelMax.MaxLength = 2;
-            this.LevelMax.Name = "LevelMax";
-            this.LevelMax.Size = new System.Drawing.Size(28, 20);
-            this.LevelMax.TabIndex = 63;
-            this.LevelMax.Text = "0";
-            this.LevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LevelMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.LevelMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputLevelMax.Location = new System.Drawing.Point(260, 229);
+            this.InputLevelMax.MaxLength = 2;
+            this.InputLevelMax.Name = "InputLevelMax";
+            this.InputLevelMax.Size = new System.Drawing.Size(28, 26);
+            this.InputLevelMax.TabIndex = 63;
+            this.InputLevelMax.Text = "0";
+            this.InputLevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputLevelMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.InputLevelMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
-            // LevelMin
+            // InputLevelMin
             // 
-            this.LevelMin.Location = new System.Drawing.Point(210, 229);
-            this.LevelMin.MaxLength = 2;
-            this.LevelMin.Name = "LevelMin";
-            this.LevelMin.Size = new System.Drawing.Size(28, 20);
-            this.LevelMin.TabIndex = 62;
-            this.LevelMin.Text = "0";
-            this.LevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LevelMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.LevelMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputLevelMin.Location = new System.Drawing.Point(210, 229);
+            this.InputLevelMin.MaxLength = 2;
+            this.InputLevelMin.Name = "InputLevelMin";
+            this.InputLevelMin.Size = new System.Drawing.Size(28, 26);
+            this.InputLevelMin.TabIndex = 62;
+            this.InputLevelMin.Text = "0";
+            this.InputLevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputLevelMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.InputLevelMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(422, 232);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(10, 13);
+            this.label21.Size = new System.Drawing.Size(14, 20);
             this.label21.TabIndex = 67;
             this.label21.Text = "-";
             // 
-            // SlotMax
+            // InputSlotMax
             // 
-            this.SlotMax.Location = new System.Drawing.Point(438, 229);
-            this.SlotMax.MaxLength = 2;
-            this.SlotMax.Name = "SlotMax";
-            this.SlotMax.Size = new System.Drawing.Size(28, 20);
-            this.SlotMax.TabIndex = 66;
-            this.SlotMax.Text = "99";
-            this.SlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SlotMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.SlotMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputSlotMax.Location = new System.Drawing.Point(438, 229);
+            this.InputSlotMax.MaxLength = 2;
+            this.InputSlotMax.Name = "InputSlotMax";
+            this.InputSlotMax.Size = new System.Drawing.Size(28, 26);
+            this.InputSlotMax.TabIndex = 66;
+            this.InputSlotMax.Text = "99";
+            this.InputSlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputSlotMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.InputSlotMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
-            // SlotMin
+            // InputSlotMin
             // 
-            this.SlotMin.Location = new System.Drawing.Point(388, 229);
-            this.SlotMin.MaxLength = 2;
-            this.SlotMin.Name = "SlotMin";
-            this.SlotMin.Size = new System.Drawing.Size(28, 20);
-            this.SlotMin.TabIndex = 65;
-            this.SlotMin.Text = "0";
-            this.SlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SlotMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.SlotMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputSlotMin.Location = new System.Drawing.Point(388, 229);
+            this.InputSlotMin.MaxLength = 2;
+            this.InputSlotMin.Name = "InputSlotMin";
+            this.InputSlotMin.Size = new System.Drawing.Size(28, 26);
+            this.InputSlotMin.TabIndex = 65;
+            this.InputSlotMin.Text = "0";
+            this.InputSlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputSlotMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
+            this.InputSlotMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // LabelLevel
             // 
             this.LabelLevel.AutoSize = true;
             this.LabelLevel.Location = new System.Drawing.Point(168, 232);
             this.LabelLevel.Name = "LabelLevel";
-            this.LabelLevel.Size = new System.Drawing.Size(36, 13);
+            this.LabelLevel.Size = new System.Drawing.Size(50, 20);
             this.LabelLevel.TabIndex = 68;
             this.LabelLevel.Text = "Level:";
             // 
@@ -535,7 +535,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelSlot.AutoSize = true;
             this.LabelSlot.Location = new System.Drawing.Point(354, 232);
             this.LabelSlot.Name = "LabelSlot";
-            this.LabelSlot.Size = new System.Drawing.Size(28, 13);
+            this.LabelSlot.Size = new System.Drawing.Size(41, 20);
             this.LabelSlot.TabIndex = 69;
             this.LabelSlot.Text = "Slot:";
             // 
@@ -547,7 +547,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.ButtonSearch.TabIndex = 70;
             this.ButtonSearch.Text = "Search!";
             this.ButtonSearch.UseVisualStyleBackColor = true;
-            
+            this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // SelectedShiny
             // 
@@ -561,7 +561,7 @@ namespace SWSH_OWRNG_Generator_GUI
             "Star/Square"});
             this.SelectedShiny.Location = new System.Drawing.Point(353, 189);
             this.SelectedShiny.Name = "SelectedShiny";
-            this.SelectedShiny.Size = new System.Drawing.Size(147, 21);
+            this.SelectedShiny.Size = new System.Drawing.Size(147, 28);
             this.SelectedShiny.TabIndex = 72;
             // 
             // LabelShiny
@@ -569,16 +569,16 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelShiny.AutoSize = true;
             this.LabelShiny.Location = new System.Drawing.Point(309, 192);
             this.LabelShiny.Name = "LabelShiny";
-            this.LabelShiny.Size = new System.Drawing.Size(36, 13);
+            this.LabelShiny.Size = new System.Drawing.Size(52, 20);
             this.LabelShiny.TabIndex = 71;
             this.LabelShiny.Text = "Shiny:";
             // 
-            // dataGridView1
+            // Results
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Results.AllowUserToAddRows = false;
+            this.Results.AllowUserToDeleteRows = false;
+            this.Results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Frame,
             this.Level,
             this.Slot,
@@ -592,120 +592,135 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SpD,
             this.Spe,
             this.Mark});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 334);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(486, 119);
-            this.dataGridView1.TabIndex = 73;
+            this.Results.Location = new System.Drawing.Point(12, 334);
+            this.Results.Name = "Results";
+            this.Results.ReadOnly = true;
+            this.Results.RowHeadersWidth = 62;
+            this.Results.Size = new System.Drawing.Size(486, 281);
+            this.Results.TabIndex = 73;
             // 
             // Frame
             // 
             this.Frame.HeaderText = "Frame";
+            this.Frame.MinimumWidth = 8;
             this.Frame.Name = "Frame";
             this.Frame.ReadOnly = true;
+            this.Frame.Width = 150;
             // 
             // Level
             // 
             this.Level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Level.HeaderText = "Level";
+            this.Level.MinimumWidth = 8;
             this.Level.Name = "Level";
             this.Level.ReadOnly = true;
-            this.Level.Width = 58;
+            this.Level.Width = 82;
             // 
             // Slot
             // 
             this.Slot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Slot.HeaderText = "Slot";
+            this.Slot.MinimumWidth = 8;
             this.Slot.Name = "Slot";
             this.Slot.ReadOnly = true;
-            this.Slot.Width = 50;
+            this.Slot.Width = 73;
             // 
             // PID
             // 
             this.PID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.PID.HeaderText = "PID";
+            this.PID.MinimumWidth = 8;
             this.PID.Name = "PID";
             this.PID.ReadOnly = true;
-            this.PID.Width = 50;
+            this.PID.Width = 72;
             // 
             // EC
             // 
             this.EC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.EC.HeaderText = "EC";
+            this.EC.MinimumWidth = 8;
             this.EC.Name = "EC";
             this.EC.ReadOnly = true;
-            this.EC.Width = 46;
+            this.EC.Width = 67;
             // 
             // Shiny
             // 
             this.Shiny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Shiny.HeaderText = "Shiny";
+            this.Shiny.MinimumWidth = 8;
             this.Shiny.Name = "Shiny";
             this.Shiny.ReadOnly = true;
-            this.Shiny.Width = 58;
+            this.Shiny.Width = 84;
             // 
             // HP
             // 
             this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.HP.HeaderText = "HP";
+            this.HP.MinimumWidth = 8;
             this.HP.Name = "HP";
             this.HP.ReadOnly = true;
-            this.HP.Width = 47;
+            this.HP.Width = 67;
             // 
             // Atk
             // 
             this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Atk.HeaderText = "Atk";
+            this.Atk.MinimumWidth = 8;
             this.Atk.Name = "Atk";
             this.Atk.ReadOnly = true;
-            this.Atk.Width = 48;
+            this.Atk.Width = 69;
             // 
             // Def
             // 
             this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Def.HeaderText = "Def";
+            this.Def.MinimumWidth = 8;
             this.Def.Name = "Def";
             this.Def.ReadOnly = true;
-            this.Def.Width = 49;
+            this.Def.Width = 71;
             // 
             // SpA
             // 
             this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.SpA.HeaderText = "SpA";
+            this.SpA.MinimumWidth = 8;
             this.SpA.Name = "SpA";
             this.SpA.ReadOnly = true;
-            this.SpA.Width = 52;
+            this.SpA.Width = 76;
             // 
             // SpD
             // 
             this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.SpD.HeaderText = "SpD";
+            this.SpD.MinimumWidth = 8;
             this.SpD.Name = "SpD";
             this.SpD.ReadOnly = true;
-            this.SpD.Width = 53;
+            this.SpD.Width = 77;
             // 
             // Spe
             // 
             this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Spe.HeaderText = "Spe";
+            this.Spe.MinimumWidth = 8;
             this.Spe.Name = "Spe";
             this.Spe.ReadOnly = true;
-            this.Spe.Width = 51;
+            this.Spe.Width = 74;
             // 
             // Mark
             // 
             this.Mark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Mark.HeaderText = "Mark";
+            this.Mark.MinimumWidth = 8;
             this.Mark.Name = "Mark";
             this.Mark.ReadOnly = true;
-            this.Mark.Width = 56;
+            this.Mark.Width = 80;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(387, 61);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(10, 13);
+            this.label12.Size = new System.Drawing.Size(14, 20);
             this.label12.TabIndex = 26;
             this.label12.Text = "-";
             // 
@@ -723,7 +738,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.defMax.Location = new System.Drawing.Point(403, 58);
             this.defMax.Name = "defMax";
-            this.defMax.Size = new System.Drawing.Size(28, 20);
+            this.defMax.Size = new System.Drawing.Size(28, 26);
             this.defMax.TabIndex = 25;
             this.defMax.Text = "31";
             this.defMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -733,7 +748,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(387, 87);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(10, 13);
+            this.label13.Size = new System.Drawing.Size(14, 20);
             this.label13.TabIndex = 28;
             this.label13.Text = "-";
             // 
@@ -742,7 +757,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(387, 139);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(10, 13);
+            this.label15.Size = new System.Drawing.Size(14, 20);
             this.label15.TabIndex = 32;
             this.label15.Text = "-";
             // 
@@ -771,7 +786,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(387, 35);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(10, 13);
+            this.label11.Size = new System.Drawing.Size(14, 20);
             this.label11.TabIndex = 24;
             this.label11.Text = "-";
             // 
@@ -789,7 +804,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.spaMin.Location = new System.Drawing.Point(353, 84);
             this.spaMin.Name = "spaMin";
-            this.spaMin.Size = new System.Drawing.Size(28, 20);
+            this.spaMin.Size = new System.Drawing.Size(28, 26);
             this.spaMin.TabIndex = 10;
             this.spaMin.Text = "0";
             this.spaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -808,7 +823,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.spdMin.Location = new System.Drawing.Point(353, 110);
             this.spdMin.Name = "spdMin";
-            this.spdMin.Size = new System.Drawing.Size(28, 20);
+            this.spdMin.Size = new System.Drawing.Size(28, 26);
             this.spdMin.TabIndex = 12;
             this.spdMin.Text = "0";
             this.spdMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -817,7 +832,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.spdMax.Location = new System.Drawing.Point(403, 110);
             this.spdMax.Name = "spdMax";
-            this.spdMax.Size = new System.Drawing.Size(28, 20);
+            this.spdMax.Size = new System.Drawing.Size(28, 26);
             this.spdMax.TabIndex = 29;
             this.spdMax.Text = "31";
             this.spdMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -826,7 +841,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.speMin.Location = new System.Drawing.Point(353, 136);
             this.speMin.Name = "speMin";
-            this.speMin.Size = new System.Drawing.Size(28, 20);
+            this.speMin.Size = new System.Drawing.Size(28, 26);
             this.speMin.TabIndex = 14;
             this.speMin.Text = "0";
             this.speMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -835,7 +850,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.speMax.Location = new System.Drawing.Point(403, 136);
             this.speMax.Name = "speMax";
-            this.speMax.Size = new System.Drawing.Size(28, 20);
+            this.speMax.Size = new System.Drawing.Size(28, 26);
             this.speMax.TabIndex = 31;
             this.speMax.Text = "31";
             this.speMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -844,7 +859,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.atkMax.Location = new System.Drawing.Point(403, 32);
             this.atkMax.Name = "atkMax";
-            this.atkMax.Size = new System.Drawing.Size(28, 20);
+            this.atkMax.Size = new System.Drawing.Size(28, 26);
             this.atkMax.TabIndex = 23;
             this.atkMax.Text = "31";
             this.atkMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -863,7 +878,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.defMin.Location = new System.Drawing.Point(353, 58);
             this.defMin.Name = "defMin";
-            this.defMin.Size = new System.Drawing.Size(28, 20);
+            this.defMin.Size = new System.Drawing.Size(28, 26);
             this.defMin.TabIndex = 8;
             this.defMin.Text = "0";
             this.defMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -902,7 +917,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.spaMax.Location = new System.Drawing.Point(403, 84);
             this.spaMax.Name = "spaMax";
-            this.spaMax.Size = new System.Drawing.Size(28, 20);
+            this.spaMax.Size = new System.Drawing.Size(28, 26);
             this.spaMax.TabIndex = 27;
             this.spaMax.Text = "31";
             this.spaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -912,7 +927,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(387, 113);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(10, 13);
+            this.label14.Size = new System.Drawing.Size(14, 20);
             this.label14.TabIndex = 30;
             this.label14.Text = "-";
             // 
@@ -920,7 +935,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.atkMin.Location = new System.Drawing.Point(353, 32);
             this.atkMin.Name = "atkMin";
-            this.atkMin.Size = new System.Drawing.Size(28, 20);
+            this.atkMin.Size = new System.Drawing.Size(28, 26);
             this.atkMin.TabIndex = 6;
             this.atkMin.Text = "0";
             this.atkMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -938,19 +953,19 @@ namespace SWSH_OWRNG_Generator_GUI
             // Form1
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(509, 464);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(509, 627);
+            this.Controls.Add(this.Results);
             this.Controls.Add(this.SelectedShiny);
             this.Controls.Add(this.LabelShiny);
             this.Controls.Add(this.ButtonSearch);
             this.Controls.Add(this.LabelSlot);
             this.Controls.Add(this.LabelLevel);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.SlotMax);
-            this.Controls.Add(this.SlotMin);
+            this.Controls.Add(this.InputSlotMax);
+            this.Controls.Add(this.InputSlotMin);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.LevelMax);
-            this.Controls.Add(this.LevelMin);
+            this.Controls.Add(this.InputLevelMax);
+            this.Controls.Add(this.InputLevelMin);
             this.Controls.Add(this.CheckExtraRoll);
             this.Controls.Add(this.CheckHeldItem);
             this.Controls.Add(this.CheckFishing);
@@ -1013,7 +1028,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Text = "SwSh OWRNG Generator GUI";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Results)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1053,17 +1068,17 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.CheckBox CheckHeldItem;
         private System.Windows.Forms.CheckBox CheckExtraRoll;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox LevelMax;
-        private System.Windows.Forms.TextBox LevelMin;
+        private System.Windows.Forms.TextBox InputLevelMax;
+        private System.Windows.Forms.TextBox InputLevelMin;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox SlotMax;
-        private System.Windows.Forms.TextBox SlotMin;
+        private System.Windows.Forms.TextBox InputSlotMax;
+        private System.Windows.Forms.TextBox InputSlotMin;
         private System.Windows.Forms.Label LabelLevel;
         private System.Windows.Forms.Label LabelSlot;
         private System.Windows.Forms.Button ButtonSearch;
         private System.Windows.Forms.ComboBox SelectedShiny;
         private System.Windows.Forms.Label LabelShiny;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Results;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frame;
         private System.Windows.Forms.DataGridViewTextBoxColumn Level;
         private System.Windows.Forms.DataGridViewTextBoxColumn Slot;

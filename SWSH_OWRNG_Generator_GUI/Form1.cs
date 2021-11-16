@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
@@ -39,7 +40,7 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 textBox.Text = "0";
             }
-            
+
         }
 
         private void LevelSlot_TextChanged(object sender, EventArgs e)
@@ -109,14 +110,6 @@ namespace SWSH_OWRNG_Generator_GUI
             hpMax.Text = "31";
         }
 
-        private void HpFilter_Click(object sender, EventArgs e)
-        {
-            hpMin.Clear();
-            hpMin.Text = "0";
-            hpMax.Clear();
-            hpMax.Text = "31";
-        }
-
         private void AtkMinFilter_Click(object sender, EventArgs e)
         {
             atkMin.Clear();
@@ -143,17 +136,17 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             if (CheckStatic.Checked)
             {
-                LevelMax.ReadOnly = true;
-                LevelMin.ReadOnly = true;
-                SlotMax.ReadOnly = true;
-                SlotMin.ReadOnly = true;
+                InputLevelMax.ReadOnly = true;
+                InputLevelMin.ReadOnly = true;
+                InputSlotMax.ReadOnly = true;
+                InputSlotMin.ReadOnly = true;
             }
             else
             {
-                LevelMax.ReadOnly = false;
-                LevelMin.ReadOnly = false;
-                SlotMax.ReadOnly = false;
-                SlotMin.ReadOnly = false;
+                InputLevelMax.ReadOnly = false;
+                InputLevelMin.ReadOnly = false;
+                InputSlotMax.ReadOnly = false;
+                InputSlotMin.ReadOnly = false;
             }
 
         }
@@ -236,7 +229,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     if ((a >= 'a' && a <= 'f') || (a >= 'A' && a <= 'F') || (a >= '0' && a <= '9'))
                     {
-                        NewText = NewText + char.ToUpper(a);
+                        NewText += char.ToUpper(a);
                     }
                 }
 
@@ -289,6 +282,69 @@ namespace SWSH_OWRNG_Generator_GUI
                     e.Handled = true;
                 }
             }
+        }
+
+        private void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            Pad(InputState0, '0', 16);
+            Pad(InputState1, '0', 16);
+            Pad(InputTID, '0', 5);
+            Pad(InputSID, '0', 5);
+            Pad(InputSlotMin, '0', 1);
+            Pad(InputSlotMax, '0', 1);
+            Pad(InputLevelMin, '0', 1);
+            Pad(InputLevelMax, '0', 1);
+            ulong s0 = UInt64.Parse(InputState0.Text, System.Globalization.NumberStyles.AllowHexSpecifier);
+            ulong s1 = UInt64.Parse(InputState1.Text, System.Globalization.NumberStyles.AllowHexSpecifier);
+            ulong advances = UInt64.Parse(InputMaxAdv.Text);
+            uint TID = UInt16.Parse(InputTID.Text);
+            uint SID = UInt16.Parse(InputSID.Text);
+            uint SlotMin = UInt16.Parse(InputSlotMin.Text);
+            uint SlotMax = UInt16.Parse(InputSlotMax.Text);
+            uint LevelMin = UInt16.Parse(InputLevelMin.Text);
+            uint LevelMax = UInt16.Parse(InputLevelMax.Text);
+            bool ShinyCharm = CheckShinyCharm.Checked;
+            bool MarkCharm = CheckMarkCharm.Checked;
+            bool Weather = CheckWeather.Checked;
+            bool Static = CheckStatic.Checked;
+            bool Fishing = CheckFishing.Checked;
+            bool HeldItem = CheckHeldItem.Checked;
+            bool ExtraRoll = CheckExtraRoll.Checked;
+            string DesiredMark = (string)SelectedMark.SelectedItem;
+            string DesiredShiny = (string)SelectedShiny.SelectedItem;
+            uint[] MinIVs = { UInt16.Parse(hpMin.Text), UInt16.Parse(atkMin.Text), UInt16.Parse(defMin.Text), UInt16.Parse(spaMin.Text), UInt16.Parse(spdMin.Text), UInt16.Parse(speMin.Text) };
+            uint[] MaxIVs = { UInt16.Parse(hpMax.Text), UInt16.Parse(atkMax.Text), UInt16.Parse(defMax.Text), UInt16.Parse(spaMax.Text), UInt16.Parse(spdMax.Text), UInt16.Parse(speMax.Text) };
+
+            Results.Rows.Clear();
+
+            List<Frame> Frames = Generator.Generate(
+                s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, ExtraRoll, DesiredMark, DesiredShiny,
+                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs
+            );
+
+            foreach (Frame Frame in Frames)
+            {
+                int RowID = Results.Rows.Add();
+                DataGridViewRow Row = Results.Rows[RowID];
+                Row.Cells["Frame"].Value = Frame.Advances;
+                Row.Cells["Level"].Value = Frame.Level;
+                Row.Cells["Slot"].Value = Frame.Slot;
+                Row.Cells["PID"].Value = Frame.PID.ToString("X8");
+                Row.Cells["EC"].Value = Frame.EC.ToString("X8");
+                Row.Cells["Shiny"].Value = Frame.Shiny;
+                Row.Cells["HP"].Value = Frame.HP;
+                Row.Cells["Atk"].Value = Frame.Atk;
+                Row.Cells["Def"].Value = Frame.Def;
+                Row.Cells["SpA"].Value = Frame.SpA;
+                Row.Cells["SpD"].Value = Frame.SpD;
+                Row.Cells["Spe"].Value = Frame.Spe;
+                Row.Cells["Mark"].Value = Frame.Mark;
+            }
+        }
+
+        private void Pad(object sender, char s, int length)
+        {
+            ((TextBox)sender).Text = ((TextBox)sender).Text.PadLeft(length, s);
         }
 
    
