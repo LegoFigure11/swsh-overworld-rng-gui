@@ -382,6 +382,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedMark.Name = "SelectedMark";
             this.SelectedMark.Size = new System.Drawing.Size(147, 28);
             this.SelectedMark.TabIndex = 54;
+            this.SelectedMark.SelectedIndex = 0;
             this.SelectedMark.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // CheckShinyCharm
@@ -563,6 +564,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedShiny.Name = "SelectedShiny";
             this.SelectedShiny.Size = new System.Drawing.Size(147, 28);
             this.SelectedShiny.TabIndex = 72;
+            this.SelectedShiny.SelectedIndex = 0;
             // 
             // LabelShiny
             // 
