@@ -74,6 +74,24 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedShiny = new System.Windows.Forms.ComboBox();
             this.LabelShiny = new System.Windows.Forms.Label();
             this.Results = new System.Windows.Forms.DataGridView();
+            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Atk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Def = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Spe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.speMinFilter = new System.Windows.Forms.Button();
             this.defMax = new System.Windows.Forms.TextBox();
@@ -99,24 +117,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label14 = new System.Windows.Forms.Label();
             this.atkMin = new System.Windows.Forms.TextBox();
             this.spaMaxFilter = new System.Windows.Forms.Button();
-            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Atk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Def = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Spe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -168,7 +168,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMin.TabIndex = 5;
             this.hpMin.Text = "0";
             this.hpMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.hpMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
+            this.hpMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.hpMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // hpMax
             // 
@@ -178,7 +179,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMax.TabIndex = 6;
             this.hpMax.Text = "31";
             this.hpMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.hpMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
+            this.hpMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.hpMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // hpFilter
             // 
@@ -617,255 +619,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.Size = new System.Drawing.Size(486, 281);
             this.Results.TabIndex = 73;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(387, 61);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(14, 20);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "-";
-            // 
-            // speMinFilter
-            // 
-            this.speMinFilter.Location = new System.Drawing.Point(436, 136);
-            this.speMinFilter.Name = "speMinFilter";
-            this.speMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.speMinFilter.TabIndex = 27;
-            this.speMinFilter.Text = "0";
-            this.speMinFilter.UseVisualStyleBackColor = true;
-            this.speMinFilter.Click += new System.EventHandler(this.SpeMinFilter_Click);
-            // 
-            // defMax
-            // 
-            this.defMax.Location = new System.Drawing.Point(403, 58);
-            this.defMax.Name = "defMax";
-            this.defMax.Size = new System.Drawing.Size(28, 26);
-            this.defMax.TabIndex = 10;
-            this.defMax.Text = "31";
-            this.defMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.defMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(387, 87);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(14, 20);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "-";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(387, 139);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(14, 20);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "-";
-            // 
-            // spdMinFilter
-            // 
-            this.spdMinFilter.Location = new System.Drawing.Point(436, 110);
-            this.spdMinFilter.Name = "spdMinFilter";
-            this.spdMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.spdMinFilter.TabIndex = 25;
-            this.spdMinFilter.Text = "0";
-            this.spdMinFilter.UseVisualStyleBackColor = true;
-            this.spdMinFilter.Click += new System.EventHandler(this.SpdMinFilter_Click);
-            // 
-            // spdMaxFilter
-            // 
-            this.spdMaxFilter.Location = new System.Drawing.Point(471, 110);
-            this.spdMaxFilter.Name = "spdMaxFilter";
-            this.spdMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.spdMaxFilter.TabIndex = 26;
-            this.spdMaxFilter.Text = "31";
-            this.spdMaxFilter.UseVisualStyleBackColor = true;
-            this.spdMaxFilter.Click += new System.EventHandler(this.SpdMaxFilter_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(387, 35);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(14, 20);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "-";
-            // 
-            // speMaxFilter
-            // 
-            this.speMaxFilter.Location = new System.Drawing.Point(471, 136);
-            this.speMaxFilter.Name = "speMaxFilter";
-            this.speMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.speMaxFilter.TabIndex = 28;
-            this.speMaxFilter.Text = "31";
-            this.speMaxFilter.UseVisualStyleBackColor = true;
-            this.speMaxFilter.Click += new System.EventHandler(this.SpeMaxFilter_Click);
-            // 
-            // spaMin
-            // 
-            this.spaMin.Location = new System.Drawing.Point(353, 84);
-            this.spaMin.Name = "spaMin";
-            this.spaMin.Size = new System.Drawing.Size(28, 26);
-            this.spaMin.TabIndex = 11;
-            this.spaMin.Text = "0";
-            this.spaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.spaMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
-            // 
-            // atkMinFilter
-            // 
-            this.atkMinFilter.Location = new System.Drawing.Point(437, 32);
-            this.atkMinFilter.Name = "atkMinFilter";
-            this.atkMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.atkMinFilter.TabIndex = 19;
-            this.atkMinFilter.Text = "0";
-            this.atkMinFilter.UseVisualStyleBackColor = true;
-            this.atkMinFilter.Click += new System.EventHandler(this.AtkMinFilter_Click);
-            // 
-            // spdMin
-            // 
-            this.spdMin.Location = new System.Drawing.Point(353, 110);
-            this.spdMin.Name = "spdMin";
-            this.spdMin.Size = new System.Drawing.Size(28, 26);
-            this.spdMin.TabIndex = 13;
-            this.spdMin.Text = "0";
-            this.spdMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.spdMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
-            // 
-            // spdMax
-            // 
-            this.spdMax.Location = new System.Drawing.Point(403, 110);
-            this.spdMax.Name = "spdMax";
-            this.spdMax.Size = new System.Drawing.Size(28, 26);
-            this.spdMax.TabIndex = 14;
-            this.spdMax.Text = "31";
-            this.spdMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.spdMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
-            // 
-            // speMin
-            // 
-            this.speMin.Location = new System.Drawing.Point(353, 136);
-            this.speMin.Name = "speMin";
-            this.speMin.Size = new System.Drawing.Size(28, 26);
-            this.speMin.TabIndex = 15;
-            this.speMin.Text = "0";
-            this.speMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.speMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
-            // 
-            // speMax
-            // 
-            this.speMax.Location = new System.Drawing.Point(403, 136);
-            this.speMax.Name = "speMax";
-            this.speMax.Size = new System.Drawing.Size(28, 26);
-            this.speMax.TabIndex = 16;
-            this.speMax.Text = "31";
-            this.speMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.speMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
-            // 
-            // atkMax
-            // 
-            this.atkMax.Location = new System.Drawing.Point(403, 32);
-            this.atkMax.Name = "atkMax";
-            this.atkMax.Size = new System.Drawing.Size(28, 26);
-            this.atkMax.TabIndex = 8;
-            this.atkMax.Text = "31";
-            this.atkMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.atkMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
-            // 
-            // atkMaxFilter
-            // 
-            this.atkMaxFilter.Location = new System.Drawing.Point(471, 32);
-            this.atkMaxFilter.Name = "atkMaxFilter";
-            this.atkMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.atkMaxFilter.TabIndex = 20;
-            this.atkMaxFilter.Text = "31";
-            this.atkMaxFilter.UseVisualStyleBackColor = true;
-            this.atkMaxFilter.Click += new System.EventHandler(this.AtkMaxFilter_Click);
-            // 
-            // defMin
-            // 
-            this.defMin.Location = new System.Drawing.Point(353, 58);
-            this.defMin.Name = "defMin";
-            this.defMin.Size = new System.Drawing.Size(28, 26);
-            this.defMin.TabIndex = 9;
-            this.defMin.Text = "0";
-            this.defMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.defMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
-            // 
-            // defMinFilter
-            // 
-            this.defMinFilter.Location = new System.Drawing.Point(437, 58);
-            this.defMinFilter.Name = "defMinFilter";
-            this.defMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.defMinFilter.TabIndex = 21;
-            this.defMinFilter.Text = "0";
-            this.defMinFilter.UseVisualStyleBackColor = true;
-            this.defMinFilter.Click += new System.EventHandler(this.DefMinFilter_Click);
-            // 
-            // spaMinFilter
-            // 
-            this.spaMinFilter.Location = new System.Drawing.Point(437, 84);
-            this.spaMinFilter.Name = "spaMinFilter";
-            this.spaMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.spaMinFilter.TabIndex = 23;
-            this.spaMinFilter.Text = "0";
-            this.spaMinFilter.UseVisualStyleBackColor = true;
-            this.spaMinFilter.Click += new System.EventHandler(this.SpaMinFilter_Click);
-            // 
-            // defMaxFilter
-            // 
-            this.defMaxFilter.Location = new System.Drawing.Point(471, 58);
-            this.defMaxFilter.Name = "defMaxFilter";
-            this.defMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.defMaxFilter.TabIndex = 22;
-            this.defMaxFilter.Text = "31";
-            this.defMaxFilter.UseVisualStyleBackColor = true;
-            this.defMaxFilter.Click += new System.EventHandler(this.DefMaxFilter_Click);
-            // 
-            // spaMax
-            // 
-            this.spaMax.Location = new System.Drawing.Point(403, 84);
-            this.spaMax.Name = "spaMax";
-            this.spaMax.Size = new System.Drawing.Size(28, 26);
-            this.spaMax.TabIndex = 12;
-            this.spaMax.Text = "31";
-            this.spaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.spaMax.LostFocus += new System.EventHandler(this.Filter_LostFocus);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(387, 113);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(14, 20);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "-";
-            // 
-            // atkMin
-            // 
-            this.atkMin.Location = new System.Drawing.Point(353, 32);
-            this.atkMin.Name = "atkMin";
-            this.atkMin.Size = new System.Drawing.Size(28, 26);
-            this.atkMin.TabIndex = 7;
-            this.atkMin.Text = "0";
-            this.atkMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.atkMin.LostFocus += new System.EventHandler(this.Filter_LostFocus);
-            // 
-            // spaMaxFilter
-            // 
-            this.spaMaxFilter.Location = new System.Drawing.Point(471, 84);
-            this.spaMaxFilter.Name = "spaMaxFilter";
-            this.spaMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.spaMaxFilter.TabIndex = 24;
-            this.spaMaxFilter.Text = "31";
-            this.spaMaxFilter.UseVisualStyleBackColor = true;
-            this.spaMaxFilter.Click += new System.EventHandler(this.SpaMaxFilter_Click);
-            // 
-            // generatorBindingSource
-            // 
-            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
-            // 
             // Frame
             // 
             this.Frame.DataPropertyName = "Advances";
@@ -1030,6 +783,265 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State1.Name = "State1";
             this.State1.ReadOnly = true;
             this.State1.Width = 150;
+            // 
+            // generatorBindingSource
+            // 
+            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(387, 61);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(14, 20);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "-";
+            // 
+            // speMinFilter
+            // 
+            this.speMinFilter.Location = new System.Drawing.Point(436, 136);
+            this.speMinFilter.Name = "speMinFilter";
+            this.speMinFilter.Size = new System.Drawing.Size(29, 20);
+            this.speMinFilter.TabIndex = 27;
+            this.speMinFilter.Text = "0";
+            this.speMinFilter.UseVisualStyleBackColor = true;
+            this.speMinFilter.Click += new System.EventHandler(this.SpeMinFilter_Click);
+            // 
+            // defMax
+            // 
+            this.defMax.Location = new System.Drawing.Point(403, 58);
+            this.defMax.Name = "defMax";
+            this.defMax.Size = new System.Drawing.Size(28, 26);
+            this.defMax.TabIndex = 10;
+            this.defMax.Text = "31";
+            this.defMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.defMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.defMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(387, 87);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(14, 20);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "-";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(387, 139);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(14, 20);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "-";
+            // 
+            // spdMinFilter
+            // 
+            this.spdMinFilter.Location = new System.Drawing.Point(436, 110);
+            this.spdMinFilter.Name = "spdMinFilter";
+            this.spdMinFilter.Size = new System.Drawing.Size(29, 20);
+            this.spdMinFilter.TabIndex = 25;
+            this.spdMinFilter.Text = "0";
+            this.spdMinFilter.UseVisualStyleBackColor = true;
+            this.spdMinFilter.Click += new System.EventHandler(this.SpdMinFilter_Click);
+            // 
+            // spdMaxFilter
+            // 
+            this.spdMaxFilter.Location = new System.Drawing.Point(471, 110);
+            this.spdMaxFilter.Name = "spdMaxFilter";
+            this.spdMaxFilter.Size = new System.Drawing.Size(29, 20);
+            this.spdMaxFilter.TabIndex = 26;
+            this.spdMaxFilter.Text = "31";
+            this.spdMaxFilter.UseVisualStyleBackColor = true;
+            this.spdMaxFilter.Click += new System.EventHandler(this.SpdMaxFilter_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(387, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(14, 20);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "-";
+            // 
+            // speMaxFilter
+            // 
+            this.speMaxFilter.Location = new System.Drawing.Point(471, 136);
+            this.speMaxFilter.Name = "speMaxFilter";
+            this.speMaxFilter.Size = new System.Drawing.Size(29, 20);
+            this.speMaxFilter.TabIndex = 28;
+            this.speMaxFilter.Text = "31";
+            this.speMaxFilter.UseVisualStyleBackColor = true;
+            this.speMaxFilter.Click += new System.EventHandler(this.SpeMaxFilter_Click);
+            // 
+            // spaMin
+            // 
+            this.spaMin.Location = new System.Drawing.Point(353, 84);
+            this.spaMin.Name = "spaMin";
+            this.spaMin.Size = new System.Drawing.Size(28, 26);
+            this.spaMin.TabIndex = 11;
+            this.spaMin.Text = "0";
+            this.spaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spaMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.spaMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // atkMinFilter
+            // 
+            this.atkMinFilter.Location = new System.Drawing.Point(437, 32);
+            this.atkMinFilter.Name = "atkMinFilter";
+            this.atkMinFilter.Size = new System.Drawing.Size(29, 20);
+            this.atkMinFilter.TabIndex = 19;
+            this.atkMinFilter.Text = "0";
+            this.atkMinFilter.UseVisualStyleBackColor = true;
+            this.atkMinFilter.Click += new System.EventHandler(this.AtkMinFilter_Click);
+            // 
+            // spdMin
+            // 
+            this.spdMin.Location = new System.Drawing.Point(353, 110);
+            this.spdMin.Name = "spdMin";
+            this.spdMin.Size = new System.Drawing.Size(28, 26);
+            this.spdMin.TabIndex = 13;
+            this.spdMin.Text = "0";
+            this.spdMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spdMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.spdMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // spdMax
+            // 
+            this.spdMax.Location = new System.Drawing.Point(403, 110);
+            this.spdMax.Name = "spdMax";
+            this.spdMax.Size = new System.Drawing.Size(28, 26);
+            this.spdMax.TabIndex = 14;
+            this.spdMax.Text = "31";
+            this.spdMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spdMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.spdMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // speMin
+            // 
+            this.speMin.Location = new System.Drawing.Point(353, 136);
+            this.speMin.Name = "speMin";
+            this.speMin.Size = new System.Drawing.Size(28, 26);
+            this.speMin.TabIndex = 15;
+            this.speMin.Text = "0";
+            this.speMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.speMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.speMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // speMax
+            // 
+            this.speMax.Location = new System.Drawing.Point(403, 136);
+            this.speMax.Name = "speMax";
+            this.speMax.Size = new System.Drawing.Size(28, 26);
+            this.speMax.TabIndex = 16;
+            this.speMax.Text = "31";
+            this.speMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.speMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.speMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // atkMax
+            // 
+            this.atkMax.Location = new System.Drawing.Point(403, 32);
+            this.atkMax.Name = "atkMax";
+            this.atkMax.Size = new System.Drawing.Size(28, 26);
+            this.atkMax.TabIndex = 8;
+            this.atkMax.Text = "31";
+            this.atkMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.atkMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.atkMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // atkMaxFilter
+            // 
+            this.atkMaxFilter.Location = new System.Drawing.Point(471, 32);
+            this.atkMaxFilter.Name = "atkMaxFilter";
+            this.atkMaxFilter.Size = new System.Drawing.Size(29, 20);
+            this.atkMaxFilter.TabIndex = 20;
+            this.atkMaxFilter.Text = "31";
+            this.atkMaxFilter.UseVisualStyleBackColor = true;
+            this.atkMaxFilter.Click += new System.EventHandler(this.AtkMaxFilter_Click);
+            // 
+            // defMin
+            // 
+            this.defMin.Location = new System.Drawing.Point(353, 58);
+            this.defMin.Name = "defMin";
+            this.defMin.Size = new System.Drawing.Size(28, 26);
+            this.defMin.TabIndex = 9;
+            this.defMin.Text = "0";
+            this.defMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.defMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.defMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // defMinFilter
+            // 
+            this.defMinFilter.Location = new System.Drawing.Point(437, 58);
+            this.defMinFilter.Name = "defMinFilter";
+            this.defMinFilter.Size = new System.Drawing.Size(29, 20);
+            this.defMinFilter.TabIndex = 21;
+            this.defMinFilter.Text = "0";
+            this.defMinFilter.UseVisualStyleBackColor = true;
+            this.defMinFilter.Click += new System.EventHandler(this.DefMinFilter_Click);
+            // 
+            // spaMinFilter
+            // 
+            this.spaMinFilter.Location = new System.Drawing.Point(437, 84);
+            this.spaMinFilter.Name = "spaMinFilter";
+            this.spaMinFilter.Size = new System.Drawing.Size(29, 20);
+            this.spaMinFilter.TabIndex = 23;
+            this.spaMinFilter.Text = "0";
+            this.spaMinFilter.UseVisualStyleBackColor = true;
+            this.spaMinFilter.Click += new System.EventHandler(this.SpaMinFilter_Click);
+            // 
+            // defMaxFilter
+            // 
+            this.defMaxFilter.Location = new System.Drawing.Point(471, 58);
+            this.defMaxFilter.Name = "defMaxFilter";
+            this.defMaxFilter.Size = new System.Drawing.Size(29, 20);
+            this.defMaxFilter.TabIndex = 22;
+            this.defMaxFilter.Text = "31";
+            this.defMaxFilter.UseVisualStyleBackColor = true;
+            this.defMaxFilter.Click += new System.EventHandler(this.DefMaxFilter_Click);
+            // 
+            // spaMax
+            // 
+            this.spaMax.Location = new System.Drawing.Point(403, 84);
+            this.spaMax.Name = "spaMax";
+            this.spaMax.Size = new System.Drawing.Size(28, 26);
+            this.spaMax.TabIndex = 12;
+            this.spaMax.Text = "31";
+            this.spaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spaMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.spaMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(387, 113);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(14, 20);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "-";
+            // 
+            // atkMin
+            // 
+            this.atkMin.Location = new System.Drawing.Point(353, 32);
+            this.atkMin.Name = "atkMin";
+            this.atkMin.Size = new System.Drawing.Size(28, 26);
+            this.atkMin.TabIndex = 7;
+            this.atkMin.Text = "0";
+            this.atkMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.atkMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
+            this.atkMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // spaMaxFilter
+            // 
+            this.spaMaxFilter.Location = new System.Drawing.Point(471, 84);
+            this.spaMaxFilter.Name = "spaMaxFilter";
+            this.spaMaxFilter.Size = new System.Drawing.Size(29, 20);
+            this.spaMaxFilter.TabIndex = 24;
+            this.spaMaxFilter.Text = "31";
+            this.spaMaxFilter.UseVisualStyleBackColor = true;
+            this.spaMaxFilter.Click += new System.EventHandler(this.SpaMaxFilter_Click);
             // 
             // Form
             // 

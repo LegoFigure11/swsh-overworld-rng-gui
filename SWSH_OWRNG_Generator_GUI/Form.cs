@@ -54,6 +54,16 @@ namespace SWSH_OWRNG_Generator_GUI
             }
         }
 
+        private void IVs_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (Int32.TryParse(textBox.Text, out int i))
+            {
+                if (i < 0) textBox.Text = "0";
+                if (i > 31) textBox.Text = "31";
+            }
+        }
+
         private void TIDSID_TextChanged(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
