@@ -1,4 +1,6 @@
-﻿namespace SWSH_OWRNG_Generator_GUI
+﻿using System.Collections.Generic;
+
+namespace SWSH_OWRNG_Generator_GUI
 {
     class Generator
     {
@@ -10,12 +12,14 @@
         {
         }
 
-        public static void Generate(
+        public static List<Frame> Generate(
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
             bool Static, bool Fishing, bool HeldItem, bool ExtraRoll, string DesiredMark, string DesiredShiny, uint LevelMin,
             uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs
             )
         {
+            List<Frame> Results = new List<Frame>();
+
             int ShinyRolls = ShinyCharm ? 3 : 1;
             int MarkRolls = MarkCharm ? 3 : 1;
             uint TSV = GetTSV(TID, SID);
@@ -24,8 +28,9 @@
             uint LevelDelta = LevelMax - LevelMin + 1;
             bool Shiny = false;
 
-            uint EC, PID, SlotRand, Level, BrilliantRand;
-            string Mark;
+            uint EC, PID, SlotRand = 0, Level = 0, BrilliantRand, Nature, AbilityRoll, FixedSeed, ShinyXOR, i;
+            string Mark = "";
+            bool PassIVs;
             ulong advance = 0;
 
             Xoroshiro go = new Xoroshiro(state1, state0);
@@ -56,7 +61,7 @@
                     if (GenerateLevel)
                     {
                         Level = LevelMin + (uint)rng.rand(LevelDelta);
-                    } 
+                    }
                     else
                     {
                         Level = LevelMin;
@@ -81,9 +86,79 @@
                         break;
                 }
 
+                rng.rand(2); // Mystery
+                Nature = (uint)rng.rand(25);
+                AbilityRoll = (uint)rng.rand(2);
+
+                if (HeldItem)
+                    rng.rand(100);
+
+                FixedSeed = rng.nextuint();
+                (EC, PID, IVs, ShinyXOR) = CalculateFixed(FixedSeed, TSV, Shiny, 0);
+
+                if (
+                    (DesiredShiny == "Square" && ShinyXOR != 0) ||
+                    (DesiredShiny == "Star" && (ShinyXOR > 15 || ShinyXOR == 0)) ||
+                    (DesiredShiny == "Star/Square" && ShinyXOR > 15) ||
+                    (DesiredShiny == "No" && ShinyXOR < 16)
+                    )
+                {
+                    go.next();
+                    advance += 1;
+                    continue;
+                }
+
+                PassIVs = true;
+                for (i = 0; i < 6; i++)
+                {
+                    if (IVs[i] < MinIVs[i] || IVs[i] > MaxIVs[i])
+                    {
+                        PassIVs = false;
+                        break;
+                    }
+                }
+                if (!PassIVs)
+                {
+                    go.next();
+                    advance += 1;
+                    continue;
+                }
+
+                if (Static || ExtraRoll)
+                    Mark = GenerateMark(rng, Weather, Fishing, MarkRolls);
+
+                if (Mark != DesiredMark && DesiredMark != "Any")
+                {
+                    go.next();
+                    advance += 1;
+                    continue;
+                }
+
+                // Passes all filters!
+                Results.Add(
+                    new Frame()
+                    {
+                        Advances = advance,
+                        Level = Level,
+                        Slot = SlotRand,
+                        PID = PID,
+                        EC = EC,
+                        Shiny = ShinyXOR == 0 ? "Square" : (ShinyXOR < 16 ? "Star" : "No"),
+                        HP = IVs[0],
+                        Atk = IVs[1],
+                        Def = IVs[2],
+                        SpA = IVs[3],
+                        SpD = IVs[4],
+                        Spe = IVs[5],
+                        Mark = Mark
+                    }
+                );
+
                 go.next();
                 advance += 1;
             }
+
+            return Results;
         }
 
         public static uint GetTSV(uint TID, uint SID)
@@ -110,6 +185,43 @@
                 if (fish == 0 && Fishing) return "Fish";
             }
             return "None";
+        }
+
+        private static uint FixedEC, FixedPID, FixedIVIndex, i;
+        public static (uint, uint, uint[], uint) CalculateFixed(uint FixedSeed, uint TSV, bool Shiny, int ForcedIVs)
+        {
+            Xoroshiro go = new Xoroshiro(FixedSeed, 0x82A2B175229D6A5B);
+            FixedEC = go.nextuint();
+            FixedPID = go.nextuint();
+            if (!Shiny)
+            {
+                if (((FixedPID >> 16) ^ (FixedPID & 0xFFFF) ^ TSV) < 16)
+                    FixedPID ^= 0x10000000; // Antishiny
+            }
+            else
+            {
+                if (!(((FixedPID >> 16) ^ (FixedPID & 0xFFFF) ^ TSV) < 16))
+                    FixedPID = (((TSV ^ (FixedPID & 0xFFFF)) << 16) | (FixedPID & 0xFFFF)) & 0xFFFFFFFF;
+            }
+
+            uint[] IVs = { 32, 32, 32, 32, 32, 32 };
+            for (i = 0; i < ForcedIVs; i++)
+            {
+                FixedIVIndex = (uint)go.rand(6);
+                while (IVs[FixedIVIndex] != 32)
+                {
+                    FixedIVIndex = (uint)go.rand(6);
+                }
+                IVs[FixedIVIndex] = 31;
+            }
+
+            for (i = 0; i < 6; i++)
+            {
+                if (IVs[i] == 32)
+                    IVs[i] = (uint)go.rand(32);
+            }
+
+            return (FixedEC, FixedPID, IVs, GetTSV(FixedPID >> 16, FixedPID & 0xFFFF) ^ TSV);
         }
     }
 

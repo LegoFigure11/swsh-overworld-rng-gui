@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
@@ -313,11 +314,31 @@ namespace SWSH_OWRNG_Generator_GUI
             uint[] MinIVs = { UInt16.Parse(hpMin.Text), UInt16.Parse(atkMin.Text), UInt16.Parse(defMin.Text), UInt16.Parse(spaMin.Text), UInt16.Parse(spdMin.Text), UInt16.Parse(speMin.Text) };
             uint[] MaxIVs = { UInt16.Parse(hpMax.Text), UInt16.Parse(atkMax.Text), UInt16.Parse(defMax.Text), UInt16.Parse(spaMax.Text), UInt16.Parse(spdMax.Text), UInt16.Parse(speMax.Text) };
 
+            Results.Rows.Clear();
 
-            Generator.Generate(
+            List<Frame> Frames = Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, ExtraRoll, DesiredMark, DesiredShiny,
                 LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs
             );
+
+            foreach (Frame Frame in Frames)
+            {
+                int RowID = Results.Rows.Add();
+                DataGridViewRow Row = Results.Rows[RowID];
+                Row.Cells["Frame"].Value = Frame.Advances;
+                Row.Cells["Level"].Value = Frame.Level;
+                Row.Cells["Slot"].Value = Frame.Slot;
+                Row.Cells["PID"].Value = Frame.PID.ToString("X8");
+                Row.Cells["EC"].Value = Frame.EC.ToString("X8");
+                Row.Cells["Shiny"].Value = Frame.Shiny;
+                Row.Cells["HP"].Value = Frame.HP;
+                Row.Cells["Atk"].Value = Frame.Atk;
+                Row.Cells["Def"].Value = Frame.Def;
+                Row.Cells["SpA"].Value = Frame.SpA;
+                Row.Cells["SpD"].Value = Frame.SpD;
+                Row.Cells["Spe"].Value = Frame.Spe;
+                Row.Cells["Mark"].Value = Frame.Mark;
+            }
         }
 
         private void Pad(object sender, char s, int length)
