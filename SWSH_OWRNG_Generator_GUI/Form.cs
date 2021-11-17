@@ -378,6 +378,7 @@ namespace SWSH_OWRNG_Generator_GUI
             Results.Columns["Level"].Visible = !Static;
             Results.Columns["Slot"].Visible = !Static;
 
+            progressBar1.Value = 0;
             progressBar1.Maximum = (int)advances;
             progressBar1.Step = 1;
 

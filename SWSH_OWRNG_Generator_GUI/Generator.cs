@@ -38,8 +38,8 @@ namespace SWSH_OWRNG_Generator_GUI
 
             while (advance < advances)
             {
-                if (progress != null)
-                    progress.Report((int)advance);
+                /*if (progress != null)
+                    progress.Report((int)advance);*/
 
                 // Init new RNG
                 Xoroshiro rng = new Xoroshiro(go.state0, go.state1);
