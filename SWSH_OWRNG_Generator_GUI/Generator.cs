@@ -5,10 +5,9 @@ namespace SWSH_OWRNG_Generator_GUI
 {
     class Generator
     {
-        private static string[] Natures = { "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" };
-        private static string[] PersonalityMarks = { "Rowdy", "AbsentMinded", "Jittery", "Excited", "Charismatic", "Calmness", "Intense", "ZonedOut", "Joyful", "Angry", "Smiley", "Teary", "Upbeat", "Peeved", "Intellectual", "Ferocious", "Crafty", "Scowling", "Kindly", "Flustered", "PumpedUp", "ZeroEnergy", "Prideful", "Unsure", "Humble", "Thorny", "Vigor", "Slump" };
-        private static uint[] TemplateIVs = { 32, 32, 32, 32, 32, 32 };
-        private static uint Max = (uint)System.Math.Pow(2, 32) - 1;
+        private static readonly string[] Natures = { "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" };
+        private static readonly string[] PersonalityMarks = { "Rowdy", "AbsentMinded", "Jittery", "Excited", "Charismatic", "Calmness", "Intense", "ZonedOut", "Joyful", "Angry", "Smiley", "Teary", "Upbeat", "Peeved", "Intellectual", "Ferocious", "Crafty", "Scowling", "Kindly", "Flustered", "PumpedUp", "ZeroEnergy", "Prideful", "Unsure", "Humble", "Thorny", "Vigor", "Slump" };
+        private static readonly uint Max = (uint)Math.Pow(2, 32) - 1;
         public Generator()
         {
         }
@@ -16,7 +15,7 @@ namespace SWSH_OWRNG_Generator_GUI
         public static List<Frame> Generate(
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
             bool Static, bool Fishing, bool HeldItem, bool ExtraRoll, string DesiredMark, string DesiredShiny, uint LevelMin,
-            uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, IProgress<int> progress
+            uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, IProgress<int> Progress
             )
         {
             List<Frame> Results = new List<Frame>();
@@ -24,10 +23,10 @@ namespace SWSH_OWRNG_Generator_GUI
             int ShinyRolls = ShinyCharm ? 3 : 1;
             int MarkRolls = MarkCharm ? 3 : 1;
             uint TSV = GetTSV(TID, SID);
-            uint[] IVs = TemplateIVs;
+            uint[] IVs;
             bool GenerateLevel = LevelMin != LevelMax;
             uint LevelDelta = LevelMax - LevelMin + 1;
-            bool Shiny = false;
+            bool Shiny;
 
             uint EC, PID, SlotRand = 0, Level = 0, BrilliantRand, Nature, AbilityRoll, FixedSeed, ShinyXOR, i;
             string Mark = "";

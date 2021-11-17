@@ -373,6 +373,9 @@ namespace SWSH_OWRNG_Generator_GUI
                 return;
             }
 
+            ButtonSearch.Text = "Calculating...";
+            ButtonSearch.Enabled = false;
+
             Results.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.EnableResizing;
             Results.Rows.Clear();
             Results.Columns["Level"].Visible = !Static;
@@ -391,12 +394,14 @@ namespace SWSH_OWRNG_Generator_GUI
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, ExtraRoll, DesiredMark, DesiredShiny,
                 LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, progress
             ));
-
-            progressBar1.Value = progressBar1.Maximum;
-
             BindingSource Source = new BindingSource { DataSource = Frames };
             Results.DataSource = Source;
             Source.ResetBindings(false);
+
+
+            progressBar1.Value = progressBar1.Maximum;
+            ButtonSearch.Text = "Search!";
+            ButtonSearch.Enabled = true;
         }
 
         private void Pad(object sender, char s, int length)
