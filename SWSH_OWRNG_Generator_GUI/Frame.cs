@@ -2,7 +2,7 @@
 {
     class Frame
     {
-        public ulong Advances { get; set; }
+        public string Advances { get; set; }
         public uint Level { get; set; }
         public uint Slot { get; set; }
         public string PID { get; set; }

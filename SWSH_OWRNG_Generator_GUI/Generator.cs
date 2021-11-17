@@ -143,7 +143,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 Results.Add(
                     new Frame()
                     {
-                        Advances = advance,
+                        Advances = advance.ToString("N0"),
                         Level = Level,
                         Slot = SlotRand,
                         PID = PID.ToString("X8"),
