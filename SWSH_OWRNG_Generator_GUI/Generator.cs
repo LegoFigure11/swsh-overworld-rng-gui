@@ -76,7 +76,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     }
 
                     Mark = GenerateMark(rng, Weather, Fishing, MarkRolls);
-                    if (!ExtraRoll && DesiredMark != "Any" && Mark != DesiredMark)
+                    if (!ExtraRoll && !PassesMarkFilter(Mark, DesiredMark))
                     {
                         go.next();
                         advance += 1;
@@ -135,7 +135,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (Static || ExtraRoll)
                     Mark = GenerateMark(rng, Weather, Fishing, MarkRolls);
 
-                if (Mark != DesiredMark && DesiredMark != "Any")
+                if (!PassesMarkFilter(Mark, DesiredMark))
                 {
                     go.next();
                     advance += 1;
@@ -234,6 +234,11 @@ namespace SWSH_OWRNG_Generator_GUI
             }
 
             return (FixedEC, FixedPID, IVs, GetTSV(FixedPID >> 16, FixedPID & 0xFFFF) ^ TSV);
+        }
+
+        private static bool PassesMarkFilter(string Mark, string DesiredMark)
+        {
+            return !((DesiredMark == "Any Mark" && Mark == "None") || (DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare")) || (DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark));
         }
     }
 

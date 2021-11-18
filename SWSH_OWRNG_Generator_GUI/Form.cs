@@ -150,12 +150,6 @@ namespace SWSH_OWRNG_Generator_GUI
             atkMax.Text = "31";
         }
 
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CheckStatic_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckStatic.Checked)
