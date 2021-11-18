@@ -83,7 +83,7 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 Properties.Settings.Default.SID = InputSID.Text;
             }
-            
+
             Properties.Settings.Default.Save();
         }
 
@@ -333,6 +333,11 @@ namespace SWSH_OWRNG_Generator_GUI
                 s1 = 1;
             }
             ulong advances = UInt64.Parse(InputMaxAdv.Text);
+            if (advances == 0)
+            {
+                InputMaxAdv.Text = "1";
+                advances = 1;
+            }
             uint TID = UInt16.Parse(InputTID.Text);
             uint SID = UInt16.Parse(InputSID.Text);
             uint SlotMin = UInt16.Parse(InputSlotMin.Text);
@@ -383,11 +388,10 @@ namespace SWSH_OWRNG_Generator_GUI
 
             progressBar1.Value = 0;
             progressBar1.Maximum = (int)advances;
-            progressBar1.Step = progressBar1.Maximum / 5;
+            progressBar1.Step = progressBar1.Maximum / 100;
 
             var progress = new Progress<int>(v =>
             {
-                if (v % progressBar1.Step == 0)
                 progressBar1.PerformStep();
             });
 

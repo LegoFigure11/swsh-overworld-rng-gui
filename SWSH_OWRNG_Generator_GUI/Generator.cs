@@ -33,12 +33,16 @@ namespace SWSH_OWRNG_Generator_GUI
             bool PassIVs;
             ulong advance = 0;
 
+            ulong ProgressUpdateInterval = advances / 100;
+            if (ProgressUpdateInterval == 0)
+                ProgressUpdateInterval++;
+
             Xoroshiro go = new Xoroshiro(state1, state0);
 
             while (advance < advances)
             {
-                if (progress != null )
-                    progress.Report((int)advance);
+                if (progress != null && (advance % ProgressUpdateInterval == 0))
+                    progress.Report(1);
 
                 // Init new RNG
                 Xoroshiro rng = new Xoroshiro(go.state0, go.state1);
