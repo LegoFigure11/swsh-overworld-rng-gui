@@ -383,11 +383,12 @@ namespace SWSH_OWRNG_Generator_GUI
 
             progressBar1.Value = 0;
             progressBar1.Maximum = (int)advances;
-            progressBar1.Step = 1;
+            progressBar1.Step = progressBar1.Maximum / 5;
 
             var progress = new Progress<int>(v =>
             {
-                progressBar1.Value = v;
+                if (v % progressBar1.Step == 0)
+                progressBar1.PerformStep();
             });
 
             List<Frame> Frames = await Task.Run(() => Generator.Generate(

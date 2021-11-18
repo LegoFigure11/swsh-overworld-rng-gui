@@ -15,7 +15,7 @@ namespace SWSH_OWRNG_Generator_GUI
         public static List<Frame> Generate(
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
             bool Static, bool Fishing, bool HeldItem, bool ExtraRoll, string DesiredMark, string DesiredShiny, uint LevelMin,
-            uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, IProgress<int> Progress
+            uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, IProgress<int> progress
             )
         {
             List<Frame> Results = new List<Frame>();
@@ -37,8 +37,8 @@ namespace SWSH_OWRNG_Generator_GUI
 
             while (advance < advances)
             {
-                /*if (progress != null)
-                    progress.Report((int)advance);*/
+                if (progress != null )
+                    progress.Report((int)advance);
 
                 // Init new RNG
                 Xoroshiro rng = new Xoroshiro(go.state0, go.state1);
