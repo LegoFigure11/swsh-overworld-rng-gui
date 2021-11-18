@@ -102,30 +102,14 @@ namespace SWSH_OWRNG_Generator_GUI
                     rng.rand(100);
 
                 FixedSeed = rng.nextuint();
-                (EC, PID, IVs, ShinyXOR) = CalculateFixed(FixedSeed, TSV, Shiny, 0);
+                (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, TSV, Shiny, 0, MinIVs, MaxIVs);
 
-                if (
+                if (!PassIVs ||
                     (DesiredShiny == "Square" && ShinyXOR != 0) ||
                     (DesiredShiny == "Star" && (ShinyXOR > 15 || ShinyXOR == 0)) ||
                     (DesiredShiny == "Star/Square" && ShinyXOR > 15) ||
                     (DesiredShiny == "No" && ShinyXOR < 16)
                     )
-                {
-                    go.next();
-                    advance += 1;
-                    continue;
-                }
-
-                PassIVs = true;
-                for (i = 0; i < 6; i++)
-                {
-                    if (IVs[i] < MinIVs[i] || IVs[i] > MaxIVs[i])
-                    {
-                        PassIVs = false;
-                        break;
-                    }
-                }
-                if (!PassIVs)
                 {
                     go.next();
                     advance += 1;
@@ -200,7 +184,8 @@ namespace SWSH_OWRNG_Generator_GUI
         }
 
         private static uint FixedEC, FixedPID, FixedIVIndex, i;
-        public static (uint, uint, uint[], uint) CalculateFixed(uint FixedSeed, uint TSV, bool Shiny, int ForcedIVs)
+        private static bool PassIVs;
+        public static (uint, uint, uint[], uint, bool) CalculateFixed(uint FixedSeed, uint TSV, bool Shiny, int ForcedIVs, uint[] MinIVs, uint[] MaxIVs)
         {
             Xoroshiro go = new Xoroshiro(FixedSeed, 0x82A2B175229D6A5B);
             FixedEC = go.nextuint();
@@ -217,6 +202,7 @@ namespace SWSH_OWRNG_Generator_GUI
             }
 
             uint[] IVs = { 32, 32, 32, 32, 32, 32 };
+            PassIVs = true;
             for (i = 0; i < ForcedIVs; i++)
             {
                 FixedIVIndex = (uint)go.rand(6);
@@ -225,15 +211,25 @@ namespace SWSH_OWRNG_Generator_GUI
                     FixedIVIndex = (uint)go.rand(6);
                 }
                 IVs[FixedIVIndex] = 31;
+                if (IVs[FixedIVIndex] > MaxIVs[FixedIVIndex])
+                {
+                    PassIVs = false;
+                    break;
+                }
             }
 
-            for (i = 0; i < 6; i++)
+            for (i = 0; i < 6 && PassIVs; i++)
             {
                 if (IVs[i] == 32)
                     IVs[i] = (uint)go.rand(32);
+                if (IVs[i] < MinIVs[i] || IVs[i] > MaxIVs[i])
+                {
+                    PassIVs = false;
+                    break;
+                }
             }
 
-            return (FixedEC, FixedPID, IVs, GetTSV(FixedPID >> 16, FixedPID & 0xFFFF) ^ TSV);
+            return (FixedEC, FixedPID, IVs, GetTSV(FixedPID >> 16, FixedPID & 0xFFFF) ^ TSV, PassIVs);
         }
 
         private static bool PassesMarkFilter(string Mark, string DesiredMark)
