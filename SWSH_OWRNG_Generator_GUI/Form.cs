@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,9 +12,14 @@ namespace SWSH_OWRNG_Generator_GUI
     {
         public Form()
         {
+            string build = String.Empty;
+#if DEBUG
+            var date = File.GetLastWriteTime(System.Reflection.Assembly.GetEntryAssembly().Location);
+            build = $" (dev-{date:yyyyMMdd})";
+#endif
             var v = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            this.Text = "SwSh OWRNG Generator GUI v" + v.Major + "." + v.Minor + "." + v.Build + build;
             InitializeComponent();
-            this.Text = "SwSh OWRNG Generator GUI v" + v.Major + "." + v.Minor + "." + v.Build;
         }
 
         private void Form1_Load(object sender, EventArgs e)
