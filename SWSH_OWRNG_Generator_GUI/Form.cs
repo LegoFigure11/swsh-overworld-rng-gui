@@ -434,6 +434,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private string RetailAdvancesGeneratorString = String.Empty;
         private ulong RetailS0 = 1;
         private ulong RetailS1 = 1;
+        private uint RetailInitial;
         private async void RetailAdvancesTrackerGenerateButton_Click(object sender, EventArgs e)
         {
             Pad(InputState0, '0', 16);
@@ -455,6 +456,7 @@ namespace SWSH_OWRNG_Generator_GUI
             RetailS0 = s0;
             RetailS1 = s1;
             uint Initial = UInt32.Parse(RetailAdvancesTrackerInitialInput.Text);
+            RetailInitial = Initial;
             uint Max = UInt32.Parse(RetailAdvancesTrackerMaxInput.Text);
 
             RetailAdvancesTrackerGenerateButton.Text = "Calculating...";
@@ -470,11 +472,11 @@ namespace SWSH_OWRNG_Generator_GUI
                 RetailAdvancesTrackerProgressBar.PerformStep();
             });
 
-            RetailAdvancesGeneratorString = await Task.Run(() => Generator.GenerateRetailSequence(s0, s1, Initial, Max, progress));
+            RetailAdvancesGeneratorString = await Task.Run(() => Generator.GenerateRetailSequence(s1, s0, Initial, Max, progress));
 
             RetailAdvancesTrackerProgressBar.Value = RetailAdvancesTrackerProgressBar.Maximum;
             RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";
-            RetailAdvancesTrackerGenerateButton.Enabled = false;
+            RetailAdvancesTrackerGenerateButton.Enabled = true;
             RetailAdvancesTrackerSequenceInput.ReadOnly = false;
         }
 
@@ -495,7 +497,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: {res.Count}";
                 if (res.Count == 1)
                 {
-                    int num = res[0] + Text.Length + 1;
+                    uint num = (uint)res[0] + (uint)Text.Length + RetailInitial;
                     RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: 1 (Advances: {num})";
                     Xoroshiro go = new Xoroshiro(RetailS1, RetailS0);
                     for (int i = 0; i < num; i++)

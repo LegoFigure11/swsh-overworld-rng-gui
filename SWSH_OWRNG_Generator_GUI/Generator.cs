@@ -131,6 +131,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     new Frame()
                     {
                         Advances = advance.ToString("N0"),
+                        Animation = new Xoroshiro(go.state1, go.state0).next() % 2,
                         Level = Level,
                         Slot = SlotRand,
                         PID = PID.ToString("X8"),
@@ -239,7 +240,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)
         {
-            Xoroshiro go = new Xoroshiro(state1, state0);
+            Xoroshiro go = new Xoroshiro(state0, state1);
             for (int i = 0; i < start; i++)
                 go.next();
 

@@ -3,6 +3,8 @@
     class Frame
     {
         public string Advances { get; set; }
+
+        public ulong Animation { get; set; }
         public uint Level { get; set; }
         public uint Slot { get; set; }
         public string PID { get; set; }
