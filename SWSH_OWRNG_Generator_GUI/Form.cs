@@ -308,6 +308,23 @@ namespace SWSH_OWRNG_Generator_GUI
             }
         }
 
+        private void BinInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string s = "";
+
+            s += e.KeyChar;
+
+            byte[] b = Encoding.ASCII.GetBytes(s);
+
+            if (e.KeyChar != (char)Keys.Back && !char.IsControl(e.KeyChar))
+            {
+                if (!(('0' <= b[0]) && (b[0] <= '1')))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
         private async void ButtonSearch_Click(object sender, EventArgs e)
         {
             Pad(InputState0, '0', 16);
@@ -412,6 +429,86 @@ namespace SWSH_OWRNG_Generator_GUI
         private void Pad(object sender, char s, int length)
         {
             ((TextBox)sender).Text = ((TextBox)sender).Text.PadLeft(length, s);
+        }
+
+        private string RetailAdvancesGeneratorString = String.Empty;
+        private ulong RetailS0 = 1;
+        private ulong RetailS1 = 1;
+        private async void RetailAdvancesTrackerGenerateButton_Click(object sender, EventArgs e)
+        {
+            Pad(InputState0, '0', 16);
+            Pad(InputState1, '0', 16);
+            ulong s0 = UInt64.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
+            ulong s1 = UInt64.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
+            if (s0 == 0)
+            {
+                InputState0.Text = "1";
+                Pad(InputState0, '0', 16);
+                s0 = 1;
+            }
+            if (s1 == 0)
+            {
+                InputState1.Text = "1";
+                Pad(InputState1, '0', 16);
+                s1 = 1;
+            }
+            RetailS0 = s0;
+            RetailS1 = s1;
+            uint Initial = UInt32.Parse(RetailAdvancesTrackerInitialInput.Text);
+            uint Max = UInt32.Parse(RetailAdvancesTrackerMaxInput.Text);
+
+            RetailAdvancesTrackerGenerateButton.Text = "Calculating...";
+            RetailAdvancesTrackerGenerateButton.Enabled = false;
+            RetailAdvancesTrackerSequenceInput.ReadOnly = true;
+
+            RetailAdvancesTrackerProgressBar.Value = 0;
+            RetailAdvancesTrackerProgressBar.Maximum = (int)(Initial + Max);
+            RetailAdvancesTrackerProgressBar.Step = RetailAdvancesTrackerProgressBar.Maximum / 100;
+
+            var progress = new Progress<int>(v =>
+            {
+                RetailAdvancesTrackerProgressBar.PerformStep();
+            });
+
+            RetailAdvancesGeneratorString = await Task.Run(() => Generator.GenerateRetailSequence(s0, s1, Initial, Max, progress));
+
+            RetailAdvancesTrackerProgressBar.Value = RetailAdvancesTrackerProgressBar.Maximum;
+            RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";
+            RetailAdvancesTrackerGenerateButton.Enabled = false;
+            RetailAdvancesTrackerSequenceInput.ReadOnly = false;
+        }
+
+        private void RetailAdvancesTrackerSequenceInput_KeyDown(object sender, EventArgs e)
+        {
+            List<int> res = new List<int>();
+            string Text = RetailAdvancesTrackerSequenceInput.Text;
+            int m = RetailAdvancesGeneratorString.Length;
+            if (Text.Length >= 4)
+            {
+                for (int i = 0; i < m; i++)
+                {
+                    int index = RetailAdvancesGeneratorString.IndexOf(Text, i);
+                    if (index == -1) break;
+                    res.Add(index);
+                    i = index;
+                }
+                RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: {res.Count}";
+                if (res.Count == 1)
+                {
+                    int num = res[0] + Text.Length + 1;
+                    RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: 1 (Advances: {num})";
+                    Xoroshiro go = new Xoroshiro(RetailS1, RetailS0);
+                    for (int i = 0; i < num; i++)
+                        go.next();
+
+                    RetailAdvancesTrackerResultState0.Text = go.state1.ToString("X16");
+                    RetailAdvancesTrackerResultState1.Text = go.state0.ToString("X16");
+                }
+            }
+            else
+            {
+                RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: Needs at least 5 inputs";
+            }
         }
     }
 }

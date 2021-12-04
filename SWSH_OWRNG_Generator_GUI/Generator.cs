@@ -236,6 +236,27 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             return !((DesiredMark == "Any Mark" && Mark == "None") || (DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare")) || (DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark));
         }
+
+        public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)
+        {
+            Xoroshiro go = new Xoroshiro(state1, state0);
+            for (int i = 0; i < start; i++)
+                go.next();
+
+            string ret = String.Empty;
+            ulong ProgressUpdateInterval = (start + max) / 100;
+            if (ProgressUpdateInterval == 0)
+                ProgressUpdateInterval++;
+
+            for (uint i = 0; i < max; i++)
+            {
+                if (progress != null && (i % ProgressUpdateInterval == 0))
+                    progress.Report(1);
+                ret += go.next() % 2;
+            }
+
+            return ret;
+        }
     }
 
 

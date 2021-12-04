@@ -91,7 +91,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.speMinFilter = new System.Windows.Forms.Button();
             this.defMax = new System.Windows.Forms.TextBox();
@@ -118,6 +117,21 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMin = new System.Windows.Forms.TextBox();
             this.spaMaxFilter = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.RetailAdvancesTrackerLabel = new System.Windows.Forms.Label();
+            this.RetailAdvancesTrackerInitialInputLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RetailAdvancesTrackerInitialInput = new System.Windows.Forms.TextBox();
+            this.RetailAdvancesTrackerMaxInput = new System.Windows.Forms.TextBox();
+            this.RetailAdvancesTrackerGenerateButton = new System.Windows.Forms.Button();
+            this.RetailAdvancesTrackerProgressBar = new System.Windows.Forms.ProgressBar();
+            this.RetailAdvancesTrackerSequenceInput = new System.Windows.Forms.TextBox();
+            this.RetailAdvancesTrackerSequenceLabel = new System.Windows.Forms.Label();
+            this.RetailAdvancesTrackerResultState0 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.RetailAdvancesTrackerResultState1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.RetailAdvancesTrackerNumResultsLabel = new System.Windows.Forms.Label();
+            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -392,6 +406,7 @@ namespace SWSH_OWRNG_Generator_GUI
             "Slump"});
             this.SelectedMark.Location = new System.Drawing.Point(353, 162);
             this.SelectedMark.Name = "SelectedMark";
+            this.SelectedMark.SelectedIndex = 0;
             this.SelectedMark.Size = new System.Drawing.Size(147, 21);
             this.SelectedMark.TabIndex = 29;
             // 
@@ -572,6 +587,7 @@ namespace SWSH_OWRNG_Generator_GUI
             "Star/Square"});
             this.SelectedShiny.Location = new System.Drawing.Point(353, 189);
             this.SelectedShiny.Name = "SelectedShiny";
+            this.SelectedShiny.SelectedIndex = 0;
             this.SelectedShiny.Size = new System.Drawing.Size(147, 21);
             this.SelectedShiny.TabIndex = 30;
             // 
@@ -616,7 +632,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(486, 227);
+            this.Results.Size = new System.Drawing.Size(746, 227);
             this.Results.TabIndex = 73;
             // 
             // Frame
@@ -783,10 +799,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State1.Name = "State1";
             this.State1.ReadOnly = true;
             this.State1.Width = 150;
-            // 
-            // generatorBindingSource
-            // 
-            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
             // 
             // label12
             // 
@@ -1046,15 +1058,163 @@ namespace SWSH_OWRNG_Generator_GUI
             // progressBar1
             // 
             this.progressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.progressBar1.Location = new System.Drawing.Point(12, 316);
+            this.progressBar1.Location = new System.Drawing.Point(13, 316);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(488, 21);
+            this.progressBar1.Size = new System.Drawing.Size(486, 21);
             this.progressBar1.TabIndex = 74;
+            // 
+            // RetailAdvancesTrackerLabel
+            // 
+            this.RetailAdvancesTrackerLabel.AutoSize = true;
+            this.RetailAdvancesTrackerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RetailAdvancesTrackerLabel.Location = new System.Drawing.Point(548, 9);
+            this.RetailAdvancesTrackerLabel.Name = "RetailAdvancesTrackerLabel";
+            this.RetailAdvancesTrackerLabel.Size = new System.Drawing.Size(148, 13);
+            this.RetailAdvancesTrackerLabel.TabIndex = 75;
+            this.RetailAdvancesTrackerLabel.Text = "Retail Advances Tracker";
+            // 
+            // RetailAdvancesTrackerInitialInputLabel
+            // 
+            this.RetailAdvancesTrackerInitialInputLabel.AutoSize = true;
+            this.RetailAdvancesTrackerInitialInputLabel.Location = new System.Drawing.Point(548, 35);
+            this.RetailAdvancesTrackerInitialInputLabel.Name = "RetailAdvancesTrackerInitialInputLabel";
+            this.RetailAdvancesTrackerInitialInputLabel.Size = new System.Drawing.Size(59, 13);
+            this.RetailAdvancesTrackerInitialInputLabel.TabIndex = 76;
+            this.RetailAdvancesTrackerInitialInputLabel.Text = "Initial Adv.:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(552, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 77;
+            this.label1.Text = "Max Adv.:";
+            // 
+            // RetailAdvancesTrackerInitialInput
+            // 
+            this.RetailAdvancesTrackerInitialInput.Location = new System.Drawing.Point(613, 32);
+            this.RetailAdvancesTrackerInitialInput.MaxLength = 16;
+            this.RetailAdvancesTrackerInitialInput.Name = "RetailAdvancesTrackerInitialInput";
+            this.RetailAdvancesTrackerInitialInput.Size = new System.Drawing.Size(145, 20);
+            this.RetailAdvancesTrackerInitialInput.TabIndex = 78;
+            this.RetailAdvancesTrackerInitialInput.Text = "128";
+            this.RetailAdvancesTrackerInitialInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // RetailAdvancesTrackerMaxInput
+            // 
+            this.RetailAdvancesTrackerMaxInput.Location = new System.Drawing.Point(613, 58);
+            this.RetailAdvancesTrackerMaxInput.MaxLength = 16;
+            this.RetailAdvancesTrackerMaxInput.Name = "RetailAdvancesTrackerMaxInput";
+            this.RetailAdvancesTrackerMaxInput.Size = new System.Drawing.Size(145, 20);
+            this.RetailAdvancesTrackerMaxInput.TabIndex = 79;
+            this.RetailAdvancesTrackerMaxInput.Text = "10000";
+            this.RetailAdvancesTrackerMaxInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // RetailAdvancesTrackerGenerateButton
+            // 
+            this.RetailAdvancesTrackerGenerateButton.Location = new System.Drawing.Point(551, 91);
+            this.RetailAdvancesTrackerGenerateButton.Name = "RetailAdvancesTrackerGenerateButton";
+            this.RetailAdvancesTrackerGenerateButton.Size = new System.Drawing.Size(207, 20);
+            this.RetailAdvancesTrackerGenerateButton.TabIndex = 80;
+            this.RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";
+            this.RetailAdvancesTrackerGenerateButton.UseVisualStyleBackColor = true;
+            this.RetailAdvancesTrackerGenerateButton.Click += new System.EventHandler(this.RetailAdvancesTrackerGenerateButton_Click);
+            // 
+            // RetailAdvancesTrackerProgressBar
+            // 
+            this.RetailAdvancesTrackerProgressBar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.RetailAdvancesTrackerProgressBar.Location = new System.Drawing.Point(552, 115);
+            this.RetailAdvancesTrackerProgressBar.Name = "RetailAdvancesTrackerProgressBar";
+            this.RetailAdvancesTrackerProgressBar.Size = new System.Drawing.Size(205, 10);
+            this.RetailAdvancesTrackerProgressBar.TabIndex = 81;
+            // 
+            // RetailAdvancesTrackerSequenceInput
+            // 
+            this.RetailAdvancesTrackerSequenceInput.Location = new System.Drawing.Point(551, 152);
+            this.RetailAdvancesTrackerSequenceInput.MaxLength = 30;
+            this.RetailAdvancesTrackerSequenceInput.Name = "RetailAdvancesTrackerSequenceInput";
+            this.RetailAdvancesTrackerSequenceInput.ReadOnly = true;
+            this.RetailAdvancesTrackerSequenceInput.Size = new System.Drawing.Size(207, 20);
+            this.RetailAdvancesTrackerSequenceInput.TabIndex = 82;
+            this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RetailAdvancesTrackerSequenceInput_KeyDown);
+            // 
+            // RetailAdvancesTrackerSequenceLabel
+            // 
+            this.RetailAdvancesTrackerSequenceLabel.AutoSize = true;
+            this.RetailAdvancesTrackerSequenceLabel.Location = new System.Drawing.Point(548, 136);
+            this.RetailAdvancesTrackerSequenceLabel.Name = "RetailAdvancesTrackerSequenceLabel";
+            this.RetailAdvancesTrackerSequenceLabel.Size = new System.Drawing.Size(199, 13);
+            this.RetailAdvancesTrackerSequenceLabel.TabIndex = 83;
+            this.RetailAdvancesTrackerSequenceLabel.Text = "Input Sequence (0: Physical, 1: Special):";
+            // 
+            // RetailAdvancesTrackerResultState0
+            // 
+            this.RetailAdvancesTrackerResultState0.Location = new System.Drawing.Point(551, 237);
+            this.RetailAdvancesTrackerResultState0.MaxLength = 16;
+            this.RetailAdvancesTrackerResultState0.Name = "RetailAdvancesTrackerResultState0";
+            this.RetailAdvancesTrackerResultState0.ReadOnly = true;
+            this.RetailAdvancesTrackerResultState0.Size = new System.Drawing.Size(207, 20);
+            this.RetailAdvancesTrackerResultState0.TabIndex = 84;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(548, 264);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.TabIndex = 87;
+            this.label3.Text = "Current State[1]:";
+            // 
+            // RetailAdvancesTrackerResultState1
+            // 
+            this.RetailAdvancesTrackerResultState1.Location = new System.Drawing.Point(551, 280);
+            this.RetailAdvancesTrackerResultState1.MaxLength = 16;
+            this.RetailAdvancesTrackerResultState1.Name = "RetailAdvancesTrackerResultState1";
+            this.RetailAdvancesTrackerResultState1.ReadOnly = true;
+            this.RetailAdvancesTrackerResultState1.Size = new System.Drawing.Size(207, 20);
+            this.RetailAdvancesTrackerResultState1.TabIndex = 86;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(548, 221);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.TabIndex = 85;
+            this.label2.Text = "Current State[0]:";
+            // 
+            // RetailAdvancesTrackerNumResultsLabel
+            // 
+            this.RetailAdvancesTrackerNumResultsLabel.AutoSize = true;
+            this.RetailAdvancesTrackerNumResultsLabel.Location = new System.Drawing.Point(548, 189);
+            this.RetailAdvancesTrackerNumResultsLabel.Name = "RetailAdvancesTrackerNumResultsLabel";
+            this.RetailAdvancesTrackerNumResultsLabel.Size = new System.Drawing.Size(110, 13);
+            this.RetailAdvancesTrackerNumResultsLabel.TabIndex = 88;
+            this.RetailAdvancesTrackerNumResultsLabel.Text = "Possible Results: N/A";
+            // 
+            // generatorBindingSource
+            // 
+            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
             // 
             // Form
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(509, 582);
+            this.ClientSize = new System.Drawing.Size(769, 582);
+            this.Controls.Add(this.RetailAdvancesTrackerNumResultsLabel);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.RetailAdvancesTrackerResultState1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.RetailAdvancesTrackerResultState0);
+            this.Controls.Add(this.RetailAdvancesTrackerSequenceLabel);
+            this.Controls.Add(this.RetailAdvancesTrackerSequenceInput);
+            this.Controls.Add(this.RetailAdvancesTrackerProgressBar);
+            this.Controls.Add(this.RetailAdvancesTrackerGenerateButton);
+            this.Controls.Add(this.RetailAdvancesTrackerMaxInput);
+            this.Controls.Add(this.RetailAdvancesTrackerInitialInput);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RetailAdvancesTrackerInitialInputLabel);
+            this.Controls.Add(this.RetailAdvancesTrackerLabel);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Results);
             this.Controls.Add(this.SelectedShiny);
@@ -1225,6 +1385,20 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn State0;
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label RetailAdvancesTrackerLabel;
+        private System.Windows.Forms.Label RetailAdvancesTrackerInitialInputLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox RetailAdvancesTrackerInitialInput;
+        private System.Windows.Forms.TextBox RetailAdvancesTrackerMaxInput;
+        private System.Windows.Forms.Button RetailAdvancesTrackerGenerateButton;
+        private System.Windows.Forms.ProgressBar RetailAdvancesTrackerProgressBar;
+        private System.Windows.Forms.TextBox RetailAdvancesTrackerSequenceInput;
+        private System.Windows.Forms.Label RetailAdvancesTrackerSequenceLabel;
+        private System.Windows.Forms.TextBox RetailAdvancesTrackerResultState0;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox RetailAdvancesTrackerResultState1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label RetailAdvancesTrackerNumResultsLabel;
     }
 }
 
