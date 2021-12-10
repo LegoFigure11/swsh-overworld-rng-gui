@@ -1173,6 +1173,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerResultState0.ReadOnly = true;
             this.RetailAdvancesTrackerResultState0.Size = new System.Drawing.Size(207, 20);
             this.RetailAdvancesTrackerResultState0.TabIndex = 84;
+            this.RetailAdvancesTrackerResultState0.TabStop = false;
             // 
             // label3
             // 
@@ -1191,6 +1192,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerResultState1.ReadOnly = true;
             this.RetailAdvancesTrackerResultState1.Size = new System.Drawing.Size(207, 20);
             this.RetailAdvancesTrackerResultState1.TabIndex = 86;
+            this.RetailAdvancesTrackerResultState1.TabStop = false;
             // 
             // label2
             // 

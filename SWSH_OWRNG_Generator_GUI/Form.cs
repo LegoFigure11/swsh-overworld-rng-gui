@@ -28,6 +28,59 @@ namespace SWSH_OWRNG_Generator_GUI
             InputSID.Text = Properties.Settings.Default.SID;
             CheckShinyCharm.Checked = Properties.Settings.Default.ShinyCharm;
             CheckMarkCharm.Checked = Properties.Settings.Default.MarkCharm;
+
+            // Set Tab Indexes Manually
+            // This will make life easier when adding more fields later on
+            // (aka Lego can't find the button that made this nice to do)
+            InputState0.TabIndex = 0;
+            InputState1.TabIndex = 1;
+            InputTID.TabIndex = 2;
+            InputSID.TabIndex = 3;
+            InputMaxAdv.TabIndex = 4;
+            hpMin.TabIndex = 5;
+            hpMax.TabIndex = 6;
+            atkMin.TabIndex = 7;
+            atkMax.TabIndex = 8;
+            defMin.TabIndex = 9;
+            defMax.TabIndex = 10;
+            spaMin.TabIndex = 11;
+            spaMax.TabIndex = 12;
+            spdMin.TabIndex = 13;
+            spdMax.TabIndex = 14;
+            speMin.TabIndex = 15;
+            speMax.TabIndex = 16;
+            hpMinFilter.TabIndex = 17;
+            hpMaxFilter.TabIndex = 18;
+            atkMinFilter.TabIndex = 19;
+            atkMaxFilter.TabIndex = 20;
+            defMinFilter.TabIndex = 21;
+            defMaxFilter.TabIndex = 22;
+            spaMinFilter.TabIndex = 23;
+            spaMaxFilter.TabIndex = 24;
+            spdMinFilter.TabIndex = 25;
+            spdMaxFilter.TabIndex = 26;
+            speMinFilter.TabIndex = 27;
+            speMaxFilter.TabIndex = 28;
+            SelectedMark.TabIndex = 29;
+            SelectedShiny.TabIndex = 30;
+            CheckShinyCharm.TabIndex = 31;
+            CheckStatic.TabIndex = 32;
+            CheckMarkCharm.TabIndex = 33;
+            CheckFishing.TabIndex = 34;
+            CheckWeather.TabIndex = 35;
+            CheckHeldItem.TabIndex = 36;
+            CheckExtraRoll.TabIndex = 37;
+            CheckIsLegend.TabIndex = 38;
+            InputLevelMin.TabIndex = 39;
+            InputLevelMax.TabIndex = 40;
+            InputSlotMin.TabIndex = 41;
+            InputSlotMax.TabIndex = 42;
+            ButtonSearch.TabIndex = 43;
+            Results.TabIndex = 44;
+            RetailAdvancesTrackerInitialInput.TabIndex = 45;
+            RetailAdvancesTrackerMaxInput.TabIndex = 46;
+            RetailAdvancesTrackerGenerateButton.TabIndex = 47;
+            RetailAdvancesTrackerSequenceInput.TabIndex = 48;
         }
 
         private void HpMinFilter_Click(object sender, EventArgs e)
