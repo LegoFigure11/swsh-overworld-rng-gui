@@ -8,5 +8,11 @@
     <Setting Name="SID" Type="System.String" Scope="User">
       <Value Profile="(Default)">1337</Value>
     </Setting>
+    <Setting Name="ShinyCharm" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MarkCharm" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -421,6 +421,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckShinyCharm.TabIndex = 31;
             this.CheckShinyCharm.Text = "Shiny Charm";
             this.CheckShinyCharm.UseVisualStyleBackColor = true;
+            this.CheckShinyCharm.CheckedChanged += new System.EventHandler(this.SaveCheckbox_CheckChanged);
             // 
             // CheckMarkCharm
             // 
@@ -431,6 +432,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckMarkCharm.TabIndex = 33;
             this.CheckMarkCharm.Text = "Mark Charm";
             this.CheckMarkCharm.UseVisualStyleBackColor = true;
+            this.CheckMarkCharm.CheckedChanged += new System.EventHandler(this.SaveCheckbox_CheckChanged);
             // 
             // CheckWeather
             // 
@@ -1152,7 +1154,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerSequenceInput.ReadOnly = true;
             this.RetailAdvancesTrackerSequenceInput.Size = new System.Drawing.Size(207, 20);
             this.RetailAdvancesTrackerSequenceInput.TabIndex = 82;
-            this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BinInput_KeyPress);
             this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RetailAdvancesTrackerSequenceInput_KeyDown);
             // 
             // RetailAdvancesTrackerSequenceLabel

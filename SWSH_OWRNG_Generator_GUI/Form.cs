@@ -26,6 +26,8 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             InputTID.Text = Properties.Settings.Default.TID;
             InputSID.Text = Properties.Settings.Default.SID;
+            CheckShinyCharm.Checked = Properties.Settings.Default.ShinyCharm;
+            CheckMarkCharm.Checked = Properties.Settings.Default.MarkCharm;
         }
 
         private void HpMinFilter_Click(object sender, EventArgs e)
@@ -90,6 +92,22 @@ namespace SWSH_OWRNG_Generator_GUI
                 Properties.Settings.Default.SID = InputSID.Text;
             }
 
+            Properties.Settings.Default.Save();
+        }
+
+        private void SaveCheckbox_CheckChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            switch (checkBox.Name)
+            {
+                case "CheckShinyCharm":
+                    Properties.Settings.Default.ShinyCharm = checkBox.Checked;
+                    break;
+
+                case "CheckMarkCharm":
+                    Properties.Settings.Default.MarkCharm = checkBox.Checked;
+                    break;
+            }
             Properties.Settings.Default.Save();
         }
 
