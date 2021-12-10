@@ -15,7 +15,7 @@ namespace SWSH_OWRNG_Generator_GUI
         public static List<Frame> Generate(
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
             bool Static, bool Fishing, bool HeldItem, bool ExtraRoll, string DesiredMark, string DesiredShiny, uint LevelMin,
-            uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, IProgress<int> progress
+            uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsLegend, IProgress<int> progress
             )
         {
             List<Frame> Results = new List<Frame>();
@@ -96,13 +96,15 @@ namespace SWSH_OWRNG_Generator_GUI
 
                 rng.rand(2); // Mystery
                 Nature = (uint)rng.rand(25);
-                AbilityRoll = (uint)rng.rand(2);
+                AbilityRoll = 2;
+                if (!IsLegend)
+                    AbilityRoll = (uint)rng.rand(2);
 
                 if (HeldItem)
                     rng.rand(100);
 
                 FixedSeed = rng.nextuint();
-                (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, TSV, Shiny, 0, MinIVs, MaxIVs);
+                (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, TSV, Shiny, IsLegend ? 3 : 0, MinIVs, MaxIVs);
 
                 if (!PassIVs ||
                     (DesiredShiny == "Square" && ShinyXOR != 0) ||
