@@ -28,7 +28,7 @@ namespace SWSH_OWRNG_Generator_GUI
             uint LevelDelta = LevelMax - LevelMin + 1;
             bool Shiny;
 
-            uint EC, PID, SlotRand = 0, Level = 0, BrilliantRand, Nature, AbilityRoll, FixedSeed, ShinyXOR, i;
+            uint EC, PID, SlotRand = 0, Level = 0, BrilliantRand, Nature, AbilityRoll, FixedSeed, ShinyXOR;
             string Mark = "";
             bool PassIVs;
             ulong advance = 0;
