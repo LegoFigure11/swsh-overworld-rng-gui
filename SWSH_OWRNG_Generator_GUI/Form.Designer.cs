@@ -134,6 +134,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.label2 = new System.Windows.Forms.Label();
             this.RetailAdvancesTrackerNumResultsLabel = new System.Windows.Forms.Label();
             this.CheckIsLegend = new System.Windows.Forms.CheckBox();
+            this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
+            this.SeedFinderMenu = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -408,7 +410,6 @@ namespace SWSH_OWRNG_Generator_GUI
             "Slump"});
             this.SelectedMark.Location = new System.Drawing.Point(353, 162);
             this.SelectedMark.Name = "SelectedMark";
-            this.SelectedMark.SelectedIndex = 0;
             this.SelectedMark.Size = new System.Drawing.Size(147, 21);
             this.SelectedMark.TabIndex = 29;
             // 
@@ -591,7 +592,6 @@ namespace SWSH_OWRNG_Generator_GUI
             "Star/Square"});
             this.SelectedShiny.Location = new System.Drawing.Point(353, 189);
             this.SelectedShiny.Name = "SelectedShiny";
-            this.SelectedShiny.SelectedIndex = 0;
             this.SelectedShiny.Size = new System.Drawing.Size(147, 21);
             this.SelectedShiny.TabIndex = 30;
             // 
@@ -637,7 +637,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(746, 227);
+            this.Results.Size = new System.Drawing.Size(746, 206);
             this.Results.TabIndex = 73;
             // 
             // Frame
@@ -1154,7 +1154,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerSequenceInput.ReadOnly = true;
             this.RetailAdvancesTrackerSequenceInput.Size = new System.Drawing.Size(207, 20);
             this.RetailAdvancesTrackerSequenceInput.TabIndex = 82;
-            this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BinInput_KeyPress);
             this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RetailAdvancesTrackerSequenceInput_KeyPress);
             // 
             // RetailAdvancesTrackerSequenceLabel
@@ -1223,10 +1222,21 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckIsLegend.Text = "Legendary";
             this.CheckIsLegend.UseVisualStyleBackColor = true;
             // 
+            // MainMenu
+            // 
+            this.MainMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.SeedFinderMenu});
+            // 
+            // SeedFinderMenu
+            // 
+            this.SeedFinderMenu.Index = 0;
+            this.SeedFinderMenu.Text = "Seed Finder";
+            this.SeedFinderMenu.Click += new System.EventHandler(this.SeedFinderMenu_Click);
+            // 
             // Form
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(769, 582);
+            this.ClientSize = new System.Drawing.Size(769, 561);
             this.Controls.Add(this.CheckIsLegend);
             this.Controls.Add(this.RetailAdvancesTrackerNumResultsLabel);
             this.Controls.Add(this.label3);
@@ -1313,6 +1323,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.ImageRareMark);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Menu = this.MainMenu;
             this.Name = "Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).EndInit();
@@ -1428,6 +1439,8 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn State0;
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
         private System.Windows.Forms.CheckBox CheckIsLegend;
+        private System.Windows.Forms.MainMenu MainMenu;
+        private System.Windows.Forms.MenuItem SeedFinderMenu;
     }
 }
 
