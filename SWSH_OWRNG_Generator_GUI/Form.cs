@@ -555,7 +555,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void RetailAdvancesTrackerSequenceInput_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != (char)Keys.Back && e.KeyChar != (char)Keys.Delete)
+            if (e.KeyChar == '0' || e.KeyChar == '1')
             {
                 List<int> res = new List<int>();
                 string Text = RetailAdvancesTrackerSequenceInput.Text;
