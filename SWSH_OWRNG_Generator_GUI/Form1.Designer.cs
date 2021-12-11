@@ -1,4 +1,4 @@
-﻿
+
 namespace SWSH_OWRNG_Generator_GUI
 {
     partial class Form
@@ -410,7 +410,6 @@ namespace SWSH_OWRNG_Generator_GUI
             "Slump"});
             this.SelectedMark.Location = new System.Drawing.Point(353, 162);
             this.SelectedMark.Name = "SelectedMark";
-            this.SelectedMark.SelectedIndex = 0;
             this.SelectedMark.Size = new System.Drawing.Size(147, 21);
             this.SelectedMark.TabIndex = 29;
             // 
@@ -593,7 +592,6 @@ namespace SWSH_OWRNG_Generator_GUI
             "Star/Square"});
             this.SelectedShiny.Location = new System.Drawing.Point(353, 189);
             this.SelectedShiny.Name = "SelectedShiny";
-            this.SelectedShiny.SelectedIndex = 0;
             this.SelectedShiny.Size = new System.Drawing.Size(147, 21);
             this.SelectedShiny.TabIndex = 30;
             // 
@@ -1156,7 +1154,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerSequenceInput.ReadOnly = true;
             this.RetailAdvancesTrackerSequenceInput.Size = new System.Drawing.Size(207, 20);
             this.RetailAdvancesTrackerSequenceInput.TabIndex = 82;
-            this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BinInput_KeyPress);
             this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RetailAdvancesTrackerSequenceInput_KeyPress);
             // 
             // RetailAdvancesTrackerSequenceLabel

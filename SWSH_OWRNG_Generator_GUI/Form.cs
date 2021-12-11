@@ -589,5 +589,17 @@ namespace SWSH_OWRNG_Generator_GUI
                 }
             }
         }
+
+        private void SeedFinderMenu_Click(object sender, EventArgs e)
+        {
+            using (Form1 form1 = new Form1())
+            {
+                if (form1.ShowDialog() == DialogResult.OK)
+                {
+                    this.InputState0.Text = form1.State0;
+                    this.InputState1.Text = form1.State1;
+                }
+            }
+        }
     }
 }
