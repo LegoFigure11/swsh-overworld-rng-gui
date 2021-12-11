@@ -40,15 +40,15 @@ namespace SWSH_OWRNG_Generator_GUI
             this.PhysicalButton = new System.Windows.Forms.Button();
             this.SpecialButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.LabelCompletedInputs = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // OKButton
             // 
             this.OKButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.OKButton.Location = new System.Drawing.Point(22, 249);
-            this.OKButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.OKButton.Location = new System.Drawing.Point(15, 162);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(234, 35);
+            this.OKButton.Size = new System.Drawing.Size(156, 23);
             this.OKButton.TabIndex = 4;
             this.OKButton.Text = "Update Main Form";
             this.OKButton.UseVisualStyleBackColor = true;
@@ -56,52 +56,47 @@ namespace SWSH_OWRNG_Generator_GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 80);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 20);
+            this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 91;
             this.label3.Text = "Current State[1]:";
             // 
             // ResultState1
             // 
-            this.ResultState1.Location = new System.Drawing.Point(22, 105);
-            this.ResultState1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ResultState1.Location = new System.Drawing.Point(15, 68);
             this.ResultState1.MaxLength = 16;
             this.ResultState1.Name = "ResultState1";
             this.ResultState1.ReadOnly = true;
-            this.ResultState1.Size = new System.Drawing.Size(308, 26);
+            this.ResultState1.Size = new System.Drawing.Size(207, 20);
             this.ResultState1.TabIndex = 90;
             this.ResultState1.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 20);
+            this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 89;
             this.label2.Text = "Current State[0]:";
             // 
             // ResultState0
             // 
-            this.ResultState0.Location = new System.Drawing.Point(22, 38);
-            this.ResultState0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ResultState0.Location = new System.Drawing.Point(15, 25);
             this.ResultState0.MaxLength = 16;
             this.ResultState0.Name = "ResultState0";
             this.ResultState0.ReadOnly = true;
-            this.ResultState0.Size = new System.Drawing.Size(308, 26);
+            this.ResultState0.Size = new System.Drawing.Size(207, 20);
             this.ResultState0.TabIndex = 88;
             this.ResultState0.TabStop = false;
             // 
             // MotionsSequenceInput
             // 
-            this.MotionsSequenceInput.Location = new System.Drawing.Point(22, 165);
-            this.MotionsSequenceInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MotionsSequenceInput.Location = new System.Drawing.Point(15, 107);
             this.MotionsSequenceInput.MaxLength = 128;
             this.MotionsSequenceInput.Name = "MotionsSequenceInput";
-            this.MotionsSequenceInput.Size = new System.Drawing.Size(1162, 26);
+            this.MotionsSequenceInput.Size = new System.Drawing.Size(776, 20);
             this.MotionsSequenceInput.TabIndex = 1;
             this.MotionsSequenceInput.TextChanged += new System.EventHandler(this.MotionsSequenceInput_TextChanged);
             this.MotionsSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BinInput_KeyPress);
@@ -109,19 +104,17 @@ namespace SWSH_OWRNG_Generator_GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 140);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 93;
             this.label1.Text = "Motions:";
             // 
             // PhysicalButton
             // 
-            this.PhysicalButton.Location = new System.Drawing.Point(22, 205);
-            this.PhysicalButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PhysicalButton.Location = new System.Drawing.Point(15, 133);
             this.PhysicalButton.Name = "PhysicalButton";
-            this.PhysicalButton.Size = new System.Drawing.Size(112, 35);
+            this.PhysicalButton.Size = new System.Drawing.Size(75, 23);
             this.PhysicalButton.TabIndex = 2;
             this.PhysicalButton.Text = "(0) Physical";
             this.PhysicalButton.UseVisualStyleBackColor = true;
@@ -129,10 +122,9 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // SpecialButton
             // 
-            this.SpecialButton.Location = new System.Drawing.Point(144, 205);
-            this.SpecialButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SpecialButton.Location = new System.Drawing.Point(96, 133);
             this.SpecialButton.Name = "SpecialButton";
-            this.SpecialButton.Size = new System.Drawing.Size(112, 35);
+            this.SpecialButton.Size = new System.Drawing.Size(75, 23);
             this.SpecialButton.TabIndex = 3;
             this.SpecialButton.Text = "(1) Special";
             this.SpecialButton.UseVisualStyleBackColor = true;
@@ -141,19 +133,30 @@ namespace SWSH_OWRNG_Generator_GUI
             // CancelButton
             // 
             this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelButton.Location = new System.Drawing.Point(22, 294);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CancelButton.Location = new System.Drawing.Point(15, 191);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(234, 35);
+            this.CancelButton.Size = new System.Drawing.Size(156, 23);
             this.CancelButton.TabIndex = 5;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
             // 
+            // LabelCompletedInputs
+            // 
+            this.LabelCompletedInputs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelCompletedInputs.AutoSize = true;
+            this.LabelCompletedInputs.Location = new System.Drawing.Point(655, 133);
+            this.LabelCompletedInputs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelCompletedInputs.Name = "LabelCompletedInputs";
+            this.LabelCompletedInputs.Size = new System.Drawing.Size(138, 13);
+            this.LabelCompletedInputs.TabIndex = 94;
+            this.LabelCompletedInputs.Text = "Completed Motions: 0 / 128";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1206, 346);
+            this.ClientSize = new System.Drawing.Size(804, 225);
+            this.Controls.Add(this.LabelCompletedInputs);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SpecialButton);
             this.Controls.Add(this.PhysicalButton);
@@ -165,7 +168,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.ResultState0);
             this.Controls.Add(this.OKButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Seed Finder";
             this.ResumeLayout(false);
@@ -185,5 +187,6 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.Button PhysicalButton;
         private System.Windows.Forms.Button SpecialButton;
         private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Label LabelCompletedInputs;
     }
 }

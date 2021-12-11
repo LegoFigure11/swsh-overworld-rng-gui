@@ -40,7 +40,9 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void MotionsSequenceInput_TextChanged(object sender, EventArgs e)
         {
-            if (MotionsSequenceInput.Text.Length == 128)
+            int l = MotionsSequenceInput.Text.Length;
+            LabelCompletedInputs.Text = $"Completed Motions: {l} / 128";
+            if (l == 128)
             {
                 // algo from https://github.com/niart120/Project_Xe
                 // precomputed
