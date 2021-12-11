@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
-using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,7 +13,7 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             string build = String.Empty;
 #if DEBUG
-            var date = File.GetLastWriteTime(System.Reflection.Assembly.GetEntryAssembly().Location);
+            var date = System.IO.File.GetLastWriteTime(System.Reflection.Assembly.GetEntryAssembly().Location);
             build = $" (dev-{date:yyyyMMdd})";
 #endif
             var v = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
@@ -28,6 +27,9 @@ namespace SWSH_OWRNG_Generator_GUI
             InputSID.Text = Properties.Settings.Default.SID;
             CheckShinyCharm.Checked = Properties.Settings.Default.ShinyCharm;
             CheckMarkCharm.Checked = Properties.Settings.Default.MarkCharm;
+
+            SelectedMark.SelectedIndex = 0;
+            SelectedShiny.SelectedIndex = 0;
 
             // Set Tab Indexes Manually
             // This will make life easier when adding more fields later on
