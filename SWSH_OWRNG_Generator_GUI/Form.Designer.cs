@@ -92,6 +92,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.speMinFilter = new System.Windows.Forms.Button();
             this.defMax = new System.Windows.Forms.TextBox();
@@ -135,7 +136,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckIsLegend = new System.Windows.Forms.CheckBox();
             this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.SeedFinderMenu = new System.Windows.Forms.MenuItem();
-            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -298,6 +298,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputTID.Size = new System.Drawing.Size(102, 20);
             this.InputTID.TabIndex = 2;
             this.InputTID.Text = "1390";
+            this.InputTID.Text = "01390";
             this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             this.InputTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
@@ -308,7 +309,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSID.Name = "InputSID";
             this.InputSID.Size = new System.Drawing.Size(102, 20);
             this.InputSID.TabIndex = 3;
-            this.InputSID.Text = "1337";
+            this.InputSID.Text = "01337";
             this.InputSID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             this.InputSID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
@@ -337,7 +338,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputMaxAdv.Name = "InputMaxAdv";
             this.InputMaxAdv.Size = new System.Drawing.Size(102, 20);
             this.InputMaxAdv.TabIndex = 4;
-            this.InputMaxAdv.Text = "5000000";
+            this.InputMaxAdv.Text = "500000";
             // 
             // LabelMaxAdv
             // 
@@ -815,6 +816,10 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State1.ReadOnly = true;
             this.State1.Width = 150;
             // 
+            // generatorBindingSource
+            // 
+            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1113,7 +1118,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerInitialInput.Name = "RetailAdvancesTrackerInitialInput";
             this.RetailAdvancesTrackerInitialInput.Size = new System.Drawing.Size(145, 20);
             this.RetailAdvancesTrackerInitialInput.TabIndex = 78;
-            this.RetailAdvancesTrackerInitialInput.Text = "128";
+            this.RetailAdvancesTrackerInitialInput.Text = "0";
             this.RetailAdvancesTrackerInitialInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // RetailAdvancesTrackerMaxInput
@@ -1230,10 +1235,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SeedFinderMenu.Index = 0;
             this.SeedFinderMenu.Text = "Seed Finder";
             this.SeedFinderMenu.Click += new System.EventHandler(this.SeedFinderMenu_Click);
-            // 
-            // generatorBindingSource
-            // 
-            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
             // 
             // Form
             // 
