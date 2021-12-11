@@ -297,7 +297,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputTID.Name = "InputTID";
             this.InputTID.Size = new System.Drawing.Size(102, 20);
             this.InputTID.TabIndex = 2;
-            this.InputTID.Text = "1390";
             this.InputTID.Text = "01390";
             this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             this.InputTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
