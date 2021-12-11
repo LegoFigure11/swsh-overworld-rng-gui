@@ -545,7 +545,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 RetailAdvancesTrackerProgressBar.PerformStep();
             });
 
-            RetailAdvancesGeneratorString = await Task.Run(() => Generator.GenerateRetailSequence(s1, s0, Initial, Max, progress));
+            RetailAdvancesGeneratorString = await Task.Run(() => Generator.GenerateRetailSequence(s0, s1, Initial, Max, progress));
 
             RetailAdvancesTrackerProgressBar.Value = RetailAdvancesTrackerProgressBar.Maximum;
             RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";
@@ -575,7 +575,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     {
                         uint num = (uint)res[0] + (uint)Text.Length + RetailInitial;
                         RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: 1 (Advances: {num} | Inputs {l})";
-                        Xoroshiro go = new Xoroshiro(RetailS1, RetailS0);
+                        Xoroshiro go = new Xoroshiro(RetailS0, RetailS1);
                         for (int i = 0; i < num; i++)
                             go.next();
 
