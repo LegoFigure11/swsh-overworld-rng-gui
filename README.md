@@ -1,5 +1,5 @@
 # swsh-overworld-rng-gui
-[![.NET Core Desktop](https://github.com/LegoFigure11/swsh-overworld-rng-gui/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/LegoFigure11/swsh-overworld-rng-gui/actions/workflows/dotnet-desktop.yml)
+[![.NET Core Desktop](https://github.com/LegoFigure11/swsh-overworld-rng-gui/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/LegoFigure11/swsh-overworld-rng-gui/actions/workflows/dotnet-desktop.yml) [![GitHub License](https://img.shields.io/github/license/legofigure11/swsh-overworld-rng-gui?color=ff69b4)](https://github.com/LegoFigure11/swsh-overworld-rng-gui/blob/main/LICENSE)
 
 _by [@LegoFigure11](https://github.com/LegoFigure11/) and [@shinyfinder](https://github.com/shinyfinder/)_
 
