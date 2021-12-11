@@ -545,7 +545,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 RetailAdvancesTrackerProgressBar.PerformStep();
             });
 
-            RetailAdvancesGeneratorString = await Task.Run(() => Generator.GenerateRetailSequence(s1, s0, Initial, Max, progress));
+            RetailAdvancesGeneratorString = await Task.Run(() => Generator.GenerateRetailSequence(s0, s1, Initial, Max, progress));
 
             RetailAdvancesTrackerProgressBar.Value = RetailAdvancesTrackerProgressBar.Maximum;
             RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";
