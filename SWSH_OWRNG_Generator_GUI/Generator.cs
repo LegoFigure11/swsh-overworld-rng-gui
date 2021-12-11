@@ -37,7 +37,7 @@ namespace SWSH_OWRNG_Generator_GUI
             if (ProgressUpdateInterval == 0)
                 ProgressUpdateInterval++;
 
-            Xoroshiro go = new Xoroshiro(state1, state0);
+            Xoroshiro go = new Xoroshiro(state0, state1);
 
             while (advance < advances)
             {
@@ -148,8 +148,8 @@ namespace SWSH_OWRNG_Generator_GUI
                         SpD = IVs[4],
                         Spe = IVs[5],
                         Mark = Mark,
-                        State0 = go.state1.ToString("X16"), // Yes, these are meant to be swapped
-                        State1 = go.state0.ToString("X16"), // Endianness is weird
+                        State0 = go.state0.ToString("X16"),
+                        State1 = go.state1.ToString("X16"),
                     }
                 );
 
