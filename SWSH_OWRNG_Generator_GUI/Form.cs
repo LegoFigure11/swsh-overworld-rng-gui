@@ -578,8 +578,8 @@ namespace SWSH_OWRNG_Generator_GUI
                         for (int i = 0; i < num; i++)
                             go.next();
 
-                        RetailAdvancesTrackerResultState0.Text = go.state1.ToString("X16");
-                        RetailAdvancesTrackerResultState1.Text = go.state0.ToString("X16");
+                        RetailAdvancesTrackerResultState0.Text = go.state0.ToString("X16");
+                        RetailAdvancesTrackerResultState1.Text = go.state1.ToString("X16");
                     }
                 }
                 else
