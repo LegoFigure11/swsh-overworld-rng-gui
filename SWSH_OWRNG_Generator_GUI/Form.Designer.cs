@@ -92,7 +92,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.speMinFilter = new System.Windows.Forms.Button();
             this.defMax = new System.Windows.Forms.TextBox();
@@ -136,6 +135,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckIsLegend = new System.Windows.Forms.CheckBox();
             this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.SeedFinderMenu = new System.Windows.Forms.MenuItem();
+            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -610,8 +610,8 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.Results.AllowUserToAddRows = false;
             this.Results.AllowUserToDeleteRows = false;
-            this.Results.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.Results.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Results.AutoGenerateColumns = false;
             this.Results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -639,7 +639,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(746, 206);
+            this.Results.Size = new System.Drawing.Size(746, 185);
             this.Results.TabIndex = 73;
             // 
             // Frame
@@ -814,10 +814,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State1.Name = "State1";
             this.State1.ReadOnly = true;
             this.State1.Width = 150;
-            // 
-            // generatorBindingSource
-            // 
-            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
             // 
             // label12
             // 
@@ -1156,7 +1152,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerSequenceInput.ReadOnly = true;
             this.RetailAdvancesTrackerSequenceInput.Size = new System.Drawing.Size(207, 20);
             this.RetailAdvancesTrackerSequenceInput.TabIndex = 82;
-            this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BinInput_KeyPress);
             this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RetailAdvancesTrackerSequenceInput_KeyPress);
             // 
             // RetailAdvancesTrackerSequenceLabel
@@ -1236,10 +1231,14 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SeedFinderMenu.Text = "Seed Finder";
             this.SeedFinderMenu.Click += new System.EventHandler(this.SeedFinderMenu_Click);
             // 
+            // generatorBindingSource
+            // 
+            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
+            // 
             // Form
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(769, 561);
+            this.ClientSize = new System.Drawing.Size(769, 540);
             this.Controls.Add(this.CheckIsLegend);
             this.Controls.Add(this.RetailAdvancesTrackerNumResultsLabel);
             this.Controls.Add(this.label3);
