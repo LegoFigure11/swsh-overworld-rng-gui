@@ -555,10 +555,8 @@ namespace SWSH_OWRNG_Generator_GUI
             RetailAdvancesTrackerSequenceInput.ReadOnly = false;
         }
 
-        private void RetailAdvancesTrackerSequenceInput_KeyPress(object sender, KeyPressEventArgs e)
+        private void RetailAdvancesTrackerSequenceInput_TextChanged(object sender, EventArgs e)
         {
-            if (e.KeyChar == '0' || e.KeyChar == '1')
-            {
                 List<int> res = new List<int>();
                 string Text = RetailAdvancesTrackerSequenceInput.Text;
                 int m = RetailAdvancesGeneratorString.Length;
@@ -589,7 +587,6 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: Needs at least 5 inputs (Inputs: {l})";
                 }
-            }
         }
 
         private void SeedFinderMenu_Click(object sender, EventArgs e)
