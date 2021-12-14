@@ -1,7 +1,7 @@
 
 namespace SWSH_OWRNG_Generator_GUI
 {
-    partial class Form1
+    partial class SeedFinder
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace SWSH_OWRNG_Generator_GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeedFinder));
             this.OKButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.ResultState1 = new System.Windows.Forms.TextBox();

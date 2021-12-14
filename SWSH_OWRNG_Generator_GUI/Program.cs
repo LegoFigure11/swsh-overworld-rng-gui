@@ -13,7 +13,7 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form());
+            Application.Run(new MainWindow());
         }
     }
 }

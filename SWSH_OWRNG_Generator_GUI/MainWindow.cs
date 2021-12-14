@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace SWSH_OWRNG_Generator_GUI
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class MainWindow : System.Windows.Forms.Form
     {
-        public Form()
+        public MainWindow()
         {
             string build = String.Empty;
 #if DEBUG
@@ -598,7 +598,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void SeedFinderMenu_Click(object sender, EventArgs e)
         {
-            using (Form1 form1 = new Form1())
+            using (SeedFinder form1 = new SeedFinder())
             {
                 if (form1.ShowDialog() == DialogResult.OK)
                 {

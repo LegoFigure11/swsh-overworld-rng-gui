@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace SWSH_OWRNG_Generator_GUI
 {
-    public partial class Form1 : System.Windows.Forms.Form
+    public partial class SeedFinder : System.Windows.Forms.Form
     {
         public string State0
         {
@@ -21,7 +21,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 return ResultState1.Text;
             }
         }
-        public Form1()
+        public SeedFinder()
         {
             InitializeComponent();
         }
