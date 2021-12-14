@@ -83,6 +83,7 @@ namespace SWSH_OWRNG_Generator_GUI
             RetailAdvancesTrackerMaxInput.TabIndex = 46;
             RetailAdvancesTrackerGenerateButton.TabIndex = 47;
             RetailAdvancesTrackerSequenceInput.TabIndex = 48;
+            ButtonUpdateStates.TabIndex = 49;
         }
 
         private void HpMinFilter_Click(object sender, EventArgs e)
@@ -587,6 +588,12 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: Needs at least 5 inputs (Inputs: {l})";
                 }
+        }
+
+        private void ButtonUpdateStates_Click(object sender, EventArgs e)
+        {
+            InputState0.Text = RetailAdvancesTrackerResultState0.Text;
+            InputState1.Text = RetailAdvancesTrackerResultState1.Text;
         }
 
         private void SeedFinderMenu_Click(object sender, EventArgs e)

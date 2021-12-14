@@ -136,6 +136,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckIsLegend = new System.Windows.Forms.CheckBox();
             this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.SeedFinderMenu = new System.Windows.Forms.MenuItem();
+            this.ButtonUpdateStates = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1154,8 +1155,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerSequenceInput.ReadOnly = true;
             this.RetailAdvancesTrackerSequenceInput.Size = new System.Drawing.Size(207, 20);
             this.RetailAdvancesTrackerSequenceInput.TabIndex = 82;
-            this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BinInput_KeyPress);
             this.RetailAdvancesTrackerSequenceInput.TextChanged += new System.EventHandler(this.RetailAdvancesTrackerSequenceInput_TextChanged);
+            this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BinInput_KeyPress);
             // 
             // RetailAdvancesTrackerSequenceLabel
             // 
@@ -1234,10 +1235,21 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SeedFinderMenu.Text = "Seed Finder";
             this.SeedFinderMenu.Click += new System.EventHandler(this.SeedFinderMenu_Click);
             // 
+            // ButtonUpdateStates
+            // 
+            this.ButtonUpdateStates.Location = new System.Drawing.Point(550, 306);
+            this.ButtonUpdateStates.Name = "ButtonUpdateStates";
+            this.ButtonUpdateStates.Size = new System.Drawing.Size(209, 20);
+            this.ButtonUpdateStates.TabIndex = 89;
+            this.ButtonUpdateStates.Text = "Update States";
+            this.ButtonUpdateStates.UseVisualStyleBackColor = true;
+            this.ButtonUpdateStates.Click += new System.EventHandler(this.ButtonUpdateStates_Click);
+            // 
             // Form
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(769, 540);
+            this.Controls.Add(this.ButtonUpdateStates);
             this.Controls.Add(this.CheckIsLegend);
             this.Controls.Add(this.RetailAdvancesTrackerNumResultsLabel);
             this.Controls.Add(this.label3);
@@ -1442,5 +1454,6 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.CheckBox CheckIsLegend;
         private System.Windows.Forms.MainMenu MainMenu;
         private System.Windows.Forms.MenuItem SeedFinderMenu;
+        private System.Windows.Forms.Button ButtonUpdateStates;
     }
 }
