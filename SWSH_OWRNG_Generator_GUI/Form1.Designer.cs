@@ -186,7 +186,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button PhysicalButton;
         private System.Windows.Forms.Button SpecialButton;
-        private System.Windows.Forms.Button CancelButton;
+        private new System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label LabelCompletedInputs;
     }
 }
