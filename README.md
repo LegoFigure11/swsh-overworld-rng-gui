@@ -1,7 +1,5 @@
 # swsh-overworld-rng-gui
-[![.NET Core Desktop](https://github.com/LegoFigure11/swsh-overworld-rng-gui/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/LegoFigure11/swsh-overworld-rng-gui/actions/workflows/dotnet-desktop.yml) [![GitHub License](https://img.shields.io/github/license/legofigure11/swsh-overworld-rng-gui?color=ff69b4)](https://github.com/LegoFigure11/swsh-overworld-rng-gui/blob/main/LICENSE)
-
-[![](https://img.shields.io/badge/Latest%20Commit-Direct%20Download-brightgreen)](https://nightly.link/LegoFigure11/swsh-overworld-rng-gui/workflows/dotnet-desktop/main/SWSH-Overworld-RNG-GUI.zip)
+[![.NET Core Desktop](https://github.com/LegoFigure11/swsh-overworld-rng-gui/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/LegoFigure11/swsh-overworld-rng-gui/actions/workflows/dotnet-desktop.yml) [![GitHub License](https://img.shields.io/github/license/legofigure11/swsh-overworld-rng-gui?color=ff69b4)](https://github.com/LegoFigure11/swsh-overworld-rng-gui/blob/main/LICENSE) [![Nightly Link](https://img.shields.io/badge/Latest%20Commit-Direct%20Download-blue)](https://nightly.link/LegoFigure11/swsh-overworld-rng-gui/workflows/dotnet-desktop/main/SWSH-Overworld-RNG-GUI.zip)
 
 _by [@LegoFigure11](https://github.com/LegoFigure11/) and [@shinyfinder](https://github.com/shinyfinder/)_
 
