@@ -569,36 +569,36 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void RetailAdvancesTrackerSequenceInput_TextChanged(object sender, EventArgs e)
         {
-                List<int> res = new List<int>();
-                string Text = RetailAdvancesTrackerSequenceInput.Text;
-                int m = RetailAdvancesGeneratorString.Length;
-                int l = Text.Length + 1;
-                if (l >= 5)
+            List<int> res = new List<int>();
+            string Text = RetailAdvancesTrackerSequenceInput.Text;
+            int m = RetailAdvancesGeneratorString.Length;
+            int l = Text.Length + 1;
+            if (l >= 5)
+            {
+                for (int i = 0; i < m; i++)
                 {
-                    for (int i = 0; i < m; i++)
-                    {
-                        int index = RetailAdvancesGeneratorString.IndexOf(Text, i);
-                        if (index == -1) break;
-                        res.Add(index);
-                        i = index;
-                    }
-                    RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: {res.Count} (Inputs: {l})";
-                    if (res.Count == 1)
-                    {
-                        uint num = (uint)res[0] + (uint)Text.Length + RetailInitial;
-                        RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: 1 (Advances: {num} | Inputs {l})";
-                        Xoroshiro go = new Xoroshiro(RetailS0, RetailS1);
-                        for (int i = 0; i < num; i++)
-                            go.next();
+                    int index = RetailAdvancesGeneratorString.IndexOf(Text, i);
+                    if (index == -1) break;
+                    res.Add(index);
+                    i = index;
+                }
+                RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: {res.Count} (Inputs: {l})";
+                if (res.Count == 1)
+                {
+                    uint num = (uint)res[0] + (uint)Text.Length + RetailInitial;
+                    RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: 1 (Advances: {num} | Inputs {l})";
+                    Xoroshiro go = new Xoroshiro(RetailS0, RetailS1);
+                    for (int i = 0; i < num; i++)
+                        go.next();
 
-                        RetailAdvancesTrackerResultState0.Text = go.state0.ToString("X16");
-                        RetailAdvancesTrackerResultState1.Text = go.state1.ToString("X16");
-                    }
+                    RetailAdvancesTrackerResultState0.Text = go.state0.ToString("X16");
+                    RetailAdvancesTrackerResultState1.Text = go.state1.ToString("X16");
                 }
-                else
-                {
-                    RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: Needs at least 5 inputs (Inputs: {l})";
-                }
+            }
+            else
+            {
+                RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: Needs at least 5 inputs (Inputs: {l})";
+            }
         }
 
         private void ButtonUpdateStates_Click(object sender, EventArgs e)
