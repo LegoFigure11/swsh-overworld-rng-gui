@@ -14,7 +14,7 @@ namespace SWSH_OWRNG_Generator_GUI
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
             bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, uint LevelMin,
             uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
-            uint KOs, uint FlawlessIVs, IProgress<int> progress
+            uint KOs, uint FlawlessIVs, bool TIDSIDSearch, IProgress<int> progress
             )
         {
             List<Frame> Results = new List<Frame>();
@@ -62,7 +62,10 @@ namespace SWSH_OWRNG_Generator_GUI
                     SlotRand = (uint)rng.rand(100);
                     if (SlotMin > SlotRand || SlotMax < SlotRand)
                     {
-                        go.next();
+                        if (TIDSIDSearch)
+                            go.previous();
+                        else
+                            go.next();
                         advance += 1;
                         continue;
                     }
@@ -84,9 +87,10 @@ namespace SWSH_OWRNG_Generator_GUI
                 }
 
                 Shiny = false;
+                uint MockPID = 0;
                 for (int roll = 0; roll < ShinyRolls + (Brilliant ? BrilliantRolls : 0); roll++)
                 {
-                    uint MockPID = rng.nextuint();
+                    MockPID = rng.nextuint();
                     Shiny = (((MockPID >> 16) ^ (MockPID & 0xFFFF)) ^ TSV) < 16;
                     if (Shiny)
                         break;
@@ -111,6 +115,11 @@ namespace SWSH_OWRNG_Generator_GUI
                 FixedSeed = rng.nextuint();
                 (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, TSV, Shiny, (int)(FlawlessIVs + BrilliantIVs), MinIVs, MaxIVs);
 
+                if (TIDSIDSearch)
+                {
+                    ShinyXOR = 0;
+                }
+
                 if (!PassIVs ||
                     (DesiredShiny == "Square" && ShinyXOR != 0) ||
                     (DesiredShiny == "Star" && (ShinyXOR > 15 || ShinyXOR == 0)) ||
@@ -118,7 +127,10 @@ namespace SWSH_OWRNG_Generator_GUI
                     (DesiredShiny == "No" && ShinyXOR < 16)
                     )
                 {
-                    go.next();
+                    if (TIDSIDSearch)
+                        go.previous();
+                    else
+                        go.next();
                     advance += 1;
                     continue;
                 }
@@ -127,7 +139,10 @@ namespace SWSH_OWRNG_Generator_GUI
 
                 if (!PassesMarkFilter(Mark, DesiredMark))
                 {
-                    go.next();
+                    if (TIDSIDSearch)
+                        go.previous();
+                    else
+                        go.next();
                     advance += 1;
                     continue;
                 }
@@ -136,8 +151,10 @@ namespace SWSH_OWRNG_Generator_GUI
                 Results.Add(
                     new Frame()
                     {
-                        Advances = advance.ToString("N0"),
-                        Animation = new Xoroshiro(go.state1, go.state0).next() % 2,
+                        Advances = TIDSIDSearch ? (-(long)advance).ToString("N0") : advance.ToString("N0"),
+                        TID = (ushort)(MockPID >> 16),
+                        SID = (ushort)MockPID,
+                        Animation = new Xoroshiro(go.state1, go.state0).next() & 1,
                         Level = Level,
                         Slot = SlotRand,
                         PID = PID.ToString("X8"),
@@ -158,7 +175,10 @@ namespace SWSH_OWRNG_Generator_GUI
                     }
                 );
 
-                go.next();
+                if (TIDSIDSearch)
+                    go.previous();
+                else
+                    go.next();
                 advance += 1;
             }
 

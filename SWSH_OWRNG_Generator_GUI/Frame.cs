@@ -4,6 +4,8 @@
     {
         public string Advances { get; set; }
 
+        public ushort TID { get; set; }
+        public ushort SID { get; set; }
         public ulong Animation { get; set; }
         public uint Level { get; set; }
         public uint Slot { get; set; }

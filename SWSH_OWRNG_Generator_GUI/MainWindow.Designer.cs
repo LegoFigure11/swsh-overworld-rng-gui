@@ -74,6 +74,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelShiny = new System.Windows.Forms.Label();
             this.Results = new System.Windows.Forms.DataGridView();
             this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Brilliant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -137,6 +139,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.SeedFinderMenu = new System.Windows.Forms.MenuItem();
             this.ButtonUpdateStates = new System.Windows.Forms.Button();
+            this.CheckTIDSIDFinder = new System.Windows.Forms.CheckBox();
             this.LabelKOCount = new System.Windows.Forms.Label();
             this.InputKOCount = new System.Windows.Forms.TextBox();
             this.LabelEMs = new System.Windows.Forms.Label();
@@ -612,6 +615,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Frame,
+            this.TID,
+            this.SID,
             this.Animation,
             this.Brilliant,
             this.Level,
@@ -635,7 +640,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(746, 59);
+            this.Results.Size = new System.Drawing.Size(746, 185);
             this.Results.TabIndex = 73;
             // 
             // Frame
@@ -646,6 +651,26 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Frame.Name = "Frame";
             this.Frame.ReadOnly = true;
             this.Frame.Width = 150;
+            // 
+            // TID
+            // 
+            this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TID.DataPropertyName = "TID";
+            this.TID.HeaderText = "TID";
+            this.TID.MinimumWidth = 8;
+            this.TID.Name = "TID";
+            this.TID.ReadOnly = true;
+            this.TID.Width = 50;
+            // 
+            // SID
+            // 
+            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SID.DataPropertyName = "SID";
+            this.SID.HeaderText = "SID";
+            this.SID.MinimumWidth = 8;
+            this.SID.Name = "SID";
+            this.SID.ReadOnly = true;
+            this.SID.Width = 50;
             // 
             // Animation
             // 
@@ -818,10 +843,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State1.Name = "State1";
             this.State1.ReadOnly = true;
             this.State1.Width = 150;
-            // 
-            // generatorBindingSource
-            // 
-            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
             // 
             // label12
             // 
@@ -1250,6 +1271,17 @@ namespace SWSH_OWRNG_Generator_GUI
             this.ButtonUpdateStates.UseVisualStyleBackColor = true;
             this.ButtonUpdateStates.Click += new System.EventHandler(this.ButtonUpdateStates_Click);
             // 
+            // CheckTIDSIDFinder
+            // 
+            this.CheckTIDSIDFinder.AutoSize = true;
+            this.CheckTIDSIDFinder.Location = new System.Drawing.Point(262, 219);
+            this.CheckTIDSIDFinder.Name = "CheckTIDSIDFinder";
+            this.CheckTIDSIDFinder.Size = new System.Drawing.Size(122, 17);
+            this.CheckTIDSIDFinder.TabIndex = 90;
+            this.CheckTIDSIDFinder.Text = "Search For TID/SID";
+            this.CheckTIDSIDFinder.UseVisualStyleBackColor = true;
+            this.CheckTIDSIDFinder.CheckedChanged += new System.EventHandler(this.CheckTIDSIDFinder_CheckedChanged);
+            // 
             // LabelKOCount
             // 
             this.LabelKOCount.AutoSize = true;
@@ -1310,7 +1342,8 @@ namespace SWSH_OWRNG_Generator_GUI
             // MainWindow
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(769, 414);
+            this.ClientSize = new System.Drawing.Size(769, 540);
+            this.Controls.Add(this.CheckTIDSIDFinder);
             this.Controls.Add(this.LabelFlawlessIVs);
             this.Controls.Add(this.InputFlawlessIVs);
             this.Controls.Add(this.LabelEMs);
@@ -1505,6 +1538,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.Button ButtonUpdateStates;
         private System.Windows.Forms.Label LabelKOCount;
         private System.Windows.Forms.TextBox InputKOCount;
+        private System.Windows.Forms.CheckBox CheckTIDSIDFinder;
         private System.Windows.Forms.Label LabelEMs;
         private System.Windows.Forms.TextBox InputEMs;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frame;
@@ -1524,6 +1558,8 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn SpD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Spe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mark;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SID;
         private System.Windows.Forms.DataGridViewTextBoxColumn State0;
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
         private System.Windows.Forms.Label LabelFlawlessIVs;
