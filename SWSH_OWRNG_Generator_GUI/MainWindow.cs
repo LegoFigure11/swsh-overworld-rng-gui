@@ -35,55 +35,57 @@ namespace SWSH_OWRNG_Generator_GUI
             // This will make life easier when adding more fields later on
             // (aka Lego can't find the button that made this nice to do)
             InputState0.TabIndex = 0;
-            InputState1.TabIndex = 1;
-            InputTID.TabIndex = 2;
-            InputSID.TabIndex = 3;
-            InputMaxAdv.TabIndex = 4;
-            hpMin.TabIndex = 5;
-            hpMax.TabIndex = 6;
-            atkMin.TabIndex = 7;
-            atkMax.TabIndex = 8;
-            defMin.TabIndex = 9;
-            defMax.TabIndex = 10;
-            spaMin.TabIndex = 11;
-            spaMax.TabIndex = 12;
-            spdMin.TabIndex = 13;
-            spdMax.TabIndex = 14;
-            speMin.TabIndex = 15;
-            speMax.TabIndex = 16;
-            hpMinFilter.TabIndex = 17;
-            hpMaxFilter.TabIndex = 18;
-            atkMinFilter.TabIndex = 19;
-            atkMaxFilter.TabIndex = 20;
-            defMinFilter.TabIndex = 21;
-            defMaxFilter.TabIndex = 22;
-            spaMinFilter.TabIndex = 23;
-            spaMaxFilter.TabIndex = 24;
-            spdMinFilter.TabIndex = 25;
-            spdMaxFilter.TabIndex = 26;
-            speMinFilter.TabIndex = 27;
-            speMaxFilter.TabIndex = 28;
-            SelectedMark.TabIndex = 29;
-            SelectedShiny.TabIndex = 30;
-            CheckShinyCharm.TabIndex = 31;
-            CheckStatic.TabIndex = 32;
-            CheckMarkCharm.TabIndex = 33;
-            CheckFishing.TabIndex = 34;
-            CheckWeather.TabIndex = 35;
-            CheckHeldItem.TabIndex = 36;
-            CheckExtraRoll.TabIndex = 37;
-            CheckIsLegend.TabIndex = 38;
-            InputLevelMin.TabIndex = 39;
-            InputLevelMax.TabIndex = 40;
-            InputSlotMin.TabIndex = 41;
-            InputSlotMax.TabIndex = 42;
-            ButtonSearch.TabIndex = 43;
-            Results.TabIndex = 44;
-            RetailAdvancesTrackerInitialInput.TabIndex = 45;
-            RetailAdvancesTrackerMaxInput.TabIndex = 46;
-            RetailAdvancesTrackerGenerateButton.TabIndex = 47;
-            RetailAdvancesTrackerSequenceInput.TabIndex = 48;
-            ButtonUpdateStates.TabIndex = 49;
+            InputState1.TabIndex = InputState0.TabIndex + 1;
+            InputTID.TabIndex = InputState1.TabIndex + 1;
+            InputSID.TabIndex = InputTID.TabIndex + 1;
+            InputMaxAdv.TabIndex = InputSID.TabIndex + 1;
+            hpMin.TabIndex = InputMaxAdv.TabIndex + 1;
+            hpMax.TabIndex = hpMin.TabIndex + 1;
+            atkMin.TabIndex = hpMax.TabIndex + 1;
+            atkMax.TabIndex = atkMin.TabIndex + 1;
+            defMin.TabIndex = atkMax.TabIndex + 1;
+            defMax.TabIndex = defMin.TabIndex + 1;
+            spaMin.TabIndex = defMax.TabIndex + 1;
+            spaMax.TabIndex = spaMin.TabIndex + 1;
+            spdMin.TabIndex = spaMax.TabIndex + 1;
+            spdMax.TabIndex = spdMin.TabIndex + 1;
+            speMin.TabIndex = spdMax.TabIndex + 1;
+            speMax.TabIndex = speMin.TabIndex + 1;
+            hpMinFilter.TabIndex = speMax.TabIndex + 1;
+            hpMaxFilter.TabIndex = hpMinFilter.TabIndex + 1;
+            atkMinFilter.TabIndex = hpMaxFilter.TabIndex + 1;
+            atkMaxFilter.TabIndex = atkMinFilter.TabIndex + 1;
+            defMinFilter.TabIndex = atkMaxFilter.TabIndex + 1;
+            defMaxFilter.TabIndex = defMinFilter.TabIndex + 1;
+            spaMinFilter.TabIndex = defMaxFilter.TabIndex + 1;
+            spaMaxFilter.TabIndex = spaMinFilter.TabIndex + 1;
+            spdMinFilter.TabIndex = spaMaxFilter.TabIndex + 1;
+            spdMaxFilter.TabIndex = spdMinFilter.TabIndex + 1;
+            speMinFilter.TabIndex = spdMaxFilter.TabIndex + 1;
+            speMaxFilter.TabIndex = speMinFilter.TabIndex + 1;
+            SelectedMark.TabIndex = speMaxFilter.TabIndex + 1;
+            SelectedShiny.TabIndex = SelectedMark.TabIndex + 1;
+            CheckShinyCharm.TabIndex = SelectedShiny.TabIndex + 1;
+            CheckStatic.TabIndex = CheckShinyCharm.TabIndex + 1;
+            CheckMarkCharm.TabIndex = CheckStatic.TabIndex + 1;
+            CheckFishing.TabIndex = CheckMarkCharm.TabIndex + 1;
+            CheckWeather.TabIndex = CheckFishing.TabIndex + 1;
+            CheckHeldItem.TabIndex = CheckWeather.TabIndex + 1;
+            CheckIsAbilityLocked.TabIndex = CheckHeldItem.TabIndex + 1;
+            InputFlawlessIVs.TabIndex = CheckIsAbilityLocked.TabIndex + 1;
+            InputEMs.TabIndex = InputFlawlessIVs.TabIndex + 1;
+            InputKOCount.TabIndex = InputEMs.TabIndex + 1;
+            InputLevelMin.TabIndex = InputKOCount.TabIndex + 1;
+            InputLevelMax.TabIndex = InputLevelMin.TabIndex + 1;
+            InputSlotMin.TabIndex = InputLevelMax.TabIndex + 1;
+            InputSlotMax.TabIndex = InputSlotMin.TabIndex + 1;
+            ButtonSearch.TabIndex = InputSlotMax.TabIndex + 1;
+            Results.TabIndex = ButtonSearch.TabIndex + 1;
+            RetailAdvancesTrackerInitialInput.TabIndex = Results.TabIndex + 1;
+            RetailAdvancesTrackerMaxInput.TabIndex = RetailAdvancesTrackerInitialInput.TabIndex + 1;
+            RetailAdvancesTrackerGenerateButton.TabIndex = RetailAdvancesTrackerMaxInput.TabIndex + 1;
+            RetailAdvancesTrackerSequenceInput.TabIndex = RetailAdvancesTrackerGenerateButton.TabIndex + 1;
+            ButtonUpdateStates.TabIndex = RetailAdvancesTrackerSequenceInput.TabIndex + 1;
         }
 
         private void HpMinFilter_Click(object sender, EventArgs e)
@@ -238,6 +240,9 @@ namespace SWSH_OWRNG_Generator_GUI
                 InputLevelMin.ReadOnly = true;
                 InputSlotMax.ReadOnly = true;
                 InputSlotMin.ReadOnly = true;
+                InputEMs.ReadOnly = true;
+                InputKOCount.ReadOnly = true;
+                CheckHeldItem.Enabled = false;
             }
             else
             {
@@ -245,6 +250,9 @@ namespace SWSH_OWRNG_Generator_GUI
                 InputLevelMin.ReadOnly = false;
                 InputSlotMax.ReadOnly = false;
                 InputSlotMin.ReadOnly = false;
+                InputEMs.ReadOnly = false;
+                InputKOCount.ReadOnly = false;
+                CheckHeldItem.Enabled = true;
             }
 
         }
@@ -435,14 +443,16 @@ namespace SWSH_OWRNG_Generator_GUI
             uint SlotMax = UInt16.Parse(InputSlotMax.Text);
             uint LevelMin = UInt16.Parse(InputLevelMin.Text);
             uint LevelMax = UInt16.Parse(InputLevelMax.Text);
+            uint KOCount = UInt16.Parse(InputKOCount.Text);
+            uint EMCount = UInt16.Parse(InputEMs.Text);
+            uint FlawlessIVs = UInt16.Parse(InputFlawlessIVs.Text);
             bool ShinyCharm = CheckShinyCharm.Checked;
             bool MarkCharm = CheckMarkCharm.Checked;
             bool Weather = CheckWeather.Checked;
             bool Static = CheckStatic.Checked;
             bool Fishing = CheckFishing.Checked;
             bool HeldItem = CheckHeldItem.Checked;
-            bool ExtraRoll = CheckExtraRoll.Checked;
-            bool IsLegend = CheckIsLegend.Checked;
+            bool IsAbilityLocked = CheckIsAbilityLocked.Checked;
             bool TIDSIDSearch = CheckTIDSIDFinder.Checked;
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
@@ -476,11 +486,12 @@ namespace SWSH_OWRNG_Generator_GUI
 
             Results.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.EnableResizing;
             Results.Rows.Clear();
-            Results.Columns["Level"].Visible = !Static;
-            Results.Columns["Slot"].Visible = !Static;
-            Results.Columns["Ability"].Visible = !IsLegend;
             Results.Columns["TID"].Visible = TIDSIDSearch;
             Results.Columns["SID"].Visible = TIDSIDSearch;
+            Results.Columns["Level"].Visible = !Static;
+            Results.Columns["Slot"].Visible = !Static;
+            Results.Columns["Brilliant"].Visible = !Static;
+            Results.Columns["Ability"].Visible = !IsAbilityLocked;
 
             progressBar1.Value = 0;
             progressBar1.Maximum = (int)advances;
@@ -492,8 +503,8 @@ namespace SWSH_OWRNG_Generator_GUI
             });
 
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
-                s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, ExtraRoll, DesiredMark, DesiredShiny,
-                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsLegend, TIDSIDSearch, progress
+                s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
+                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs, TIDSIDSearch, progress
             ));
             BindingSource Source = new BindingSource { DataSource = Frames };
             Results.DataSource = Source;
@@ -561,36 +572,36 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void RetailAdvancesTrackerSequenceInput_TextChanged(object sender, EventArgs e)
         {
-                List<int> res = new List<int>();
-                string Text = RetailAdvancesTrackerSequenceInput.Text;
-                int m = RetailAdvancesGeneratorString.Length;
-                int l = Text.Length + 1;
-                if (l >= 5)
+            List<int> res = new List<int>();
+            string Text = RetailAdvancesTrackerSequenceInput.Text;
+            int m = RetailAdvancesGeneratorString.Length;
+            int l = Text.Length + 1;
+            if (l >= 5)
+            {
+                for (int i = 0; i < m; i++)
                 {
-                    for (int i = 0; i < m; i++)
-                    {
-                        int index = RetailAdvancesGeneratorString.IndexOf(Text, i);
-                        if (index == -1) break;
-                        res.Add(index);
-                        i = index;
-                    }
-                    RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: {res.Count} (Inputs: {l})";
-                    if (res.Count == 1)
-                    {
-                        uint num = (uint)res[0] + (uint)Text.Length + RetailInitial;
-                        RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: 1 (Advances: {num} | Inputs {l})";
-                        Xoroshiro go = new Xoroshiro(RetailS0, RetailS1);
-                        for (int i = 0; i < num; i++)
-                            go.next();
+                    int index = RetailAdvancesGeneratorString.IndexOf(Text, i);
+                    if (index == -1) break;
+                    res.Add(index);
+                    i = index;
+                }
+                RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: {res.Count} (Inputs: {l})";
+                if (res.Count == 1)
+                {
+                    uint num = (uint)res[0] + (uint)Text.Length + RetailInitial;
+                    RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: 1 (Advances: {num} | Inputs {l})";
+                    Xoroshiro go = new Xoroshiro(RetailS0, RetailS1);
+                    for (int i = 0; i < num; i++)
+                        go.next();
 
-                        RetailAdvancesTrackerResultState0.Text = go.state0.ToString("X16");
-                        RetailAdvancesTrackerResultState1.Text = go.state1.ToString("X16");
-                    }
+                    RetailAdvancesTrackerResultState0.Text = go.state0.ToString("X16");
+                    RetailAdvancesTrackerResultState1.Text = go.state1.ToString("X16");
                 }
-                else
-                {
-                    RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: Needs at least 5 inputs (Inputs: {l})";
-                }
+            }
+            else
+            {
+                RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: Needs at least 5 inputs (Inputs: {l})";
+            }
         }
 
         private void ButtonUpdateStates_Click(object sender, EventArgs e)
