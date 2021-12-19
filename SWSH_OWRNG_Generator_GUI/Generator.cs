@@ -154,7 +154,7 @@ namespace SWSH_OWRNG_Generator_GUI
                         Advances = TIDSIDSearch ? (-(long)advance).ToString("N0") : advance.ToString("N0"),
                         TID = (ushort)(MockPID >> 16),
                         SID = (ushort)MockPID,
-                        Animation = new Xoroshiro(go.state0, go.state1).next() & 1,
+                        Animation = go.state0 & 1 ^ go.state1 & 1,
                         Level = Level,
                         Slot = SlotRand,
                         PID = PID.ToString("X8"),
@@ -292,7 +292,7 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 if (progress != null && (i % ProgressUpdateInterval == 0))
                     progress.Report(1);
-                ret += go.next() % 2;
+                ret += go.next() & 1;
             }
 
             return ret;
