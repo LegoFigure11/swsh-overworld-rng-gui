@@ -61,7 +61,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckStatic = new System.Windows.Forms.CheckBox();
             this.CheckFishing = new System.Windows.Forms.CheckBox();
             this.CheckHeldItem = new System.Windows.Forms.CheckBox();
-            this.CheckExtraRoll = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.InputLevelMax = new System.Windows.Forms.TextBox();
             this.InputLevelMin = new System.Windows.Forms.TextBox();
@@ -76,6 +75,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results = new System.Windows.Forms.DataGridView();
             this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brilliant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -133,10 +133,16 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerResultState1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.RetailAdvancesTrackerNumResultsLabel = new System.Windows.Forms.Label();
-            this.CheckIsLegend = new System.Windows.Forms.CheckBox();
+            this.CheckIsAbilityLocked = new System.Windows.Forms.CheckBox();
             this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.SeedFinderMenu = new System.Windows.Forms.MenuItem();
             this.ButtonUpdateStates = new System.Windows.Forms.Button();
+            this.LabelKOCount = new System.Windows.Forms.Label();
+            this.InputKOCount = new System.Windows.Forms.TextBox();
+            this.LabelEMs = new System.Windows.Forms.Label();
+            this.InputEMs = new System.Windows.Forms.TextBox();
+            this.LabelFlawlessIVs = new System.Windows.Forms.Label();
+            this.InputFlawlessIVs = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -293,7 +299,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputTID
             // 
-            this.InputTID.Location = new System.Drawing.Point(68, 84);
+            this.InputTID.Location = new System.Drawing.Point(68, 61);
             this.InputTID.MaxLength = 5;
             this.InputTID.Name = "InputTID";
             this.InputTID.Size = new System.Drawing.Size(102, 20);
@@ -304,7 +310,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputSID
             // 
-            this.InputSID.Location = new System.Drawing.Point(68, 110);
+            this.InputSID.Location = new System.Drawing.Point(68, 87);
             this.InputSID.MaxLength = 5;
             this.InputSID.Name = "InputSID";
             this.InputSID.Size = new System.Drawing.Size(102, 20);
@@ -316,7 +322,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelTID
             // 
             this.LabelTID.AutoSize = true;
-            this.LabelTID.Location = new System.Drawing.Point(34, 87);
+            this.LabelTID.Location = new System.Drawing.Point(34, 64);
             this.LabelTID.Name = "LabelTID";
             this.LabelTID.Size = new System.Drawing.Size(28, 13);
             this.LabelTID.TabIndex = 47;
@@ -325,7 +331,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelSID
             // 
             this.LabelSID.AutoSize = true;
-            this.LabelSID.Location = new System.Drawing.Point(34, 113);
+            this.LabelSID.Location = new System.Drawing.Point(34, 90);
             this.LabelSID.Name = "LabelSID";
             this.LabelSID.Size = new System.Drawing.Size(28, 13);
             this.LabelSID.TabIndex = 48;
@@ -333,7 +339,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputMaxAdv
             // 
-            this.InputMaxAdv.Location = new System.Drawing.Point(68, 136);
+            this.InputMaxAdv.Location = new System.Drawing.Point(68, 113);
             this.InputMaxAdv.MaxLength = 13;
             this.InputMaxAdv.Name = "InputMaxAdv";
             this.InputMaxAdv.Size = new System.Drawing.Size(102, 20);
@@ -343,7 +349,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelMaxAdv
             // 
             this.LabelMaxAdv.AutoSize = true;
-            this.LabelMaxAdv.Location = new System.Drawing.Point(7, 140);
+            this.LabelMaxAdv.Location = new System.Drawing.Point(7, 117);
             this.LabelMaxAdv.Name = "LabelMaxAdv";
             this.LabelMaxAdv.Size = new System.Drawing.Size(55, 13);
             this.LabelMaxAdv.TabIndex = 50;
@@ -417,7 +423,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckShinyCharm
             // 
             this.CheckShinyCharm.AutoSize = true;
-            this.CheckShinyCharm.Location = new System.Drawing.Point(12, 162);
+            this.CheckShinyCharm.Location = new System.Drawing.Point(12, 144);
             this.CheckShinyCharm.Name = "CheckShinyCharm";
             this.CheckShinyCharm.Size = new System.Drawing.Size(85, 17);
             this.CheckShinyCharm.TabIndex = 31;
@@ -428,7 +434,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckMarkCharm
             // 
             this.CheckMarkCharm.AutoSize = true;
-            this.CheckMarkCharm.Location = new System.Drawing.Point(12, 185);
+            this.CheckMarkCharm.Location = new System.Drawing.Point(12, 167);
             this.CheckMarkCharm.Name = "CheckMarkCharm";
             this.CheckMarkCharm.Size = new System.Drawing.Size(83, 17);
             this.CheckMarkCharm.TabIndex = 33;
@@ -439,7 +445,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckWeather
             // 
             this.CheckWeather.AutoSize = true;
-            this.CheckWeather.Location = new System.Drawing.Point(12, 208);
+            this.CheckWeather.Location = new System.Drawing.Point(12, 190);
             this.CheckWeather.Name = "CheckWeather";
             this.CheckWeather.Size = new System.Drawing.Size(67, 17);
             this.CheckWeather.TabIndex = 35;
@@ -449,7 +455,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckStatic
             // 
             this.CheckStatic.AutoSize = true;
-            this.CheckStatic.Location = new System.Drawing.Point(116, 162);
+            this.CheckStatic.Location = new System.Drawing.Point(116, 144);
             this.CheckStatic.Name = "CheckStatic";
             this.CheckStatic.Size = new System.Drawing.Size(53, 17);
             this.CheckStatic.TabIndex = 32;
@@ -460,7 +466,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckFishing
             // 
             this.CheckFishing.AutoSize = true;
-            this.CheckFishing.Location = new System.Drawing.Point(116, 185);
+            this.CheckFishing.Location = new System.Drawing.Point(116, 167);
             this.CheckFishing.Name = "CheckFishing";
             this.CheckFishing.Size = new System.Drawing.Size(59, 17);
             this.CheckFishing.TabIndex = 34;
@@ -470,27 +476,17 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckHeldItem
             // 
             this.CheckHeldItem.AutoSize = true;
-            this.CheckHeldItem.Location = new System.Drawing.Point(116, 208);
+            this.CheckHeldItem.Location = new System.Drawing.Point(116, 190);
             this.CheckHeldItem.Name = "CheckHeldItem";
             this.CheckHeldItem.Size = new System.Drawing.Size(111, 17);
             this.CheckHeldItem.TabIndex = 36;
             this.CheckHeldItem.Text = "Random held item";
             this.CheckHeldItem.UseVisualStyleBackColor = true;
             // 
-            // CheckExtraRoll
-            // 
-            this.CheckExtraRoll.AutoSize = true;
-            this.CheckExtraRoll.Location = new System.Drawing.Point(12, 231);
-            this.CheckExtraRoll.Name = "CheckExtraRoll";
-            this.CheckExtraRoll.Size = new System.Drawing.Size(98, 17);
-            this.CheckExtraRoll.TabIndex = 37;
-            this.CheckExtraRoll.Text = "Extra Mark Roll";
-            this.CheckExtraRoll.UseVisualStyleBackColor = true;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(335, 232);
+            this.label20.Location = new System.Drawing.Point(335, 245);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(10, 13);
             this.label20.TabIndex = 64;
@@ -498,7 +494,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputLevelMax
             // 
-            this.InputLevelMax.Location = new System.Drawing.Point(353, 229);
+            this.InputLevelMax.Location = new System.Drawing.Point(353, 242);
             this.InputLevelMax.MaxLength = 2;
             this.InputLevelMax.Name = "InputLevelMax";
             this.InputLevelMax.Size = new System.Drawing.Size(28, 20);
@@ -510,7 +506,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputLevelMin
             // 
-            this.InputLevelMin.Location = new System.Drawing.Point(301, 229);
+            this.InputLevelMin.Location = new System.Drawing.Point(301, 242);
             this.InputLevelMin.MaxLength = 2;
             this.InputLevelMin.Name = "InputLevelMin";
             this.InputLevelMin.Size = new System.Drawing.Size(28, 20);
@@ -523,7 +519,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(455, 232);
+            this.label21.Location = new System.Drawing.Point(455, 245);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(10, 13);
             this.label21.TabIndex = 67;
@@ -531,7 +527,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputSlotMax
             // 
-            this.InputSlotMax.Location = new System.Drawing.Point(471, 229);
+            this.InputSlotMax.Location = new System.Drawing.Point(471, 242);
             this.InputSlotMax.MaxLength = 2;
             this.InputSlotMax.Name = "InputSlotMax";
             this.InputSlotMax.Size = new System.Drawing.Size(28, 20);
@@ -543,7 +539,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputSlotMin
             // 
-            this.InputSlotMin.Location = new System.Drawing.Point(421, 229);
+            this.InputSlotMin.Location = new System.Drawing.Point(421, 242);
             this.InputSlotMin.MaxLength = 2;
             this.InputSlotMin.Name = "InputSlotMin";
             this.InputSlotMin.Size = new System.Drawing.Size(28, 20);
@@ -556,7 +552,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelLevel
             // 
             this.LabelLevel.AutoSize = true;
-            this.LabelLevel.Location = new System.Drawing.Point(259, 232);
+            this.LabelLevel.Location = new System.Drawing.Point(259, 245);
             this.LabelLevel.Name = "LabelLevel";
             this.LabelLevel.Size = new System.Drawing.Size(36, 13);
             this.LabelLevel.TabIndex = 68;
@@ -565,7 +561,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelSlot
             // 
             this.LabelSlot.AutoSize = true;
-            this.LabelSlot.Location = new System.Drawing.Point(387, 232);
+            this.LabelSlot.Location = new System.Drawing.Point(387, 245);
             this.LabelSlot.Name = "LabelSlot";
             this.LabelSlot.Size = new System.Drawing.Size(28, 13);
             this.LabelSlot.TabIndex = 69;
@@ -617,6 +613,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Frame,
             this.Animation,
+            this.Brilliant,
             this.Level,
             this.Slot,
             this.PID,
@@ -638,7 +635,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(746, 185);
+            this.Results.Size = new System.Drawing.Size(746, 59);
             this.Results.TabIndex = 73;
             // 
             // Frame
@@ -654,9 +651,17 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.Animation.DataPropertyName = "Animation";
             this.Animation.HeaderText = "Animation";
+            this.Animation.MinimumWidth = 8;
             this.Animation.Name = "Animation";
             this.Animation.ReadOnly = true;
             this.Animation.Width = 60;
+            // 
+            // Brilliant
+            // 
+            this.Brilliant.DataPropertyName = "Brilliant";
+            this.Brilliant.HeaderText = "Brilliant";
+            this.Brilliant.Name = "Brilliant";
+            this.Brilliant.ReadOnly = true;
             // 
             // Level
             // 
@@ -1214,15 +1219,15 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerNumResultsLabel.TabIndex = 88;
             this.RetailAdvancesTrackerNumResultsLabel.Text = "Possible Results: N/A";
             // 
-            // CheckIsLegend
+            // CheckIsAbilityLocked
             // 
-            this.CheckIsLegend.AutoSize = true;
-            this.CheckIsLegend.Location = new System.Drawing.Point(116, 231);
-            this.CheckIsLegend.Name = "CheckIsLegend";
-            this.CheckIsLegend.Size = new System.Drawing.Size(76, 17);
-            this.CheckIsLegend.TabIndex = 37;
-            this.CheckIsLegend.Text = "Legendary";
-            this.CheckIsLegend.UseVisualStyleBackColor = true;
+            this.CheckIsAbilityLocked.AutoSize = true;
+            this.CheckIsAbilityLocked.Location = new System.Drawing.Point(12, 213);
+            this.CheckIsAbilityLocked.Name = "CheckIsAbilityLocked";
+            this.CheckIsAbilityLocked.Size = new System.Drawing.Size(92, 17);
+            this.CheckIsAbilityLocked.TabIndex = 37;
+            this.CheckIsAbilityLocked.Text = "Locked Ability";
+            this.CheckIsAbilityLocked.UseVisualStyleBackColor = true;
             // 
             // MainMenu
             // 
@@ -1245,12 +1250,75 @@ namespace SWSH_OWRNG_Generator_GUI
             this.ButtonUpdateStates.UseVisualStyleBackColor = true;
             this.ButtonUpdateStates.Click += new System.EventHandler(this.ButtonUpdateStates_Click);
             // 
-            // Form
+            // LabelKOCount
+            // 
+            this.LabelKOCount.AutoSize = true;
+            this.LabelKOCount.Location = new System.Drawing.Point(137, 245);
+            this.LabelKOCount.Name = "LabelKOCount";
+            this.LabelKOCount.Size = new System.Drawing.Size(56, 13);
+            this.LabelKOCount.TabIndex = 91;
+            this.LabelKOCount.Text = "KO Count:";
+            // 
+            // InputKOCount
+            // 
+            this.InputKOCount.Location = new System.Drawing.Point(199, 242);
+            this.InputKOCount.MaxLength = 2;
+            this.InputKOCount.Name = "InputKOCount";
+            this.InputKOCount.Size = new System.Drawing.Size(28, 20);
+            this.InputKOCount.TabIndex = 90;
+            this.InputKOCount.Text = "500";
+            this.InputKOCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LabelEMs
+            // 
+            this.LabelEMs.AutoSize = true;
+            this.LabelEMs.Location = new System.Drawing.Point(17, 245);
+            this.LabelEMs.Name = "LabelEMs";
+            this.LabelEMs.Size = new System.Drawing.Size(73, 13);
+            this.LabelEMs.TabIndex = 93;
+            this.LabelEMs.Text = "Possible EMs:";
+            // 
+            // InputEMs
+            // 
+            this.InputEMs.Location = new System.Drawing.Point(96, 242);
+            this.InputEMs.MaxLength = 2;
+            this.InputEMs.Name = "InputEMs";
+            this.InputEMs.Size = new System.Drawing.Size(28, 20);
+            this.InputEMs.TabIndex = 92;
+            this.InputEMs.Text = "4";
+            this.InputEMs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LabelFlawlessIVs
+            // 
+            this.LabelFlawlessIVs.AutoSize = true;
+            this.LabelFlawlessIVs.Location = new System.Drawing.Point(125, 214);
+            this.LabelFlawlessIVs.Name = "LabelFlawlessIVs";
+            this.LabelFlawlessIVs.Size = new System.Drawing.Size(68, 13);
+            this.LabelFlawlessIVs.TabIndex = 95;
+            this.LabelFlawlessIVs.Text = "Flawless IVs:";
+            // 
+            // InputFlawlessIVs
+            // 
+            this.InputFlawlessIVs.Location = new System.Drawing.Point(199, 210);
+            this.InputFlawlessIVs.MaxLength = 2;
+            this.InputFlawlessIVs.Name = "InputFlawlessIVs";
+            this.InputFlawlessIVs.Size = new System.Drawing.Size(28, 20);
+            this.InputFlawlessIVs.TabIndex = 94;
+            this.InputFlawlessIVs.Text = "0";
+            this.InputFlawlessIVs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MainWindow
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(769, 540);
+            this.ClientSize = new System.Drawing.Size(769, 414);
+            this.Controls.Add(this.LabelFlawlessIVs);
+            this.Controls.Add(this.InputFlawlessIVs);
+            this.Controls.Add(this.LabelEMs);
+            this.Controls.Add(this.InputEMs);
+            this.Controls.Add(this.LabelKOCount);
+            this.Controls.Add(this.InputKOCount);
             this.Controls.Add(this.ButtonUpdateStates);
-            this.Controls.Add(this.CheckIsLegend);
+            this.Controls.Add(this.CheckIsAbilityLocked);
             this.Controls.Add(this.RetailAdvancesTrackerNumResultsLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.RetailAdvancesTrackerResultState1);
@@ -1278,7 +1346,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.label20);
             this.Controls.Add(this.InputLevelMax);
             this.Controls.Add(this.InputLevelMin);
-            this.Controls.Add(this.CheckExtraRoll);
             this.Controls.Add(this.CheckHeldItem);
             this.Controls.Add(this.CheckFishing);
             this.Controls.Add(this.CheckStatic);
@@ -1337,7 +1404,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Menu = this.MainMenu;
-            this.Name = "Form";
+            this.Name = "MainWindow";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).EndInit();
@@ -1379,7 +1446,6 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.CheckBox CheckStatic;
         private System.Windows.Forms.CheckBox CheckFishing;
         private System.Windows.Forms.CheckBox CheckHeldItem;
-        private System.Windows.Forms.CheckBox CheckExtraRoll;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox InputLevelMax;
         private System.Windows.Forms.TextBox InputLevelMin;
@@ -1433,8 +1499,17 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.TextBox RetailAdvancesTrackerResultState1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label RetailAdvancesTrackerNumResultsLabel;
+        private System.Windows.Forms.CheckBox CheckIsAbilityLocked;
+        private System.Windows.Forms.MainMenu MainMenu;
+        private System.Windows.Forms.MenuItem SeedFinderMenu;
+        private System.Windows.Forms.Button ButtonUpdateStates;
+        private System.Windows.Forms.Label LabelKOCount;
+        private System.Windows.Forms.TextBox InputKOCount;
+        private System.Windows.Forms.Label LabelEMs;
+        private System.Windows.Forms.TextBox InputEMs;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frame;
         private System.Windows.Forms.DataGridViewTextBoxColumn Animation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Brilliant;
         private System.Windows.Forms.DataGridViewTextBoxColumn Level;
         private System.Windows.Forms.DataGridViewTextBoxColumn Slot;
         private System.Windows.Forms.DataGridViewTextBoxColumn PID;
@@ -1451,9 +1526,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Mark;
         private System.Windows.Forms.DataGridViewTextBoxColumn State0;
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
-        private System.Windows.Forms.CheckBox CheckIsLegend;
-        private System.Windows.Forms.MainMenu MainMenu;
-        private System.Windows.Forms.MenuItem SeedFinderMenu;
-        private System.Windows.Forms.Button ButtonUpdateStates;
+        private System.Windows.Forms.Label LabelFlawlessIVs;
+        private System.Windows.Forms.TextBox InputFlawlessIVs;
     }
 }

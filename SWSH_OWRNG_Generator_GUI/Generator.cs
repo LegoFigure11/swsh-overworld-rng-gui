@@ -8,14 +8,13 @@ namespace SWSH_OWRNG_Generator_GUI
         private static readonly string[] Natures = { "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" };
         private static readonly string[] PersonalityMarks = { "Rowdy", "AbsentMinded", "Jittery", "Excited", "Charismatic", "Calmness", "Intense", "ZonedOut", "Joyful", "Angry", "Smiley", "Teary", "Upbeat", "Peeved", "Intellectual", "Ferocious", "Crafty", "Scowling", "Kindly", "Flustered", "PumpedUp", "ZeroEnergy", "Prideful", "Unsure", "Humble", "Thorny", "Vigor", "Slump" };
         private static readonly uint Max = (uint)Math.Pow(2, 32) - 1;
-        public Generator()
-        {
-        }
 
+        // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
         public static List<Frame> Generate(
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
-            bool Static, bool Fishing, bool HeldItem, bool ExtraRoll, string DesiredMark, string DesiredShiny, uint LevelMin,
-            uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsLegend, IProgress<int> progress
+            bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, uint LevelMin,
+            uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
+            uint KOs, uint FlawlessIVs, IProgress<int> progress
             )
         {
             List<Frame> Results = new List<Frame>();
@@ -26,12 +25,14 @@ namespace SWSH_OWRNG_Generator_GUI
             uint[] IVs;
             bool GenerateLevel = LevelMin != LevelMax;
             uint LevelDelta = LevelMax - LevelMin + 1;
-            bool Shiny;
 
-            uint EC, PID, SlotRand = 0, Level = 0, BrilliantRand, Nature, AbilityRoll, FixedSeed, ShinyXOR;
+            uint EC, PID, SlotRand = 0, Level = 0, BrilliantRand, Nature, AbilityRoll, FixedSeed, ShinyXOR, BrilliantThreshold, BrilliantRolls;
+            int BrilliantIVs;
             string Mark = "";
-            bool PassIVs;
+            bool PassIVs, Brilliant, Shiny;
             ulong advance = 0;
+
+            (BrilliantThreshold, BrilliantRolls) = GenerateBrilliantInfo(KOs);
 
             ulong ProgressUpdateInterval = advances / 100;
             if (ProgressUpdateInterval == 0)
@@ -46,7 +47,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
                 // Init new RNG
                 Xoroshiro rng = new Xoroshiro(go.state0, go.state1);
-
+                Brilliant = false;
                 if (Static)
                 {
                     rng.rand(100);
@@ -75,18 +76,15 @@ namespace SWSH_OWRNG_Generator_GUI
                         Level = LevelMin;
                     }
 
-                    Mark = GenerateMark(rng, Weather, Fishing, MarkRolls);
-                    if (!ExtraRoll && !PassesMarkFilter(Mark, DesiredMark))
-                    {
-                        go.next();
-                        advance += 1;
-                        continue;
-                    }
+                    GenerateMark(rng, Weather, Fishing, MarkRolls); // Double Mark Gen happens always?
                     BrilliantRand = (uint)rng.rand(1000);
+                    if (BrilliantRand < BrilliantThreshold)
+                        Brilliant = true;
+
                 }
 
                 Shiny = false;
-                for (int roll = 0; roll < ShinyRolls; roll++)
+                for (int roll = 0; roll < ShinyRolls + (Brilliant ? BrilliantRolls : 0); roll++)
                 {
                     uint MockPID = rng.nextuint();
                     Shiny = (((MockPID >> 16) ^ (MockPID & 0xFFFF)) ^ TSV) < 16;
@@ -97,14 +95,21 @@ namespace SWSH_OWRNG_Generator_GUI
                 rng.rand(2); // Mystery
                 Nature = (uint)rng.rand(25);
                 AbilityRoll = 2;
-                if (!IsLegend)
+                if (!IsAbilityLocked)
                     AbilityRoll = (uint)rng.rand(2);
 
-                if (HeldItem)
+                if (!Static && HeldItem)
                     rng.rand(100);
 
+                BrilliantIVs = 0;
+                if (Brilliant)
+                {
+                    BrilliantIVs = (int)rng.rand(2) | 2;
+                    rng.rand(EggMoveCount);
+                }
+
                 FixedSeed = rng.nextuint();
-                (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, TSV, Shiny, IsLegend ? 3 : 0, MinIVs, MaxIVs);
+                (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, TSV, Shiny, (int)(FlawlessIVs + BrilliantIVs), MinIVs, MaxIVs);
 
                 if (!PassIVs ||
                     (DesiredShiny == "Square" && ShinyXOR != 0) ||
@@ -118,8 +123,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     continue;
                 }
 
-                if (Static || ExtraRoll)
-                    Mark = GenerateMark(rng, Weather, Fishing, MarkRolls);
+                Mark = GenerateMark(rng, Weather, Fishing, MarkRolls);
 
                 if (!PassesMarkFilter(Mark, DesiredMark))
                 {
@@ -139,6 +143,7 @@ namespace SWSH_OWRNG_Generator_GUI
                         PID = PID.ToString("X8"),
                         EC = EC.ToString("X8"),
                         Shiny = ShinyXOR == 0 ? "Square" : (ShinyXOR < 16 ? "Star" : "No"),
+                        Brilliant = Brilliant ? "Y" : "-",
                         Ability = AbilityRoll == 0 ? 1 : 0,
                         Nature = Natures[Nature],
                         HP = IVs[0],
@@ -238,6 +243,18 @@ namespace SWSH_OWRNG_Generator_GUI
         private static bool PassesMarkFilter(string Mark, string DesiredMark)
         {
             return !((DesiredMark == "Any Mark" && Mark == "None") || (DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare")) || (DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark));
+        }
+
+        private static (uint, uint) GenerateBrilliantInfo(uint KOs)
+        {
+            if (KOs >= 500) return (30, 6);
+            if (KOs >= 300) return (30, 5);
+            if (KOs >= 200) return (30, 4);
+            if (KOs >= 100) return (30, 3);
+            if (KOs >= 50) return (25, 2);
+            if (KOs >= 20) return (20, 1);
+            if (KOs >= 1) return (15, 1);
+            return (0, 0);
         }
 
         public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)

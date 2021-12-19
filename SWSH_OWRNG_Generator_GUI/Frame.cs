@@ -10,6 +10,7 @@
         public string PID { get; set; }
         public string EC { get; set; }
         public string Shiny { get; set; }
+        public string Brilliant { get; set; }
         public int Ability { get; set; }
         public string Nature { get; set; }
         public uint HP { get; set; }
