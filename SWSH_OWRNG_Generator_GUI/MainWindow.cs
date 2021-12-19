@@ -105,7 +105,20 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (i < 0) textBox.Text = "0";
                 if (i > 31) textBox.Text = "31";
             }
+            else
+            {
+                textBox.Text = "0";
+            }
 
+        }
+
+        private void SetToZero_LostFocus(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (Int32.TryParse(textBox.Text, out int i))
+            {
+                if (i < 0) textBox.Text = "0";
+            }
             else
             {
                 textBox.Text = "0";
@@ -130,6 +143,16 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 if (i < 0) textBox.Text = "0";
                 if (i > 31) textBox.Text = "31";
+            }
+        }
+
+        private void FlawlessIVs_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (Int32.TryParse(textBox.Text, out int i))
+            {
+                if (i < 0) textBox.Text = "0";
+                if (i > 6) textBox.Text = "6";
             }
         }
 

@@ -199,6 +199,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hpMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.hpMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.hpMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // hpMax
             // 
@@ -210,6 +211,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hpMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.hpMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.hpMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // hpFilter
             // 
@@ -310,6 +312,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputTID.Text = "01390";
             this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             this.InputTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputTID.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // InputSID
             // 
@@ -321,6 +324,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSID.Text = "01337";
             this.InputSID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             this.InputSID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputSID.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // LabelTID
             // 
@@ -506,6 +510,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputLevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputLevelMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             this.InputLevelMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputLevelMax.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // InputLevelMin
             // 
@@ -518,6 +523,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputLevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputLevelMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             this.InputLevelMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputLevelMin.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // label21
             // 
@@ -539,6 +545,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputSlotMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             this.InputSlotMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputSlotMax.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // InputSlotMin
             // 
@@ -551,6 +558,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputSlotMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             this.InputSlotMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputSlotMin.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // LabelLevel
             // 
@@ -873,6 +881,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.defMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.defMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.defMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // label13
             // 
@@ -941,6 +950,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spaMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.spaMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.spaMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // atkMinFilter
             // 
@@ -962,6 +972,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spdMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.spdMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.spdMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // spdMax
             // 
@@ -973,6 +984,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spdMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.spdMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.spdMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // speMin
             // 
@@ -984,6 +996,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.speMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.speMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.speMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // speMax
             // 
@@ -995,6 +1008,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.speMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.speMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.speMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // atkMax
             // 
@@ -1006,6 +1020,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.atkMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.atkMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.atkMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // atkMaxFilter
             // 
@@ -1027,6 +1042,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.defMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.defMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.defMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // defMinFilter
             // 
@@ -1068,6 +1084,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spaMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.spaMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.spaMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // label14
             // 
@@ -1088,6 +1105,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.atkMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.atkMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.atkMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // spaMaxFilter
             // 
@@ -1144,6 +1162,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerInitialInput.TabIndex = 78;
             this.RetailAdvancesTrackerInitialInput.Text = "0";
             this.RetailAdvancesTrackerInitialInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.RetailAdvancesTrackerInitialInput.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // RetailAdvancesTrackerMaxInput
             // 
@@ -1154,6 +1173,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerMaxInput.TabIndex = 79;
             this.RetailAdvancesTrackerMaxInput.Text = "10000";
             this.RetailAdvancesTrackerMaxInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.RetailAdvancesTrackerMaxInput.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // RetailAdvancesTrackerGenerateButton
             // 
@@ -1294,12 +1314,14 @@ namespace SWSH_OWRNG_Generator_GUI
             // InputKOCount
             // 
             this.InputKOCount.Location = new System.Drawing.Point(190, 246);
-            this.InputKOCount.MaxLength = 2;
+            this.InputKOCount.MaxLength = 3;
             this.InputKOCount.Name = "InputKOCount";
             this.InputKOCount.Size = new System.Drawing.Size(28, 20);
             this.InputKOCount.TabIndex = 90;
             this.InputKOCount.Text = "500";
             this.InputKOCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputKOCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputKOCount.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // LabelEMs
             // 
@@ -1319,6 +1341,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputEMs.TabIndex = 92;
             this.InputEMs.Text = "4";
             this.InputEMs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputEMs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputEMs.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // LabelFlawlessIVs
             // 
@@ -1332,12 +1356,15 @@ namespace SWSH_OWRNG_Generator_GUI
             // InputFlawlessIVs
             // 
             this.InputFlawlessIVs.Location = new System.Drawing.Point(94, 246);
-            this.InputFlawlessIVs.MaxLength = 2;
+            this.InputFlawlessIVs.MaxLength = 1;
             this.InputFlawlessIVs.Name = "InputFlawlessIVs";
             this.InputFlawlessIVs.Size = new System.Drawing.Size(28, 20);
             this.InputFlawlessIVs.TabIndex = 94;
             this.InputFlawlessIVs.Text = "0";
             this.InputFlawlessIVs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputFlawlessIVs.TextChanged += new System.EventHandler(this.FlawlessIVs_TextChanged);
+            this.InputFlawlessIVs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputFlawlessIVs.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // MainWindow
             // 
