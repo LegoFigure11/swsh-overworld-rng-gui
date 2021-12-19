@@ -630,6 +630,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelSID.Enabled = !check;
             this.InputSID.Enabled = !check;
             this.SelectedShiny.Enabled = !check;
+            this.LabelShiny.Enabled = !check;
         }
     }
 }
