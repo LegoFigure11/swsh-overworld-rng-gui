@@ -72,9 +72,10 @@ namespace SWSH_OWRNG_Generator_GUI
             CheckWeather.TabIndex = CheckFishing.TabIndex + 1;
             CheckHeldItem.TabIndex = CheckWeather.TabIndex + 1;
             CheckIsAbilityLocked.TabIndex = CheckHeldItem.TabIndex + 1;
-            InputFlawlessIVs.TabIndex = CheckIsAbilityLocked.TabIndex + 1;
-            InputEMs.TabIndex = InputFlawlessIVs.TabIndex + 1;
-            InputKOCount.TabIndex = InputEMs.TabIndex + 1;
+            CheckTIDSIDFinder.TabIndex = CheckIsAbilityLocked.TabIndex + 1;
+            InputFlawlessIVs.TabIndex = CheckTIDSIDFinder.TabIndex + 1;
+            InputKOCount.TabIndex = InputFlawlessIVs.TabIndex + 1;
+            InputEMs.TabIndex = InputKOCount.TabIndex + 1;
             InputLevelMin.TabIndex = InputKOCount.TabIndex + 1;
             InputLevelMax.TabIndex = InputLevelMin.TabIndex + 1;
             InputSlotMin.TabIndex = InputLevelMax.TabIndex + 1;

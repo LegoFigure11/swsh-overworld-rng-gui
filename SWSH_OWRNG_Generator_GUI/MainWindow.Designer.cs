@@ -489,7 +489,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(335, 245);
+            this.label20.Location = new System.Drawing.Point(335, 275);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(10, 13);
             this.label20.TabIndex = 64;
@@ -497,7 +497,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputLevelMax
             // 
-            this.InputLevelMax.Location = new System.Drawing.Point(353, 242);
+            this.InputLevelMax.Location = new System.Drawing.Point(351, 272);
             this.InputLevelMax.MaxLength = 2;
             this.InputLevelMax.Name = "InputLevelMax";
             this.InputLevelMax.Size = new System.Drawing.Size(28, 20);
@@ -509,7 +509,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputLevelMin
             // 
-            this.InputLevelMin.Location = new System.Drawing.Point(301, 242);
+            this.InputLevelMin.Location = new System.Drawing.Point(301, 272);
             this.InputLevelMin.MaxLength = 2;
             this.InputLevelMin.Name = "InputLevelMin";
             this.InputLevelMin.Size = new System.Drawing.Size(28, 20);
@@ -522,7 +522,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(455, 245);
+            this.label21.Location = new System.Drawing.Point(454, 275);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(10, 13);
             this.label21.TabIndex = 67;
@@ -530,7 +530,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputSlotMax
             // 
-            this.InputSlotMax.Location = new System.Drawing.Point(471, 242);
+            this.InputSlotMax.Location = new System.Drawing.Point(470, 272);
             this.InputSlotMax.MaxLength = 2;
             this.InputSlotMax.Name = "InputSlotMax";
             this.InputSlotMax.Size = new System.Drawing.Size(28, 20);
@@ -542,7 +542,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputSlotMin
             // 
-            this.InputSlotMin.Location = new System.Drawing.Point(421, 242);
+            this.InputSlotMin.Location = new System.Drawing.Point(420, 272);
             this.InputSlotMin.MaxLength = 2;
             this.InputSlotMin.Name = "InputSlotMin";
             this.InputSlotMin.Size = new System.Drawing.Size(28, 20);
@@ -555,7 +555,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelLevel
             // 
             this.LabelLevel.AutoSize = true;
-            this.LabelLevel.Location = new System.Drawing.Point(259, 245);
+            this.LabelLevel.Location = new System.Drawing.Point(259, 275);
             this.LabelLevel.Name = "LabelLevel";
             this.LabelLevel.Size = new System.Drawing.Size(36, 13);
             this.LabelLevel.TabIndex = 68;
@@ -564,7 +564,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelSlot
             // 
             this.LabelSlot.AutoSize = true;
-            this.LabelSlot.Location = new System.Drawing.Point(387, 245);
+            this.LabelSlot.Location = new System.Drawing.Point(387, 275);
             this.LabelSlot.Name = "LabelSlot";
             this.LabelSlot.Size = new System.Drawing.Size(28, 13);
             this.LabelSlot.TabIndex = 69;
@@ -572,7 +572,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // ButtonSearch
             // 
-            this.ButtonSearch.Location = new System.Drawing.Point(12, 273);
+            this.ButtonSearch.Location = new System.Drawing.Point(10, 298);
             this.ButtonSearch.Name = "ButtonSearch";
             this.ButtonSearch.Size = new System.Drawing.Size(488, 37);
             this.ButtonSearch.TabIndex = 42;
@@ -636,11 +636,11 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State0,
             this.State1});
             this.Results.DataSource = this.generatorBindingSource;
-            this.Results.Location = new System.Drawing.Point(12, 343);
+            this.Results.Location = new System.Drawing.Point(12, 368);
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(746, 185);
+            this.Results.Size = new System.Drawing.Size(746, 160);
             this.Results.TabIndex = 73;
             // 
             // Frame
@@ -1102,7 +1102,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // progressBar1
             // 
             this.progressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.progressBar1.Location = new System.Drawing.Point(13, 316);
+            this.progressBar1.Location = new System.Drawing.Point(12, 341);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(486, 21);
             this.progressBar1.TabIndex = 74;
@@ -1274,7 +1274,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckTIDSIDFinder
             // 
             this.CheckTIDSIDFinder.AutoSize = true;
-            this.CheckTIDSIDFinder.Location = new System.Drawing.Point(262, 219);
+            this.CheckTIDSIDFinder.Location = new System.Drawing.Point(116, 213);
             this.CheckTIDSIDFinder.Name = "CheckTIDSIDFinder";
             this.CheckTIDSIDFinder.Size = new System.Drawing.Size(122, 17);
             this.CheckTIDSIDFinder.TabIndex = 90;
@@ -1285,7 +1285,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelKOCount
             // 
             this.LabelKOCount.AutoSize = true;
-            this.LabelKOCount.Location = new System.Drawing.Point(137, 245);
+            this.LabelKOCount.Location = new System.Drawing.Point(128, 249);
             this.LabelKOCount.Name = "LabelKOCount";
             this.LabelKOCount.Size = new System.Drawing.Size(56, 13);
             this.LabelKOCount.TabIndex = 91;
@@ -1293,7 +1293,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputKOCount
             // 
-            this.InputKOCount.Location = new System.Drawing.Point(199, 242);
+            this.InputKOCount.Location = new System.Drawing.Point(190, 246);
             this.InputKOCount.MaxLength = 2;
             this.InputKOCount.Name = "InputKOCount";
             this.InputKOCount.Size = new System.Drawing.Size(28, 20);
@@ -1304,7 +1304,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelEMs
             // 
             this.LabelEMs.AutoSize = true;
-            this.LabelEMs.Location = new System.Drawing.Point(17, 245);
+            this.LabelEMs.Location = new System.Drawing.Point(15, 275);
             this.LabelEMs.Name = "LabelEMs";
             this.LabelEMs.Size = new System.Drawing.Size(73, 13);
             this.LabelEMs.TabIndex = 93;
@@ -1312,7 +1312,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputEMs
             // 
-            this.InputEMs.Location = new System.Drawing.Point(96, 242);
+            this.InputEMs.Location = new System.Drawing.Point(94, 272);
             this.InputEMs.MaxLength = 2;
             this.InputEMs.Name = "InputEMs";
             this.InputEMs.Size = new System.Drawing.Size(28, 20);
@@ -1323,7 +1323,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelFlawlessIVs
             // 
             this.LabelFlawlessIVs.AutoSize = true;
-            this.LabelFlawlessIVs.Location = new System.Drawing.Point(125, 214);
+            this.LabelFlawlessIVs.Location = new System.Drawing.Point(20, 249);
             this.LabelFlawlessIVs.Name = "LabelFlawlessIVs";
             this.LabelFlawlessIVs.Size = new System.Drawing.Size(68, 13);
             this.LabelFlawlessIVs.TabIndex = 95;
@@ -1331,7 +1331,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputFlawlessIVs
             // 
-            this.InputFlawlessIVs.Location = new System.Drawing.Point(199, 210);
+            this.InputFlawlessIVs.Location = new System.Drawing.Point(94, 246);
             this.InputFlawlessIVs.MaxLength = 2;
             this.InputFlawlessIVs.Name = "InputFlawlessIVs";
             this.InputFlawlessIVs.Size = new System.Drawing.Size(28, 20);
