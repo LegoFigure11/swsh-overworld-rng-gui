@@ -75,6 +75,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelShiny = new System.Windows.Forms.Label();
             this.Results = new System.Windows.Forms.DataGridView();
             this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -137,6 +139,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.SeedFinderMenu = new System.Windows.Forms.MenuItem();
             this.ButtonUpdateStates = new System.Windows.Forms.Button();
+            this.CheckTIDSIDFinder = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -616,6 +619,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Frame,
+            this.TID,
+            this.SID,
             this.Animation,
             this.Level,
             this.Slot,
@@ -649,6 +654,26 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Frame.Name = "Frame";
             this.Frame.ReadOnly = true;
             this.Frame.Width = 150;
+            // 
+            // TID
+            // 
+            this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TID.DataPropertyName = "TID";
+            this.TID.HeaderText = "TID";
+            this.TID.MinimumWidth = 8;
+            this.TID.Name = "TID";
+            this.TID.ReadOnly = true;
+            this.TID.Width = 50;
+            // 
+            // SID
+            // 
+            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SID.DataPropertyName = "SID";
+            this.SID.HeaderText = "SID";
+            this.SID.MinimumWidth = 8;
+            this.SID.Name = "SID";
+            this.SID.ReadOnly = true;
+            this.SID.Width = 50;
             // 
             // Animation
             // 
@@ -813,10 +838,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State1.Name = "State1";
             this.State1.ReadOnly = true;
             this.State1.Width = 150;
-            // 
-            // generatorBindingSource
-            // 
-            this.generatorBindingSource.DataSource = typeof(SWSH_OWRNG_Generator_GUI.Generator);
             // 
             // label12
             // 
@@ -1245,10 +1266,22 @@ namespace SWSH_OWRNG_Generator_GUI
             this.ButtonUpdateStates.UseVisualStyleBackColor = true;
             this.ButtonUpdateStates.Click += new System.EventHandler(this.ButtonUpdateStates_Click);
             // 
-            // Form
+            // CheckTIDSIDFinder
+            // 
+            this.CheckTIDSIDFinder.AutoSize = true;
+            this.CheckTIDSIDFinder.Location = new System.Drawing.Point(12, 62);
+            this.CheckTIDSIDFinder.Name = "CheckTIDSIDFinder";
+            this.CheckTIDSIDFinder.Size = new System.Drawing.Size(122, 17);
+            this.CheckTIDSIDFinder.TabIndex = 90;
+            this.CheckTIDSIDFinder.Text = "Search For TID/SID";
+            this.CheckTIDSIDFinder.UseVisualStyleBackColor = true;
+            this.CheckTIDSIDFinder.CheckedChanged += new System.EventHandler(this.CheckTIDSIDFinder_CheckedChanged);
+            // 
+            // MainWindow
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(769, 540);
+            this.Controls.Add(this.CheckTIDSIDFinder);
             this.Controls.Add(this.ButtonUpdateStates);
             this.Controls.Add(this.CheckIsLegend);
             this.Controls.Add(this.RetailAdvancesTrackerNumResultsLabel);
@@ -1337,7 +1370,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Menu = this.MainMenu;
-            this.Name = "Form";
+            this.Name = "MainWindow";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).EndInit();
@@ -1433,6 +1466,11 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.TextBox RetailAdvancesTrackerResultState1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label RetailAdvancesTrackerNumResultsLabel;
+        private System.Windows.Forms.CheckBox CheckIsLegend;
+        private System.Windows.Forms.MainMenu MainMenu;
+        private System.Windows.Forms.MenuItem SeedFinderMenu;
+        private System.Windows.Forms.Button ButtonUpdateStates;
+        private System.Windows.Forms.CheckBox CheckTIDSIDFinder;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frame;
         private System.Windows.Forms.DataGridViewTextBoxColumn Animation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Level;
@@ -1449,11 +1487,9 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn SpD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Spe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mark;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SID;
         private System.Windows.Forms.DataGridViewTextBoxColumn State0;
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
-        private System.Windows.Forms.CheckBox CheckIsLegend;
-        private System.Windows.Forms.MainMenu MainMenu;
-        private System.Windows.Forms.MenuItem SeedFinderMenu;
-        private System.Windows.Forms.Button ButtonUpdateStates;
     }
 }

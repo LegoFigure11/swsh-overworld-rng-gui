@@ -443,6 +443,7 @@ namespace SWSH_OWRNG_Generator_GUI
             bool HeldItem = CheckHeldItem.Checked;
             bool ExtraRoll = CheckExtraRoll.Checked;
             bool IsLegend = CheckIsLegend.Checked;
+            bool TIDSIDSearch = CheckTIDSIDFinder.Checked;
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
             uint[] MinIVs = { UInt16.Parse(hpMin.Text), UInt16.Parse(atkMin.Text), UInt16.Parse(defMin.Text), UInt16.Parse(spaMin.Text), UInt16.Parse(spdMin.Text), UInt16.Parse(speMin.Text) };
@@ -478,6 +479,8 @@ namespace SWSH_OWRNG_Generator_GUI
             Results.Columns["Level"].Visible = !Static;
             Results.Columns["Slot"].Visible = !Static;
             Results.Columns["Ability"].Visible = !IsLegend;
+            Results.Columns["TID"].Visible = TIDSIDSearch;
+            Results.Columns["SID"].Visible = TIDSIDSearch;
 
             progressBar1.Value = 0;
             progressBar1.Maximum = (int)advances;
@@ -490,7 +493,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, ExtraRoll, DesiredMark, DesiredShiny,
-                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsLegend, progress
+                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsLegend, TIDSIDSearch, progress
             ));
             BindingSource Source = new BindingSource { DataSource = Frames };
             Results.DataSource = Source;
@@ -606,6 +609,16 @@ namespace SWSH_OWRNG_Generator_GUI
                     this.InputState1.Text = form1.State1;
                 }
             }
+        }
+
+        private void CheckTIDSIDFinder_CheckedChanged(object sender, EventArgs e)
+        {
+            bool check = this.CheckTIDSIDFinder.Checked;
+            this.LabelTID.Enabled = !check;
+            this.InputTID.Enabled = !check;
+            this.LabelSID.Enabled = !check;
+            this.InputSID.Enabled = !check;
+            this.SelectedShiny.Enabled = !check;
         }
     }
 }
