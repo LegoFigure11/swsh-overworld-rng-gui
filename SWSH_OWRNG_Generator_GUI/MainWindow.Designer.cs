@@ -123,7 +123,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.RetailAdvancesTrackerLabel = new System.Windows.Forms.Label();
             this.RetailAdvancesTrackerInitialInputLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.RetailAdvancesTrackerMaxAdvInputLabel = new System.Windows.Forms.Label();
             this.RetailAdvancesTrackerInitialInput = new System.Windows.Forms.TextBox();
             this.RetailAdvancesTrackerMaxInput = new System.Windows.Forms.TextBox();
             this.RetailAdvancesTrackerGenerateButton = new System.Windows.Forms.Button();
@@ -1126,14 +1126,14 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerInitialInputLabel.TabIndex = 76;
             this.RetailAdvancesTrackerInitialInputLabel.Text = "Initial Adv.:";
             // 
-            // label1
+            // RetailAdvancesTrackerMaxAdvInputLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(552, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 77;
-            this.label1.Text = "Max Adv.:";
+            this.RetailAdvancesTrackerMaxAdvInputLabel.AutoSize = true;
+            this.RetailAdvancesTrackerMaxAdvInputLabel.Location = new System.Drawing.Point(594, 61);
+            this.RetailAdvancesTrackerMaxAdvInputLabel.Name = "RetailAdvancesTrackerMaxAdvInputLabel";
+            this.RetailAdvancesTrackerMaxAdvInputLabel.Size = new System.Drawing.Size(13, 13);
+            this.RetailAdvancesTrackerMaxAdvInputLabel.TabIndex = 77;
+            this.RetailAdvancesTrackerMaxAdvInputLabel.Text = "+";
             // 
             // RetailAdvancesTrackerInitialInput
             // 
@@ -1363,7 +1363,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.RetailAdvancesTrackerGenerateButton);
             this.Controls.Add(this.RetailAdvancesTrackerMaxInput);
             this.Controls.Add(this.RetailAdvancesTrackerInitialInput);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RetailAdvancesTrackerMaxAdvInputLabel);
             this.Controls.Add(this.RetailAdvancesTrackerInitialInputLabel);
             this.Controls.Add(this.RetailAdvancesTrackerLabel);
             this.Controls.Add(this.progressBar1);
@@ -1520,7 +1520,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label RetailAdvancesTrackerLabel;
         private System.Windows.Forms.Label RetailAdvancesTrackerInitialInputLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label RetailAdvancesTrackerMaxAdvInputLabel;
         private System.Windows.Forms.TextBox RetailAdvancesTrackerInitialInput;
         private System.Windows.Forms.TextBox RetailAdvancesTrackerMaxInput;
         private System.Windows.Forms.Button RetailAdvancesTrackerGenerateButton;
