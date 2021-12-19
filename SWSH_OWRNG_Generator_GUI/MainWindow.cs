@@ -576,7 +576,7 @@ namespace SWSH_OWRNG_Generator_GUI
             List<int> res = new List<int>();
             string Text = RetailAdvancesTrackerSequenceInput.Text;
             int m = RetailAdvancesGeneratorString.Length;
-            int l = Text.Length + 1;
+            int l = Text.Length;
             if (l >= 5)
             {
                 for (int i = 0; i < m; i++)
