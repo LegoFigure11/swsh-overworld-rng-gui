@@ -132,23 +132,14 @@
     <value>LabelKOCount</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="InputLevelMax.MaxLength" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="InputEMs.MaxLength" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="LabelState1.Text" xml:space="preserve">
-    <value>State[1]:</value>
-  </data>
-  <data name="&gt;&gt;spaMaxFilter.Name" xml:space="preserve">
-    <value>spaMaxFilter</value>
   </data>
   <data name="&gt;&gt;hpMax.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="RetailAdvancesTrackerMaxInput.MaxLength" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="&gt;&gt;defFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LabelMaxAdv.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
@@ -156,8 +147,8 @@
   <data name="Atk.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;LabelLevel.ZOrder" xml:space="preserve">
-    <value>29</value>
+  <data name="hpFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 9</value>
   </data>
   <data name="&gt;&gt;speMaxFilter.Name" xml:space="preserve">
     <value>speMaxFilter</value>
@@ -177,8 +168,8 @@
   <data name="SelectedMark.Items15" xml:space="preserve">
     <value>Intense</value>
   </data>
-  <data name="&gt;&gt;spaMinFilter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="RetailAdvancesTrackerProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 10</value>
   </data>
   <data name="&gt;&gt;Shiny.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -249,9 +240,6 @@
   <data name="&gt;&gt;LabelShiny.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;CheckTIDSIDFinder.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="SelectedMark.Items32" xml:space="preserve">
     <value>Unsure</value>
   </data>
@@ -261,11 +249,11 @@
   <data name="&gt;&gt;InputFlawlessIVs.Name" xml:space="preserve">
     <value>InputFlawlessIVs</value>
   </data>
-  <data name="speMax.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="SeedFinderMenu.Text" xml:space="preserve">
+    <value>Seed Finder</value>
   </data>
-  <data name="HP.HeaderText" xml:space="preserve">
-    <value>HP</value>
+  <data name="&gt;&gt;InputSlotMax.Name" xml:space="preserve">
+    <value>InputSlotMax</value>
   </data>
   <data name="LabelMaxAdv.Text" xml:space="preserve">
     <value>Max Adv.:</value>
@@ -282,9 +270,6 @@
   <data name="atkMinFilter.Location" type="System.Drawing.Point, System.Drawing">
     <value>437, 32</value>
   </data>
-  <data name="LabelLevel.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
   <data name="CheckStatic.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
   </data>
@@ -296,9 +281,6 @@
   </data>
   <data name="RetailAdvancesTrackerSequenceLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="defFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
   </data>
   <data name="&gt;&gt;LabelState0.Parent" xml:space="preserve">
     <value>$this</value>
@@ -317,6 +299,9 @@
   </data>
   <data name="&gt;&gt;defMin.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LabelEMs.Name" xml:space="preserve">
+    <value>LabelEMs</value>
   </data>
   <data name="InputKOCount.Location" type="System.Drawing.Point, System.Drawing">
     <value>190, 246</value>
@@ -345,6 +330,9 @@
   <data name="hpMax.Text" xml:space="preserve">
     <value>31</value>
   </data>
+  <data name="atkMinFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="CheckFishing.Text" xml:space="preserve">
     <value>Fishing</value>
   </data>
@@ -372,6 +360,12 @@
   <data name="spdFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;generatorBindingSource.Name" xml:space="preserve">
+    <value>generatorBindingSource</value>
+  </data>
   <data name="&gt;&gt;InputSlotMin.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -396,6 +390,9 @@
   <data name="InputLevelMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 20</value>
   </data>
+  <data name="&gt;&gt;Nature.Name" xml:space="preserve">
+    <value>Nature</value>
+  </data>
   <data name="&gt;&gt;atkMaxFilter.Name" xml:space="preserve">
     <value>atkMaxFilter</value>
   </data>
@@ -410,6 +407,9 @@
   </data>
   <data name="&gt;&gt;hpMin.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Ability.Name" xml:space="preserve">
+    <value>Ability</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>548, 221</value>
@@ -435,11 +435,14 @@
   <data name="speFilter.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;CheckWeather.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;LabelTID.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;LabelSlot.ZOrder" xml:space="preserve">
-    <value>28</value>
+  <data name="&gt;&gt;CheckHeldItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="State0.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
@@ -474,8 +477,8 @@
   <data name="&gt;&gt;RetailAdvancesTrackerResultState0.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="LabelShiny.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="Level.Width" type="System.Int32, mscorlib">
+    <value>58</value>
   </data>
   <data name="&gt;&gt;LabelMaxAdv.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -492,11 +495,11 @@
   <data name="Slot.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
   <data name="RetailAdvancesTrackerResultState1.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 20</value>
+  </data>
+  <data name="&gt;&gt;LabelState1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CheckMarkCharm.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -509,6 +512,9 @@
   </data>
   <data name="RetailAdvancesTrackerResultState1.Location" type="System.Drawing.Point, System.Drawing">
     <value>551, 280</value>
+  </data>
+  <data name="atkMinFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 20</value>
   </data>
   <data name="&gt;&gt;defMaxFilter.Parent" xml:space="preserve">
     <value>$this</value>
@@ -527,6 +533,9 @@
   </data>
   <data name="&gt;&gt;State1.Name" xml:space="preserve">
     <value>State1</value>
+  </data>
+  <data name="SpanishMenu.Text" xml:space="preserve">
+    <value>Spanish</value>
   </data>
   <data name="&gt;&gt;spdMaxFilter.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -552,11 +561,8 @@
   <data name="LabelKOCount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;CheckStatic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Level.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;defMaxFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;atkMin.Name" xml:space="preserve">
     <value>atkMin</value>
@@ -567,8 +573,8 @@
   <data name="&gt;&gt;RetailAdvancesTrackerInitialInput.Name" xml:space="preserve">
     <value>RetailAdvancesTrackerInitialInput</value>
   </data>
-  <data name="SelectedMark.Items5" xml:space="preserve">
-    <value>Time</value>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 13</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
@@ -581,9 +587,6 @@
   </data>
   <data name="SelectedMark.Items30" xml:space="preserve">
     <value>ZeroEnergy</value>
-  </data>
-  <data name="CheckFishing.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -606,17 +609,14 @@
   <data name="defMin.Text" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RetailAdvancesTrackerSequenceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>548, 136</value>
-  </data>
   <data name="SelectedMark.Items16" xml:space="preserve">
     <value>ZonedOut</value>
   </data>
   <data name="&gt;&gt;LanguageMenu.Name" xml:space="preserve">
     <value>LanguageMenu</value>
   </data>
-  <data name="Def.Width" type="System.Int32, mscorlib">
-    <value>34</value>
+  <data name="spdMin.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="spdMinFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 20</value>
@@ -654,14 +654,11 @@
   <data name="LabelMaxAdv.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 117</value>
   </data>
-  <data name="RetailAdvancesTrackerNumResultsLabel.Text" xml:space="preserve">
-    <value>Possible Results: N/A</value>
+  <data name="spdFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="hpFilter.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="spdFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;LabelState1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -675,20 +672,14 @@
   <data name="Spe.Width" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="&gt;&gt;RetailAdvancesTrackerGenerateButton.Name" xml:space="preserve">
-    <value>RetailAdvancesTrackerGenerateButton</value>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>72</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;CheckStatic.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="ImageRareMark.Location" type="System.Drawing.Point, System.Drawing">
     <value>182, 58</value>
-  </data>
-  <data name="spdMin.Text" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;CheckFishing.Parent" xml:space="preserve">
     <value>$this</value>
@@ -698,9 +689,6 @@
   </data>
   <data name="InputSlotMin.MaxLength" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="SelectedMark.Items7" xml:space="preserve">
-    <value>Fishing</value>
   </data>
   <data name="speMax.Text" xml:space="preserve">
     <value>31</value>
@@ -729,11 +717,17 @@
   <data name="&gt;&gt;label10.Name" xml:space="preserve">
     <value>label10</value>
   </data>
+  <data name="&gt;&gt;RetailAdvancesTrackerGenerateButton.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>70</value>
   </data>
   <data name="atkFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 13</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;spdMin.Parent" xml:space="preserve">
     <value>$this</value>
@@ -744,8 +738,8 @@
   <data name="spaMin.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;defFilter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="SelectedMark.Items4" xml:space="preserve">
+    <value>Uncommon</value>
   </data>
   <data name="&gt;&gt;CheckIsAbilityLocked.Name" xml:space="preserve">
     <value>CheckIsAbilityLocked</value>
@@ -789,17 +783,20 @@
   <data name="LabelState1.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
   </data>
+  <data name="CheckTIDSIDFinder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 213</value>
+  </data>
   <data name="spdMax.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="&gt;&gt;label14.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="SelectedMark.Items4" xml:space="preserve">
-    <value>Uncommon</value>
-  </data>
   <data name="InputLevelMin.Location" type="System.Drawing.Point, System.Drawing">
     <value>301, 272</value>
+  </data>
+  <data name="Spe.HeaderText" xml:space="preserve">
+    <value>Spe</value>
   </data>
   <data name="&gt;&gt;spdMin.Name" xml:space="preserve">
     <value>spdMin</value>
@@ -813,12 +810,6 @@
   <data name="LabelSlot.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 13</value>
   </data>
-  <data name="&gt;&gt;InputMaxAdv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;atkFilter.Name" xml:space="preserve">
-    <value>atkFilter</value>
-  </data>
   <data name="CheckMarkCharm.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 17</value>
   </data>
@@ -828,8 +819,8 @@
   <data name="InputKOCount.TabIndex" type="System.Int32, mscorlib">
     <value>90</value>
   </data>
-  <data name="&gt;&gt;hpMinFilter.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="LabelState0.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="atkMin.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -843,11 +834,17 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="&gt;&gt;LabelState0.ZOrder" xml:space="preserve">
+    <value>89</value>
+  </data>
   <data name="label20.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerMaxAdvInputLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Results.ZOrder" xml:space="preserve">
+    <value>24</value>
   </data>
   <data name="InputMaxAdv.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -873,9 +870,6 @@
   <data name="SpD.HeaderText" xml:space="preserve">
     <value>SpD</value>
   </data>
-  <data name="RetailAdvancesTrackerResultState0.TabIndex" type="System.Int32, mscorlib">
-    <value>84</value>
-  </data>
   <data name="&gt;&gt;RetailAdvancesTrackerResultState1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -890,6 +884,9 @@
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerGenerateButton.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;InputLevelMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LabelSlot.Text" xml:space="preserve">
     <value>Slot:</value>
@@ -909,9 +906,6 @@
   <data name="RetailAdvancesTrackerMaxAdvInputLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="spaFilter.Text" xml:space="preserve">
-    <value>SpA:</value>
-  </data>
   <data name="&gt;&gt;Slot.Name" xml:space="preserve">
     <value>Slot</value>
   </data>
@@ -926,6 +920,9 @@
   </data>
   <data name="&gt;&gt;InputTID.ZOrder" xml:space="preserve">
     <value>49</value>
+  </data>
+  <data name="defMaxFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;LabelLevel.Name" xml:space="preserve">
     <value>LabelLevel</value>
@@ -944,9 +941,6 @@
   </data>
   <data name="SelectedMark.Items10" xml:space="preserve">
     <value>AbsentMinded</value>
-  </data>
-  <data name="&gt;&gt;LabelTID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="SelectedMark.Items35" xml:space="preserve">
     <value>Vigor</value>
@@ -975,8 +969,8 @@
   <data name="&gt;&gt;spaFilter.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="hpMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 6</value>
   </data>
   <data name="RetailAdvancesTrackerResultState1.MaxLength" type="System.Int32, mscorlib">
     <value>16</value>
@@ -1007,6 +1001,9 @@
   </data>
   <data name="Level.HeaderText" xml:space="preserve">
     <value>Level</value>
+  </data>
+  <data name="&gt;&gt;hpMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="defFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 13</value>
@@ -1053,9 +1050,6 @@
   <data name="&gt;&gt;LanguageMenu.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;defMin.Name" xml:space="preserve">
-    <value>defMin</value>
-  </data>
   <data name="&gt;&gt;CheckIsAbilityLocked.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -1080,17 +1074,14 @@
   <data name="&gt;&gt;SpA.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InputMaxAdv.Name" xml:space="preserve">
-    <value>InputMaxAdv</value>
+  <data name="LabelState0.Text" xml:space="preserve">
+    <value>State[0]: </value>
   </data>
   <data name="RetailAdvancesTrackerResultState1.TabIndex" type="System.Int32, mscorlib">
     <value>86</value>
   </data>
   <data name="hpFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 13</value>
-  </data>
-  <data name="LabelTID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerMaxInput.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1103,6 +1094,9 @@
   </data>
   <data name="&gt;&gt;spdMaxFilter.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="CheckIsAbilityLocked.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 17</value>
   </data>
   <data name="&gt;&gt;SeedFinderMenu.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1124,9 +1118,6 @@
   </data>
   <data name="spaFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="InputMaxAdv.Text" xml:space="preserve">
-    <value>500000</value>
   </data>
   <data name="&gt;&gt;CheckStatic.Name" xml:space="preserve">
     <value>CheckStatic</value>
@@ -1167,9 +1158,6 @@
   <data name="SelectedMark.Items8" xml:space="preserve">
     <value>Rare</value>
   </data>
-  <data name="&gt;&gt;defMinFilter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="spaMaxFilter.Text" xml:space="preserve">
     <value>31</value>
   </data>
@@ -1187,6 +1175,9 @@
   </data>
   <data name="&gt;&gt;SelectedShiny.ZOrder" xml:space="preserve">
     <value>25</value>
+  </data>
+  <data name="speMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 136</value>
   </data>
   <data name="InputSID.Location" type="System.Drawing.Point, System.Drawing">
     <value>68, 87</value>
@@ -1206,6 +1197,9 @@
   <data name="Frame.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
+  <data name="&gt;&gt;LabelEMs.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="InputTID.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 20</value>
   </data>
@@ -1215,9 +1209,6 @@
   <data name="InputSlotMax.Text" xml:space="preserve">
     <value>99</value>
   </data>
-  <data name="Slot.HeaderText" xml:space="preserve">
-    <value>Slot</value>
-  </data>
   <data name="speMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 20</value>
   </data>
@@ -1226,9 +1217,6 @@
   </data>
   <data name="Results.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;hpFilter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="spdMax.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -1245,8 +1233,14 @@
   <data name="spaMinFilter.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
+  <data name="spaMaxFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
     <value>387, 113</value>
+  </data>
+  <data name="&gt;&gt;spaMax.Name" xml:space="preserve">
+    <value>spaMax</value>
   </data>
   <data name="TID.HeaderText" xml:space="preserve">
     <value>TID</value>
@@ -1256,9 +1250,6 @@
   </data>
   <data name="&gt;&gt;Animation.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RetailAdvancesTrackerSequenceLabel.ZOrder" xml:space="preserve">
-    <value>14</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1299,9 +1290,6 @@
   <data name="&gt;&gt;InputKOCount.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Results.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 368</value>
   </data>
@@ -1313,9 +1301,6 @@
   </data>
   <data name="&gt;&gt;speMaxFilter.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Level.Name" xml:space="preserve">
-    <value>Level</value>
   </data>
   <data name="&gt;&gt;atkMinFilter.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1343,9 +1328,6 @@
   </data>
   <data name="&gt;&gt;spdFilter.ZOrder" xml:space="preserve">
     <value>74</value>
-  </data>
-  <data name="&gt;&gt;RetailAdvancesTrackerProgressBar.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;SpD.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1395,8 +1377,8 @@
   <data name="EC.HeaderText" xml:space="preserve">
     <value>EC</value>
   </data>
-  <data name="&gt;&gt;spaFilter.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="LabelMark.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
   </data>
   <data name="CheckHeldItem.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -1407,11 +1389,14 @@
   <data name="Results.Size" type="System.Drawing.Size, System.Drawing">
     <value>746, 139</value>
   </data>
+  <data name="InputLevelMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 20</value>
+  </data>
   <data name="&gt;&gt;speMinFilter.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="spaMin.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="&gt;&gt;ButtonUpdateStates.Name" xml:space="preserve">
+    <value>ButtonUpdateStates</value>
   </data>
   <data name="RetailAdvancesTrackerGenerateButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1424,6 +1409,9 @@
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerSequenceInput.Name" xml:space="preserve">
     <value>RetailAdvancesTrackerSequenceInput</value>
+  </data>
+  <data name="RetailAdvancesTrackerProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
   </data>
   <data name="defMinFilter.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -1440,8 +1428,8 @@
   <data name="&gt;&gt;defFilter.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>72</value>
+  <data name="RetailAdvancesTrackerGenerateButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 20</value>
   </data>
   <data name="LabelEMs.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
@@ -1452,8 +1440,8 @@
   <data name="LabelFlawlessIVs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;hpMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="hpMinFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
   <data name="speMin.Text" xml:space="preserve">
     <value>0</value>
@@ -1473,6 +1461,9 @@
   <data name="defMin.Location" type="System.Drawing.Point, System.Drawing">
     <value>353, 58</value>
   </data>
+  <data name="&gt;&gt;LabelTID.Name" xml:space="preserve">
+    <value>LabelTID</value>
+  </data>
   <data name="LabelSlot.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1485,11 +1476,14 @@
   <data name="&gt;&gt;Results.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="LabelShiny.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;PID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="speMax.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
-  </data>
-  <data name="atkMaxFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;SelectedMark.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1515,14 +1509,11 @@
   <data name="InputFlawlessIVs.Location" type="System.Drawing.Point, System.Drawing">
     <value>94, 246</value>
   </data>
-  <data name="speFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="LabelMark.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="atkMinFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="&gt;&gt;RetailAdvancesTrackerLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1557,9 +1548,6 @@
   <data name="SelectedMark.Items6" xml:space="preserve">
     <value>Weather</value>
   </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
   <data name="speMaxFilter.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
@@ -1569,8 +1557,8 @@
   <data name="&gt;&gt;ButtonSearch.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="LabelState0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
+  <data name="&gt;&gt;EC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;spdMax.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1620,9 +1608,6 @@
   <data name="InputLevelMax.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="spdMinFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
   <data name="&gt;&gt;spaMaxFilter.ZOrder" xml:space="preserve">
     <value>54</value>
   </data>
@@ -1658,6 +1643,9 @@
   </data>
   <data name="&gt;&gt;spaMin.Name" xml:space="preserve">
     <value>spaMin</value>
+  </data>
+  <data name="&gt;&gt;Frame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CheckShinyCharm.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1695,6 +1683,9 @@
   <data name="&gt;&gt;spaMinFilter.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;atkMax.Name" xml:space="preserve">
+    <value>atkMax</value>
+  </data>
   <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1704,8 +1695,8 @@
   <data name="&gt;&gt;InputLevelMax.ZOrder" xml:space="preserve">
     <value>34</value>
   </data>
-  <data name="hpMinFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+  <data name="ImageRareMark.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="Slot.Width" type="System.Int32, mscorlib">
     <value>50</value>
@@ -1713,8 +1704,11 @@
   <data name="ButtonUpdateStates.Location" type="System.Drawing.Point, System.Drawing">
     <value>550, 306</value>
   </data>
-  <data name="spdMin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 20</value>
+  <data name="&gt;&gt;speMin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RetailAdvancesTrackerSequenceInput.MaxLength" type="System.Int32, mscorlib">
+    <value>30</value>
   </data>
   <data name="atkMaxFilter.Text" xml:space="preserve">
     <value>31</value>
@@ -1749,9 +1743,6 @@
   <data name="LabelShiny.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 13</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;SelectedShiny.Name" xml:space="preserve">
     <value>SelectedShiny</value>
   </data>
@@ -1769,6 +1760,12 @@
   </data>
   <data name="&gt;&gt;LabelSID.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="InputState1.MaxLength" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="CheckFishing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerResultState1.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -1790,9 +1787,6 @@
   </data>
   <data name="RetailAdvancesTrackerProgressBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;InputEMs.Name" xml:space="preserve">
-    <value>InputEMs</value>
   </data>
   <data name="&gt;&gt;CheckTIDSIDFinder.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1820,9 +1814,6 @@
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerInitialInput.ZOrder" xml:space="preserve">
     <value>19</value>
-  </data>
-  <data name="&gt;&gt;InputSlotMin.ZOrder" xml:space="preserve">
-    <value>32</value>
   </data>
   <data name="&gt;&gt;Results.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1881,16 +1872,19 @@
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;InputState0.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="Animation.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="&gt;&gt;hpFilter.Name" xml:space="preserve">
     <value>hpFilter</value>
   </data>
+  <data name="defMin.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="&gt;&gt;spaMaxFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;spaMinFilter.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="speMinFilter.Text" xml:space="preserve">
@@ -1920,6 +1914,9 @@
   <data name="InputLevelMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>351, 272</value>
   </data>
+  <data name="InputLevelMax.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
   <data name="LabelSID.Text" xml:space="preserve">
     <value>SID:</value>
   </data>
@@ -1935,11 +1932,11 @@
   <data name="&gt;&gt;speMin.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="hpMax.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
   <data name="label10.Text" xml:space="preserve">
     <value>-</value>
+  </data>
+  <data name="spaFilter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="LabelTID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1950,11 +1947,11 @@
   <data name="&gt;&gt;State0.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Level.Width" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
   <data name="hpMinFilter.Text" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;spaMax.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="InputEMs.Location" type="System.Drawing.Point, System.Drawing">
     <value>94, 272</value>
@@ -1965,6 +1962,9 @@
   <data name="&gt;&gt;hpFilter.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="RetailAdvancesTrackerNumResultsLabel.Text" xml:space="preserve">
+    <value>Possible Results: N/A</value>
+  </data>
   <data name="&gt;&gt;RetailAdvancesTrackerNumResultsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1974,11 +1974,8 @@
   <data name="LabelKOCount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;CheckHeldItem.ZOrder" xml:space="preserve">
-    <value>36</value>
-  </data>
-  <data name="&gt;&gt;atkMax.Name" xml:space="preserve">
-    <value>atkMax</value>
+  <data name="&gt;&gt;LabelLevel.ZOrder" xml:space="preserve">
+    <value>29</value>
   </data>
   <data name="LabelState0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1992,20 +1989,17 @@
   <data name="LabelKOCount.TabIndex" type="System.Int32, mscorlib">
     <value>91</value>
   </data>
-  <data name="atkMax.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
   <data name="SelectedShiny.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 21</value>
+  </data>
+  <data name="&gt;&gt;Atk.Name" xml:space="preserve">
+    <value>Atk</value>
   </data>
   <data name="InputEMs.Text" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="&gt;&gt;atkMin.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="defMax.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
   </data>
   <data name="CheckIsAbilityLocked.Text" xml:space="preserve">
     <value>Locked Ability</value>
@@ -2025,11 +2019,11 @@
   <data name="&gt;&gt;InputKOCount.Name" xml:space="preserve">
     <value>InputKOCount</value>
   </data>
+  <data name="&gt;&gt;RetailAdvancesTrackerGenerateButton.Name" xml:space="preserve">
+    <value>RetailAdvancesTrackerGenerateButton</value>
+  </data>
   <data name="CheckIsAbilityLocked.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
-  </data>
-  <data name="RetailAdvancesTrackerProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 10</value>
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerInitialInputLabel.Name" xml:space="preserve">
     <value>RetailAdvancesTrackerInitialInputLabel</value>
@@ -2064,14 +2058,14 @@
   <data name="SpA.Width" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="&gt;&gt;SelectedMark.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="speMin.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;LabelState0.ZOrder" xml:space="preserve">
-    <value>89</value>
+  <data name="defFilter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 13</value>
@@ -2100,14 +2094,17 @@
   <data name="&gt;&gt;RetailAdvancesTrackerInitialInputLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CheckStatic.ZOrder" xml:space="preserve">
-    <value>38</value>
+  <data name="spdMin.Text" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 13</value>
+  <data name="&gt;&gt;hpFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Mark.Name" xml:space="preserve">
     <value>Mark</value>
+  </data>
+  <data name="&gt;&gt;spdFilter.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="SelectedMark.Items26" xml:space="preserve">
     <value>Scowling</value>
@@ -2127,6 +2124,9 @@
   <data name="SelectedShiny.Items" xml:space="preserve">
     <value>Ignore</value>
   </data>
+  <data name="LabelTID.Text" xml:space="preserve">
+    <value>TID:</value>
+  </data>
   <data name="LabelTID.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 64</value>
   </data>
@@ -2142,9 +2142,6 @@
   <data name="LabelFlawlessIVs.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 13</value>
   </data>
-  <data name="&gt;&gt;Spe.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;speFilter.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -2157,8 +2154,8 @@
   <data name="CheckTIDSIDFinder.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="spaMin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 84</value>
+  <data name="InputKOCount.MaxLength" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="LabelState1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2205,8 +2202,11 @@
   <data name="RetailAdvancesTrackerLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
-  <data name="LabelState0.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="InputLevelMax.MaxLength" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;spdMinFilter.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;LabelState0.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2235,8 +2235,8 @@
   <data name="&gt;&gt;spaFilter.Name" xml:space="preserve">
     <value>spaFilter</value>
   </data>
-  <data name="CheckIsAbilityLocked.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 17</value>
+  <data name="&gt;&gt;spaMaxFilter.Name" xml:space="preserve">
+    <value>spaMaxFilter</value>
   </data>
   <data name="spaMaxFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 20</value>
@@ -2244,8 +2244,8 @@
   <data name="Shiny.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;Frame.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="spdMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 20</value>
   </data>
   <data name="&gt;&gt;hpMaxFilter.Name" xml:space="preserve">
     <value>hpMaxFilter</value>
@@ -2259,6 +2259,9 @@
   <data name="Shiny.HeaderText" xml:space="preserve">
     <value>Shiny</value>
   </data>
+  <data name="&gt;&gt;RetailAdvancesTrackerSequenceInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="atkMin.Location" type="System.Drawing.Point, System.Drawing">
     <value>353, 32</value>
   </data>
@@ -2268,8 +2271,8 @@
   <data name="InputEMs.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 20</value>
   </data>
-  <data name="&gt;&gt;EC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label14.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerResultState0.Name" xml:space="preserve">
     <value>RetailAdvancesTrackerResultState0</value>
@@ -2283,6 +2286,9 @@
   <data name="&gt;&gt;Ability.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;defMaxFilter.ZOrder" xml:space="preserve">
+    <value>56</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>769, 519</value>
   </data>
@@ -2292,19 +2298,22 @@
   <data name="RetailAdvancesTrackerNumResultsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 13</value>
   </data>
+  <data name="atkMin.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="defMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>403, 58</value>
   </data>
   <data name="spaMinFilter.Text" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="InputState0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 20</value>
+  <data name="RetailAdvancesTrackerResultState0.MaxLength" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
   <data name="RetailAdvancesTrackerGenerateButton.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
-  <data name="&gt;&gt;defMaxFilter.Type" xml:space="preserve">
+  <data name="&gt;&gt;defMinFilter.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RetailAdvancesTrackerInitialInputLabel.AutoSize" type="System.Boolean, mscorlib">
@@ -2316,9 +2325,6 @@
   <data name="&gt;&gt;RetailAdvancesTrackerNumResultsLabel.Name" xml:space="preserve">
     <value>RetailAdvancesTrackerNumResultsLabel</value>
   </data>
-  <data name="LabelLevel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;RetailAdvancesTrackerInitialInputLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -2328,20 +2334,23 @@
   <data name="&gt;&gt;RetailAdvancesTrackerMaxAdvInputLabel.Name" xml:space="preserve">
     <value>RetailAdvancesTrackerMaxAdvInputLabel</value>
   </data>
-  <data name="RetailAdvancesTrackerNumResultsLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="RetailAdvancesTrackerInitialInputLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
   </data>
   <data name="Brilliant.HeaderText" xml:space="preserve">
     <value>Brilliant</value>
   </data>
-  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>387, 139</value>
-  </data>
-  <data name="InputState1.MaxLength" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="LabelState1.Text" xml:space="preserve">
+    <value>State[1]:</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
+  </data>
+  <data name="hpMaxFilter.Text" xml:space="preserve">
+    <value>31</value>
   </data>
   <data name="InputLevelMin.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -4145,14 +4154,14 @@
   <data name="LabelState1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;spaMax.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;CheckStatic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerSequenceInput.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;RetailAdvancesTrackerGenerateButton.ZOrder" xml:space="preserve">
-    <value>17</value>
+  <data name="atkMaxFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="EC.Width" type="System.Int32, mscorlib">
     <value>46</value>
@@ -4172,26 +4181,32 @@
   <data name="CheckShinyCharm.Text" xml:space="preserve">
     <value>Shiny Charm</value>
   </data>
+  <data name="SelectedMark.Items12" xml:space="preserve">
+    <value>Excited</value>
+  </data>
   <data name="&gt;&gt;RetailAdvancesTrackerProgressBar.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
   <data name="RetailAdvancesTrackerResultState0.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 20</value>
   </data>
-  <data name="&gt;&gt;InputSlotMax.Name" xml:space="preserve">
-    <value>InputSlotMax</value>
+  <data name="hpMax.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
-  <data name="&gt;&gt;InputSlotMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;RetailAdvancesTrackerSequenceLabel.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
+  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="&gt;&gt;InputEMs.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LabelEMs.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="LabelLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
   </data>
   <data name="defMin.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -4205,17 +4220,23 @@
   <data name="CheckStatic.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="speMin.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InputSlotMin.ZOrder" xml:space="preserve">
+    <value>32</value>
   </data>
   <data name="&gt;&gt;LabelState0.Name" xml:space="preserve">
     <value>LabelState0</value>
   </data>
-  <data name="SelectedMark.Items12" xml:space="preserve">
-    <value>Excited</value>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="State1.HeaderText" xml:space="preserve">
     <value>State1</value>
+  </data>
+  <data name="&gt;&gt;speFilter.ZOrder" xml:space="preserve">
+    <value>73</value>
   </data>
   <data name="hpMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 20</value>
@@ -4223,14 +4244,8 @@
   <data name="LabelLevel.Location" type="System.Drawing.Point, System.Drawing">
     <value>259, 275</value>
   </data>
-  <data name="LabelSlot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="InputState1.Size" type="System.Drawing.Size, System.Drawing">
     <value>205, 20</value>
-  </data>
-  <data name="&gt;&gt;InputLevelMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LabelFlawlessIVs.Parent" xml:space="preserve">
     <value>$this</value>
@@ -4256,23 +4271,17 @@
   <data name="&gt;&gt;atkFilter.ZOrder" xml:space="preserve">
     <value>77</value>
   </data>
-  <data name="InputTID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 61</value>
-  </data>
   <data name="&gt;&gt;spdMaxFilter.ZOrder" xml:space="preserve">
     <value>52</value>
   </data>
-  <data name="InputLevelMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 20</value>
+  <data name="&gt;&gt;Level.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="&gt;&gt;label20.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckWeather.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="RetailAdvancesTrackerMaxInput.MaxLength" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
   <data name="&gt;&gt;InputFlawlessIVs.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -4280,11 +4289,11 @@
   <data name="SpD.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="Spe.HeaderText" xml:space="preserve">
-    <value>Spe</value>
+  <data name="&gt;&gt;InputMaxAdv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="defFilter.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="spdMinFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
   </data>
   <data name="spaMinFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4295,8 +4304,8 @@
   <data name="&gt;&gt;InputSlotMin.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="ImageRareMark.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;InputMaxAdv.Name" xml:space="preserve">
+    <value>InputMaxAdv</value>
   </data>
   <data name="RetailAdvancesTrackerInitialInputLabel.Text" xml:space="preserve">
     <value>Initial Adv.:</value>
@@ -4319,32 +4328,29 @@
   <data name="SelectedShiny.Items2" xml:space="preserve">
     <value>Square</value>
   </data>
-  <data name="&gt;&gt;InputSID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="CheckStatic.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="&gt;&gt;spdMax.ZOrder" xml:space="preserve">
     <value>65</value>
   </data>
-  <data name="&gt;&gt;LabelLevel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="speMinFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
   </data>
   <data name="&gt;&gt;LabelTID.ZOrder" xml:space="preserve">
     <value>47</value>
   </data>
-  <data name="RetailAdvancesTrackerGenerateButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 20</value>
+  <data name="LabelTID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;LabelState1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="atkMinFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
   <data name="&gt;&gt;defFilter.ZOrder" xml:space="preserve">
     <value>76</value>
   </data>
-  <data name="SpanishMenu.Text" xml:space="preserve">
-    <value>Spanish</value>
+  <data name="&gt;&gt;LabelTID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ButtonUpdateStates.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4358,8 +4364,8 @@
   <data name="&gt;&gt;spaFilter.ZOrder" xml:space="preserve">
     <value>75</value>
   </data>
-  <data name="RetailAdvancesTrackerResultState0.MaxLength" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="&gt;&gt;CheckTIDSIDFinder.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;LabelSlot.Parent" xml:space="preserve">
     <value>$this</value>
@@ -4370,8 +4376,8 @@
   <data name="SID.HeaderText" xml:space="preserve">
     <value>SID</value>
   </data>
-  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;CheckStatic.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;speMinFilter.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4388,17 +4394,14 @@
   <data name="CheckTIDSIDFinder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;Results.ZOrder" xml:space="preserve">
-    <value>24</value>
+  <data name="&gt;&gt;LabelLevel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;ImageRareMark.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="Def.HeaderText" xml:space="preserve">
     <value>Def</value>
-  </data>
-  <data name="speFilter.Text" xml:space="preserve">
-    <value>Spe:</value>
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerGenerateButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4418,14 +4421,11 @@
   <data name="&gt;&gt;progressBar1.Name" xml:space="preserve">
     <value>progressBar1</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="SelectedMark.Items7" xml:space="preserve">
+    <value>Fishing</value>
   </data>
   <data name="RetailAdvancesTrackerProgressBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>552, 115</value>
-  </data>
-  <data name="&gt;&gt;spdMinFilter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="InputSID.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 20</value>
@@ -4439,17 +4439,17 @@
   <data name="Level.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="speMinFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+  <data name="speFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;spaMin.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="hpMaxFilter.Text" xml:space="preserve">
-    <value>31</value>
+  <data name="&gt;&gt;Level.Name" xml:space="preserve">
+    <value>Level</value>
   </data>
   <data name="ImageRareMark.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 128</value>
@@ -4460,8 +4460,8 @@
   <data name="&gt;&gt;InputSID.ZOrder" xml:space="preserve">
     <value>48</value>
   </data>
-  <data name="&gt;&gt;spdFilter.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;spdMinFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;RetailAdvancesTrackerMaxInput.ZOrder" xml:space="preserve">
     <value>18</value>
@@ -4472,14 +4472,14 @@
   <data name="&gt;&gt;LabelKOCount.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;PID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="RetailAdvancesTrackerNumResultsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="InputSlotMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>470, 272</value>
   </data>
-  <data name="spaFilter.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="Def.Width" type="System.Int32, mscorlib">
+    <value>34</value>
   </data>
   <data name="&gt;&gt;generatorBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4493,8 +4493,8 @@
   <data name="SelectedMark.Items2" xml:space="preserve">
     <value>Any Mark</value>
   </data>
-  <data name="&gt;&gt;CheckTIDSIDFinder.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="HP.HeaderText" xml:space="preserve">
+    <value>HP</value>
   </data>
   <data name="ImageRareMark.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
@@ -4508,8 +4508,8 @@
   <data name="&gt;&gt;defMax.ZOrder" xml:space="preserve">
     <value>69</value>
   </data>
-  <data name="&gt;&gt;defMaxFilter.ZOrder" xml:space="preserve">
-    <value>56</value>
+  <data name="CheckFishing.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;atkMaxFilter.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4523,11 +4523,11 @@
   <data name="&gt;&gt;HP.Name" xml:space="preserve">
     <value>HP</value>
   </data>
-  <data name="speMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 136</value>
+  <data name="spaMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 84</value>
   </data>
-  <data name="&gt;&gt;label14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="defFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
   <data name="atkMax.Text" xml:space="preserve">
     <value>31</value>
@@ -4538,14 +4538,14 @@
   <data name="SelectedMark.Items34" xml:space="preserve">
     <value>Thorny</value>
   </data>
-  <data name="&gt;&gt;spaMax.Name" xml:space="preserve">
-    <value>spaMax</value>
+  <data name="spaMin.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;speMaxFilter.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;RetailAdvancesTrackerSequenceInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;LabelSlot.ZOrder" xml:space="preserve">
+    <value>28</value>
   </data>
   <data name="&gt;&gt;hpMin.Name" xml:space="preserve">
     <value>hpMin</value>
@@ -4559,23 +4559,17 @@
   <data name="RetailAdvancesTrackerInitialInputLabel.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
   </data>
-  <data name="spaMaxFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>387, 139</value>
   </data>
   <data name="&gt;&gt;defMax.Name" xml:space="preserve">
     <value>defMax</value>
   </data>
-  <data name="SelectedShiny.Items1" xml:space="preserve">
-    <value>No</value>
-  </data>
   <data name="LabelMark.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="SID.Width" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;Ability.Name" xml:space="preserve">
-    <value>Ability</value>
+  <data name="RetailAdvancesTrackerResultState0.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
   </data>
   <data name="spaMax.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -4586,8 +4580,8 @@
   <data name="&gt;&gt;label15.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="InputKOCount.MaxLength" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="speFilter.Text" xml:space="preserve">
+    <value>Spe:</value>
   </data>
   <data name="&gt;&gt;LabelKOCount.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4631,8 +4625,8 @@
   <data name="&gt;&gt;atkMaxFilter.ZOrder" xml:space="preserve">
     <value>58</value>
   </data>
-  <data name="CheckTIDSIDFinder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 213</value>
+  <data name="&gt;&gt;spaFilter.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;CheckShinyCharm.ZOrder" xml:space="preserve">
     <value>41</value>
@@ -4640,32 +4634,32 @@
   <data name="defMinFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 20</value>
   </data>
-  <data name="hpFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 9</value>
+  <data name="LabelLevel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;atkMin.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;generatorBindingSource.Name" xml:space="preserve">
-    <value>generatorBindingSource</value>
+  <data name="&gt;&gt;defMin.Name" xml:space="preserve">
+    <value>defMin</value>
   </data>
   <data name="&gt;&gt;CheckFishing.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;spdMinFilter.Parent" xml:space="preserve">
+  <data name="&gt;&gt;InputState0.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="CheckWeather.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;InputLevelMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="SID.Width" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
-  <data name="RetailAdvancesTrackerProgressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>81</value>
+  <data name="Slot.HeaderText" xml:space="preserve">
+    <value>Slot</value>
   </data>
-  <data name="&gt;&gt;Atk.Name" xml:space="preserve">
-    <value>Atk</value>
+  <data name="&gt;&gt;Spe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="InputState1.Location" type="System.Drawing.Point, System.Drawing">
     <value>68, 32</value>
@@ -4676,8 +4670,8 @@
   <data name="LabelTID.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 13</value>
   </data>
-  <data name="LabelTID.Text" xml:space="preserve">
-    <value>TID:</value>
+  <data name="&gt;&gt;InputSID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainWindow</value>
@@ -4685,11 +4679,11 @@
   <data name="&gt;&gt;atkMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="RetailAdvancesTrackerSequenceInput.MaxLength" type="System.Int32, mscorlib">
-    <value>30</value>
+  <data name="atkMax.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="atkMin.Text" xml:space="preserve">
-    <value>0</value>
+  <data name="LabelSlot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 13</value>
@@ -4703,8 +4697,8 @@
   <data name="&gt;&gt;SelectedShiny.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="label14.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+  <data name="LabelState0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
   </data>
   <data name="SelectedMark.Items17" xml:space="preserve">
     <value>Joyful</value>
@@ -4712,11 +4706,14 @@
   <data name="InputEMs.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>
   </data>
+  <data name="&gt;&gt;State1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="SelectedMark.Items18" xml:space="preserve">
     <value>Angry</value>
   </data>
-  <data name="hpMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 6</value>
+  <data name="&gt;&gt;hpMinFilter.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="CheckShinyCharm.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 17</value>
@@ -4739,8 +4736,8 @@
   <data name="RetailAdvancesTrackerInitialInputLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
-  <data name="&gt;&gt;Nature.Name" xml:space="preserve">
-    <value>Nature</value>
+  <data name="RetailAdvancesTrackerSequenceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>548, 136</value>
   </data>
   <data name="RetailAdvancesTrackerSequenceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -4787,14 +4784,14 @@
   <data name="Nature.Width" type="System.Int32, mscorlib">
     <value>75</value>
   </data>
-  <data name="LabelMark.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
+  <data name="&gt;&gt;InputLevelMin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="SelectedMark.Items31" xml:space="preserve">
     <value>Prideful</value>
   </data>
-  <data name="&gt;&gt;LabelTID.Name" xml:space="preserve">
-    <value>LabelTID</value>
+  <data name="InputMaxAdv.Text" xml:space="preserve">
+    <value>500000</value>
   </data>
   <data name="&gt;&gt;LabelFlawlessIVs.Name" xml:space="preserve">
     <value>LabelFlawlessIVs</value>
@@ -4805,8 +4802,8 @@
   <data name="LabelMark.Location" type="System.Drawing.Point, System.Drawing">
     <value>313, 165</value>
   </data>
-  <data name="defMin.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="&gt;&gt;atkFilter.Name" xml:space="preserve">
+    <value>atkFilter</value>
   </data>
   <data name="&gt;&gt;Spe.Name" xml:space="preserve">
     <value>Spe</value>
@@ -4814,8 +4811,8 @@
   <data name="&gt;&gt;CheckShinyCharm.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LabelEMs.Name" xml:space="preserve">
-    <value>LabelEMs</value>
+  <data name="&gt;&gt;CheckTIDSIDFinder.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="SelectedShiny.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -4826,11 +4823,11 @@
   <data name="&gt;&gt;RetailAdvancesTrackerSequenceInput.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="SeedFinderMenu.Text" xml:space="preserve">
-    <value>Seed Finder</value>
+  <data name="speMax.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
-  <data name="RetailAdvancesTrackerInitialInputLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="InputFlawlessIVs.Text" xml:space="preserve">
     <value>0</value>
@@ -4841,11 +4838,14 @@
   <data name="label20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;RetailAdvancesTrackerLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
     <value>33</value>
+  </data>
+  <data name="&gt;&gt;CheckStatic.ZOrder" xml:space="preserve">
+    <value>38</value>
   </data>
   <data name="&gt;&gt;speFilter.Parent" xml:space="preserve">
     <value>$this</value>
@@ -4853,8 +4853,8 @@
   <data name="hpMaxFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="atkMinFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="spaFilter.Text" xml:space="preserve">
+    <value>SpA:</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
     <value>-</value>
@@ -4862,11 +4862,11 @@
   <data name="InputMaxAdv.Location" type="System.Drawing.Point, System.Drawing">
     <value>68, 113</value>
   </data>
-  <data name="&gt;&gt;State1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;CheckHeldItem.ZOrder" xml:space="preserve">
+    <value>36</value>
   </data>
-  <data name="&gt;&gt;ButtonUpdateStates.Name" xml:space="preserve">
-    <value>ButtonUpdateStates</value>
+  <data name="&gt;&gt;InputEMs.Name" xml:space="preserve">
+    <value>InputEMs</value>
   </data>
   <data name="&gt;&gt;LabelEMs.Parent" xml:space="preserve">
     <value>$this</value>
@@ -4874,8 +4874,8 @@
   <data name="&gt;&gt;LabelMaxAdv.ZOrder" xml:space="preserve">
     <value>44</value>
   </data>
-  <data name="&gt;&gt;speMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;RetailAdvancesTrackerProgressBar.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="SelectedShiny.Location" type="System.Drawing.Point, System.Drawing">
     <value>353, 189</value>
@@ -4901,8 +4901,8 @@
   <data name="&gt;&gt;spaMaxFilter.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;speFilter.ZOrder" xml:space="preserve">
-    <value>73</value>
+  <data name="InputState0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 20</value>
   </data>
   <data name="&gt;&gt;CheckWeather.Name" xml:space="preserve">
     <value>CheckWeather</value>
@@ -4913,11 +4913,11 @@
   <data name="&gt;&gt;label20.Name" xml:space="preserve">
     <value>label20</value>
   </data>
-  <data name="&gt;&gt;CheckHeldItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>30</value>
   </data>
-  <data name="spdMin.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="SelectedMark.Items5" xml:space="preserve">
+    <value>Time</value>
   </data>
   <data name="Def.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
@@ -4925,8 +4925,8 @@
   <data name="&gt;&gt;Atk.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="CheckFishing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;SelectedMark.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;hpMaxFilter.ZOrder" xml:space="preserve">
     <value>60</value>
@@ -4940,11 +4940,11 @@
   <data name="spdMinFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LabelState0.Text" xml:space="preserve">
-    <value>State[0]: </value>
+  <data name="defMax.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
-  <data name="atkMinFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 20</value>
+  <data name="SelectedShiny.Items1" xml:space="preserve">
+    <value>No</value>
   </data>
   <data name="hpMinFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 20</value>
@@ -4967,11 +4967,11 @@
   <data name="label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="InputLevelMax.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
+  <data name="&gt;&gt;InputSlotMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="defMaxFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="InputTID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 61</value>
   </data>
   <metadata name="Spe.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4983,7 +4983,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
+    <value>es</value>
   </metadata>
   <metadata name="Animation.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

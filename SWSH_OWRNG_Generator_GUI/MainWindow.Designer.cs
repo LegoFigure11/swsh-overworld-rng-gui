@@ -72,28 +72,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedShiny = new System.Windows.Forms.ComboBox();
             this.LabelShiny = new System.Windows.Forms.Label();
             this.Results = new System.Windows.Forms.DataGridView();
-            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brilliant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Atk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Def = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Spe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.speMinFilter = new System.Windows.Forms.Button();
             this.defMax = new System.Windows.Forms.TextBox();
@@ -148,6 +126,28 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputEMs = new System.Windows.Forms.TextBox();
             this.LabelFlawlessIVs = new System.Windows.Forms.Label();
             this.InputFlawlessIVs = new System.Windows.Forms.TextBox();
+            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brilliant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Atk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Def = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Spe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ImageRareMark = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -483,167 +483,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.DataSource = this.generatorBindingSource;
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
-            // 
-            // Frame
-            // 
-            this.Frame.DataPropertyName = "Advances";
-            resources.ApplyResources(this.Frame, "Frame");
-            this.Frame.Name = "Frame";
-            this.Frame.ReadOnly = true;
-            // 
-            // TID
-            // 
-            this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TID.DataPropertyName = "TID";
-            resources.ApplyResources(this.TID, "TID");
-            this.TID.Name = "TID";
-            this.TID.ReadOnly = true;
-            // 
-            // SID
-            // 
-            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.SID.DataPropertyName = "SID";
-            resources.ApplyResources(this.SID, "SID");
-            this.SID.Name = "SID";
-            this.SID.ReadOnly = true;
-            // 
-            // Animation
-            // 
-            this.Animation.DataPropertyName = "Animation";
-            resources.ApplyResources(this.Animation, "Animation");
-            this.Animation.Name = "Animation";
-            this.Animation.ReadOnly = true;
-            // 
-            // Brilliant
-            // 
-            this.Brilliant.DataPropertyName = "Brilliant";
-            resources.ApplyResources(this.Brilliant, "Brilliant");
-            this.Brilliant.Name = "Brilliant";
-            this.Brilliant.ReadOnly = true;
-            // 
-            // Level
-            // 
-            this.Level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Level.DataPropertyName = "Level";
-            resources.ApplyResources(this.Level, "Level");
-            this.Level.Name = "Level";
-            this.Level.ReadOnly = true;
-            // 
-            // Slot
-            // 
-            this.Slot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Slot.DataPropertyName = "Slot";
-            resources.ApplyResources(this.Slot, "Slot");
-            this.Slot.Name = "Slot";
-            this.Slot.ReadOnly = true;
-            // 
-            // PID
-            // 
-            this.PID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.PID.DataPropertyName = "PID";
-            resources.ApplyResources(this.PID, "PID");
-            this.PID.Name = "PID";
-            this.PID.ReadOnly = true;
-            // 
-            // EC
-            // 
-            this.EC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.EC.DataPropertyName = "EC";
-            resources.ApplyResources(this.EC, "EC");
-            this.EC.Name = "EC";
-            this.EC.ReadOnly = true;
-            // 
-            // Shiny
-            // 
-            this.Shiny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Shiny.DataPropertyName = "Shiny";
-            resources.ApplyResources(this.Shiny, "Shiny");
-            this.Shiny.Name = "Shiny";
-            this.Shiny.ReadOnly = true;
-            // 
-            // Ability
-            // 
-            this.Ability.DataPropertyName = "Ability";
-            resources.ApplyResources(this.Ability, "Ability");
-            this.Ability.Name = "Ability";
-            this.Ability.ReadOnly = true;
-            // 
-            // Nature
-            // 
-            this.Nature.DataPropertyName = "Nature";
-            resources.ApplyResources(this.Nature, "Nature");
-            this.Nature.Name = "Nature";
-            this.Nature.ReadOnly = true;
-            // 
-            // HP
-            // 
-            this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.HP.DataPropertyName = "HP";
-            resources.ApplyResources(this.HP, "HP");
-            this.HP.Name = "HP";
-            this.HP.ReadOnly = true;
-            // 
-            // Atk
-            // 
-            this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Atk.DataPropertyName = "Atk";
-            resources.ApplyResources(this.Atk, "Atk");
-            this.Atk.Name = "Atk";
-            this.Atk.ReadOnly = true;
-            // 
-            // Def
-            // 
-            this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Def.DataPropertyName = "Def";
-            resources.ApplyResources(this.Def, "Def");
-            this.Def.Name = "Def";
-            this.Def.ReadOnly = true;
-            // 
-            // SpA
-            // 
-            this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SpA.DataPropertyName = "SpA";
-            resources.ApplyResources(this.SpA, "SpA");
-            this.SpA.Name = "SpA";
-            this.SpA.ReadOnly = true;
-            // 
-            // SpD
-            // 
-            this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SpD.DataPropertyName = "SpD";
-            resources.ApplyResources(this.SpD, "SpD");
-            this.SpD.Name = "SpD";
-            this.SpD.ReadOnly = true;
-            // 
-            // Spe
-            // 
-            this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Spe.DataPropertyName = "Spe";
-            resources.ApplyResources(this.Spe, "Spe");
-            this.Spe.Name = "Spe";
-            this.Spe.ReadOnly = true;
-            // 
-            // Mark
-            // 
-            this.Mark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Mark.DataPropertyName = "Mark";
-            resources.ApplyResources(this.Mark, "Mark");
-            this.Mark.Name = "Mark";
-            this.Mark.ReadOnly = true;
-            // 
-            // State0
-            // 
-            this.State0.DataPropertyName = "State0";
-            resources.ApplyResources(this.State0, "State0");
-            this.State0.Name = "State0";
-            this.State0.ReadOnly = true;
-            // 
-            // State1
-            // 
-            this.State1.DataPropertyName = "State1";
-            resources.ApplyResources(this.State1, "State1");
-            this.State1.Name = "State1";
-            this.State1.ReadOnly = true;
             // 
             // label12
             // 
@@ -1000,6 +839,167 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputFlawlessIVs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputFlawlessIVs.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
+            // Frame
+            // 
+            this.Frame.DataPropertyName = "Advances";
+            resources.ApplyResources(this.Frame, "Frame");
+            this.Frame.Name = "Frame";
+            this.Frame.ReadOnly = true;
+            // 
+            // TID
+            // 
+            this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TID.DataPropertyName = "TID";
+            resources.ApplyResources(this.TID, "TID");
+            this.TID.Name = "TID";
+            this.TID.ReadOnly = true;
+            // 
+            // SID
+            // 
+            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SID.DataPropertyName = "SID";
+            resources.ApplyResources(this.SID, "SID");
+            this.SID.Name = "SID";
+            this.SID.ReadOnly = true;
+            // 
+            // Animation
+            // 
+            this.Animation.DataPropertyName = "Animation";
+            resources.ApplyResources(this.Animation, "Animation");
+            this.Animation.Name = "Animation";
+            this.Animation.ReadOnly = true;
+            // 
+            // Brilliant
+            // 
+            this.Brilliant.DataPropertyName = "Brilliant";
+            resources.ApplyResources(this.Brilliant, "Brilliant");
+            this.Brilliant.Name = "Brilliant";
+            this.Brilliant.ReadOnly = true;
+            // 
+            // Level
+            // 
+            this.Level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Level.DataPropertyName = "Level";
+            resources.ApplyResources(this.Level, "Level");
+            this.Level.Name = "Level";
+            this.Level.ReadOnly = true;
+            // 
+            // Slot
+            // 
+            this.Slot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Slot.DataPropertyName = "Slot";
+            resources.ApplyResources(this.Slot, "Slot");
+            this.Slot.Name = "Slot";
+            this.Slot.ReadOnly = true;
+            // 
+            // PID
+            // 
+            this.PID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.PID.DataPropertyName = "PID";
+            resources.ApplyResources(this.PID, "PID");
+            this.PID.Name = "PID";
+            this.PID.ReadOnly = true;
+            // 
+            // EC
+            // 
+            this.EC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.EC.DataPropertyName = "EC";
+            resources.ApplyResources(this.EC, "EC");
+            this.EC.Name = "EC";
+            this.EC.ReadOnly = true;
+            // 
+            // Shiny
+            // 
+            this.Shiny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Shiny.DataPropertyName = "Shiny";
+            resources.ApplyResources(this.Shiny, "Shiny");
+            this.Shiny.Name = "Shiny";
+            this.Shiny.ReadOnly = true;
+            // 
+            // Ability
+            // 
+            this.Ability.DataPropertyName = "Ability";
+            resources.ApplyResources(this.Ability, "Ability");
+            this.Ability.Name = "Ability";
+            this.Ability.ReadOnly = true;
+            // 
+            // Nature
+            // 
+            this.Nature.DataPropertyName = "Nature";
+            resources.ApplyResources(this.Nature, "Nature");
+            this.Nature.Name = "Nature";
+            this.Nature.ReadOnly = true;
+            // 
+            // HP
+            // 
+            this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.HP.DataPropertyName = "HP";
+            resources.ApplyResources(this.HP, "HP");
+            this.HP.Name = "HP";
+            this.HP.ReadOnly = true;
+            // 
+            // Atk
+            // 
+            this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Atk.DataPropertyName = "Atk";
+            resources.ApplyResources(this.Atk, "Atk");
+            this.Atk.Name = "Atk";
+            this.Atk.ReadOnly = true;
+            // 
+            // Def
+            // 
+            this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Def.DataPropertyName = "Def";
+            resources.ApplyResources(this.Def, "Def");
+            this.Def.Name = "Def";
+            this.Def.ReadOnly = true;
+            // 
+            // SpA
+            // 
+            this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.SpA.DataPropertyName = "SpA";
+            resources.ApplyResources(this.SpA, "SpA");
+            this.SpA.Name = "SpA";
+            this.SpA.ReadOnly = true;
+            // 
+            // SpD
+            // 
+            this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.SpD.DataPropertyName = "SpD";
+            resources.ApplyResources(this.SpD, "SpD");
+            this.SpD.Name = "SpD";
+            this.SpD.ReadOnly = true;
+            // 
+            // Spe
+            // 
+            this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Spe.DataPropertyName = "Spe";
+            resources.ApplyResources(this.Spe, "Spe");
+            this.Spe.Name = "Spe";
+            this.Spe.ReadOnly = true;
+            // 
+            // Mark
+            // 
+            this.Mark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Mark.DataPropertyName = "Mark";
+            resources.ApplyResources(this.Mark, "Mark");
+            this.Mark.Name = "Mark";
+            this.Mark.ReadOnly = true;
+            // 
+            // State0
+            // 
+            this.State0.DataPropertyName = "State0";
+            resources.ApplyResources(this.State0, "State0");
+            this.State0.Name = "State0";
+            this.State0.ReadOnly = true;
+            // 
+            // State1
+            // 
+            this.State1.DataPropertyName = "State1";
+            resources.ApplyResources(this.State1, "State1");
+            this.State1.Name = "State1";
+            this.State1.ReadOnly = true;
+            // 
             // ImageRareMark
             // 
             resources.ApplyResources(this.ImageRareMark, "ImageRareMark");
@@ -1207,7 +1207,14 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.CheckBox CheckTIDSIDFinder;
         private System.Windows.Forms.Label LabelEMs;
         private System.Windows.Forms.TextBox InputEMs;
+        private System.Windows.Forms.Label LabelFlawlessIVs;
+        private System.Windows.Forms.TextBox InputFlawlessIVs;
+        private System.Windows.Forms.MenuItem LanguageMenu;
+        private System.Windows.Forms.MenuItem EnglishMenu;
+        private System.Windows.Forms.MenuItem SpanishMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frame;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Animation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Brilliant;
         private System.Windows.Forms.DataGridViewTextBoxColumn Level;
@@ -1224,14 +1231,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn SpD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Spe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mark;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SID;
         private System.Windows.Forms.DataGridViewTextBoxColumn State0;
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
-        private System.Windows.Forms.Label LabelFlawlessIVs;
-        private System.Windows.Forms.TextBox InputFlawlessIVs;
-        private System.Windows.Forms.MenuItem LanguageMenu;
-        private System.Windows.Forms.MenuItem EnglishMenu;
-        private System.Windows.Forms.MenuItem SpanishMenu;
     }
 }

@@ -118,11 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LabelState0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 9</value>
+  </data>
   <data name="LabelState0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 13</value>
+    <value>55, 13</value>
   </data>
   <data name="LabelState0.Text" xml:space="preserve">
-    <value>State[0]:</value>
+    <value>Estado[0]:</value>
+  </data>
+  <data name="LabelState1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 35</value>
+  </data>
+  <data name="LabelState1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="LabelState1.Text" xml:space="preserve">
+    <value>Estado[1]:</value>
+  </data>
+  <data name="LabelMaxAdv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 117</value>
+  </data>
+  <data name="LabelMaxAdv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="LabelMaxAdv.Text" xml:space="preserve">
+    <value>Av. Max:</value>
   </data>
   <data name="LabelMark.Location" type="System.Drawing.Point, System.Drawing">
     <value>292, 165</value>
@@ -151,17 +172,26 @@
   <data name="CheckWeather.Text" xml:space="preserve">
     <value>Clima</value>
   </data>
+  <data name="CheckStatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 144</value>
+  </data>
   <data name="CheckStatic.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
   </data>
   <data name="CheckStatic.Text" xml:space="preserve">
     <value>Estático</value>
   </data>
+  <data name="CheckFishing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 167</value>
+  </data>
   <data name="CheckFishing.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 17</value>
   </data>
   <data name="CheckFishing.Text" xml:space="preserve">
     <value>Pesca</value>
+  </data>
+  <data name="CheckHeldItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 190</value>
   </data>
   <data name="CheckHeldItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 17</value>
@@ -199,14 +229,120 @@
   <data name="ButtonSearch.Text" xml:space="preserve">
     <value>¡Búsqueda!</value>
   </data>
+  <data name="LabelShiny.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 192</value>
+  </data>
+  <data name="LabelShiny.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="LabelShiny.Text" xml:space="preserve">
+    <value>Variocolor:</value>
+  </data>
+  <data name="Animation.HeaderText" xml:space="preserve">
+    <value>Animacion</value>
+  </data>
+  <data name="Brilliant.HeaderText" xml:space="preserve">
+    <value>Aura</value>
+  </data>
+  <data name="Level.HeaderText" xml:space="preserve">
+    <value>Nivel</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Level.Width" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="Slot.HeaderText" xml:space="preserve">
+    <value>Espacio</value>
+  </data>
+  <data name="Slot.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="Shiny.HeaderText" xml:space="preserve">
+    <value>Variocolor</value>
+  </data>
+  <data name="Shiny.Width" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="Ability.HeaderText" xml:space="preserve">
+    <value>Habilidad</value>
+  </data>
+  <data name="Nature.HeaderText" xml:space="preserve">
+    <value>Naturaleza</value>
+  </data>
+  <data name="Mark.HeaderText" xml:space="preserve">
+    <value>Emblema</value>
+  </data>
+  <data name="Mark.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="State0.HeaderText" xml:space="preserve">
+    <value>Estado0</value>
+  </data>
+  <data name="State1.HeaderText" xml:space="preserve">
+    <value>Estado1</value>
+  </data>
   <data name="Results.Size" type="System.Drawing.Size, System.Drawing">
-    <value>746, 118</value>
+    <value>746, 76</value>
+  </data>
+  <data name="RetailAdvancesTrackerLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 13</value>
+  </data>
+  <data name="RetailAdvancesTrackerLabel.Text" xml:space="preserve">
+    <value>Rastreador de Avances En Consola</value>
+  </data>
+  <data name="RetailAdvancesTrackerInitialInputLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 35</value>
+  </data>
+  <data name="RetailAdvancesTrackerInitialInputLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
+  </data>
+  <data name="RetailAdvancesTrackerInitialInputLabel.Text" xml:space="preserve">
+    <value>Av. Iniciales:</value>
+  </data>
+  <data name="RetailAdvancesTrackerGenerateButton.Text" xml:space="preserve">
+    <value>Generar Patron</value>
+  </data>
+  <data name="RetailAdvancesTrackerSequenceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>549, 136</value>
+  </data>
+  <data name="RetailAdvancesTrackerSequenceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 13</value>
+  </data>
+  <data name="RetailAdvancesTrackerSequenceLabel.Text" xml:space="preserve">
+    <value>Secuencia (0: Fisicio, 1: Especial):</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Estado Actual[1]:</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Estado Actual[0]:</value>
+  </data>
+  <data name="RetailAdvancesTrackerNumResultsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
+  </data>
+  <data name="RetailAdvancesTrackerNumResultsLabel.Text" xml:space="preserve">
+    <value>Resultados Posibles: N/D</value>
   </data>
   <data name="CheckIsAbilityLocked.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 17</value>
+    <value>111, 17</value>
   </data>
   <data name="CheckIsAbilityLocked.Text" xml:space="preserve">
-    <value>Ability Forzada</value>
+    <value>Habilidad Forzada</value>
+  </data>
+  <data name="SeedFinderMenu.Text" xml:space="preserve">
+    <value>Buscador De Semilla</value>
+  </data>
+  <data name="ButtonUpdateStates.Text" xml:space="preserve">
+    <value>Actualizar Estados</value>
+  </data>
+  <data name="CheckTIDSIDFinder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 213</value>
   </data>
   <data name="CheckTIDSIDFinder.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 17</value>
@@ -214,11 +350,35 @@
   <data name="CheckTIDSIDFinder.Text" xml:space="preserve">
     <value>Buscar TID/SID</value>
   </data>
+  <data name="LabelKOCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 249</value>
+  </data>
+  <data name="LabelKOCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="LabelKOCount.Text" xml:space="preserve">
+    <value>Cuenta de KO:</value>
+  </data>
+  <data name="InputKOCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 246</value>
+  </data>
+  <data name="LabelEMs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
+  <data name="LabelEMs.Text" xml:space="preserve">
+    <value>Posibles MHs:</value>
+  </data>
+  <data name="LabelFlawlessIVs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 249</value>
+  </data>
+  <data name="LabelFlawlessIVs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
   <data name="LabelFlawlessIVs.Text" xml:space="preserve">
-    <value>Perfecto IVs:</value>
+    <value>IVs Perfectos:</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>769, 498</value>
+    <value>769, 456</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2006,5 +2166,9 @@
         AAAAAAAAAAAAAAAAAAD//wAA//8AAPgfAADwDwAA8A8AAPAPAADwDwAA8A8AAPAPAADwDwAA+B8AAPw/
         AAD8PwAA/n8AAP//AAD//wAA
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
 </root>
