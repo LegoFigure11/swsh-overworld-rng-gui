@@ -662,6 +662,7 @@ namespace SWSH_OWRNG_Generator_GUI
             System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
             this.Controls.Clear();
             this.InitializeComponent();
+            this.Form1_Load(null, null);
         }
 
         private void SpanishMenu_Click(object sender, EventArgs e)
@@ -669,6 +670,7 @@ namespace SWSH_OWRNG_Generator_GUI
             System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("es");
             this.Controls.Clear();
             this.InitializeComponent();
+            this.Form1_Load(null, null);
         }
     }
 }
