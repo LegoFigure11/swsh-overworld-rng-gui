@@ -656,5 +656,19 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedShiny.Enabled = !check;
             this.LabelShiny.Enabled = !check;
         }
+
+        private void EnglishMenu_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            this.Controls.Clear();
+            this.InitializeComponent();
+        }
+
+        private void SpanishMenu_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("es");
+            this.Controls.Clear();
+            this.InitializeComponent();
+        }
     }
 }

@@ -53,7 +53,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputMaxAdv = new System.Windows.Forms.TextBox();
             this.LabelMaxAdv = new System.Windows.Forms.Label();
             this.LabelMark = new System.Windows.Forms.Label();
-            this.ImageRareMark = new System.Windows.Forms.PictureBox();
             this.SelectedMark = new System.Windows.Forms.ComboBox();
             this.CheckShinyCharm = new System.Windows.Forms.CheckBox();
             this.CheckMarkCharm = new System.Windows.Forms.CheckBox();
@@ -137,6 +136,9 @@ namespace SWSH_OWRNG_Generator_GUI
             this.RetailAdvancesTrackerNumResultsLabel = new System.Windows.Forms.Label();
             this.CheckIsAbilityLocked = new System.Windows.Forms.CheckBox();
             this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
+            this.LanguageMenu = new System.Windows.Forms.MenuItem();
+            this.EnglishMenu = new System.Windows.Forms.MenuItem();
+            this.SpanishMenu = new System.Windows.Forms.MenuItem();
             this.SeedFinderMenu = new System.Windows.Forms.MenuItem();
             this.ButtonUpdateStates = new System.Windows.Forms.Button();
             this.CheckTIDSIDFinder = new System.Windows.Forms.CheckBox();
@@ -146,479 +148,314 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputEMs = new System.Windows.Forms.TextBox();
             this.LabelFlawlessIVs = new System.Windows.Forms.Label();
             this.InputFlawlessIVs = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
+            this.ImageRareMark = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelState0
             // 
-            this.LabelState0.AutoSize = true;
-            this.LabelState0.Location = new System.Drawing.Point(15, 9);
+            resources.ApplyResources(this.LabelState0, "LabelState0");
             this.LabelState0.Name = "LabelState0";
-            this.LabelState0.Size = new System.Drawing.Size(50, 13);
-            this.LabelState0.TabIndex = 0;
-            this.LabelState0.Text = "State[0]: ";
             // 
             // InputState0
             // 
-            this.InputState0.Location = new System.Drawing.Point(68, 6);
-            this.InputState0.MaxLength = 16;
+            resources.ApplyResources(this.InputState0, "InputState0");
             this.InputState0.Name = "InputState0";
-            this.InputState0.Size = new System.Drawing.Size(205, 20);
-            this.InputState0.TabIndex = 0;
             this.InputState0.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
             this.InputState0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
             // 
             // InputState1
             // 
-            this.InputState1.Location = new System.Drawing.Point(68, 32);
-            this.InputState1.MaxLength = 16;
+            resources.ApplyResources(this.InputState1, "InputState1");
             this.InputState1.Name = "InputState1";
-            this.InputState1.Size = new System.Drawing.Size(205, 20);
-            this.InputState1.TabIndex = 1;
             this.InputState1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
             this.InputState1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
             // 
             // LabelState1
             // 
-            this.LabelState1.AutoSize = true;
-            this.LabelState1.Location = new System.Drawing.Point(15, 35);
+            resources.ApplyResources(this.LabelState1, "LabelState1");
             this.LabelState1.Name = "LabelState1";
-            this.LabelState1.Size = new System.Drawing.Size(47, 13);
-            this.LabelState1.TabIndex = 3;
-            this.LabelState1.Text = "State[1]:";
             // 
             // hpMin
             // 
-            this.hpMin.Location = new System.Drawing.Point(353, 6);
+            resources.ApplyResources(this.hpMin, "hpMin");
             this.hpMin.Name = "hpMin";
-            this.hpMin.Size = new System.Drawing.Size(28, 20);
-            this.hpMin.TabIndex = 5;
-            this.hpMin.Text = "0";
-            this.hpMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hpMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.hpMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.hpMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // hpMax
             // 
-            this.hpMax.Location = new System.Drawing.Point(403, 6);
+            resources.ApplyResources(this.hpMax, "hpMax");
             this.hpMax.Name = "hpMax";
-            this.hpMax.Size = new System.Drawing.Size(28, 20);
-            this.hpMax.TabIndex = 6;
-            this.hpMax.Text = "31";
-            this.hpMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hpMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.hpMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.hpMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // hpFilter
             // 
-            this.hpFilter.AutoSize = true;
-            this.hpFilter.Location = new System.Drawing.Point(322, 9);
+            resources.ApplyResources(this.hpFilter, "hpFilter");
             this.hpFilter.Name = "hpFilter";
-            this.hpFilter.Size = new System.Drawing.Size(25, 13);
-            this.hpFilter.TabIndex = 16;
-            this.hpFilter.Text = "HP:";
             this.hpFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // atkFilter
             // 
-            this.atkFilter.AutoSize = true;
-            this.atkFilter.Location = new System.Drawing.Point(321, 35);
+            resources.ApplyResources(this.atkFilter, "atkFilter");
             this.atkFilter.Name = "atkFilter";
-            this.atkFilter.Size = new System.Drawing.Size(26, 13);
-            this.atkFilter.TabIndex = 17;
-            this.atkFilter.Text = "Atk:";
             this.atkFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // defFilter
             // 
-            this.defFilter.AutoSize = true;
-            this.defFilter.Location = new System.Drawing.Point(320, 61);
+            resources.ApplyResources(this.defFilter, "defFilter");
             this.defFilter.Name = "defFilter";
-            this.defFilter.Size = new System.Drawing.Size(27, 13);
-            this.defFilter.TabIndex = 18;
-            this.defFilter.Text = "Def:";
             this.defFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // spaFilter
             // 
-            this.spaFilter.AutoSize = true;
-            this.spaFilter.Location = new System.Drawing.Point(317, 87);
+            resources.ApplyResources(this.spaFilter, "spaFilter");
             this.spaFilter.Name = "spaFilter";
-            this.spaFilter.Size = new System.Drawing.Size(30, 13);
-            this.spaFilter.TabIndex = 19;
-            this.spaFilter.Text = "SpA:";
             this.spaFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // spdFilter
             // 
-            this.spdFilter.AutoSize = true;
-            this.spdFilter.Location = new System.Drawing.Point(316, 113);
+            resources.ApplyResources(this.spdFilter, "spdFilter");
             this.spdFilter.Name = "spdFilter";
-            this.spdFilter.Size = new System.Drawing.Size(31, 13);
-            this.spdFilter.TabIndex = 20;
-            this.spdFilter.Text = "SpD:";
             this.spdFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // speFilter
             // 
-            this.speFilter.AutoSize = true;
-            this.speFilter.Location = new System.Drawing.Point(316, 139);
+            resources.ApplyResources(this.speFilter, "speFilter");
             this.speFilter.Name = "speFilter";
-            this.speFilter.Size = new System.Drawing.Size(29, 13);
-            this.speFilter.TabIndex = 21;
-            this.speFilter.Text = "Spe:";
             this.speFilter.Click += new System.EventHandler(this.ResetFilters);
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(387, 9);
+            resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(10, 13);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "-";
             // 
             // hpMinFilter
             // 
-            this.hpMinFilter.Location = new System.Drawing.Point(437, 5);
+            resources.ApplyResources(this.hpMinFilter, "hpMinFilter");
             this.hpMinFilter.Name = "hpMinFilter";
-            this.hpMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.hpMinFilter.TabIndex = 17;
-            this.hpMinFilter.Text = "0";
             this.hpMinFilter.UseVisualStyleBackColor = true;
             this.hpMinFilter.Click += new System.EventHandler(this.HpMinFilter_Click);
             // 
             // hpMaxFilter
             // 
-            this.hpMaxFilter.Location = new System.Drawing.Point(471, 5);
+            resources.ApplyResources(this.hpMaxFilter, "hpMaxFilter");
             this.hpMaxFilter.Name = "hpMaxFilter";
-            this.hpMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.hpMaxFilter.TabIndex = 18;
-            this.hpMaxFilter.Text = "31";
             this.hpMaxFilter.UseVisualStyleBackColor = true;
             this.hpMaxFilter.Click += new System.EventHandler(this.HpMaxFilter_Click);
             // 
             // InputTID
             // 
-            this.InputTID.Location = new System.Drawing.Point(68, 61);
-            this.InputTID.MaxLength = 5;
+            resources.ApplyResources(this.InputTID, "InputTID");
             this.InputTID.Name = "InputTID";
-            this.InputTID.Size = new System.Drawing.Size(102, 20);
-            this.InputTID.TabIndex = 2;
-            this.InputTID.Text = "01390";
             this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             this.InputTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputTID.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // InputSID
             // 
-            this.InputSID.Location = new System.Drawing.Point(68, 87);
-            this.InputSID.MaxLength = 5;
+            resources.ApplyResources(this.InputSID, "InputSID");
             this.InputSID.Name = "InputSID";
-            this.InputSID.Size = new System.Drawing.Size(102, 20);
-            this.InputSID.TabIndex = 3;
-            this.InputSID.Text = "01337";
             this.InputSID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             this.InputSID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputSID.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // LabelTID
             // 
-            this.LabelTID.AutoSize = true;
-            this.LabelTID.Location = new System.Drawing.Point(34, 64);
+            resources.ApplyResources(this.LabelTID, "LabelTID");
             this.LabelTID.Name = "LabelTID";
-            this.LabelTID.Size = new System.Drawing.Size(28, 13);
-            this.LabelTID.TabIndex = 47;
-            this.LabelTID.Text = "TID:";
             // 
             // LabelSID
             // 
-            this.LabelSID.AutoSize = true;
-            this.LabelSID.Location = new System.Drawing.Point(34, 90);
+            resources.ApplyResources(this.LabelSID, "LabelSID");
             this.LabelSID.Name = "LabelSID";
-            this.LabelSID.Size = new System.Drawing.Size(28, 13);
-            this.LabelSID.TabIndex = 48;
-            this.LabelSID.Text = "SID:";
             // 
             // InputMaxAdv
             // 
-            this.InputMaxAdv.Location = new System.Drawing.Point(68, 113);
-            this.InputMaxAdv.MaxLength = 13;
+            resources.ApplyResources(this.InputMaxAdv, "InputMaxAdv");
             this.InputMaxAdv.Name = "InputMaxAdv";
-            this.InputMaxAdv.Size = new System.Drawing.Size(102, 20);
-            this.InputMaxAdv.TabIndex = 4;
-            this.InputMaxAdv.Text = "500000";
             // 
             // LabelMaxAdv
             // 
-            this.LabelMaxAdv.AutoSize = true;
-            this.LabelMaxAdv.Location = new System.Drawing.Point(7, 117);
+            resources.ApplyResources(this.LabelMaxAdv, "LabelMaxAdv");
             this.LabelMaxAdv.Name = "LabelMaxAdv";
-            this.LabelMaxAdv.Size = new System.Drawing.Size(55, 13);
-            this.LabelMaxAdv.TabIndex = 50;
-            this.LabelMaxAdv.Text = "Max Adv.:";
             // 
             // LabelMark
             // 
-            this.LabelMark.AutoSize = true;
-            this.LabelMark.Location = new System.Drawing.Point(313, 165);
+            resources.ApplyResources(this.LabelMark, "LabelMark");
             this.LabelMark.Name = "LabelMark";
-            this.LabelMark.Size = new System.Drawing.Size(34, 13);
-            this.LabelMark.TabIndex = 52;
-            this.LabelMark.Text = "Mark:";
-            // 
-            // ImageRareMark
-            // 
-            this.ImageRareMark.Image = global::SWSH_OWRNG_Generator_GUI.Properties.Resources.raremark;
-            this.ImageRareMark.Location = new System.Drawing.Point(182, 58);
-            this.ImageRareMark.Name = "ImageRareMark";
-            this.ImageRareMark.Size = new System.Drawing.Size(128, 128);
-            this.ImageRareMark.TabIndex = 53;
-            this.ImageRareMark.TabStop = false;
             // 
             // SelectedMark
             // 
+            resources.ApplyResources(this.SelectedMark, "SelectedMark");
             this.SelectedMark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectedMark.FormattingEnabled = true;
             this.SelectedMark.Items.AddRange(new object[] {
-            "Ignore",
-            "None",
-            "Any Mark",
-            "Any Personality",
-            "Uncommon",
-            "Time",
-            "Weather",
-            "Fishing",
-            "Rare",
-            "Rowdy",
-            "AbsentMinded",
-            "Jittery",
-            "Excited",
-            "Charismatic",
-            "Calmness",
-            "Intense",
-            "ZonedOut",
-            "Joyful",
-            "Angry",
-            "Smiley",
-            "Teary",
-            "Upbeat",
-            "Peeved",
-            "Intellectual",
-            "Ferocious",
-            "Crafty",
-            "Scowling",
-            "Kindly",
-            "Flustered",
-            "PumpedUp",
-            "ZeroEnergy",
-            "Prideful",
-            "Unsure",
-            "Humble",
-            "Thorny",
-            "Vigor",
-            "Slump"});
-            this.SelectedMark.Location = new System.Drawing.Point(353, 162);
+            resources.GetString("SelectedMark.Items"),
+            resources.GetString("SelectedMark.Items1"),
+            resources.GetString("SelectedMark.Items2"),
+            resources.GetString("SelectedMark.Items3"),
+            resources.GetString("SelectedMark.Items4"),
+            resources.GetString("SelectedMark.Items5"),
+            resources.GetString("SelectedMark.Items6"),
+            resources.GetString("SelectedMark.Items7"),
+            resources.GetString("SelectedMark.Items8"),
+            resources.GetString("SelectedMark.Items9"),
+            resources.GetString("SelectedMark.Items10"),
+            resources.GetString("SelectedMark.Items11"),
+            resources.GetString("SelectedMark.Items12"),
+            resources.GetString("SelectedMark.Items13"),
+            resources.GetString("SelectedMark.Items14"),
+            resources.GetString("SelectedMark.Items15"),
+            resources.GetString("SelectedMark.Items16"),
+            resources.GetString("SelectedMark.Items17"),
+            resources.GetString("SelectedMark.Items18"),
+            resources.GetString("SelectedMark.Items19"),
+            resources.GetString("SelectedMark.Items20"),
+            resources.GetString("SelectedMark.Items21"),
+            resources.GetString("SelectedMark.Items22"),
+            resources.GetString("SelectedMark.Items23"),
+            resources.GetString("SelectedMark.Items24"),
+            resources.GetString("SelectedMark.Items25"),
+            resources.GetString("SelectedMark.Items26"),
+            resources.GetString("SelectedMark.Items27"),
+            resources.GetString("SelectedMark.Items28"),
+            resources.GetString("SelectedMark.Items29"),
+            resources.GetString("SelectedMark.Items30"),
+            resources.GetString("SelectedMark.Items31"),
+            resources.GetString("SelectedMark.Items32"),
+            resources.GetString("SelectedMark.Items33"),
+            resources.GetString("SelectedMark.Items34"),
+            resources.GetString("SelectedMark.Items35"),
+            resources.GetString("SelectedMark.Items36")});
             this.SelectedMark.Name = "SelectedMark";
-            this.SelectedMark.Size = new System.Drawing.Size(147, 21);
-            this.SelectedMark.TabIndex = 29;
             // 
             // CheckShinyCharm
             // 
-            this.CheckShinyCharm.AutoSize = true;
-            this.CheckShinyCharm.Location = new System.Drawing.Point(12, 144);
+            resources.ApplyResources(this.CheckShinyCharm, "CheckShinyCharm");
             this.CheckShinyCharm.Name = "CheckShinyCharm";
-            this.CheckShinyCharm.Size = new System.Drawing.Size(85, 17);
-            this.CheckShinyCharm.TabIndex = 31;
-            this.CheckShinyCharm.Text = "Shiny Charm";
             this.CheckShinyCharm.UseVisualStyleBackColor = true;
             this.CheckShinyCharm.CheckedChanged += new System.EventHandler(this.SaveCheckbox_CheckChanged);
             // 
             // CheckMarkCharm
             // 
-            this.CheckMarkCharm.AutoSize = true;
-            this.CheckMarkCharm.Location = new System.Drawing.Point(12, 167);
+            resources.ApplyResources(this.CheckMarkCharm, "CheckMarkCharm");
             this.CheckMarkCharm.Name = "CheckMarkCharm";
-            this.CheckMarkCharm.Size = new System.Drawing.Size(83, 17);
-            this.CheckMarkCharm.TabIndex = 33;
-            this.CheckMarkCharm.Text = "Mark Charm";
             this.CheckMarkCharm.UseVisualStyleBackColor = true;
             this.CheckMarkCharm.CheckedChanged += new System.EventHandler(this.SaveCheckbox_CheckChanged);
             // 
             // CheckWeather
             // 
-            this.CheckWeather.AutoSize = true;
-            this.CheckWeather.Location = new System.Drawing.Point(12, 190);
+            resources.ApplyResources(this.CheckWeather, "CheckWeather");
             this.CheckWeather.Name = "CheckWeather";
-            this.CheckWeather.Size = new System.Drawing.Size(67, 17);
-            this.CheckWeather.TabIndex = 35;
-            this.CheckWeather.Text = "Weather";
             this.CheckWeather.UseVisualStyleBackColor = true;
             // 
             // CheckStatic
             // 
-            this.CheckStatic.AutoSize = true;
-            this.CheckStatic.Location = new System.Drawing.Point(116, 144);
+            resources.ApplyResources(this.CheckStatic, "CheckStatic");
             this.CheckStatic.Name = "CheckStatic";
-            this.CheckStatic.Size = new System.Drawing.Size(53, 17);
-            this.CheckStatic.TabIndex = 32;
-            this.CheckStatic.Text = "Static";
             this.CheckStatic.UseVisualStyleBackColor = true;
             this.CheckStatic.CheckedChanged += new System.EventHandler(this.CheckStatic_CheckedChanged);
             // 
             // CheckFishing
             // 
-            this.CheckFishing.AutoSize = true;
-            this.CheckFishing.Location = new System.Drawing.Point(116, 167);
+            resources.ApplyResources(this.CheckFishing, "CheckFishing");
             this.CheckFishing.Name = "CheckFishing";
-            this.CheckFishing.Size = new System.Drawing.Size(59, 17);
-            this.CheckFishing.TabIndex = 34;
-            this.CheckFishing.Text = "Fishing";
             this.CheckFishing.UseVisualStyleBackColor = true;
             // 
             // CheckHeldItem
             // 
-            this.CheckHeldItem.AutoSize = true;
-            this.CheckHeldItem.Location = new System.Drawing.Point(116, 190);
+            resources.ApplyResources(this.CheckHeldItem, "CheckHeldItem");
             this.CheckHeldItem.Name = "CheckHeldItem";
-            this.CheckHeldItem.Size = new System.Drawing.Size(111, 17);
-            this.CheckHeldItem.TabIndex = 36;
-            this.CheckHeldItem.Text = "Random held item";
             this.CheckHeldItem.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(335, 275);
+            resources.ApplyResources(this.label20, "label20");
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(10, 13);
-            this.label20.TabIndex = 64;
-            this.label20.Text = "-";
             // 
             // InputLevelMax
             // 
-            this.InputLevelMax.Location = new System.Drawing.Point(351, 272);
-            this.InputLevelMax.MaxLength = 2;
+            resources.ApplyResources(this.InputLevelMax, "InputLevelMax");
             this.InputLevelMax.Name = "InputLevelMax";
-            this.InputLevelMax.Size = new System.Drawing.Size(28, 20);
-            this.InputLevelMax.TabIndex = 39;
-            this.InputLevelMax.Text = "0";
-            this.InputLevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputLevelMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             this.InputLevelMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputLevelMax.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // InputLevelMin
             // 
-            this.InputLevelMin.Location = new System.Drawing.Point(301, 272);
-            this.InputLevelMin.MaxLength = 2;
+            resources.ApplyResources(this.InputLevelMin, "InputLevelMin");
             this.InputLevelMin.Name = "InputLevelMin";
-            this.InputLevelMin.Size = new System.Drawing.Size(28, 20);
-            this.InputLevelMin.TabIndex = 38;
-            this.InputLevelMin.Text = "0";
-            this.InputLevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputLevelMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             this.InputLevelMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputLevelMin.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(454, 275);
+            resources.ApplyResources(this.label21, "label21");
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(10, 13);
-            this.label21.TabIndex = 67;
-            this.label21.Text = "-";
             // 
             // InputSlotMax
             // 
-            this.InputSlotMax.Location = new System.Drawing.Point(470, 272);
-            this.InputSlotMax.MaxLength = 2;
+            resources.ApplyResources(this.InputSlotMax, "InputSlotMax");
             this.InputSlotMax.Name = "InputSlotMax";
-            this.InputSlotMax.Size = new System.Drawing.Size(28, 20);
-            this.InputSlotMax.TabIndex = 41;
-            this.InputSlotMax.Text = "99";
-            this.InputSlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputSlotMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             this.InputSlotMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputSlotMax.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // InputSlotMin
             // 
-            this.InputSlotMin.Location = new System.Drawing.Point(420, 272);
-            this.InputSlotMin.MaxLength = 2;
+            resources.ApplyResources(this.InputSlotMin, "InputSlotMin");
             this.InputSlotMin.Name = "InputSlotMin";
-            this.InputSlotMin.Size = new System.Drawing.Size(28, 20);
-            this.InputSlotMin.TabIndex = 40;
-            this.InputSlotMin.Text = "0";
-            this.InputSlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputSlotMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
             this.InputSlotMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputSlotMin.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // LabelLevel
             // 
-            this.LabelLevel.AutoSize = true;
-            this.LabelLevel.Location = new System.Drawing.Point(259, 275);
+            resources.ApplyResources(this.LabelLevel, "LabelLevel");
             this.LabelLevel.Name = "LabelLevel";
-            this.LabelLevel.Size = new System.Drawing.Size(36, 13);
-            this.LabelLevel.TabIndex = 68;
-            this.LabelLevel.Text = "Level:";
             // 
             // LabelSlot
             // 
-            this.LabelSlot.AutoSize = true;
-            this.LabelSlot.Location = new System.Drawing.Point(387, 275);
+            resources.ApplyResources(this.LabelSlot, "LabelSlot");
             this.LabelSlot.Name = "LabelSlot";
-            this.LabelSlot.Size = new System.Drawing.Size(28, 13);
-            this.LabelSlot.TabIndex = 69;
-            this.LabelSlot.Text = "Slot:";
             // 
             // ButtonSearch
             // 
-            this.ButtonSearch.Location = new System.Drawing.Point(10, 298);
+            resources.ApplyResources(this.ButtonSearch, "ButtonSearch");
             this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.Size = new System.Drawing.Size(488, 37);
-            this.ButtonSearch.TabIndex = 42;
-            this.ButtonSearch.Text = "Search!";
             this.ButtonSearch.UseVisualStyleBackColor = true;
             this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // SelectedShiny
             // 
+            resources.ApplyResources(this.SelectedShiny, "SelectedShiny");
             this.SelectedShiny.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectedShiny.FormattingEnabled = true;
             this.SelectedShiny.Items.AddRange(new object[] {
-            "Ignore",
-            "No",
-            "Square",
-            "Star",
-            "Star/Square"});
-            this.SelectedShiny.Location = new System.Drawing.Point(353, 189);
+            resources.GetString("SelectedShiny.Items"),
+            resources.GetString("SelectedShiny.Items1"),
+            resources.GetString("SelectedShiny.Items2"),
+            resources.GetString("SelectedShiny.Items3"),
+            resources.GetString("SelectedShiny.Items4")});
             this.SelectedShiny.Name = "SelectedShiny";
-            this.SelectedShiny.Size = new System.Drawing.Size(147, 21);
-            this.SelectedShiny.TabIndex = 30;
             // 
             // LabelShiny
             // 
-            this.LabelShiny.AutoSize = true;
-            this.LabelShiny.Location = new System.Drawing.Point(309, 192);
+            resources.ApplyResources(this.LabelShiny, "LabelShiny");
             this.LabelShiny.Name = "LabelShiny";
-            this.LabelShiny.Size = new System.Drawing.Size(36, 13);
-            this.LabelShiny.TabIndex = 71;
-            this.LabelShiny.Text = "Shiny:";
             // 
             // Results
             // 
+            resources.ApplyResources(this.Results, "Results");
             this.Results.AllowUserToAddRows = false;
             this.Results.AllowUserToDeleteRows = false;
-            this.Results.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Results.AutoGenerateColumns = false;
             this.Results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -644,55 +481,43 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State0,
             this.State1});
             this.Results.DataSource = this.generatorBindingSource;
-            this.Results.Location = new System.Drawing.Point(12, 368);
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
-            this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(746, 160);
-            this.Results.TabIndex = 73;
             // 
             // Frame
             // 
             this.Frame.DataPropertyName = "Advances";
-            this.Frame.HeaderText = "Frame";
-            this.Frame.MinimumWidth = 8;
+            resources.ApplyResources(this.Frame, "Frame");
             this.Frame.Name = "Frame";
             this.Frame.ReadOnly = true;
-            this.Frame.Width = 150;
             // 
             // TID
             // 
             this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.TID.DataPropertyName = "TID";
-            this.TID.HeaderText = "TID";
-            this.TID.MinimumWidth = 8;
+            resources.ApplyResources(this.TID, "TID");
             this.TID.Name = "TID";
             this.TID.ReadOnly = true;
-            this.TID.Width = 50;
             // 
             // SID
             // 
             this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.SID.DataPropertyName = "SID";
-            this.SID.HeaderText = "SID";
-            this.SID.MinimumWidth = 8;
+            resources.ApplyResources(this.SID, "SID");
             this.SID.Name = "SID";
             this.SID.ReadOnly = true;
-            this.SID.Width = 50;
             // 
             // Animation
             // 
             this.Animation.DataPropertyName = "Animation";
-            this.Animation.HeaderText = "Animation";
-            this.Animation.MinimumWidth = 8;
+            resources.ApplyResources(this.Animation, "Animation");
             this.Animation.Name = "Animation";
             this.Animation.ReadOnly = true;
-            this.Animation.Width = 60;
             // 
             // Brilliant
             // 
             this.Brilliant.DataPropertyName = "Brilliant";
-            this.Brilliant.HeaderText = "Brilliant";
+            resources.ApplyResources(this.Brilliant, "Brilliant");
             this.Brilliant.Name = "Brilliant";
             this.Brilliant.ReadOnly = true;
             // 
@@ -700,676 +525,491 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.Level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Level.DataPropertyName = "Level";
-            this.Level.HeaderText = "Level";
-            this.Level.MinimumWidth = 8;
+            resources.ApplyResources(this.Level, "Level");
             this.Level.Name = "Level";
             this.Level.ReadOnly = true;
-            this.Level.Width = 58;
             // 
             // Slot
             // 
             this.Slot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Slot.DataPropertyName = "Slot";
-            this.Slot.HeaderText = "Slot";
-            this.Slot.MinimumWidth = 8;
+            resources.ApplyResources(this.Slot, "Slot");
             this.Slot.Name = "Slot";
             this.Slot.ReadOnly = true;
-            this.Slot.Width = 50;
             // 
             // PID
             // 
             this.PID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.PID.DataPropertyName = "PID";
-            this.PID.HeaderText = "PID";
-            this.PID.MinimumWidth = 8;
+            resources.ApplyResources(this.PID, "PID");
             this.PID.Name = "PID";
             this.PID.ReadOnly = true;
-            this.PID.Width = 50;
             // 
             // EC
             // 
             this.EC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.EC.DataPropertyName = "EC";
-            this.EC.HeaderText = "EC";
-            this.EC.MinimumWidth = 8;
+            resources.ApplyResources(this.EC, "EC");
             this.EC.Name = "EC";
             this.EC.ReadOnly = true;
-            this.EC.Width = 46;
             // 
             // Shiny
             // 
             this.Shiny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Shiny.DataPropertyName = "Shiny";
-            this.Shiny.HeaderText = "Shiny";
-            this.Shiny.MinimumWidth = 8;
+            resources.ApplyResources(this.Shiny, "Shiny");
             this.Shiny.Name = "Shiny";
             this.Shiny.ReadOnly = true;
-            this.Shiny.Width = 58;
             // 
             // Ability
             // 
             this.Ability.DataPropertyName = "Ability";
-            this.Ability.HeaderText = "Ability";
-            this.Ability.MinimumWidth = 8;
+            resources.ApplyResources(this.Ability, "Ability");
             this.Ability.Name = "Ability";
             this.Ability.ReadOnly = true;
-            this.Ability.Width = 50;
             // 
             // Nature
             // 
             this.Nature.DataPropertyName = "Nature";
-            this.Nature.HeaderText = "Nature";
-            this.Nature.MinimumWidth = 8;
+            resources.ApplyResources(this.Nature, "Nature");
             this.Nature.Name = "Nature";
             this.Nature.ReadOnly = true;
-            this.Nature.Width = 75;
             // 
             // HP
             // 
             this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.HP.DataPropertyName = "HP";
-            this.HP.HeaderText = "HP";
-            this.HP.MinimumWidth = 8;
+            resources.ApplyResources(this.HP, "HP");
             this.HP.Name = "HP";
             this.HP.ReadOnly = true;
-            this.HP.Width = 34;
             // 
             // Atk
             // 
             this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Atk.DataPropertyName = "Atk";
-            this.Atk.HeaderText = "Atk";
-            this.Atk.MinimumWidth = 8;
+            resources.ApplyResources(this.Atk, "Atk");
             this.Atk.Name = "Atk";
             this.Atk.ReadOnly = true;
-            this.Atk.Width = 34;
             // 
             // Def
             // 
             this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Def.DataPropertyName = "Def";
-            this.Def.HeaderText = "Def";
-            this.Def.MinimumWidth = 8;
+            resources.ApplyResources(this.Def, "Def");
             this.Def.Name = "Def";
             this.Def.ReadOnly = true;
-            this.Def.Width = 34;
             // 
             // SpA
             // 
             this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.SpA.DataPropertyName = "SpA";
-            this.SpA.HeaderText = "SpA";
-            this.SpA.MinimumWidth = 8;
+            resources.ApplyResources(this.SpA, "SpA");
             this.SpA.Name = "SpA";
             this.SpA.ReadOnly = true;
-            this.SpA.Width = 34;
             // 
             // SpD
             // 
             this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.SpD.DataPropertyName = "SpD";
-            this.SpD.HeaderText = "SpD";
-            this.SpD.MinimumWidth = 8;
+            resources.ApplyResources(this.SpD, "SpD");
             this.SpD.Name = "SpD";
             this.SpD.ReadOnly = true;
-            this.SpD.Width = 34;
             // 
             // Spe
             // 
             this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Spe.DataPropertyName = "Spe";
-            this.Spe.HeaderText = "Spe";
-            this.Spe.MinimumWidth = 8;
+            resources.ApplyResources(this.Spe, "Spe");
             this.Spe.Name = "Spe";
             this.Spe.ReadOnly = true;
-            this.Spe.Width = 34;
             // 
             // Mark
             // 
             this.Mark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Mark.DataPropertyName = "Mark";
-            this.Mark.HeaderText = "Mark";
-            this.Mark.MinimumWidth = 8;
+            resources.ApplyResources(this.Mark, "Mark");
             this.Mark.Name = "Mark";
             this.Mark.ReadOnly = true;
-            this.Mark.Width = 56;
             // 
             // State0
             // 
             this.State0.DataPropertyName = "State0";
-            this.State0.HeaderText = "State0";
-            this.State0.MinimumWidth = 8;
+            resources.ApplyResources(this.State0, "State0");
             this.State0.Name = "State0";
             this.State0.ReadOnly = true;
-            this.State0.Width = 150;
             // 
             // State1
             // 
             this.State1.DataPropertyName = "State1";
-            this.State1.HeaderText = "State1";
-            this.State1.MinimumWidth = 8;
+            resources.ApplyResources(this.State1, "State1");
             this.State1.Name = "State1";
             this.State1.ReadOnly = true;
-            this.State1.Width = 150;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(387, 61);
+            resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(10, 13);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "-";
             // 
             // speMinFilter
             // 
-            this.speMinFilter.Location = new System.Drawing.Point(436, 136);
+            resources.ApplyResources(this.speMinFilter, "speMinFilter");
             this.speMinFilter.Name = "speMinFilter";
-            this.speMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.speMinFilter.TabIndex = 27;
-            this.speMinFilter.Text = "0";
             this.speMinFilter.UseVisualStyleBackColor = true;
             this.speMinFilter.Click += new System.EventHandler(this.SpeMinFilter_Click);
             // 
             // defMax
             // 
-            this.defMax.Location = new System.Drawing.Point(403, 58);
+            resources.ApplyResources(this.defMax, "defMax");
             this.defMax.Name = "defMax";
-            this.defMax.Size = new System.Drawing.Size(28, 20);
-            this.defMax.TabIndex = 10;
-            this.defMax.Text = "31";
-            this.defMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.defMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.defMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.defMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(387, 87);
+            resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(10, 13);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "-";
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(387, 139);
+            resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(10, 13);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "-";
             // 
             // spdMinFilter
             // 
-            this.spdMinFilter.Location = new System.Drawing.Point(436, 110);
+            resources.ApplyResources(this.spdMinFilter, "spdMinFilter");
             this.spdMinFilter.Name = "spdMinFilter";
-            this.spdMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.spdMinFilter.TabIndex = 25;
-            this.spdMinFilter.Text = "0";
             this.spdMinFilter.UseVisualStyleBackColor = true;
             this.spdMinFilter.Click += new System.EventHandler(this.SpdMinFilter_Click);
             // 
             // spdMaxFilter
             // 
-            this.spdMaxFilter.Location = new System.Drawing.Point(471, 110);
+            resources.ApplyResources(this.spdMaxFilter, "spdMaxFilter");
             this.spdMaxFilter.Name = "spdMaxFilter";
-            this.spdMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.spdMaxFilter.TabIndex = 26;
-            this.spdMaxFilter.Text = "31";
             this.spdMaxFilter.UseVisualStyleBackColor = true;
             this.spdMaxFilter.Click += new System.EventHandler(this.SpdMaxFilter_Click);
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(387, 35);
+            resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(10, 13);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "-";
             // 
             // speMaxFilter
             // 
-            this.speMaxFilter.Location = new System.Drawing.Point(471, 136);
+            resources.ApplyResources(this.speMaxFilter, "speMaxFilter");
             this.speMaxFilter.Name = "speMaxFilter";
-            this.speMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.speMaxFilter.TabIndex = 28;
-            this.speMaxFilter.Text = "31";
             this.speMaxFilter.UseVisualStyleBackColor = true;
             this.speMaxFilter.Click += new System.EventHandler(this.SpeMaxFilter_Click);
             // 
             // spaMin
             // 
-            this.spaMin.Location = new System.Drawing.Point(353, 84);
+            resources.ApplyResources(this.spaMin, "spaMin");
             this.spaMin.Name = "spaMin";
-            this.spaMin.Size = new System.Drawing.Size(28, 20);
-            this.spaMin.TabIndex = 11;
-            this.spaMin.Text = "0";
-            this.spaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spaMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.spaMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.spaMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // atkMinFilter
             // 
-            this.atkMinFilter.Location = new System.Drawing.Point(437, 32);
+            resources.ApplyResources(this.atkMinFilter, "atkMinFilter");
             this.atkMinFilter.Name = "atkMinFilter";
-            this.atkMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.atkMinFilter.TabIndex = 19;
-            this.atkMinFilter.Text = "0";
             this.atkMinFilter.UseVisualStyleBackColor = true;
             this.atkMinFilter.Click += new System.EventHandler(this.AtkMinFilter_Click);
             // 
             // spdMin
             // 
-            this.spdMin.Location = new System.Drawing.Point(353, 110);
+            resources.ApplyResources(this.spdMin, "spdMin");
             this.spdMin.Name = "spdMin";
-            this.spdMin.Size = new System.Drawing.Size(28, 20);
-            this.spdMin.TabIndex = 13;
-            this.spdMin.Text = "0";
-            this.spdMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spdMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.spdMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.spdMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // spdMax
             // 
-            this.spdMax.Location = new System.Drawing.Point(403, 110);
+            resources.ApplyResources(this.spdMax, "spdMax");
             this.spdMax.Name = "spdMax";
-            this.spdMax.Size = new System.Drawing.Size(28, 20);
-            this.spdMax.TabIndex = 14;
-            this.spdMax.Text = "31";
-            this.spdMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spdMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.spdMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.spdMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // speMin
             // 
-            this.speMin.Location = new System.Drawing.Point(353, 136);
+            resources.ApplyResources(this.speMin, "speMin");
             this.speMin.Name = "speMin";
-            this.speMin.Size = new System.Drawing.Size(28, 20);
-            this.speMin.TabIndex = 15;
-            this.speMin.Text = "0";
-            this.speMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.speMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.speMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.speMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // speMax
             // 
-            this.speMax.Location = new System.Drawing.Point(403, 136);
+            resources.ApplyResources(this.speMax, "speMax");
             this.speMax.Name = "speMax";
-            this.speMax.Size = new System.Drawing.Size(28, 20);
-            this.speMax.TabIndex = 16;
-            this.speMax.Text = "31";
-            this.speMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.speMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.speMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.speMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // atkMax
             // 
-            this.atkMax.Location = new System.Drawing.Point(403, 32);
+            resources.ApplyResources(this.atkMax, "atkMax");
             this.atkMax.Name = "atkMax";
-            this.atkMax.Size = new System.Drawing.Size(28, 20);
-            this.atkMax.TabIndex = 8;
-            this.atkMax.Text = "31";
-            this.atkMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.atkMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.atkMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.atkMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // atkMaxFilter
             // 
-            this.atkMaxFilter.Location = new System.Drawing.Point(471, 32);
+            resources.ApplyResources(this.atkMaxFilter, "atkMaxFilter");
             this.atkMaxFilter.Name = "atkMaxFilter";
-            this.atkMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.atkMaxFilter.TabIndex = 20;
-            this.atkMaxFilter.Text = "31";
             this.atkMaxFilter.UseVisualStyleBackColor = true;
             this.atkMaxFilter.Click += new System.EventHandler(this.AtkMaxFilter_Click);
             // 
             // defMin
             // 
-            this.defMin.Location = new System.Drawing.Point(353, 58);
+            resources.ApplyResources(this.defMin, "defMin");
             this.defMin.Name = "defMin";
-            this.defMin.Size = new System.Drawing.Size(28, 20);
-            this.defMin.TabIndex = 9;
-            this.defMin.Text = "0";
-            this.defMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.defMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.defMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.defMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // defMinFilter
             // 
-            this.defMinFilter.Location = new System.Drawing.Point(437, 58);
+            resources.ApplyResources(this.defMinFilter, "defMinFilter");
             this.defMinFilter.Name = "defMinFilter";
-            this.defMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.defMinFilter.TabIndex = 21;
-            this.defMinFilter.Text = "0";
             this.defMinFilter.UseVisualStyleBackColor = true;
             this.defMinFilter.Click += new System.EventHandler(this.DefMinFilter_Click);
             // 
             // spaMinFilter
             // 
-            this.spaMinFilter.Location = new System.Drawing.Point(437, 84);
+            resources.ApplyResources(this.spaMinFilter, "spaMinFilter");
             this.spaMinFilter.Name = "spaMinFilter";
-            this.spaMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.spaMinFilter.TabIndex = 23;
-            this.spaMinFilter.Text = "0";
             this.spaMinFilter.UseVisualStyleBackColor = true;
             this.spaMinFilter.Click += new System.EventHandler(this.SpaMinFilter_Click);
             // 
             // defMaxFilter
             // 
-            this.defMaxFilter.Location = new System.Drawing.Point(471, 58);
+            resources.ApplyResources(this.defMaxFilter, "defMaxFilter");
             this.defMaxFilter.Name = "defMaxFilter";
-            this.defMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.defMaxFilter.TabIndex = 22;
-            this.defMaxFilter.Text = "31";
             this.defMaxFilter.UseVisualStyleBackColor = true;
             this.defMaxFilter.Click += new System.EventHandler(this.DefMaxFilter_Click);
             // 
             // spaMax
             // 
-            this.spaMax.Location = new System.Drawing.Point(403, 84);
+            resources.ApplyResources(this.spaMax, "spaMax");
             this.spaMax.Name = "spaMax";
-            this.spaMax.Size = new System.Drawing.Size(28, 20);
-            this.spaMax.TabIndex = 12;
-            this.spaMax.Text = "31";
-            this.spaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.spaMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.spaMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.spaMax.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(387, 113);
+            resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(10, 13);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "-";
             // 
             // atkMin
             // 
-            this.atkMin.Location = new System.Drawing.Point(353, 32);
+            resources.ApplyResources(this.atkMin, "atkMin");
             this.atkMin.Name = "atkMin";
-            this.atkMin.Size = new System.Drawing.Size(28, 20);
-            this.atkMin.TabIndex = 7;
-            this.atkMin.Text = "0";
-            this.atkMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.atkMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
             this.atkMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.atkMin.Leave += new System.EventHandler(this.Filter_LostFocus);
             // 
             // spaMaxFilter
             // 
-            this.spaMaxFilter.Location = new System.Drawing.Point(471, 84);
+            resources.ApplyResources(this.spaMaxFilter, "spaMaxFilter");
             this.spaMaxFilter.Name = "spaMaxFilter";
-            this.spaMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.spaMaxFilter.TabIndex = 24;
-            this.spaMaxFilter.Text = "31";
             this.spaMaxFilter.UseVisualStyleBackColor = true;
             this.spaMaxFilter.Click += new System.EventHandler(this.SpaMaxFilter_Click);
             // 
             // progressBar1
             // 
+            resources.ApplyResources(this.progressBar1, "progressBar1");
             this.progressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.progressBar1.Location = new System.Drawing.Point(12, 341);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(486, 21);
-            this.progressBar1.TabIndex = 74;
             // 
             // RetailAdvancesTrackerLabel
             // 
-            this.RetailAdvancesTrackerLabel.AutoSize = true;
-            this.RetailAdvancesTrackerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetailAdvancesTrackerLabel.Location = new System.Drawing.Point(548, 9);
+            resources.ApplyResources(this.RetailAdvancesTrackerLabel, "RetailAdvancesTrackerLabel");
             this.RetailAdvancesTrackerLabel.Name = "RetailAdvancesTrackerLabel";
-            this.RetailAdvancesTrackerLabel.Size = new System.Drawing.Size(148, 13);
-            this.RetailAdvancesTrackerLabel.TabIndex = 75;
-            this.RetailAdvancesTrackerLabel.Text = "Retail Advances Tracker";
             // 
             // RetailAdvancesTrackerInitialInputLabel
             // 
-            this.RetailAdvancesTrackerInitialInputLabel.AutoSize = true;
-            this.RetailAdvancesTrackerInitialInputLabel.Location = new System.Drawing.Point(548, 35);
+            resources.ApplyResources(this.RetailAdvancesTrackerInitialInputLabel, "RetailAdvancesTrackerInitialInputLabel");
             this.RetailAdvancesTrackerInitialInputLabel.Name = "RetailAdvancesTrackerInitialInputLabel";
-            this.RetailAdvancesTrackerInitialInputLabel.Size = new System.Drawing.Size(59, 13);
-            this.RetailAdvancesTrackerInitialInputLabel.TabIndex = 76;
-            this.RetailAdvancesTrackerInitialInputLabel.Text = "Initial Adv.:";
             // 
             // RetailAdvancesTrackerMaxAdvInputLabel
             // 
-            this.RetailAdvancesTrackerMaxAdvInputLabel.AutoSize = true;
-            this.RetailAdvancesTrackerMaxAdvInputLabel.Location = new System.Drawing.Point(594, 61);
+            resources.ApplyResources(this.RetailAdvancesTrackerMaxAdvInputLabel, "RetailAdvancesTrackerMaxAdvInputLabel");
             this.RetailAdvancesTrackerMaxAdvInputLabel.Name = "RetailAdvancesTrackerMaxAdvInputLabel";
-            this.RetailAdvancesTrackerMaxAdvInputLabel.Size = new System.Drawing.Size(13, 13);
-            this.RetailAdvancesTrackerMaxAdvInputLabel.TabIndex = 77;
-            this.RetailAdvancesTrackerMaxAdvInputLabel.Text = "+";
             // 
             // RetailAdvancesTrackerInitialInput
             // 
-            this.RetailAdvancesTrackerInitialInput.Location = new System.Drawing.Point(613, 32);
-            this.RetailAdvancesTrackerInitialInput.MaxLength = 16;
+            resources.ApplyResources(this.RetailAdvancesTrackerInitialInput, "RetailAdvancesTrackerInitialInput");
             this.RetailAdvancesTrackerInitialInput.Name = "RetailAdvancesTrackerInitialInput";
-            this.RetailAdvancesTrackerInitialInput.Size = new System.Drawing.Size(145, 20);
-            this.RetailAdvancesTrackerInitialInput.TabIndex = 78;
-            this.RetailAdvancesTrackerInitialInput.Text = "0";
             this.RetailAdvancesTrackerInitialInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.RetailAdvancesTrackerInitialInput.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // RetailAdvancesTrackerMaxInput
             // 
-            this.RetailAdvancesTrackerMaxInput.Location = new System.Drawing.Point(613, 58);
-            this.RetailAdvancesTrackerMaxInput.MaxLength = 16;
+            resources.ApplyResources(this.RetailAdvancesTrackerMaxInput, "RetailAdvancesTrackerMaxInput");
             this.RetailAdvancesTrackerMaxInput.Name = "RetailAdvancesTrackerMaxInput";
-            this.RetailAdvancesTrackerMaxInput.Size = new System.Drawing.Size(145, 20);
-            this.RetailAdvancesTrackerMaxInput.TabIndex = 79;
-            this.RetailAdvancesTrackerMaxInput.Text = "10000";
             this.RetailAdvancesTrackerMaxInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.RetailAdvancesTrackerMaxInput.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // RetailAdvancesTrackerGenerateButton
             // 
-            this.RetailAdvancesTrackerGenerateButton.Location = new System.Drawing.Point(551, 91);
+            resources.ApplyResources(this.RetailAdvancesTrackerGenerateButton, "RetailAdvancesTrackerGenerateButton");
             this.RetailAdvancesTrackerGenerateButton.Name = "RetailAdvancesTrackerGenerateButton";
-            this.RetailAdvancesTrackerGenerateButton.Size = new System.Drawing.Size(207, 20);
-            this.RetailAdvancesTrackerGenerateButton.TabIndex = 80;
-            this.RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";
             this.RetailAdvancesTrackerGenerateButton.UseVisualStyleBackColor = true;
             this.RetailAdvancesTrackerGenerateButton.Click += new System.EventHandler(this.RetailAdvancesTrackerGenerateButton_Click);
             // 
             // RetailAdvancesTrackerProgressBar
             // 
+            resources.ApplyResources(this.RetailAdvancesTrackerProgressBar, "RetailAdvancesTrackerProgressBar");
             this.RetailAdvancesTrackerProgressBar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.RetailAdvancesTrackerProgressBar.Location = new System.Drawing.Point(552, 115);
             this.RetailAdvancesTrackerProgressBar.Name = "RetailAdvancesTrackerProgressBar";
-            this.RetailAdvancesTrackerProgressBar.Size = new System.Drawing.Size(205, 10);
-            this.RetailAdvancesTrackerProgressBar.TabIndex = 81;
             // 
             // RetailAdvancesTrackerSequenceInput
             // 
-            this.RetailAdvancesTrackerSequenceInput.Location = new System.Drawing.Point(551, 152);
-            this.RetailAdvancesTrackerSequenceInput.MaxLength = 30;
+            resources.ApplyResources(this.RetailAdvancesTrackerSequenceInput, "RetailAdvancesTrackerSequenceInput");
             this.RetailAdvancesTrackerSequenceInput.Name = "RetailAdvancesTrackerSequenceInput";
             this.RetailAdvancesTrackerSequenceInput.ReadOnly = true;
-            this.RetailAdvancesTrackerSequenceInput.Size = new System.Drawing.Size(207, 20);
-            this.RetailAdvancesTrackerSequenceInput.TabIndex = 82;
             this.RetailAdvancesTrackerSequenceInput.TextChanged += new System.EventHandler(this.RetailAdvancesTrackerSequenceInput_TextChanged);
             this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BinInput_KeyPress);
             // 
             // RetailAdvancesTrackerSequenceLabel
             // 
-            this.RetailAdvancesTrackerSequenceLabel.AutoSize = true;
-            this.RetailAdvancesTrackerSequenceLabel.Location = new System.Drawing.Point(548, 136);
+            resources.ApplyResources(this.RetailAdvancesTrackerSequenceLabel, "RetailAdvancesTrackerSequenceLabel");
             this.RetailAdvancesTrackerSequenceLabel.Name = "RetailAdvancesTrackerSequenceLabel";
-            this.RetailAdvancesTrackerSequenceLabel.Size = new System.Drawing.Size(199, 13);
-            this.RetailAdvancesTrackerSequenceLabel.TabIndex = 83;
-            this.RetailAdvancesTrackerSequenceLabel.Text = "Input Sequence (0: Physical, 1: Special):";
             // 
             // RetailAdvancesTrackerResultState0
             // 
-            this.RetailAdvancesTrackerResultState0.Location = new System.Drawing.Point(551, 237);
-            this.RetailAdvancesTrackerResultState0.MaxLength = 16;
+            resources.ApplyResources(this.RetailAdvancesTrackerResultState0, "RetailAdvancesTrackerResultState0");
             this.RetailAdvancesTrackerResultState0.Name = "RetailAdvancesTrackerResultState0";
             this.RetailAdvancesTrackerResultState0.ReadOnly = true;
-            this.RetailAdvancesTrackerResultState0.Size = new System.Drawing.Size(207, 20);
-            this.RetailAdvancesTrackerResultState0.TabIndex = 84;
             this.RetailAdvancesTrackerResultState0.TabStop = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(548, 264);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
-            this.label3.TabIndex = 87;
-            this.label3.Text = "Current State[1]:";
             // 
             // RetailAdvancesTrackerResultState1
             // 
-            this.RetailAdvancesTrackerResultState1.Location = new System.Drawing.Point(551, 280);
-            this.RetailAdvancesTrackerResultState1.MaxLength = 16;
+            resources.ApplyResources(this.RetailAdvancesTrackerResultState1, "RetailAdvancesTrackerResultState1");
             this.RetailAdvancesTrackerResultState1.Name = "RetailAdvancesTrackerResultState1";
             this.RetailAdvancesTrackerResultState1.ReadOnly = true;
-            this.RetailAdvancesTrackerResultState1.Size = new System.Drawing.Size(207, 20);
-            this.RetailAdvancesTrackerResultState1.TabIndex = 86;
             this.RetailAdvancesTrackerResultState1.TabStop = false;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(548, 221);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
-            this.label2.TabIndex = 85;
-            this.label2.Text = "Current State[0]:";
             // 
             // RetailAdvancesTrackerNumResultsLabel
             // 
-            this.RetailAdvancesTrackerNumResultsLabel.AutoSize = true;
-            this.RetailAdvancesTrackerNumResultsLabel.Location = new System.Drawing.Point(548, 189);
+            resources.ApplyResources(this.RetailAdvancesTrackerNumResultsLabel, "RetailAdvancesTrackerNumResultsLabel");
             this.RetailAdvancesTrackerNumResultsLabel.Name = "RetailAdvancesTrackerNumResultsLabel";
-            this.RetailAdvancesTrackerNumResultsLabel.Size = new System.Drawing.Size(110, 13);
-            this.RetailAdvancesTrackerNumResultsLabel.TabIndex = 88;
-            this.RetailAdvancesTrackerNumResultsLabel.Text = "Possible Results: N/A";
             // 
             // CheckIsAbilityLocked
             // 
-            this.CheckIsAbilityLocked.AutoSize = true;
-            this.CheckIsAbilityLocked.Location = new System.Drawing.Point(12, 213);
+            resources.ApplyResources(this.CheckIsAbilityLocked, "CheckIsAbilityLocked");
             this.CheckIsAbilityLocked.Name = "CheckIsAbilityLocked";
-            this.CheckIsAbilityLocked.Size = new System.Drawing.Size(92, 17);
-            this.CheckIsAbilityLocked.TabIndex = 37;
-            this.CheckIsAbilityLocked.Text = "Locked Ability";
             this.CheckIsAbilityLocked.UseVisualStyleBackColor = true;
             // 
             // MainMenu
             // 
             this.MainMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.LanguageMenu,
             this.SeedFinderMenu});
+            resources.ApplyResources(this.MainMenu, "MainMenu");
+            // 
+            // LanguageMenu
+            // 
+            resources.ApplyResources(this.LanguageMenu, "LanguageMenu");
+            this.LanguageMenu.Index = 0;
+            this.LanguageMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.EnglishMenu,
+            this.SpanishMenu});
+            // 
+            // EnglishMenu
+            // 
+            resources.ApplyResources(this.EnglishMenu, "EnglishMenu");
+            this.EnglishMenu.Index = 0;
+            this.EnglishMenu.Click += new System.EventHandler(this.EnglishMenu_Click);
+            // 
+            // SpanishMenu
+            // 
+            resources.ApplyResources(this.SpanishMenu, "SpanishMenu");
+            this.SpanishMenu.Index = 1;
+            this.SpanishMenu.Click += new System.EventHandler(this.SpanishMenu_Click);
             // 
             // SeedFinderMenu
             // 
-            this.SeedFinderMenu.Index = 0;
-            this.SeedFinderMenu.Text = "Seed Finder";
+            resources.ApplyResources(this.SeedFinderMenu, "SeedFinderMenu");
+            this.SeedFinderMenu.Index = 1;
             this.SeedFinderMenu.Click += new System.EventHandler(this.SeedFinderMenu_Click);
             // 
             // ButtonUpdateStates
             // 
-            this.ButtonUpdateStates.Location = new System.Drawing.Point(550, 306);
+            resources.ApplyResources(this.ButtonUpdateStates, "ButtonUpdateStates");
             this.ButtonUpdateStates.Name = "ButtonUpdateStates";
-            this.ButtonUpdateStates.Size = new System.Drawing.Size(209, 20);
-            this.ButtonUpdateStates.TabIndex = 89;
-            this.ButtonUpdateStates.Text = "Update States";
             this.ButtonUpdateStates.UseVisualStyleBackColor = true;
             this.ButtonUpdateStates.Click += new System.EventHandler(this.ButtonUpdateStates_Click);
             // 
             // CheckTIDSIDFinder
             // 
-            this.CheckTIDSIDFinder.AutoSize = true;
-            this.CheckTIDSIDFinder.Location = new System.Drawing.Point(116, 213);
+            resources.ApplyResources(this.CheckTIDSIDFinder, "CheckTIDSIDFinder");
             this.CheckTIDSIDFinder.Name = "CheckTIDSIDFinder";
-            this.CheckTIDSIDFinder.Size = new System.Drawing.Size(122, 17);
-            this.CheckTIDSIDFinder.TabIndex = 90;
-            this.CheckTIDSIDFinder.Text = "Search For TID/SID";
             this.CheckTIDSIDFinder.UseVisualStyleBackColor = true;
             this.CheckTIDSIDFinder.CheckedChanged += new System.EventHandler(this.CheckTIDSIDFinder_CheckedChanged);
             // 
             // LabelKOCount
             // 
-            this.LabelKOCount.AutoSize = true;
-            this.LabelKOCount.Location = new System.Drawing.Point(128, 249);
+            resources.ApplyResources(this.LabelKOCount, "LabelKOCount");
             this.LabelKOCount.Name = "LabelKOCount";
-            this.LabelKOCount.Size = new System.Drawing.Size(56, 13);
-            this.LabelKOCount.TabIndex = 91;
-            this.LabelKOCount.Text = "KO Count:";
             // 
             // InputKOCount
             // 
-            this.InputKOCount.Location = new System.Drawing.Point(190, 246);
-            this.InputKOCount.MaxLength = 3;
+            resources.ApplyResources(this.InputKOCount, "InputKOCount");
             this.InputKOCount.Name = "InputKOCount";
-            this.InputKOCount.Size = new System.Drawing.Size(28, 20);
-            this.InputKOCount.TabIndex = 90;
-            this.InputKOCount.Text = "500";
-            this.InputKOCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputKOCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputKOCount.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // LabelEMs
             // 
-            this.LabelEMs.AutoSize = true;
-            this.LabelEMs.Location = new System.Drawing.Point(15, 275);
+            resources.ApplyResources(this.LabelEMs, "LabelEMs");
             this.LabelEMs.Name = "LabelEMs";
-            this.LabelEMs.Size = new System.Drawing.Size(73, 13);
-            this.LabelEMs.TabIndex = 93;
-            this.LabelEMs.Text = "Possible EMs:";
             // 
             // InputEMs
             // 
-            this.InputEMs.Location = new System.Drawing.Point(94, 272);
-            this.InputEMs.MaxLength = 2;
+            resources.ApplyResources(this.InputEMs, "InputEMs");
             this.InputEMs.Name = "InputEMs";
-            this.InputEMs.Size = new System.Drawing.Size(28, 20);
-            this.InputEMs.TabIndex = 92;
-            this.InputEMs.Text = "4";
-            this.InputEMs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputEMs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputEMs.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // LabelFlawlessIVs
             // 
-            this.LabelFlawlessIVs.AutoSize = true;
-            this.LabelFlawlessIVs.Location = new System.Drawing.Point(20, 249);
+            resources.ApplyResources(this.LabelFlawlessIVs, "LabelFlawlessIVs");
             this.LabelFlawlessIVs.Name = "LabelFlawlessIVs";
-            this.LabelFlawlessIVs.Size = new System.Drawing.Size(68, 13);
-            this.LabelFlawlessIVs.TabIndex = 95;
-            this.LabelFlawlessIVs.Text = "Flawless IVs:";
             // 
             // InputFlawlessIVs
             // 
-            this.InputFlawlessIVs.Location = new System.Drawing.Point(94, 246);
-            this.InputFlawlessIVs.MaxLength = 1;
+            resources.ApplyResources(this.InputFlawlessIVs, "InputFlawlessIVs");
             this.InputFlawlessIVs.Name = "InputFlawlessIVs";
-            this.InputFlawlessIVs.Size = new System.Drawing.Size(28, 20);
-            this.InputFlawlessIVs.TabIndex = 94;
-            this.InputFlawlessIVs.Text = "0";
-            this.InputFlawlessIVs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InputFlawlessIVs.TextChanged += new System.EventHandler(this.FlawlessIVs_TextChanged);
             this.InputFlawlessIVs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputFlawlessIVs.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
+            // ImageRareMark
+            // 
+            resources.ApplyResources(this.ImageRareMark, "ImageRareMark");
+            this.ImageRareMark.Image = global::SWSH_OWRNG_Generator_GUI.Properties.Resources.raremark;
+            this.ImageRareMark.Name = "ImageRareMark";
+            this.ImageRareMark.TabStop = false;
+            // 
             // MainWindow
             // 
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(769, 540);
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.CheckTIDSIDFinder);
             this.Controls.Add(this.LabelFlawlessIVs);
             this.Controls.Add(this.InputFlawlessIVs);
@@ -1462,13 +1102,12 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.LabelState0);
             this.Controls.Add(this.ImageRareMark);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Menu = this.MainMenu;
             this.Name = "MainWindow";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1591,5 +1230,8 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
         private System.Windows.Forms.Label LabelFlawlessIVs;
         private System.Windows.Forms.TextBox InputFlawlessIVs;
+        private System.Windows.Forms.MenuItem LanguageMenu;
+        private System.Windows.Forms.MenuItem EnglishMenu;
+        private System.Windows.Forms.MenuItem SpanishMenu;
     }
 }
