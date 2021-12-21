@@ -418,6 +418,16 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             string s = "";
 
+            if (e.KeyChar == ',')
+            {
+                e.KeyChar = '0';
+            }
+
+            else if (e.KeyChar == '.')
+            {
+                e.KeyChar = '1';
+            }
+
             s += e.KeyChar;
 
             byte[] b = Encoding.ASCII.GetBytes(s);
