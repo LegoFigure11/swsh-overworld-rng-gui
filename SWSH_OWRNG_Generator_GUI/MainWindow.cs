@@ -666,5 +666,24 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedShiny.Enabled = !check;
             this.LabelShiny.Enabled = !check;
         }
+
+        private void sensBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sensBox.Checked)
+            {
+                this.PID.Visible = false;
+                this.EC.Visible = false;
+                this.State0.Visible = false;
+                this.State1.Visible = false;
+            }
+            else
+            {
+                this.PID.Visible = true;
+                this.EC.Visible = true;
+                this.State0.Visible = true;
+                this.State1.Visible = true;
+            }
+            
+        }
     }
 }

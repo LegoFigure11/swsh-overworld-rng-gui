@@ -146,6 +146,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputEMs = new System.Windows.Forms.TextBox();
             this.LabelFlawlessIVs = new System.Windows.Forms.Label();
             this.InputFlawlessIVs = new System.Windows.Forms.TextBox();
+            this.sensBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1366,10 +1367,22 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputFlawlessIVs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputFlawlessIVs.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
+            // sensBox
+            // 
+            this.sensBox.AutoSize = true;
+            this.sensBox.Location = new System.Drawing.Point(319, 220);
+            this.sensBox.Name = "sensBox";
+            this.sensBox.Size = new System.Drawing.Size(125, 17);
+            this.sensBox.TabIndex = 96;
+            this.sensBox.Text = "Hide sensitive output";
+            this.sensBox.UseVisualStyleBackColor = true;
+            this.sensBox.CheckedChanged += new System.EventHandler(this.sensBox_CheckedChanged);
+            // 
             // MainWindow
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(769, 540);
+            this.Controls.Add(this.sensBox);
             this.Controls.Add(this.CheckTIDSIDFinder);
             this.Controls.Add(this.LabelFlawlessIVs);
             this.Controls.Add(this.InputFlawlessIVs);
@@ -1591,5 +1604,6 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
         private System.Windows.Forms.Label LabelFlawlessIVs;
         private System.Windows.Forms.TextBox InputFlawlessIVs;
+        private System.Windows.Forms.CheckBox sensBox;
     }
 }
