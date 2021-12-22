@@ -15,6 +15,7 @@
         public string Brilliant { get; set; }
         public int Ability { get; set; }
         public string Nature { get; set; }
+        public string Gender { get; set; }
         public uint HP { get; set; }
         public uint Atk { get; set; }
         public uint Def { get; set; }

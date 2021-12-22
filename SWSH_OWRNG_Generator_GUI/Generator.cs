@@ -14,7 +14,7 @@ namespace SWSH_OWRNG_Generator_GUI
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
             bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, uint LevelMin,
             uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
-            uint KOs, uint FlawlessIVs, bool TIDSIDSearch, IProgress<int> progress
+            uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool TIDSIDSearch, IProgress<int> progress
             )
         {
             List<Frame> Results = new List<Frame>();
@@ -26,9 +26,9 @@ namespace SWSH_OWRNG_Generator_GUI
             bool GenerateLevel = LevelMin != LevelMax;
             uint LevelDelta = LevelMax - LevelMin + 1;
 
-            uint EC, PID, SlotRand = 0, Level = 0, BrilliantRand, Nature, AbilityRoll, FixedSeed, ShinyXOR, BrilliantThreshold, BrilliantRolls;
+            uint EC, PID, LeadRand = 0, SlotRand = 0, Level = 0, BrilliantRand, Nature, AbilityRoll, FixedSeed, ShinyXOR, BrilliantThreshold, BrilliantRolls;
             int BrilliantIVs;
-            string Mark = "";
+            string Mark = "", Gender;
             bool PassIVs, Brilliant, Shiny;
             ulong advance = 0;
 
@@ -48,16 +48,22 @@ namespace SWSH_OWRNG_Generator_GUI
                 // Init new RNG
                 Xoroshiro rng = new Xoroshiro(go.state0, go.state1);
                 Brilliant = false;
+                Gender = "";
+
                 if (Static)
                 {
-                    rng.rand(100);
+                    LeadRand = (uint)rng.rand(100);
+                    if (IsCuteCharm && LeadRand <= 65)
+                        Gender = "CC";
                 }
                 else
                 {
                     if (!Fishing)
                         rng.rand(Max);
                     rng.rand(100);
-                    rng.rand(100);
+                    LeadRand = (uint)rng.rand(100);
+                    if (IsCuteCharm && LeadRand <= 65)
+                        Gender = "CC";
 
                     SlotRand = (uint)rng.rand(100);
                     if (SlotMin > SlotRand || SlotMax < SlotRand)
@@ -96,7 +102,8 @@ namespace SWSH_OWRNG_Generator_GUI
                         break;
                 }
 
-                rng.rand(2); // Mystery
+                if (Gender != "CC")
+                    Gender = rng.rand(2) == 0 ? "F" : "M";
                 Nature = (uint)rng.rand(25);
                 AbilityRoll = 2;
                 if (!IsAbilityLocked)
@@ -163,6 +170,7 @@ namespace SWSH_OWRNG_Generator_GUI
                         Brilliant = Brilliant ? "Y" : "-",
                         Ability = AbilityRoll == 0 ? 1 : 0,
                         Nature = Natures[Nature],
+                        Gender = Gender,
                         HP = IVs[0],
                         Atk = IVs[1],
                         Def = IVs[2],
