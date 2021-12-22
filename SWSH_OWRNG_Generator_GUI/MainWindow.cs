@@ -87,6 +87,7 @@ namespace SWSH_OWRNG_Generator_GUI
             RetailAdvancesTrackerGenerateButton.TabIndex = RetailAdvancesTrackerMaxInput.TabIndex + 1;
             RetailAdvancesTrackerSequenceInput.TabIndex = RetailAdvancesTrackerGenerateButton.TabIndex + 1;
             ButtonUpdateStates.TabIndex = RetailAdvancesTrackerSequenceInput.TabIndex + 1;
+            sensBox.TabIndex = ButtonUpdateStates.TabIndex + 1;
         }
 
         private void HpMinFilter_Click(object sender, EventArgs e)
@@ -675,6 +676,10 @@ namespace SWSH_OWRNG_Generator_GUI
                 this.EC.Visible = false;
                 this.State0.Visible = false;
                 this.State1.Visible = false;
+                this.InputState0.UseSystemPasswordChar = true;
+                this.InputState1.UseSystemPasswordChar = true;
+                this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = true;
+                this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = true;
             }
             else
             {
@@ -682,6 +687,10 @@ namespace SWSH_OWRNG_Generator_GUI
                 this.EC.Visible = true;
                 this.State0.Visible = true;
                 this.State1.Visible = true;
+                this.InputState0.UseSystemPasswordChar = false;
+                this.InputState1.UseSystemPasswordChar = false;
+                this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = false;
+                this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = false;
             }
             
         }
