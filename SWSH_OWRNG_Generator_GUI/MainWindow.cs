@@ -205,31 +205,37 @@ namespace SWSH_OWRNG_Generator_GUI
                 case "hpFilter":
                     hpMin.Text = "0";
                     hpMax.Text = "31";
+                    hpJudgeFilter.SelectedIndex = -1;
                     break;
 
                 case "atkFilter":
                     atkMin.Text = "0";
                     atkMax.Text = "31";
+                    atkJudgeFilter.SelectedIndex = -1;
                     break;
 
                 case "defFilter":
                     defMin.Text = "0";
                     defMax.Text = "31";
+                    defJudgeFilter.SelectedIndex = -1;
                     break;
 
                 case "spaFilter":
                     spaMin.Text = "0";
                     spaMax.Text = "31";
+                    spaJudgeFilter.SelectedIndex = -1;
                     break;
 
                 case "spdFilter":
                     spdMin.Text = "0";
                     spdMax.Text = "31";
+                    spdJudgeFilter.SelectedIndex = -1;
                     break;
 
                 case "speFilter":
                     speMin.Text = "0";
                     speMax.Text = "31";
+                    speJudgeFilter.SelectedIndex = -1;
                     break;
             }
         }
@@ -698,54 +704,7 @@ namespace SWSH_OWRNG_Generator_GUI
             
         }
 
-        private void HpResetFilter_Click(object sender, EventArgs e)
-        {
-            hpMin.Clear();
-            hpMin.Text = "0";
-            hpMax.Clear();
-            hpMax.Text = "31";
-        }
-        private void AtkResetFilter_Click(object sender, EventArgs e)
-        {
-            atkMin.Clear();
-            atkMin.Text = "0";
-            atkMax.Clear();
-            atkMax.Text = "31";
-        }
-
-        private void DefResetFilter_Click(object sender, EventArgs e)
-        {
-            defMin.Clear();
-            defMin.Text = "0";
-            defMax.Clear();
-            defMax.Text = "31";
-        }
-
-        private void SpaResetFilter_Click(object sender, EventArgs e)
-        {
-            spaMin.Clear();
-            spaMin.Text = "0";
-            spaMax.Clear();
-            spaMax.Text = "31";
-        }
-
-        private void SpdResetFilter_Click(object sender, EventArgs e)
-        {
-            spdMin.Clear();
-            spdMin.Text = "0";
-            spdMax.Clear();
-            spdMax.Text = "31";
-        }
-
-        private void SpeResetFilter_Click(object sender, EventArgs e)
-        {
-            speMin.Clear();
-            speMin.Text = "0";
-            speMax.Clear();
-            speMax.Text = "31";
-        }
-
-        private void SetFilterStats(TextBox statLower, TextBox statUpper, string min, string max)
+        private void SetIvFilters(TextBox statLower, TextBox statUpper, string min, string max)
         {
             statLower.Clear();
             statLower.Text = min;
@@ -753,62 +712,60 @@ namespace SWSH_OWRNG_Generator_GUI
             statUpper.Text = max;
         }
 
-
-        private void HpJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            StatJudgeFilter(hpMin, hpMax, hpJudgeFilter.Text);
-        }
-        
-        private void AtkJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            StatJudgeFilter(atkMin, atkMax, atkJudgeFilter.Text);
-        }
-
-        private void StatJudgeFilter(TextBox statL, TextBox statU, string judge)
+        private void IvJudgeFilter(TextBox statL, TextBox statU, string judge)
         {
             switch (judge)
             {
                 case "No Good":
-                    SetFilterStats(statL, statU, "0", "0");
+                    SetIvFilters(statL, statU, "0", "0");
                     break;
                 case "Decent":
-                    SetFilterStats(statL, statU, "1", "15");
+                    SetIvFilters(statL, statU, "1", "15");
                     break;
                 case "Pretty Good":
-                    SetFilterStats(statL, statU, "16", "25");
+                    SetIvFilters(statL, statU, "16", "25");
                     break;
                 case "Very Good":
-                    SetFilterStats(statL, statU, "26", "29");
+                    SetIvFilters(statL, statU, "26", "29");
                     break;
                 case "Fantastic":
-                    SetFilterStats(statL, statU, "30", "30");
+                    SetIvFilters(statL, statU, "30", "30");
                     break;
                 case "Best":
-                    SetFilterStats(statL, statU, "31", "31");
+                    SetIvFilters(statL, statU, "31", "31");
                     break;
                 default:
                     break;
             }
         }
-
-        private void defJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        private void HpJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            StatJudgeFilter(defMin, defMax, defJudgeFilter.Text);
+            IvJudgeFilter(hpMin, hpMax, hpJudgeFilter.Text);
         }
 
-        private void spaJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        private void AtkJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            StatJudgeFilter(spaMin, spaMax, spaJudgeFilter.Text);
+            IvJudgeFilter(atkMin, atkMax, atkJudgeFilter.Text);
         }
 
-        private void spdJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        private void DefJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            StatJudgeFilter(spdMin, spdMax, spdJudgeFilter.Text);
+            IvJudgeFilter(defMin, defMax, defJudgeFilter.Text);
         }
 
-        private void speJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        private void SpaJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            StatJudgeFilter(speMin, speMax, speJudgeFilter.Text);
+            IvJudgeFilter(spaMin, spaMax, spaJudgeFilter.Text);
+        }
+
+        private void SpdJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IvJudgeFilter(spdMin, spdMax, spdJudgeFilter.Text);
+        }
+
+        private void SpeJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IvJudgeFilter(speMin, speMax, speJudgeFilter.Text);
         }
     }
 }
