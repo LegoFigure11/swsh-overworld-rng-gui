@@ -156,6 +156,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdResetFilter = new System.Windows.Forms.Button();
             this.speResetFilter = new System.Windows.Forms.Button();
             this.hpJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.atkJudgeFilter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1482,10 +1483,28 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpJudgeFilter.TabIndex = 104;
             this.hpJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.HpJudgeFilter_SelectedIndexChanged);
             // 
+            // atkJudgeFilter
+            // 
+            this.atkJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.atkJudgeFilter.FormattingEnabled = true;
+            this.atkJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.atkJudgeFilter.Location = new System.Drawing.Point(506, 31);
+            this.atkJudgeFilter.Name = "atkJudgeFilter";
+            this.atkJudgeFilter.Size = new System.Drawing.Size(121, 21);
+            this.atkJudgeFilter.TabIndex = 105;
+            this.atkJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.atkJudgeFilter_SelectedIndexChanged);
+            // 
             // MainWindow
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(977, 559);
+            this.Controls.Add(this.atkJudgeFilter);
             this.Controls.Add(this.hpJudgeFilter);
             this.Controls.Add(this.speResetFilter);
             this.Controls.Add(this.spdResetFilter);
@@ -1726,5 +1745,6 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.Button spdResetFilter;
         private System.Windows.Forms.Button speResetFilter;
         private System.Windows.Forms.ComboBox hpJudgeFilter;
+        private System.Windows.Forms.ComboBox atkJudgeFilter;
     }
 }

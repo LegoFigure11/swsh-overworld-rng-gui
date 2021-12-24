@@ -747,29 +747,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void HpJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (hpJudgeFilter.Text)
-            {
-                case "No Good":
-                    SetFilterStats(hpMin, hpMax, "0", "0");
-                    break;
-                case "Decent":
-                    SetFilterStats(hpMin, hpMax, "1", "15");
-                    break;
-                case "Pretty Good":
-                    SetFilterStats(hpMin, hpMax, "16", "25");
-                    break;
-                case "Very Good":
-                    SetFilterStats(hpMin, hpMax, "26", "29");
-                    break;
-                case "Fantastic":
-                    SetFilterStats(hpMin, hpMax, "30", "30");
-                    break;
-                case "Best":
-                    SetFilterStats(hpMin, hpMax, "31", "31");
-                    break;
-                default:
-                    break;
-            }
+            StatJudgeFilter(hpMin, hpMax, hpJudgeFilter.Text);
         }
         private void SetFilterStats(TextBox statLower, TextBox statUpper, string min, string max)
         {
@@ -777,6 +755,38 @@ namespace SWSH_OWRNG_Generator_GUI
             statLower.Text = min;
             statUpper.Clear();
             statUpper.Text = max;
+        }
+
+        private void atkJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            StatJudgeFilter(atkMin, atkMax, atkJudgeFilter.Text);
+        }
+
+        private void StatJudgeFilter(TextBox statL, TextBox statU, string judge)
+        {
+            switch (judge)
+            {
+                case "No Good":
+                    SetFilterStats(statL, statU, "0", "0");
+                    break;
+                case "Decent":
+                    SetFilterStats(statL, statU, "1", "15");
+                    break;
+                case "Pretty Good":
+                    SetFilterStats(statL, statU, "16", "25");
+                    break;
+                case "Very Good":
+                    SetFilterStats(statL, statU, "26", "29");
+                    break;
+                case "Fantastic":
+                    SetFilterStats(statL, statU, "30", "30");
+                    break;
+                case "Best":
+                    SetFilterStats(statL, statU, "31", "31");
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
