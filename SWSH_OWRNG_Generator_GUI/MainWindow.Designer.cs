@@ -157,6 +157,10 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speResetFilter = new System.Windows.Forms.Button();
             this.hpJudgeFilter = new System.Windows.Forms.ComboBox();
             this.atkJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.defJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.spaJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.spdJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.speJudgeFilter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1498,12 +1502,84 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkJudgeFilter.Name = "atkJudgeFilter";
             this.atkJudgeFilter.Size = new System.Drawing.Size(121, 21);
             this.atkJudgeFilter.TabIndex = 105;
-            this.atkJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.atkJudgeFilter_SelectedIndexChanged);
+            this.atkJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.AtkJudgeFilter_SelectedIndexChanged);
+            // 
+            // defJudgeFilter
+            // 
+            this.defJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.defJudgeFilter.FormattingEnabled = true;
+            this.defJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.defJudgeFilter.Location = new System.Drawing.Point(506, 57);
+            this.defJudgeFilter.Name = "defJudgeFilter";
+            this.defJudgeFilter.Size = new System.Drawing.Size(121, 21);
+            this.defJudgeFilter.TabIndex = 106;
+            this.defJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.defJudgeFilter_SelectedIndexChanged);
+            // 
+            // spaJudgeFilter
+            // 
+            this.spaJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.spaJudgeFilter.FormattingEnabled = true;
+            this.spaJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.spaJudgeFilter.Location = new System.Drawing.Point(506, 82);
+            this.spaJudgeFilter.Name = "spaJudgeFilter";
+            this.spaJudgeFilter.Size = new System.Drawing.Size(121, 21);
+            this.spaJudgeFilter.TabIndex = 107;
+            this.spaJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.spaJudgeFilter_SelectedIndexChanged);
+            // 
+            // spdJudgeFilter
+            // 
+            this.spdJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.spdJudgeFilter.FormattingEnabled = true;
+            this.spdJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.spdJudgeFilter.Location = new System.Drawing.Point(506, 109);
+            this.spdJudgeFilter.Name = "spdJudgeFilter";
+            this.spdJudgeFilter.Size = new System.Drawing.Size(121, 21);
+            this.spdJudgeFilter.TabIndex = 108;
+            this.spdJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.spdJudgeFilter_SelectedIndexChanged);
+            // 
+            // speJudgeFilter
+            // 
+            this.speJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.speJudgeFilter.FormattingEnabled = true;
+            this.speJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.speJudgeFilter.Location = new System.Drawing.Point(506, 135);
+            this.speJudgeFilter.Name = "speJudgeFilter";
+            this.speJudgeFilter.Size = new System.Drawing.Size(121, 21);
+            this.speJudgeFilter.TabIndex = 109;
+            this.speJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.speJudgeFilter_SelectedIndexChanged);
             // 
             // MainWindow
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(977, 559);
+            this.Controls.Add(this.speJudgeFilter);
+            this.Controls.Add(this.spdJudgeFilter);
+            this.Controls.Add(this.spaJudgeFilter);
+            this.Controls.Add(this.defJudgeFilter);
             this.Controls.Add(this.atkJudgeFilter);
             this.Controls.Add(this.hpJudgeFilter);
             this.Controls.Add(this.speResetFilter);
@@ -1746,5 +1822,9 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.Button speResetFilter;
         private System.Windows.Forms.ComboBox hpJudgeFilter;
         private System.Windows.Forms.ComboBox atkJudgeFilter;
+        private System.Windows.Forms.ComboBox defJudgeFilter;
+        private System.Windows.Forms.ComboBox spaJudgeFilter;
+        private System.Windows.Forms.ComboBox spdJudgeFilter;
+        private System.Windows.Forms.ComboBox speJudgeFilter;
     }
 }

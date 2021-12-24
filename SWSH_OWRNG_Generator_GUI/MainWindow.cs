@@ -745,10 +745,6 @@ namespace SWSH_OWRNG_Generator_GUI
             speMax.Text = "31";
         }
 
-        private void HpJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            StatJudgeFilter(hpMin, hpMax, hpJudgeFilter.Text);
-        }
         private void SetFilterStats(TextBox statLower, TextBox statUpper, string min, string max)
         {
             statLower.Clear();
@@ -757,7 +753,13 @@ namespace SWSH_OWRNG_Generator_GUI
             statUpper.Text = max;
         }
 
-        private void atkJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void HpJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            StatJudgeFilter(hpMin, hpMax, hpJudgeFilter.Text);
+        }
+        
+        private void AtkJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             StatJudgeFilter(atkMin, atkMax, atkJudgeFilter.Text);
         }
@@ -787,6 +789,26 @@ namespace SWSH_OWRNG_Generator_GUI
                 default:
                     break;
             }
+        }
+
+        private void defJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            StatJudgeFilter(defMin, defMax, defJudgeFilter.Text);
+        }
+
+        private void spaJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            StatJudgeFilter(spaMin, spaMax, spaJudgeFilter.Text);
+        }
+
+        private void spdJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            StatJudgeFilter(spdMin, spdMax, spdJudgeFilter.Text);
+        }
+
+        private void speJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            StatJudgeFilter(speMin, speMax, speJudgeFilter.Text);
         }
     }
 }
