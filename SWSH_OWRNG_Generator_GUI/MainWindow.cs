@@ -750,46 +750,33 @@ namespace SWSH_OWRNG_Generator_GUI
             switch (hpJudgeFilter.Text)
             {
                 case "No Good":
-                    hpMin.Clear();
-                    hpMin.Text = "0";
-                    hpMax.Clear();
-                    hpMax.Text = "0";
+                    SetFilterStats(hpMin, hpMax, "0", "0");
                     break;
                 case "Decent":
-                    hpMin.Clear();
-                    hpMin.Text = "1";
-                    hpMax.Clear();
-                    hpMax.Text = "15";
+                    SetFilterStats(hpMin, hpMax, "1", "15");
                     break;
                 case "Pretty Good":
-                    hpMin.Clear();
-                    hpMin.Text = "16";
-                    hpMax.Clear();
-                    hpMax.Text = "25";
+                    SetFilterStats(hpMin, hpMax, "16", "25");
                     break;
                 case "Very Good":
-                    hpMin.Clear();
-                    hpMin.Text = "26";
-                    hpMax.Clear();
-                    hpMax.Text = "29";
+                    SetFilterStats(hpMin, hpMax, "26", "29");
                     break;
                 case "Fantastic":
-                    hpMin.Clear();
-                    hpMin.Text = "30";
-                    hpMax.Clear();
-                    hpMax.Text = "30";
+                    SetFilterStats(hpMin, hpMax, "30", "30");
                     break;
                 case "Best":
-                    hpMin.Clear();
-                    hpMin.Text = "31";
-                    hpMax.Clear();
-                    hpMax.Text = "31";
+                    SetFilterStats(hpMin, hpMax, "31", "31");
                     break;
                 default:
                     break;
             }
         }
-
-
+        private void SetFilterStats(TextBox statLower, TextBox statUpper, string min, string max)
+        {
+            statLower.Clear();
+            statLower.Text = min;
+            statUpper.Clear();
+            statUpper.Text = max;
+        }
     }
 }
