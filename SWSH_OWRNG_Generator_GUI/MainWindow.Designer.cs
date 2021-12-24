@@ -73,6 +73,28 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedShiny = new System.Windows.Forms.ComboBox();
             this.LabelShiny = new System.Windows.Forms.Label();
             this.Results = new System.Windows.Forms.DataGridView();
+            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brilliant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Atk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Def = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Spe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.speMinFilter = new System.Windows.Forms.Button();
@@ -127,28 +149,12 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputFlawlessIVs = new System.Windows.Forms.TextBox();
             this.sensBox = new System.Windows.Forms.CheckBox();
             this.CheckCuteCharm = new System.Windows.Forms.CheckBox();
-            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brilliant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Atk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Def = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Spe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hpResetFilter = new System.Windows.Forms.Button();
+            this.atkResetFilter = new System.Windows.Forms.Button();
+            this.defResetFilter = new System.Windows.Forms.Button();
+            this.spaResetFilter = new System.Windows.Forms.Button();
+            this.spdResetFilter = new System.Windows.Forms.Button();
+            this.speResetFilter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -652,8 +658,216 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(746, 187);
+            this.Results.Size = new System.Drawing.Size(954, 166);
             this.Results.TabIndex = 73;
+            // 
+            // Frame
+            // 
+            this.Frame.DataPropertyName = "Advances";
+            this.Frame.HeaderText = "Frame";
+            this.Frame.MinimumWidth = 8;
+            this.Frame.Name = "Frame";
+            this.Frame.ReadOnly = true;
+            this.Frame.Width = 150;
+            // 
+            // TID
+            // 
+            this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TID.DataPropertyName = "TID";
+            this.TID.HeaderText = "TID";
+            this.TID.MinimumWidth = 8;
+            this.TID.Name = "TID";
+            this.TID.ReadOnly = true;
+            this.TID.Width = 50;
+            // 
+            // SID
+            // 
+            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SID.DataPropertyName = "SID";
+            this.SID.HeaderText = "SID";
+            this.SID.MinimumWidth = 8;
+            this.SID.Name = "SID";
+            this.SID.ReadOnly = true;
+            this.SID.Width = 50;
+            // 
+            // Animation
+            // 
+            this.Animation.DataPropertyName = "Animation";
+            this.Animation.HeaderText = "Animation";
+            this.Animation.MinimumWidth = 8;
+            this.Animation.Name = "Animation";
+            this.Animation.ReadOnly = true;
+            this.Animation.Width = 60;
+            // 
+            // Brilliant
+            // 
+            this.Brilliant.DataPropertyName = "Brilliant";
+            this.Brilliant.HeaderText = "Brilliant";
+            this.Brilliant.Name = "Brilliant";
+            this.Brilliant.ReadOnly = true;
+            // 
+            // Level
+            // 
+            this.Level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Level.DataPropertyName = "Level";
+            this.Level.HeaderText = "Level";
+            this.Level.MinimumWidth = 8;
+            this.Level.Name = "Level";
+            this.Level.ReadOnly = true;
+            this.Level.Width = 58;
+            // 
+            // Slot
+            // 
+            this.Slot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Slot.DataPropertyName = "Slot";
+            this.Slot.HeaderText = "Slot";
+            this.Slot.MinimumWidth = 8;
+            this.Slot.Name = "Slot";
+            this.Slot.ReadOnly = true;
+            this.Slot.Width = 50;
+            // 
+            // PID
+            // 
+            this.PID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.PID.DataPropertyName = "PID";
+            this.PID.HeaderText = "PID";
+            this.PID.MinimumWidth = 8;
+            this.PID.Name = "PID";
+            this.PID.ReadOnly = true;
+            this.PID.Width = 50;
+            // 
+            // EC
+            // 
+            this.EC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.EC.DataPropertyName = "EC";
+            this.EC.HeaderText = "EC";
+            this.EC.MinimumWidth = 8;
+            this.EC.Name = "EC";
+            this.EC.ReadOnly = true;
+            this.EC.Width = 46;
+            // 
+            // Shiny
+            // 
+            this.Shiny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Shiny.DataPropertyName = "Shiny";
+            this.Shiny.HeaderText = "Shiny";
+            this.Shiny.MinimumWidth = 8;
+            this.Shiny.Name = "Shiny";
+            this.Shiny.ReadOnly = true;
+            this.Shiny.Width = 58;
+            // 
+            // Ability
+            // 
+            this.Ability.DataPropertyName = "Ability";
+            this.Ability.HeaderText = "Ability";
+            this.Ability.MinimumWidth = 8;
+            this.Ability.Name = "Ability";
+            this.Ability.ReadOnly = true;
+            this.Ability.Width = 50;
+            // 
+            // Nature
+            // 
+            this.Nature.DataPropertyName = "Nature";
+            this.Nature.HeaderText = "Nature";
+            this.Nature.MinimumWidth = 8;
+            this.Nature.Name = "Nature";
+            this.Nature.ReadOnly = true;
+            this.Nature.Width = 75;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // HP
+            // 
+            this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.HP.DataPropertyName = "HP";
+            this.HP.HeaderText = "HP";
+            this.HP.MinimumWidth = 8;
+            this.HP.Name = "HP";
+            this.HP.ReadOnly = true;
+            this.HP.Width = 34;
+            // 
+            // Atk
+            // 
+            this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Atk.DataPropertyName = "Atk";
+            this.Atk.HeaderText = "Atk";
+            this.Atk.MinimumWidth = 8;
+            this.Atk.Name = "Atk";
+            this.Atk.ReadOnly = true;
+            this.Atk.Width = 34;
+            // 
+            // Def
+            // 
+            this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Def.DataPropertyName = "Def";
+            this.Def.HeaderText = "Def";
+            this.Def.MinimumWidth = 8;
+            this.Def.Name = "Def";
+            this.Def.ReadOnly = true;
+            this.Def.Width = 34;
+            // 
+            // SpA
+            // 
+            this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.SpA.DataPropertyName = "SpA";
+            this.SpA.HeaderText = "SpA";
+            this.SpA.MinimumWidth = 8;
+            this.SpA.Name = "SpA";
+            this.SpA.ReadOnly = true;
+            this.SpA.Width = 34;
+            // 
+            // SpD
+            // 
+            this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.SpD.DataPropertyName = "SpD";
+            this.SpD.HeaderText = "SpD";
+            this.SpD.MinimumWidth = 8;
+            this.SpD.Name = "SpD";
+            this.SpD.ReadOnly = true;
+            this.SpD.Width = 34;
+            // 
+            // Spe
+            // 
+            this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Spe.DataPropertyName = "Spe";
+            this.Spe.HeaderText = "Spe";
+            this.Spe.MinimumWidth = 8;
+            this.Spe.Name = "Spe";
+            this.Spe.ReadOnly = true;
+            this.Spe.Width = 34;
+            // 
+            // Mark
+            // 
+            this.Mark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Mark.DataPropertyName = "Mark";
+            this.Mark.HeaderText = "Mark";
+            this.Mark.MinimumWidth = 8;
+            this.Mark.Name = "Mark";
+            this.Mark.ReadOnly = true;
+            this.Mark.Width = 56;
+            // 
+            // State0
+            // 
+            this.State0.DataPropertyName = "State0";
+            this.State0.HeaderText = "State0";
+            this.State0.MinimumWidth = 8;
+            this.State0.Name = "State0";
+            this.State0.ReadOnly = true;
+            this.State0.Width = 150;
+            // 
+            // State1
+            // 
+            this.State1.DataPropertyName = "State1";
+            this.State1.HeaderText = "State1";
+            this.State1.MinimumWidth = 8;
+            this.State1.Name = "State1";
+            this.State1.ReadOnly = true;
+            this.State1.Width = 150;
             // 
             // label12
             // 
@@ -1190,218 +1404,76 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckCuteCharm.Text = "Cute Charm Lead";
             this.CheckCuteCharm.UseVisualStyleBackColor = true;
             // 
-            // Frame
+            // hpResetFilter
             // 
-            this.Frame.DataPropertyName = "Advances";
-            this.Frame.HeaderText = "Frame";
-            this.Frame.MinimumWidth = 8;
-            this.Frame.Name = "Frame";
-            this.Frame.ReadOnly = true;
-            this.Frame.Width = 150;
+            this.hpResetFilter.Location = new System.Drawing.Point(506, 5);
+            this.hpResetFilter.Name = "hpResetFilter";
+            this.hpResetFilter.Size = new System.Drawing.Size(43, 20);
+            this.hpResetFilter.TabIndex = 98;
+            this.hpResetFilter.Text = "Reset";
+            this.hpResetFilter.UseVisualStyleBackColor = true;
+            this.hpResetFilter.Click += new System.EventHandler(this.HpResetFilter_Click);
             // 
-            // TID
+            // atkResetFilter
             // 
-            this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TID.DataPropertyName = "TID";
-            this.TID.HeaderText = "TID";
-            this.TID.MinimumWidth = 8;
-            this.TID.Name = "TID";
-            this.TID.ReadOnly = true;
-            this.TID.Width = 50;
+            this.atkResetFilter.Location = new System.Drawing.Point(506, 32);
+            this.atkResetFilter.Name = "atkResetFilter";
+            this.atkResetFilter.Size = new System.Drawing.Size(43, 20);
+            this.atkResetFilter.TabIndex = 99;
+            this.atkResetFilter.Text = "Reset";
+            this.atkResetFilter.UseVisualStyleBackColor = true;
+            this.atkResetFilter.Click += new System.EventHandler(this.AtkResetFilter_Click);
             // 
-            // SID
+            // defResetFilter
             // 
-            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.SID.DataPropertyName = "SID";
-            this.SID.HeaderText = "SID";
-            this.SID.MinimumWidth = 8;
-            this.SID.Name = "SID";
-            this.SID.ReadOnly = true;
-            this.SID.Width = 50;
+            this.defResetFilter.Location = new System.Drawing.Point(506, 58);
+            this.defResetFilter.Name = "defResetFilter";
+            this.defResetFilter.Size = new System.Drawing.Size(43, 20);
+            this.defResetFilter.TabIndex = 100;
+            this.defResetFilter.Text = "Reset";
+            this.defResetFilter.UseVisualStyleBackColor = true;
+            this.defResetFilter.Click += new System.EventHandler(this.DefResetFilter_Click);
             // 
-            // Animation
+            // spaResetFilter
             // 
-            this.Animation.DataPropertyName = "Animation";
-            this.Animation.HeaderText = "Animation";
-            this.Animation.MinimumWidth = 8;
-            this.Animation.Name = "Animation";
-            this.Animation.ReadOnly = true;
-            this.Animation.Width = 60;
+            this.spaResetFilter.Location = new System.Drawing.Point(506, 84);
+            this.spaResetFilter.Name = "spaResetFilter";
+            this.spaResetFilter.Size = new System.Drawing.Size(43, 20);
+            this.spaResetFilter.TabIndex = 101;
+            this.spaResetFilter.Text = "Reset";
+            this.spaResetFilter.UseVisualStyleBackColor = true;
+            this.spaResetFilter.Click += new System.EventHandler(this.SpaResetFilter_Click);
             // 
-            // Brilliant
+            // spdResetFilter
             // 
-            this.Brilliant.DataPropertyName = "Brilliant";
-            this.Brilliant.HeaderText = "Brilliant";
-            this.Brilliant.Name = "Brilliant";
-            this.Brilliant.ReadOnly = true;
+            this.spdResetFilter.Location = new System.Drawing.Point(506, 110);
+            this.spdResetFilter.Name = "spdResetFilter";
+            this.spdResetFilter.Size = new System.Drawing.Size(43, 20);
+            this.spdResetFilter.TabIndex = 102;
+            this.spdResetFilter.Text = "Reset";
+            this.spdResetFilter.UseVisualStyleBackColor = true;
+            this.spdResetFilter.Click += new System.EventHandler(this.SpdResetFilter_Click);
             // 
-            // Level
+            // speResetFilter
             // 
-            this.Level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Level.DataPropertyName = "Level";
-            this.Level.HeaderText = "Level";
-            this.Level.MinimumWidth = 8;
-            this.Level.Name = "Level";
-            this.Level.ReadOnly = true;
-            this.Level.Width = 58;
-            // 
-            // Slot
-            // 
-            this.Slot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Slot.DataPropertyName = "Slot";
-            this.Slot.HeaderText = "Slot";
-            this.Slot.MinimumWidth = 8;
-            this.Slot.Name = "Slot";
-            this.Slot.ReadOnly = true;
-            this.Slot.Width = 50;
-            // 
-            // PID
-            // 
-            this.PID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.PID.DataPropertyName = "PID";
-            this.PID.HeaderText = "PID";
-            this.PID.MinimumWidth = 8;
-            this.PID.Name = "PID";
-            this.PID.ReadOnly = true;
-            this.PID.Width = 50;
-            // 
-            // EC
-            // 
-            this.EC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.EC.DataPropertyName = "EC";
-            this.EC.HeaderText = "EC";
-            this.EC.MinimumWidth = 8;
-            this.EC.Name = "EC";
-            this.EC.ReadOnly = true;
-            this.EC.Width = 46;
-            // 
-            // Shiny
-            // 
-            this.Shiny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Shiny.DataPropertyName = "Shiny";
-            this.Shiny.HeaderText = "Shiny";
-            this.Shiny.MinimumWidth = 8;
-            this.Shiny.Name = "Shiny";
-            this.Shiny.ReadOnly = true;
-            this.Shiny.Width = 58;
-            // 
-            // Ability
-            // 
-            this.Ability.DataPropertyName = "Ability";
-            this.Ability.HeaderText = "Ability";
-            this.Ability.MinimumWidth = 8;
-            this.Ability.Name = "Ability";
-            this.Ability.ReadOnly = true;
-            this.Ability.Width = 50;
-            // 
-            // Nature
-            // 
-            this.Nature.DataPropertyName = "Nature";
-            this.Nature.HeaderText = "Nature";
-            this.Nature.MinimumWidth = 8;
-            this.Nature.Name = "Nature";
-            this.Nature.ReadOnly = true;
-            this.Nature.Width = 75;
-            // 
-            // Gender
-            // 
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // HP
-            // 
-            this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.HP.DataPropertyName = "HP";
-            this.HP.HeaderText = "HP";
-            this.HP.MinimumWidth = 8;
-            this.HP.Name = "HP";
-            this.HP.ReadOnly = true;
-            this.HP.Width = 34;
-            // 
-            // Atk
-            // 
-            this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Atk.DataPropertyName = "Atk";
-            this.Atk.HeaderText = "Atk";
-            this.Atk.MinimumWidth = 8;
-            this.Atk.Name = "Atk";
-            this.Atk.ReadOnly = true;
-            this.Atk.Width = 34;
-            // 
-            // Def
-            // 
-            this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Def.DataPropertyName = "Def";
-            this.Def.HeaderText = "Def";
-            this.Def.MinimumWidth = 8;
-            this.Def.Name = "Def";
-            this.Def.ReadOnly = true;
-            this.Def.Width = 34;
-            // 
-            // SpA
-            // 
-            this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SpA.DataPropertyName = "SpA";
-            this.SpA.HeaderText = "SpA";
-            this.SpA.MinimumWidth = 8;
-            this.SpA.Name = "SpA";
-            this.SpA.ReadOnly = true;
-            this.SpA.Width = 34;
-            // 
-            // SpD
-            // 
-            this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SpD.DataPropertyName = "SpD";
-            this.SpD.HeaderText = "SpD";
-            this.SpD.MinimumWidth = 8;
-            this.SpD.Name = "SpD";
-            this.SpD.ReadOnly = true;
-            this.SpD.Width = 34;
-            // 
-            // Spe
-            // 
-            this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Spe.DataPropertyName = "Spe";
-            this.Spe.HeaderText = "Spe";
-            this.Spe.MinimumWidth = 8;
-            this.Spe.Name = "Spe";
-            this.Spe.ReadOnly = true;
-            this.Spe.Width = 34;
-            // 
-            // Mark
-            // 
-            this.Mark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Mark.DataPropertyName = "Mark";
-            this.Mark.HeaderText = "Mark";
-            this.Mark.MinimumWidth = 8;
-            this.Mark.Name = "Mark";
-            this.Mark.ReadOnly = true;
-            this.Mark.Width = 56;
-            // 
-            // State0
-            // 
-            this.State0.DataPropertyName = "State0";
-            this.State0.HeaderText = "State0";
-            this.State0.MinimumWidth = 8;
-            this.State0.Name = "State0";
-            this.State0.ReadOnly = true;
-            this.State0.Width = 150;
-            // 
-            // State1
-            // 
-            this.State1.DataPropertyName = "State1";
-            this.State1.HeaderText = "State1";
-            this.State1.MinimumWidth = 8;
-            this.State1.Name = "State1";
-            this.State1.ReadOnly = true;
-            this.State1.Width = 150;
+            this.speResetFilter.Location = new System.Drawing.Point(506, 136);
+            this.speResetFilter.Name = "speResetFilter";
+            this.speResetFilter.Size = new System.Drawing.Size(43, 20);
+            this.speResetFilter.TabIndex = 103;
+            this.speResetFilter.Text = "Reset";
+            this.speResetFilter.UseVisualStyleBackColor = true;
+            this.speResetFilter.Click += new System.EventHandler(this.SpeResetFilter_Click);
             // 
             // MainWindow
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(769, 580);
+            this.ClientSize = new System.Drawing.Size(977, 559);
+            this.Controls.Add(this.speResetFilter);
+            this.Controls.Add(this.spdResetFilter);
+            this.Controls.Add(this.spaResetFilter);
+            this.Controls.Add(this.defResetFilter);
+            this.Controls.Add(this.atkResetFilter);
+            this.Controls.Add(this.hpResetFilter);
             this.Controls.Add(this.CheckCuteCharm);
             this.Controls.Add(this.sensBox);
             this.Controls.Add(this.CheckTIDSIDFinder);
@@ -1628,5 +1700,11 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Mark;
         private System.Windows.Forms.DataGridViewTextBoxColumn State0;
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
+        private System.Windows.Forms.Button hpResetFilter;
+        private System.Windows.Forms.Button atkResetFilter;
+        private System.Windows.Forms.Button defResetFilter;
+        private System.Windows.Forms.Button spaResetFilter;
+        private System.Windows.Forms.Button spdResetFilter;
+        private System.Windows.Forms.Button speResetFilter;
     }
 }

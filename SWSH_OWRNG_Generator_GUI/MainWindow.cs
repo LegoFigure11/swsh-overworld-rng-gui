@@ -697,5 +697,54 @@ namespace SWSH_OWRNG_Generator_GUI
             }
             
         }
+
+        private void HpResetFilter_Click(object sender, EventArgs e)
+        {
+            hpMin.Clear();
+            hpMin.Text = "0";
+            hpMax.Clear();
+            hpMax.Text = "31";
+        }
+        private void AtkResetFilter_Click(object sender, EventArgs e)
+        {
+            atkMin.Clear();
+            atkMin.Text = "0";
+            atkMax.Clear();
+            atkMax.Text = "31";
+        }
+
+        private void DefResetFilter_Click(object sender, EventArgs e)
+        {
+            defMin.Clear();
+            defMin.Text = "0";
+            defMax.Clear();
+            defMax.Text = "31";
+        }
+
+        private void SpaResetFilter_Click(object sender, EventArgs e)
+        {
+            spaMin.Clear();
+            spaMin.Text = "0";
+            spaMax.Clear();
+            spaMax.Text = "31";
+        }
+
+        private void SpdResetFilter_Click(object sender, EventArgs e)
+        {
+            spdMin.Clear();
+            spdMin.Text = "0";
+            spdMax.Clear();
+            spdMax.Text = "31";
+        }
+
+        private void SpeResetFilter_Click(object sender, EventArgs e)
+        {
+            speMin.Clear();
+            speMin.Text = "0";
+            speMax.Clear();
+            speMax.Text = "31";
+        }
+
+        
     }
 }
