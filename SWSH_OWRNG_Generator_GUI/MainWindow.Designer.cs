@@ -155,6 +155,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaResetFilter = new System.Windows.Forms.Button();
             this.spdResetFilter = new System.Windows.Forms.Button();
             this.speResetFilter = new System.Windows.Forms.Button();
+            this.hpJudgeFilter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1146,7 +1147,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.RetailAdvancesTrackerLabel.AutoSize = true;
             this.RetailAdvancesTrackerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetailAdvancesTrackerLabel.Location = new System.Drawing.Point(548, 9);
+            this.RetailAdvancesTrackerLabel.Location = new System.Drawing.Point(755, 24);
             this.RetailAdvancesTrackerLabel.Name = "RetailAdvancesTrackerLabel";
             this.RetailAdvancesTrackerLabel.Size = new System.Drawing.Size(148, 13);
             this.RetailAdvancesTrackerLabel.TabIndex = 75;
@@ -1155,7 +1156,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // RetailAdvancesTrackerInitialInputLabel
             // 
             this.RetailAdvancesTrackerInitialInputLabel.AutoSize = true;
-            this.RetailAdvancesTrackerInitialInputLabel.Location = new System.Drawing.Point(548, 35);
+            this.RetailAdvancesTrackerInitialInputLabel.Location = new System.Drawing.Point(755, 50);
             this.RetailAdvancesTrackerInitialInputLabel.Name = "RetailAdvancesTrackerInitialInputLabel";
             this.RetailAdvancesTrackerInitialInputLabel.Size = new System.Drawing.Size(59, 13);
             this.RetailAdvancesTrackerInitialInputLabel.TabIndex = 76;
@@ -1164,7 +1165,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // RetailAdvancesTrackerMaxAdvInputLabel
             // 
             this.RetailAdvancesTrackerMaxAdvInputLabel.AutoSize = true;
-            this.RetailAdvancesTrackerMaxAdvInputLabel.Location = new System.Drawing.Point(594, 61);
+            this.RetailAdvancesTrackerMaxAdvInputLabel.Location = new System.Drawing.Point(801, 76);
             this.RetailAdvancesTrackerMaxAdvInputLabel.Name = "RetailAdvancesTrackerMaxAdvInputLabel";
             this.RetailAdvancesTrackerMaxAdvInputLabel.Size = new System.Drawing.Size(13, 13);
             this.RetailAdvancesTrackerMaxAdvInputLabel.TabIndex = 77;
@@ -1172,7 +1173,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // RetailAdvancesTrackerInitialInput
             // 
-            this.RetailAdvancesTrackerInitialInput.Location = new System.Drawing.Point(613, 32);
+            this.RetailAdvancesTrackerInitialInput.Location = new System.Drawing.Point(820, 47);
             this.RetailAdvancesTrackerInitialInput.MaxLength = 16;
             this.RetailAdvancesTrackerInitialInput.Name = "RetailAdvancesTrackerInitialInput";
             this.RetailAdvancesTrackerInitialInput.Size = new System.Drawing.Size(145, 20);
@@ -1183,7 +1184,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // RetailAdvancesTrackerMaxInput
             // 
-            this.RetailAdvancesTrackerMaxInput.Location = new System.Drawing.Point(613, 58);
+            this.RetailAdvancesTrackerMaxInput.Location = new System.Drawing.Point(820, 73);
             this.RetailAdvancesTrackerMaxInput.MaxLength = 16;
             this.RetailAdvancesTrackerMaxInput.Name = "RetailAdvancesTrackerMaxInput";
             this.RetailAdvancesTrackerMaxInput.Size = new System.Drawing.Size(145, 20);
@@ -1194,7 +1195,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // RetailAdvancesTrackerGenerateButton
             // 
-            this.RetailAdvancesTrackerGenerateButton.Location = new System.Drawing.Point(551, 91);
+            this.RetailAdvancesTrackerGenerateButton.Location = new System.Drawing.Point(758, 106);
             this.RetailAdvancesTrackerGenerateButton.Name = "RetailAdvancesTrackerGenerateButton";
             this.RetailAdvancesTrackerGenerateButton.Size = new System.Drawing.Size(207, 20);
             this.RetailAdvancesTrackerGenerateButton.TabIndex = 80;
@@ -1205,14 +1206,14 @@ namespace SWSH_OWRNG_Generator_GUI
             // RetailAdvancesTrackerProgressBar
             // 
             this.RetailAdvancesTrackerProgressBar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.RetailAdvancesTrackerProgressBar.Location = new System.Drawing.Point(552, 115);
+            this.RetailAdvancesTrackerProgressBar.Location = new System.Drawing.Point(759, 130);
             this.RetailAdvancesTrackerProgressBar.Name = "RetailAdvancesTrackerProgressBar";
             this.RetailAdvancesTrackerProgressBar.Size = new System.Drawing.Size(205, 10);
             this.RetailAdvancesTrackerProgressBar.TabIndex = 81;
             // 
             // RetailAdvancesTrackerSequenceInput
             // 
-            this.RetailAdvancesTrackerSequenceInput.Location = new System.Drawing.Point(551, 152);
+            this.RetailAdvancesTrackerSequenceInput.Location = new System.Drawing.Point(758, 167);
             this.RetailAdvancesTrackerSequenceInput.MaxLength = 30;
             this.RetailAdvancesTrackerSequenceInput.Name = "RetailAdvancesTrackerSequenceInput";
             this.RetailAdvancesTrackerSequenceInput.ReadOnly = true;
@@ -1224,7 +1225,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // RetailAdvancesTrackerSequenceLabel
             // 
             this.RetailAdvancesTrackerSequenceLabel.AutoSize = true;
-            this.RetailAdvancesTrackerSequenceLabel.Location = new System.Drawing.Point(548, 136);
+            this.RetailAdvancesTrackerSequenceLabel.Location = new System.Drawing.Point(755, 151);
             this.RetailAdvancesTrackerSequenceLabel.Name = "RetailAdvancesTrackerSequenceLabel";
             this.RetailAdvancesTrackerSequenceLabel.Size = new System.Drawing.Size(199, 13);
             this.RetailAdvancesTrackerSequenceLabel.TabIndex = 83;
@@ -1232,7 +1233,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // RetailAdvancesTrackerResultState0
             // 
-            this.RetailAdvancesTrackerResultState0.Location = new System.Drawing.Point(551, 237);
+            this.RetailAdvancesTrackerResultState0.Location = new System.Drawing.Point(758, 252);
             this.RetailAdvancesTrackerResultState0.MaxLength = 16;
             this.RetailAdvancesTrackerResultState0.Name = "RetailAdvancesTrackerResultState0";
             this.RetailAdvancesTrackerResultState0.ReadOnly = true;
@@ -1243,7 +1244,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(548, 264);
+            this.label3.Location = new System.Drawing.Point(755, 279);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 87;
@@ -1251,7 +1252,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // RetailAdvancesTrackerResultState1
             // 
-            this.RetailAdvancesTrackerResultState1.Location = new System.Drawing.Point(551, 280);
+            this.RetailAdvancesTrackerResultState1.Location = new System.Drawing.Point(758, 295);
             this.RetailAdvancesTrackerResultState1.MaxLength = 16;
             this.RetailAdvancesTrackerResultState1.Name = "RetailAdvancesTrackerResultState1";
             this.RetailAdvancesTrackerResultState1.ReadOnly = true;
@@ -1262,7 +1263,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(548, 221);
+            this.label2.Location = new System.Drawing.Point(755, 236);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 85;
@@ -1271,7 +1272,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // RetailAdvancesTrackerNumResultsLabel
             // 
             this.RetailAdvancesTrackerNumResultsLabel.AutoSize = true;
-            this.RetailAdvancesTrackerNumResultsLabel.Location = new System.Drawing.Point(548, 189);
+            this.RetailAdvancesTrackerNumResultsLabel.Location = new System.Drawing.Point(755, 204);
             this.RetailAdvancesTrackerNumResultsLabel.Name = "RetailAdvancesTrackerNumResultsLabel";
             this.RetailAdvancesTrackerNumResultsLabel.Size = new System.Drawing.Size(110, 13);
             this.RetailAdvancesTrackerNumResultsLabel.TabIndex = 88;
@@ -1300,7 +1301,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // ButtonUpdateStates
             // 
-            this.ButtonUpdateStates.Location = new System.Drawing.Point(550, 306);
+            this.ButtonUpdateStates.Location = new System.Drawing.Point(757, 321);
             this.ButtonUpdateStates.Name = "ButtonUpdateStates";
             this.ButtonUpdateStates.Size = new System.Drawing.Size(209, 20);
             this.ButtonUpdateStates.TabIndex = 89;
@@ -1406,7 +1407,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // hpResetFilter
             // 
-            this.hpResetFilter.Location = new System.Drawing.Point(506, 5);
+            this.hpResetFilter.Location = new System.Drawing.Point(649, 5);
             this.hpResetFilter.Name = "hpResetFilter";
             this.hpResetFilter.Size = new System.Drawing.Size(43, 20);
             this.hpResetFilter.TabIndex = 98;
@@ -1416,7 +1417,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // atkResetFilter
             // 
-            this.atkResetFilter.Location = new System.Drawing.Point(506, 32);
+            this.atkResetFilter.Location = new System.Drawing.Point(649, 32);
             this.atkResetFilter.Name = "atkResetFilter";
             this.atkResetFilter.Size = new System.Drawing.Size(43, 20);
             this.atkResetFilter.TabIndex = 99;
@@ -1426,7 +1427,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // defResetFilter
             // 
-            this.defResetFilter.Location = new System.Drawing.Point(506, 58);
+            this.defResetFilter.Location = new System.Drawing.Point(649, 58);
             this.defResetFilter.Name = "defResetFilter";
             this.defResetFilter.Size = new System.Drawing.Size(43, 20);
             this.defResetFilter.TabIndex = 100;
@@ -1436,7 +1437,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // spaResetFilter
             // 
-            this.spaResetFilter.Location = new System.Drawing.Point(506, 84);
+            this.spaResetFilter.Location = new System.Drawing.Point(649, 84);
             this.spaResetFilter.Name = "spaResetFilter";
             this.spaResetFilter.Size = new System.Drawing.Size(43, 20);
             this.spaResetFilter.TabIndex = 101;
@@ -1446,7 +1447,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // spdResetFilter
             // 
-            this.spdResetFilter.Location = new System.Drawing.Point(506, 110);
+            this.spdResetFilter.Location = new System.Drawing.Point(649, 110);
             this.spdResetFilter.Name = "spdResetFilter";
             this.spdResetFilter.Size = new System.Drawing.Size(43, 20);
             this.spdResetFilter.TabIndex = 102;
@@ -1456,7 +1457,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // speResetFilter
             // 
-            this.speResetFilter.Location = new System.Drawing.Point(506, 136);
+            this.speResetFilter.Location = new System.Drawing.Point(649, 136);
             this.speResetFilter.Name = "speResetFilter";
             this.speResetFilter.Size = new System.Drawing.Size(43, 20);
             this.speResetFilter.TabIndex = 103;
@@ -1464,10 +1465,28 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speResetFilter.UseVisualStyleBackColor = true;
             this.speResetFilter.Click += new System.EventHandler(this.SpeResetFilter_Click);
             // 
+            // hpJudgeFilter
+            // 
+            this.hpJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.hpJudgeFilter.FormattingEnabled = true;
+            this.hpJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.hpJudgeFilter.Location = new System.Drawing.Point(506, 4);
+            this.hpJudgeFilter.Name = "hpJudgeFilter";
+            this.hpJudgeFilter.Size = new System.Drawing.Size(121, 21);
+            this.hpJudgeFilter.TabIndex = 104;
+            this.hpJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.HpJudgeFilter_SelectedIndexChanged);
+            // 
             // MainWindow
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(977, 559);
+            this.Controls.Add(this.hpJudgeFilter);
             this.Controls.Add(this.speResetFilter);
             this.Controls.Add(this.spdResetFilter);
             this.Controls.Add(this.spaResetFilter);
@@ -1706,5 +1725,6 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.Button spaResetFilter;
         private System.Windows.Forms.Button spdResetFilter;
         private System.Windows.Forms.Button speResetFilter;
+        private System.Windows.Forms.ComboBox hpJudgeFilter;
     }
 }

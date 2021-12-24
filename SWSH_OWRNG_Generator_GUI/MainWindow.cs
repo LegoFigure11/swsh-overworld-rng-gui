@@ -745,6 +745,51 @@ namespace SWSH_OWRNG_Generator_GUI
             speMax.Text = "31";
         }
 
-        
+        private void HpJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (hpJudgeFilter.Text)
+            {
+                case "No Good":
+                    hpMin.Clear();
+                    hpMin.Text = "0";
+                    hpMax.Clear();
+                    hpMax.Text = "0";
+                    break;
+                case "Decent":
+                    hpMin.Clear();
+                    hpMin.Text = "1";
+                    hpMax.Clear();
+                    hpMax.Text = "15";
+                    break;
+                case "Pretty Good":
+                    hpMin.Clear();
+                    hpMin.Text = "16";
+                    hpMax.Clear();
+                    hpMax.Text = "25";
+                    break;
+                case "Very Good":
+                    hpMin.Clear();
+                    hpMin.Text = "26";
+                    hpMax.Clear();
+                    hpMax.Text = "29";
+                    break;
+                case "Fantastic":
+                    hpMin.Clear();
+                    hpMin.Text = "30";
+                    hpMax.Clear();
+                    hpMax.Text = "30";
+                    break;
+                case "Best":
+                    hpMin.Clear();
+                    hpMin.Text = "31";
+                    hpMax.Clear();
+                    hpMax.Text = "31";
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
     }
 }
