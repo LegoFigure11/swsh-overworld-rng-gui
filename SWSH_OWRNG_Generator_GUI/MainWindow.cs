@@ -73,7 +73,8 @@ namespace SWSH_OWRNG_Generator_GUI
             CheckHeldItem.TabIndex = CheckWeather.TabIndex + 1;
             CheckIsAbilityLocked.TabIndex = CheckHeldItem.TabIndex + 1;
             CheckTIDSIDFinder.TabIndex = CheckIsAbilityLocked.TabIndex + 1;
-            InputFlawlessIVs.TabIndex = CheckTIDSIDFinder.TabIndex + 1;
+            CheckCuteCharm.TabIndex = CheckTIDSIDFinder.TabIndex + 1;
+            InputFlawlessIVs.TabIndex = CheckCuteCharm.TabIndex + 1;
             InputKOCount.TabIndex = InputFlawlessIVs.TabIndex + 1;
             InputEMs.TabIndex = InputKOCount.TabIndex + 1;
             InputLevelMin.TabIndex = InputKOCount.TabIndex + 1;
@@ -87,6 +88,7 @@ namespace SWSH_OWRNG_Generator_GUI
             RetailAdvancesTrackerGenerateButton.TabIndex = RetailAdvancesTrackerMaxInput.TabIndex + 1;
             RetailAdvancesTrackerSequenceInput.TabIndex = RetailAdvancesTrackerGenerateButton.TabIndex + 1;
             ButtonUpdateStates.TabIndex = RetailAdvancesTrackerSequenceInput.TabIndex + 1;
+            sensBox.TabIndex = ButtonUpdateStates.TabIndex + 1;
         }
 
         private void HpMinFilter_Click(object sender, EventArgs e)
@@ -488,6 +490,7 @@ namespace SWSH_OWRNG_Generator_GUI
             bool HeldItem = CheckHeldItem.Checked;
             bool IsAbilityLocked = CheckIsAbilityLocked.Checked;
             bool TIDSIDSearch = CheckTIDSIDFinder.Checked;
+            bool IsCuteCharm = CheckCuteCharm.Checked;
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
             uint[] MinIVs = { UInt16.Parse(hpMin.Text), UInt16.Parse(atkMin.Text), UInt16.Parse(defMin.Text), UInt16.Parse(spaMin.Text), UInt16.Parse(spdMin.Text), UInt16.Parse(speMin.Text) };
@@ -538,7 +541,8 @@ namespace SWSH_OWRNG_Generator_GUI
 
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
-                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs, TIDSIDSearch, progress
+                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs, IsCuteCharm, 
+                TIDSIDSearch, progress
             ));
             BindingSource Source = new BindingSource { DataSource = Frames };
             Results.DataSource = Source;
@@ -665,6 +669,33 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputSID.Enabled = !check;
             this.SelectedShiny.Enabled = !check;
             this.LabelShiny.Enabled = !check;
+        }
+
+        private void sensBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sensBox.Checked)
+            {
+                this.PID.Visible = false;
+                this.EC.Visible = false;
+                this.State0.Visible = false;
+                this.State1.Visible = false;
+                this.InputState0.UseSystemPasswordChar = true;
+                this.InputState1.UseSystemPasswordChar = true;
+                this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = true;
+                this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                this.PID.Visible = true;
+                this.EC.Visible = true;
+                this.State0.Visible = true;
+                this.State1.Visible = true;
+                this.InputState0.UseSystemPasswordChar = false;
+                this.InputState1.UseSystemPasswordChar = false;
+                this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = false;
+                this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = false;
+            }
+            
         }
     }
 }
