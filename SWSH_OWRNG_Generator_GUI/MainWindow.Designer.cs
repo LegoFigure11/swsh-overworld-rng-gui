@@ -73,6 +73,28 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedShiny = new System.Windows.Forms.ComboBox();
             this.LabelShiny = new System.Windows.Forms.Label();
             this.Results = new System.Windows.Forms.DataGridView();
+            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brilliant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Atk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Def = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Spe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.speMinFilter = new System.Windows.Forms.Button();
@@ -127,28 +149,14 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputFlawlessIVs = new System.Windows.Forms.TextBox();
             this.sensBox = new System.Windows.Forms.CheckBox();
             this.CheckCuteCharm = new System.Windows.Forms.CheckBox();
-            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brilliant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Atk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Def = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Spe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hpJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.atkJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.defJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.spaJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.spdJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.speJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.DesiredNature = new System.Windows.Forms.Label();
+            this.SelectedNature = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -652,8 +660,216 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(746, 187);
+            this.Results.Size = new System.Drawing.Size(808, 166);
             this.Results.TabIndex = 73;
+            // 
+            // Frame
+            // 
+            this.Frame.DataPropertyName = "Advances";
+            this.Frame.HeaderText = "Frame";
+            this.Frame.MinimumWidth = 8;
+            this.Frame.Name = "Frame";
+            this.Frame.ReadOnly = true;
+            this.Frame.Width = 150;
+            // 
+            // TID
+            // 
+            this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TID.DataPropertyName = "TID";
+            this.TID.HeaderText = "TID";
+            this.TID.MinimumWidth = 8;
+            this.TID.Name = "TID";
+            this.TID.ReadOnly = true;
+            this.TID.Width = 50;
+            // 
+            // SID
+            // 
+            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SID.DataPropertyName = "SID";
+            this.SID.HeaderText = "SID";
+            this.SID.MinimumWidth = 8;
+            this.SID.Name = "SID";
+            this.SID.ReadOnly = true;
+            this.SID.Width = 50;
+            // 
+            // Animation
+            // 
+            this.Animation.DataPropertyName = "Animation";
+            this.Animation.HeaderText = "Animation";
+            this.Animation.MinimumWidth = 8;
+            this.Animation.Name = "Animation";
+            this.Animation.ReadOnly = true;
+            this.Animation.Width = 60;
+            // 
+            // Brilliant
+            // 
+            this.Brilliant.DataPropertyName = "Brilliant";
+            this.Brilliant.HeaderText = "Brilliant";
+            this.Brilliant.Name = "Brilliant";
+            this.Brilliant.ReadOnly = true;
+            // 
+            // Level
+            // 
+            this.Level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Level.DataPropertyName = "Level";
+            this.Level.HeaderText = "Level";
+            this.Level.MinimumWidth = 8;
+            this.Level.Name = "Level";
+            this.Level.ReadOnly = true;
+            this.Level.Width = 58;
+            // 
+            // Slot
+            // 
+            this.Slot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Slot.DataPropertyName = "Slot";
+            this.Slot.HeaderText = "Slot";
+            this.Slot.MinimumWidth = 8;
+            this.Slot.Name = "Slot";
+            this.Slot.ReadOnly = true;
+            this.Slot.Width = 50;
+            // 
+            // PID
+            // 
+            this.PID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.PID.DataPropertyName = "PID";
+            this.PID.HeaderText = "PID";
+            this.PID.MinimumWidth = 8;
+            this.PID.Name = "PID";
+            this.PID.ReadOnly = true;
+            this.PID.Width = 50;
+            // 
+            // EC
+            // 
+            this.EC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.EC.DataPropertyName = "EC";
+            this.EC.HeaderText = "EC";
+            this.EC.MinimumWidth = 8;
+            this.EC.Name = "EC";
+            this.EC.ReadOnly = true;
+            this.EC.Width = 46;
+            // 
+            // Shiny
+            // 
+            this.Shiny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Shiny.DataPropertyName = "Shiny";
+            this.Shiny.HeaderText = "Shiny";
+            this.Shiny.MinimumWidth = 8;
+            this.Shiny.Name = "Shiny";
+            this.Shiny.ReadOnly = true;
+            this.Shiny.Width = 58;
+            // 
+            // Ability
+            // 
+            this.Ability.DataPropertyName = "Ability";
+            this.Ability.HeaderText = "Ability";
+            this.Ability.MinimumWidth = 8;
+            this.Ability.Name = "Ability";
+            this.Ability.ReadOnly = true;
+            this.Ability.Width = 50;
+            // 
+            // Nature
+            // 
+            this.Nature.DataPropertyName = "Nature";
+            this.Nature.HeaderText = "Nature";
+            this.Nature.MinimumWidth = 8;
+            this.Nature.Name = "Nature";
+            this.Nature.ReadOnly = true;
+            this.Nature.Width = 75;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // HP
+            // 
+            this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.HP.DataPropertyName = "HP";
+            this.HP.HeaderText = "HP";
+            this.HP.MinimumWidth = 8;
+            this.HP.Name = "HP";
+            this.HP.ReadOnly = true;
+            this.HP.Width = 34;
+            // 
+            // Atk
+            // 
+            this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Atk.DataPropertyName = "Atk";
+            this.Atk.HeaderText = "Atk";
+            this.Atk.MinimumWidth = 8;
+            this.Atk.Name = "Atk";
+            this.Atk.ReadOnly = true;
+            this.Atk.Width = 34;
+            // 
+            // Def
+            // 
+            this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Def.DataPropertyName = "Def";
+            this.Def.HeaderText = "Def";
+            this.Def.MinimumWidth = 8;
+            this.Def.Name = "Def";
+            this.Def.ReadOnly = true;
+            this.Def.Width = 34;
+            // 
+            // SpA
+            // 
+            this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.SpA.DataPropertyName = "SpA";
+            this.SpA.HeaderText = "SpA";
+            this.SpA.MinimumWidth = 8;
+            this.SpA.Name = "SpA";
+            this.SpA.ReadOnly = true;
+            this.SpA.Width = 34;
+            // 
+            // SpD
+            // 
+            this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.SpD.DataPropertyName = "SpD";
+            this.SpD.HeaderText = "SpD";
+            this.SpD.MinimumWidth = 8;
+            this.SpD.Name = "SpD";
+            this.SpD.ReadOnly = true;
+            this.SpD.Width = 34;
+            // 
+            // Spe
+            // 
+            this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Spe.DataPropertyName = "Spe";
+            this.Spe.HeaderText = "Spe";
+            this.Spe.MinimumWidth = 8;
+            this.Spe.Name = "Spe";
+            this.Spe.ReadOnly = true;
+            this.Spe.Width = 34;
+            // 
+            // Mark
+            // 
+            this.Mark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Mark.DataPropertyName = "Mark";
+            this.Mark.HeaderText = "Mark";
+            this.Mark.MinimumWidth = 8;
+            this.Mark.Name = "Mark";
+            this.Mark.ReadOnly = true;
+            this.Mark.Width = 56;
+            // 
+            // State0
+            // 
+            this.State0.DataPropertyName = "State0";
+            this.State0.HeaderText = "State0";
+            this.State0.MinimumWidth = 8;
+            this.State0.Name = "State0";
+            this.State0.ReadOnly = true;
+            this.State0.Width = 150;
+            // 
+            // State1
+            // 
+            this.State1.DataPropertyName = "State1";
+            this.State1.HeaderText = "State1";
+            this.State1.MinimumWidth = 8;
+            this.State1.Name = "State1";
+            this.State1.ReadOnly = true;
+            this.State1.Width = 150;
             // 
             // label12
             // 
@@ -932,7 +1148,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             this.RetailAdvancesTrackerLabel.AutoSize = true;
             this.RetailAdvancesTrackerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetailAdvancesTrackerLabel.Location = new System.Drawing.Point(548, 9);
+            this.RetailAdvancesTrackerLabel.Location = new System.Drawing.Point(602, 8);
             this.RetailAdvancesTrackerLabel.Name = "RetailAdvancesTrackerLabel";
             this.RetailAdvancesTrackerLabel.Size = new System.Drawing.Size(148, 13);
             this.RetailAdvancesTrackerLabel.TabIndex = 75;
@@ -941,7 +1157,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // RetailAdvancesTrackerInitialInputLabel
             // 
             this.RetailAdvancesTrackerInitialInputLabel.AutoSize = true;
-            this.RetailAdvancesTrackerInitialInputLabel.Location = new System.Drawing.Point(548, 35);
+            this.RetailAdvancesTrackerInitialInputLabel.Location = new System.Drawing.Point(602, 34);
             this.RetailAdvancesTrackerInitialInputLabel.Name = "RetailAdvancesTrackerInitialInputLabel";
             this.RetailAdvancesTrackerInitialInputLabel.Size = new System.Drawing.Size(59, 13);
             this.RetailAdvancesTrackerInitialInputLabel.TabIndex = 76;
@@ -950,7 +1166,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // RetailAdvancesTrackerMaxAdvInputLabel
             // 
             this.RetailAdvancesTrackerMaxAdvInputLabel.AutoSize = true;
-            this.RetailAdvancesTrackerMaxAdvInputLabel.Location = new System.Drawing.Point(594, 61);
+            this.RetailAdvancesTrackerMaxAdvInputLabel.Location = new System.Drawing.Point(648, 60);
             this.RetailAdvancesTrackerMaxAdvInputLabel.Name = "RetailAdvancesTrackerMaxAdvInputLabel";
             this.RetailAdvancesTrackerMaxAdvInputLabel.Size = new System.Drawing.Size(13, 13);
             this.RetailAdvancesTrackerMaxAdvInputLabel.TabIndex = 77;
@@ -958,7 +1174,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // RetailAdvancesTrackerInitialInput
             // 
-            this.RetailAdvancesTrackerInitialInput.Location = new System.Drawing.Point(613, 32);
+            this.RetailAdvancesTrackerInitialInput.Location = new System.Drawing.Point(667, 31);
             this.RetailAdvancesTrackerInitialInput.MaxLength = 16;
             this.RetailAdvancesTrackerInitialInput.Name = "RetailAdvancesTrackerInitialInput";
             this.RetailAdvancesTrackerInitialInput.Size = new System.Drawing.Size(145, 20);
@@ -969,7 +1185,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // RetailAdvancesTrackerMaxInput
             // 
-            this.RetailAdvancesTrackerMaxInput.Location = new System.Drawing.Point(613, 58);
+            this.RetailAdvancesTrackerMaxInput.Location = new System.Drawing.Point(667, 57);
             this.RetailAdvancesTrackerMaxInput.MaxLength = 16;
             this.RetailAdvancesTrackerMaxInput.Name = "RetailAdvancesTrackerMaxInput";
             this.RetailAdvancesTrackerMaxInput.Size = new System.Drawing.Size(145, 20);
@@ -980,7 +1196,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // RetailAdvancesTrackerGenerateButton
             // 
-            this.RetailAdvancesTrackerGenerateButton.Location = new System.Drawing.Point(551, 91);
+            this.RetailAdvancesTrackerGenerateButton.Location = new System.Drawing.Point(605, 90);
             this.RetailAdvancesTrackerGenerateButton.Name = "RetailAdvancesTrackerGenerateButton";
             this.RetailAdvancesTrackerGenerateButton.Size = new System.Drawing.Size(207, 20);
             this.RetailAdvancesTrackerGenerateButton.TabIndex = 80;
@@ -991,14 +1207,14 @@ namespace SWSH_OWRNG_Generator_GUI
             // RetailAdvancesTrackerProgressBar
             // 
             this.RetailAdvancesTrackerProgressBar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.RetailAdvancesTrackerProgressBar.Location = new System.Drawing.Point(552, 115);
+            this.RetailAdvancesTrackerProgressBar.Location = new System.Drawing.Point(606, 114);
             this.RetailAdvancesTrackerProgressBar.Name = "RetailAdvancesTrackerProgressBar";
             this.RetailAdvancesTrackerProgressBar.Size = new System.Drawing.Size(205, 10);
             this.RetailAdvancesTrackerProgressBar.TabIndex = 81;
             // 
             // RetailAdvancesTrackerSequenceInput
             // 
-            this.RetailAdvancesTrackerSequenceInput.Location = new System.Drawing.Point(551, 152);
+            this.RetailAdvancesTrackerSequenceInput.Location = new System.Drawing.Point(605, 151);
             this.RetailAdvancesTrackerSequenceInput.MaxLength = 30;
             this.RetailAdvancesTrackerSequenceInput.Name = "RetailAdvancesTrackerSequenceInput";
             this.RetailAdvancesTrackerSequenceInput.ReadOnly = true;
@@ -1010,7 +1226,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // RetailAdvancesTrackerSequenceLabel
             // 
             this.RetailAdvancesTrackerSequenceLabel.AutoSize = true;
-            this.RetailAdvancesTrackerSequenceLabel.Location = new System.Drawing.Point(548, 136);
+            this.RetailAdvancesTrackerSequenceLabel.Location = new System.Drawing.Point(602, 135);
             this.RetailAdvancesTrackerSequenceLabel.Name = "RetailAdvancesTrackerSequenceLabel";
             this.RetailAdvancesTrackerSequenceLabel.Size = new System.Drawing.Size(199, 13);
             this.RetailAdvancesTrackerSequenceLabel.TabIndex = 83;
@@ -1018,7 +1234,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // RetailAdvancesTrackerResultState0
             // 
-            this.RetailAdvancesTrackerResultState0.Location = new System.Drawing.Point(551, 237);
+            this.RetailAdvancesTrackerResultState0.Location = new System.Drawing.Point(605, 236);
             this.RetailAdvancesTrackerResultState0.MaxLength = 16;
             this.RetailAdvancesTrackerResultState0.Name = "RetailAdvancesTrackerResultState0";
             this.RetailAdvancesTrackerResultState0.ReadOnly = true;
@@ -1029,7 +1245,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(548, 264);
+            this.label3.Location = new System.Drawing.Point(602, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 87;
@@ -1037,7 +1253,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // RetailAdvancesTrackerResultState1
             // 
-            this.RetailAdvancesTrackerResultState1.Location = new System.Drawing.Point(551, 280);
+            this.RetailAdvancesTrackerResultState1.Location = new System.Drawing.Point(605, 279);
             this.RetailAdvancesTrackerResultState1.MaxLength = 16;
             this.RetailAdvancesTrackerResultState1.Name = "RetailAdvancesTrackerResultState1";
             this.RetailAdvancesTrackerResultState1.ReadOnly = true;
@@ -1048,7 +1264,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(548, 221);
+            this.label2.Location = new System.Drawing.Point(602, 220);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 85;
@@ -1057,7 +1273,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // RetailAdvancesTrackerNumResultsLabel
             // 
             this.RetailAdvancesTrackerNumResultsLabel.AutoSize = true;
-            this.RetailAdvancesTrackerNumResultsLabel.Location = new System.Drawing.Point(548, 189);
+            this.RetailAdvancesTrackerNumResultsLabel.Location = new System.Drawing.Point(602, 188);
             this.RetailAdvancesTrackerNumResultsLabel.Name = "RetailAdvancesTrackerNumResultsLabel";
             this.RetailAdvancesTrackerNumResultsLabel.Size = new System.Drawing.Size(110, 13);
             this.RetailAdvancesTrackerNumResultsLabel.TabIndex = 88;
@@ -1086,7 +1302,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // ButtonUpdateStates
             // 
-            this.ButtonUpdateStates.Location = new System.Drawing.Point(550, 306);
+            this.ButtonUpdateStates.Location = new System.Drawing.Point(604, 305);
             this.ButtonUpdateStates.Name = "ButtonUpdateStates";
             this.ButtonUpdateStates.Size = new System.Drawing.Size(209, 20);
             this.ButtonUpdateStates.TabIndex = 89;
@@ -1172,7 +1388,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // sensBox
             // 
             this.sensBox.AutoSize = true;
-            this.sensBox.Location = new System.Drawing.Point(319, 220);
+            this.sensBox.Location = new System.Drawing.Point(319, 252);
             this.sensBox.Name = "sensBox";
             this.sensBox.Size = new System.Drawing.Size(124, 17);
             this.sensBox.TabIndex = 96;
@@ -1190,218 +1406,165 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckCuteCharm.Text = "Cute Charm Lead";
             this.CheckCuteCharm.UseVisualStyleBackColor = true;
             // 
-            // Frame
+            // hpJudgeFilter
             // 
-            this.Frame.DataPropertyName = "Advances";
-            this.Frame.HeaderText = "Frame";
-            this.Frame.MinimumWidth = 8;
-            this.Frame.Name = "Frame";
-            this.Frame.ReadOnly = true;
-            this.Frame.Width = 150;
+            this.hpJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.hpJudgeFilter.FormattingEnabled = true;
+            this.hpJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.hpJudgeFilter.Location = new System.Drawing.Point(506, 4);
+            this.hpJudgeFilter.Name = "hpJudgeFilter";
+            this.hpJudgeFilter.Size = new System.Drawing.Size(82, 21);
+            this.hpJudgeFilter.TabIndex = 104;
+            this.hpJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
-            // TID
+            // atkJudgeFilter
             // 
-            this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TID.DataPropertyName = "TID";
-            this.TID.HeaderText = "TID";
-            this.TID.MinimumWidth = 8;
-            this.TID.Name = "TID";
-            this.TID.ReadOnly = true;
-            this.TID.Width = 50;
+            this.atkJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.atkJudgeFilter.FormattingEnabled = true;
+            this.atkJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.atkJudgeFilter.Location = new System.Drawing.Point(506, 31);
+            this.atkJudgeFilter.Name = "atkJudgeFilter";
+            this.atkJudgeFilter.Size = new System.Drawing.Size(82, 21);
+            this.atkJudgeFilter.TabIndex = 105;
+            this.atkJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
-            // SID
+            // defJudgeFilter
             // 
-            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.SID.DataPropertyName = "SID";
-            this.SID.HeaderText = "SID";
-            this.SID.MinimumWidth = 8;
-            this.SID.Name = "SID";
-            this.SID.ReadOnly = true;
-            this.SID.Width = 50;
+            this.defJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.defJudgeFilter.FormattingEnabled = true;
+            this.defJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.defJudgeFilter.Location = new System.Drawing.Point(506, 57);
+            this.defJudgeFilter.Name = "defJudgeFilter";
+            this.defJudgeFilter.Size = new System.Drawing.Size(82, 21);
+            this.defJudgeFilter.TabIndex = 106;
+            this.defJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
-            // Animation
+            // spaJudgeFilter
             // 
-            this.Animation.DataPropertyName = "Animation";
-            this.Animation.HeaderText = "Animation";
-            this.Animation.MinimumWidth = 8;
-            this.Animation.Name = "Animation";
-            this.Animation.ReadOnly = true;
-            this.Animation.Width = 60;
+            this.spaJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.spaJudgeFilter.FormattingEnabled = true;
+            this.spaJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.spaJudgeFilter.Location = new System.Drawing.Point(506, 82);
+            this.spaJudgeFilter.Name = "spaJudgeFilter";
+            this.spaJudgeFilter.Size = new System.Drawing.Size(82, 21);
+            this.spaJudgeFilter.TabIndex = 107;
+            this.spaJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
-            // Brilliant
+            // spdJudgeFilter
             // 
-            this.Brilliant.DataPropertyName = "Brilliant";
-            this.Brilliant.HeaderText = "Brilliant";
-            this.Brilliant.Name = "Brilliant";
-            this.Brilliant.ReadOnly = true;
+            this.spdJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.spdJudgeFilter.FormattingEnabled = true;
+            this.spdJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.spdJudgeFilter.Location = new System.Drawing.Point(506, 109);
+            this.spdJudgeFilter.Name = "spdJudgeFilter";
+            this.spdJudgeFilter.Size = new System.Drawing.Size(82, 21);
+            this.spdJudgeFilter.TabIndex = 108;
+            this.spdJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
-            // Level
+            // speJudgeFilter
             // 
-            this.Level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Level.DataPropertyName = "Level";
-            this.Level.HeaderText = "Level";
-            this.Level.MinimumWidth = 8;
-            this.Level.Name = "Level";
-            this.Level.ReadOnly = true;
-            this.Level.Width = 58;
+            this.speJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.speJudgeFilter.FormattingEnabled = true;
+            this.speJudgeFilter.Items.AddRange(new object[] {
+            "No Good",
+            "Decent",
+            "Pretty Good",
+            "Very Good",
+            "Fantastic",
+            "Best"});
+            this.speJudgeFilter.Location = new System.Drawing.Point(506, 135);
+            this.speJudgeFilter.Name = "speJudgeFilter";
+            this.speJudgeFilter.Size = new System.Drawing.Size(82, 21);
+            this.speJudgeFilter.TabIndex = 109;
+            this.speJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
-            // Slot
+            // DesiredNature
             // 
-            this.Slot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Slot.DataPropertyName = "Slot";
-            this.Slot.HeaderText = "Slot";
-            this.Slot.MinimumWidth = 8;
-            this.Slot.Name = "Slot";
-            this.Slot.ReadOnly = true;
-            this.Slot.Width = 50;
+            this.DesiredNature.AutoSize = true;
+            this.DesiredNature.Location = new System.Drawing.Point(303, 219);
+            this.DesiredNature.Name = "DesiredNature";
+            this.DesiredNature.Size = new System.Drawing.Size(42, 13);
+            this.DesiredNature.TabIndex = 110;
+            this.DesiredNature.Text = "Nature:";
             // 
-            // PID
+            // SelectedNature
             // 
-            this.PID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.PID.DataPropertyName = "PID";
-            this.PID.HeaderText = "PID";
-            this.PID.MinimumWidth = 8;
-            this.PID.Name = "PID";
-            this.PID.ReadOnly = true;
-            this.PID.Width = 50;
-            // 
-            // EC
-            // 
-            this.EC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.EC.DataPropertyName = "EC";
-            this.EC.HeaderText = "EC";
-            this.EC.MinimumWidth = 8;
-            this.EC.Name = "EC";
-            this.EC.ReadOnly = true;
-            this.EC.Width = 46;
-            // 
-            // Shiny
-            // 
-            this.Shiny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Shiny.DataPropertyName = "Shiny";
-            this.Shiny.HeaderText = "Shiny";
-            this.Shiny.MinimumWidth = 8;
-            this.Shiny.Name = "Shiny";
-            this.Shiny.ReadOnly = true;
-            this.Shiny.Width = 58;
-            // 
-            // Ability
-            // 
-            this.Ability.DataPropertyName = "Ability";
-            this.Ability.HeaderText = "Ability";
-            this.Ability.MinimumWidth = 8;
-            this.Ability.Name = "Ability";
-            this.Ability.ReadOnly = true;
-            this.Ability.Width = 50;
-            // 
-            // Nature
-            // 
-            this.Nature.DataPropertyName = "Nature";
-            this.Nature.HeaderText = "Nature";
-            this.Nature.MinimumWidth = 8;
-            this.Nature.Name = "Nature";
-            this.Nature.ReadOnly = true;
-            this.Nature.Width = 75;
-            // 
-            // Gender
-            // 
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // HP
-            // 
-            this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.HP.DataPropertyName = "HP";
-            this.HP.HeaderText = "HP";
-            this.HP.MinimumWidth = 8;
-            this.HP.Name = "HP";
-            this.HP.ReadOnly = true;
-            this.HP.Width = 34;
-            // 
-            // Atk
-            // 
-            this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Atk.DataPropertyName = "Atk";
-            this.Atk.HeaderText = "Atk";
-            this.Atk.MinimumWidth = 8;
-            this.Atk.Name = "Atk";
-            this.Atk.ReadOnly = true;
-            this.Atk.Width = 34;
-            // 
-            // Def
-            // 
-            this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Def.DataPropertyName = "Def";
-            this.Def.HeaderText = "Def";
-            this.Def.MinimumWidth = 8;
-            this.Def.Name = "Def";
-            this.Def.ReadOnly = true;
-            this.Def.Width = 34;
-            // 
-            // SpA
-            // 
-            this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SpA.DataPropertyName = "SpA";
-            this.SpA.HeaderText = "SpA";
-            this.SpA.MinimumWidth = 8;
-            this.SpA.Name = "SpA";
-            this.SpA.ReadOnly = true;
-            this.SpA.Width = 34;
-            // 
-            // SpD
-            // 
-            this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SpD.DataPropertyName = "SpD";
-            this.SpD.HeaderText = "SpD";
-            this.SpD.MinimumWidth = 8;
-            this.SpD.Name = "SpD";
-            this.SpD.ReadOnly = true;
-            this.SpD.Width = 34;
-            // 
-            // Spe
-            // 
-            this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Spe.DataPropertyName = "Spe";
-            this.Spe.HeaderText = "Spe";
-            this.Spe.MinimumWidth = 8;
-            this.Spe.Name = "Spe";
-            this.Spe.ReadOnly = true;
-            this.Spe.Width = 34;
-            // 
-            // Mark
-            // 
-            this.Mark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Mark.DataPropertyName = "Mark";
-            this.Mark.HeaderText = "Mark";
-            this.Mark.MinimumWidth = 8;
-            this.Mark.Name = "Mark";
-            this.Mark.ReadOnly = true;
-            this.Mark.Width = 56;
-            // 
-            // State0
-            // 
-            this.State0.DataPropertyName = "State0";
-            this.State0.HeaderText = "State0";
-            this.State0.MinimumWidth = 8;
-            this.State0.Name = "State0";
-            this.State0.ReadOnly = true;
-            this.State0.Width = 150;
-            // 
-            // State1
-            // 
-            this.State1.DataPropertyName = "State1";
-            this.State1.HeaderText = "State1";
-            this.State1.MinimumWidth = 8;
-            this.State1.Name = "State1";
-            this.State1.ReadOnly = true;
-            this.State1.Width = 150;
+            this.SelectedNature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectedNature.FormattingEnabled = true;
+            this.SelectedNature.Items.AddRange(new object[] {
+            "Ignore",
+            "Hardy",
+            "Lonely",
+            "Brave",
+            "Adamant",
+            "Naughty",
+            "Bold",
+            "Docile",
+            "Relaxed",
+            "Impish",
+            "Lax",
+            "Timid",
+            "Hasty",
+            "Serious",
+            "Jolly",
+            "Naive",
+            "Modest",
+            "Mild",
+            "Quiet",
+            "Bashful",
+            "Rash",
+            "Calm",
+            "Gentle",
+            "Sassy",
+            "Careful",
+            "Quirky"});
+            this.SelectedNature.Location = new System.Drawing.Point(353, 216);
+            this.SelectedNature.Name = "SelectedNature";
+            this.SelectedNature.Size = new System.Drawing.Size(147, 21);
+            this.SelectedNature.TabIndex = 111;
             // 
             // MainWindow
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(769, 580);
+            this.ClientSize = new System.Drawing.Size(831, 559);
+            this.Controls.Add(this.SelectedNature);
+            this.Controls.Add(this.DesiredNature);
+            this.Controls.Add(this.speJudgeFilter);
+            this.Controls.Add(this.spdJudgeFilter);
+            this.Controls.Add(this.spaJudgeFilter);
+            this.Controls.Add(this.defJudgeFilter);
+            this.Controls.Add(this.atkJudgeFilter);
+            this.Controls.Add(this.hpJudgeFilter);
             this.Controls.Add(this.CheckCuteCharm);
             this.Controls.Add(this.sensBox);
             this.Controls.Add(this.CheckTIDSIDFinder);
@@ -1628,5 +1791,13 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Mark;
         private System.Windows.Forms.DataGridViewTextBoxColumn State0;
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
+        private System.Windows.Forms.ComboBox hpJudgeFilter;
+        private System.Windows.Forms.ComboBox atkJudgeFilter;
+        private System.Windows.Forms.ComboBox defJudgeFilter;
+        private System.Windows.Forms.ComboBox spaJudgeFilter;
+        private System.Windows.Forms.ComboBox spdJudgeFilter;
+        private System.Windows.Forms.ComboBox speJudgeFilter;
+        private System.Windows.Forms.Label DesiredNature;
+        private System.Windows.Forms.ComboBox SelectedNature;
     }
 }

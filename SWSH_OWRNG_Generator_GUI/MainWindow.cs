@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SWSH_OWRNG_Generator_GUI
 {
-    public partial class MainWindow : System.Windows.Forms.Form
+    public partial class MainWindow : Form
     {
         public MainWindow()
         {
@@ -30,6 +30,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
             SelectedMark.SelectedIndex = 0;
             SelectedShiny.SelectedIndex = 0;
+            SelectedNature.SelectedIndex = 0;
 
             // Set Tab Indexes Manually
             // This will make life easier when adding more fields later on
@@ -53,19 +54,26 @@ namespace SWSH_OWRNG_Generator_GUI
             speMax.TabIndex = speMin.TabIndex + 1;
             hpMinFilter.TabIndex = speMax.TabIndex + 1;
             hpMaxFilter.TabIndex = hpMinFilter.TabIndex + 1;
-            atkMinFilter.TabIndex = hpMaxFilter.TabIndex + 1;
+            hpJudgeFilter.TabIndex = hpMaxFilter.TabIndex + 1;
+            atkMinFilter.TabIndex = hpJudgeFilter.TabIndex + 1;
             atkMaxFilter.TabIndex = atkMinFilter.TabIndex + 1;
-            defMinFilter.TabIndex = atkMaxFilter.TabIndex + 1;
+            atkJudgeFilter.TabIndex = atkMaxFilter.TabIndex + 1;
+            defMinFilter.TabIndex = atkJudgeFilter.TabIndex + 1;
             defMaxFilter.TabIndex = defMinFilter.TabIndex + 1;
-            spaMinFilter.TabIndex = defMaxFilter.TabIndex + 1;
+            defJudgeFilter.TabIndex = defMaxFilter.TabIndex + 1;
+            spaMinFilter.TabIndex = defJudgeFilter.TabIndex + 1;
             spaMaxFilter.TabIndex = spaMinFilter.TabIndex + 1;
-            spdMinFilter.TabIndex = spaMaxFilter.TabIndex + 1;
+            spaJudgeFilter.TabIndex = spaMaxFilter.TabIndex + 1;
+            spdMinFilter.TabIndex = spaJudgeFilter.TabIndex + 1;
             spdMaxFilter.TabIndex = spdMinFilter.TabIndex + 1;
-            speMinFilter.TabIndex = spdMaxFilter.TabIndex + 1;
+            spdJudgeFilter.TabIndex = spdMaxFilter.TabIndex + 1;
+            speMinFilter.TabIndex = spdJudgeFilter.TabIndex + 1;
             speMaxFilter.TabIndex = speMinFilter.TabIndex + 1;
-            SelectedMark.TabIndex = speMaxFilter.TabIndex + 1;
+            speJudgeFilter.TabIndex = speMaxFilter.TabIndex + 1;
+            SelectedMark.TabIndex = speJudgeFilter.TabIndex + 1;
             SelectedShiny.TabIndex = SelectedMark.TabIndex + 1;
-            CheckShinyCharm.TabIndex = SelectedShiny.TabIndex + 1;
+            SelectedNature.TabIndex = SelectedShiny.TabIndex + 1;
+            CheckShinyCharm.TabIndex = SelectedNature.TabIndex + 1;
             CheckStatic.TabIndex = CheckShinyCharm.TabIndex + 1;
             CheckMarkCharm.TabIndex = CheckStatic.TabIndex + 1;
             CheckFishing.TabIndex = CheckMarkCharm.TabIndex + 1;
@@ -111,7 +119,6 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 textBox.Text = "0";
             }
-
         }
 
         private void SetToZero_LostFocus(object sender, EventArgs e)
@@ -145,6 +152,83 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 if (i < 0) textBox.Text = "0";
                 if (i > 31) textBox.Text = "31";
+
+                switch (textBox.Name)
+                {
+                    case "hpMin":
+                    case "hpMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(hpMin.Text), UInt16.Parse(hpMax.Text), hpJudgeFilter, e);
+                        break;
+
+                    case "atkMin":
+                    case "atkMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(atkMin.Text), UInt16.Parse(atkMax.Text), atkJudgeFilter, e);
+                        break;
+
+                    case "defMin":
+                    case "defMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(defMin.Text), UInt16.Parse(defMax.Text), defJudgeFilter, e);
+                        break;
+
+                    case "spaMin":
+                    case "spaMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(spaMin.Text), UInt16.Parse(spaMax.Text), spaJudgeFilter, e);
+                        break;
+
+                    case "spdMin":
+                    case "spdMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(spdMin.Text), UInt16.Parse(spdMax.Text), spdJudgeFilter, e);
+                        break;
+
+                    case "speMin":
+                    case "speMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(speMin.Text), UInt16.Parse(speMax.Text), speJudgeFilter, e);
+                        break;
+                }
+            }
+        }
+
+        private void JudgeFilterCompareIVs(uint min, uint max, ComboBox box, EventArgs e)
+        {
+            if (min == 0 && max == 0)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 0;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else if (min >= 1 && min <= 15 && max >= 1 && max <= 15)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 1;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else if (min >= 16 && min <= 25 && max >= 16 && max <= 25)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 2;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else if (min >= 26 && min <= 29 && max >= 26 && max <= 29)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 3;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else if (min == 30 && max == 30)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 4;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else if (min == 31 && max == 31)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 5;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else
+            {
+                box.SelectedIndex = -1;
             }
         }
 
@@ -205,31 +289,37 @@ namespace SWSH_OWRNG_Generator_GUI
                 case "hpFilter":
                     hpMin.Text = "0";
                     hpMax.Text = "31";
+                    hpJudgeFilter.SelectedIndex = -1;
                     break;
 
                 case "atkFilter":
                     atkMin.Text = "0";
                     atkMax.Text = "31";
+                    atkJudgeFilter.SelectedIndex = -1;
                     break;
 
                 case "defFilter":
                     defMin.Text = "0";
                     defMax.Text = "31";
+                    defJudgeFilter.SelectedIndex = -1;
                     break;
 
                 case "spaFilter":
                     spaMin.Text = "0";
                     spaMax.Text = "31";
+                    spaJudgeFilter.SelectedIndex = -1;
                     break;
 
                 case "spdFilter":
                     spdMin.Text = "0";
                     spdMax.Text = "31";
+                    spdJudgeFilter.SelectedIndex = -1;
                     break;
 
                 case "speFilter":
                     speMin.Text = "0";
                     speMax.Text = "31";
+                    speJudgeFilter.SelectedIndex = -1;
                     break;
             }
         }
@@ -424,7 +514,6 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 e.KeyChar = '0';
             }
-
             else if (e.KeyChar == '.')
             {
                 e.KeyChar = '1';
@@ -493,6 +582,7 @@ namespace SWSH_OWRNG_Generator_GUI
             bool IsCuteCharm = CheckCuteCharm.Checked;
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
+            string DesiredNature = (string)SelectedNature.SelectedItem;
             uint[] MinIVs = { UInt16.Parse(hpMin.Text), UInt16.Parse(atkMin.Text), UInt16.Parse(defMin.Text), UInt16.Parse(spaMin.Text), UInt16.Parse(spdMin.Text), UInt16.Parse(speMin.Text) };
             uint[] MaxIVs = { UInt16.Parse(hpMax.Text), UInt16.Parse(atkMax.Text), UInt16.Parse(defMax.Text), UInt16.Parse(spaMax.Text), UInt16.Parse(spdMax.Text), UInt16.Parse(speMax.Text) };
             int[] WrongIVs = new int[6];
@@ -541,8 +631,8 @@ namespace SWSH_OWRNG_Generator_GUI
 
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
-                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs, IsCuteCharm, 
-                TIDSIDSearch, progress
+                DesiredNature, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
+                IsCuteCharm, TIDSIDSearch, progress
             ));
             BindingSource Source = new BindingSource { DataSource = Frames };
             Results.DataSource = Source;
@@ -695,7 +785,72 @@ namespace SWSH_OWRNG_Generator_GUI
                 this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = false;
                 this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = false;
             }
-            
+
+        }
+
+        private void SetIvFilters(TextBox statLower, TextBox statUpper, string min, string max)
+        {
+            statLower.Clear();
+            statLower.Text = min;
+            statUpper.Clear();
+            statUpper.Text = max;
+        }
+
+        private void IvJudgeFilter(TextBox statL, TextBox statU, string judge)
+        {
+            switch (judge)
+            {
+                case "No Good":
+                    SetIvFilters(statL, statU, "0", "0");
+                    break;
+                case "Decent":
+                    SetIvFilters(statL, statU, "1", "15");
+                    break;
+                case "Pretty Good":
+                    SetIvFilters(statL, statU, "16", "25");
+                    break;
+                case "Very Good":
+                    SetIvFilters(statL, statU, "26", "29");
+                    break;
+                case "Fantastic":
+                    SetIvFilters(statL, statU, "30", "30");
+                    break;
+                case "Best":
+                    SetIvFilters(statL, statU, "31", "31");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void JudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (((ComboBox)sender).Name)
+            {
+                case "hpJudgeFilter":
+                    IvJudgeFilter(hpMin, hpMax, hpJudgeFilter.Text);
+                    break;
+
+                case "atkJudgeFilter":
+                    IvJudgeFilter(atkMin, atkMax, atkJudgeFilter.Text);
+                    break;
+
+                case "defJudgeFilter":
+                    IvJudgeFilter(defMin, defMax, defJudgeFilter.Text);
+                    break;
+
+                case "spaJudgeFilter":
+                    IvJudgeFilter(spaMin, spaMax, spaJudgeFilter.Text);
+                    break;
+
+                case "spdJudgeFilter":
+                    IvJudgeFilter(spdMin, spdMax, spdJudgeFilter.Text);
+                    break;
+
+                case "speJudgeFilter":
+                    IvJudgeFilter(speMin, speMax, speJudgeFilter.Text);
+                    break;
+            }
         }
     }
 }

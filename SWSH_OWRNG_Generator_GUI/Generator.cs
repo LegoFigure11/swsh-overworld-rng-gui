@@ -12,7 +12,7 @@ namespace SWSH_OWRNG_Generator_GUI
         // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
         public static List<Frame> Generate(
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
-            bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, uint LevelMin,
+            bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, string DesiredNature, uint LevelMin,
             uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
             uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool TIDSIDSearch, IProgress<int> progress
             )
@@ -154,34 +154,44 @@ namespace SWSH_OWRNG_Generator_GUI
                     continue;
                 }
 
+                if (!PassesNatureFilter(Natures[Nature], DesiredNature))
+                {
+                    if (TIDSIDSearch)
+                        go.previous();
+                    else
+                        go.next();
+                    advance += 1;
+                    continue;
+                }
+
                 // Passes all filters!
                 Results.Add(
-                    new Frame()
-                    {
-                        Advances = TIDSIDSearch ? (-(long)advance).ToString("N0") : advance.ToString("N0"),
-                        TID = (ushort)(MockPID >> 16),
-                        SID = (ushort)MockPID,
-                        Animation = go.state0 & 1 ^ go.state1 & 1,
-                        Level = Level,
-                        Slot = SlotRand,
-                        PID = PID.ToString("X8"),
-                        EC = EC.ToString("X8"),
-                        Shiny = ShinyXOR == 0 ? "Square" : (ShinyXOR < 16 ? "Star" : "No"),
-                        Brilliant = Brilliant ? "Y" : "-",
-                        Ability = AbilityRoll == 0 ? 1 : 0,
-                        Nature = Natures[Nature],
-                        Gender = Gender,
-                        HP = IVs[0],
-                        Atk = IVs[1],
-                        Def = IVs[2],
-                        SpA = IVs[3],
-                        SpD = IVs[4],
-                        Spe = IVs[5],
-                        Mark = Mark,
-                        State0 = go.state0.ToString("X16"),
-                        State1 = go.state1.ToString("X16"),
-                    }
-                );
+                new Frame()
+                {
+                    Advances = TIDSIDSearch ? (-(long)advance).ToString("N0") : advance.ToString("N0"),
+                    TID = (ushort)(MockPID >> 16),
+                    SID = (ushort)MockPID,
+                    Animation = go.state0 & 1 ^ go.state1 & 1,
+                    Level = Level,
+                    Slot = SlotRand,
+                    PID = PID.ToString("X8"),
+                    EC = EC.ToString("X8"),
+                    Shiny = ShinyXOR == 0 ? "Square" : (ShinyXOR < 16 ? "Star" : "No"),
+                    Brilliant = Brilliant ? "Y" : "-",
+                    Ability = AbilityRoll == 0 ? 1 : 0,
+                    Nature = Natures[Nature],
+                    Gender = Gender,
+                    HP = IVs[0],
+                    Atk = IVs[1],
+                    Def = IVs[2],
+                    SpA = IVs[3],
+                    SpD = IVs[4],
+                    Spe = IVs[5],
+                    Mark = Mark,
+                    State0 = go.state0.ToString("X16"),
+                    State1 = go.state1.ToString("X16"),
+                }
+            );
 
                 if (TIDSIDSearch)
                     go.previous();
@@ -271,6 +281,11 @@ namespace SWSH_OWRNG_Generator_GUI
         private static bool PassesMarkFilter(string Mark, string DesiredMark)
         {
             return !((DesiredMark == "Any Mark" && Mark == "None") || (DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare")) || (DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark));
+        }
+
+        private static bool PassesNatureFilter(string Nature, string DesiredNature)
+        {
+            return ((DesiredNature == Nature) || (DesiredNature == "Ignore"));
         }
 
         private static (uint, uint) GenerateBrilliantInfo(uint KOs)
