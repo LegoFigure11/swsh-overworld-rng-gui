@@ -286,7 +286,6 @@ namespace SWSH_OWRNG_Generator_GUI
         private static bool PassesNatureFilter(string Nature, string DesiredNature)
         {
             return ((DesiredNature == Nature) || (DesiredNature == "Ignore"));
-            //return !((DesiredMark == "Any Mark" && Mark == "None") || (DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare")) || (DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark));
         }
 
         private static (uint, uint) GenerateBrilliantInfo(uint KOs)
