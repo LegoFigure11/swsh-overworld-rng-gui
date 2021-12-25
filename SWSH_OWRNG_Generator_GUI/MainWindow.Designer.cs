@@ -155,6 +155,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaJudgeFilter = new System.Windows.Forms.ComboBox();
             this.spdJudgeFilter = new System.Windows.Forms.ComboBox();
             this.speJudgeFilter = new System.Windows.Forms.ComboBox();
+            this.DesiredNature = new System.Windows.Forms.Label();
+            this.SelectedNature = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1386,7 +1388,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // sensBox
             // 
             this.sensBox.AutoSize = true;
-            this.sensBox.Location = new System.Drawing.Point(319, 220);
+            this.sensBox.Location = new System.Drawing.Point(319, 252);
             this.sensBox.Name = "sensBox";
             this.sensBox.Size = new System.Drawing.Size(124, 17);
             this.sensBox.TabIndex = 96;
@@ -1506,10 +1508,57 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speJudgeFilter.TabIndex = 109;
             this.speJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.SpeJudgeFilter_SelectedIndexChanged);
             // 
+            // DesiredNature
+            // 
+            this.DesiredNature.AutoSize = true;
+            this.DesiredNature.Location = new System.Drawing.Point(303, 219);
+            this.DesiredNature.Name = "DesiredNature";
+            this.DesiredNature.Size = new System.Drawing.Size(42, 13);
+            this.DesiredNature.TabIndex = 110;
+            this.DesiredNature.Text = "Nature:";
+            // 
+            // SelectedNature
+            // 
+            this.SelectedNature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectedNature.FormattingEnabled = true;
+            this.SelectedNature.Items.AddRange(new object[] {
+            "Ignore",
+            "Hardy",
+            "Lonely",
+            "Brave",
+            "Adamant",
+            "Naughty",
+            "Bold",
+            "Docile",
+            "Relaxed",
+            "Impish",
+            "Lax",
+            "Timid",
+            "Hasty",
+            "Serious",
+            "Jolly",
+            "Naive",
+            "Modest",
+            "Mild",
+            "Quiet",
+            "Bashful",
+            "Rash",
+            "Calm",
+            "Gentle",
+            "Sassy",
+            "Careful",
+            "Quirky"});
+            this.SelectedNature.Location = new System.Drawing.Point(353, 216);
+            this.SelectedNature.Name = "SelectedNature";
+            this.SelectedNature.Size = new System.Drawing.Size(147, 21);
+            this.SelectedNature.TabIndex = 111;
+            // 
             // MainWindow
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(831, 559);
+            this.Controls.Add(this.SelectedNature);
+            this.Controls.Add(this.DesiredNature);
             this.Controls.Add(this.speJudgeFilter);
             this.Controls.Add(this.spdJudgeFilter);
             this.Controls.Add(this.spaJudgeFilter);
@@ -1748,5 +1797,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.ComboBox spaJudgeFilter;
         private System.Windows.Forms.ComboBox spdJudgeFilter;
         private System.Windows.Forms.ComboBox speJudgeFilter;
+        private System.Windows.Forms.Label DesiredNature;
+        private System.Windows.Forms.ComboBox SelectedNature;
     }
 }

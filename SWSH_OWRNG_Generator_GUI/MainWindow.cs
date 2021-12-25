@@ -30,6 +30,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
             SelectedMark.SelectedIndex = 0;
             SelectedShiny.SelectedIndex = 0;
+            SelectedNature.SelectedIndex = 0;
 
             // Set Tab Indexes Manually
             // This will make life easier when adding more fields later on
@@ -53,19 +54,26 @@ namespace SWSH_OWRNG_Generator_GUI
             speMax.TabIndex = speMin.TabIndex + 1;
             hpMinFilter.TabIndex = speMax.TabIndex + 1;
             hpMaxFilter.TabIndex = hpMinFilter.TabIndex + 1;
-            atkMinFilter.TabIndex = hpMaxFilter.TabIndex + 1;
+            hpJudgeFilter.TabIndex = hpMaxFilter.TabIndex + 1;
+            atkMinFilter.TabIndex = hpJudgeFilter.TabIndex + 1;
             atkMaxFilter.TabIndex = atkMinFilter.TabIndex + 1;
-            defMinFilter.TabIndex = atkMaxFilter.TabIndex + 1;
+            atkJudgeFilter.TabIndex = atkMaxFilter.TabIndex + 1;
+            defMinFilter.TabIndex = atkJudgeFilter.TabIndex + 1;
             defMaxFilter.TabIndex = defMinFilter.TabIndex + 1;
-            spaMinFilter.TabIndex = defMaxFilter.TabIndex + 1;
+            defJudgeFilter.TabIndex = defMaxFilter.TabIndex + 1;
+            spaMinFilter.TabIndex = defJudgeFilter.TabIndex + 1;
             spaMaxFilter.TabIndex = spaMinFilter.TabIndex + 1;
-            spdMinFilter.TabIndex = spaMaxFilter.TabIndex + 1;
+            spaJudgeFilter.TabIndex = spaMaxFilter.TabIndex + 1;
+            spdMinFilter.TabIndex = spaJudgeFilter.TabIndex + 1;
             spdMaxFilter.TabIndex = spdMinFilter.TabIndex + 1;
-            speMinFilter.TabIndex = spdMaxFilter.TabIndex + 1;
+            spdJudgeFilter.TabIndex = spdMaxFilter.TabIndex + 1;
+            speMinFilter.TabIndex = spdJudgeFilter.TabIndex + 1;
             speMaxFilter.TabIndex = speMinFilter.TabIndex + 1;
-            SelectedMark.TabIndex = speMaxFilter.TabIndex + 1;
+            speJudgeFilter.TabIndex = speMaxFilter.TabIndex + 1;
+            SelectedMark.TabIndex = speJudgeFilter.TabIndex + 1;
             SelectedShiny.TabIndex = SelectedMark.TabIndex + 1;
-            CheckShinyCharm.TabIndex = SelectedShiny.TabIndex + 1;
+            SelectedNature.TabIndex = SelectedShiny.TabIndex + 1;
+            CheckShinyCharm.TabIndex = SelectedNature.TabIndex + 1;
             CheckStatic.TabIndex = CheckShinyCharm.TabIndex + 1;
             CheckMarkCharm.TabIndex = CheckStatic.TabIndex + 1;
             CheckFishing.TabIndex = CheckMarkCharm.TabIndex + 1;
@@ -499,6 +507,7 @@ namespace SWSH_OWRNG_Generator_GUI
             bool IsCuteCharm = CheckCuteCharm.Checked;
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
+            string DesiredNature = (string)SelectedNature.SelectedItem;
             uint[] MinIVs = { UInt16.Parse(hpMin.Text), UInt16.Parse(atkMin.Text), UInt16.Parse(defMin.Text), UInt16.Parse(spaMin.Text), UInt16.Parse(spdMin.Text), UInt16.Parse(speMin.Text) };
             uint[] MaxIVs = { UInt16.Parse(hpMax.Text), UInt16.Parse(atkMax.Text), UInt16.Parse(defMax.Text), UInt16.Parse(spaMax.Text), UInt16.Parse(spdMax.Text), UInt16.Parse(speMax.Text) };
             int[] WrongIVs = new int[6];
@@ -546,7 +555,7 @@ namespace SWSH_OWRNG_Generator_GUI
             });
 
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
-                s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
+                s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,DesiredNature,
                 LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs, IsCuteCharm, 
                 TIDSIDSearch, progress
             ));

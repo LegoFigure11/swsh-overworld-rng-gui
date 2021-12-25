@@ -12,7 +12,7 @@ namespace SWSH_OWRNG_Generator_GUI
         // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
         public static List<Frame> Generate(
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
-            bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, uint LevelMin,
+            bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, string DesiredNature, uint LevelMin,
             uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
             uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool TIDSIDSearch, IProgress<int> progress
             )
@@ -154,8 +154,18 @@ namespace SWSH_OWRNG_Generator_GUI
                     continue;
                 }
 
-                // Passes all filters!
-                Results.Add(
+                if (!PassesNatureFilter(Natures[Nature], DesiredNature))
+                {
+                    if (TIDSIDSearch)
+                        go.previous();
+                    else
+                        go.next();
+                    advance += 1;
+                    continue;
+                }
+
+                    // Passes all filters!
+                    Results.Add(
                     new Frame()
                     {
                         Advances = TIDSIDSearch ? (-(long)advance).ToString("N0") : advance.ToString("N0"),
@@ -271,6 +281,12 @@ namespace SWSH_OWRNG_Generator_GUI
         private static bool PassesMarkFilter(string Mark, string DesiredMark)
         {
             return !((DesiredMark == "Any Mark" && Mark == "None") || (DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare")) || (DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark));
+        }
+
+        private static bool PassesNatureFilter(string Nature, string DesiredNature)
+        {
+            return ((DesiredNature == Nature) || (DesiredNature == "Ignore"));
+            //return !((DesiredMark == "Any Mark" && Mark == "None") || (DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare")) || (DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark));
         }
 
         private static (uint, uint) GenerateBrilliantInfo(uint KOs)
