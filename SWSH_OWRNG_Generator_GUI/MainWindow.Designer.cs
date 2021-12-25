@@ -1421,7 +1421,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpJudgeFilter.Name = "hpJudgeFilter";
             this.hpJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.hpJudgeFilter.TabIndex = 104;
-            this.hpJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.HpJudgeFilter_SelectedIndexChanged);
+            this.hpJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
             // atkJudgeFilter
             // 
@@ -1438,7 +1438,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.atkJudgeFilter.Name = "atkJudgeFilter";
             this.atkJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.atkJudgeFilter.TabIndex = 105;
-            this.atkJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.AtkJudgeFilter_SelectedIndexChanged);
+            this.atkJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
             // defJudgeFilter
             // 
@@ -1455,7 +1455,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.defJudgeFilter.Name = "defJudgeFilter";
             this.defJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.defJudgeFilter.TabIndex = 106;
-            this.defJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.DefJudgeFilter_SelectedIndexChanged);
+            this.defJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
             // spaJudgeFilter
             // 
@@ -1472,7 +1472,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spaJudgeFilter.Name = "spaJudgeFilter";
             this.spaJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.spaJudgeFilter.TabIndex = 107;
-            this.spaJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.SpaJudgeFilter_SelectedIndexChanged);
+            this.spaJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
             // spdJudgeFilter
             // 
@@ -1489,7 +1489,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.spdJudgeFilter.Name = "spdJudgeFilter";
             this.spdJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.spdJudgeFilter.TabIndex = 108;
-            this.spdJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.SpdJudgeFilter_SelectedIndexChanged);
+            this.spdJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
             // speJudgeFilter
             // 
@@ -1506,7 +1506,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speJudgeFilter.Name = "speJudgeFilter";
             this.speJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.speJudgeFilter.TabIndex = 109;
-            this.speJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.SpeJudgeFilter_SelectedIndexChanged);
+            this.speJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
             // 
             // DesiredNature
             // 

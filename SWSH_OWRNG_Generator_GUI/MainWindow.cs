@@ -152,6 +152,83 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 if (i < 0) textBox.Text = "0";
                 if (i > 31) textBox.Text = "31";
+
+                switch (textBox.Name)
+                {
+                    case "hpMin":
+                    case "hpMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(hpMin.Text), UInt16.Parse(hpMax.Text), hpJudgeFilter, e);
+                        break;
+
+                    case "atkMin":
+                    case "atkMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(atkMin.Text), UInt16.Parse(atkMax.Text), atkJudgeFilter, e);
+                        break;
+
+                    case "defMin":
+                    case "defMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(defMin.Text), UInt16.Parse(defMax.Text), defJudgeFilter, e);
+                        break;
+
+                    case "spaMin":
+                    case "spaMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(spaMin.Text), UInt16.Parse(spaMax.Text), spaJudgeFilter, e);
+                        break;
+
+                    case "spdMin":
+                    case "spdMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(spdMin.Text), UInt16.Parse(spdMax.Text), spdJudgeFilter, e);
+                        break;
+
+                    case "speMin":
+                    case "speMax":
+                        JudgeFilterCompareIVs(UInt16.Parse(speMin.Text), UInt16.Parse(speMax.Text), speJudgeFilter, e);
+                        break;
+                }
+            }
+        }
+
+        private void JudgeFilterCompareIVs(uint min, uint max, ComboBox box, EventArgs e)
+        {
+            if (min == 0 && max == 0)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 0;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else if (min >= 1 && min <= 15 && max >= 1 && max <= 15)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 1;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else if (min >= 16 && min <= 25 && max >= 16 && max <= 25)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 2;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else if (min >= 26 && min <= 29 && max >= 26 && max <= 29)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 3;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else if (min == 30 && max == 30)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 4;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else if (min == 31 && max == 31)
+            {
+                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+                box.SelectedIndex = 5;
+                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            }
+            else
+            {
+                box.SelectedIndex = -1;
             }
         }
 
@@ -745,34 +822,35 @@ namespace SWSH_OWRNG_Generator_GUI
                     break;
             }
         }
-        private void HpJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            IvJudgeFilter(hpMin, hpMax, hpJudgeFilter.Text);
-        }
 
-        private void AtkJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
+        private void JudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IvJudgeFilter(atkMin, atkMax, atkJudgeFilter.Text);
-        }
+            switch (((ComboBox)sender).Name)
+            {
+                case "hpJudgeFilter":
+                    IvJudgeFilter(hpMin, hpMax, hpJudgeFilter.Text);
+                    break;
 
-        private void DefJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            IvJudgeFilter(defMin, defMax, defJudgeFilter.Text);
-        }
+                case "atkJudgeFilter":
+                    IvJudgeFilter(atkMin, atkMax, atkJudgeFilter.Text);
+                    break;
 
-        private void SpaJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            IvJudgeFilter(spaMin, spaMax, spaJudgeFilter.Text);
-        }
+                case "defJudgeFilter":
+                    IvJudgeFilter(defMin, defMax, defJudgeFilter.Text);
+                    break;
 
-        private void SpdJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            IvJudgeFilter(spdMin, spdMax, spdJudgeFilter.Text);
-        }
+                case "spaJudgeFilter":
+                    IvJudgeFilter(spaMin, spaMax, spaJudgeFilter.Text);
+                    break;
 
-        private void SpeJudgeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            IvJudgeFilter(speMin, speMax, speJudgeFilter.Text);
+                case "spdJudgeFilter":
+                    IvJudgeFilter(spdMin, spdMax, spdJudgeFilter.Text);
+                    break;
+
+                case "speJudgeFilter":
+                    IvJudgeFilter(speMin, speMax, speJudgeFilter.Text);
+                    break;
+            }
         }
     }
 }
