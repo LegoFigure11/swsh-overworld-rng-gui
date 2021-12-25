@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SWSH_OWRNG_Generator_GUI
 {
-    public partial class MainWindow : System.Windows.Forms.Form
+    public partial class MainWindow : Form
     {
         public MainWindow()
         {
@@ -119,7 +119,6 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 textBox.Text = "0";
             }
-
         }
 
         private void SetToZero_LostFocus(object sender, EventArgs e)
@@ -438,7 +437,6 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 e.KeyChar = '0';
             }
-
             else if (e.KeyChar == '.')
             {
                 e.KeyChar = '1';
@@ -555,9 +553,9 @@ namespace SWSH_OWRNG_Generator_GUI
             });
 
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
-                s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,DesiredNature,
-                LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs, IsCuteCharm, 
-                TIDSIDSearch, progress
+                s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
+                DesiredNature, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
+                IsCuteCharm, TIDSIDSearch, progress
             ));
             BindingSource Source = new BindingSource { DataSource = Frames };
             Results.DataSource = Source;
@@ -710,7 +708,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = false;
                 this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = false;
             }
-            
+
         }
 
         private void SetIvFilters(TextBox statLower, TextBox statUpper, string min, string max)
