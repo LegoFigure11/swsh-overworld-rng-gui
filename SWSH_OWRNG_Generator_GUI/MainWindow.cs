@@ -190,46 +190,36 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void JudgeFilterCompareIVs(uint min, uint max, ComboBox box, EventArgs e)
         {
+            box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
             if (min == 0 && max == 0)
             {
-                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
                 box.SelectedIndex = 0;
-                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
             }
             else if (min >= 1 && min <= 15 && max >= 1 && max <= 15)
             {
-                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
                 box.SelectedIndex = 1;
-                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
             }
             else if (min >= 16 && min <= 25 && max >= 16 && max <= 25)
             {
-                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
                 box.SelectedIndex = 2;
-                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
             }
             else if (min >= 26 && min <= 29 && max >= 26 && max <= 29)
             {
-                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
                 box.SelectedIndex = 3;
-                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
             }
             else if (min == 30 && max == 30)
             {
-                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
                 box.SelectedIndex = 4;
-                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
             }
             else if (min == 31 && max == 31)
             {
-                box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
                 box.SelectedIndex = 5;
-                box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
             }
             else
             {
                 box.SelectedIndex = -1;
             }
+            box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
         }
 
         private void FlawlessIVs_TextChanged(object sender, EventArgs e)
