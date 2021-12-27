@@ -13,7 +13,7 @@ namespace SWSH_OWRNG_Generator_GUI
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
             bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, string DesiredNature, uint LevelMin,
             uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
-            uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool TIDSIDSearch, IProgress<int> progress
+            uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool TIDSIDSearch, ulong InitialAdvances, IProgress<int> progress
             )
         {
             List<Frame> Results = new List<Frame>();
@@ -38,6 +38,11 @@ namespace SWSH_OWRNG_Generator_GUI
                 ProgressUpdateInterval++;
 
             Xoroshiro go = new Xoroshiro(state0, state1);
+
+            for (ulong i = 0; i < InitialAdvances; i++)
+            {
+                go.Next();
+            }
 
             while (advance < advances)
             {
@@ -167,7 +172,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 Results.Add(
                 new Frame()
                 {
-                    Advances = TIDSIDSearch ? (-(long)advance).ToString("N0") : advance.ToString("N0"),
+                    Advances = TIDSIDSearch ? (-(long)(advance + InitialAdvances)).ToString("N0") : (advance + InitialAdvances).ToString("N0"),
                     TID = (ushort)(MockPID >> 16),
                     SID = (ushort)MockPID,
                     Animation = go.state0 & 1 ^ go.state1 & 1,

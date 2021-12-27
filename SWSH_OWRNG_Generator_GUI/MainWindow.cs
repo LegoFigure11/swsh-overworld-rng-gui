@@ -39,7 +39,8 @@ namespace SWSH_OWRNG_Generator_GUI
             InputState1.TabIndex = InputState0.TabIndex + 1;
             InputTID.TabIndex = InputState1.TabIndex + 1;
             InputSID.TabIndex = InputTID.TabIndex + 1;
-            InputMaxAdv.TabIndex = InputSID.TabIndex + 1;
+            InputInitialAdv.TabIndex = InputSID.TabIndex + 1;
+            InputMaxAdv.TabIndex = InputInitialAdv.TabIndex + 1;
             hpMin.TabIndex = InputMaxAdv.TabIndex + 1;
             hpMax.TabIndex = hpMin.TabIndex + 1;
             atkMin.TabIndex = hpMax.TabIndex + 1;
@@ -546,12 +547,15 @@ namespace SWSH_OWRNG_Generator_GUI
                 Pad(InputState1, '0', 16);
                 s1 = 1;
             }
+            Pad(InputMaxAdv, '0', 1);
             ulong advances = UInt64.Parse(InputMaxAdv.Text);
             if (advances == 0)
             {
                 InputMaxAdv.Text = "1";
                 advances = 1;
             }
+            Pad(InputInitialAdv, '0', 1);
+            ulong InitialAdvances = UInt64.Parse(InputInitialAdv.Text);
             uint TID = UInt16.Parse(InputTID.Text);
             uint SID = UInt16.Parse(InputSID.Text);
             uint SlotMin = UInt16.Parse(InputSlotMin.Text);
@@ -622,7 +626,7 @@ namespace SWSH_OWRNG_Generator_GUI
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
                 DesiredNature, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
-                IsCuteCharm, TIDSIDSearch, progress
+                IsCuteCharm, TIDSIDSearch, InitialAdvances, progress
             ));
             BindingSource Source = new BindingSource { DataSource = Frames };
             Results.DataSource = Source;
@@ -743,9 +747,9 @@ namespace SWSH_OWRNG_Generator_GUI
         private void CheckTIDSIDFinder_CheckedChanged(object sender, EventArgs e)
         {
             bool check = this.CheckTIDSIDFinder.Checked;
-            this.LabelTID.Enabled = !check;
+            this.LabelTIDSID.Enabled = !check;
             this.InputTID.Enabled = !check;
-            this.LabelSID.Enabled = !check;
+            this.LabelIDsSlash.Enabled = !check;
             this.InputSID.Enabled = !check;
             this.SelectedShiny.Enabled = !check;
             this.LabelShiny.Enabled = !check;

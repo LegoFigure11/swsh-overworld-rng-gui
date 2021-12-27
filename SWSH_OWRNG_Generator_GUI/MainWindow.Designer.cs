@@ -48,8 +48,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.hpMaxFilter = new System.Windows.Forms.Button();
             this.InputTID = new System.Windows.Forms.TextBox();
             this.InputSID = new System.Windows.Forms.TextBox();
-            this.LabelTID = new System.Windows.Forms.Label();
-            this.LabelSID = new System.Windows.Forms.Label();
+            this.LabelTIDSID = new System.Windows.Forms.Label();
+            this.LabelIDsSlash = new System.Windows.Forms.Label();
             this.InputMaxAdv = new System.Windows.Forms.TextBox();
             this.LabelMaxAdv = new System.Windows.Forms.Label();
             this.LabelMark = new System.Windows.Forms.Label();
@@ -157,6 +157,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.speJudgeFilter = new System.Windows.Forms.ComboBox();
             this.DesiredNature = new System.Windows.Forms.Label();
             this.SelectedNature = new System.Windows.Forms.ComboBox();
+            this.LabelInitialAdv = new System.Windows.Forms.Label();
+            this.InputInitialAdv = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -318,7 +320,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputTID.Location = new System.Drawing.Point(68, 61);
             this.InputTID.MaxLength = 5;
             this.InputTID.Name = "InputTID";
-            this.InputTID.Size = new System.Drawing.Size(102, 20);
+            this.InputTID.Size = new System.Drawing.Size(44, 20);
             this.InputTID.TabIndex = 2;
             this.InputTID.Text = "01390";
             this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
@@ -327,33 +329,33 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputSID
             // 
-            this.InputSID.Location = new System.Drawing.Point(68, 87);
+            this.InputSID.Location = new System.Drawing.Point(126, 61);
             this.InputSID.MaxLength = 5;
             this.InputSID.Name = "InputSID";
-            this.InputSID.Size = new System.Drawing.Size(102, 20);
+            this.InputSID.Size = new System.Drawing.Size(44, 20);
             this.InputSID.TabIndex = 3;
             this.InputSID.Text = "01337";
             this.InputSID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
             this.InputSID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             this.InputSID.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
-            // LabelTID
+            // LabelTIDSID
             // 
-            this.LabelTID.AutoSize = true;
-            this.LabelTID.Location = new System.Drawing.Point(34, 64);
-            this.LabelTID.Name = "LabelTID";
-            this.LabelTID.Size = new System.Drawing.Size(28, 13);
-            this.LabelTID.TabIndex = 47;
-            this.LabelTID.Text = "TID:";
+            this.LabelTIDSID.AutoSize = true;
+            this.LabelTIDSID.Location = new System.Drawing.Point(5, 65);
+            this.LabelTIDSID.Name = "LabelTIDSID";
+            this.LabelTIDSID.Size = new System.Drawing.Size(57, 13);
+            this.LabelTIDSID.TabIndex = 47;
+            this.LabelTIDSID.Text = "TID / SID:";
             // 
-            // LabelSID
+            // LabelIDsSlash
             // 
-            this.LabelSID.AutoSize = true;
-            this.LabelSID.Location = new System.Drawing.Point(34, 90);
-            this.LabelSID.Name = "LabelSID";
-            this.LabelSID.Size = new System.Drawing.Size(28, 13);
-            this.LabelSID.TabIndex = 48;
-            this.LabelSID.Text = "SID:";
+            this.LabelIDsSlash.AutoSize = true;
+            this.LabelIDsSlash.Location = new System.Drawing.Point(113, 65);
+            this.LabelIDsSlash.Name = "LabelIDsSlash";
+            this.LabelIDsSlash.Size = new System.Drawing.Size(12, 13);
+            this.LabelIDsSlash.TabIndex = 48;
+            this.LabelIDsSlash.Text = "/";
             // 
             // InputMaxAdv
             // 
@@ -367,11 +369,11 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelMaxAdv
             // 
             this.LabelMaxAdv.AutoSize = true;
-            this.LabelMaxAdv.Location = new System.Drawing.Point(7, 117);
+            this.LabelMaxAdv.Location = new System.Drawing.Point(49, 114);
             this.LabelMaxAdv.Name = "LabelMaxAdv";
-            this.LabelMaxAdv.Size = new System.Drawing.Size(55, 13);
+            this.LabelMaxAdv.Size = new System.Drawing.Size(13, 13);
             this.LabelMaxAdv.TabIndex = 50;
-            this.LabelMaxAdv.Text = "Max Adv.:";
+            this.LabelMaxAdv.Text = "+";
             // 
             // LabelMark
             // 
@@ -1553,10 +1555,30 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedNature.Size = new System.Drawing.Size(147, 21);
             this.SelectedNature.TabIndex = 111;
             // 
+            // LabelInitialAdv
+            // 
+            this.LabelInitialAdv.AutoSize = true;
+            this.LabelInitialAdv.Location = new System.Drawing.Point(3, 90);
+            this.LabelInitialAdv.Name = "LabelInitialAdv";
+            this.LabelInitialAdv.Size = new System.Drawing.Size(59, 13);
+            this.LabelInitialAdv.TabIndex = 113;
+            this.LabelInitialAdv.Text = "Initial Adv.:";
+            // 
+            // InputInitialAdv
+            // 
+            this.InputInitialAdv.Location = new System.Drawing.Point(68, 87);
+            this.InputInitialAdv.MaxLength = 13;
+            this.InputInitialAdv.Name = "InputInitialAdv";
+            this.InputInitialAdv.Size = new System.Drawing.Size(102, 20);
+            this.InputInitialAdv.TabIndex = 112;
+            this.InputInitialAdv.Text = "0";
+            // 
             // MainWindow
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(831, 559);
+            this.Controls.Add(this.LabelInitialAdv);
+            this.Controls.Add(this.InputInitialAdv);
             this.Controls.Add(this.SelectedNature);
             this.Controls.Add(this.DesiredNature);
             this.Controls.Add(this.speJudgeFilter);
@@ -1613,8 +1635,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.LabelMark);
             this.Controls.Add(this.LabelMaxAdv);
             this.Controls.Add(this.InputMaxAdv);
-            this.Controls.Add(this.LabelSID);
-            this.Controls.Add(this.LabelTID);
+            this.Controls.Add(this.LabelIDsSlash);
+            this.Controls.Add(this.LabelTIDSID);
             this.Controls.Add(this.InputSID);
             this.Controls.Add(this.InputTID);
             this.Controls.Add(this.speMaxFilter);
@@ -1690,8 +1712,8 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.Button hpMaxFilter;
         private System.Windows.Forms.TextBox InputTID;
         private System.Windows.Forms.TextBox InputSID;
-        private System.Windows.Forms.Label LabelTID;
-        private System.Windows.Forms.Label LabelSID;
+        private System.Windows.Forms.Label LabelTIDSID;
+        private System.Windows.Forms.Label LabelIDsSlash;
         private System.Windows.Forms.TextBox InputMaxAdv;
         private System.Windows.Forms.Label LabelMaxAdv;
         private System.Windows.Forms.Label LabelMark;
@@ -1799,5 +1821,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.ComboBox speJudgeFilter;
         private System.Windows.Forms.Label DesiredNature;
         private System.Windows.Forms.ComboBox SelectedNature;
+        private System.Windows.Forms.Label LabelInitialAdv;
+        private System.Windows.Forms.TextBox InputInitialAdv;
     }
 }
