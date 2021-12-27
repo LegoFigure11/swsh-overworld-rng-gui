@@ -7,7 +7,6 @@ namespace SWSH_OWRNG_Generator_GUI
     {
         private static readonly string[] Natures = { "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" };
         private static readonly string[] PersonalityMarks = { "Rowdy", "AbsentMinded", "Jittery", "Excited", "Charismatic", "Calmness", "Intense", "ZonedOut", "Joyful", "Angry", "Smiley", "Teary", "Upbeat", "Peeved", "Intellectual", "Ferocious", "Crafty", "Scowling", "Kindly", "Flustered", "PumpedUp", "ZeroEnergy", "Prideful", "Unsure", "Humble", "Thorny", "Vigor", "Slump" };
-        private static readonly uint Max = (uint)Math.Pow(2, 32) - 1;
 
         // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
         public static List<Frame> Generate(
@@ -52,33 +51,33 @@ namespace SWSH_OWRNG_Generator_GUI
 
                 if (Static)
                 {
-                    LeadRand = (uint)rng.rand(100);
+                    LeadRand = (uint)rng.Rand(100);
                     if (IsCuteCharm && LeadRand <= 65)
                         Gender = "CC";
                 }
                 else
                 {
                     if (!Fishing)
-                        rng.rand(Max);
-                    rng.rand(100);
-                    LeadRand = (uint)rng.rand(100);
+                        rng.Rand();
+                    rng.Rand(100);
+                    LeadRand = (uint)rng.Rand(100);
                     if (IsCuteCharm && LeadRand <= 65)
                         Gender = "CC";
 
-                    SlotRand = (uint)rng.rand(100);
+                    SlotRand = (uint)rng.Rand(100);
                     if (SlotMin > SlotRand || SlotMax < SlotRand)
                     {
                         if (TIDSIDSearch)
-                            go.previous();
+                            go.Previous();
                         else
-                            go.next();
+                            go.Next();
                         advance += 1;
                         continue;
                     }
 
                     if (GenerateLevel)
                     {
-                        Level = LevelMin + (uint)rng.rand(LevelDelta);
+                        Level = LevelMin + (uint)rng.Rand(LevelDelta);
                     }
                     else
                     {
@@ -86,7 +85,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     }
 
                     GenerateMark(rng, Weather, Fishing, MarkRolls); // Double Mark Gen happens always?
-                    BrilliantRand = (uint)rng.rand(1000);
+                    BrilliantRand = (uint)rng.Rand(1000);
                     if (BrilliantRand < BrilliantThreshold)
                         Brilliant = true;
 
@@ -96,30 +95,30 @@ namespace SWSH_OWRNG_Generator_GUI
                 uint MockPID = 0;
                 for (int roll = 0; roll < ShinyRolls + (Brilliant ? BrilliantRolls : 0); roll++)
                 {
-                    MockPID = rng.nextuint();
+                    MockPID = rng.NextUInt();
                     Shiny = (((MockPID >> 16) ^ (MockPID & 0xFFFF)) ^ TSV) < 16;
                     if (Shiny)
                         break;
                 }
 
                 if (Gender != "CC")
-                    Gender = rng.rand(2) == 0 ? "F" : "M";
-                Nature = (uint)rng.rand(25);
+                    Gender = rng.Rand(2) == 0 ? "F" : "M";
+                Nature = (uint)rng.Rand(25);
                 AbilityRoll = 2;
                 if (!IsAbilityLocked)
-                    AbilityRoll = (uint)rng.rand(2);
+                    AbilityRoll = (uint)rng.Rand(2);
 
                 if (!Static && HeldItem)
-                    rng.rand(100);
+                    rng.Rand(100);
 
                 BrilliantIVs = 0;
                 if (Brilliant)
                 {
-                    BrilliantIVs = (int)rng.rand(2) | 2;
-                    rng.rand(EggMoveCount);
+                    BrilliantIVs = (int)rng.Rand(2) | 2;
+                    rng.Rand(EggMoveCount);
                 }
 
-                FixedSeed = rng.nextuint();
+                FixedSeed = rng.NextUInt();
                 (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, TSV, Shiny, (int)(FlawlessIVs + BrilliantIVs), MinIVs, MaxIVs);
 
                 if (TIDSIDSearch)
@@ -135,9 +134,9 @@ namespace SWSH_OWRNG_Generator_GUI
                     )
                 {
                     if (TIDSIDSearch)
-                        go.previous();
+                        go.Previous();
                     else
-                        go.next();
+                        go.Next();
                     advance += 1;
                     continue;
                 }
@@ -147,9 +146,9 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (!PassesMarkFilter(Mark, DesiredMark))
                 {
                     if (TIDSIDSearch)
-                        go.previous();
+                        go.Previous();
                     else
-                        go.next();
+                        go.Next();
                     advance += 1;
                     continue;
                 }
@@ -157,9 +156,9 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (!PassesNatureFilter(Natures[Nature], DesiredNature))
                 {
                     if (TIDSIDSearch)
-                        go.previous();
+                        go.Previous();
                     else
-                        go.next();
+                        go.Next();
                     advance += 1;
                     continue;
                 }
@@ -194,9 +193,9 @@ namespace SWSH_OWRNG_Generator_GUI
             );
 
                 if (TIDSIDSearch)
-                    go.previous();
+                    go.Previous();
                 else
-                    go.next();
+                    go.Next();
                 advance += 1;
             }
 
@@ -212,15 +211,15 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             for (int i = 0; i < MarkRolls; i++)
             {
-                uint rare = (uint)go.rand(1000);
-                uint pers = (uint)go.rand(100);
-                uint unco = (uint)go.rand(50);
-                uint weat = (uint)go.rand(50);
-                uint time = (uint)go.rand(50);
-                uint fish = (uint)go.rand(25);
+                uint rare = (uint)go.Rand(1000);
+                uint pers = (uint)go.Rand(100);
+                uint unco = (uint)go.Rand(50);
+                uint weat = (uint)go.Rand(50);
+                uint time = (uint)go.Rand(50);
+                uint fish = (uint)go.Rand(25);
 
                 if (rare == 0) return "Rare";
-                if (pers == 0) return PersonalityMarks[go.rand(28)];
+                if (pers == 0) return PersonalityMarks[go.Rand(28)];
                 if (unco == 0) return "Uncommon";
                 if (weat == 0 && Weather) return "Weather";
                 if (time == 0) return "Time";
@@ -234,8 +233,8 @@ namespace SWSH_OWRNG_Generator_GUI
         public static (uint, uint, uint[], uint, bool) CalculateFixed(uint FixedSeed, uint TSV, bool Shiny, int ForcedIVs, uint[] MinIVs, uint[] MaxIVs)
         {
             Xoroshiro go = new Xoroshiro(FixedSeed, 0x82A2B175229D6A5B);
-            FixedEC = go.nextuint();
-            FixedPID = go.nextuint();
+            FixedEC = go.NextUInt();
+            FixedPID = go.NextUInt();
             if (!Shiny)
             {
                 if (((FixedPID >> 16) ^ (FixedPID & 0xFFFF) ^ TSV) < 16)
@@ -251,10 +250,10 @@ namespace SWSH_OWRNG_Generator_GUI
             PassIVs = true;
             for (i = 0; i < ForcedIVs; i++)
             {
-                FixedIVIndex = (uint)go.rand(6);
+                FixedIVIndex = (uint)go.Rand(6);
                 while (IVs[FixedIVIndex] != 32)
                 {
-                    FixedIVIndex = (uint)go.rand(6);
+                    FixedIVIndex = (uint)go.Rand(6);
                 }
                 IVs[FixedIVIndex] = 31;
                 if (IVs[FixedIVIndex] > MaxIVs[FixedIVIndex])
@@ -267,7 +266,7 @@ namespace SWSH_OWRNG_Generator_GUI
             for (i = 0; i < 6 && PassIVs; i++)
             {
                 if (IVs[i] == 32)
-                    IVs[i] = (uint)go.rand(32);
+                    IVs[i] = (uint)go.Rand(32);
                 if (IVs[i] < MinIVs[i] || IVs[i] > MaxIVs[i])
                 {
                     PassIVs = false;
@@ -304,7 +303,7 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             Xoroshiro go = new Xoroshiro(state0, state1);
             for (int i = 0; i < start; i++)
-                go.next();
+                go.Next();
 
             string ret = String.Empty;
             ulong ProgressUpdateInterval = (start + max) / 100;
@@ -315,7 +314,7 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 if (progress != null && (i % ProgressUpdateInterval == 0))
                     progress.Report(1);
-                ret += go.next() & 1;
+                ret += go.Next() & 1;
             }
 
             return ret;

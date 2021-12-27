@@ -710,7 +710,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: 1 (Advances: {num} | Inputs {l})";
                     Xoroshiro go = new Xoroshiro(RetailS0, RetailS1);
                     for (int i = 0; i < num; i++)
-                        go.next();
+                        go.Next();
 
                     RetailAdvancesTrackerResultState0.Text = go.state0.ToString("X16");
                     RetailAdvancesTrackerResultState1.Text = go.state1.ToString("X16");

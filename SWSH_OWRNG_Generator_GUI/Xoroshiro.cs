@@ -10,7 +10,7 @@
             state1 = s1;
         }
 
-        ulong state()
+        ulong State()
         {
             ulong s0 = this.state0;
             ulong s1 = this.state1;
@@ -22,7 +22,7 @@
             return (x << k) | (x >> (64 - k));
         }
 
-        public ulong next()
+        public ulong Next()
         {
             ulong s0 = state0;
             ulong s1 = state1;
@@ -33,7 +33,7 @@
             return result;
         }
 
-        public ulong previous()
+        public ulong Previous()
         {
             ulong s0 = state0;
             ulong s1 = state1;
@@ -47,12 +47,12 @@
             return result;
         }
 
-        public uint nextuint()
+        public uint NextUInt()
         {
-            return (uint)next();
+            return (uint)Next();
         }
 
-        uint getMask(uint x)
+        uint GetMask(uint x)
         {
             x -= 1;
             x |= x >> 1;
@@ -63,13 +63,13 @@
             return x;
         }
 
-        public ulong rand(uint n)
+        public ulong Rand(uint n = 0xFFFFFFFF)
         {
-            uint mask = getMask(n);
-            ulong res = next() & mask;
+            uint mask = GetMask(n);
+            ulong res = Next() & mask;
             while (res >= n)
             {
-                res = next() & mask;
+                res = Next() & mask;
             }
             return res;
         }
