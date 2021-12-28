@@ -123,7 +123,8 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (Brilliant)
                 {
                     BrilliantIVs = (int)rng.Rand(2) | 2;
-                    rng.Rand(EggMoveCount);
+                    if (EggMoveCount > 1)
+                        rng.Rand(EggMoveCount);
                 }
 
                 FixedSeed = rng.NextUInt();
