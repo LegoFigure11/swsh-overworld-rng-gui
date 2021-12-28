@@ -83,7 +83,8 @@ namespace SWSH_OWRNG_Generator_GUI
             CheckIsAbilityLocked.TabIndex = CheckHeldItem.TabIndex + 1;
             CheckTIDSIDFinder.TabIndex = CheckIsAbilityLocked.TabIndex + 1;
             CheckCuteCharm.TabIndex = CheckTIDSIDFinder.TabIndex + 1;
-            InputFlawlessIVs.TabIndex = CheckCuteCharm.TabIndex + 1;
+            CheckShinyLocked.TabIndex = CheckCuteCharm.TabIndex + 1;
+            InputFlawlessIVs.TabIndex = CheckShinyLocked.TabIndex + 1;
             InputKOCount.TabIndex = InputFlawlessIVs.TabIndex + 1;
             InputEMs.TabIndex = InputKOCount.TabIndex + 1;
             InputLevelMin.TabIndex = InputKOCount.TabIndex + 1;
@@ -574,6 +575,7 @@ namespace SWSH_OWRNG_Generator_GUI
             bool IsAbilityLocked = CheckIsAbilityLocked.Checked;
             bool TIDSIDSearch = CheckTIDSIDFinder.Checked;
             bool IsCuteCharm = CheckCuteCharm.Checked;
+            bool IsShinyLocked = CheckShinyLocked.Checked;
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
             string DesiredNature = (string)SelectedNature.SelectedItem;
@@ -626,7 +628,7 @@ namespace SWSH_OWRNG_Generator_GUI
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
                 DesiredNature, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
-                IsCuteCharm, TIDSIDSearch, InitialAdvances, progress
+                IsCuteCharm, IsShinyLocked, TIDSIDSearch, InitialAdvances, progress
             ));
             BindingSource Source = new BindingSource { DataSource = Frames };
             Results.DataSource = Source;

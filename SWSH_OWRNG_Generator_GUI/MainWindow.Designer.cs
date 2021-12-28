@@ -159,6 +159,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SelectedNature = new System.Windows.Forms.ComboBox();
             this.LabelInitialAdv = new System.Windows.Forms.Label();
             this.InputInitialAdv = new System.Windows.Forms.TextBox();
+            this.CheckShinyLocked = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1573,10 +1574,21 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputInitialAdv.TabIndex = 112;
             this.InputInitialAdv.Text = "0";
             // 
+            // CheckShinyLocked
+            // 
+            this.CheckShinyLocked.AutoSize = true;
+            this.CheckShinyLocked.Location = new System.Drawing.Point(116, 236);
+            this.CheckShinyLocked.Name = "CheckShinyLocked";
+            this.CheckShinyLocked.Size = new System.Drawing.Size(91, 17);
+            this.CheckShinyLocked.TabIndex = 114;
+            this.CheckShinyLocked.Text = "Shiny Locked";
+            this.CheckShinyLocked.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(831, 559);
+            this.Controls.Add(this.CheckShinyLocked);
             this.Controls.Add(this.LabelInitialAdv);
             this.Controls.Add(this.InputInitialAdv);
             this.Controls.Add(this.SelectedNature);
@@ -1823,5 +1835,6 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.ComboBox SelectedNature;
         private System.Windows.Forms.Label LabelInitialAdv;
         private System.Windows.Forms.TextBox InputInitialAdv;
+        private System.Windows.Forms.CheckBox CheckShinyLocked;
     }
 }

@@ -13,7 +13,7 @@ namespace SWSH_OWRNG_Generator_GUI
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
             bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, string DesiredNature, uint LevelMin,
             uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
-            uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool TIDSIDSearch, ulong InitialAdvances, IProgress<int> progress
+            uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool IsShinyLocked, bool TIDSIDSearch, ulong InitialAdvances, IProgress<int> progress
             )
         {
             List<Frame> Results = new List<Frame>();
@@ -98,12 +98,15 @@ namespace SWSH_OWRNG_Generator_GUI
 
                 Shiny = false;
                 uint MockPID = 0;
-                for (int roll = 0; roll < ShinyRolls + (Brilliant ? BrilliantRolls : 0); roll++)
+                if (!IsShinyLocked)
                 {
-                    MockPID = rng.NextUInt();
-                    Shiny = (((MockPID >> 16) ^ (MockPID & 0xFFFF)) ^ TSV) < 16;
-                    if (Shiny)
-                        break;
+                    for (int roll = 0; roll < ShinyRolls + (Brilliant ? BrilliantRolls : 0); roll++)
+                    {
+                        MockPID = rng.NextUInt();
+                        Shiny = (((MockPID >> 16) ^ (MockPID & 0xFFFF)) ^ TSV) < 16;
+                        if (Shiny)
+                            break;
+                    }
                 }
 
                 if (Gender != "CC")
