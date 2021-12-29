@@ -441,7 +441,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
                 foreach (char a in Clipboard.GetText())
                 {
-                    if ((a >= 'a' && a <= 'f') || (a >= 'A' && a <= 'F') || (a >= '0' && a <= '9'))
+                    if ((a >= 'a' && a <= 'f') || (a >= 'A' && a <= 'F') || (a >= '0' && a <= '9') || a == (char)Keys.Return)
                     {
                         NewText += char.ToUpper(a);
                     }
@@ -449,6 +449,14 @@ namespace SWSH_OWRNG_Generator_GUI
 
                 if (NewText != "")
                 {
+                    if (((TextBox)sender).Name == "InputState0" && NewText.Length == 33)
+                    {
+                        String[] States = NewText.Split((char)Keys.Return);
+                        if (States[0].Length == 16 && States[1].Length == 16)
+                        {
+                            InputState1.Text = States[1];
+                        }
+                    }
                     Clipboard.SetText(NewText);
                 }
                 else
