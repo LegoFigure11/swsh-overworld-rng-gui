@@ -7,5 +7,5 @@ This program is designed for searching for Overworld RNG targets in Pokémon Swo
 
 ![](https://i.imgur.com/TuT2Z6V.png)
 
-Special thanks to [@Lincoln-LM](https://github.com/Lincoln-LM/) and the rest of the [PyNXReader](https://github.com/Lincoln-LM/PyNXReader) contributors, as the generator code is largely based off their scripts!
+Special thanks to [@Lincoln-LM](https://github.com/Lincoln-LM/) and the rest of the [PyNXReader](https://github.com/Lincoln-LM/PyNXReader) contributors, as the generator code is largely based off their scripts! Thanks to [@kwsch](https://github.com/kwsch/), [@Lusamine](https://github.com/Lusamine/), [@SciresM](https://github.com/sciresm/), and [@zaksabeast](https://github.com/zaksabeast/) for their initial research and proof-of-concepts.
 Also credit to [@niart120](https://github.com/niart120/) for [Project_Xe](https://github.com/niart120/Project_Xe) where the motions->state algorithm comes from!
