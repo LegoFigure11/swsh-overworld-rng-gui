@@ -1397,7 +1397,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.sensBox.TabIndex = 96;
             this.sensBox.Text = "Hide Sensitive Fields";
             this.sensBox.UseVisualStyleBackColor = true;
-            this.sensBox.CheckedChanged += new System.EventHandler(this.sensBox_CheckedChanged);
+            this.sensBox.CheckedChanged += new System.EventHandler(this.SensBox_CheckedChanged);
             // 
             // CheckCuteCharm
             // 

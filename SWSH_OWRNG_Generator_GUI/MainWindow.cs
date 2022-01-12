@@ -774,7 +774,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelShiny.Enabled = !check;
         }
 
-        private void sensBox_CheckedChanged(object sender, EventArgs e)
+        private void SensBox_CheckedChanged(object sender, EventArgs e)
         {
             if (sensBox.Checked)
             {
