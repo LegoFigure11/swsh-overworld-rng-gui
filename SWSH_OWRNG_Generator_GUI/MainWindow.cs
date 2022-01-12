@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Uwp.Notifications;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
@@ -18,6 +19,9 @@ namespace SWSH_OWRNG_Generator_GUI
 #endif
             var v = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             this.Text = "SwSh OWRNG Generator GUI v" + v.Major + "." + v.Minor + "." + v.Build + build;
+
+            Application.ApplicationExit += new EventHandler(this.OnApplicationExit);
+
             InitializeComponent();
         }
 
@@ -646,6 +650,11 @@ namespace SWSH_OWRNG_Generator_GUI
             progressBar1.Value = progressBar1.Maximum;
             ButtonSearch.Text = "Search!";
             ButtonSearch.Enabled = true;
+
+            new ToastContentBuilder()
+                .AddText("Your search has finished!")
+                .AddText($"Results found: {Frames.Count}")
+                .Show();
         }
 
         private void Pad(object sender, char s, int length)
@@ -855,6 +864,11 @@ namespace SWSH_OWRNG_Generator_GUI
                     IvJudgeFilter(speMin, speMax, speJudgeFilter.Text);
                     break;
             }
+        }
+        private void OnApplicationExit(object sender, EventArgs e)
+        {
+            ToastNotificationManagerCompat.History.Clear();
+            ToastNotificationManagerCompat.Uninstall();
         }
     }
 }
