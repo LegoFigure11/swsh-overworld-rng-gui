@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PKHeX.Core;
+using System;
 using System.Collections.Generic;
 
 namespace SWSH_OWRNG_Generator_GUI
@@ -37,7 +38,7 @@ namespace SWSH_OWRNG_Generator_GUI
             if (ProgressUpdateInterval == 0)
                 ProgressUpdateInterval++;
 
-            Xoroshiro go = new Xoroshiro(state0, state1);
+            Xoroshiro128Plus go = new Xoroshiro128Plus(state0, state1);
 
             for (ulong i = 0; i < InitialAdvances; i++)
             {
@@ -50,30 +51,31 @@ namespace SWSH_OWRNG_Generator_GUI
                     progress.Report(1);
 
                 // Init new RNG
-                Xoroshiro rng = new Xoroshiro(go.state0, go.state1);
+                (ulong s0, ulong s1) = go.GetState();
+                Xoroshiro128Plus rng = new Xoroshiro128Plus(s0, s1);
                 Brilliant = false;
                 Gender = "";
 
                 if (Static)
                 {
-                    LeadRand = (uint)rng.Rand(100);
+                    LeadRand = (uint)rng.NextInt(100);
                     if (IsCuteCharm && LeadRand < 66)
                         Gender = "CC";
                 }
                 else
                 {
                     if (!Fishing)
-                        rng.Rand();
-                    rng.Rand(100);
-                    LeadRand = (uint)rng.Rand(100);
+                        rng.NextInt();
+                    rng.NextInt(100);
+                    LeadRand = (uint)rng.NextInt(100);
                     if (IsCuteCharm && LeadRand < 66)
                         Gender = "CC";
 
-                    SlotRand = (uint)rng.Rand(100);
+                    SlotRand = (uint)rng.NextInt(100);
                     if (SlotMin > SlotRand || SlotMax < SlotRand)
                     {
                         if (TIDSIDSearch)
-                            go.Previous();
+                            go.Prev();
                         else
                             go.Next();
                         advance += 1;
@@ -82,7 +84,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
                     if (GenerateLevel)
                     {
-                        Level = LevelMin + (uint)rng.Rand(LevelDelta);
+                        Level = LevelMin + (uint)rng.NextInt(LevelDelta);
                     }
                     else
                     {
@@ -90,7 +92,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     }
 
                     GenerateMark(rng, Weather, Fishing, MarkRolls); // Double Mark Gen happens always?
-                    BrilliantRand = (uint)rng.Rand(1000);
+                    BrilliantRand = (uint)rng.NextInt(1000);
                     if (BrilliantRand < BrilliantThreshold)
                         Brilliant = true;
 
@@ -102,7 +104,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     for (int roll = 0; roll < ShinyRolls + (Brilliant ? BrilliantRolls : 0); roll++)
                     {
-                        MockPID = rng.NextUInt();
+                        MockPID = (uint)rng.Next();
                         Shiny = (((MockPID >> 16) ^ (MockPID & 0xFFFF)) ^ TSV) < 16;
                         if (Shiny)
                             break;
@@ -110,24 +112,24 @@ namespace SWSH_OWRNG_Generator_GUI
                 }
 
                 if (Gender != "CC")
-                    Gender = rng.Rand(2) == 0 ? "F" : "M";
-                Nature = (uint)rng.Rand(25);
+                    Gender = rng.NextInt(2) == 0 ? "F" : "M";
+                Nature = (uint)rng.NextInt(25);
                 AbilityRoll = 2;
                 if (!IsAbilityLocked)
-                    AbilityRoll = (uint)rng.Rand(2);
+                    AbilityRoll = (uint)rng.NextInt(2);
 
                 if (!Static && HeldItem)
-                    rng.Rand(100);
+                    rng.NextInt(100);
 
                 BrilliantIVs = 0;
                 if (Brilliant)
                 {
-                    BrilliantIVs = (int)rng.Rand(2) | 2;
+                    BrilliantIVs = (int)rng.NextInt(2) | 2;
                     if (EggMoveCount > 1)
-                        rng.Rand(EggMoveCount);
+                        rng.NextInt(EggMoveCount);
                 }
 
-                FixedSeed = rng.NextUInt();
+                FixedSeed = (uint)rng.Next();
                 (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, TSV, Shiny, (int)(FlawlessIVs + BrilliantIVs), MinIVs, MaxIVs);
 
                 if (TIDSIDSearch)
@@ -143,7 +145,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     )
                 {
                     if (TIDSIDSearch)
-                        go.Previous();
+                        go.Prev();
                     else
                         go.Next();
                     advance += 1;
@@ -155,7 +157,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (!PassesMarkFilter(Mark, DesiredMark))
                 {
                     if (TIDSIDSearch)
-                        go.Previous();
+                        go.Prev();
                     else
                         go.Next();
                     advance += 1;
@@ -165,7 +167,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (!PassesNatureFilter(Natures[Nature], DesiredNature))
                 {
                     if (TIDSIDSearch)
-                        go.Previous();
+                        go.Prev();
                     else
                         go.Next();
                     advance += 1;
@@ -173,13 +175,14 @@ namespace SWSH_OWRNG_Generator_GUI
                 }
 
                 // Passes all filters!
+                (ulong _s0, ulong _s1) = go.GetState();
                 Results.Add(
                     new Frame()
                     {
                         Advances = TIDSIDSearch ? (-(long)(advance + InitialAdvances)).ToString("N0") : (advance + InitialAdvances).ToString("N0"),
                         TID = (ushort)(MockPID >> 16),
                         SID = (ushort)MockPID,
-                        Animation = go.state0 & 1 ^ go.state1 & 1,
+                        Animation = _s0 & 1 ^ _s1 & 1,
                         Level = Level,
                         Slot = SlotRand,
                         PID = PID.ToString("X8"),
@@ -196,13 +199,13 @@ namespace SWSH_OWRNG_Generator_GUI
                         SpD = IVs[4],
                         Spe = IVs[5],
                         Mark = Mark,
-                        State0 = go.state0.ToString("X16"),
-                        State1 = go.state1.ToString("X16"),
+                        State0 = _s0.ToString("X16"),
+                        State1 = _s1.ToString("X16"),
                     }
                 );
 
                 if (TIDSIDSearch)
-                    go.Previous();
+                    go.Prev();
                 else
                     go.Next();
                 advance += 1;
@@ -216,19 +219,19 @@ namespace SWSH_OWRNG_Generator_GUI
             return TID ^ SID;
         }
 
-        public static string GenerateMark(Xoroshiro go, bool Weather, bool Fishing, int MarkRolls)
+        public static string GenerateMark(Xoroshiro128Plus go, bool Weather, bool Fishing, int MarkRolls)
         {
             for (int i = 0; i < MarkRolls; i++)
             {
-                uint rare = (uint)go.Rand(1000);
-                uint pers = (uint)go.Rand(100);
-                uint unco = (uint)go.Rand(50);
-                uint weat = (uint)go.Rand(50);
-                uint time = (uint)go.Rand(50);
-                uint fish = (uint)go.Rand(25);
+                uint rare = (uint)go.NextInt(1000);
+                uint pers = (uint)go.NextInt(100);
+                uint unco = (uint)go.NextInt(50);
+                uint weat = (uint)go.NextInt(50);
+                uint time = (uint)go.NextInt(50);
+                uint fish = (uint)go.NextInt(25);
 
                 if (rare == 0) return "Rare";
-                if (pers == 0) return PersonalityMarks[go.Rand(28)];
+                if (pers == 0) return PersonalityMarks[go.NextInt(28)];
                 if (unco == 0) return "Uncommon";
                 if (weat == 0 && Weather) return "Weather";
                 if (time == 0) return "Time";
@@ -241,9 +244,9 @@ namespace SWSH_OWRNG_Generator_GUI
         private static bool PassIVs;
         public static (uint, uint, uint[], uint, bool) CalculateFixed(uint FixedSeed, uint TSV, bool Shiny, int ForcedIVs, uint[] MinIVs, uint[] MaxIVs)
         {
-            Xoroshiro go = new Xoroshiro(FixedSeed, 0x82A2B175229D6A5B);
-            FixedEC = go.NextUInt();
-            FixedPID = go.NextUInt();
+            Xoroshiro128Plus go = new Xoroshiro128Plus(FixedSeed, 0x82A2B175229D6A5B);
+            FixedEC = (uint)go.Next();
+            FixedPID = (uint)go.Next();
             if (!Shiny)
             {
                 if (((FixedPID >> 16) ^ (FixedPID & 0xFFFF) ^ TSV) < 16)
@@ -259,10 +262,10 @@ namespace SWSH_OWRNG_Generator_GUI
             PassIVs = true;
             for (i = 0; i < ForcedIVs; i++)
             {
-                FixedIVIndex = (uint)go.Rand(6);
+                FixedIVIndex = (uint)go.NextInt(6);
                 while (IVs[FixedIVIndex] != 32)
                 {
-                    FixedIVIndex = (uint)go.Rand(6);
+                    FixedIVIndex = (uint)go.NextInt(6);
                 }
                 IVs[FixedIVIndex] = 31;
                 if (IVs[FixedIVIndex] > MaxIVs[FixedIVIndex])
@@ -275,7 +278,7 @@ namespace SWSH_OWRNG_Generator_GUI
             for (i = 0; i < 6 && PassIVs; i++)
             {
                 if (IVs[i] == 32)
-                    IVs[i] = (uint)go.Rand(32);
+                    IVs[i] = (uint)go.NextInt(32);
                 if (IVs[i] < MinIVs[i] || IVs[i] > MaxIVs[i])
                 {
                     PassIVs = false;
@@ -310,7 +313,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)
         {
-            Xoroshiro go = new Xoroshiro(state0, state1);
+            Xoroshiro128Plus go = new Xoroshiro128Plus(state0, state1);
             for (int i = 0; i < start; i++)
                 go.Next();
 
