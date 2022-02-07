@@ -454,12 +454,19 @@ namespace SWSH_OWRNG_Generator_GUI
 
                 if (NewText != "")
                 {
-                    if (((TextBox)sender).Name == "InputState0" && NewText.Length == 33)
+                    if (((TextBox)sender).Name == "InputState0" && (NewText.Length == 32 || NewText.Length == 33))
                     {
-                        String[] States = NewText.Split((char)Keys.Return);
-                        if (States[0].Length == 16 && States[1].Length == 16)
+                        if (NewText.Length == 32)
                         {
-                            InputState1.Text = States[1];
+                            InputState1.Text = NewText.Substring(16, 16);
+                        }
+                        else
+                        {
+                            String[] States = NewText.Split((char)Keys.Return);
+                            if (States[0].Length == 16 && States[1].Length == 16)
+                            {
+                                InputState1.Text = States[1];
+                            }
                         }
                     }
                     Clipboard.SetText(NewText);
