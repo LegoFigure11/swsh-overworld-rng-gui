@@ -640,6 +640,8 @@ namespace SWSH_OWRNG_Generator_GUI
             progressBar1.Maximum = (int)advances;
             progressBar1.Step = progressBar1.Maximum / 100;
 
+            ToastNotificationManagerCompat.History.Clear();
+
             var progress = new Progress<int>(v =>
             {
                 progressBar1.PerformStep();
