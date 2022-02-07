@@ -603,6 +603,7 @@ namespace SWSH_OWRNG_Generator_GUI
             uint[] MaxIVs = { UInt16.Parse(hpMax.Text), UInt16.Parse(atkMax.Text), UInt16.Parse(defMax.Text), UInt16.Parse(spaMax.Text), UInt16.Parse(spdMax.Text), UInt16.Parse(speMax.Text) };
             int[] WrongIVs = new int[6];
             string message = "";
+            string results = "";
             string[] stats = { "HP", "Atk", "Def", "SpA", "SpD", "Spe" };
             int err = 0;
 
@@ -661,8 +662,10 @@ namespace SWSH_OWRNG_Generator_GUI
             ButtonSearch.Text = "Search!";
             ButtonSearch.Enabled = true;
 
-            new ToastContentBuilder()
-                .AddText("Your search has finished!")
+            if (Frames.Count == 0) results = "You need better RNG!";
+            else results = "Your search has finished!";
+            new ToastContentBuilder()                               
+                .AddText(results)
                 .AddText($"Results found: {Frames.Count}")
                 .Show();
         }
