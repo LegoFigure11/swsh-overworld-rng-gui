@@ -1586,7 +1586,6 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // MainWindow
             // 
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(831, 559);
             this.Controls.Add(this.CheckShinyLocked);
             this.Controls.Add(this.LabelInitialAdv);
@@ -1692,7 +1691,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.Controls.Add(this.InputState0);
             this.Controls.Add(this.LabelState0);
             this.Controls.Add(this.ImageRareMark);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Menu = this.MainMenu;
             this.Name = "MainWindow";
