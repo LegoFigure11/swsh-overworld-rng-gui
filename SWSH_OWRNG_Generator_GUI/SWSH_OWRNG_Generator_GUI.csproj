@@ -9,9 +9,14 @@
     <RootNamespace>SWSH_OWRNG_Generator_GUI</RootNamespace>
     <AssemblyName>SWSH_OWRNG_Generator_GUI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <LangVersion>9</LangVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,11 +29,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -67,6 +69,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SysBot.Base\SBBReader.cs" />
+    <Compile Include="SysBot.Base\Connection\Console\IAsyncConnection.cs" />
+    <Compile Include="SysBot.Base\Connection\Console\IConsoleBotConfig.cs" />
+    <Compile Include="SysBot.Base\Connection\Console\IConsoleConnection.cs" />
+    <Compile Include="SysBot.Base\Connection\Console\IConsoleConnectionAsync.cs" />
+    <Compile Include="SysBot.Base\Connection\Console\IConsoleConnectionSync.cs" />
+    <Compile Include="SysBot.Base\Connection\Console\IWirelessConnectionConfig.cs" />
+    <Compile Include="SysBot.Base\Connection\Switch\ISwitchConnectionAsync.cs" />
+    <Compile Include="SysBot.Base\Connection\Switch\ISwitchConnectionConfig.cs" />
+    <Compile Include="SysBot.Base\Connection\Switch\ISwitchConnectionSync.cs" />
+    <Compile Include="SysBot.Base\Connection\Switch\SwitchConfigureParameter.cs" />
+    <Compile Include="SysBot.Base\Connection\Switch\SwitchOffsetType.cs" />
+    <Compile Include="SysBot.Base\Connection\Switch\SwitchProtocol.cs" />
+    <Compile Include="SysBot.Base\Connection\Switch\Wireless\SwitchSocket.cs" />
+    <Compile Include="SysBot.Base\Connection\Switch\Wireless\SwitchSocketAsync.cs" />
+    <Compile Include="SysBot.Base\Connection\Switch\Wireless\SwitchSocketSync.cs" />
+    <Compile Include="SysBot.Base\Util\ArrayUtil.cs" />
+    <Compile Include="SysBot.Base\Util\Decoder.cs" />
     <Compile Include="SeedFinder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +104,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysBot.Base\Util\SwitchCommand.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -101,6 +122,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +134,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SysBot.Base\Util\NLog.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

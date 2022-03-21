@@ -3,7 +3,9 @@ using PKHeX.Core;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,6 +13,7 @@ namespace SWSH_OWRNG_Generator_GUI
 {
     public partial class MainWindow : Form
     {
+        public static SBBReader SwitchConnection = new SBBReader();
         public MainWindow()
         {
             string build = String.Empty;
@@ -23,11 +26,12 @@ namespace SWSH_OWRNG_Generator_GUI
 
             Application.ApplicationExit += new EventHandler(this.OnApplicationExit);
 
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SwitchIPInput.Text = Properties.Settings.Default.SwitchIP;
             InputTID.Text = Properties.Settings.Default.TID;
             InputSID.Text = Properties.Settings.Default.SID;
             CheckShinyCharm.Checked = Properties.Settings.Default.ShinyCharm;
@@ -239,6 +243,15 @@ namespace SWSH_OWRNG_Generator_GUI
             }
         }
 
+        private void CheckForIP(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (textBox.Text != "192.168.0.0")
+            {
+                Properties.Settings.Default.SwitchIP = SwitchIPInput.Text;
+            }
+            Properties.Settings.Default.Save();
+        }
         private void TIDSID_TextChanged(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
@@ -812,6 +825,65 @@ namespace SWSH_OWRNG_Generator_GUI
 
         }
 
+        /*private void FieldsListBox_CheckedChanged(object sender, ItemChangedEventArgs e)
+        {
+            if (!DisplayFieldsListBox.CheckOnClick)
+            {
+                this.Frame.Visible = false;
+                this.TID.Visible = false;
+                this.SID.Visible = false;
+                this.Animation.Visible = false;
+                this.Brilliant.Visible = false;
+                this.Level.Visible = false;
+                this.Slot.Visible = false;
+                this.PID.Visible = false;
+                this.EC.Visible = false;
+                this.Shiny.Visible = false;
+                this.Ability.Visible = false;
+                this.Nature.Visible = false;
+                this.Gender.Visible = false;
+                this.HP.Visible = false;
+                this.Atk.Visible = false;
+                this.Def.Visible = false;
+                this.SpA.Visible = false;
+                this.SpD.Visible = false;
+                this.Spe.Visible = false;
+                this.Mark.Visible = false;
+                this.State0.Visible = false;
+                this.State1.Visible = false;
+                this.InputState0.UseSystemPasswordChar = false;
+                this.InputState1.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                this.Frame.Visible = true;
+                this.TID.Visible = true;
+                this.SID.Visible = true;
+                this.Animation.Visible = true;
+                this.Brilliant.Visible = true;
+                this.Level.Visible = true;
+                this.Slot.Visible = true;
+                this.PID.Visible = true;
+                this.EC.Visible = true;
+                this.Shiny.Visible = true;
+                this.Ability.Visible = true;
+                this.Nature.Visible = true;
+                this.Gender.Visible = true;
+                this.HP.Visible = true;
+                this.Atk.Visible = true;
+                this.Def.Visible = true;
+                this.SpA.Visible = true;
+                this.SpD.Visible = true;
+                this.Spe.Visible = true;
+                this.Mark.Visible = true;
+                this.State0.Visible = true;
+                this.State1.Visible = true;
+                this.InputState0.UseSystemPasswordChar = true;
+                this.InputState1.UseSystemPasswordChar = true;
+            }
+
+        }*/
+
         private void SetIvFilters(TextBox statLower, TextBox statUpper, string min, string max)
         {
             statLower.Clear();
@@ -881,5 +953,109 @@ namespace SWSH_OWRNG_Generator_GUI
             ToastNotificationManagerCompat.History.Clear();
             ToastNotificationManagerCompat.Uninstall();
         }
+
+        public static Socket Connection = new Socket(SocketType.Stream, ProtocolType.Tcp);
+        private async void Connect_ClickAsync(object sender, EventArgs e)
+        {
+            try
+            {
+                Connection = new Socket(SocketType.Stream, ProtocolType.Tcp);
+                Connection.Connect(Program.Window.SwitchIPInput.Text, 6000);
+                StoredIp = Program.Window.SwitchIPInput.Text;
+                Program.Window.SwitchIPInput.Clear();
+                Program.Window.SwitchIPInput.AppendText("Connected!");
+                var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
+                await GetTIDSID(sav, CancellationToken.None).ConfigureAwait(false);
+                await ReadRNGState(CancellationToken.None);
+            }
+            catch
+            {
+                MessageBox.Show("Disconnected successfully. Click \"Connect\" to continue the hunt.");
+            }
+        }
+        private string StoredIp = string.Empty;
+        private async Task ReadRNGState(CancellationToken token)
+        {
+            int TotalAdvances = 0;
+            var (s0, s1) = await GetGlobalRNGState(0x4C2AAC18, token).ConfigureAwait(false);
+            InputState0.Text = $"{s0:x16}";
+            InputState1.Text = $"{s1:x16}";
+            while (Connection.Connected)
+            {
+                if (!Connection.Connected)
+                    return;
+
+                var (_s0, _s1) = await GetGlobalRNGState(0x4C2AAC18, token).ConfigureAwait(false);
+                // Only update if it changed.
+                if (_s0 == s0 && _s1 == s1)
+                    continue;
+
+                InputState0.Text = $"{_s0:x16}";
+                InputState1.Text = $"{_s1:x16}";
+                var passed = GetAdvancesPassed(s0, s1, _s0, _s1);
+                TotalAdvances += passed;
+                Program.Window.TrackAdv.Text = $"{TotalAdvances}";
+                // Store the state for the next pass.
+                s0 = _s0;
+                s1 = _s1;
+
+                if (!Connection.Connected)
+                    return;
+            }
+        }
+
+        private async void Disconnect_Click(object sender, EventArgs e)
+        {
+            Connection.Shutdown(SocketShutdown.Both);
+            Connection.Disconnect(true);
+            Program.Window.SwitchIPInput.Clear();
+            Program.Window.SwitchIPInput.AppendText("Quitter.");
+            Program.Window.TrackAdv.Clear();
+            await Task.Delay(2_000);
+            Program.Window.SwitchIPInput.Clear();
+            Program.Window.SwitchIPInput.AppendText(StoredIp);
+            Connection = new Socket(SocketType.Stream, ProtocolType.Tcp);
+
+        }
+
+        public async Task<(ulong s0, ulong s1)> GetGlobalRNGState(uint offset, CancellationToken token)
+        {
+            var data = await SwitchConnection.ReadBytesAsync(offset, 16).ConfigureAwait(false);
+            var s0 = BitConverter.ToUInt64(data, 0);
+            var s1 = BitConverter.ToUInt64(data, 8);
+            return (s0, s1);
+        }
+
+        public int GetAdvancesPassed(ulong prevs0, ulong prevs1, ulong news0, ulong news1)
+        {
+            if (prevs0 == news0 && prevs1 == news1)
+                return 0;
+
+            var rng = new Xoroshiro128Plus(prevs0, prevs1);
+            for (int i = 0; ; i++)
+            {
+                rng.NextInt(0xffffffff);
+                var (s0, s1) = rng.GetState();
+                if (s0 == news0 && s1 == news1)
+                    return i + 1;
+            }
+        }
+
+        public async Task<SAV8SWSH> GetFakeTrainerSAV(CancellationToken token)
+        {
+            var sav = new SAV8SWSH();
+            var info = sav.MyStatus;
+            var read = await SwitchConnection.ReadBytesAsync(0x45068F18, 0x110).ConfigureAwait(false);
+            read.CopyTo(info.Data, 0);
+            return sav;
+        }
+
+        public async Task GetTIDSID(SAV8SWSH sav, CancellationToken token)
+        {
+            await Task.Delay(0_100).ConfigureAwait(false);
+            Program.Window.InputTID.Text = sav.TID.ToString();
+            Program.Window.InputSID.Text = sav.SID.ToString();
+        }
+
     }
 }

@@ -5,6 +5,7 @@ namespace SWSH_OWRNG_Generator_GUI
 {
     static class Program
     {
+        public static MainWindow Window;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -13,7 +14,8 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainWindow());
+            Window = new MainWindow();
+            Application.Run(Window);
         }
     }
 }

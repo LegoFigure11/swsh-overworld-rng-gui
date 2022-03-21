@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# IDE0022: Use block body for methods
+csharp_style_expression_bodied_methods = false
+
+# IDE0022: Use block body for methods
+dotnet_diagnostic.IDE0022.severity = none
