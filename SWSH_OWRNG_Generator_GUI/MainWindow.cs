@@ -44,70 +44,82 @@ namespace SWSH_OWRNG_Generator_GUI
             // Set Tab Indexes Manually
             // This will make life easier when adding more fields later on
             // (aka Lego can't find the button that made this nice to do)
-            InputState0.TabIndex = 0;
-            InputState1.TabIndex = InputState0.TabIndex + 1;
-            InputTID.TabIndex = InputState1.TabIndex + 1;
-            InputSID.TabIndex = InputTID.TabIndex + 1;
-            InputInitialAdv.TabIndex = InputSID.TabIndex + 1;
-            InputMaxAdv.TabIndex = InputInitialAdv.TabIndex + 1;
-            hpMin.TabIndex = InputMaxAdv.TabIndex + 1;
-            hpMax.TabIndex = hpMin.TabIndex + 1;
-            atkMin.TabIndex = hpMax.TabIndex + 1;
-            atkMax.TabIndex = atkMin.TabIndex + 1;
-            defMin.TabIndex = atkMax.TabIndex + 1;
-            defMax.TabIndex = defMin.TabIndex + 1;
-            spaMin.TabIndex = defMax.TabIndex + 1;
-            spaMax.TabIndex = spaMin.TabIndex + 1;
-            spdMin.TabIndex = spaMax.TabIndex + 1;
-            spdMax.TabIndex = spdMin.TabIndex + 1;
-            speMin.TabIndex = spdMax.TabIndex + 1;
-            speMax.TabIndex = speMin.TabIndex + 1;
-            hpMinFilter.TabIndex = speMax.TabIndex + 1;
-            hpMaxFilter.TabIndex = hpMinFilter.TabIndex + 1;
-            hpJudgeFilter.TabIndex = hpMaxFilter.TabIndex + 1;
-            atkMinFilter.TabIndex = hpJudgeFilter.TabIndex + 1;
-            atkMaxFilter.TabIndex = atkMinFilter.TabIndex + 1;
-            atkJudgeFilter.TabIndex = atkMaxFilter.TabIndex + 1;
-            defMinFilter.TabIndex = atkJudgeFilter.TabIndex + 1;
-            defMaxFilter.TabIndex = defMinFilter.TabIndex + 1;
-            defJudgeFilter.TabIndex = defMaxFilter.TabIndex + 1;
-            spaMinFilter.TabIndex = defJudgeFilter.TabIndex + 1;
-            spaMaxFilter.TabIndex = spaMinFilter.TabIndex + 1;
-            spaJudgeFilter.TabIndex = spaMaxFilter.TabIndex + 1;
-            spdMinFilter.TabIndex = spaJudgeFilter.TabIndex + 1;
-            spdMaxFilter.TabIndex = spdMinFilter.TabIndex + 1;
-            spdJudgeFilter.TabIndex = spdMaxFilter.TabIndex + 1;
-            speMinFilter.TabIndex = spdJudgeFilter.TabIndex + 1;
-            speMaxFilter.TabIndex = speMinFilter.TabIndex + 1;
-            speJudgeFilter.TabIndex = speMaxFilter.TabIndex + 1;
-            SelectedMark.TabIndex = speJudgeFilter.TabIndex + 1;
-            SelectedShiny.TabIndex = SelectedMark.TabIndex + 1;
-            SelectedNature.TabIndex = SelectedShiny.TabIndex + 1;
-            CheckShinyCharm.TabIndex = SelectedNature.TabIndex + 1;
-            CheckStatic.TabIndex = CheckShinyCharm.TabIndex + 1;
-            CheckMarkCharm.TabIndex = CheckStatic.TabIndex + 1;
-            CheckFishing.TabIndex = CheckMarkCharm.TabIndex + 1;
-            CheckWeather.TabIndex = CheckFishing.TabIndex + 1;
-            CheckHeldItem.TabIndex = CheckWeather.TabIndex + 1;
-            CheckIsAbilityLocked.TabIndex = CheckHeldItem.TabIndex + 1;
-            CheckTIDSIDFinder.TabIndex = CheckIsAbilityLocked.TabIndex + 1;
-            CheckCuteCharm.TabIndex = CheckTIDSIDFinder.TabIndex + 1;
-            CheckShinyLocked.TabIndex = CheckCuteCharm.TabIndex + 1;
-            InputFlawlessIVs.TabIndex = CheckShinyLocked.TabIndex + 1;
-            InputKOCount.TabIndex = InputFlawlessIVs.TabIndex + 1;
-            InputEMs.TabIndex = InputKOCount.TabIndex + 1;
-            InputLevelMin.TabIndex = InputKOCount.TabIndex + 1;
-            InputLevelMax.TabIndex = InputLevelMin.TabIndex + 1;
-            InputSlotMin.TabIndex = InputLevelMax.TabIndex + 1;
-            InputSlotMax.TabIndex = InputSlotMin.TabIndex + 1;
-            ButtonSearch.TabIndex = InputSlotMax.TabIndex + 1;
-            Results.TabIndex = ButtonSearch.TabIndex + 1;
-            RetailAdvancesTrackerInitialInput.TabIndex = Results.TabIndex + 1;
-            RetailAdvancesTrackerMaxInput.TabIndex = RetailAdvancesTrackerInitialInput.TabIndex + 1;
-            RetailAdvancesTrackerGenerateButton.TabIndex = RetailAdvancesTrackerMaxInput.TabIndex + 1;
-            RetailAdvancesTrackerSequenceInput.TabIndex = RetailAdvancesTrackerGenerateButton.TabIndex + 1;
-            ButtonUpdateStates.TabIndex = RetailAdvancesTrackerSequenceInput.TabIndex + 1;
-            sensBox.TabIndex = ButtonUpdateStates.TabIndex + 1;
+            int i = 0;
+            InputState0.TabIndex = i++;
+            InputState1.TabIndex = i++;
+            InputTID.TabIndex = i++;
+            InputSID.TabIndex = i++;
+            InputInitialAdv.TabIndex = i++;
+            InputMaxAdv.TabIndex = i++;
+            // IVs
+            hpMin.TabIndex = i++;
+            hpMax.TabIndex = i++;
+            atkMin.TabIndex = i++;
+            atkMax.TabIndex = i++;
+            defMin.TabIndex = i++;
+            defMax.TabIndex = i++;
+            spaMin.TabIndex = i++;
+            spaMax.TabIndex = i++;
+            spdMin.TabIndex = i++;
+            spdMax.TabIndex = i++;
+            speMin.TabIndex = i++;
+            speMax.TabIndex = i++;
+            hpMinFilter.TabIndex = i++;
+            hpMaxFilter.TabIndex = i++;
+            hpJudgeFilter.TabIndex = i++;
+            atkMinFilter.TabIndex = i++;
+            atkMaxFilter.TabIndex = i++;
+            atkJudgeFilter.TabIndex = i++;
+            defMinFilter.TabIndex = i++;
+            defMaxFilter.TabIndex = i++;
+            defJudgeFilter.TabIndex = i++;
+            spaMinFilter.TabIndex = i++;
+            spaMaxFilter.TabIndex = i++;
+            spaJudgeFilter.TabIndex = i++;
+            spdMinFilter.TabIndex = i++;
+            spdMaxFilter.TabIndex = i++;
+            spdJudgeFilter.TabIndex = i++;
+            speMinFilter.TabIndex = i++;
+            speMaxFilter.TabIndex = i++;
+            speJudgeFilter.TabIndex = i++;
+            // Slot, Level
+            InputSlotMin.TabIndex = i++;
+            InputSlotMax.TabIndex = i++;
+            InputLevelMin.TabIndex = i++;
+            InputLevelMax.TabIndex = i++;
+            // Drop Downs
+            SelectedNature.TabIndex = i++;
+            SelectedShiny.TabIndex = i++;
+            SelectedMark.TabIndex = i++;
+            // Charms etc.
+            CheckShinyCharm.TabIndex = i++;
+            CheckStatic.TabIndex = i++;
+            CheckMarkCharm.TabIndex = i++;
+            CheckFishing.TabIndex = i++;
+            CheckWeather.TabIndex = i++;
+            CheckHeldItem.TabIndex = i++;
+            CheckIsAbilityLocked.TabIndex = i++;
+            CheckTIDSIDFinder.TabIndex = i++;
+            CheckCuteCharm.TabIndex = i++;
+            CheckShinyLocked.TabIndex = i++;
+            InputFlawlessIVs.TabIndex = i++;
+            InputKOCount.TabIndex = i++;
+            InputEMs.TabIndex = i++;
+            ButtonSearch.TabIndex = i++;
+            Results.TabIndex = i++;
+            // Retail Advances Tracker
+            RetailAdvancesTrackerInitialInput.TabIndex = i++;
+            RetailAdvancesTrackerMaxInput.TabIndex = i++;
+            RetailAdvancesTrackerGenerateButton.TabIndex = i++;
+            RetailAdvancesTrackerSequenceInput.TabIndex = i++;
+            ButtonUpdateStates.TabIndex = i++;
+            // Sensitive Info Box
+            sensBox.TabIndex = i++;
+            // CFW Stuff
+            SwitchIPInput.TabIndex = i++;
+            InputRAMOffset.TabIndex = i++;
+            ConnectButton.TabIndex = i++;
+            DisconnectButton.TabIndex = i++;
         }
 
         private void HpMinFilter_Click(object sender, EventArgs e)
