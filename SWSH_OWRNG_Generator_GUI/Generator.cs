@@ -17,7 +17,7 @@ namespace SWSH_OWRNG_Generator_GUI
             uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool IsShinyLocked, bool TIDSIDSearch, ulong InitialAdvances, IProgress<int> progress
             )
         {
-            List<Frame> Results = new List<Frame>();
+            List<Frame> Results = new();
 
             int ShinyRolls = ShinyCharm ? 3 : 1;
             int MarkRolls = MarkCharm ? 3 : 1;
@@ -38,7 +38,7 @@ namespace SWSH_OWRNG_Generator_GUI
             if (ProgressUpdateInterval == 0)
                 ProgressUpdateInterval++;
 
-            Xoroshiro128Plus go = new Xoroshiro128Plus(state0, state1);
+            Xoroshiro128Plus go = new(state0, state1);
 
             for (ulong i = 0; i < InitialAdvances; i++)
             {
@@ -52,7 +52,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
                 // Init new RNG
                 (ulong s0, ulong s1) = go.GetState();
-                Xoroshiro128Plus rng = new Xoroshiro128Plus(s0, s1);
+                Xoroshiro128Plus rng = new(s0, s1);
                 Brilliant = false;
                 Gender = "";
 
@@ -244,7 +244,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private static bool PassIVs;
         public static (uint, uint, uint[], uint, bool) CalculateFixed(uint FixedSeed, uint TSV, bool Shiny, int ForcedIVs, uint[] MinIVs, uint[] MaxIVs)
         {
-            Xoroshiro128Plus go = new Xoroshiro128Plus(FixedSeed, 0x82A2B175229D6A5B);
+            Xoroshiro128Plus go = new(FixedSeed, 0x82A2B175229D6A5B);
             FixedEC = (uint)go.Next();
             FixedPID = (uint)go.Next();
             if (!Shiny)
@@ -313,7 +313,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)
         {
-            Xoroshiro128Plus go = new Xoroshiro128Plus(state0, state1);
+            Xoroshiro128Plus go = new(state0, state1);
             for (int i = 0; i < start; i++)
                 go.Next();
 
