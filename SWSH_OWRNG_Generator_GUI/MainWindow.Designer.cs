@@ -1652,6 +1652,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputRAMOffset.Size = new System.Drawing.Size(103, 20);
             this.InputRAMOffset.TabIndex = 123;
             this.InputRAMOffset.Text = "4C2AAC18";
+            this.InputRAMOffset.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
             // 
             // InputRAMOffsetLabel
             // 
