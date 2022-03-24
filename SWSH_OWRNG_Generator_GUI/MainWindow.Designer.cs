@@ -168,7 +168,6 @@ namespace SWSH_OWRNG_Generator_GUI
             this.SwitchIP = new System.Windows.Forms.Label();
             this.AdvancesTracker = new System.Windows.Forms.Label();
             this.TrackAdv = new System.Windows.Forms.RichTextBox();
-            this.UpdateCFWRNGState = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1650,20 +1649,11 @@ namespace SWSH_OWRNG_Generator_GUI
             this.TrackAdv.TabIndex = 121;
             this.TrackAdv.Text = "";
             // 
-            // UpdateCFWRNGState
             // 
-            this.UpdateCFWRNGState.AutoSize = true;
-            this.UpdateCFWRNGState.Location = new System.Drawing.Point(447, 196);
-            this.UpdateCFWRNGState.Name = "UpdateCFWRNGState";
-            this.UpdateCFWRNGState.Size = new System.Drawing.Size(140, 17);
-            this.UpdateCFWRNGState.TabIndex = 122;
-            this.UpdateCFWRNGState.Text = "Update CFW RNG State";
-            this.UpdateCFWRNGState.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 559);
-            this.Controls.Add(this.UpdateCFWRNGState);
             this.Controls.Add(this.TrackAdv);
             this.Controls.Add(this.AdvancesTracker);
             this.Controls.Add(this.SwitchIP);
@@ -1923,6 +1913,5 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.Label SwitchIP;
         private System.Windows.Forms.Label AdvancesTracker;
         private System.Windows.Forms.RichTextBox TrackAdv;
-        private CheckBox UpdateCFWRNGState;
     }
 }

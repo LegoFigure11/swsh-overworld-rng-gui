@@ -929,11 +929,10 @@ namespace SWSH_OWRNG_Generator_GUI
                 if (_s0 == s0 && _s1 == s1)
                     continue;
 
-                if (UpdateCFWRNGState.Checked)
-                {
-                    InputState0.Text = $"{_s0:x16}";
-                    InputState1.Text = $"{_s1:x16}";
-                }
+
+                RetailAdvancesTrackerResultState0.Text = $"{_s0:x16}";
+                RetailAdvancesTrackerResultState1.Text = $"{_s1:x16}";
+
                 var passed = GetAdvancesPassed(s0, s1, _s0, _s1);
                 TotalAdvances += passed;
                 Program.Window.TrackAdv.Text = $"{TotalAdvances}";
