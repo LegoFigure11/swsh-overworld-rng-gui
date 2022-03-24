@@ -3,7 +3,9 @@ using PKHeX.Core;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,6 +13,7 @@ namespace SWSH_OWRNG_Generator_GUI
 {
     public partial class MainWindow : Form
     {
+        public static SBBReader SwitchConnection = new();
         public MainWindow()
         {
             string build = String.Empty;
@@ -28,6 +31,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SwitchIPInput.Text = Properties.Settings.Default.SwitchIP;
             InputTID.Text = Properties.Settings.Default.TID;
             InputSID.Text = Properties.Settings.Default.SID;
             CheckShinyCharm.Checked = Properties.Settings.Default.ShinyCharm;
@@ -40,70 +44,82 @@ namespace SWSH_OWRNG_Generator_GUI
             // Set Tab Indexes Manually
             // This will make life easier when adding more fields later on
             // (aka Lego can't find the button that made this nice to do)
-            InputState0.TabIndex = 0;
-            InputState1.TabIndex = InputState0.TabIndex + 1;
-            InputTID.TabIndex = InputState1.TabIndex + 1;
-            InputSID.TabIndex = InputTID.TabIndex + 1;
-            InputInitialAdv.TabIndex = InputSID.TabIndex + 1;
-            InputMaxAdv.TabIndex = InputInitialAdv.TabIndex + 1;
-            hpMin.TabIndex = InputMaxAdv.TabIndex + 1;
-            hpMax.TabIndex = hpMin.TabIndex + 1;
-            atkMin.TabIndex = hpMax.TabIndex + 1;
-            atkMax.TabIndex = atkMin.TabIndex + 1;
-            defMin.TabIndex = atkMax.TabIndex + 1;
-            defMax.TabIndex = defMin.TabIndex + 1;
-            spaMin.TabIndex = defMax.TabIndex + 1;
-            spaMax.TabIndex = spaMin.TabIndex + 1;
-            spdMin.TabIndex = spaMax.TabIndex + 1;
-            spdMax.TabIndex = spdMin.TabIndex + 1;
-            speMin.TabIndex = spdMax.TabIndex + 1;
-            speMax.TabIndex = speMin.TabIndex + 1;
-            hpMinFilter.TabIndex = speMax.TabIndex + 1;
-            hpMaxFilter.TabIndex = hpMinFilter.TabIndex + 1;
-            hpJudgeFilter.TabIndex = hpMaxFilter.TabIndex + 1;
-            atkMinFilter.TabIndex = hpJudgeFilter.TabIndex + 1;
-            atkMaxFilter.TabIndex = atkMinFilter.TabIndex + 1;
-            atkJudgeFilter.TabIndex = atkMaxFilter.TabIndex + 1;
-            defMinFilter.TabIndex = atkJudgeFilter.TabIndex + 1;
-            defMaxFilter.TabIndex = defMinFilter.TabIndex + 1;
-            defJudgeFilter.TabIndex = defMaxFilter.TabIndex + 1;
-            spaMinFilter.TabIndex = defJudgeFilter.TabIndex + 1;
-            spaMaxFilter.TabIndex = spaMinFilter.TabIndex + 1;
-            spaJudgeFilter.TabIndex = spaMaxFilter.TabIndex + 1;
-            spdMinFilter.TabIndex = spaJudgeFilter.TabIndex + 1;
-            spdMaxFilter.TabIndex = spdMinFilter.TabIndex + 1;
-            spdJudgeFilter.TabIndex = spdMaxFilter.TabIndex + 1;
-            speMinFilter.TabIndex = spdJudgeFilter.TabIndex + 1;
-            speMaxFilter.TabIndex = speMinFilter.TabIndex + 1;
-            speJudgeFilter.TabIndex = speMaxFilter.TabIndex + 1;
-            SelectedMark.TabIndex = speJudgeFilter.TabIndex + 1;
-            SelectedShiny.TabIndex = SelectedMark.TabIndex + 1;
-            SelectedNature.TabIndex = SelectedShiny.TabIndex + 1;
-            CheckShinyCharm.TabIndex = SelectedNature.TabIndex + 1;
-            CheckStatic.TabIndex = CheckShinyCharm.TabIndex + 1;
-            CheckMarkCharm.TabIndex = CheckStatic.TabIndex + 1;
-            CheckFishing.TabIndex = CheckMarkCharm.TabIndex + 1;
-            CheckWeather.TabIndex = CheckFishing.TabIndex + 1;
-            CheckHeldItem.TabIndex = CheckWeather.TabIndex + 1;
-            CheckIsAbilityLocked.TabIndex = CheckHeldItem.TabIndex + 1;
-            CheckTIDSIDFinder.TabIndex = CheckIsAbilityLocked.TabIndex + 1;
-            CheckCuteCharm.TabIndex = CheckTIDSIDFinder.TabIndex + 1;
-            CheckShinyLocked.TabIndex = CheckCuteCharm.TabIndex + 1;
-            InputFlawlessIVs.TabIndex = CheckShinyLocked.TabIndex + 1;
-            InputKOCount.TabIndex = InputFlawlessIVs.TabIndex + 1;
-            InputEMs.TabIndex = InputKOCount.TabIndex + 1;
-            InputLevelMin.TabIndex = InputKOCount.TabIndex + 1;
-            InputLevelMax.TabIndex = InputLevelMin.TabIndex + 1;
-            InputSlotMin.TabIndex = InputLevelMax.TabIndex + 1;
-            InputSlotMax.TabIndex = InputSlotMin.TabIndex + 1;
-            ButtonSearch.TabIndex = InputSlotMax.TabIndex + 1;
-            Results.TabIndex = ButtonSearch.TabIndex + 1;
-            RetailAdvancesTrackerInitialInput.TabIndex = Results.TabIndex + 1;
-            RetailAdvancesTrackerMaxInput.TabIndex = RetailAdvancesTrackerInitialInput.TabIndex + 1;
-            RetailAdvancesTrackerGenerateButton.TabIndex = RetailAdvancesTrackerMaxInput.TabIndex + 1;
-            RetailAdvancesTrackerSequenceInput.TabIndex = RetailAdvancesTrackerGenerateButton.TabIndex + 1;
-            ButtonUpdateStates.TabIndex = RetailAdvancesTrackerSequenceInput.TabIndex + 1;
-            sensBox.TabIndex = ButtonUpdateStates.TabIndex + 1;
+            int i = 0;
+            InputState0.TabIndex = i++;
+            InputState1.TabIndex = i++;
+            InputTID.TabIndex = i++;
+            InputSID.TabIndex = i++;
+            InputInitialAdv.TabIndex = i++;
+            InputMaxAdv.TabIndex = i++;
+            // IVs
+            hpMin.TabIndex = i++;
+            hpMax.TabIndex = i++;
+            atkMin.TabIndex = i++;
+            atkMax.TabIndex = i++;
+            defMin.TabIndex = i++;
+            defMax.TabIndex = i++;
+            spaMin.TabIndex = i++;
+            spaMax.TabIndex = i++;
+            spdMin.TabIndex = i++;
+            spdMax.TabIndex = i++;
+            speMin.TabIndex = i++;
+            speMax.TabIndex = i++;
+            hpMinFilter.TabIndex = i++;
+            hpMaxFilter.TabIndex = i++;
+            hpJudgeFilter.TabIndex = i++;
+            atkMinFilter.TabIndex = i++;
+            atkMaxFilter.TabIndex = i++;
+            atkJudgeFilter.TabIndex = i++;
+            defMinFilter.TabIndex = i++;
+            defMaxFilter.TabIndex = i++;
+            defJudgeFilter.TabIndex = i++;
+            spaMinFilter.TabIndex = i++;
+            spaMaxFilter.TabIndex = i++;
+            spaJudgeFilter.TabIndex = i++;
+            spdMinFilter.TabIndex = i++;
+            spdMaxFilter.TabIndex = i++;
+            spdJudgeFilter.TabIndex = i++;
+            speMinFilter.TabIndex = i++;
+            speMaxFilter.TabIndex = i++;
+            speJudgeFilter.TabIndex = i++;
+            // Slot, Level
+            InputSlotMin.TabIndex = i++;
+            InputSlotMax.TabIndex = i++;
+            InputLevelMin.TabIndex = i++;
+            InputLevelMax.TabIndex = i++;
+            // Drop Downs
+            SelectedNature.TabIndex = i++;
+            SelectedShiny.TabIndex = i++;
+            SelectedMark.TabIndex = i++;
+            // Charms etc.
+            CheckShinyCharm.TabIndex = i++;
+            CheckStatic.TabIndex = i++;
+            CheckMarkCharm.TabIndex = i++;
+            CheckFishing.TabIndex = i++;
+            CheckWeather.TabIndex = i++;
+            CheckHeldItem.TabIndex = i++;
+            CheckIsAbilityLocked.TabIndex = i++;
+            CheckTIDSIDFinder.TabIndex = i++;
+            CheckCuteCharm.TabIndex = i++;
+            CheckShinyLocked.TabIndex = i++;
+            InputFlawlessIVs.TabIndex = i++;
+            InputKOCount.TabIndex = i++;
+            InputEMs.TabIndex = i++;
+            ButtonSearch.TabIndex = i++;
+            Results.TabIndex = i++;
+            // Retail Advances Tracker
+            RetailAdvancesTrackerInitialInput.TabIndex = i++;
+            RetailAdvancesTrackerMaxInput.TabIndex = i++;
+            RetailAdvancesTrackerGenerateButton.TabIndex = i++;
+            RetailAdvancesTrackerSequenceInput.TabIndex = i++;
+            ButtonUpdateStates.TabIndex = i++;
+            // Sensitive Info Box
+            sensBox.TabIndex = i++;
+            // CFW Stuff
+            SwitchIPInput.TabIndex = i++;
+            InputRAMOffset.TabIndex = i++;
+            ConnectButton.TabIndex = i++;
+            DisconnectButton.TabIndex = i++;
         }
 
         private void HpMinFilter_Click(object sender, EventArgs e)
@@ -164,38 +180,38 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     case "hpMin":
                     case "hpMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(hpMin.Text), UInt16.Parse(hpMax.Text), hpJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(hpMin.Text), UInt16.Parse(hpMax.Text), hpJudgeFilter);
                         break;
 
                     case "atkMin":
                     case "atkMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(atkMin.Text), UInt16.Parse(atkMax.Text), atkJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(atkMin.Text), UInt16.Parse(atkMax.Text), atkJudgeFilter);
                         break;
 
                     case "defMin":
                     case "defMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(defMin.Text), UInt16.Parse(defMax.Text), defJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(defMin.Text), UInt16.Parse(defMax.Text), defJudgeFilter);
                         break;
 
                     case "spaMin":
                     case "spaMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(spaMin.Text), UInt16.Parse(spaMax.Text), spaJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(spaMin.Text), UInt16.Parse(spaMax.Text), spaJudgeFilter);
                         break;
 
                     case "spdMin":
                     case "spdMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(spdMin.Text), UInt16.Parse(spdMax.Text), spdJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(spdMin.Text), UInt16.Parse(spdMax.Text), spdJudgeFilter);
                         break;
 
                     case "speMin":
                     case "speMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(speMin.Text), UInt16.Parse(speMax.Text), speJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(speMin.Text), UInt16.Parse(speMax.Text), speJudgeFilter);
                         break;
                 }
             }
         }
 
-        private void JudgeFilterCompareIVs(uint min, uint max, ComboBox box, EventArgs e)
+        private void JudgeFilterCompareIVs(uint min, uint max, ComboBox box)
         {
             box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
             if (min == 0 && max == 0)
@@ -239,6 +255,15 @@ namespace SWSH_OWRNG_Generator_GUI
             }
         }
 
+        private void CheckForIP(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (textBox.Text != "192.168.0.0")
+            {
+                Properties.Settings.Default.SwitchIP = SwitchIPInput.Text;
+            }
+            Properties.Settings.Default.Save();
+        }
         private void TIDSID_TextChanged(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
@@ -652,7 +677,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 DesiredNature, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
                 IsCuteCharm, IsShinyLocked, TIDSIDSearch, InitialAdvances, progress
             ));
-            BindingSource Source = new BindingSource { DataSource = Frames };
+            BindingSource Source = new() { DataSource = Frames };
             Results.DataSource = Source;
             Source.ResetBindings(false);
 
@@ -661,7 +686,7 @@ namespace SWSH_OWRNG_Generator_GUI
             ButtonSearch.Text = "Search!";
             ButtonSearch.Enabled = true;
 
-            new ToastContentBuilder()                               
+            new ToastContentBuilder()
                 .AddText(Frames.Count == 0 ? "You need better RNG!" : "Your search has finished!")
                 .AddText($"Results found: {Frames.Count}")
                 .Show();
@@ -723,7 +748,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void RetailAdvancesTrackerSequenceInput_TextChanged(object sender, EventArgs e)
         {
-            List<int> res = new List<int>();
+            List<int> res = new();
             string Text = RetailAdvancesTrackerSequenceInput.Text;
             int m = RetailAdvancesGeneratorString.Length;
             int l = Text.Length;
@@ -741,7 +766,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     uint num = (uint)res[0] + (uint)Text.Length + RetailInitial;
                     RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: 1 (Advances: {num} | Inputs {l})";
-                    Xoroshiro128Plus go = new Xoroshiro128Plus(RetailS0, RetailS1);
+                    Xoroshiro128Plus go = new(RetailS0, RetailS1);
                     for (int i = 0; i < num; i++)
                         go.Next();
 
@@ -764,13 +789,11 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void SeedFinderMenu_Click(object sender, EventArgs e)
         {
-            using (SeedFinder form1 = new SeedFinder())
+            using SeedFinder form1 = new();
+            if (form1.ShowDialog() == DialogResult.OK)
             {
-                if (form1.ShowDialog() == DialogResult.OK)
-                {
-                    this.InputState0.Text = form1.State0;
-                    this.InputState1.Text = form1.State1;
-                }
+                this.InputState0.Text = form1.State0;
+                this.InputState1.Text = form1.State1;
             }
         }
 
@@ -880,6 +903,185 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             ToastNotificationManagerCompat.History.Clear();
             ToastNotificationManagerCompat.Uninstall();
+        }
+
+        public static Socket Connection;
+        private async void Connect_ClickAsync(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.Window.ConnectionStatusText.Text = "Connecting...";
+                Connection = new(SocketType.Stream, ProtocolType.Tcp);
+                Connection.Connect(Program.Window.SwitchIPInput.Text, 6000);
+                Program.Window.ConnectionStatusText.Text = "Connected!";
+                ChangeButtonState(Program.Window.ConnectButton, false);
+                ChangeButtonState(Program.Window.DisconnectButton, true);
+                var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
+                await GetTIDSID(sav).ConfigureAwait(false);
+                await ReadRNGState(CancellationToken.None);
+            }
+            catch (SocketException err)
+            {
+                // a bit hacky but it works
+                if (err.Message.Contains("failed to respond"))
+                {
+                    LabelSetText(Program.Window.ConnectionStatusText, "Unable to connect.");
+                    MessageBox.Show(err.Message);
+                    ChangeButtonState(Program.Window.ConnectButton, true);
+                    ChangeButtonState(Program.Window.DisconnectButton, false);
+                }
+                else
+                {
+                    LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
+                    MessageBox.Show($"Disconnected from {Program.Window.SwitchIPInput.Text}!");
+                    ChangeButtonState(Program.Window.ConnectButton, true);
+                    ChangeButtonState(Program.Window.DisconnectButton, false);
+                }
+            }
+        }
+
+        private async Task ReadRNGState(CancellationToken token)
+        {
+            if (UInt32.TryParse(Program.Window.InputRAMOffset.Text, NumberStyles.HexNumber, null, out uint Offset))
+            {
+                int TotalAdvances = 0;
+                var (s0, s1) = await GetGlobalRNGState(Offset).ConfigureAwait(false);
+                TextboxSetText(Program.Window.InputState0, $"{s0:x16}");
+                TextboxSetText(Program.Window.InputState1, $"{s1:x16}");
+                TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{s0:x16}");
+                TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{s1:x16}");
+                TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
+                while (Connection.Connected)
+                {
+                    if (!Connection.Connected)
+                        return;
+
+                    var (_s0, _s1) = await GetGlobalRNGState(Offset).ConfigureAwait(false);
+                    // Only update if it changed.
+                    if (_s0 == s0 && _s1 == s1)
+                        continue;
+
+
+                    TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{_s0:x16}");
+                    TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{_s1:x16}");
+
+                    var passed = GetAdvancesPassed(s0, s1, _s0, _s1);
+                    TotalAdvances += passed;
+                    TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
+                    // Store the state for the next pass.
+                    s0 = _s0;
+                    s1 = _s1;
+
+                    if (!Connection.Connected)
+                        return;
+                }
+            }
+            else
+            {
+                Connection.Shutdown(SocketShutdown.Both);
+                Connection.Disconnect(true);
+                LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
+                Connection = new(SocketType.Stream, ProtocolType.Tcp);
+                ChangeButtonState(Program.Window.ConnectButton, true);
+                ChangeButtonState(Program.Window.DisconnectButton, false);
+            }
+        }
+
+        private void Disconnect_Click(object sender, EventArgs e)
+        {
+            if (Connection.Connected)
+            {
+                Connection.Shutdown(SocketShutdown.Both);
+                Connection.Disconnect(true);
+                Program.Window.TrackAdv.Clear();
+                LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
+                Connection = new(SocketType.Stream, ProtocolType.Tcp);
+                ChangeButtonState(Program.Window.ConnectButton, true);
+                ChangeButtonState(Program.Window.DisconnectButton, false);
+            }
+        }
+
+        public async Task<(ulong s0, ulong s1)> GetGlobalRNGState(uint offset)
+        {
+            var data = await SwitchConnection.ReadBytesAsync(offset, 16).ConfigureAwait(false);
+            var s0 = BitConverter.ToUInt64(data, 0);
+            var s1 = BitConverter.ToUInt64(data, 8);
+            return (s0, s1);
+        }
+
+        public int GetAdvancesPassed(ulong prevs0, ulong prevs1, ulong news0, ulong news1)
+        {
+            if (prevs0 == news0 && prevs1 == news1)
+                return 0;
+
+            var rng = new Xoroshiro128Plus(prevs0, prevs1);
+            int i = 0;
+            for (; i < 20_000; i++)
+            {
+                rng.NextInt(0xffffffff);
+                var (s0, s1) = rng.GetState();
+                if (s0 == news0 && s1 == news1)
+                    return i + 1;
+            }
+            return i;
+        }
+
+        public async Task<SAV8SWSH> GetFakeTrainerSAV(CancellationToken token)
+        {
+            var sav = new SAV8SWSH();
+            var info = sav.MyStatus;
+            var read = await SwitchConnection.ReadBytesAsync(0x45068F18, 0x110).ConfigureAwait(false);
+            read.CopyTo(info.Data, 0);
+            return sav;
+        }
+
+        public async Task GetTIDSID(SAV8SWSH sav)
+        {
+            await Task.Delay(0_100).ConfigureAwait(false);
+            TextboxSetText(Program.Window.InputTID, $"{sav.TID}");
+            TextboxSetText(Program.Window.InputSID, sav.SID.ToString());
+        }
+
+        delegate void TextboxSetTextCallback(TextBox sender, string Text);
+        delegate void LabelSetTextCallback(Label sender, string Text);
+        delegate void ChangeButtonStateCallback(Button sender, bool State);
+        private void TextboxSetText(TextBox sender, string Text)
+        {
+            if (sender.InvokeRequired)
+            {
+                TextboxSetTextCallback d = new(TextboxSetText);
+                sender.Invoke(d, sender, Text);
+            }
+            else
+            {
+                sender.Text = Text;
+            }
+        }
+
+        private void LabelSetText(Label sender, string Text)
+        {
+            if (sender.InvokeRequired)
+            {
+                LabelSetTextCallback d = new(LabelSetText);
+                sender.Invoke(d, sender, Text);
+            }
+            else
+            {
+                sender.Text = Text;
+            }
+        }
+
+        private void ChangeButtonState(Button sender, bool State)
+        {
+            if (sender.InvokeRequired)
+            {
+                ChangeButtonStateCallback d = new(ChangeButtonState);
+                sender.Invoke(d, sender, State);
+            }
+            else
+            {
+                sender.Enabled = State;
+            }
         }
     }
 }
