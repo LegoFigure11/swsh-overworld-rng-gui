@@ -162,12 +162,16 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelInitialAdv = new System.Windows.Forms.Label();
             this.InputInitialAdv = new System.Windows.Forms.TextBox();
             this.CheckShinyLocked = new System.Windows.Forms.CheckBox();
-            this.Connect = new System.Windows.Forms.Button();
-            this.Disconnect = new System.Windows.Forms.Button();
+            this.ConnectButton = new System.Windows.Forms.Button();
+            this.DisconnectButton = new System.Windows.Forms.Button();
             this.SwitchIPInput = new System.Windows.Forms.TextBox();
-            this.SwitchIP = new System.Windows.Forms.Label();
-            this.AdvancesTracker = new System.Windows.Forms.Label();
-            this.TrackAdv = new System.Windows.Forms.RichTextBox();
+            this.SwitchIPLabel = new System.Windows.Forms.Label();
+            this.CurrentAdvancesLabel = new System.Windows.Forms.Label();
+            this.InputRAMOffset = new System.Windows.Forms.TextBox();
+            this.InputRAMOffsetLabel = new System.Windows.Forms.Label();
+            this.ConnectionStatusLabel = new System.Windows.Forms.Label();
+            this.ConnectionStatusText = new System.Windows.Forms.Label();
+            this.TrackAdv = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -373,7 +377,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputMaxAdv.Name = "InputMaxAdv";
             this.InputMaxAdv.Size = new System.Drawing.Size(102, 20);
             this.InputMaxAdv.TabIndex = 4;
-            this.InputMaxAdv.Text = "500000";
+            this.InputMaxAdv.Text = "50000";
             // 
             // LabelMaxAdv
             // 
@@ -602,7 +606,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // ButtonSearch
             // 
-            this.ButtonSearch.Location = new System.Drawing.Point(247, 320);
+            this.ButtonSearch.Location = new System.Drawing.Point(247, 375);
             this.ButtonSearch.Name = "ButtonSearch";
             this.ButtonSearch.Size = new System.Drawing.Size(341, 27);
             this.ButtonSearch.TabIndex = 42;
@@ -667,11 +671,11 @@ namespace SWSH_OWRNG_Generator_GUI
             this.State0,
             this.State1});
             this.Results.DataSource = this.generatorBindingSource;
-            this.Results.Location = new System.Drawing.Point(12, 381);
+            this.Results.Location = new System.Drawing.Point(12, 437);
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.RowHeadersWidth = 62;
-            this.Results.Size = new System.Drawing.Size(808, 166);
+            this.Results.Size = new System.Drawing.Size(808, 206);
             this.Results.TabIndex = 73;
             // 
             // Frame
@@ -1150,7 +1154,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // progressBar1
             // 
             this.progressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.progressBar1.Location = new System.Drawing.Point(247, 354);
+            this.progressBar1.Location = new System.Drawing.Point(247, 408);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(341, 21);
             this.progressBar1.TabIndex = 74;
@@ -1399,7 +1403,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // sensBox
             // 
             this.sensBox.AutoSize = true;
-            this.sensBox.Location = new System.Drawing.Point(447, 169);
+            this.sensBox.Location = new System.Drawing.Point(447, 167);
             this.sensBox.Name = "sensBox";
             this.sensBox.Size = new System.Drawing.Size(124, 17);
             this.sensBox.TabIndex = 96;
@@ -1592,74 +1596,112 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckShinyLocked.Text = "Shiny Locked";
             this.CheckShinyLocked.UseVisualStyleBackColor = true;
             // 
-            // Connect
+            // ConnectButton
             // 
-            this.Connect.Location = new System.Drawing.Point(633, 352);
-            this.Connect.Name = "Connect";
-            this.Connect.Size = new System.Drawing.Size(75, 23);
-            this.Connect.TabIndex = 115;
-            this.Connect.Text = "Connect";
-            this.Connect.UseVisualStyleBackColor = true;
-            this.Connect.Click += new System.EventHandler(this.Connect_ClickAsync);
+            this.ConnectButton.Location = new System.Drawing.Point(12, 408);
+            this.ConnectButton.Name = "ConnectButton";
+            this.ConnectButton.Size = new System.Drawing.Size(75, 23);
+            this.ConnectButton.TabIndex = 115;
+            this.ConnectButton.Text = "Connect";
+            this.ConnectButton.UseVisualStyleBackColor = true;
+            this.ConnectButton.Click += new System.EventHandler(this.Connect_ClickAsync);
             // 
-            // Disconnect
+            // DisconnectButton
             // 
-            this.Disconnect.Location = new System.Drawing.Point(715, 352);
-            this.Disconnect.Name = "Disconnect";
-            this.Disconnect.Size = new System.Drawing.Size(75, 23);
-            this.Disconnect.TabIndex = 116;
-            this.Disconnect.Text = "Disconnect";
-            this.Disconnect.UseVisualStyleBackColor = true;
-            this.Disconnect.Click += new System.EventHandler(this.Disconnect_Click);
+            this.DisconnectButton.Enabled = false;
+            this.DisconnectButton.Location = new System.Drawing.Point(96, 408);
+            this.DisconnectButton.Name = "DisconnectButton";
+            this.DisconnectButton.Size = new System.Drawing.Size(75, 23);
+            this.DisconnectButton.TabIndex = 116;
+            this.DisconnectButton.Text = "Disconnect";
+            this.DisconnectButton.UseVisualStyleBackColor = true;
+            this.DisconnectButton.Click += new System.EventHandler(this.Disconnect_Click);
             // 
             // SwitchIPInput
             // 
-            this.SwitchIPInput.Location = new System.Drawing.Point(687, 331);
+            this.SwitchIPInput.Location = new System.Drawing.Point(68, 311);
             this.SwitchIPInput.Name = "SwitchIPInput";
             this.SwitchIPInput.Size = new System.Drawing.Size(103, 20);
             this.SwitchIPInput.TabIndex = 117;
+            this.SwitchIPInput.Text = "192.168.0.0";
             this.SwitchIPInput.TextChanged += new System.EventHandler(this.CheckForIP);
             // 
-            // SwitchIP
+            // SwitchIPLabel
             // 
-            this.SwitchIP.AutoSize = true;
-            this.SwitchIP.Location = new System.Drawing.Point(633, 334);
-            this.SwitchIP.Name = "SwitchIP";
-            this.SwitchIP.Size = new System.Drawing.Size(52, 13);
-            this.SwitchIP.TabIndex = 118;
-            this.SwitchIP.Text = "Switch IP";
+            this.SwitchIPLabel.AutoSize = true;
+            this.SwitchIPLabel.Location = new System.Drawing.Point(7, 314);
+            this.SwitchIPLabel.Name = "SwitchIPLabel";
+            this.SwitchIPLabel.Size = new System.Drawing.Size(55, 13);
+            this.SwitchIPLabel.TabIndex = 118;
+            this.SwitchIPLabel.Text = "Switch IP:";
             // 
-            // AdvancesTracker
+            // CurrentAdvancesLabel
             // 
-            this.AdvancesTracker.AutoSize = true;
-            this.AdvancesTracker.Location = new System.Drawing.Point(91, 338);
-            this.AdvancesTracker.Name = "AdvancesTracker";
-            this.AdvancesTracker.Size = new System.Drawing.Size(122, 13);
-            this.AdvancesTracker.TabIndex = 120;
-            this.AdvancesTracker.Text = "CFW Advances Tracker";
-            this.AdvancesTracker.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CurrentAdvancesLabel.AutoSize = true;
+            this.CurrentAdvancesLabel.Location = new System.Drawing.Point(5, 385);
+            this.CurrentAdvancesLabel.Name = "CurrentAdvancesLabel";
+            this.CurrentAdvancesLabel.Size = new System.Drawing.Size(57, 13);
+            this.CurrentAdvancesLabel.TabIndex = 120;
+            this.CurrentAdvancesLabel.Text = "Curr. Adv.:";
+            this.CurrentAdvancesLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // InputRAMOffset
+            // 
+            this.InputRAMOffset.Location = new System.Drawing.Point(68, 337);
+            this.InputRAMOffset.Name = "InputRAMOffset";
+            this.InputRAMOffset.Size = new System.Drawing.Size(103, 20);
+            this.InputRAMOffset.TabIndex = 123;
+            this.InputRAMOffset.Text = "4C2AAC18";
+            // 
+            // InputRAMOffsetLabel
+            // 
+            this.InputRAMOffsetLabel.AutoSize = true;
+            this.InputRAMOffsetLabel.Location = new System.Drawing.Point(24, 340);
+            this.InputRAMOffsetLabel.Name = "InputRAMOffsetLabel";
+            this.InputRAMOffsetLabel.Size = new System.Drawing.Size(38, 13);
+            this.InputRAMOffsetLabel.TabIndex = 124;
+            this.InputRAMOffsetLabel.Text = "Offset:";
+            // 
+            // ConnectionStatusLabel
+            // 
+            this.ConnectionStatusLabel.AutoSize = true;
+            this.ConnectionStatusLabel.Location = new System.Drawing.Point(22, 366);
+            this.ConnectionStatusLabel.Name = "ConnectionStatusLabel";
+            this.ConnectionStatusLabel.Size = new System.Drawing.Size(40, 13);
+            this.ConnectionStatusLabel.TabIndex = 125;
+            this.ConnectionStatusLabel.Text = "Status:";
+            // 
+            // ConnectionStatusText
+            // 
+            this.ConnectionStatusText.AutoSize = true;
+            this.ConnectionStatusText.Location = new System.Drawing.Point(68, 366);
+            this.ConnectionStatusText.Name = "ConnectionStatusText";
+            this.ConnectionStatusText.Size = new System.Drawing.Size(82, 13);
+            this.ConnectionStatusText.TabIndex = 126;
+            this.ConnectionStatusText.Text = "Not Connected.";
             // 
             // TrackAdv
             // 
-            this.TrackAdv.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.TrackAdv.Location = new System.Drawing.Point(75, 354);
+            this.TrackAdv.Location = new System.Drawing.Point(68, 382);
             this.TrackAdv.Name = "TrackAdv";
             this.TrackAdv.ReadOnly = true;
-            this.TrackAdv.Size = new System.Drawing.Size(152, 21);
-            this.TrackAdv.TabIndex = 121;
-            this.TrackAdv.Text = "";
-            // 
-            // 
+            this.TrackAdv.Size = new System.Drawing.Size(103, 20);
+            this.TrackAdv.TabIndex = 128;
+            this.TrackAdv.Text = "Connect Switch!";
             // 
             // MainWindow
             // 
-            this.ClientSize = new System.Drawing.Size(831, 559);
+            this.ClientSize = new System.Drawing.Size(831, 655);
             this.Controls.Add(this.TrackAdv);
-            this.Controls.Add(this.AdvancesTracker);
-            this.Controls.Add(this.SwitchIP);
+            this.Controls.Add(this.ConnectionStatusText);
+            this.Controls.Add(this.ConnectionStatusLabel);
+            this.Controls.Add(this.InputRAMOffsetLabel);
+            this.Controls.Add(this.InputRAMOffset);
+            this.Controls.Add(this.CurrentAdvancesLabel);
+            this.Controls.Add(this.SwitchIPLabel);
             this.Controls.Add(this.SwitchIPInput);
-            this.Controls.Add(this.Disconnect);
-            this.Controls.Add(this.Connect);
+            this.Controls.Add(this.DisconnectButton);
+            this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.CheckShinyLocked);
             this.Controls.Add(this.LabelInitialAdv);
             this.Controls.Add(this.InputInitialAdv);
@@ -1907,11 +1949,15 @@ namespace SWSH_OWRNG_Generator_GUI
         private System.Windows.Forms.Label LabelInitialAdv;
         private System.Windows.Forms.TextBox InputInitialAdv;
         private System.Windows.Forms.CheckBox CheckShinyLocked;
-        private System.Windows.Forms.Button Connect;
-        private System.Windows.Forms.Button Disconnect;
+        private System.Windows.Forms.Button ConnectButton;
+        private System.Windows.Forms.Button DisconnectButton;
         private System.Windows.Forms.TextBox SwitchIPInput;
-        private System.Windows.Forms.Label SwitchIP;
-        private System.Windows.Forms.Label AdvancesTracker;
-        private System.Windows.Forms.RichTextBox TrackAdv;
+        private System.Windows.Forms.Label SwitchIPLabel;
+        private System.Windows.Forms.Label CurrentAdvancesLabel;
+        private TextBox InputRAMOffset;
+        private Label InputRAMOffsetLabel;
+        private Label ConnectionStatusLabel;
+        private Label ConnectionStatusText;
+        private TextBox TrackAdv;
     }
 }

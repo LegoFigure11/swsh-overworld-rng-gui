@@ -893,73 +893,103 @@ namespace SWSH_OWRNG_Generator_GUI
             ToastNotificationManagerCompat.Uninstall();
         }
 
-        public static Socket Connection = new(SocketType.Stream, ProtocolType.Tcp);
+        public static Socket Connection;
         private async void Connect_ClickAsync(object sender, EventArgs e)
         {
             try
             {
-                Connection = new Socket(SocketType.Stream, ProtocolType.Tcp);
+                Program.Window.ConnectionStatusText.Text = "Connecting...";
+                Connection = new(SocketType.Stream, ProtocolType.Tcp);
                 Connection.Connect(Program.Window.SwitchIPInput.Text, 6000);
-                StoredIP = Program.Window.SwitchIPInput.Text;
-                Program.Window.SwitchIPInput.Clear();
-                Program.Window.SwitchIPInput.AppendText("Connected!");
+                Program.Window.ConnectionStatusText.Text = "Connected!";
+                ChangeButtonState(Program.Window.ConnectButton, false);
+                ChangeButtonState(Program.Window.DisconnectButton, true);
                 var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
-                await GetTIDSID(sav, CancellationToken.None).ConfigureAwait(false);
+                await GetTIDSID(sav).ConfigureAwait(false);
                 await ReadRNGState(CancellationToken.None);
             }
-            catch
+            catch (SocketException err)
             {
-                MessageBox.Show("Disconnected successfully. Click \"Connect\" to continue the hunt.");
+                // a bit hacky but it works
+                if (err.Message.Contains("failed to respond"))
+                {
+                    LabelSetText(Program.Window.ConnectionStatusText, "Unable to connect.");
+                    MessageBox.Show(err.Message);
+                    ChangeButtonState(Program.Window.ConnectButton, true);
+                    ChangeButtonState(Program.Window.DisconnectButton, false);
+                }
+                else
+                {
+                    LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
+                    MessageBox.Show($"Disconnected from {Program.Window.SwitchIPInput.Text}!");
+                    ChangeButtonState(Program.Window.ConnectButton, true);
+                    ChangeButtonState(Program.Window.DisconnectButton, false);
+                }
             }
         }
-        private string StoredIP = string.Empty;
+
         private async Task ReadRNGState(CancellationToken token)
         {
-            int TotalAdvances = 0;
-            var (s0, s1) = await GetGlobalRNGState(0x4C2AAC18, token).ConfigureAwait(false);
-            InputState0.Text = $"{s0:x16}";
-            InputState1.Text = $"{s1:x16}";
-            while (Connection.Connected)
+            if (UInt32.TryParse(Program.Window.InputRAMOffset.Text, NumberStyles.HexNumber, null, out uint Offset))
             {
-                if (!Connection.Connected)
-                    return;
+                int TotalAdvances = 0;
+                var (s0, s1) = await GetGlobalRNGState(Offset).ConfigureAwait(false);
+                TextboxSetText(Program.Window.InputState0, $"{s0:x16}");
+                TextboxSetText(Program.Window.InputState1, $"{s1:x16}");
+                TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{s0:x16}");
+                TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{s1:x16}");
+                TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
+                while (Connection.Connected)
+                {
+                    if (!Connection.Connected)
+                        return;
 
-                var (_s0, _s1) = await GetGlobalRNGState(0x4C2AAC18, token).ConfigureAwait(false);
-                // Only update if it changed.
-                if (_s0 == s0 && _s1 == s1)
-                    continue;
+                    var (_s0, _s1) = await GetGlobalRNGState(Offset).ConfigureAwait(false);
+                    // Only update if it changed.
+                    if (_s0 == s0 && _s1 == s1)
+                        continue;
 
 
-                RetailAdvancesTrackerResultState0.Text = $"{_s0:x16}";
-                RetailAdvancesTrackerResultState1.Text = $"{_s1:x16}";
+                    TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{_s0:x16}");
+                    TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{_s1:x16}");
 
-                var passed = GetAdvancesPassed(s0, s1, _s0, _s1);
-                TotalAdvances += passed;
-                Program.Window.TrackAdv.Text = $"{TotalAdvances}";
-                // Store the state for the next pass.
-                s0 = _s0;
-                s1 = _s1;
+                    var passed = GetAdvancesPassed(s0, s1, _s0, _s1);
+                    TotalAdvances += passed;
+                    TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
+                    // Store the state for the next pass.
+                    s0 = _s0;
+                    s1 = _s1;
 
-                if (!Connection.Connected)
-                    return;
+                    if (!Connection.Connected)
+                        return;
+                }
+            }
+            else
+            {
+                Connection.Shutdown(SocketShutdown.Both);
+                Connection.Disconnect(true);
+                LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
+                Connection = new(SocketType.Stream, ProtocolType.Tcp);
+                ChangeButtonState(Program.Window.ConnectButton, true);
+                ChangeButtonState(Program.Window.DisconnectButton, false);
             }
         }
 
-        private async void Disconnect_Click(object sender, EventArgs e)
+        private void Disconnect_Click(object sender, EventArgs e)
         {
-            Connection.Shutdown(SocketShutdown.Both);
-            Connection.Disconnect(true);
-            Program.Window.SwitchIPInput.Clear();
-            Program.Window.SwitchIPInput.AppendText("Quitter.");
-            Program.Window.TrackAdv.Clear();
-            await Task.Delay(2_000);
-            Program.Window.SwitchIPInput.Clear();
-            Program.Window.SwitchIPInput.AppendText(StoredIP);
-            Connection = new Socket(SocketType.Stream, ProtocolType.Tcp);
-
+            if (Connection.Connected)
+            {
+                Connection.Shutdown(SocketShutdown.Both);
+                Connection.Disconnect(true);
+                Program.Window.TrackAdv.Clear();
+                LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
+                Connection = new(SocketType.Stream, ProtocolType.Tcp);
+                ChangeButtonState(Program.Window.ConnectButton, true);
+                ChangeButtonState(Program.Window.DisconnectButton, false);
+            }
         }
 
-        public async Task<(ulong s0, ulong s1)> GetGlobalRNGState(uint offset, CancellationToken token)
+        public async Task<(ulong s0, ulong s1)> GetGlobalRNGState(uint offset)
         {
             var data = await SwitchConnection.ReadBytesAsync(offset, 16).ConfigureAwait(false);
             var s0 = BitConverter.ToUInt64(data, 0);
@@ -973,13 +1003,15 @@ namespace SWSH_OWRNG_Generator_GUI
                 return 0;
 
             var rng = new Xoroshiro128Plus(prevs0, prevs1);
-            for (int i = 0; ; i++)
+            int i = 0;
+            for (; i < 20_000; i++)
             {
                 rng.NextInt(0xffffffff);
                 var (s0, s1) = rng.GetState();
                 if (s0 == news0 && s1 == news1)
                     return i + 1;
             }
+            return i;
         }
 
         public async Task<SAV8SWSH> GetFakeTrainerSAV(CancellationToken token)
@@ -991,12 +1023,53 @@ namespace SWSH_OWRNG_Generator_GUI
             return sav;
         }
 
-        public async Task GetTIDSID(SAV8SWSH sav, CancellationToken token)
+        public async Task GetTIDSID(SAV8SWSH sav)
         {
             await Task.Delay(0_100).ConfigureAwait(false);
-            Program.Window.InputTID.Text = sav.TID.ToString();
-            Program.Window.InputSID.Text = sav.SID.ToString();
+            TextboxSetText(Program.Window.InputTID, $"{sav.TID}");
+            TextboxSetText(Program.Window.InputSID, sav.SID.ToString());
         }
 
+        delegate void TextboxSetTextCallback(TextBox sender, string Text);
+        delegate void LabelSetTextCallback(Label sender, string Text);
+        delegate void ChangeButtonStateCallback(Button sender, bool State);
+        private void TextboxSetText(TextBox sender, string Text)
+        {
+            if (sender.InvokeRequired)
+            {
+                TextboxSetTextCallback d = new(TextboxSetText);
+                sender.Invoke(d, sender, Text);
+            } 
+            else
+            {
+                sender.Text = Text;
+            }   
+        }
+
+        private void LabelSetText(Label sender, string Text)
+        {
+            if (sender.InvokeRequired)
+            {
+                LabelSetTextCallback d = new(LabelSetText);
+                sender.Invoke(d, sender, Text);
+            }
+            else
+            {
+                sender.Text = Text;
+            }
+        }
+
+        private void ChangeButtonState(Button sender, bool State)
+        {
+            if (sender.InvokeRequired)
+            {
+                ChangeButtonStateCallback d = new(ChangeButtonState);
+                sender.Invoke(d, sender, State);
+            }
+            else
+            {
+                sender.Enabled = State;
+            }
+        }
     }
 }
