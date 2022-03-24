@@ -1051,11 +1051,11 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 TextboxSetTextCallback d = new(TextboxSetText);
                 sender.Invoke(d, sender, Text);
-            } 
+            }
             else
             {
                 sender.Text = Text;
-            }   
+            }
         }
 
         private void LabelSetText(Label sender, string Text)
