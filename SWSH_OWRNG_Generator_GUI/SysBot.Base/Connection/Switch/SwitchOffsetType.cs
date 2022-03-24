@@ -1,4 +1,7 @@
-﻿using System;
+﻿// From https://github.com/berichan/PLAWarper
+// AGPL-3.0 License
+
+using System;
 
 namespace SysBot.Base
 {

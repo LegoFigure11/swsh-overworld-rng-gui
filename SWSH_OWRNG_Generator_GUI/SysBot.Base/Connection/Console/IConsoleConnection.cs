@@ -1,4 +1,7 @@
-﻿namespace SysBot.Base
+﻿// From https://github.com/berichan/PLAWarper
+// AGPL-3.0 License
+
+namespace SysBot.Base
 {
     /// <summary>
     /// Concepts and properties to describe a connection with a console, without explicitly interacting with it.

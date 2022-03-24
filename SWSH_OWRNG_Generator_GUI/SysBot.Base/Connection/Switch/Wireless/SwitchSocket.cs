@@ -1,4 +1,7 @@
-﻿using System.Net.Sockets;
+﻿// From https://github.com/berichan/PLAWarper
+// AGPL-3.0 License
+
+using System.Net.Sockets;
 
 namespace SysBot.Base
 {

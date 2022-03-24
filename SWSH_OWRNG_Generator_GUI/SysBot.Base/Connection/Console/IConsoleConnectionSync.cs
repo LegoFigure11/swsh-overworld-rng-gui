@@ -1,4 +1,7 @@
-﻿namespace SysBot.Base
+﻿// From https://github.com/berichan/PLAWarper
+// AGPL-3.0 License
+
+namespace SysBot.Base
 {
     /// <summary>
     /// Bare minimum methods required to interact with a <see cref="IConsoleConnection"/> in a synchronous manner.

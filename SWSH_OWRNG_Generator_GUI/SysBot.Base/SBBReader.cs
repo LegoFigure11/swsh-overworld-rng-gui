@@ -1,4 +1,7 @@
-﻿using SysBot.Base;
+﻿// From https://github.com/berichan/PLAWarper
+// AGPL-3.0 License
+
+using SysBot.Base;
 using System;
 using System.Diagnostics;
 using System.Linq;

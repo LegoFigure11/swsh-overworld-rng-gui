@@ -1,4 +1,7 @@
-﻿using System;
+﻿// From https://github.com/berichan/PLAWarper
+// AGPL-3.0 License
+
+using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Threading;

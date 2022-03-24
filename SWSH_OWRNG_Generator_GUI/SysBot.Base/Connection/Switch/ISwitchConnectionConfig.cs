@@ -1,4 +1,7 @@
-﻿namespace SysBot.Base
+﻿// From https://github.com/berichan/PLAWarper
+// AGPL-3.0 License
+
+namespace SysBot.Base
 {
     /// <summary>
     /// Defines how the Nintendo Switch is to be communicated with.

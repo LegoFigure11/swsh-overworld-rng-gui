@@ -1,4 +1,7 @@
-﻿using System.Threading;
+﻿// From https://github.com/berichan/PLAWarper
+// AGPL-3.0 License
+
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SysBot.Base
