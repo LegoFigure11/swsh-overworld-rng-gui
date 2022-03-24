@@ -10,7 +10,7 @@ namespace SWSH_OWRNG_Generator_GUI
 {
     public class SBBReader
     {
-        public Socket Connection = new Socket(SocketType.Stream, ProtocolType.Tcp);
+        public Socket Connection = new(SocketType.Stream, ProtocolType.Tcp);
         public bool Connected { get; private set; }
         public int MaximumTransferSize { get; set; } = 0x1C0;
         public int BaseDelay { get; set; } = 64;
@@ -35,7 +35,7 @@ namespace SWSH_OWRNG_Generator_GUI
             return SysBot.Base.Decoder.ConvertHexByteStringToBytes(buffer);
         }
         public async Task<byte[]> ReadBytesAsync(uint offset, int length) => await Read(offset, length, Heap).ConfigureAwait(false);
-        public async Task<byte[]> ReadBytesMainAsync(ulong offset, int length) => await Read(offset, length, SysBot.Base.SwitchOffsetType.Main).ConfigureAwait(false);
+        public async Task<byte[]> ReadBytesMainAsync(ulong offset, int length) => await Read(offset, length, Main).ConfigureAwait(false);
         public async Task<byte[]> ReadBytesAbsoluteAsync(ulong offset, int length) => await Read(offset, length, Absolute).ConfigureAwait(false);
 
         private async Task<byte[]> Read(ulong offset, int length, SwitchOffsetType type)
