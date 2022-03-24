@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net.Sockets;
-using SysBot.Base;
+﻿using SysBot.Base;
+using System;
 using System.Diagnostics;
+using System.Linq;
+using System.Net.Sockets;
+using System.Threading.Tasks;
 using static SysBot.Base.SwitchOffsetType;
 
 namespace SWSH_OWRNG_Generator_GUI
@@ -36,7 +36,7 @@ namespace SWSH_OWRNG_Generator_GUI
         }
         public async Task<byte[]> ReadBytesAsync(uint offset, int length) => await Read(offset, length, Heap).ConfigureAwait(false);
         public async Task<byte[]> ReadBytesMainAsync(ulong offset, int length) => await Read(offset, length, SysBot.Base.SwitchOffsetType.Main).ConfigureAwait(false);
-        public async Task<byte[]> ReadBytesAbsoluteAsync(ulong offset, int length) => await Read(offset, length, Absolute).ConfigureAwait(false);        
+        public async Task<byte[]> ReadBytesAbsoluteAsync(ulong offset, int length) => await Read(offset, length, Absolute).ConfigureAwait(false);
 
         private async Task<byte[]> Read(ulong offset, int length, SwitchOffsetType type)
         {
@@ -61,7 +61,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 await Task.Delay((MaximumTransferSize / DelayFactor) + BaseDelay).ConfigureAwait(false);
             }
             return result;
-        }        
+        }
 
         public async Task<byte[]> ReadRaw(byte[] command, int length)
         {
@@ -74,7 +74,7 @@ namespace SWSH_OWRNG_Generator_GUI
         public async Task SendRaw(byte[] command)
         {
             await SendAsync(command).ConfigureAwait(false);
-        }                        
+        }
 
         /// <inheritdoc cref="ReadUntilChanged(ulong,byte[],int,int,bool,bool,CancellationToken)"/>
         public async Task<bool> ReadUntilChanged(uint offset, byte[] comparison, int waitms, int waitInterval, bool match) =>

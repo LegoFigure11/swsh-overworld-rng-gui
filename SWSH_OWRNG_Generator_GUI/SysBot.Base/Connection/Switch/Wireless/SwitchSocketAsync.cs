@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Text;
-using System.Linq;
-using System.Net;
+using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using static SysBot.Base.SwitchOffsetType;
 
 namespace SysBot.Base

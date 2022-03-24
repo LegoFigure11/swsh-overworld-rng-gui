@@ -23,7 +23,6 @@ namespace SysBot.Base
         public override void Reset()
         {
             Disconnect();
-          
         }
 
         public override void Disconnect()

@@ -13,7 +13,7 @@ namespace SWSH_OWRNG_Generator_GUI
 {
     public partial class MainWindow : Form
     {
-        public static SBBReader SwitchConnection = new SBBReader();
+        public static SBBReader SwitchConnection = new();
         public MainWindow()
         {
             string build = String.Empty;
@@ -26,7 +26,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
             Application.ApplicationExit += new EventHandler(this.OnApplicationExit);
 
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -168,38 +168,38 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     case "hpMin":
                     case "hpMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(hpMin.Text), UInt16.Parse(hpMax.Text), hpJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(hpMin.Text), UInt16.Parse(hpMax.Text), hpJudgeFilter);
                         break;
 
                     case "atkMin":
                     case "atkMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(atkMin.Text), UInt16.Parse(atkMax.Text), atkJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(atkMin.Text), UInt16.Parse(atkMax.Text), atkJudgeFilter);
                         break;
 
                     case "defMin":
                     case "defMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(defMin.Text), UInt16.Parse(defMax.Text), defJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(defMin.Text), UInt16.Parse(defMax.Text), defJudgeFilter);
                         break;
 
                     case "spaMin":
                     case "spaMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(spaMin.Text), UInt16.Parse(spaMax.Text), spaJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(spaMin.Text), UInt16.Parse(spaMax.Text), spaJudgeFilter);
                         break;
 
                     case "spdMin":
                     case "spdMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(spdMin.Text), UInt16.Parse(spdMax.Text), spdJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(spdMin.Text), UInt16.Parse(spdMax.Text), spdJudgeFilter);
                         break;
 
                     case "speMin":
                     case "speMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(speMin.Text), UInt16.Parse(speMax.Text), speJudgeFilter, e);
+                        JudgeFilterCompareIVs(UInt16.Parse(speMin.Text), UInt16.Parse(speMax.Text), speJudgeFilter);
                         break;
                 }
             }
         }
 
-        private void JudgeFilterCompareIVs(uint min, uint max, ComboBox box, EventArgs e)
+        private void JudgeFilterCompareIVs(uint min, uint max, ComboBox box)
         {
             box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
             if (min == 0 && max == 0)
@@ -665,7 +665,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 DesiredNature, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
                 IsCuteCharm, IsShinyLocked, TIDSIDSearch, InitialAdvances, progress
             ));
-            BindingSource Source = new BindingSource { DataSource = Frames };
+            BindingSource Source = new() { DataSource = Frames };
             Results.DataSource = Source;
             Source.ResetBindings(false);
 
@@ -674,7 +674,7 @@ namespace SWSH_OWRNG_Generator_GUI
             ButtonSearch.Text = "Search!";
             ButtonSearch.Enabled = true;
 
-            new ToastContentBuilder()                               
+            new ToastContentBuilder()
                 .AddText(Frames.Count == 0 ? "You need better RNG!" : "Your search has finished!")
                 .AddText($"Results found: {Frames.Count}")
                 .Show();
@@ -736,7 +736,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void RetailAdvancesTrackerSequenceInput_TextChanged(object sender, EventArgs e)
         {
-            List<int> res = new List<int>();
+            List<int> res = new();
             string Text = RetailAdvancesTrackerSequenceInput.Text;
             int m = RetailAdvancesGeneratorString.Length;
             int l = Text.Length;
@@ -754,7 +754,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     uint num = (uint)res[0] + (uint)Text.Length + RetailInitial;
                     RetailAdvancesTrackerNumResultsLabel.Text = $"Possible Results: 1 (Advances: {num} | Inputs {l})";
-                    Xoroshiro128Plus go = new Xoroshiro128Plus(RetailS0, RetailS1);
+                    Xoroshiro128Plus go = new(RetailS0, RetailS1);
                     for (int i = 0; i < num; i++)
                         go.Next();
 
@@ -777,13 +777,11 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void SeedFinderMenu_Click(object sender, EventArgs e)
         {
-            using (SeedFinder form1 = new SeedFinder())
+            using SeedFinder form1 = new();
+            if (form1.ShowDialog() == DialogResult.OK)
             {
-                if (form1.ShowDialog() == DialogResult.OK)
-                {
-                    this.InputState0.Text = form1.State0;
-                    this.InputState1.Text = form1.State1;
-                }
+                this.InputState0.Text = form1.State0;
+                this.InputState1.Text = form1.State1;
             }
         }
 
@@ -824,65 +822,6 @@ namespace SWSH_OWRNG_Generator_GUI
             }
 
         }
-
-        /*private void FieldsListBox_CheckedChanged(object sender, ItemChangedEventArgs e)
-        {
-            if (!DisplayFieldsListBox.CheckOnClick)
-            {
-                this.Frame.Visible = false;
-                this.TID.Visible = false;
-                this.SID.Visible = false;
-                this.Animation.Visible = false;
-                this.Brilliant.Visible = false;
-                this.Level.Visible = false;
-                this.Slot.Visible = false;
-                this.PID.Visible = false;
-                this.EC.Visible = false;
-                this.Shiny.Visible = false;
-                this.Ability.Visible = false;
-                this.Nature.Visible = false;
-                this.Gender.Visible = false;
-                this.HP.Visible = false;
-                this.Atk.Visible = false;
-                this.Def.Visible = false;
-                this.SpA.Visible = false;
-                this.SpD.Visible = false;
-                this.Spe.Visible = false;
-                this.Mark.Visible = false;
-                this.State0.Visible = false;
-                this.State1.Visible = false;
-                this.InputState0.UseSystemPasswordChar = false;
-                this.InputState1.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                this.Frame.Visible = true;
-                this.TID.Visible = true;
-                this.SID.Visible = true;
-                this.Animation.Visible = true;
-                this.Brilliant.Visible = true;
-                this.Level.Visible = true;
-                this.Slot.Visible = true;
-                this.PID.Visible = true;
-                this.EC.Visible = true;
-                this.Shiny.Visible = true;
-                this.Ability.Visible = true;
-                this.Nature.Visible = true;
-                this.Gender.Visible = true;
-                this.HP.Visible = true;
-                this.Atk.Visible = true;
-                this.Def.Visible = true;
-                this.SpA.Visible = true;
-                this.SpD.Visible = true;
-                this.Spe.Visible = true;
-                this.Mark.Visible = true;
-                this.State0.Visible = true;
-                this.State1.Visible = true;
-                this.InputState0.UseSystemPasswordChar = true;
-                this.InputState1.UseSystemPasswordChar = true;
-            }
-
-        }*/
 
         private void SetIvFilters(TextBox statLower, TextBox statUpper, string min, string max)
         {
@@ -954,14 +893,14 @@ namespace SWSH_OWRNG_Generator_GUI
             ToastNotificationManagerCompat.Uninstall();
         }
 
-        public static Socket Connection = new Socket(SocketType.Stream, ProtocolType.Tcp);
+        public static Socket Connection = new(SocketType.Stream, ProtocolType.Tcp);
         private async void Connect_ClickAsync(object sender, EventArgs e)
         {
             try
             {
                 Connection = new Socket(SocketType.Stream, ProtocolType.Tcp);
                 Connection.Connect(Program.Window.SwitchIPInput.Text, 6000);
-                StoredIp = Program.Window.SwitchIPInput.Text;
+                StoredIP = Program.Window.SwitchIPInput.Text;
                 Program.Window.SwitchIPInput.Clear();
                 Program.Window.SwitchIPInput.AppendText("Connected!");
                 var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
@@ -973,7 +912,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 MessageBox.Show("Disconnected successfully. Click \"Connect\" to continue the hunt.");
             }
         }
-        private string StoredIp = string.Empty;
+        private string StoredIP = string.Empty;
         private async Task ReadRNGState(CancellationToken token)
         {
             int TotalAdvances = 0;
@@ -1016,7 +955,7 @@ namespace SWSH_OWRNG_Generator_GUI
             Program.Window.TrackAdv.Clear();
             await Task.Delay(2_000);
             Program.Window.SwitchIPInput.Clear();
-            Program.Window.SwitchIPInput.AppendText(StoredIp);
+            Program.Window.SwitchIPInput.AppendText(StoredIP);
             Connection = new Socket(SocketType.Stream, ProtocolType.Tcp);
 
         }
