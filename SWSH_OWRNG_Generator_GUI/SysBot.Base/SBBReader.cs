@@ -1,11 +1,9 @@
-﻿// From https://github.com/berichan/PLAWarper
-// AGPL-3.0 License
-
-using SysBot.Base;
+﻿using SysBot.Base;
 using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Sockets;
+using System.Threading;
 using System.Threading.Tasks;
 using static SysBot.Base.SwitchOffsetType;
 
@@ -35,7 +33,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
             var buffer = new byte[(length * 2) + 1];
             var _ = Read(buffer);
-            return SysBot.Base.Decoder.ConvertHexByteStringToBytes(buffer);
+            return Decoder.ConvertHexByteStringToBytes(buffer);
         }
         public async Task<byte[]> ReadBytesAsync(uint offset, int length) => await Read(offset, length, Heap).ConfigureAwait(false);
         public async Task<byte[]> ReadBytesMainAsync(ulong offset, int length) => await Read(offset, length, Main).ConfigureAwait(false);
