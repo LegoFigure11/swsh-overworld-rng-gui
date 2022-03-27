@@ -1,5 +1,6 @@
 ﻿using Microsoft.Toolkit.Uwp.Notifications;
 using PKHeX.Core;
+using SysBot.Base;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -13,10 +14,12 @@ namespace SWSH_OWRNG_Generator_GUI
 {
     public partial class MainWindow : Form
     {
-        public static SBBReader SwitchConnection = new();
+        public static SwitchConnectionConfig Config = new() { Protocol = SwitchProtocol.WiFi, IP = Properties.Settings.Default.SwitchIP, Port = 6000 };
+        public SwitchSocketAsync SwitchConnection = new(Config);
+
         public MainWindow()
         {
-            string build = String.Empty;
+            string build = string.Empty;
 #if DEBUG
             var date = System.IO.File.GetLastWriteTime(System.Reflection.Assembly.GetEntryAssembly().Location);
             build = $" (dev-{date:yyyyMMdd})";
@@ -24,7 +27,7 @@ namespace SWSH_OWRNG_Generator_GUI
             var v = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             this.Text = "SwSh OWRNG Generator GUI v" + v.Major + "." + v.Minor + "." + v.Build + build;
 
-            Application.ApplicationExit += new EventHandler(this.OnApplicationExit);
+            Application.ApplicationExit += OnApplicationExit;
 
             InitializeComponent();
         }
@@ -133,7 +136,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private void Filter_LostFocus(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
-            if (Int32.TryParse(textBox.Text, out int i))
+            if (int.TryParse(textBox.Text, out int i))
             {
                 if (i < 0) textBox.Text = "0";
                 if (i > 31) textBox.Text = "31";
@@ -147,7 +150,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private void SetToZero_LostFocus(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
-            if (Int32.TryParse(textBox.Text, out int i))
+            if (int.TryParse(textBox.Text, out int i))
             {
                 if (i < 0) textBox.Text = "0";
             }
@@ -155,13 +158,12 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 textBox.Text = "0";
             }
-
         }
 
         private void LevelSlot_TextChanged(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
-            if (Int32.TryParse(textBox.Text, out int i))
+            if (int.TryParse(textBox.Text, out int i))
             {
                 if (i < 0) textBox.Text = "0";
                 if (i > 99) textBox.Text = "99";
@@ -171,7 +173,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private void IVs_TextChanged(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
-            if (Int32.TryParse(textBox.Text, out int i))
+            if (int.TryParse(textBox.Text, out int i))
             {
                 if (i < 0) textBox.Text = "0";
                 if (i > 31) textBox.Text = "31";
@@ -180,32 +182,32 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     case "hpMin":
                     case "hpMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(hpMin.Text), UInt16.Parse(hpMax.Text), hpJudgeFilter);
+                        JudgeFilterCompareIVs(ushort.Parse(hpMin.Text), ushort.Parse(hpMax.Text), hpJudgeFilter);
                         break;
 
                     case "atkMin":
                     case "atkMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(atkMin.Text), UInt16.Parse(atkMax.Text), atkJudgeFilter);
+                        JudgeFilterCompareIVs(ushort.Parse(atkMin.Text), ushort.Parse(atkMax.Text), atkJudgeFilter);
                         break;
 
                     case "defMin":
                     case "defMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(defMin.Text), UInt16.Parse(defMax.Text), defJudgeFilter);
+                        JudgeFilterCompareIVs(ushort.Parse(defMin.Text), ushort.Parse(defMax.Text), defJudgeFilter);
                         break;
 
                     case "spaMin":
                     case "spaMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(spaMin.Text), UInt16.Parse(spaMax.Text), spaJudgeFilter);
+                        JudgeFilterCompareIVs(ushort.Parse(spaMin.Text), ushort.Parse(spaMax.Text), spaJudgeFilter);
                         break;
 
                     case "spdMin":
                     case "spdMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(spdMin.Text), UInt16.Parse(spdMax.Text), spdJudgeFilter);
+                        JudgeFilterCompareIVs(ushort.Parse(spdMin.Text), ushort.Parse(spdMax.Text), spdJudgeFilter);
                         break;
 
                     case "speMin":
                     case "speMax":
-                        JudgeFilterCompareIVs(UInt16.Parse(speMin.Text), UInt16.Parse(speMax.Text), speJudgeFilter);
+                        JudgeFilterCompareIVs(ushort.Parse(speMin.Text), ushort.Parse(speMax.Text), speJudgeFilter);
                         break;
                 }
             }
@@ -248,7 +250,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private void FlawlessIVs_TextChanged(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
-            if (Int32.TryParse(textBox.Text, out int i))
+            if (int.TryParse(textBox.Text, out int i))
             {
                 if (i < 0) textBox.Text = "0";
                 if (i > 6) textBox.Text = "6";
@@ -261,13 +263,15 @@ namespace SWSH_OWRNG_Generator_GUI
             if (textBox.Text != "192.168.0.0")
             {
                 Properties.Settings.Default.SwitchIP = SwitchIPInput.Text;
+                Config.IP = SwitchIPInput.Text;
             }
             Properties.Settings.Default.Save();
         }
+
         private void TIDSID_TextChanged(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
-            if (Int32.TryParse(textBox.Text, out int i))
+            if (int.TryParse(textBox.Text, out int i))
             {
                 if (i < 0) textBox.Text = "0";
                 if (i > 0xFFFF) textBox.Text = "65535";
@@ -392,9 +396,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 InputKOCount.ReadOnly = false;
                 CheckHeldItem.Enabled = true;
             }
-
         }
-
 
         private void DefMinFilter_Click(object sender, EventArgs e)
         {
@@ -403,8 +405,6 @@ namespace SWSH_OWRNG_Generator_GUI
             defMax.Clear();
             defMax.Text = "0";
         }
-
-
 
         private void SpaMinFilter_Click(object sender, EventArgs e)
         {
@@ -462,10 +462,9 @@ namespace SWSH_OWRNG_Generator_GUI
             speMax.Text = "31";
         }
 
-
         private void InputStatePaste_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.V || e.Modifiers == Keys.Shift && e.KeyCode == Keys.Insert)
+            if ((e.Modifiers == Keys.Control && e.KeyCode == Keys.V) || (e.Modifiers == Keys.Shift && e.KeyCode == Keys.Insert))
             {
                 string NewText = "";
 
@@ -487,7 +486,7 @@ namespace SWSH_OWRNG_Generator_GUI
                         }
                         else
                         {
-                            String[] States = NewText.Split((char)Keys.Return);
+                            string[] States = NewText.Split((char)Keys.Return);
                             if (States[0].Length == 16 && States[1].Length == 16)
                             {
                                 InputState1.Text = States[1];
@@ -579,8 +578,8 @@ namespace SWSH_OWRNG_Generator_GUI
             Pad(InputSlotMax, '0', 1);
             Pad(InputLevelMin, '0', 1);
             Pad(InputLevelMax, '0', 1);
-            ulong s0 = UInt64.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
-            ulong s1 = UInt64.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
+            ulong s0 = ulong.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
+            ulong s1 = ulong.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
             if (s0 == 0)
             {
                 InputState0.Text = "1";
@@ -594,23 +593,23 @@ namespace SWSH_OWRNG_Generator_GUI
                 s1 = 1;
             }
             Pad(InputMaxAdv, '0', 1);
-            ulong advances = UInt64.Parse(InputMaxAdv.Text);
+            ulong advances = ulong.Parse(InputMaxAdv.Text);
             if (advances == 0)
             {
                 InputMaxAdv.Text = "1";
                 advances = 1;
             }
             Pad(InputInitialAdv, '0', 1);
-            ulong InitialAdvances = UInt64.Parse(InputInitialAdv.Text);
-            uint TID = UInt16.Parse(InputTID.Text);
-            uint SID = UInt16.Parse(InputSID.Text);
-            uint SlotMin = UInt16.Parse(InputSlotMin.Text);
-            uint SlotMax = UInt16.Parse(InputSlotMax.Text);
-            uint LevelMin = UInt16.Parse(InputLevelMin.Text);
-            uint LevelMax = UInt16.Parse(InputLevelMax.Text);
-            uint KOCount = UInt16.Parse(InputKOCount.Text);
-            uint EMCount = UInt16.Parse(InputEMs.Text);
-            uint FlawlessIVs = UInt16.Parse(InputFlawlessIVs.Text);
+            ulong InitialAdvances = ulong.Parse(InputInitialAdv.Text);
+            uint TID = ushort.Parse(InputTID.Text);
+            uint SID = ushort.Parse(InputSID.Text);
+            uint SlotMin = ushort.Parse(InputSlotMin.Text);
+            uint SlotMax = ushort.Parse(InputSlotMax.Text);
+            uint LevelMin = ushort.Parse(InputLevelMin.Text);
+            uint LevelMax = ushort.Parse(InputLevelMax.Text);
+            uint KOCount = ushort.Parse(InputKOCount.Text);
+            uint EMCount = ushort.Parse(InputEMs.Text);
+            uint FlawlessIVs = ushort.Parse(InputFlawlessIVs.Text);
             bool ShinyCharm = CheckShinyCharm.Checked;
             bool MarkCharm = CheckMarkCharm.Checked;
             bool Weather = CheckWeather.Checked;
@@ -624,8 +623,8 @@ namespace SWSH_OWRNG_Generator_GUI
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
             string DesiredNature = (string)SelectedNature.SelectedItem;
-            uint[] MinIVs = { UInt16.Parse(hpMin.Text), UInt16.Parse(atkMin.Text), UInt16.Parse(defMin.Text), UInt16.Parse(spaMin.Text), UInt16.Parse(spdMin.Text), UInt16.Parse(speMin.Text) };
-            uint[] MaxIVs = { UInt16.Parse(hpMax.Text), UInt16.Parse(atkMax.Text), UInt16.Parse(defMax.Text), UInt16.Parse(spaMax.Text), UInt16.Parse(spdMax.Text), UInt16.Parse(speMax.Text) };
+            uint[] MinIVs = { ushort.Parse(hpMin.Text), ushort.Parse(atkMin.Text), ushort.Parse(defMin.Text), ushort.Parse(spaMin.Text), ushort.Parse(spdMin.Text), ushort.Parse(speMin.Text) };
+            uint[] MaxIVs = { ushort.Parse(hpMax.Text), ushort.Parse(atkMax.Text), ushort.Parse(defMax.Text), ushort.Parse(spaMax.Text), ushort.Parse(spdMax.Text), ushort.Parse(speMax.Text) };
             int[] WrongIVs = new int[6];
             string message = "";
             string[] stats = { "HP", "Atk", "Def", "SpA", "SpD", "Spe" };
@@ -643,9 +642,8 @@ namespace SWSH_OWRNG_Generator_GUI
             if (err != 0)
             {
                 message += "\nMin IV filter cannot be greater than Max IV filter!";
-                string caption = "Error!";
-                DialogResult result;
-                result = MessageBox.Show(message, caption);
+                const string caption = "Error!";
+                DialogResult result = MessageBox.Show(message, caption);
                 return;
             }
 
@@ -667,10 +665,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
             ToastNotificationManagerCompat.History.Clear();
 
-            var progress = new Progress<int>(v =>
-            {
-                progressBar1.PerformStep();
-            });
+            var progress = new Progress<int>(_ => progressBar1.PerformStep());
 
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
@@ -680,7 +675,6 @@ namespace SWSH_OWRNG_Generator_GUI
             BindingSource Source = new() { DataSource = Frames };
             Results.DataSource = Source;
             Source.ResetBindings(false);
-
 
             progressBar1.Value = progressBar1.Maximum;
             ButtonSearch.Text = "Search!";
@@ -697,7 +691,7 @@ namespace SWSH_OWRNG_Generator_GUI
             ((TextBox)sender).Text = ((TextBox)sender).Text.PadLeft(length, s);
         }
 
-        private string RetailAdvancesGeneratorString = String.Empty;
+        private string RetailAdvancesGeneratorString = string.Empty;
         private ulong RetailS0 = 1;
         private ulong RetailS1 = 1;
         private uint RetailInitial;
@@ -705,8 +699,8 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             Pad(InputState0, '0', 16);
             Pad(InputState1, '0', 16);
-            ulong s0 = UInt64.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
-            ulong s1 = UInt64.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
+            ulong s0 = ulong.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
+            ulong s1 = ulong.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
             if (s0 == 0)
             {
                 InputState0.Text = "1";
@@ -721,9 +715,9 @@ namespace SWSH_OWRNG_Generator_GUI
             }
             RetailS0 = s0;
             RetailS1 = s1;
-            uint Initial = UInt32.Parse(RetailAdvancesTrackerInitialInput.Text);
+            uint Initial = uint.Parse(RetailAdvancesTrackerInitialInput.Text);
             RetailInitial = Initial;
-            uint Max = UInt32.Parse(RetailAdvancesTrackerMaxInput.Text);
+            uint Max = uint.Parse(RetailAdvancesTrackerMaxInput.Text);
 
             RetailAdvancesTrackerGenerateButton.Text = "Calculating...";
             RetailAdvancesTrackerGenerateButton.Enabled = false;
@@ -733,10 +727,7 @@ namespace SWSH_OWRNG_Generator_GUI
             RetailAdvancesTrackerProgressBar.Maximum = (int)(Initial + Max);
             RetailAdvancesTrackerProgressBar.Step = RetailAdvancesTrackerProgressBar.Maximum / 100;
 
-            var progress = new Progress<int>(v =>
-            {
-                RetailAdvancesTrackerProgressBar.PerformStep();
-            });
+            var progress = new Progress<int>(_ => RetailAdvancesTrackerProgressBar.PerformStep());
 
             RetailAdvancesGeneratorString = await Task.Run(() => Generator.GenerateRetailSequence(s0, s1, Initial, Max, progress));
 
@@ -832,7 +823,6 @@ namespace SWSH_OWRNG_Generator_GUI
                 this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = false;
                 this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = false;
             }
-
         }
 
         private void SetIvFilters(TextBox statLower, TextBox statUpper, string min, string max)
@@ -905,14 +895,12 @@ namespace SWSH_OWRNG_Generator_GUI
             ToastNotificationManagerCompat.Uninstall();
         }
 
-        public static Socket Connection;
         private async void Connect_ClickAsync(object sender, EventArgs e)
         {
             try
             {
                 Program.Window.ConnectionStatusText.Text = "Connecting...";
-                Connection = new(SocketType.Stream, ProtocolType.Tcp);
-                Connection.Connect(Program.Window.SwitchIPInput.Text, 6000);
+                SwitchConnection.Connect();
                 Program.Window.ConnectionStatusText.Text = "Connected!";
                 ChangeButtonState(Program.Window.ConnectButton, false);
                 ChangeButtonState(Program.Window.DisconnectButton, true);
@@ -942,25 +930,24 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private async Task ReadRNGState(CancellationToken token)
         {
-            if (UInt32.TryParse(Program.Window.InputRAMOffset.Text, NumberStyles.HexNumber, null, out uint Offset))
+            if (uint.TryParse(Program.Window.InputRAMOffset.Text, NumberStyles.HexNumber, null, out uint Offset))
             {
                 int TotalAdvances = 0;
-                var (s0, s1) = await GetGlobalRNGState(Offset).ConfigureAwait(false);
+                var (s0, s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
                 TextboxSetText(Program.Window.InputState0, $"{s0:x16}");
                 TextboxSetText(Program.Window.InputState1, $"{s1:x16}");
                 TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{s0:x16}");
                 TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{s1:x16}");
                 TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
-                while (Connection.Connected)
+                while (SwitchConnection.Connected)
                 {
-                    if (!Connection.Connected)
+                    if (!SwitchConnection.Connected)
                         return;
 
-                    var (_s0, _s1) = await GetGlobalRNGState(Offset).ConfigureAwait(false);
+                    var (_s0, _s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
                     // Only update if it changed.
                     if (_s0 == s0 && _s1 == s1)
                         continue;
-
 
                     TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{_s0:x16}");
                     TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{_s1:x16}");
@@ -972,16 +959,14 @@ namespace SWSH_OWRNG_Generator_GUI
                     s0 = _s0;
                     s1 = _s1;
 
-                    if (!Connection.Connected)
+                    if (!SwitchConnection.Connected)
                         return;
                 }
             }
             else
             {
-                Connection.Shutdown(SocketShutdown.Both);
-                Connection.Disconnect(true);
+                SwitchConnection.Disconnect();
                 LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
-                Connection = new(SocketType.Stream, ProtocolType.Tcp);
                 ChangeButtonState(Program.Window.ConnectButton, true);
                 ChangeButtonState(Program.Window.DisconnectButton, false);
             }
@@ -989,21 +974,19 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private void Disconnect_Click(object sender, EventArgs e)
         {
-            if (Connection.Connected)
+            if (SwitchConnection.Connected)
             {
-                Connection.Shutdown(SocketShutdown.Both);
-                Connection.Disconnect(true);
+                SwitchConnection.Disconnect();
                 Program.Window.TrackAdv.Clear();
                 LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
-                Connection = new(SocketType.Stream, ProtocolType.Tcp);
                 ChangeButtonState(Program.Window.ConnectButton, true);
                 ChangeButtonState(Program.Window.DisconnectButton, false);
             }
         }
 
-        public async Task<(ulong s0, ulong s1)> GetGlobalRNGState(uint offset)
+        public async Task<(ulong s0, ulong s1)> GetGlobalRNGState(uint offset, CancellationToken token)
         {
-            var data = await SwitchConnection.ReadBytesAsync(offset, 16).ConfigureAwait(false);
+            var data = await SwitchConnection.ReadBytesAsync(offset, 16, token).ConfigureAwait(false);
             var s0 = BitConverter.ToUInt64(data, 0);
             var s1 = BitConverter.ToUInt64(data, 8);
             return (s0, s1);
@@ -1030,7 +1013,7 @@ namespace SWSH_OWRNG_Generator_GUI
         {
             var sav = new SAV8SWSH();
             var info = sav.MyStatus;
-            var read = await SwitchConnection.ReadBytesAsync(0x45068F18, 0x110).ConfigureAwait(false);
+            var read = await SwitchConnection.ReadBytesAsync(0x45068F18, 0x110, token).ConfigureAwait(false);
             read.CopyTo(info.Data, 0);
             return sav;
         }

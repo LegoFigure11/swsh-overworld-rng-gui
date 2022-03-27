@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SWSH_OWRNG_Generator_GUI
 {
-    class Generator
+    public static class Generator
     {
         private static readonly string[] Natures = { "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" };
         private static readonly string[] PersonalityMarks = { "Rowdy", "AbsentMinded", "Jittery", "Excited", "Charismatic", "Calmness", "Intense", "ZonedOut", "Joyful", "Angry", "Smiley", "Teary", "Upbeat", "Peeved", "Intellectual", "Ferocious", "Crafty", "Scowling", "Kindly", "Flustered", "PumpedUp", "ZeroEnergy", "Prideful", "Unsure", "Humble", "Thorny", "Vigor", "Slump" };
@@ -25,10 +25,19 @@ namespace SWSH_OWRNG_Generator_GUI
             uint[] IVs;
             bool GenerateLevel = LevelMin != LevelMax;
             uint LevelDelta = LevelMax - LevelMin + 1;
-
-            uint EC, PID, LeadRand = 0, SlotRand = 0, Level = 0, BrilliantRand, Nature, AbilityRoll, FixedSeed, ShinyXOR, BrilliantThreshold, BrilliantRolls;
+            uint EC;
+            uint PID;
+            uint SlotRand = 0;
+            uint Level = 0;
+            uint BrilliantRand;
+            uint Nature;
+            uint AbilityRoll;
+            uint FixedSeed;
+            uint ShinyXOR;
+            uint BrilliantThreshold;
+            uint BrilliantRolls;
             int BrilliantIVs;
-            string Mark = "", Gender;
+            string Gender;
             bool PassIVs, Brilliant, Shiny;
             ulong advance = 0;
 
@@ -55,7 +64,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 Xoroshiro128Plus rng = new(s0, s1);
                 Brilliant = false;
                 Gender = "";
-
+                uint LeadRand;
                 if (Static)
                 {
                     LeadRand = (uint)rng.NextInt(100);
@@ -78,7 +87,7 @@ namespace SWSH_OWRNG_Generator_GUI
                             go.Prev();
                         else
                             go.Next();
-                        advance += 1;
+                        advance++;
                         continue;
                     }
 
@@ -95,7 +104,6 @@ namespace SWSH_OWRNG_Generator_GUI
                     BrilliantRand = (uint)rng.NextInt(1000);
                     if (BrilliantRand < BrilliantThreshold)
                         Brilliant = true;
-
                 }
 
                 Shiny = false;
@@ -105,7 +113,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     for (int roll = 0; roll < ShinyRolls + (Brilliant ? BrilliantRolls : 0); roll++)
                     {
                         MockPID = (uint)rng.Next();
-                        Shiny = (((MockPID >> 16) ^ (MockPID & 0xFFFF)) ^ TSV) < 16;
+                        Shiny = ((MockPID >> 16) ^ (MockPID & 0xFFFF) ^ TSV) < 16;
                         if (Shiny)
                             break;
                     }
@@ -148,11 +156,11 @@ namespace SWSH_OWRNG_Generator_GUI
                         go.Prev();
                     else
                         go.Next();
-                    advance += 1;
+                    advance++;
                     continue;
                 }
 
-                Mark = GenerateMark(rng, Weather, Fishing, MarkRolls);
+                string Mark = GenerateMark(rng, Weather, Fishing, MarkRolls);
 
                 if (!PassesMarkFilter(Mark, DesiredMark))
                 {
@@ -160,7 +168,7 @@ namespace SWSH_OWRNG_Generator_GUI
                         go.Prev();
                     else
                         go.Next();
-                    advance += 1;
+                    advance++;
                     continue;
                 }
 
@@ -170,19 +178,19 @@ namespace SWSH_OWRNG_Generator_GUI
                         go.Prev();
                     else
                         go.Next();
-                    advance += 1;
+                    advance++;
                     continue;
                 }
 
                 // Passes all filters!
                 (ulong _s0, ulong _s1) = go.GetState();
                 Results.Add(
-                    new Frame()
+                    new Frame
                     {
                         Advances = TIDSIDSearch ? (-(long)(advance + InitialAdvances)).ToString("N0") : (advance + InitialAdvances).ToString("N0"),
                         TID = (ushort)(MockPID >> 16),
                         SID = (ushort)MockPID,
-                        Animation = _s0 & 1 ^ _s1 & 1,
+                        Animation = (_s0 & 1) ^ (_s1 & 1),
                         Level = Level,
                         Slot = SlotRand,
                         PID = PID.ToString("X8"),
@@ -208,7 +216,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     go.Prev();
                 else
                     go.Next();
-                advance += 1;
+                advance++;
             }
 
             return Results;
@@ -254,7 +262,7 @@ namespace SWSH_OWRNG_Generator_GUI
             }
             else
             {
-                if (!(((FixedPID >> 16) ^ (FixedPID & 0xFFFF) ^ TSV) < 16))
+                if (((FixedPID >> 16) ^ (FixedPID & 0xFFFF) ^ TSV) >= 16)
                     FixedPID = (((TSV ^ (FixedPID & 0xFFFF)) << 16) | (FixedPID & 0xFFFF)) & 0xFFFFFFFF;
             }
 
@@ -296,20 +304,20 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private static bool PassesNatureFilter(string Nature, string DesiredNature)
         {
-            return ((DesiredNature == Nature) || (DesiredNature == "Ignore"));
+            return (DesiredNature == Nature) || (DesiredNature == "Ignore");
         }
 
-        private static (uint, uint) GenerateBrilliantInfo(uint KOs)
+        private static (uint, uint) GenerateBrilliantInfo(uint KOs) => KOs switch
         {
-            if (KOs >= 500) return (30, 6);
-            if (KOs >= 300) return (30, 5);
-            if (KOs >= 200) return (30, 4);
-            if (KOs >= 100) return (30, 3);
-            if (KOs >= 50) return (25, 2);
-            if (KOs >= 20) return (20, 1);
-            if (KOs >= 1) return (15, 1);
-            return (0, 0);
-        }
+            >= 500 => (30, 6),
+            >= 300 => (30, 5),
+            >= 200 => (30, 4),
+            >= 100 => (30, 3),
+            >= 50 => (25, 2),
+            >= 20 => (20, 1),
+            >= 1 => (15, 1),
+            _ => (0, 0),
+        };
 
         public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)
         {
@@ -317,7 +325,7 @@ namespace SWSH_OWRNG_Generator_GUI
             for (int i = 0; i < start; i++)
                 go.Next();
 
-            string ret = String.Empty;
+            string ret = string.Empty;
             ulong ProgressUpdateInterval = (start + max) / 100;
             if (ProgressUpdateInterval == 0)
                 ProgressUpdateInterval++;
@@ -332,8 +340,4 @@ namespace SWSH_OWRNG_Generator_GUI
             return ret;
         }
     }
-
-
-
-
 }
