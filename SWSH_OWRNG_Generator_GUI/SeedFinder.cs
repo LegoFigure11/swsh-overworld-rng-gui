@@ -76,17 +76,13 @@ namespace SWSH_OWRNG_Generator_GUI
                             if ((mat[j] & check) == check)
                             {
                                 isFound = true;
-                                BigInteger tempMat = mat[j];
-                                mat[j] = mat[pivot];
-                                mat[pivot] = tempMat;
-                                byte tempRes = res[j];
-                                res[j] = res[pivot];
-                                res[pivot] = tempRes;
+                                (mat[j], mat[pivot]) = (mat[pivot], mat[j]);
+                                (res[j], res[pivot]) = (res[pivot], res[j]);
                             }
                         }
                     }
                     if (isFound)
-                        pivot += 1;
+                        pivot++;
                 }
                 for (int i = 127; i >= 0; i--)
                 {
@@ -130,7 +126,6 @@ namespace SWSH_OWRNG_Generator_GUI
             {
                 e.KeyChar = '0';
             }
-
             else if (e.KeyChar == '.')
             {
                 e.KeyChar = '1';

@@ -1,6 +1,6 @@
 ﻿namespace SWSH_OWRNG_Generator_GUI
 {
-    class Frame
+    public class Frame
     {
         public string Advances { get; set; }
 
@@ -25,6 +25,5 @@
         public string Mark { get; set; }
         public string State0 { get; set; }
         public string State1 { get; set; }
-
     }
 }

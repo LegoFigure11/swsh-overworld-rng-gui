@@ -1,7 +1,5 @@
 ﻿namespace SWSH_OWRNG_Generator_GUI.Properties
 {
-
-
     // This class allows you to handle specific events on the settings class:
     //  The SettingChanging event is raised before a setting's value is changed.
     //  The PropertyChanged event is raised after a setting's value is changed.
@@ -9,7 +7,6 @@
     //  The SettingsSaving event is raised before the setting values are saved.
     internal sealed partial class Settings
     {
-
         public Settings()
         {
             // // To add event handlers for saving and changing settings, uncomment the lines below:
