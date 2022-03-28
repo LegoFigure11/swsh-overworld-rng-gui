@@ -16,7 +16,6 @@ namespace SWSH_OWRNG_Generator_GUI
     {
         public static SwitchConnectionConfig Config = new() { Protocol = SwitchProtocol.WiFi, IP = Properties.Settings.Default.SwitchIP, Port = 6000 };
         public SwitchSocketAsync SwitchConnection = new(Config);
-
         public MainWindow()
         {
             string build = string.Empty;
@@ -930,46 +929,104 @@ namespace SWSH_OWRNG_Generator_GUI
 
         private async Task ReadRNGState(CancellationToken token)
         {
-            if (uint.TryParse(Program.Window.InputRAMOffset.Text, NumberStyles.HexNumber, null, out uint Offset))
+            uint offset = 0x8FEA3648;
+            PK8 pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
+            if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
+                CheckEncounter.Text = "No encounter present.";
+            while (!token.IsCancellationRequested)
             {
-                int TotalAdvances = 0;
-                var (s0, s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
-                TextboxSetText(Program.Window.InputState0, $"{s0:x16}");
-                TextboxSetText(Program.Window.InputState1, $"{s1:x16}");
-                TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{s0:x16}");
-                TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{s1:x16}");
-                TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
-                while (SwitchConnection.Connected)
+                while (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
                 {
-                    if (!SwitchConnection.Connected)
-                        return;
+                    if (uint.TryParse(Program.Window.InputRAMOffset.Text, NumberStyles.HexNumber, null, out uint Offset))
+                    {
+                        int TotalAdvances = 0;
+                        var (s0, s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
+                        TextboxSetText(Program.Window.InputState0, $"{s0:x16}");
+                        TextboxSetText(Program.Window.InputState1, $"{s1:x16}");
+                        TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{s0:x16}");
+                        TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{s1:x16}");
+                        TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
+                        while (SwitchConnection.Connected && pk.Species == 0 || SwitchConnection.Connected && pk.Species > 0 && pk.Species > 899)
+                        {
+                            pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
 
-                    var (_s0, _s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
-                    // Only update if it changed.
-                    if (_s0 == s0 && _s1 == s1)
-                        continue;
+                            if (!SwitchConnection.Connected)
+                                return;
 
-                    TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{_s0:x16}");
-                    TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{_s1:x16}");
+                            var (_s0, _s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
+                            // Only update if it changed.
+                            if (_s0 == s0 && _s1 == s1)
+                                continue;
 
-                    var passed = GetAdvancesPassed(s0, s1, _s0, _s1);
-                    TotalAdvances += passed;
-                    TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
-                    // Store the state for the next pass.
-                    s0 = _s0;
-                    s1 = _s1;
+                            TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{_s0:x16}");
+                            TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{_s1:x16}");
 
-                    if (!SwitchConnection.Connected)
-                        return;
+                            var passed = GetAdvancesPassed(s0, s1, _s0, _s1);
+                            TotalAdvances += passed;
+                            TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
+                            // Store the state for the next pass.
+                            s0 = _s0;
+                            s1 = _s1;
+
+                            pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
+
+                            if (!SwitchConnection.Connected)
+                                return;
+                        }
+                    }
+                    else
+                    {
+                        SwitchConnection.Disconnect();
+                        LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
+                        ChangeButtonState(Program.Window.ConnectButton, true);
+                        ChangeButtonState(Program.Window.DisconnectButton, false);
+                    }
+                }
+                if (pk.Species != 0 || pk.Species > 0 && pk.Species <= 899)
+                {
+                    string output = string.Empty;
+                    pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
+                    bool hasMark = HasMark(pk, out RibbonIndex mark);
+                    string msg = hasMark ? $"Mark: {mark.ToString().Replace("Mark", "")}" : "";
+                    string form = pk.Form == 0 ? "" : $"-{pk.Form}";
+                    if (pk != null)
+                        output = $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{msg}";
+                    if (pk.Species == (int)Species.Sinistea && pk.IsShiny)
+                    {
+                        new ToastContentBuilder()
+                        .AddText(pk.Form != 0 ? $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}SHINY ANTIQUE SINISTEA\n{msg}" : "HAHAHA IT'S PHONY")
+                        .Show();
+                    }
+                    if (pk.Species > 0 && pk.Species <= 899)
+                        CheckEncounter.Text = output;
+
+                    while (pk.Species != 0 || pk.Species > 0 && pk.Species <= 899)
+                    {
+                        pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
+                        if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
+                            break;
+                        await Task.Delay(1_000);
+                    }
+
+                    CheckEncounter.Text = "No encounter present.";
+                    await Task.Delay(3_000);
+                    continue;
+                }                
+            }
+        }
+
+        public static bool HasMark(IRibbonIndex pk, out RibbonIndex result)
+        {
+            result = default;
+            for (var mark = RibbonIndex.MarkLunchtime; mark <= RibbonIndex.MarkSlump; mark++)
+            {
+                if (pk.GetRibbon((int)mark))
+                {
+                    result = mark;
+                    return true;
                 }
             }
-            else
-            {
-                SwitchConnection.Disconnect();
-                LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
-                ChangeButtonState(Program.Window.ConnectButton, true);
-                ChangeButtonState(Program.Window.DisconnectButton, false);
-            }
+            return false;
         }
 
         private void Disconnect_Click(object sender, EventArgs e)
@@ -1064,6 +1121,35 @@ namespace SWSH_OWRNG_Generator_GUI
             else
             {
                 sender.Enabled = State;
+            }
+        }
+
+        public async Task<PK8> ReadPokemon(uint offset, int size)
+        {
+            var data = await SwitchConnection.ReadBytesAsync(offset, size, CancellationToken.None).ConfigureAwait(false);
+            return new PK8(data);
+        }
+        public bool UseCRLF;
+
+        public async Task DaySkip(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.DaySkip(UseCRLF), token).ConfigureAwait(false);
+        public async Task ResetTime(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.ResetTime(UseCRLF), token).ConfigureAwait(false);
+
+        private async void DaySkip_Click(object sender, EventArgs e)
+        {
+            UseCRLF = true;
+            if (SwitchConnection.Connected)
+            {
+                int output = int.Parse(DaySkipAmount.Text);
+                ChangeButtonState(Program.Window.DaySkipButton, false);
+                DaySkipButton.Text = $"Skipping";
+                for (int i = 0; i < output; i++)
+                {
+                    await DaySkip(CancellationToken.None).ConfigureAwait(false);
+                    await Task.Delay(0_360).ConfigureAwait(false);
+                }
+                await ResetTime(CancellationToken.None).ConfigureAwait(false);
+                ChangeButtonState(Program.Window.DaySkipButton, true);
+                DaySkipButton.Text = $"DaySkip";
             }
         }
     }
