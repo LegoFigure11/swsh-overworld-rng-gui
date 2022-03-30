@@ -175,6 +175,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.CheckEncounter = new System.Windows.Forms.TextBox();
             this.DaySkipAmount = new System.Windows.Forms.TextBox();
             this.DaySkipButton = new System.Windows.Forms.Button();
+            this.ReadEncounterCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -394,7 +395,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelMark
             // 
             this.LabelMark.AutoSize = true;
-            this.LabelMark.Location = new System.Drawing.Point(439, 250);
+            this.LabelMark.Location = new System.Drawing.Point(437, 250);
             this.LabelMark.Name = "LabelMark";
             this.LabelMark.Size = new System.Drawing.Size(34, 13);
             this.LabelMark.TabIndex = 52;
@@ -636,7 +637,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelShiny
             // 
             this.LabelShiny.AutoSize = true;
-            this.LabelShiny.Location = new System.Drawing.Point(439, 223);
+            this.LabelShiny.Location = new System.Drawing.Point(437, 224);
             this.LabelShiny.Name = "LabelShiny";
             this.LabelShiny.Size = new System.Drawing.Size(36, 13);
             this.LabelShiny.TabIndex = 71;
@@ -1602,7 +1603,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Location = new System.Drawing.Point(37, 408);
+            this.ConnectButton.Location = new System.Drawing.Point(68, 408);
             this.ConnectButton.Name = "ConnectButton";
             this.ConnectButton.Size = new System.Drawing.Size(75, 23);
             this.ConnectButton.TabIndex = 115;
@@ -1613,7 +1614,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // DisconnectButton
             // 
             this.DisconnectButton.Enabled = false;
-            this.DisconnectButton.Location = new System.Drawing.Point(136, 408);
+            this.DisconnectButton.Location = new System.Drawing.Point(153, 408);
             this.DisconnectButton.Name = "DisconnectButton";
             this.DisconnectButton.Size = new System.Drawing.Size(75, 23);
             this.DisconnectButton.TabIndex = 116;
@@ -1707,14 +1708,14 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // DaySkipAmount
             // 
-            this.DaySkipAmount.Location = new System.Drawing.Point(508, 305);
+            this.DaySkipAmount.Location = new System.Drawing.Point(440, 305);
             this.DaySkipAmount.Name = "DaySkipAmount";
             this.DaySkipAmount.Size = new System.Drawing.Size(56, 20);
             this.DaySkipAmount.TabIndex = 131;
             // 
             // DaySkipButton
             // 
-            this.DaySkipButton.Location = new System.Drawing.Point(442, 303);
+            this.DaySkipButton.Location = new System.Drawing.Point(506, 304);
             this.DaySkipButton.Name = "DaySkipButton";
             this.DaySkipButton.Size = new System.Drawing.Size(60, 22);
             this.DaySkipButton.TabIndex = 132;
@@ -1722,9 +1723,20 @@ namespace SWSH_OWRNG_Generator_GUI
             this.DaySkipButton.UseVisualStyleBackColor = true;
             this.DaySkipButton.Click += new System.EventHandler(this.DaySkip_Click);
             // 
+            // ReadEncounterCheckBox
+            // 
+            this.ReadEncounterCheckBox.AutoSize = true;
+            this.ReadEncounterCheckBox.Location = new System.Drawing.Point(440, 282);
+            this.ReadEncounterCheckBox.Name = "ReadEncounterCheckBox";
+            this.ReadEncounterCheckBox.Size = new System.Drawing.Size(104, 17);
+            this.ReadEncounterCheckBox.TabIndex = 134;
+            this.ReadEncounterCheckBox.Text = "Read Encounter";
+            this.ReadEncounterCheckBox.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 655);
+            this.Controls.Add(this.ReadEncounterCheckBox);
             this.Controls.Add(this.DaySkipButton);
             this.Controls.Add(this.DaySkipAmount);
             this.Controls.Add(this.CheckEncounter);
@@ -1998,5 +2010,6 @@ namespace SWSH_OWRNG_Generator_GUI
         private TextBox CheckEncounter;
         private TextBox DaySkipAmount;
         private Button DaySkipButton;
+        private CheckBox ReadEncounterCheckBox;
     }
 }

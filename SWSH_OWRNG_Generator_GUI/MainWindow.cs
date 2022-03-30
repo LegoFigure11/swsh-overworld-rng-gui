@@ -930,7 +930,9 @@ namespace SWSH_OWRNG_Generator_GUI
         private async Task ReadRNGState(CancellationToken token)
         {
             uint offset = 0x8FEA3648;
-            PK8 pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
+            PK8 pk = new();
+            if (ReadEncounterCheckBox.Checked)
+                pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
             if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
                 CheckEncounter.Text = "No encounter present.";
             while (!token.IsCancellationRequested)
@@ -948,7 +950,8 @@ namespace SWSH_OWRNG_Generator_GUI
                         TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
                         while (SwitchConnection.Connected && pk.Species == 0 || SwitchConnection.Connected && pk.Species > 0 && pk.Species > 899)
                         {
-                            pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
+                            if (ReadEncounterCheckBox.Checked)
+                                pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
 
                             if (!SwitchConnection.Connected)
                                 return;
@@ -968,7 +971,8 @@ namespace SWSH_OWRNG_Generator_GUI
                             s0 = _s0;
                             s1 = _s1;
 
-                            pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
+                            if (ReadEncounterCheckBox.Checked)
+                                pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
 
                             if (!SwitchConnection.Connected)
                                 return;
@@ -982,7 +986,7 @@ namespace SWSH_OWRNG_Generator_GUI
                         ChangeButtonState(Program.Window.DisconnectButton, false);
                     }
                 }
-                if (pk.Species != 0 || pk.Species > 0 && pk.Species <= 899)
+                if (pk.Species != 0 && ReadEncounterCheckBox.Checked || pk.Species > 0 && pk.Species <= 899 && ReadEncounterCheckBox.Checked)
                 {
                     string output = string.Empty;
                     pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
@@ -1129,6 +1133,7 @@ namespace SWSH_OWRNG_Generator_GUI
             var data = await SwitchConnection.ReadBytesAsync(offset, size, CancellationToken.None).ConfigureAwait(false);
             return new PK8(data);
         }
+
         public bool UseCRLF;
 
         public async Task DaySkip(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.DaySkip(UseCRLF), token).ConfigureAwait(false);
