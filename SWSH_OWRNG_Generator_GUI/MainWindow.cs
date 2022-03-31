@@ -986,7 +986,7 @@ namespace SWSH_OWRNG_Generator_GUI
                         ChangeButtonState(Program.Window.DisconnectButton, false);
                     }
                 }
-                if (pk.Species != 0 && ReadEncounterCheckBox.Checked || pk.Species > 0 && pk.Species <= 899 && ReadEncounterCheckBox.Checked)
+                if (pk.Species > 0 && pk.Species <= 899 && ReadEncounterCheckBox.Checked)
                 {
                     string output = string.Empty;
                     pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
