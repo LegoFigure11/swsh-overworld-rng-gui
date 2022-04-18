@@ -172,6 +172,10 @@ namespace SWSH_OWRNG_Generator_GUI
             this.ConnectionStatusLabel = new System.Windows.Forms.Label();
             this.ConnectionStatusText = new System.Windows.Forms.Label();
             this.TrackAdv = new System.Windows.Forms.TextBox();
+            this.TextBoxCheckEncounter = new System.Windows.Forms.TextBox();
+            this.DaySkipAmountInput = new System.Windows.Forms.TextBox();
+            this.DaySkipButton = new System.Windows.Forms.Button();
+            this.ReadEncounterButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -180,7 +184,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelState0
             // 
             this.LabelState0.AutoSize = true;
-            this.LabelState0.Location = new System.Drawing.Point(15, 9);
+            this.LabelState0.Location = new System.Drawing.Point(5, 9);
             this.LabelState0.Name = "LabelState0";
             this.LabelState0.Size = new System.Drawing.Size(50, 13);
             this.LabelState0.TabIndex = 0;
@@ -191,7 +195,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputState0.Location = new System.Drawing.Point(68, 6);
             this.InputState0.MaxLength = 16;
             this.InputState0.Name = "InputState0";
-            this.InputState0.Size = new System.Drawing.Size(205, 20);
+            this.InputState0.Size = new System.Drawing.Size(189, 20);
             this.InputState0.TabIndex = 0;
             this.InputState0.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
             this.InputState0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
@@ -201,7 +205,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.InputState1.Location = new System.Drawing.Point(68, 32);
             this.InputState1.MaxLength = 16;
             this.InputState1.Name = "InputState1";
-            this.InputState1.Size = new System.Drawing.Size(205, 20);
+            this.InputState1.Size = new System.Drawing.Size(189, 20);
             this.InputState1.TabIndex = 1;
             this.InputState1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
             this.InputState1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
@@ -209,7 +213,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelState1
             // 
             this.LabelState1.AutoSize = true;
-            this.LabelState1.Location = new System.Drawing.Point(15, 35);
+            this.LabelState1.Location = new System.Drawing.Point(5, 34);
             this.LabelState1.Name = "LabelState1";
             this.LabelState1.Size = new System.Drawing.Size(47, 13);
             this.LabelState1.TabIndex = 3;
@@ -217,7 +221,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // hpMin
             // 
-            this.hpMin.Location = new System.Drawing.Point(353, 6);
+            this.hpMin.Location = new System.Drawing.Point(330, 6);
             this.hpMin.Name = "hpMin";
             this.hpMin.Size = new System.Drawing.Size(28, 20);
             this.hpMin.TabIndex = 5;
@@ -229,7 +233,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // hpMax
             // 
-            this.hpMax.Location = new System.Drawing.Point(403, 6);
+            this.hpMax.Location = new System.Drawing.Point(380, 6);
             this.hpMax.Name = "hpMax";
             this.hpMax.Size = new System.Drawing.Size(28, 20);
             this.hpMax.TabIndex = 6;
@@ -242,7 +246,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // hpFilter
             // 
             this.hpFilter.AutoSize = true;
-            this.hpFilter.Location = new System.Drawing.Point(322, 9);
+            this.hpFilter.Location = new System.Drawing.Point(293, 6);
             this.hpFilter.Name = "hpFilter";
             this.hpFilter.Size = new System.Drawing.Size(25, 13);
             this.hpFilter.TabIndex = 16;
@@ -252,7 +256,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // atkFilter
             // 
             this.atkFilter.AutoSize = true;
-            this.atkFilter.Location = new System.Drawing.Point(321, 35);
+            this.atkFilter.Location = new System.Drawing.Point(293, 34);
             this.atkFilter.Name = "atkFilter";
             this.atkFilter.Size = new System.Drawing.Size(26, 13);
             this.atkFilter.TabIndex = 17;
@@ -262,7 +266,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // defFilter
             // 
             this.defFilter.AutoSize = true;
-            this.defFilter.Location = new System.Drawing.Point(320, 61);
+            this.defFilter.Location = new System.Drawing.Point(293, 60);
             this.defFilter.Name = "defFilter";
             this.defFilter.Size = new System.Drawing.Size(27, 13);
             this.defFilter.TabIndex = 18;
@@ -272,7 +276,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // spaFilter
             // 
             this.spaFilter.AutoSize = true;
-            this.spaFilter.Location = new System.Drawing.Point(317, 87);
+            this.spaFilter.Location = new System.Drawing.Point(293, 87);
             this.spaFilter.Name = "spaFilter";
             this.spaFilter.Size = new System.Drawing.Size(30, 13);
             this.spaFilter.TabIndex = 19;
@@ -282,7 +286,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // spdFilter
             // 
             this.spdFilter.AutoSize = true;
-            this.spdFilter.Location = new System.Drawing.Point(316, 113);
+            this.spdFilter.Location = new System.Drawing.Point(293, 112);
             this.spdFilter.Name = "spdFilter";
             this.spdFilter.Size = new System.Drawing.Size(31, 13);
             this.spdFilter.TabIndex = 20;
@@ -292,7 +296,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // speFilter
             // 
             this.speFilter.AutoSize = true;
-            this.speFilter.Location = new System.Drawing.Point(316, 139);
+            this.speFilter.Location = new System.Drawing.Point(295, 138);
             this.speFilter.Name = "speFilter";
             this.speFilter.Size = new System.Drawing.Size(29, 13);
             this.speFilter.TabIndex = 21;
@@ -302,7 +306,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(387, 9);
+            this.label10.Location = new System.Drawing.Point(364, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(10, 13);
             this.label10.TabIndex = 22;
@@ -310,7 +314,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // hpMinFilter
             // 
-            this.hpMinFilter.Location = new System.Drawing.Point(437, 5);
+            this.hpMinFilter.Location = new System.Drawing.Point(427, 5);
             this.hpMinFilter.Name = "hpMinFilter";
             this.hpMinFilter.Size = new System.Drawing.Size(29, 20);
             this.hpMinFilter.TabIndex = 17;
@@ -320,7 +324,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // hpMaxFilter
             // 
-            this.hpMaxFilter.Location = new System.Drawing.Point(471, 5);
+            this.hpMaxFilter.Location = new System.Drawing.Point(461, 5);
             this.hpMaxFilter.Name = "hpMaxFilter";
             this.hpMaxFilter.Size = new System.Drawing.Size(29, 20);
             this.hpMaxFilter.TabIndex = 18;
@@ -330,7 +334,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputTID
             // 
-            this.InputTID.Location = new System.Drawing.Point(68, 61);
+            this.InputTID.Location = new System.Drawing.Point(66, 61);
             this.InputTID.MaxLength = 5;
             this.InputTID.Name = "InputTID";
             this.InputTID.Size = new System.Drawing.Size(44, 20);
@@ -342,7 +346,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputSID
             // 
-            this.InputSID.Location = new System.Drawing.Point(126, 61);
+            this.InputSID.Location = new System.Drawing.Point(124, 61);
             this.InputSID.MaxLength = 5;
             this.InputSID.Name = "InputSID";
             this.InputSID.Size = new System.Drawing.Size(44, 20);
@@ -364,7 +368,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelIDsSlash
             // 
             this.LabelIDsSlash.AutoSize = true;
-            this.LabelIDsSlash.Location = new System.Drawing.Point(113, 65);
+            this.LabelIDsSlash.Location = new System.Drawing.Point(111, 65);
             this.LabelIDsSlash.Name = "LabelIDsSlash";
             this.LabelIDsSlash.Size = new System.Drawing.Size(12, 13);
             this.LabelIDsSlash.TabIndex = 48;
@@ -372,7 +376,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputMaxAdv
             // 
-            this.InputMaxAdv.Location = new System.Drawing.Point(68, 113);
+            this.InputMaxAdv.Location = new System.Drawing.Point(66, 113);
             this.InputMaxAdv.MaxLength = 13;
             this.InputMaxAdv.Name = "InputMaxAdv";
             this.InputMaxAdv.Size = new System.Drawing.Size(102, 20);
@@ -382,7 +386,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelMaxAdv
             // 
             this.LabelMaxAdv.AutoSize = true;
-            this.LabelMaxAdv.Location = new System.Drawing.Point(49, 114);
+            this.LabelMaxAdv.Location = new System.Drawing.Point(47, 114);
             this.LabelMaxAdv.Name = "LabelMaxAdv";
             this.LabelMaxAdv.Size = new System.Drawing.Size(13, 13);
             this.LabelMaxAdv.TabIndex = 50;
@@ -391,7 +395,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelMark
             // 
             this.LabelMark.AutoSize = true;
-            this.LabelMark.Location = new System.Drawing.Point(317, 282);
+            this.LabelMark.Location = new System.Drawing.Point(435, 247);
             this.LabelMark.Name = "LabelMark";
             this.LabelMark.Size = new System.Drawing.Size(34, 13);
             this.LabelMark.TabIndex = 52;
@@ -400,9 +404,10 @@ namespace SWSH_OWRNG_Generator_GUI
             // ImageRareMark
             // 
             this.ImageRareMark.Image = global::SWSH_OWRNG_Generator_GUI.Properties.Resources.raremark;
-            this.ImageRareMark.Location = new System.Drawing.Point(182, 58);
+            this.ImageRareMark.Location = new System.Drawing.Point(667, 337);
             this.ImageRareMark.Name = "ImageRareMark";
-            this.ImageRareMark.Size = new System.Drawing.Size(128, 128);
+            this.ImageRareMark.Size = new System.Drawing.Size(91, 90);
+            this.ImageRareMark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ImageRareMark.TabIndex = 53;
             this.ImageRareMark.TabStop = false;
             // 
@@ -448,15 +453,15 @@ namespace SWSH_OWRNG_Generator_GUI
             "Thorny",
             "Vigor",
             "Slump"});
-            this.SelectedMark.Location = new System.Drawing.Point(365, 278);
+            this.SelectedMark.Location = new System.Drawing.Point(475, 244);
             this.SelectedMark.Name = "SelectedMark";
-            this.SelectedMark.Size = new System.Drawing.Size(147, 21);
+            this.SelectedMark.Size = new System.Drawing.Size(103, 21);
             this.SelectedMark.TabIndex = 29;
             // 
             // CheckShinyCharm
             // 
             this.CheckShinyCharm.AutoSize = true;
-            this.CheckShinyCharm.Location = new System.Drawing.Point(12, 144);
+            this.CheckShinyCharm.Location = new System.Drawing.Point(174, 64);
             this.CheckShinyCharm.Name = "CheckShinyCharm";
             this.CheckShinyCharm.Size = new System.Drawing.Size(85, 17);
             this.CheckShinyCharm.TabIndex = 31;
@@ -467,7 +472,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckMarkCharm
             // 
             this.CheckMarkCharm.AutoSize = true;
-            this.CheckMarkCharm.Location = new System.Drawing.Point(12, 167);
+            this.CheckMarkCharm.Location = new System.Drawing.Point(174, 89);
             this.CheckMarkCharm.Name = "CheckMarkCharm";
             this.CheckMarkCharm.Size = new System.Drawing.Size(83, 17);
             this.CheckMarkCharm.TabIndex = 33;
@@ -478,7 +483,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckWeather
             // 
             this.CheckWeather.AutoSize = true;
-            this.CheckWeather.Location = new System.Drawing.Point(12, 190);
+            this.CheckWeather.Location = new System.Drawing.Point(12, 162);
             this.CheckWeather.Name = "CheckWeather";
             this.CheckWeather.Size = new System.Drawing.Size(67, 17);
             this.CheckWeather.TabIndex = 35;
@@ -488,7 +493,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckStatic
             // 
             this.CheckStatic.AutoSize = true;
-            this.CheckStatic.Location = new System.Drawing.Point(116, 144);
+            this.CheckStatic.Location = new System.Drawing.Point(12, 139);
             this.CheckStatic.Name = "CheckStatic";
             this.CheckStatic.Size = new System.Drawing.Size(53, 17);
             this.CheckStatic.TabIndex = 32;
@@ -499,7 +504,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckFishing
             // 
             this.CheckFishing.AutoSize = true;
-            this.CheckFishing.Location = new System.Drawing.Point(116, 167);
+            this.CheckFishing.Location = new System.Drawing.Point(12, 185);
             this.CheckFishing.Name = "CheckFishing";
             this.CheckFishing.Size = new System.Drawing.Size(59, 17);
             this.CheckFishing.TabIndex = 34;
@@ -509,7 +514,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckHeldItem
             // 
             this.CheckHeldItem.AutoSize = true;
-            this.CheckHeldItem.Location = new System.Drawing.Point(116, 190);
+            this.CheckHeldItem.Location = new System.Drawing.Point(12, 208);
             this.CheckHeldItem.Name = "CheckHeldItem";
             this.CheckHeldItem.Size = new System.Drawing.Size(111, 17);
             this.CheckHeldItem.TabIndex = 36;
@@ -519,7 +524,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(387, 196);
+            this.label20.Location = new System.Drawing.Point(216, 263);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(10, 13);
             this.label20.TabIndex = 64;
@@ -527,7 +532,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputLevelMax
             // 
-            this.InputLevelMax.Location = new System.Drawing.Point(403, 193);
+            this.InputLevelMax.Location = new System.Drawing.Point(232, 260);
             this.InputLevelMax.MaxLength = 2;
             this.InputLevelMax.Name = "InputLevelMax";
             this.InputLevelMax.Size = new System.Drawing.Size(28, 20);
@@ -540,7 +545,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputLevelMin
             // 
-            this.InputLevelMin.Location = new System.Drawing.Point(353, 193);
+            this.InputLevelMin.Location = new System.Drawing.Point(182, 260);
             this.InputLevelMin.MaxLength = 2;
             this.InputLevelMin.Name = "InputLevelMin";
             this.InputLevelMin.Size = new System.Drawing.Size(28, 20);
@@ -554,7 +559,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(387, 168);
+            this.label21.Location = new System.Drawing.Point(216, 237);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(10, 13);
             this.label21.TabIndex = 67;
@@ -562,7 +567,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputSlotMax
             // 
-            this.InputSlotMax.Location = new System.Drawing.Point(403, 164);
+            this.InputSlotMax.Location = new System.Drawing.Point(232, 234);
             this.InputSlotMax.MaxLength = 2;
             this.InputSlotMax.Name = "InputSlotMax";
             this.InputSlotMax.Size = new System.Drawing.Size(28, 20);
@@ -575,7 +580,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputSlotMin
             // 
-            this.InputSlotMin.Location = new System.Drawing.Point(353, 164);
+            this.InputSlotMin.Location = new System.Drawing.Point(182, 234);
             this.InputSlotMin.MaxLength = 2;
             this.InputSlotMin.Name = "InputSlotMin";
             this.InputSlotMin.Size = new System.Drawing.Size(28, 20);
@@ -589,7 +594,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelLevel
             // 
             this.LabelLevel.AutoSize = true;
-            this.LabelLevel.Location = new System.Drawing.Point(317, 196);
+            this.LabelLevel.Location = new System.Drawing.Point(140, 263);
             this.LabelLevel.Name = "LabelLevel";
             this.LabelLevel.Size = new System.Drawing.Size(36, 13);
             this.LabelLevel.TabIndex = 68;
@@ -598,7 +603,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelSlot
             // 
             this.LabelSlot.AutoSize = true;
-            this.LabelSlot.Location = new System.Drawing.Point(319, 168);
+            this.LabelSlot.Location = new System.Drawing.Point(148, 239);
             this.LabelSlot.Name = "LabelSlot";
             this.LabelSlot.Size = new System.Drawing.Size(28, 13);
             this.LabelSlot.TabIndex = 69;
@@ -606,9 +611,9 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // ButtonSearch
             // 
-            this.ButtonSearch.Location = new System.Drawing.Point(247, 375);
+            this.ButtonSearch.Location = new System.Drawing.Point(247, 356);
             this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.Size = new System.Drawing.Size(341, 27);
+            this.ButtonSearch.Size = new System.Drawing.Size(341, 46);
             this.ButtonSearch.TabIndex = 42;
             this.ButtonSearch.Text = "Search!";
             this.ButtonSearch.UseVisualStyleBackColor = true;
@@ -624,15 +629,15 @@ namespace SWSH_OWRNG_Generator_GUI
             "Square",
             "Star",
             "Star/Square"});
-            this.SelectedShiny.Location = new System.Drawing.Point(365, 252);
+            this.SelectedShiny.Location = new System.Drawing.Point(475, 217);
             this.SelectedShiny.Name = "SelectedShiny";
-            this.SelectedShiny.Size = new System.Drawing.Size(147, 21);
+            this.SelectedShiny.Size = new System.Drawing.Size(103, 21);
             this.SelectedShiny.TabIndex = 30;
             // 
             // LabelShiny
             // 
             this.LabelShiny.AutoSize = true;
-            this.LabelShiny.Location = new System.Drawing.Point(317, 255);
+            this.LabelShiny.Location = new System.Drawing.Point(433, 221);
             this.LabelShiny.Name = "LabelShiny";
             this.LabelShiny.Size = new System.Drawing.Size(36, 13);
             this.LabelShiny.TabIndex = 71;
@@ -889,7 +894,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(387, 61);
+            this.label12.Location = new System.Drawing.Point(364, 61);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(10, 13);
             this.label12.TabIndex = 26;
@@ -897,7 +902,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // speMinFilter
             // 
-            this.speMinFilter.Location = new System.Drawing.Point(436, 136);
+            this.speMinFilter.Location = new System.Drawing.Point(426, 136);
             this.speMinFilter.Name = "speMinFilter";
             this.speMinFilter.Size = new System.Drawing.Size(29, 20);
             this.speMinFilter.TabIndex = 27;
@@ -907,7 +912,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // defMax
             // 
-            this.defMax.Location = new System.Drawing.Point(403, 58);
+            this.defMax.Location = new System.Drawing.Point(380, 58);
             this.defMax.Name = "defMax";
             this.defMax.Size = new System.Drawing.Size(28, 20);
             this.defMax.TabIndex = 10;
@@ -920,7 +925,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(387, 87);
+            this.label13.Location = new System.Drawing.Point(364, 88);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(10, 13);
             this.label13.TabIndex = 28;
@@ -929,7 +934,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(387, 139);
+            this.label15.Location = new System.Drawing.Point(364, 139);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(10, 13);
             this.label15.TabIndex = 32;
@@ -937,7 +942,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // spdMinFilter
             // 
-            this.spdMinFilter.Location = new System.Drawing.Point(436, 110);
+            this.spdMinFilter.Location = new System.Drawing.Point(426, 110);
             this.spdMinFilter.Name = "spdMinFilter";
             this.spdMinFilter.Size = new System.Drawing.Size(29, 20);
             this.spdMinFilter.TabIndex = 25;
@@ -947,7 +952,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // spdMaxFilter
             // 
-            this.spdMaxFilter.Location = new System.Drawing.Point(471, 110);
+            this.spdMaxFilter.Location = new System.Drawing.Point(461, 110);
             this.spdMaxFilter.Name = "spdMaxFilter";
             this.spdMaxFilter.Size = new System.Drawing.Size(29, 20);
             this.spdMaxFilter.TabIndex = 26;
@@ -958,7 +963,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(387, 35);
+            this.label11.Location = new System.Drawing.Point(364, 34);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(10, 13);
             this.label11.TabIndex = 24;
@@ -966,7 +971,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // speMaxFilter
             // 
-            this.speMaxFilter.Location = new System.Drawing.Point(471, 136);
+            this.speMaxFilter.Location = new System.Drawing.Point(461, 136);
             this.speMaxFilter.Name = "speMaxFilter";
             this.speMaxFilter.Size = new System.Drawing.Size(29, 20);
             this.speMaxFilter.TabIndex = 28;
@@ -976,7 +981,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // spaMin
             // 
-            this.spaMin.Location = new System.Drawing.Point(353, 84);
+            this.spaMin.Location = new System.Drawing.Point(330, 83);
             this.spaMin.Name = "spaMin";
             this.spaMin.Size = new System.Drawing.Size(28, 20);
             this.spaMin.TabIndex = 11;
@@ -988,7 +993,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // atkMinFilter
             // 
-            this.atkMinFilter.Location = new System.Drawing.Point(437, 32);
+            this.atkMinFilter.Location = new System.Drawing.Point(427, 32);
             this.atkMinFilter.Name = "atkMinFilter";
             this.atkMinFilter.Size = new System.Drawing.Size(29, 20);
             this.atkMinFilter.TabIndex = 19;
@@ -998,7 +1003,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // spdMin
             // 
-            this.spdMin.Location = new System.Drawing.Point(353, 110);
+            this.spdMin.Location = new System.Drawing.Point(330, 109);
             this.spdMin.Name = "spdMin";
             this.spdMin.Size = new System.Drawing.Size(28, 20);
             this.spdMin.TabIndex = 13;
@@ -1010,7 +1015,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // spdMax
             // 
-            this.spdMax.Location = new System.Drawing.Point(403, 110);
+            this.spdMax.Location = new System.Drawing.Point(380, 109);
             this.spdMax.Name = "spdMax";
             this.spdMax.Size = new System.Drawing.Size(28, 20);
             this.spdMax.TabIndex = 14;
@@ -1022,7 +1027,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // speMin
             // 
-            this.speMin.Location = new System.Drawing.Point(353, 136);
+            this.speMin.Location = new System.Drawing.Point(330, 136);
             this.speMin.Name = "speMin";
             this.speMin.Size = new System.Drawing.Size(28, 20);
             this.speMin.TabIndex = 15;
@@ -1034,7 +1039,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // speMax
             // 
-            this.speMax.Location = new System.Drawing.Point(403, 136);
+            this.speMax.Location = new System.Drawing.Point(380, 136);
             this.speMax.Name = "speMax";
             this.speMax.Size = new System.Drawing.Size(28, 20);
             this.speMax.TabIndex = 16;
@@ -1046,7 +1051,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // atkMax
             // 
-            this.atkMax.Location = new System.Drawing.Point(403, 32);
+            this.atkMax.Location = new System.Drawing.Point(380, 33);
             this.atkMax.Name = "atkMax";
             this.atkMax.Size = new System.Drawing.Size(28, 20);
             this.atkMax.TabIndex = 8;
@@ -1058,7 +1063,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // atkMaxFilter
             // 
-            this.atkMaxFilter.Location = new System.Drawing.Point(471, 32);
+            this.atkMaxFilter.Location = new System.Drawing.Point(461, 32);
             this.atkMaxFilter.Name = "atkMaxFilter";
             this.atkMaxFilter.Size = new System.Drawing.Size(29, 20);
             this.atkMaxFilter.TabIndex = 20;
@@ -1068,7 +1073,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // defMin
             // 
-            this.defMin.Location = new System.Drawing.Point(353, 58);
+            this.defMin.Location = new System.Drawing.Point(330, 58);
             this.defMin.Name = "defMin";
             this.defMin.Size = new System.Drawing.Size(28, 20);
             this.defMin.TabIndex = 9;
@@ -1080,7 +1085,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // defMinFilter
             // 
-            this.defMinFilter.Location = new System.Drawing.Point(437, 58);
+            this.defMinFilter.Location = new System.Drawing.Point(427, 58);
             this.defMinFilter.Name = "defMinFilter";
             this.defMinFilter.Size = new System.Drawing.Size(29, 20);
             this.defMinFilter.TabIndex = 21;
@@ -1090,7 +1095,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // spaMinFilter
             // 
-            this.spaMinFilter.Location = new System.Drawing.Point(437, 84);
+            this.spaMinFilter.Location = new System.Drawing.Point(427, 84);
             this.spaMinFilter.Name = "spaMinFilter";
             this.spaMinFilter.Size = new System.Drawing.Size(29, 20);
             this.spaMinFilter.TabIndex = 23;
@@ -1100,7 +1105,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // defMaxFilter
             // 
-            this.defMaxFilter.Location = new System.Drawing.Point(471, 58);
+            this.defMaxFilter.Location = new System.Drawing.Point(461, 58);
             this.defMaxFilter.Name = "defMaxFilter";
             this.defMaxFilter.Size = new System.Drawing.Size(29, 20);
             this.defMaxFilter.TabIndex = 22;
@@ -1110,7 +1115,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // spaMax
             // 
-            this.spaMax.Location = new System.Drawing.Point(403, 84);
+            this.spaMax.Location = new System.Drawing.Point(380, 84);
             this.spaMax.Name = "spaMax";
             this.spaMax.Size = new System.Drawing.Size(28, 20);
             this.spaMax.TabIndex = 12;
@@ -1123,7 +1128,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(387, 113);
+            this.label14.Location = new System.Drawing.Point(364, 112);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(10, 13);
             this.label14.TabIndex = 30;
@@ -1131,7 +1136,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // atkMin
             // 
-            this.atkMin.Location = new System.Drawing.Point(353, 32);
+            this.atkMin.Location = new System.Drawing.Point(330, 32);
             this.atkMin.Name = "atkMin";
             this.atkMin.Size = new System.Drawing.Size(28, 20);
             this.atkMin.TabIndex = 7;
@@ -1143,7 +1148,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // spaMaxFilter
             // 
-            this.spaMaxFilter.Location = new System.Drawing.Point(471, 84);
+            this.spaMaxFilter.Location = new System.Drawing.Point(461, 84);
             this.spaMaxFilter.Name = "spaMaxFilter";
             this.spaMaxFilter.Size = new System.Drawing.Size(29, 20);
             this.spaMaxFilter.TabIndex = 24;
@@ -1297,7 +1302,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckIsAbilityLocked
             // 
             this.CheckIsAbilityLocked.AutoSize = true;
-            this.CheckIsAbilityLocked.Location = new System.Drawing.Point(12, 213);
+            this.CheckIsAbilityLocked.Location = new System.Drawing.Point(12, 254);
             this.CheckIsAbilityLocked.Name = "CheckIsAbilityLocked";
             this.CheckIsAbilityLocked.Size = new System.Drawing.Size(92, 17);
             this.CheckIsAbilityLocked.TabIndex = 37;
@@ -1328,7 +1333,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckTIDSIDFinder
             // 
             this.CheckTIDSIDFinder.AutoSize = true;
-            this.CheckTIDSIDFinder.Location = new System.Drawing.Point(116, 213);
+            this.CheckTIDSIDFinder.Location = new System.Drawing.Point(174, 115);
             this.CheckTIDSIDFinder.Name = "CheckTIDSIDFinder";
             this.CheckTIDSIDFinder.Size = new System.Drawing.Size(122, 17);
             this.CheckTIDSIDFinder.TabIndex = 90;
@@ -1339,7 +1344,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelKOCount
             // 
             this.LabelKOCount.AutoSize = true;
-            this.LabelKOCount.Location = new System.Drawing.Point(128, 262);
+            this.LabelKOCount.Location = new System.Drawing.Point(170, 158);
             this.LabelKOCount.Name = "LabelKOCount";
             this.LabelKOCount.Size = new System.Drawing.Size(56, 13);
             this.LabelKOCount.TabIndex = 91;
@@ -1347,7 +1352,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputKOCount
             // 
-            this.InputKOCount.Location = new System.Drawing.Point(190, 259);
+            this.InputKOCount.Location = new System.Drawing.Point(232, 156);
             this.InputKOCount.MaxLength = 3;
             this.InputKOCount.Name = "InputKOCount";
             this.InputKOCount.Size = new System.Drawing.Size(28, 20);
@@ -1360,7 +1365,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelEMs
             // 
             this.LabelEMs.AutoSize = true;
-            this.LabelEMs.Location = new System.Drawing.Point(15, 288);
+            this.LabelEMs.Location = new System.Drawing.Point(153, 208);
             this.LabelEMs.Name = "LabelEMs";
             this.LabelEMs.Size = new System.Drawing.Size(73, 13);
             this.LabelEMs.TabIndex = 93;
@@ -1368,7 +1373,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputEMs
             // 
-            this.InputEMs.Location = new System.Drawing.Point(94, 285);
+            this.InputEMs.Location = new System.Drawing.Point(232, 208);
             this.InputEMs.MaxLength = 2;
             this.InputEMs.Name = "InputEMs";
             this.InputEMs.Size = new System.Drawing.Size(28, 20);
@@ -1381,7 +1386,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelFlawlessIVs
             // 
             this.LabelFlawlessIVs.AutoSize = true;
-            this.LabelFlawlessIVs.Location = new System.Drawing.Point(20, 262);
+            this.LabelFlawlessIVs.Location = new System.Drawing.Point(158, 185);
             this.LabelFlawlessIVs.Name = "LabelFlawlessIVs";
             this.LabelFlawlessIVs.Size = new System.Drawing.Size(68, 13);
             this.LabelFlawlessIVs.TabIndex = 95;
@@ -1389,7 +1394,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputFlawlessIVs
             // 
-            this.InputFlawlessIVs.Location = new System.Drawing.Point(94, 259);
+            this.InputFlawlessIVs.Location = new System.Drawing.Point(232, 182);
             this.InputFlawlessIVs.MaxLength = 1;
             this.InputFlawlessIVs.Name = "InputFlawlessIVs";
             this.InputFlawlessIVs.Size = new System.Drawing.Size(28, 20);
@@ -1414,7 +1419,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckCuteCharm
             // 
             this.CheckCuteCharm.AutoSize = true;
-            this.CheckCuteCharm.Location = new System.Drawing.Point(12, 236);
+            this.CheckCuteCharm.Location = new System.Drawing.Point(12, 231);
             this.CheckCuteCharm.Name = "CheckCuteCharm";
             this.CheckCuteCharm.Size = new System.Drawing.Size(108, 17);
             this.CheckCuteCharm.TabIndex = 97;
@@ -1432,7 +1437,7 @@ namespace SWSH_OWRNG_Generator_GUI
             "Very Good",
             "Fantastic",
             "Best"});
-            this.hpJudgeFilter.Location = new System.Drawing.Point(506, 4);
+            this.hpJudgeFilter.Location = new System.Drawing.Point(496, 4);
             this.hpJudgeFilter.Name = "hpJudgeFilter";
             this.hpJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.hpJudgeFilter.TabIndex = 104;
@@ -1449,7 +1454,7 @@ namespace SWSH_OWRNG_Generator_GUI
             "Very Good",
             "Fantastic",
             "Best"});
-            this.atkJudgeFilter.Location = new System.Drawing.Point(506, 31);
+            this.atkJudgeFilter.Location = new System.Drawing.Point(496, 31);
             this.atkJudgeFilter.Name = "atkJudgeFilter";
             this.atkJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.atkJudgeFilter.TabIndex = 105;
@@ -1466,7 +1471,7 @@ namespace SWSH_OWRNG_Generator_GUI
             "Very Good",
             "Fantastic",
             "Best"});
-            this.defJudgeFilter.Location = new System.Drawing.Point(506, 57);
+            this.defJudgeFilter.Location = new System.Drawing.Point(496, 57);
             this.defJudgeFilter.Name = "defJudgeFilter";
             this.defJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.defJudgeFilter.TabIndex = 106;
@@ -1483,7 +1488,7 @@ namespace SWSH_OWRNG_Generator_GUI
             "Very Good",
             "Fantastic",
             "Best"});
-            this.spaJudgeFilter.Location = new System.Drawing.Point(506, 82);
+            this.spaJudgeFilter.Location = new System.Drawing.Point(496, 82);
             this.spaJudgeFilter.Name = "spaJudgeFilter";
             this.spaJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.spaJudgeFilter.TabIndex = 107;
@@ -1500,7 +1505,7 @@ namespace SWSH_OWRNG_Generator_GUI
             "Very Good",
             "Fantastic",
             "Best"});
-            this.spdJudgeFilter.Location = new System.Drawing.Point(506, 109);
+            this.spdJudgeFilter.Location = new System.Drawing.Point(496, 109);
             this.spdJudgeFilter.Name = "spdJudgeFilter";
             this.spdJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.spdJudgeFilter.TabIndex = 108;
@@ -1517,7 +1522,7 @@ namespace SWSH_OWRNG_Generator_GUI
             "Very Good",
             "Fantastic",
             "Best"});
-            this.speJudgeFilter.Location = new System.Drawing.Point(506, 135);
+            this.speJudgeFilter.Location = new System.Drawing.Point(496, 135);
             this.speJudgeFilter.Name = "speJudgeFilter";
             this.speJudgeFilter.Size = new System.Drawing.Size(82, 21);
             this.speJudgeFilter.TabIndex = 109;
@@ -1526,7 +1531,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // DesiredNature
             // 
             this.DesiredNature.AutoSize = true;
-            this.DesiredNature.Location = new System.Drawing.Point(317, 228);
+            this.DesiredNature.Location = new System.Drawing.Point(427, 193);
             this.DesiredNature.Name = "DesiredNature";
             this.DesiredNature.Size = new System.Drawing.Size(42, 13);
             this.DesiredNature.TabIndex = 110;
@@ -1563,9 +1568,9 @@ namespace SWSH_OWRNG_Generator_GUI
             "Sassy",
             "Careful",
             "Quirky"});
-            this.SelectedNature.Location = new System.Drawing.Point(365, 225);
+            this.SelectedNature.Location = new System.Drawing.Point(475, 190);
             this.SelectedNature.Name = "SelectedNature";
-            this.SelectedNature.Size = new System.Drawing.Size(147, 21);
+            this.SelectedNature.Size = new System.Drawing.Size(103, 21);
             this.SelectedNature.TabIndex = 111;
             // 
             // LabelInitialAdv
@@ -1579,7 +1584,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputInitialAdv
             // 
-            this.InputInitialAdv.Location = new System.Drawing.Point(68, 87);
+            this.InputInitialAdv.Location = new System.Drawing.Point(66, 87);
             this.InputInitialAdv.MaxLength = 13;
             this.InputInitialAdv.Name = "InputInitialAdv";
             this.InputInitialAdv.Size = new System.Drawing.Size(102, 20);
@@ -1589,7 +1594,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckShinyLocked
             // 
             this.CheckShinyLocked.AutoSize = true;
-            this.CheckShinyLocked.Location = new System.Drawing.Point(116, 236);
+            this.CheckShinyLocked.Location = new System.Drawing.Point(12, 277);
             this.CheckShinyLocked.Name = "CheckShinyLocked";
             this.CheckShinyLocked.Size = new System.Drawing.Size(91, 17);
             this.CheckShinyLocked.TabIndex = 114;
@@ -1598,7 +1603,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Location = new System.Drawing.Point(12, 408);
+            this.ConnectButton.Location = new System.Drawing.Point(51, 408);
             this.ConnectButton.Name = "ConnectButton";
             this.ConnectButton.Size = new System.Drawing.Size(75, 23);
             this.ConnectButton.TabIndex = 115;
@@ -1609,7 +1614,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // DisconnectButton
             // 
             this.DisconnectButton.Enabled = false;
-            this.DisconnectButton.Location = new System.Drawing.Point(96, 408);
+            this.DisconnectButton.Location = new System.Drawing.Point(136, 408);
             this.DisconnectButton.Name = "DisconnectButton";
             this.DisconnectButton.Size = new System.Drawing.Size(75, 23);
             this.DisconnectButton.TabIndex = 116;
@@ -1619,7 +1624,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // SwitchIPInput
             // 
-            this.SwitchIPInput.Location = new System.Drawing.Point(68, 311);
+            this.SwitchIPInput.Location = new System.Drawing.Point(108, 343);
             this.SwitchIPInput.Name = "SwitchIPInput";
             this.SwitchIPInput.Size = new System.Drawing.Size(103, 20);
             this.SwitchIPInput.TabIndex = 117;
@@ -1629,7 +1634,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // SwitchIPLabel
             // 
             this.SwitchIPLabel.AutoSize = true;
-            this.SwitchIPLabel.Location = new System.Drawing.Point(7, 314);
+            this.SwitchIPLabel.Location = new System.Drawing.Point(47, 346);
             this.SwitchIPLabel.Name = "SwitchIPLabel";
             this.SwitchIPLabel.Size = new System.Drawing.Size(55, 13);
             this.SwitchIPLabel.TabIndex = 118;
@@ -1638,7 +1643,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CurrentAdvancesLabel
             // 
             this.CurrentAdvancesLabel.AutoSize = true;
-            this.CurrentAdvancesLabel.Location = new System.Drawing.Point(5, 385);
+            this.CurrentAdvancesLabel.Location = new System.Drawing.Point(44, 385);
             this.CurrentAdvancesLabel.Name = "CurrentAdvancesLabel";
             this.CurrentAdvancesLabel.Size = new System.Drawing.Size(57, 13);
             this.CurrentAdvancesLabel.TabIndex = 120;
@@ -1647,7 +1652,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // InputRAMOffset
             // 
-            this.InputRAMOffset.Location = new System.Drawing.Point(68, 337);
+            this.InputRAMOffset.Location = new System.Drawing.Point(108, 317);
             this.InputRAMOffset.Name = "InputRAMOffset";
             this.InputRAMOffset.Size = new System.Drawing.Size(103, 20);
             this.InputRAMOffset.TabIndex = 123;
@@ -1657,7 +1662,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // InputRAMOffsetLabel
             // 
             this.InputRAMOffsetLabel.AutoSize = true;
-            this.InputRAMOffsetLabel.Location = new System.Drawing.Point(24, 340);
+            this.InputRAMOffsetLabel.Location = new System.Drawing.Point(64, 320);
             this.InputRAMOffsetLabel.Name = "InputRAMOffsetLabel";
             this.InputRAMOffsetLabel.Size = new System.Drawing.Size(38, 13);
             this.InputRAMOffsetLabel.TabIndex = 124;
@@ -1666,7 +1671,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // ConnectionStatusLabel
             // 
             this.ConnectionStatusLabel.AutoSize = true;
-            this.ConnectionStatusLabel.Location = new System.Drawing.Point(22, 366);
+            this.ConnectionStatusLabel.Location = new System.Drawing.Point(61, 366);
             this.ConnectionStatusLabel.Name = "ConnectionStatusLabel";
             this.ConnectionStatusLabel.Size = new System.Drawing.Size(40, 13);
             this.ConnectionStatusLabel.TabIndex = 125;
@@ -1675,7 +1680,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // ConnectionStatusText
             // 
             this.ConnectionStatusText.AutoSize = true;
-            this.ConnectionStatusText.Location = new System.Drawing.Point(68, 366);
+            this.ConnectionStatusText.Location = new System.Drawing.Point(108, 366);
             this.ConnectionStatusText.Name = "ConnectionStatusText";
             this.ConnectionStatusText.Size = new System.Drawing.Size(82, 13);
             this.ConnectionStatusText.TabIndex = 126;
@@ -1683,16 +1688,64 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // TrackAdv
             // 
-            this.TrackAdv.Location = new System.Drawing.Point(68, 382);
+            this.TrackAdv.Location = new System.Drawing.Point(108, 382);
             this.TrackAdv.Name = "TrackAdv";
             this.TrackAdv.ReadOnly = true;
             this.TrackAdv.Size = new System.Drawing.Size(103, 20);
             this.TrackAdv.TabIndex = 128;
             this.TrackAdv.Text = "Connect Switch!";
             // 
+            // TextBoxCheckEncounter
+            // 
+            this.TextBoxCheckEncounter.BackColor = System.Drawing.SystemColors.Menu;
+            this.TextBoxCheckEncounter.Location = new System.Drawing.Point(277, 167);
+            this.TextBoxCheckEncounter.Multiline = true;
+            this.TextBoxCheckEncounter.Name = "TextBoxCheckEncounter";
+            this.TextBoxCheckEncounter.ReadOnly = true;
+            this.TextBoxCheckEncounter.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.TextBoxCheckEncounter.Size = new System.Drawing.Size(144, 129);
+            this.TextBoxCheckEncounter.TabIndex = 130;
+            // 
+            // DaySkipAmountInput
+            // 
+            this.DaySkipAmountInput.Enabled = false;
+            this.DaySkipAmountInput.Location = new System.Drawing.Point(277, 330);
+            this.DaySkipAmountInput.Name = "DaySkipAmountInput";
+            this.DaySkipAmountInput.Size = new System.Drawing.Size(47, 20);
+            this.DaySkipAmountInput.TabIndex = 131;
+            this.DaySkipAmountInput.Text = "1";
+            this.DaySkipAmountInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.DaySkipAmountInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            // 
+            // DaySkipButton
+            // 
+            this.DaySkipButton.Enabled = false;
+            this.DaySkipButton.Location = new System.Drawing.Point(330, 328);
+            this.DaySkipButton.Name = "DaySkipButton";
+            this.DaySkipButton.Size = new System.Drawing.Size(91, 22);
+            this.DaySkipButton.TabIndex = 132;
+            this.DaySkipButton.Text = "DaySkip";
+            this.DaySkipButton.UseVisualStyleBackColor = true;
+            this.DaySkipButton.Click += new System.EventHandler(this.DaySkip_Click);
+            // 
+            // ReadEncounterButton
+            // 
+            this.ReadEncounterButton.Enabled = false;
+            this.ReadEncounterButton.Location = new System.Drawing.Point(277, 302);
+            this.ReadEncounterButton.Name = "ReadEncounterButton";
+            this.ReadEncounterButton.Size = new System.Drawing.Size(144, 22);
+            this.ReadEncounterButton.TabIndex = 133;
+            this.ReadEncounterButton.Text = "Read Encounter";
+            this.ReadEncounterButton.UseVisualStyleBackColor = true;
+            this.ReadEncounterButton.Click += new System.EventHandler(this.ReadEncounter_ClickAsync);
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 655);
+            this.Controls.Add(this.ReadEncounterButton);
+            this.Controls.Add(this.DaySkipButton);
+            this.Controls.Add(this.DaySkipAmountInput);
+            this.Controls.Add(this.TextBoxCheckEncounter);
             this.Controls.Add(this.TrackAdv);
             this.Controls.Add(this.ConnectionStatusText);
             this.Controls.Add(this.ConnectionStatusLabel);
@@ -1960,5 +2013,9 @@ namespace SWSH_OWRNG_Generator_GUI
         private Label ConnectionStatusLabel;
         private Label ConnectionStatusText;
         private TextBox TrackAdv;
+        private TextBox TextBoxCheckEncounter;
+        private TextBox DaySkipAmountInput;
+        private Button DaySkipButton;
+        private Button ReadEncounterButton;
     }
 }
