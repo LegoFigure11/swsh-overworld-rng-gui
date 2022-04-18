@@ -42,6 +42,7 @@ namespace SWSH_OWRNG_Generator_GUI
             SelectedMark.SelectedIndex = 0;
             SelectedShiny.SelectedIndex = 0;
             SelectedNature.SelectedIndex = 0;
+            SelectedAura.SelectedIndex = 0;
 
             // Set Tab Indexes Manually
             // This will make life easier when adding more fields later on
@@ -109,6 +110,7 @@ namespace SWSH_OWRNG_Generator_GUI
             SelectedNature.TabIndex = i++;
             SelectedShiny.TabIndex = i++;
             SelectedMark.TabIndex = i++;
+            SelectedAura.TabIndex = i++;
             // Results
             ButtonSearch.TabIndex = i++;
             Results.TabIndex = i++;
@@ -387,6 +389,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 InputEMs.ReadOnly = true;
                 InputKOCount.ReadOnly = true;
                 CheckHeldItem.Enabled = false;
+                SelectedAura.Enabled = false;
             }
             else
             {
@@ -397,6 +400,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 InputEMs.ReadOnly = false;
                 InputKOCount.ReadOnly = false;
                 CheckHeldItem.Enabled = true;
+                SelectedAura.Enabled = true;
             }
         }
 
@@ -625,6 +629,7 @@ namespace SWSH_OWRNG_Generator_GUI
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
             string DesiredNature = (string)SelectedNature.SelectedItem;
+            string DesiredAura = (string)SelectedAura.SelectedItem;
             uint[] MinIVs = { ushort.Parse(hpMin.Text), ushort.Parse(atkMin.Text), ushort.Parse(defMin.Text), ushort.Parse(spaMin.Text), ushort.Parse(spdMin.Text), ushort.Parse(speMin.Text) };
             uint[] MaxIVs = { ushort.Parse(hpMax.Text), ushort.Parse(atkMax.Text), ushort.Parse(defMax.Text), ushort.Parse(spaMax.Text), ushort.Parse(spdMax.Text), ushort.Parse(speMax.Text) };
             int[] WrongIVs = new int[6];
@@ -671,7 +676,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
-                DesiredNature, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
+                DesiredNature, DesiredAura, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
                 IsCuteCharm, IsShinyLocked, TIDSIDSearch, InitialAdvances, progress
             ));
             BindingSource Source = new() { DataSource = Frames };

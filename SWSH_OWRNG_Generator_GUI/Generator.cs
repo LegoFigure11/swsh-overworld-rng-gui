@@ -12,8 +12,8 @@ namespace SWSH_OWRNG_Generator_GUI
         // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
         public static List<Frame> Generate(
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
-            bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, string DesiredNature, uint LevelMin,
-            uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
+            bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, string DesiredNature, string DesiredAura,
+            uint LevelMin, uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
             uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool IsShinyLocked, bool TIDSIDSearch, ulong InitialAdvances, IProgress<int> progress
             )
         {
@@ -104,6 +104,15 @@ namespace SWSH_OWRNG_Generator_GUI
                     BrilliantRand = (uint)rng.NextInt(1000);
                     if (BrilliantRand < BrilliantThreshold)
                         Brilliant = true;
+                    if ((DesiredAura == "Brilliant" && !Brilliant) || DesiredAura == "None" && Brilliant)
+                    {
+                        if (TIDSIDSearch)
+                            go.Prev();
+                        else
+                            go.Next();
+                        advance++;
+                        continue;
+                    }
                 }
 
                 Shiny = false;

@@ -176,6 +176,8 @@ namespace SWSH_OWRNG_Generator_GUI
             this.DaySkipAmountInput = new System.Windows.Forms.TextBox();
             this.DaySkipButton = new System.Windows.Forms.Button();
             this.ReadEncounterButton = new System.Windows.Forms.Button();
+            this.SelectedAura = new System.Windows.Forms.ComboBox();
+            this.LabelAura = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1739,9 +1741,33 @@ namespace SWSH_OWRNG_Generator_GUI
             this.ReadEncounterButton.UseVisualStyleBackColor = true;
             this.ReadEncounterButton.Click += new System.EventHandler(this.ReadEncounter_ClickAsync);
             // 
+            // SelectedAura
+            // 
+            this.SelectedAura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectedAura.FormattingEnabled = true;
+            this.SelectedAura.Items.AddRange(new object[] {
+            "Ignore",
+            "None",
+            "Brilliant"});
+            this.SelectedAura.Location = new System.Drawing.Point(475, 271);
+            this.SelectedAura.Name = "SelectedAura";
+            this.SelectedAura.Size = new System.Drawing.Size(103, 21);
+            this.SelectedAura.TabIndex = 134;
+            // 
+            // LabelAura
+            // 
+            this.LabelAura.AutoSize = true;
+            this.LabelAura.Location = new System.Drawing.Point(437, 274);
+            this.LabelAura.Name = "LabelAura";
+            this.LabelAura.Size = new System.Drawing.Size(32, 13);
+            this.LabelAura.TabIndex = 135;
+            this.LabelAura.Text = "Aura:";
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 655);
+            this.Controls.Add(this.SelectedAura);
+            this.Controls.Add(this.LabelAura);
             this.Controls.Add(this.ReadEncounterButton);
             this.Controls.Add(this.DaySkipButton);
             this.Controls.Add(this.DaySkipAmountInput);
@@ -2017,5 +2043,7 @@ namespace SWSH_OWRNG_Generator_GUI
         private TextBox DaySkipAmountInput;
         private Button DaySkipButton;
         private Button ReadEncounterButton;
+        private ComboBox SelectedAura;
+        private Label LabelAura;
     }
 }
