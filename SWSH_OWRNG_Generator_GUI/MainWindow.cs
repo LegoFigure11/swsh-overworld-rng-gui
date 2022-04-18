@@ -51,8 +51,11 @@ namespace SWSH_OWRNG_Generator_GUI
             InputState1.TabIndex = i++;
             InputTID.TabIndex = i++;
             InputSID.TabIndex = i++;
+            CheckShinyCharm.TabIndex = i++;
             InputInitialAdv.TabIndex = i++;
+            CheckMarkCharm.TabIndex = i++;
             InputMaxAdv.TabIndex = i++;
+            CheckTIDSIDFinder.TabIndex = i++;
             // IVs
             hpMin.TabIndex = i++;
             hpMax.TabIndex = i++;
@@ -84,29 +87,29 @@ namespace SWSH_OWRNG_Generator_GUI
             speMinFilter.TabIndex = i++;
             speMaxFilter.TabIndex = i++;
             speJudgeFilter.TabIndex = i++;
-            // Slot, Level
+            // Checkboxes
+            CheckStatic.TabIndex = i++;
+            CheckWeather.TabIndex = i++;
+            CheckFishing.TabIndex = i++;
+            CheckHeldItem.TabIndex = i++;
+            CheckCuteCharm.TabIndex = i++;
+            CheckIsAbilityLocked.TabIndex = i++;
+            CheckShinyLocked.TabIndex = i++;
+            // Inputs
+            InputKOCount.TabIndex = i++;
+            InputFlawlessIVs.TabIndex = i++;
+            InputEMs.TabIndex = i++;
             InputSlotMin.TabIndex = i++;
             InputSlotMax.TabIndex = i++;
             InputLevelMin.TabIndex = i++;
             InputLevelMax.TabIndex = i++;
+            // Sensitive Info Box
+            sensBox.TabIndex = i++;
             // Drop Downs
             SelectedNature.TabIndex = i++;
             SelectedShiny.TabIndex = i++;
             SelectedMark.TabIndex = i++;
-            // Charms etc.
-            CheckShinyCharm.TabIndex = i++;
-            CheckStatic.TabIndex = i++;
-            CheckMarkCharm.TabIndex = i++;
-            CheckFishing.TabIndex = i++;
-            CheckWeather.TabIndex = i++;
-            CheckHeldItem.TabIndex = i++;
-            CheckIsAbilityLocked.TabIndex = i++;
-            CheckTIDSIDFinder.TabIndex = i++;
-            CheckCuteCharm.TabIndex = i++;
-            CheckShinyLocked.TabIndex = i++;
-            InputFlawlessIVs.TabIndex = i++;
-            InputKOCount.TabIndex = i++;
-            InputEMs.TabIndex = i++;
+            // Results
             ButtonSearch.TabIndex = i++;
             Results.TabIndex = i++;
             // Retail Advances Tracker
@@ -115,13 +118,13 @@ namespace SWSH_OWRNG_Generator_GUI
             RetailAdvancesTrackerGenerateButton.TabIndex = i++;
             RetailAdvancesTrackerSequenceInput.TabIndex = i++;
             ButtonUpdateStates.TabIndex = i++;
-            // Sensitive Info Box
-            sensBox.TabIndex = i++;
             // CFW Stuff
-            SwitchIPInput.TabIndex = i++;
             InputRAMOffset.TabIndex = i++;
+            SwitchIPInput.TabIndex = i++;
             ConnectButton.TabIndex = i++;
             DisconnectButton.TabIndex = i++;
+            ReadEncounterButton.TabIndex = i++;
+            DaySkipButton.TabIndex = i++;
         }
 
         private void HpMinFilter_Click(object sender, EventArgs e)
@@ -894,6 +897,8 @@ namespace SWSH_OWRNG_Generator_GUI
             ToastNotificationManagerCompat.Uninstall();
         }
 
+        private bool ShouldReadState = true;
+
         private async void Connect_ClickAsync(object sender, EventArgs e)
         {
             try
@@ -903,9 +908,12 @@ namespace SWSH_OWRNG_Generator_GUI
                 Program.Window.ConnectionStatusText.Text = "Connected!";
                 ChangeButtonState(Program.Window.ConnectButton, false);
                 ChangeButtonState(Program.Window.DisconnectButton, true);
+                ChangeButtonState(Program.Window.ReadEncounterButton, true);
+                ChangeButtonState(Program.Window.DaySkipButton, true);
+                ChangeTextBoxState(Program.Window.DaySkipAmountInput, true);
                 var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
                 await GetTIDSID(sav).ConfigureAwait(false);
-                await ReadRNGState(CancellationToken.None);
+                await ReadRNGState(CancellationToken.None).ConfigureAwait(false);
             }
             catch (SocketException err)
             {
@@ -914,108 +922,69 @@ namespace SWSH_OWRNG_Generator_GUI
                 {
                     LabelSetText(Program.Window.ConnectionStatusText, "Unable to connect.");
                     MessageBox.Show(err.Message);
-                    ChangeButtonState(Program.Window.ConnectButton, true);
-                    ChangeButtonState(Program.Window.DisconnectButton, false);
                 }
                 else
                 {
                     LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
                     MessageBox.Show($"Disconnected from {Program.Window.SwitchIPInput.Text}!");
-                    ChangeButtonState(Program.Window.ConnectButton, true);
-                    ChangeButtonState(Program.Window.DisconnectButton, false);
                 }
+                ChangeButtonState(Program.Window.ConnectButton, true);
+                ChangeButtonState(Program.Window.DisconnectButton, false);
+                ChangeButtonState(Program.Window.ReadEncounterButton, false);
+                ChangeButtonState(Program.Window.DaySkipButton, false);
+                ChangeTextBoxState(Program.Window.DaySkipAmountInput, false);
             }
         }
 
         private async Task ReadRNGState(CancellationToken token)
         {
-            uint offset = 0x8FEA3648;
-            PK8 pk = new();
-            if (ReadEncounterCheckBox.Checked)
-                pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
-            if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
-                CheckEncounter.Text = "No encounter present.";
             while (!token.IsCancellationRequested)
             {
-                while (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
+                if (!ShouldReadState)
+                    continue;
+                if (uint.TryParse(Program.Window.InputRAMOffset.Text, NumberStyles.HexNumber, null, out uint Offset))
                 {
-                    if (uint.TryParse(Program.Window.InputRAMOffset.Text, NumberStyles.HexNumber, null, out uint Offset))
+                    int TotalAdvances = 0;
+                    var (s0, s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
+                    TextboxSetText(Program.Window.InputState0, $"{s0:x16}");
+                    TextboxSetText(Program.Window.InputState1, $"{s1:x16}");
+                    TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{s0:x16}");
+                    TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{s1:x16}");
+                    TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
+                    while (SwitchConnection.Connected)
                     {
-                        int TotalAdvances = 0;
-                        var (s0, s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
-                        TextboxSetText(Program.Window.InputState0, $"{s0:x16}");
-                        TextboxSetText(Program.Window.InputState1, $"{s1:x16}");
-                        TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{s0:x16}");
-                        TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{s1:x16}");
+                        if (!SwitchConnection.Connected)
+                            return;
+
+                        if (!ShouldReadState)
+                            continue;
+
+                        var (_s0, _s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
+                        // Only update if it changed.
+                        if (_s0 == s0 && _s1 == s1)
+                            continue;
+
+                        TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{_s0:x16}");
+                        TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{_s1:x16}");
+
+                        var passed = GetAdvancesPassed(s0, s1, _s0, _s1);
+                        TotalAdvances += passed;
                         TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
-                        while (SwitchConnection.Connected && pk.Species == 0 || SwitchConnection.Connected && pk.Species > 0 && pk.Species > 899)
-                        {
-                            if (ReadEncounterCheckBox.Checked)
-                                pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
+                        // Store the state for the next pass.
+                        s0 = _s0;
+                        s1 = _s1;
 
-                            if (!SwitchConnection.Connected)
-                                return;
-
-                            var (_s0, _s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
-                            // Only update if it changed.
-                            if (_s0 == s0 && _s1 == s1)
-                                continue;
-
-                            TextboxSetText(Program.Window.RetailAdvancesTrackerResultState0, $"{_s0:x16}");
-                            TextboxSetText(Program.Window.RetailAdvancesTrackerResultState1, $"{_s1:x16}");
-
-                            var passed = GetAdvancesPassed(s0, s1, _s0, _s1);
-                            TotalAdvances += passed;
-                            TextboxSetText(Program.Window.TrackAdv, $"{TotalAdvances:N0}");
-                            // Store the state for the next pass.
-                            s0 = _s0;
-                            s1 = _s1;
-
-                            if (ReadEncounterCheckBox.Checked)
-                                pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
-
-                            if (!SwitchConnection.Connected)
-                                return;
-                        }
-                    }
-                    else
-                    {
-                        SwitchConnection.Disconnect();
-                        LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
-                        ChangeButtonState(Program.Window.ConnectButton, true);
-                        ChangeButtonState(Program.Window.DisconnectButton, false);
+                        if (!SwitchConnection.Connected)
+                            return;
                     }
                 }
-                if (pk.Species > 0 && pk.Species <= 899 && ReadEncounterCheckBox.Checked)
+                else
                 {
-                    string output = string.Empty;
-                    pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
-                    bool hasMark = HasMark(pk, out RibbonIndex mark);
-                    string msg = hasMark ? $"Mark: {mark.ToString().Replace("Mark", "")}" : "";
-                    string form = pk.Form == 0 ? "" : $"-{pk.Form}";
-                    if (pk != null)
-                        output = $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{msg}";
-                    if (pk.Species == (int)Species.Sinistea && pk.IsShiny)
-                    {
-                        new ToastContentBuilder()
-                        .AddText(pk.Form != 0 ? $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}SHINY ANTIQUE SINISTEA\n{msg}" : "HAHAHA IT'S PHONY")
-                        .Show();
-                    }
-                    if (pk.Species > 0 && pk.Species <= 899)
-                        CheckEncounter.Text = output;
-
-                    while (pk.Species != 0 || pk.Species > 0 && pk.Species <= 899)
-                    {
-                        pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
-                        if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
-                            break;
-                        await Task.Delay(1_000);
-                    }
-
-                    CheckEncounter.Text = "No encounter present.";
-                    await Task.Delay(3_000);
-                    continue;
-                }                
+                    SwitchConnection.Disconnect();
+                    LabelSetText(Program.Window.ConnectionStatusText, "Disconnected.");
+                    ChangeButtonState(Program.Window.ConnectButton, true);
+                    ChangeButtonState(Program.Window.DisconnectButton, false);
+                }
             }
         }
 
@@ -1088,7 +1057,9 @@ namespace SWSH_OWRNG_Generator_GUI
 
         delegate void TextboxSetTextCallback(TextBox sender, string Text);
         delegate void LabelSetTextCallback(Label sender, string Text);
+        delegate void ButtonSetTextCallback(Button sender, string Text);
         delegate void ChangeButtonStateCallback(Button sender, bool State);
+        delegate void ChangeTextBoxStateCallback(TextBox sender, bool State);
         private void TextboxSetText(TextBox sender, string Text)
         {
             if (sender.InvokeRequired)
@@ -1115,11 +1086,37 @@ namespace SWSH_OWRNG_Generator_GUI
             }
         }
 
+        private void ButtonSetText(Button sender, string Text)
+        {
+            if (sender.InvokeRequired)
+            {
+                ButtonSetTextCallback d = new(ButtonSetText);
+                sender.Invoke(d, sender, Text);
+            }
+            else
+            {
+                sender.Text = Text;
+            }
+        }
+
         private void ChangeButtonState(Button sender, bool State)
         {
             if (sender.InvokeRequired)
             {
                 ChangeButtonStateCallback d = new(ChangeButtonState);
+                sender.Invoke(d, sender, State);
+            }
+            else
+            {
+                sender.Enabled = State;
+            }
+        }
+
+        private void ChangeTextBoxState(TextBox sender, bool State)
+        {
+            if (sender.InvokeRequired)
+            {
+                ChangeTextBoxStateCallback d = new(ChangeTextBoxState);
                 sender.Invoke(d, sender, State);
             }
             else
@@ -1134,28 +1131,53 @@ namespace SWSH_OWRNG_Generator_GUI
             return new PK8(data);
         }
 
-        public bool UseCRLF;
+        public bool UseCRLF = true;
 
         public async Task DaySkip(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.DaySkip(UseCRLF), token).ConfigureAwait(false);
         public async Task ResetTime(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.ResetTime(UseCRLF), token).ConfigureAwait(false);
 
         private async void DaySkip_Click(object sender, EventArgs e)
         {
-            UseCRLF = true;
             if (SwitchConnection.Connected)
             {
-                int output = int.Parse(DaySkipAmount.Text);
+                int output = int.Parse(DaySkipAmountInput.Text);
                 ChangeButtonState(Program.Window.DaySkipButton, false);
-                DaySkipButton.Text = $"Skipping";
+                ButtonSetText(Program.Window.DaySkipButton, "Skipping...");
                 for (int i = 0; i < output; i++)
                 {
                     await DaySkip(CancellationToken.None).ConfigureAwait(false);
+                    ButtonSetText(Program.Window.DaySkipButton, $"{i + 1}/{output}");
                     await Task.Delay(0_360).ConfigureAwait(false);
                 }
                 await ResetTime(CancellationToken.None).ConfigureAwait(false);
                 ChangeButtonState(Program.Window.DaySkipButton, true);
-                DaySkipButton.Text = $"DaySkip";
+                ButtonSetText(Program.Window.DaySkipButton, "DaySkip");
             }
+        }
+
+        private async void ReadEncounter_ClickAsync(object sender, EventArgs e)
+        {
+            ShouldReadState = false;
+            ChangeButtonState(Program.Window.ReadEncounterButton, false);
+            if (SwitchConnection.Connected)
+            {
+                TextboxSetText(Program.Window.TextBoxCheckEncounter, "Reading encounter...");
+                await Task.Delay(0_500).ConfigureAwait(false); // Give state reads time to complete
+                uint offset = 0x8FEA3648;
+                PK8 pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
+                if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
+                    TextboxSetText(Program.Window.TextBoxCheckEncounter, "No encounter present.");
+                bool hasMark = HasMark(pk, out RibbonIndex mark);
+                string markString = hasMark ? $"Mark: {mark.ToString().Replace("Mark", "")}" : string.Empty;
+                string form = pk.Form == 0 ? "" : $"-{pk.Form}";
+
+                string output = $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
+
+                if (pk.Species > 0 && pk.Species <= 899)
+                    TextboxSetText(Program.Window.TextBoxCheckEncounter, output);
+            }
+            ShouldReadState = true;
+            ChangeButtonState(Program.Window.ReadEncounterButton, true);
         }
     }
 }
