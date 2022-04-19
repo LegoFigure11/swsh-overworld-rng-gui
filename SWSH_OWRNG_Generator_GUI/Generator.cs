@@ -14,7 +14,7 @@ namespace SWSH_OWRNG_Generator_GUI
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
             bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, string DesiredNature, string DesiredAura,
             uint LevelMin, uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
-            uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool IsShinyLocked, bool TIDSIDSearch, ulong InitialAdvances, IProgress<int> progress
+            uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool IsShinyLocked, bool IsHidden, bool TIDSIDSearch, ulong InitialAdvances, IProgress<int> progress
             )
         {
             List<Frame> Results = new();
@@ -93,7 +93,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
                     if (GenerateLevel)
                     {
-                        Level = LevelMin + (uint)rng.NextInt(LevelDelta);
+                        Level = LevelMin+ (uint)rng.NextInt(LevelDelta);
                     }
                     else
                     {
@@ -101,17 +101,20 @@ namespace SWSH_OWRNG_Generator_GUI
                     }
 
                     GenerateMark(rng, Weather, Fishing, MarkRolls); // Double Mark Gen happens always?
-                    BrilliantRand = (uint)rng.NextInt(1000);
-                    if (BrilliantRand < BrilliantThreshold)
-                        Brilliant = true;
-                    if ((DesiredAura == "Brilliant" && !Brilliant) || DesiredAura == "None" && Brilliant)
+                    if (!IsHidden)
                     {
-                        if (TIDSIDSearch)
-                            go.Prev();
-                        else
-                            go.Next();
-                        advance++;
-                        continue;
+                        BrilliantRand = (uint)rng.NextInt(1000);
+                        if (BrilliantRand < BrilliantThreshold)
+                            Brilliant = true;
+                        if ((DesiredAura == "Brilliant" && !Brilliant) || (DesiredAura == "None" && Brilliant))
+                        {
+                            if (TIDSIDSearch)
+                                go.Prev();
+                            else
+                                go.Next();
+                            advance++;
+                            continue;
+                        }
                     }
                 }
 

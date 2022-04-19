@@ -178,6 +178,7 @@ namespace SWSH_OWRNG_Generator_GUI
             this.ReadEncounterButton = new System.Windows.Forms.Button();
             this.SelectedAura = new System.Windows.Forms.ComboBox();
             this.LabelAura = new System.Windows.Forms.Label();
+            this.CheckHidden = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -516,7 +517,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckHeldItem
             // 
             this.CheckHeldItem.AutoSize = true;
-            this.CheckHeldItem.Location = new System.Drawing.Point(12, 208);
+            this.CheckHeldItem.Location = new System.Drawing.Point(12, 231);
             this.CheckHeldItem.Name = "CheckHeldItem";
             this.CheckHeldItem.Size = new System.Drawing.Size(111, 17);
             this.CheckHeldItem.TabIndex = 36;
@@ -1367,7 +1368,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // LabelEMs
             // 
             this.LabelEMs.AutoSize = true;
-            this.LabelEMs.Location = new System.Drawing.Point(153, 208);
+            this.LabelEMs.Location = new System.Drawing.Point(153, 211);
             this.LabelEMs.Name = "LabelEMs";
             this.LabelEMs.Size = new System.Drawing.Size(73, 13);
             this.LabelEMs.TabIndex = 93;
@@ -1421,7 +1422,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // CheckCuteCharm
             // 
             this.CheckCuteCharm.AutoSize = true;
-            this.CheckCuteCharm.Location = new System.Drawing.Point(12, 231);
+            this.CheckCuteCharm.Location = new System.Drawing.Point(12, 300);
             this.CheckCuteCharm.Name = "CheckCuteCharm";
             this.CheckCuteCharm.Size = new System.Drawing.Size(108, 17);
             this.CheckCuteCharm.TabIndex = 97;
@@ -1763,9 +1764,21 @@ namespace SWSH_OWRNG_Generator_GUI
             this.LabelAura.TabIndex = 135;
             this.LabelAura.Text = "Aura:";
             // 
+            // CheckHidden
+            // 
+            this.CheckHidden.AutoSize = true;
+            this.CheckHidden.Location = new System.Drawing.Point(12, 208);
+            this.CheckHidden.Name = "CheckHidden";
+            this.CheckHidden.Size = new System.Drawing.Size(60, 17);
+            this.CheckHidden.TabIndex = 136;
+            this.CheckHidden.Text = "Hidden";
+            this.CheckHidden.UseVisualStyleBackColor = true;
+            this.CheckHidden.CheckedChanged += new System.EventHandler(this.CheckHidden_CheckedChanged);
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 655);
+            this.Controls.Add(this.CheckHidden);
             this.Controls.Add(this.SelectedAura);
             this.Controls.Add(this.LabelAura);
             this.Controls.Add(this.ReadEncounterButton);
@@ -2045,5 +2058,6 @@ namespace SWSH_OWRNG_Generator_GUI
         private Button ReadEncounterButton;
         private ComboBox SelectedAura;
         private Label LabelAura;
+        private CheckBox CheckHidden;
     }
 }

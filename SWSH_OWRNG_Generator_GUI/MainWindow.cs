@@ -390,6 +390,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 InputKOCount.ReadOnly = true;
                 CheckHeldItem.Enabled = false;
                 SelectedAura.Enabled = false;
+                CheckHidden.Enabled = false;
             }
             else
             {
@@ -401,6 +402,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 InputKOCount.ReadOnly = false;
                 CheckHeldItem.Enabled = true;
                 SelectedAura.Enabled = true;
+                CheckHidden.Enabled = true;
             }
         }
 
@@ -626,6 +628,7 @@ namespace SWSH_OWRNG_Generator_GUI
             bool TIDSIDSearch = CheckTIDSIDFinder.Checked;
             bool IsCuteCharm = CheckCuteCharm.Checked;
             bool IsShinyLocked = CheckShinyLocked.Checked;
+            bool IsHidden = CheckHidden.Checked;
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
             string DesiredNature = (string)SelectedNature.SelectedItem;
@@ -677,7 +680,7 @@ namespace SWSH_OWRNG_Generator_GUI
             List<Frame> Frames = await Task.Run(() => Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
                 DesiredNature, DesiredAura, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
-                IsCuteCharm, IsShinyLocked, TIDSIDSearch, InitialAdvances, progress
+                IsCuteCharm, IsShinyLocked, IsHidden, TIDSIDSearch, InitialAdvances, progress
             ));
             BindingSource Source = new() { DataSource = Frames };
             Results.DataSource = Source;
@@ -1183,6 +1186,20 @@ namespace SWSH_OWRNG_Generator_GUI
             }
             ShouldReadState = true;
             ChangeButtonState(Program.Window.ReadEncounterButton, true);
+        }
+
+        private void CheckHidden_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckHidden.Checked)
+            {
+                CheckStatic.Enabled = false;
+                SelectedAura.Enabled = false;
+            }
+            else
+            {
+                CheckStatic.Enabled = true;
+                SelectedAura.Enabled = true;
+            }
         }
     }
 }
