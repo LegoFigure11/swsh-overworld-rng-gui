@@ -1179,7 +1179,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 string markString = hasMark ? $"Mark: {mark.ToString().Replace("Mark", "")}" : string.Empty;
                 string form = pk.Form == 0 ? "" : $"-{pk.Form}";
 
-                string output = $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
+                string output = $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}Nature: {GameInfo.GetStrings(1).Natures[pk.Nature]}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
 
                 if (pk.Species > 0 && pk.Species <= 899)
                     TextboxSetText(Program.Window.TextBoxCheckEncounter, output);

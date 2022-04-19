@@ -6,7 +6,7 @@ namespace SWSH_OWRNG_Generator_GUI
 {
     public static class Generator
     {
-        private static readonly string[] Natures = { "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" };
+        private static readonly IReadOnlyList<string> Natures = GameInfo.GetStrings(1).Natures;
         private static readonly string[] PersonalityMarks = { "Rowdy", "AbsentMinded", "Jittery", "Excited", "Charismatic", "Calmness", "Intense", "ZonedOut", "Joyful", "Angry", "Smiley", "Teary", "Upbeat", "Peeved", "Intellectual", "Ferocious", "Crafty", "Scowling", "Kindly", "Flustered", "PumpedUp", "ZeroEnergy", "Prideful", "Unsure", "Humble", "Thorny", "Vigor", "Slump" };
 
         // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
@@ -76,6 +76,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     if (!Fishing)
                         rng.NextInt();
                     rng.NextInt(100);
+
                     LeadRand = (uint)rng.NextInt(100);
                     if (IsCuteCharm && LeadRand < 66)
                         Gender = "CC";
@@ -184,7 +185,7 @@ namespace SWSH_OWRNG_Generator_GUI
                     continue;
                 }
 
-                if (!PassesNatureFilter(Natures[Nature], DesiredNature))
+                if (!PassesNatureFilter(Natures[(int)Nature], DesiredNature))
                 {
                     if (TIDSIDSearch)
                         go.Prev();
@@ -210,7 +211,7 @@ namespace SWSH_OWRNG_Generator_GUI
                         Shiny = ShinyXOR == 0 ? "Square" : (ShinyXOR < 16 ? "Star" : "No"),
                         Brilliant = Brilliant ? "Y" : "-",
                         Ability = AbilityRoll == 0 ? 1 : 0,
-                        Nature = Natures[Nature],
+                        Nature = Natures[(int)Nature],
                         Gender = Gender,
                         HP = IVs[0],
                         Atk = IVs[1],
