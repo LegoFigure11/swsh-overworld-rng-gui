@@ -588,18 +588,6 @@ namespace SWSH_OWRNG_Generator_GUI
             Pad(InputLevelMax, '0', 1);
             ulong s0 = ulong.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
             ulong s1 = ulong.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
-            if (s0 == 0)
-            {
-                InputState0.Text = "1";
-                Pad(InputState0, '0', 16);
-                s0 = 1;
-            }
-            if (s1 == 0)
-            {
-                InputState1.Text = "1";
-                Pad(InputState1, '0', 16);
-                s1 = 1;
-            }
             Pad(InputMaxAdv, '0', 1);
             ulong advances = ulong.Parse(InputMaxAdv.Text);
             if (advances == 0)
