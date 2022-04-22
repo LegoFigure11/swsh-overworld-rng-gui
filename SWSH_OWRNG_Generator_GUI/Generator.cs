@@ -94,7 +94,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
                     if (GenerateLevel)
                     {
-                        Level = LevelMin+ (uint)rng.NextInt(LevelDelta);
+                        Level = LevelMin + (uint)rng.NextInt(LevelDelta);
                     }
                     else
                     {
@@ -106,7 +106,10 @@ namespace SWSH_OWRNG_Generator_GUI
                     {
                         BrilliantRand = (uint)rng.NextInt(1000);
                         if (BrilliantRand < BrilliantThreshold)
+                        {
                             Brilliant = true;
+                            Level = LevelMax;
+                        }
                         if ((DesiredAura == "Brilliant" && !Brilliant) || (DesiredAura == "None" && Brilliant))
                         {
                             if (TIDSIDSearch)
