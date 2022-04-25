@@ -101,7 +101,30 @@ namespace SWSH_OWRNG_Generator_GUI
                         Level = LevelMin;
                     }
 
-                    GenerateMark(rng, Weather, Fishing, MarkRolls); // Double Mark Gen happens always?
+                    // Double mark gen happens always
+                    // A bit hacky but passing `rng` to GenerateMark didn't seem to update `rng`'s state
+                    // TODO: Figure out why?
+                    for (int i = 0; i < MarkRolls; i++)
+                    {
+                        uint rare = (uint)rng.NextInt(1000);
+                        uint pers = (uint)rng.NextInt(100);
+                        uint unco = (uint)rng.NextInt(50);
+                        uint weat = (uint)rng.NextInt(50);
+                        uint time = (uint)rng.NextInt(50);
+                        uint fish = (uint)rng.NextInt(25);
+
+                        if (rare == 0) break;
+                        if (pers == 0)
+                        {
+                            rng.NextInt(28);
+                            break;
+                        }
+
+                        if (unco == 0) break;
+                        if (weat == 0 && Weather) break;
+                        if (time == 0) break;
+                        if (fish == 0 && Fishing) break;
+                    }
                     if (!IsHidden)
                     {
                         BrilliantRand = (uint)rng.NextInt(1000);
