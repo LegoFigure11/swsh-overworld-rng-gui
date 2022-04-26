@@ -43,4 +43,4 @@ jobs:
       with:
         name: SWSH-Overworld-RNG-GUI
         path: |
-          ./SWSH_OWRNG_Generator_GUI/bin/Debug
+          ./SWSH_OWRNG_Generator.WinForms/bin/Debug
