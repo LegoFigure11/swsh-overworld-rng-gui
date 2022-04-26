@@ -1,5 +1,5 @@
 
-namespace SWSH_OWRNG_Generator_GUI
+namespace SWSH_OWRNG_Generator.WinForms
 {
     partial class SeedFinder
     {

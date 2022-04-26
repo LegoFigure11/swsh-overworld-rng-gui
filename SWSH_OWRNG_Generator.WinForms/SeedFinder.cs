@@ -3,7 +3,7 @@ using System.Numerics;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SWSH_OWRNG_Generator_GUI
+namespace SWSH_OWRNG_Generator.WinForms
 {
     public partial class SeedFinder : System.Windows.Forms.Form
     {

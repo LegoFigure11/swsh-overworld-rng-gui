@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace SWSH_OWRNG_Generator_GUI
+namespace SWSH_OWRNG_Generator.WinForms
 {
     partial class MainWindow
     {
@@ -406,7 +406,7 @@ namespace SWSH_OWRNG_Generator_GUI
             // 
             // ImageRareMark
             // 
-            this.ImageRareMark.Image = global::SWSH_OWRNG_Generator_GUI.Properties.Resources.raremark;
+            this.ImageRareMark.Image = global::SWSH_OWRNG_Generator.WinForms.Properties.Resources.raremark;
             this.ImageRareMark.Location = new System.Drawing.Point(667, 361);
             this.ImageRareMark.Name = "ImageRareMark";
             this.ImageRareMark.Size = new System.Drawing.Size(91, 90);
