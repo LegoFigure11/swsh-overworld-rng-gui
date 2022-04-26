@@ -1,8 +1,6 @@
 ﻿using PKHeX.Core;
-using System;
-using System.Collections.Generic;
 
-namespace SWSH_OWRNG_Generator_GUI
+namespace SWSH_OWRNG_Generator.Core
 {
     public static class Generator
     {
@@ -202,7 +200,7 @@ namespace SWSH_OWRNG_Generator_GUI
                 // Passes all filters!
                 (ulong _s0, ulong _s1) = go.GetState();
                 Results.Add(
-                    new Frame
+                    new SWSH_OWRNG_Generator.Core.Frame
                     {
                         Advances = TIDSIDSearch ? (-(long)(advance + InitialAdvances)).ToString("N0") : (advance + InitialAdvances).ToString("N0"),
                         TID = (ushort)(MockPID >> 16),

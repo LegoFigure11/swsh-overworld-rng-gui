@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
 	<UseWindowsForms>true</UseWindowsForms>
     <LangVersion>10</LangVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -61,5 +61,8 @@
     <Reference Include="SysBot.Base">
       <HintPath>SysBot.Base\SysBot.Base.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+	<ProjectReference Include="..\SWSH_OWRNG_Generator.Core\SWSH_OWRNG_Generator.Core.csproj" />
   </ItemGroup>
 </Project>

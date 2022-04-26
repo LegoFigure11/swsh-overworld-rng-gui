@@ -1,5 +1,4 @@
-﻿using Microsoft.Toolkit.Uwp.Notifications;
-using PKHeX.Core;
+﻿using PKHeX.Core;
 using SysBot.Base;
 using System;
 using System.Collections.Generic;
@@ -14,7 +13,7 @@ namespace SWSH_OWRNG_Generator_GUI
 {
     public partial class MainWindow : Form
     {
-        public static SwitchConnectionConfig Config = new() { Protocol = SwitchProtocol.WiFi, IP = Properties.Settings.Default.SwitchIP, Port = 6000 };
+        private readonly static SwitchConnectionConfig Config = new() { Protocol = SwitchProtocol.WiFi, IP = Properties.Settings.Default.SwitchIP, Port = 6000 };
         public SwitchSocketAsync SwitchConnection = new(Config);
         public MainWindow()
         {
@@ -25,8 +24,6 @@ namespace SWSH_OWRNG_Generator_GUI
 #endif
             var v = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             this.Text = "SwSh OWRNG Generator GUI v" + v.Major + "." + v.Minor + "." + v.Build + build;
-
-            Application.ApplicationExit += OnApplicationExit;
 
             InitializeComponent();
         }
@@ -661,11 +658,9 @@ namespace SWSH_OWRNG_Generator_GUI
             progressBar1.Maximum = (int)advances;
             progressBar1.Step = progressBar1.Maximum / 100;
 
-            ToastNotificationManagerCompat.History.Clear();
-
             var progress = new Progress<int>(_ => progressBar1.PerformStep());
 
-            List<Frame> Frames = await Task.Run(() => Generator.Generate(
+            List<SWSH_OWRNG_Generator.Core.Frame> Frames = await Task.Run(() => SWSH_OWRNG_Generator.Core.Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
                 DesiredNature, DesiredAura, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
                 IsCuteCharm, IsShinyLocked, IsHidden, TIDSIDSearch, InitialAdvances, progress
@@ -677,14 +672,9 @@ namespace SWSH_OWRNG_Generator_GUI
             progressBar1.Value = progressBar1.Maximum;
             ButtonSearch.Text = "Search!";
             ButtonSearch.Enabled = true;
-
-            new ToastContentBuilder()
-                .AddText(Frames.Count == 0 ? "You need better RNG!" : "Your search has finished!")
-                .AddText($"Results found: {Frames.Count}")
-                .Show();
         }
 
-        private void Pad(object sender, char s, int length)
+        private static void Pad(object sender, char s, int length)
         {
             ((TextBox)sender).Text = ((TextBox)sender).Text.PadLeft(length, s);
         }
@@ -727,7 +717,7 @@ namespace SWSH_OWRNG_Generator_GUI
 
             var progress = new Progress<int>(_ => RetailAdvancesTrackerProgressBar.PerformStep());
 
-            RetailAdvancesGeneratorString = await Task.Run(() => Generator.GenerateRetailSequence(s0, s1, Initial, Max, progress));
+            RetailAdvancesGeneratorString = await Task.Run(() => SWSH_OWRNG_Generator.Core.Generator.GenerateRetailSequence(s0, s1, Initial, Max, progress));
 
             RetailAdvancesTrackerProgressBar.Value = RetailAdvancesTrackerProgressBar.Maximum;
             RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";
@@ -823,7 +813,7 @@ namespace SWSH_OWRNG_Generator_GUI
             }
         }
 
-        private void SetIvFilters(TextBox statLower, TextBox statUpper, string min, string max)
+        private static void SetIvFilters(TextBox statLower, TextBox statUpper, string min, string max)
         {
             statLower.Clear();
             statLower.Text = min;
@@ -831,7 +821,7 @@ namespace SWSH_OWRNG_Generator_GUI
             statUpper.Text = max;
         }
 
-        private void IvJudgeFilter(TextBox statL, TextBox statU, string judge)
+        private static void IvJudgeFilter(TextBox statL, TextBox statU, string judge)
         {
             switch (judge)
             {
@@ -886,11 +876,6 @@ namespace SWSH_OWRNG_Generator_GUI
                     IvJudgeFilter(speMin, speMax, speJudgeFilter.Text);
                     break;
             }
-        }
-        private void OnApplicationExit(object sender, EventArgs e)
-        {
-            ToastNotificationManagerCompat.History.Clear();
-            ToastNotificationManagerCompat.Uninstall();
         }
 
         private bool ShouldReadState = true;
@@ -1018,7 +1003,7 @@ namespace SWSH_OWRNG_Generator_GUI
             return (s0, s1);
         }
 
-        public int GetAdvancesPassed(ulong prevs0, ulong prevs1, ulong news0, ulong news1)
+        public static int GetAdvancesPassed(ulong prevs0, ulong prevs1, ulong news0, ulong news1)
         {
             if (prevs0 == news0 && prevs1 == news1)
                 return 0;
