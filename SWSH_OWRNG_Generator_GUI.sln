@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWSH_OWRNG_Generator.Core",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWSH_OWRNG_Generator.WinForms", "SWSH_OWRNG_Generator.WinForms\SWSH_OWRNG_Generator.WinForms.csproj", "{9B3AD25C-E664-4EA1-A341-31F1B0ABCB5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWSH_OWRNG_Generator.Tests", "SWSH_OWRNG_Generator.Tests\SWSH_OWRNG_Generator.Tests.csproj", "{60526EF3-20D5-4A06-A66B-602CC9896D7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9B3AD25C-E664-4EA1-A341-31F1B0ABCB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B3AD25C-E664-4EA1-A341-31F1B0ABCB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B3AD25C-E664-4EA1-A341-31F1B0ABCB5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60526EF3-20D5-4A06-A66B-602CC9896D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60526EF3-20D5-4A06-A66B-602CC9896D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60526EF3-20D5-4A06-A66B-602CC9896D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60526EF3-20D5-4A06-A66B-602CC9896D7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
