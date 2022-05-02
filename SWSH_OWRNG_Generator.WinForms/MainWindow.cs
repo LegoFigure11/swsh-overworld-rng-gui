@@ -660,7 +660,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             var progress = new Progress<int>(_ => progressBar1.PerformStep());
 
-            List<SWSH_OWRNG_Generator.Core.Frame> Frames = await Task.Run(() => SWSH_OWRNG_Generator.Core.Generator.Generate(
+            List<Core.Frame> Frames = await Task.Run(() => Core.Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
                 DesiredNature, DesiredAura, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
                 IsCuteCharm, IsShinyLocked, IsHidden, TIDSIDSearch, InitialAdvances, progress
@@ -887,6 +887,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 Program.Window.ConnectionStatusText.Text = "Connecting...";
                 SwitchConnection.Connect();
                 Program.Window.ConnectionStatusText.Text = "Connected!";
+                pictureBox1.Load("https://raw.githubusercontent.com/kwsch/PKHeX/master/PKHeX.Drawing.PokeSprite/Resources/img/Pokemon%20Sprite%20Overlays/starter.png");
                 ChangeButtonState(Program.Window.ConnectButton, false);
                 ChangeButtonState(Program.Window.DisconnectButton, true);
                 ChangeButtonState(Program.Window.ReadEncounterButton, true);
@@ -1133,6 +1134,8 @@ namespace SWSH_OWRNG_Generator.WinForms
                 await ResetTime(CancellationToken.None).ConfigureAwait(false);
                 ChangeButtonState(Program.Window.DaySkipButton, true);
                 ButtonSetText(Program.Window.DaySkipButton, "DaySkip");
+                System.Media.SystemSounds.Beep.Play();
+                MessageBox.Show($"DaySkipping Complete!");                
             }
         }
 
@@ -1147,7 +1150,14 @@ namespace SWSH_OWRNG_Generator.WinForms
                 uint offset = 0x8FEA3648;
                 PK8 pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
                 if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
+                {
                     TextboxSetText(Program.Window.TextBoxCheckEncounter, "No encounter present.");
+                    pictureBox1.Load("https://raw.githubusercontent.com/kwsch/PKHeX/master/PKHeX.Drawing.PokeSprite/Resources/img/Pokemon%20Sprite%20Overlays/starter.png");
+                    ImageRareMark.Load("https://www.serebii.net/swordshield/ribbons/raremark.png");
+                    ShouldReadState = true;
+                    ChangeButtonState(Program.Window.ReadEncounterButton, true);
+                    return;                    
+                }
                 bool hasMark = HasMark(pk, out RibbonIndex mark);
                 string markString = hasMark ? $"Mark: {mark.ToString().Replace("Mark", "")}" : string.Empty;
                 string form = pk.Form == 0 ? "" : $"-{pk.Form}";
@@ -1155,7 +1165,26 @@ namespace SWSH_OWRNG_Generator.WinForms
                 string output = $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}Nature: {GameInfo.GetStrings(1).Natures[pk.Nature]}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
 
                 if (pk.Species > 0 && pk.Species <= 899)
-                    TextboxSetText(Program.Window.TextBoxCheckEncounter, output);
+                {
+                    TextboxSetText(Program.Window.TextBoxCheckEncounter, output);                    
+                    var sprite = $"https://raw.githubusercontent.com/kwsch/PKHeX/master/PKHeX.Drawing.PokeSprite/Resources/img/Big%20Pokemon%20Sprites/b_{pk.Species}.png";
+                    if (pk.IsShiny)
+                        sprite = $"https://raw.githubusercontent.com/kwsch/PKHeX/master/PKHeX.Drawing.PokeSprite/Resources/img/Big%20Shiny%20Sprites/b_{pk.Species}s.png";
+                    pictureBox1.Load(sprite);
+                    if (hasMark)
+                    {
+                        var url = $"https://www.serebii.net/swordshield/ribbons/{mark.ToString().Replace("Mark", "").ToLower()}mark.png";
+                        if (mark == RibbonIndex.MarkPumpedUp)
+                            url = $"https://www.serebii.net/swordshield/ribbons/pumped-upmark.png";
+                        if (mark == RibbonIndex.MarkAbsentMinded)
+                            url = $"https://www.serebii.net/swordshield/ribbons/absent-mindedmark.png";
+                        if (mark == RibbonIndex.MarkSleepyTime)
+                            url = $"https://www.serebii.net/swordshield/ribbons/sleepy-timemark.png";
+                        if (mark == RibbonIndex.MarkZonedOut)
+                            url = $"https://www.serebii.net/swordshield/ribbons/zoned-outmark.png";
+                        ImageRareMark.Load(url);                        
+                    }
+                }
             }
             ShouldReadState = true;
             ChangeButtonState(Program.Window.ReadEncounterButton, true);

@@ -178,10 +178,12 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.SelectedAura = new System.Windows.Forms.ComboBox();
             this.LabelAura = new System.Windows.Forms.Label();
             this.CheckHidden = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
             this.MainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelState0
@@ -407,10 +409,10 @@ namespace SWSH_OWRNG_Generator.WinForms
             // ImageRareMark
             // 
             this.ImageRareMark.Image = global::SWSH_OWRNG_Generator.WinForms.Properties.Resources.raremark;
-            this.ImageRareMark.Location = new System.Drawing.Point(667, 361);
+            this.ImageRareMark.Location = new System.Drawing.Point(642, 341);
             this.ImageRareMark.Name = "ImageRareMark";
-            this.ImageRareMark.Size = new System.Drawing.Size(91, 90);
-            this.ImageRareMark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ImageRareMark.Size = new System.Drawing.Size(128, 128);
+            this.ImageRareMark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ImageRareMark.TabIndex = 53;
             this.ImageRareMark.TabStop = false;
             // 
@@ -1716,7 +1718,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.TextBoxCheckEncounter.Name = "TextBoxCheckEncounter";
             this.TextBoxCheckEncounter.ReadOnly = true;
             this.TextBoxCheckEncounter.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.TextBoxCheckEncounter.Size = new System.Drawing.Size(144, 129);
+            this.TextBoxCheckEncounter.Size = new System.Drawing.Size(144, 116);
             this.TextBoxCheckEncounter.TabIndex = 130;
             // 
             // DaySkipAmountInput
@@ -1744,9 +1746,9 @@ namespace SWSH_OWRNG_Generator.WinForms
             // ReadEncounterButton
             // 
             this.ReadEncounterButton.Enabled = false;
-            this.ReadEncounterButton.Location = new System.Drawing.Point(277, 323);
+            this.ReadEncounterButton.Location = new System.Drawing.Point(330, 305);
             this.ReadEncounterButton.Name = "ReadEncounterButton";
-            this.ReadEncounterButton.Size = new System.Drawing.Size(144, 22);
+            this.ReadEncounterButton.Size = new System.Drawing.Size(91, 42);
             this.ReadEncounterButton.TabIndex = 133;
             this.ReadEncounterButton.Text = "Read Encounter";
             this.ReadEncounterButton.UseVisualStyleBackColor = true;
@@ -1785,6 +1787,15 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckHidden.UseVisualStyleBackColor = true;
             this.CheckHidden.CheckedChanged += new System.EventHandler(this.CheckHidden_CheckedChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(275, 294);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 138;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 699);
@@ -1794,7 +1805,6 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.Controls.Add(this.ReadEncounterButton);
             this.Controls.Add(this.DaySkipButton);
             this.Controls.Add(this.DaySkipAmountInput);
-            this.Controls.Add(this.TextBoxCheckEncounter);
             this.Controls.Add(this.TrackAdv);
             this.Controls.Add(this.ConnectionStatusText);
             this.Controls.Add(this.ConnectionStatusLabel);
@@ -1908,8 +1918,10 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.Controls.Add(this.InputState1);
             this.Controls.Add(this.InputState0);
             this.Controls.Add(this.LabelState0);
-            this.Controls.Add(this.ImageRareMark);
             this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.ImageRareMark);
+            this.Controls.Add(this.TextBoxCheckEncounter);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1918,6 +1930,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2071,5 +2084,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         private ComboBox SelectedAura;
         private Label LabelAura;
         private CheckBox CheckHidden;
+        public PictureBox pictureBox1;
     }
 }
