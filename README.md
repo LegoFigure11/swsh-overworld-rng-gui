@@ -5,7 +5,7 @@ _by [@LegoFigure11](https://github.com/LegoFigure11/), [@shinyfinder](https://gi
 
 This program is designed for searching for Overworld RNG targets in Pokémon Sword and Shield.
 
-![](https://i.imgur.com/np96S7j.png)
+![](https://i.imgur.com/WIqJv1X.png)
 
 Special thanks and credits to:
 =====
