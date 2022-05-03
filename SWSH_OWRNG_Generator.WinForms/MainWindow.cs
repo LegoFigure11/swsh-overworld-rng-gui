@@ -646,7 +646,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             var progress = new Progress<int>(_ => progressBar1.PerformStep());
 
-            List<Core.Frame> Frames = await Task.Run(() => SWSH_OWRNG_Generator.Core.Generator.Generate(
+            List<Core.Frame> Frames = await Task.Run(() => Core.Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
                 DesiredNature, DesiredAura, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
                 IsCuteCharm, IsShinyLocked, IsHidden, TIDSIDSearch, InitialAdvances, progress
@@ -703,7 +703,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             var progress = new Progress<int>(_ => RetailAdvancesTrackerProgressBar.PerformStep());
 
-            RetailAdvancesGeneratorString = await Task.Run(() => SWSH_OWRNG_Generator.Core.Generator.GenerateRetailSequence(s0, s1, Initial, Max, progress));
+            RetailAdvancesGeneratorString = await Task.Run(() => Core.Generator.GenerateRetailSequence(s0, s1, Initial, Max, progress));
 
             RetailAdvancesTrackerProgressBar.Value = RetailAdvancesTrackerProgressBar.Maximum;
             RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";
