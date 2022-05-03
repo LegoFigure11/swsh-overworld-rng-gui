@@ -1145,6 +1145,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             SelectedAura.Enabled = !check;
             InputKOCount.ReadOnly = check;
             InputEMs.ReadOnly = check;
+            Brilliant.Visible = !check;
         }
     }
 }
