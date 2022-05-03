@@ -178,6 +178,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.SelectedAura = new System.Windows.Forms.ComboBox();
             this.LabelAura = new System.Windows.Forms.Label();
             this.CheckHidden = new System.Windows.Forms.CheckBox();
+            this.TIDSIDFinderBrokenTooltip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1351,6 +1352,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckTIDSIDFinder.Size = new System.Drawing.Size(123, 19);
             this.CheckTIDSIDFinder.TabIndex = 90;
             this.CheckTIDSIDFinder.Text = "Search For TID/SID";
+            this.TIDSIDFinderBrokenTooltip.SetToolTip(this.CheckTIDSIDFinder, "Currently broken (See issue #9 on GitHub)");
             this.CheckTIDSIDFinder.UseVisualStyleBackColor = true;
             this.CheckTIDSIDFinder.CheckedChanged += new System.EventHandler(this.CheckTIDSIDFinder_CheckedChanged);
             // 
@@ -1785,6 +1787,10 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckHidden.UseVisualStyleBackColor = true;
             this.CheckHidden.CheckedChanged += new System.EventHandler(this.CheckHidden_CheckedChanged);
             // 
+            // TIDSIDFinderBrokenTooltip
+            // 
+            this.TIDSIDFinderBrokenTooltip.ShowAlways = true;
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 699);
@@ -2071,5 +2077,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         private ComboBox SelectedAura;
         private Label LabelAura;
         private CheckBox CheckHidden;
+        private ToolTip TIDSIDFinderBrokenTooltip;
     }
 }
