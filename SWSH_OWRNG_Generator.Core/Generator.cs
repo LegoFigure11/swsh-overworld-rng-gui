@@ -200,7 +200,7 @@ namespace SWSH_OWRNG_Generator.Core
                 // Passes all filters!
                 (ulong _s0, ulong _s1) = go.GetState();
                 Results.Add(
-                    new SWSH_OWRNG_Generator.Core.Frame
+                    new Frame
                     {
                         Advances = TIDSIDSearch ? (-(long)(advance + InitialAdvances)).ToString("N0") : (advance + InitialAdvances).ToString("N0"),
                         TID = (ushort)(MockPID >> 16),
