@@ -872,8 +872,6 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeTextBoxState(Program.Window.DaySkipAmountInput, true);
                 var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
                 await GetTIDSID(sav).ConfigureAwait(false);
-                TID.Visible = false;
-                SID.Visible = false;
                 Animation.Visible = false;
                 await ReadRNGState(CancellationToken.None).ConfigureAwait(false);
             }
