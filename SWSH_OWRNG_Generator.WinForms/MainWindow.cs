@@ -377,30 +377,16 @@ namespace SWSH_OWRNG_Generator.WinForms
 
         private void CheckStatic_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckStatic.Checked)
-            {
-                InputLevelMax.ReadOnly = true;
-                InputLevelMin.ReadOnly = true;
-                InputSlotMax.ReadOnly = true;
-                InputSlotMin.ReadOnly = true;
-                InputEMs.ReadOnly = true;
-                InputKOCount.ReadOnly = true;
-                CheckHeldItem.Enabled = false;
-                SelectedAura.Enabled = false;
-                CheckHidden.Enabled = false;
-            }
-            else
-            {
-                InputLevelMax.ReadOnly = false;
-                InputLevelMin.ReadOnly = false;
-                InputSlotMax.ReadOnly = false;
-                InputSlotMin.ReadOnly = false;
-                InputEMs.ReadOnly = false;
-                InputKOCount.ReadOnly = false;
-                CheckHeldItem.Enabled = true;
-                SelectedAura.Enabled = true;
-                CheckHidden.Enabled = true;
-            }
+            bool check = CheckStatic.Checked;
+            InputLevelMax.ReadOnly = check;
+            InputLevelMin.ReadOnly = check;
+            InputSlotMax.ReadOnly = check;
+            InputSlotMin.ReadOnly = check;
+            InputEMs.ReadOnly = check;
+            InputKOCount.ReadOnly = check;
+            CheckHeldItem.Enabled = !check;
+            SelectedAura.Enabled = !check;
+            CheckHidden.Enabled = !check;
         }
 
         private void DefMinFilter_Click(object sender, EventArgs e)
@@ -660,7 +646,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             var progress = new Progress<int>(_ => progressBar1.PerformStep());
 
-            List<SWSH_OWRNG_Generator.Core.Frame> Frames = await Task.Run(() => SWSH_OWRNG_Generator.Core.Generator.Generate(
+            List<Core.Frame> Frames = await Task.Run(() => SWSH_OWRNG_Generator.Core.Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
                 DesiredNature, DesiredAura, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
                 IsCuteCharm, IsShinyLocked, IsHidden, TIDSIDSearch, InitialAdvances, progress
@@ -793,28 +779,15 @@ namespace SWSH_OWRNG_Generator.WinForms
 
         private void SensBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (sensBox.Checked)
-            {
-                this.PID.Visible = false;
-                this.EC.Visible = false;
-                this.State0.Visible = false;
-                this.State1.Visible = false;
-                this.InputState0.UseSystemPasswordChar = true;
-                this.InputState1.UseSystemPasswordChar = true;
-                this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = true;
-                this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                this.PID.Visible = true;
-                this.EC.Visible = true;
-                this.State0.Visible = true;
-                this.State1.Visible = true;
-                this.InputState0.UseSystemPasswordChar = false;
-                this.InputState1.UseSystemPasswordChar = false;
-                this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = false;
-                this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = false;
-            }
+            bool check = sensBox.Checked;
+            this.PID.Visible = !check;
+            this.EC.Visible = !check;
+            this.State0.Visible = !check;
+            this.State1.Visible = !check;
+            this.InputState0.UseSystemPasswordChar = check;
+            this.InputState1.UseSystemPasswordChar = check;
+            this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = check;
+            this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = check;
         }
 
         private static void SetIvFilters(TextBox statLower, TextBox statUpper, string min, string max)
@@ -1167,16 +1140,11 @@ namespace SWSH_OWRNG_Generator.WinForms
 
         private void CheckHidden_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckHidden.Checked)
-            {
-                CheckStatic.Enabled = false;
-                SelectedAura.Enabled = false;
-            }
-            else
-            {
-                CheckStatic.Enabled = true;
-                SelectedAura.Enabled = true;
-            }
+            bool check = CheckHidden.Checked;
+            CheckStatic.Enabled = !check;
+            SelectedAura.Enabled = !check;
+            InputKOCount.ReadOnly = check;
+            InputEMs.ReadOnly = check;
         }
     }
 }
