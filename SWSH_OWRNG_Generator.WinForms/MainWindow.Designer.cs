@@ -188,7 +188,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // LabelState0
             // 
             this.LabelState0.AutoSize = true;
-            this.LabelState0.Location = new System.Drawing.Point(9, 30);
+            this.LabelState0.Location = new System.Drawing.Point(12, 30);
             this.LabelState0.Name = "LabelState0";
             this.LabelState0.Size = new System.Drawing.Size(53, 15);
             this.LabelState0.TabIndex = 0;
@@ -217,7 +217,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // LabelState1
             // 
             this.LabelState1.AutoSize = true;
-            this.LabelState1.Location = new System.Drawing.Point(12, 55);
+            this.LabelState1.Location = new System.Drawing.Point(12, 57);
             this.LabelState1.Name = "LabelState1";
             this.LabelState1.Size = new System.Drawing.Size(50, 15);
             this.LabelState1.TabIndex = 3;
