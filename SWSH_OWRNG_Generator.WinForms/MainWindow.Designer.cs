@@ -179,6 +179,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.LabelAura = new System.Windows.Forms.Label();
             this.CheckHidden = new System.Windows.Forms.CheckBox();
             this.TIDSIDFinderBrokenTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.EncounterLookupMenu = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1321,7 +1322,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             // 
             this.MainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SeedFinderMenu});
+            this.SeedFinderMenu,
+            this.EncounterLookupMenu});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(831, 24);
@@ -1791,6 +1793,13 @@ namespace SWSH_OWRNG_Generator.WinForms
             // 
             this.TIDSIDFinderBrokenTooltip.ShowAlways = true;
             // 
+            // EncounterLookupMenu
+            // 
+            this.EncounterLookupMenu.Name = "EncounterLookupMenu";
+            this.EncounterLookupMenu.Size = new System.Drawing.Size(116, 20);
+            this.EncounterLookupMenu.Text = "Encounter Lookup";
+            this.EncounterLookupMenu.Click += new System.EventHandler(this.EncounterLookupMenu_Click);
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 699);
@@ -2078,5 +2087,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         private Label LabelAura;
         private CheckBox CheckHidden;
         private ToolTip TIDSIDFinderBrokenTooltip;
+        private ToolStripMenuItem EncounterLookupMenu;
     }
 }

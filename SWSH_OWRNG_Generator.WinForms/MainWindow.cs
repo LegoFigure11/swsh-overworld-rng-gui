@@ -1147,5 +1147,11 @@ namespace SWSH_OWRNG_Generator.WinForms
             InputEMs.ReadOnly = check;
             Brilliant.Visible = !check;
         }
+
+        private void EncounterLookupMenu_Click(object sender, EventArgs e)
+        {
+            using EncounterLookup EncounterLookupForm = new();
+            EncounterLookupForm.ShowDialog();
+        }
     }
 }
