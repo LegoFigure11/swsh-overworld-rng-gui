@@ -4,7 +4,7 @@
     <Compile Update="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SeedFinder.cs">
+    <Compile Update="Subforms\SeedFinder\SeedFinder.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
