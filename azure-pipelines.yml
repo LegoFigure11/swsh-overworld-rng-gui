@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
 trigger:
-- NotKoiTest
+- main
 
 pr: none
 
@@ -21,22 +21,6 @@ variables:
   Configuration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  inputs:
-    command: 'restore'
-    restoreSolution: '**/*.sln'
-    
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'restore'
-
-- task: VSBuild@1
-  inputs:
-    solution: '$(Solution)'
-    platform: '$(Platform)'
-    configuration: '$(Configuration)'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: SWSH_OWRNG_Generator_GUI'
