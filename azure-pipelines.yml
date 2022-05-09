@@ -4,30 +4,43 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
 trigger:
-- main
+- NotKoiTest
+
+pr: none
 
 pool:
+  name: Azure Pipelines
   vmImage: 'windows-latest'
+  demands:
+  - msbuild
+  - visualstudio
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  Solution: '**/*.sln'
+  Platform: 'x64'
+  Configuration: 'Release'
 
 steps:
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: '$(solution)'
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
 
 - task: VSBuild@1
   inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    solution: '$(Solution)'
+    platform: '$(Platform)'
+    configuration: '$(Configuration)'
 
-- task: VSTest@2
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: SWSH_OWRNG_Generator_GUI'
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    PathtoPublish: 'SWSH_OWRNG_Generator.WinForms\bin\x64\Release\net6.0windows'
+    ArtifactName: SWSH_OWRNG_Generator_GUI
+  condition: succeededOrFailed()
