@@ -179,18 +179,19 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.LabelAura = new System.Windows.Forms.Label();
             this.CheckHidden = new System.Windows.Forms.CheckBox();
             this.TIDSIDFinderBrokenTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.EncounterLookupMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.PokeSprite = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
             this.MainMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PokeSprite)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelState0
             // 
             this.LabelState0.AutoSize = true;
-            this.LabelState0.Location = new System.Drawing.Point(9, 30);
+            this.LabelState0.Location = new System.Drawing.Point(12, 30);
             this.LabelState0.Name = "LabelState0";
             this.LabelState0.Size = new System.Drawing.Size(53, 15);
             this.LabelState0.TabIndex = 0;
@@ -219,7 +220,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // LabelState1
             // 
             this.LabelState1.AutoSize = true;
-            this.LabelState1.Location = new System.Drawing.Point(12, 55);
+            this.LabelState1.Location = new System.Drawing.Point(12, 57);
             this.LabelState1.Name = "LabelState1";
             this.LabelState1.Size = new System.Drawing.Size(50, 15);
             this.LabelState1.TabIndex = 3;
@@ -1323,7 +1324,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             // 
             this.MainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SeedFinderMenu});
+            this.SeedFinderMenu,
+            this.EncounterLookupMenu});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(831, 24);
@@ -1792,15 +1794,26 @@ namespace SWSH_OWRNG_Generator.WinForms
             // TIDSIDFinderBrokenTooltip
             // 
             this.TIDSIDFinderBrokenTooltip.ShowAlways = true;
+
+            //
+            // EncounterLookupMenu
+            //
+
+            this.EncounterLookupMenu.Name = "EncounterLookupMenu";
+            this.EncounterLookupMenu.Size = new System.Drawing.Size(116, 20);
+
+            this.EncounterLookupMenu.Text = "Encounter Lookup";
+            this.EncounterLookupMenu.Click += new System.EventHandler(this.EncounterLookupMenu_Click);
+
             // 
-            // pictureBox1
+            // PokeSprite
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(275, 294);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 138;
-            this.pictureBox1.TabStop = false;
+            this.PokeSprite.Location = new System.Drawing.Point(275, 294);
+            this.PokeSprite.Name = "pictureBox1";
+            this.PokeSprite.Size = new System.Drawing.Size(48, 53);
+            this.PokeSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.PokeSprite.TabIndex = 138;
+            this.PokeSprite.TabStop = false;
             // 
             // MainWindow
             // 
@@ -1811,6 +1824,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.Controls.Add(this.ReadEncounterButton);
             this.Controls.Add(this.DaySkipButton);
             this.Controls.Add(this.DaySkipAmountInput);
+            this.Controls.Add(this.TextBoxCheckEncounter);
             this.Controls.Add(this.TrackAdv);
             this.Controls.Add(this.ConnectionStatusText);
             this.Controls.Add(this.ConnectionStatusLabel);
@@ -1924,10 +1938,9 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.Controls.Add(this.InputState1);
             this.Controls.Add(this.InputState0);
             this.Controls.Add(this.LabelState0);
-            this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.ImageRareMark);
-            this.Controls.Add(this.TextBoxCheckEncounter);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PokeSprite);
+            this.Controls.Add(this.MainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1936,7 +1949,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PokeSprite)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2090,7 +2103,8 @@ namespace SWSH_OWRNG_Generator.WinForms
         private ComboBox SelectedAura;
         private Label LabelAura;
         private CheckBox CheckHidden;
-        public PictureBox pictureBox1;
+        public PictureBox PokeSprite;
         private ToolTip TIDSIDFinderBrokenTooltip;
+        private ToolStripMenuItem EncounterLookupMenu;
     }
 }

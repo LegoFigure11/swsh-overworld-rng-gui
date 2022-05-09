@@ -258,7 +258,7 @@ namespace SWSH_OWRNG_Generator.Core
                 if (unco == 0) return "Uncommon";
                 if (weat == 0 && Weather) return "Weather";
                 if (time == 0) return "Time";
-                if (fish == 0 && Fishing) return "Fish";
+                if (fish == 0 && Fishing) return "Fishing";
             }
             return "None";
         }

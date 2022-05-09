@@ -4,9 +4,13 @@
     <Compile Update="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SeedFinder.cs">
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Subforms\EncounterLookup\EncounterLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Subforms\SeedFinder\SeedFinder.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
 </Project>

@@ -864,7 +864,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 Program.Window.ConnectionStatusText.Text = "Connecting...";
                 SwitchConnection.Connect();
                 Program.Window.ConnectionStatusText.Text = "Connected!";
-                pictureBox1.Load("https://raw.githubusercontent.com/kwsch/PKHeX/master/PKHeX.Drawing.PokeSprite/Resources/img/Pokemon%20Sprite%20Overlays/starter.png");
+                PokeSprite.Load("https://raw.githubusercontent.com/kwsch/PKHeX/master/PKHeX.Drawing.PokeSprite/Resources/img/Pokemon%20Sprite%20Overlays/starter.png");
                 ChangeButtonState(Program.Window.ConnectButton, false);
                 ChangeButtonState(Program.Window.DisconnectButton, true);
                 ChangeButtonState(Program.Window.ReadEncounterButton, true);
@@ -1130,7 +1130,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
                 {
                     TextboxSetText(Program.Window.TextBoxCheckEncounter, "No encounter present.");
-                    pictureBox1.Load("https://raw.githubusercontent.com/kwsch/PKHeX/master/PKHeX.Drawing.PokeSprite/Resources/img/Pokemon%20Sprite%20Overlays/starter.png");
+                    PokeSprite.Load("https://raw.githubusercontent.com/kwsch/PKHeX/master/PKHeX.Drawing.PokeSprite/Resources/img/Pokemon%20Sprite%20Overlays/starter.png");
                     ImageRareMark.Load("https://www.serebii.net/swordshield/ribbons/raremark.png");
                     ShouldReadState = true;
                     ChangeButtonState(Program.Window.ReadEncounterButton, true);
@@ -1148,7 +1148,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                     var sprite = $"https://raw.githubusercontent.com/kwsch/PKHeX/master/PKHeX.Drawing.PokeSprite/Resources/img/Big%20Pokemon%20Sprites/b_{pk.Species}.png";
                     if (pk.IsShiny)
                         sprite = $"https://raw.githubusercontent.com/kwsch/PKHeX/master/PKHeX.Drawing.PokeSprite/Resources/img/Big%20Shiny%20Sprites/b_{pk.Species}s.png";
-                    pictureBox1.Load(sprite);
+                    PokeSprite.Load(sprite);
                     if (hasMark)
                     {
                         var url = $"https://www.serebii.net/swordshield/ribbons/{mark.ToString().Replace("Mark", "").ToLower()}mark.png";
@@ -1176,6 +1176,11 @@ namespace SWSH_OWRNG_Generator.WinForms
             InputKOCount.ReadOnly = check;
             InputEMs.ReadOnly = check;
             Brilliant.Visible = !check;
+        }
+        private void EncounterLookupMenu_Click(object sender, EventArgs e)
+        {
+            using EncounterLookup EncounterLookupForm = new();
+            EncounterLookupForm.ShowDialog();
         }
     }
 }
