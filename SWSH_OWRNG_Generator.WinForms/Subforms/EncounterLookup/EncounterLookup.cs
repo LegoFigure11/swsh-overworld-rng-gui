@@ -43,7 +43,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                             if (Data.Item != null && Encounter.EncounterType! != "Static") Item = (bool)Data.Item;
                             if (Data.EggMoves != null) EggMoves = (List<string>)Data.EggMoves;
                             if (Encounter.FixedIVs != null) FixedIVs = (int)Encounter.FixedIVs;
-                            if (Encounter.AbilityLocked != null) AbilityLocked = (bool)Encounter.AbilityLocked;
+                            if (Encounter.LockedAbility != null) AbilityLocked = (bool)Encounter.LockedAbility;
                             if (Encounter.Ability != null) Ability = Encounter.Ability.ToString();
                             if (Encounter.Slots != null) Slot = $"{Encounter.Slots[0]} - {Encounter.Slots[1]}";
 
@@ -59,7 +59,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                                     FixedIVs = FixedIVs,
                                     Weather = Encounter.Weather,
                                     Location = Encounter.Location,
-                                    AbilityLocked = AbilityLocked,
+                                    LockedAbility = AbilityLocked,
                                     Ability = Ability,
                                 }
                             );
