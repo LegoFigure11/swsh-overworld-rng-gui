@@ -11,9 +11,9 @@ namespace SWSH_OWRNG_Generator.Core
 
     public class PkmInfo
     {
+        public IList<EncounterDetails>? Encounters { get; set; }
         public bool? Item { get; set; }
         public IList<string>? EggMoves { get; set; }
-        public IList<EncounterDetails>? Encounters { get; set; }
 
     }
 
@@ -24,7 +24,7 @@ namespace SWSH_OWRNG_Generator.Core
         public string? Weather { get; set; }
         public string? Location { get; set; }
         public int[]? Level { get; set; }
-        public int[]? Slot { get; set; }
+        public int[]? Slots { get; set; }
         public bool? AbilityLocked { get; set; }
         public int? Ability { set; get; }
         public int? FixedIVs { get; set; }
@@ -36,5 +36,8 @@ namespace SWSH_OWRNG_Generator.Core
         public bool? Item { get; set; }
         public IList<string>? EggMoves { get; set; }
         public int? EggMoveCount { get; set; }
+        public new string? Ability { get; set; }
+        public new string? Level { get; set; }
+        public new string? Slots { get; set; }
     }
 }

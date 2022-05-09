@@ -62,6 +62,7 @@
             this.SelectedGame.Name = "SelectedGame";
             this.SelectedGame.Size = new System.Drawing.Size(121, 23);
             this.SelectedGame.TabIndex = 1;
+            this.SelectedGame.SelectedIndexChanged += new System.EventHandler(this.PopulateEncounterDataTable);
             // 
             // SelectedSpecies
             // 
@@ -72,7 +73,7 @@
             this.SelectedSpecies.Name = "SelectedSpecies";
             this.SelectedSpecies.Size = new System.Drawing.Size(547, 23);
             this.SelectedSpecies.TabIndex = 2;
-            this.SelectedSpecies.SelectedIndexChanged += new System.EventHandler(this.SelectedSpecies_SelectedIndexChanged);
+            this.SelectedSpecies.SelectedIndexChanged += new System.EventHandler(this.PopulateEncounterDataTable);
             // 
             // LabelSpecies
             // 
