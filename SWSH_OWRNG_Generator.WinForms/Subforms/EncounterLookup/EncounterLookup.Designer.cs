@@ -42,6 +42,7 @@
             // 
             // LabelGameVersion
             // 
+            this.LabelGameVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelGameVersion.AutoSize = true;
             this.LabelGameVersion.Location = new System.Drawing.Point(620, 15);
             this.LabelGameVersion.Name = "LabelGameVersion";
@@ -51,6 +52,7 @@
             // 
             // SelectedGame
             // 
+            this.SelectedGame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SelectedGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectedGame.FormattingEnabled = true;
             this.SelectedGame.Items.AddRange(new object[] {
@@ -63,6 +65,8 @@
             // 
             // SelectedSpecies
             // 
+            this.SelectedSpecies.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SelectedSpecies.FormattingEnabled = true;
             this.SelectedSpecies.Location = new System.Drawing.Point(67, 12);
             this.SelectedSpecies.Name = "SelectedSpecies";
@@ -83,6 +87,9 @@
             // 
             this.EncounterLookupResults.AllowUserToAddRows = false;
             this.EncounterLookupResults.AllowUserToDeleteRows = false;
+            this.EncounterLookupResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EncounterLookupResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EncounterLookupResults.Location = new System.Drawing.Point(12, 41);
             this.EncounterLookupResults.Name = "EncounterLookupResults";

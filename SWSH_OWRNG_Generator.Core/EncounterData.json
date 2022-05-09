@@ -1,158 +1,161 @@
 {
   "Abomasnow": {
     "Item": true,
-    "EggMoves": ["Leech Seed", "Growth", "Double-Edge", "Stomp", "Skull Bash"]
+    "EggMoves": [ "Leech Seed", "Growth", "Double-Edge", "Stomp", "Skull Bash" ]
   },
   "Abra": {
     "Item": true,
-    "EggMoves": ["Confusion", "Guard Split", "Magic Coat"]
+    "EggMoves": [ "Confusion", "Guard Split", "Magic Coat" ]
   },
   "Absol": {
-    "EggMoves": ["Curse", "Double-Edge", "Magic Coat", "Mean Look", "Bite", "Feint"]
+    "EggMoves": [ "Curse", "Double-Edge", "Magic Coat", "Mean Look", "Bite", "Feint" ]
   },
   "Accelgor": {
-    "EggMoves": ["Double-Edge", "Guard Split", "Mind Reader", "Feint"]
+    "EggMoves": [ "Double-Edge", "Guard Split", "Mind Reader", "Feint" ]
   },
   "Aegislash": {
-    "EggMoves": ["Destiny Bond", "Wide Guard", "Block"]
+    "EggMoves": [ "Destiny Bond", "Wide Guard", "Block" ]
   },
   "Aerodactyl": {
-    "EggMoves": ["Curse", "Dragon Breath", "Roost", "Tailwind", "Whirlwind", "Wide Guard"]
+    "EggMoves": [ "Curse", "Dragon Breath", "Roost", "Tailwind", "Whirlwind", "Wide Guard" ]
   },
   "Aggron": {
     "Item": true,
-    "EggMoves": ["Curse", "Dragon Rush", "Endeavor", "Head Smash", "Stomp", "Mud-Slap"]
+    "EggMoves": [ "Curse", "Dragon Rush", "Endeavor", "Head Smash", "Stomp", "Mud-Slap" ]
   },
   "Alakazam": {
     "Item": true,
-    "EggMoves": ["Confusion", "Guard Split", "Magic Coat"]
+    "EggMoves": [ "Confusion", "Guard Split", "Magic Coat" ]
   },
   "Altaria": {
-    "EggMoves": ["Dragon Rush", "Feather Dance", "Haze", "Defog", "Tailwind", "Astonish", "Roost"]
+    "EggMoves": [ "Dragon Rush", "Feather Dance", "Haze", "Defog", "Tailwind", "Astonish", "Roost" ]
   },
   "Amaura": {
-    "EggMoves": ["Take Down", "Rock Throw", "Discharge", "Haze", "Mirror Coat", "Aurora Veil"]
+    "EggMoves": [ "Take Down", "Rock Throw", "Discharge", "Haze", "Mirror Coat", "Aurora Veil" ]
   },
   "Amoonguss": {
     "Item": true,
-    "EggMoves": ["Defense Curl", "Poison Powder", "Rollout", "Worry Seed"]
+    "EggMoves": [ "Defense Curl", "Poison Powder", "Rollout", "Worry Seed" ]
   },
   "Anorith": {
-    "EggMoves": ["Knock Off", "Curse", "Rapid Spin", "Sand Attack", "Water Pulse", "Aqua Jet"]
+    "EggMoves": [ "Knock Off", "Curse", "Rapid Spin", "Sand Attack", "Water Pulse", "Aqua Jet" ]
   },
   "Appletun": {
-    "EggMoves": ["Sucker Punch", "Rollout", "Defense Curl", "Recycle"]
+    "EggMoves": [ "Sucker Punch", "Rollout", "Defense Curl", "Recycle" ]
   },
   "Applin": {
-    "EggMoves": ["Sucker Punch", "Rollout", "Defense Curl", "Recycle"]
+    "EggMoves": [ "Sucker Punch", "Rollout", "Defense Curl", "Recycle" ]
   },
   "Araquanid": {
     "Item": true,
-    "EggMoves": ["Power Split", "Stockpile", "Spit Up", "Sticky Web"]
+    "EggMoves": [ "Power Split", "Stockpile", "Spit Up", "Sticky Web" ]
   },
   "Arcanine": {
-    "EggMoves": ["Thrash", "Double-Edge", "Morning Sun", "Covet", "Double Kick"]
+    "EggMoves": [ "Thrash", "Double-Edge", "Morning Sun", "Covet", "Double Kick" ]
   },
   "Archen": {
-    "EggMoves": ["Bite", "Defog", "Knock Off", "Double Team", "Head Smash", "Switcheroo"]
+    "EggMoves": [ "Bite", "Defog", "Knock Off", "Double Team", "Head Smash", "Switcheroo" ]
   },
   "Armaldo": {
-    "EggMoves": ["Knock Off", "Curse", "Rapid Spin", "Sand Attack", "Water Pulse", "Aqua Jet"]
+    "EggMoves": [ "Knock Off", "Curse", "Rapid Spin", "Sand Attack", "Water Pulse", "Aqua Jet" ]
   },
   "Aron": {
     "Item": true,
-    "EggMoves": ["Curse", "Dragon Rush", "Endeavor", "Head Smash", "Stomp", "Mud-Slap"]
+    "EggMoves": [ "Curse", "Dragon Rush", "Endeavor", "Head Smash", "Stomp", "Mud-Slap" ]
   },
   "Arrokuda": {
-    "EggMoves": ["Thrash", "Acupressure", "Slash", "Night Slash"]
+    "EggMoves": [ "Thrash", "Acupressure", "Slash", "Night Slash" ]
   },
   "Articuno-Galar": {},
   "Audino": {
     "Item": true,
-    "EggMoves": ["Healing Wish", "Wish", "Yawn", "Sweet Kiss"]
+    "EggMoves": [ "Healing Wish", "Wish", "Yawn", "Sweet Kiss" ]
   },
   "Aurorus": {
-    "EggMoves": ["Take Down", "Rock Throw", "Discharge", "Haze", "Mirror Coat", "Aurora Veil"]
+    "EggMoves": [ "Take Down", "Rock Throw", "Discharge", "Haze", "Mirror Coat", "Aurora Veil" ]
   },
   "Avalugg": {
-    "EggMoves": ["Mist", "Mirror Coat", "Aurora Veil"]
+    "EggMoves": [ "Mist", "Mirror Coat", "Aurora Veil" ]
   },
   "Axew": {
-    "EggMoves": ["Counter", "Night Slash", "Endeavor", "Harden", "First Impression", "Counter"]
+    "EggMoves": [ "Counter", "Night Slash", "Endeavor", "Harden", "First Impression", "Counter" ]
   },
   "Azumarill": {
-    "EggMoves": ["Aqua Jet", "Belly Drum", "Copycat", "Perish Song", "Present", "Sing", "Soak", "Supersonic", "Tickle"]
+    "EggMoves": [ "Aqua Jet", "Belly Drum", "Copycat", "Perish Song", "Present", "Sing", "Soak", "Supersonic", "Tickle" ]
   },
   "Azurill": {
-    "EggMoves": ["Aqua Jet", "Belly Drum", "Copycat", "Perish Song", "Present", "Sing", "Soak", "Supersonic", "Tickle"]
+    "EggMoves": [ "Aqua Jet", "Belly Drum", "Copycat", "Perish Song", "Present", "Sing", "Soak", "Supersonic", "Tickle" ]
   },
   "Bagon": {
     "Item": true,
-    "EggMoves": ["Defense Curl", "Dragon Rush", "Thrash", "Twister"]
+    "EggMoves": [ "Defense Curl", "Dragon Rush", "Thrash", "Twister" ]
   },
   "Baltoy": {
     "Item": true
   },
   "Barbaracle": {
-    "EggMoves": ["Switcheroo", "Night Slash", "Sand Attack"]
+    "EggMoves": [ "Switcheroo", "Night Slash", "Sand Attack" ]
   },
   "Barboach": {
-    "EggMoves": ["Thrash", "Spark", "Flail", "Take Down"]
+    "EggMoves": [ "Thrash", "Spark", "Flail", "Take Down" ]
   },
   "Barraskewda": {
-    "EggMoves": ["Thrash", "Acupressure", "Slash", "Night Slash"]
+    "EggMoves": [ "Thrash", "Acupressure", "Slash", "Night Slash" ]
   },
-  "Basculin": {
-    "EggMoves": ["Bubble Beam", "Endeavor"]
+  "Basculin-Red-Striped": {
+    "EggMoves": [ "Bubble Beam", "Endeavor" ]
+  },
+  "Basculin-Blue-Striped": {
+    "EggMoves": [ "Bubble Beam", "Endeavor" ]
   },
   "Beartic": {
-    "EggMoves": ["Yawn", "Night Slash", "Focus Punch"]
+    "EggMoves": [ "Yawn", "Night Slash", "Focus Punch" ]
   },
   "Beheeyem": {
-    "EggMoves": ["Disable", "Astonish", "Psych Up", "Destiny Bond"]
+    "EggMoves": [ "Disable", "Astonish", "Psych Up", "Destiny Bond" ]
   },
   "Beldum": {
     "Item": true
   },
   "Bellossom": {
     "Item": true,
-    "EggMoves": ["Razor Leaf", "Flail", "Synthesis", "Ingrain", "Tickle", "Teeter Dance", "Nature Power", "After You", "Strength Sap", "Leech Seed"]
+    "EggMoves": [ "Razor Leaf", "Flail", "Synthesis", "Ingrain", "Tickle", "Teeter Dance", "Nature Power", "After You", "Strength Sap", "Leech Seed" ]
   },
   "Bergmite": {
-    "EggMoves": ["Mist", "Mirror Coat", "Aurora Veil"]
+    "EggMoves": [ "Mist", "Mirror Coat", "Aurora Veil" ]
   },
   "Bewear": {
-    "EggMoves": ["Force Palm", "Rollout", "Defense Curl", "Stomp"]
+    "EggMoves": [ "Force Palm", "Rollout", "Defense Curl", "Stomp" ]
   },
   "Binacle": {
-    "EggMoves": ["Switcheroo", "Night Slash", "Sand Attack"]
+    "EggMoves": [ "Switcheroo", "Night Slash", "Sand Attack" ]
   },
   "Bisharp": {
-    "EggMoves": ["Sucker Punch", "Headbutt", "Mean Look", "Quick Guard"]
+    "EggMoves": [ "Sucker Punch", "Headbutt", "Mean Look", "Quick Guard" ]
   },
   "Blipbug": {
-    "EggMoves": ["Infestation", "Supersonic", "Sticky Web", "Recover"]
+    "EggMoves": [ "Infestation", "Supersonic", "Sticky Web", "Recover" ]
   },
   "Blissey": {
     "Item": true,
-    "EggMoves": ["Aromatherapy", "Gravity", "Present", "Seismic Toss"]
+    "EggMoves": [ "Aromatherapy", "Gravity", "Present", "Seismic Toss" ]
   },
   "Boldore": {
     "Item": true,
-    "EggMoves": ["Curse", "Autotomize", "Take Down", "Gravity", "Wide Guard"]
+    "EggMoves": [ "Curse", "Autotomize", "Take Down", "Gravity", "Wide Guard" ]
   },
   "Boltund": {
-    "EggMoves": ["Double-Edge", "Sand Attack", "Flame Charge", "Discharge", "Howl"]
+    "EggMoves": [ "Double-Edge", "Sand Attack", "Flame Charge", "Discharge", "Howl" ]
   },
   "Bonsly": {
-    "EggMoves": ["Headbutt", "Harden", "Defense Curl", "Curse", "Rollout", "Rock Polish"]
+    "EggMoves": [ "Headbutt", "Harden", "Defense Curl", "Curse", "Rollout", "Rock Polish" ]
   },
   "Bouffalant": {
-    "EggMoves": ["Belch", "Headbutt", "Mud-Slap", "Skull Bash", "Stomp", "Cotton Guard", "Endeavor"]
+    "EggMoves": [ "Belch", "Headbutt", "Mud-Slap", "Skull Bash", "Stomp", "Cotton Guard", "Endeavor" ]
   },
   "Bounsweet": {
     "Item": true,
-    "EggMoves": ["Synthesis", "Acupressure", "Endeavor"]
+    "EggMoves": [ "Synthesis", "Acupressure", "Endeavor" ]
   },
   "Braviary": {},
   "Bronzong": {
@@ -163,59 +166,59 @@
   },
   "Budew": {
     "Item": true,
-    "EggMoves": ["Synthesis", "Cotton Spore", "Sleep Powder", "Razor Leaf", "Extrasensory", "Life Dew"]
+    "EggMoves": [ "Synthesis", "Cotton Spore", "Sleep Powder", "Razor Leaf", "Extrasensory", "Life Dew" ]
   },
   "Buneary": {
-    "EggMoves": ["Circle Throw", "Copycat", "Double Hit", "Fake Out", "Flail", "Focus Punch", "Sweet Kiss", "Switcheroo", "Teeter Dance"]
+    "EggMoves": [ "Circle Throw", "Copycat", "Double Hit", "Fake Out", "Flail", "Focus Punch", "Sweet Kiss", "Switcheroo", "Teeter Dance" ]
   },
   "Bunnelby": {
-    "EggMoves": ["Defense Curl", "Rollout"]
+    "EggMoves": [ "Defense Curl", "Rollout" ]
   },
   "Butterfree": {
     "Item": true
   },
   "Carbink": {},
   "Carkol": {
-    "EggMoves": ["Explosion", "Mud-Slap", "Block"]
+    "EggMoves": [ "Explosion", "Mud-Slap", "Block" ]
   },
   "Carracosta": {
-    "EggMoves": ["Knock Off", "Rollout", "Rock Throw", "Slam", "Water Pulse", "Block"]
+    "EggMoves": [ "Knock Off", "Rollout", "Rock Throw", "Slam", "Water Pulse", "Block" ]
   },
   "Carvanha": {
-    "EggMoves": ["Ancient Power", "Destiny Bond", "Double-Edge", "Thrash", "Water Pulse"]
+    "EggMoves": [ "Ancient Power", "Destiny Bond", "Double-Edge", "Thrash", "Water Pulse" ]
   },
   "Caterpie": {},
   "Centiskorch": {
-    "EggMoves": ["Knock Off", "Struggle Bug", "Rollout", "Defense Curl"]
+    "EggMoves": [ "Knock Off", "Struggle Bug", "Rollout", "Defense Curl" ]
   },
   "Chandelure": {
-    "EggMoves": ["Acid Armor", "Haze", "Clear Smog", "Power Split"]
+    "EggMoves": [ "Acid Armor", "Haze", "Clear Smog", "Power Split" ]
   },
   "Chansey": {
-    "EggMoves": ["Aromatherapy", "Gravity", "Present", "Seismic Toss"]
+    "EggMoves": [ "Aromatherapy", "Gravity", "Present", "Seismic Toss" ]
   },
   "Charjabug": {
     "Item": true,
-    "EggMoves": ["Harden", "Discharge"]
+    "EggMoves": [ "Harden", "Discharge" ]
   },
   "Cherubi": {
     "Item": true,
-    "EggMoves": ["Razor Leaf", "Sweet Scent", "Tickle", "Nature Power", "Aromatherapy", "Heal Pulse", "Healing Wish", "Defense Curl", "Flower Shield", "Rollout"]
+    "EggMoves": [ "Razor Leaf", "Sweet Scent", "Tickle", "Nature Power", "Aromatherapy", "Heal Pulse", "Healing Wish", "Defense Curl", "Flower Shield", "Rollout" ]
   },
   "Chewtle": {
-    "EggMoves": ["Skull Bash", "Gastro Acid", "Dragon Tail"]
+    "EggMoves": [ "Skull Bash", "Gastro Acid", "Dragon Tail" ]
   },
   "Chinchou": {
-    "EggMoves": ["Psybeam", "Mist", "Water Pulse", "Soak"]
+    "EggMoves": [ "Psybeam", "Mist", "Water Pulse", "Soak" ]
   },
   "Cinccino": {
-    "EggMoves": ["Tail Whip", "Aqua Tail", "Knock Off", "Flail"]
+    "EggMoves": [ "Tail Whip", "Aqua Tail", "Knock Off", "Flail" ]
   },
   "Clauncher": {
-    "EggMoves": ["Entrainment", "Aqua Tail", "Bubble Beam"]
+    "EggMoves": [ "Entrainment", "Aqua Tail", "Bubble Beam" ]
   },
   "Clawitzer": {
-    "EggMoves": ["Entrainment", "Aqua Tail", "Bubble Beam"]
+    "EggMoves": [ "Entrainment", "Aqua Tail", "Bubble Beam" ]
   },
   "Claydol": {
     "Item": true
@@ -227,14 +230,14 @@
     "Item": true
   },
   "Clobbopus": {
-    "EggMoves": ["Pain Split", "Soak", "Sucker Punch", "Circle Throw", "Seismic Toss", "Power-Up Punch"]
+    "EggMoves": [ "Pain Split", "Soak", "Sucker Punch", "Circle Throw", "Seismic Toss", "Power-Up Punch" ]
   },
   "Cloyster": {
     "Item": true,
-    "EggMoves": ["Bubble Beam", "Water Pulse", "Aqua Ring", "Life Dew"]
+    "EggMoves": [ "Bubble Beam", "Water Pulse", "Aqua Ring", "Life Dew" ]
   },
   "Coalossal": {
-    "EggMoves": ["Explosion", "Mud-Slap", "Block"]
+    "EggMoves": [ "Explosion", "Mud-Slap", "Block" ]
   },
   "Cobalion": {},
   "Combee": {
@@ -242,636 +245,639 @@
   },
   "Comfey": {
     "Item": true,
-    "EggMoves": ["After You", "Worry Seed", "Leaf Tornado"]
+    "EggMoves": [ "After You", "Worry Seed", "Leaf Tornado" ]
   },
   "Conkeldurr": {
-    "EggMoves": ["Counter", "Detect", "Wide Guard", "Mach Punch", "Power-Up Punch", "Defog"]
+    "EggMoves": [ "Counter", "Detect", "Wide Guard", "Mach Punch", "Power-Up Punch", "Defog" ]
   },
   "Copperajah": {
     "Item": true,
-    "EggMoves": ["Double-Edge", "Belch", "Curse", "Slam", "Fissure", "Swagger", "Whirlwind", "Defense Curl"]
+    "EggMoves": [ "Double-Edge", "Belch", "Curse", "Slam", "Fissure", "Swagger", "Whirlwind", "Defense Curl" ]
   },
   "Corphish": {
-    "EggMoves": ["Ancient Power", "Metal Claw", "Double-Edge", "Aqua Jet", "Switcheroo", "Slash"]
+    "EggMoves": [ "Ancient Power", "Metal Claw", "Double-Edge", "Aqua Jet", "Switcheroo", "Slash" ]
   },
   "Corsola-Galar": {
-    "EggMoves": ["Haze", "Confuse Ray", "Nature Power", "Destiny Bond", "Water Pulse", "Head Smash"]
+    "EggMoves": [ "Haze", "Confuse Ray", "Nature Power", "Destiny Bond", "Water Pulse", "Head Smash" ]
   },
   "Corviknight": {
-    "EggMoves": ["Sky Attack", "Sand Attack", "Tailwind", "Defog", "Rock Smash", "Spite", "Roost"]
+    "EggMoves": [ "Sky Attack", "Sand Attack", "Tailwind", "Defog", "Rock Smash", "Spite", "Roost" ]
   },
   "Corvisquire": {
-    "EggMoves": ["Sky Attack", "Sand Attack", "Tailwind", "Defog", "Rock Smash", "Spite", "Roost"]
+    "EggMoves": [ "Sky Attack", "Sand Attack", "Tailwind", "Defog", "Rock Smash", "Spite", "Roost" ]
   },
   "Cottonee": {
     "Item": true,
-    "EggMoves": ["Tickle", "Memento", "Switcheroo", "Worry Seed", "Nature Power"]
+    "EggMoves": [ "Tickle", "Memento", "Switcheroo", "Worry Seed", "Nature Power" ]
   },
   "Cramorant": {
-    "EggMoves": ["Defog", "Aerial Ace", "Feather Dance", "Aqua Ring", "Roost"]
+    "EggMoves": [ "Defog", "Aerial Ace", "Feather Dance", "Aqua Ring", "Roost" ]
   },
   "Crawdaunt": {
-    "EggMoves": ["Ancient Power", "Metal Claw", "Double-Edge", "Aqua Jet", "Switcheroo", "Slash"]
+    "EggMoves": [ "Ancient Power", "Metal Claw", "Double-Edge", "Aqua Jet", "Switcheroo", "Slash" ]
   },
   "Croagunk": {
     "Item": true,
-    "EggMoves": ["Feint", "Dynamic Punch", "Headbutt", "Vacuum Wave", "Fake Out", "Cross Chop", "Bullet Punch", "Counter", "Quick Guard"]
+    "EggMoves": [ "Feint", "Dynamic Punch", "Headbutt", "Vacuum Wave", "Fake Out", "Cross Chop", "Bullet Punch", "Counter", "Quick Guard" ]
   },
   "Crustle": {
     "Item": true,
-    "EggMoves": ["Night Slash", "Counter", "Curse", "Block", "Wide Guard", "Knock Off"]
+    "EggMoves": [ "Night Slash", "Counter", "Curse", "Block", "Wide Guard", "Knock Off" ]
   },
   "Cryogonal": {
     "Item": true
   },
   "Cubchoo": {
-    "EggMoves": ["Yawn", "Night Slash", "Focus Punch"]
+    "EggMoves": [ "Yawn", "Night Slash", "Focus Punch" ]
   },
   "Cubone": {
     "Item": true,
-    "EggMoves": ["Ancient Power", "Belly Drum", "Detect", "Double Kick", "Perish Song", "Skull Bash", "Curse", "Leer"]
+    "EggMoves": [ "Ancient Power", "Belly Drum", "Detect", "Double Kick", "Perish Song", "Skull Bash", "Curse", "Leer" ]
   },
   "Cufant": {
     "Item": true,
-    "EggMoves": ["Double-Edge", "Belch", "Curse", "Slam", "Fissure", "Swagger", "Whirlwind", "Defense Curl"]
+    "EggMoves": [ "Double-Edge", "Belch", "Curse", "Slam", "Fissure", "Swagger", "Whirlwind", "Defense Curl" ]
   },
   "Cutiefly": {
     "Item": true,
-    "EggMoves": ["Moonblast", "Sticky Web", "Aromatic Mist"]
+    "EggMoves": [ "Moonblast", "Sticky Web", "Aromatic Mist" ]
   },
   "Darmanitan-Galar": {
-    "EggMoves": ["Focus Punch", "Hammer Arm", "Take Down", "Flame Wheel", "Yawn", "Freeze-Dry", "Incinerate", "Power-Up Punch"]
+    "EggMoves": [ "Focus Punch", "Hammer Arm", "Take Down", "Flame Wheel", "Yawn", "Freeze-Dry", "Incinerate", "Power-Up Punch" ]
   },
   "Darumaka-Galar": {
-    "EggMoves": ["Focus Punch", "Hammer Arm", "Take Down", "Flame Wheel", "Yawn", "Freeze-Dry", "Incinerate", "Power-Up Punch"]
+    "EggMoves": [ "Focus Punch", "Hammer Arm", "Take Down", "Flame Wheel", "Yawn", "Freeze-Dry", "Incinerate", "Power-Up Punch" ]
   },
   "Dedenne": {
-    "EggMoves": ["Covet", "Tearful Look", "Magnet Rise"]
+    "EggMoves": [ "Covet", "Tearful Look", "Magnet Rise" ]
   },
   "Deino": {
-    "EggMoves": ["Double Hit", "Astonish", "Head Smash", "Belch"]
+    "EggMoves": [ "Double Hit", "Astonish", "Head Smash", "Belch" ]
   },
   "Delibird": {
-    "EggMoves": ["Aurora Beam", "Quick Attack", "Splash", "Rapid Spin", "Ice Shard", "Fake Out", "Freeze-Dry", "Destiny Bond", "Counter", "Aurora Veil", "Memento"]
+    "EggMoves": [ "Aurora Beam", "Quick Attack", "Splash", "Rapid Spin", "Ice Shard", "Fake Out", "Freeze-Dry", "Destiny Bond", "Counter", "Aurora Veil", "Memento" ]
   },
   "Dewpider": {
     "Item": true,
-    "EggMoves": ["Power Split", "Stockpile", "Spit Up", "Sticky Web"]
+    "EggMoves": [ "Power Split", "Stockpile", "Spit Up", "Sticky Web" ]
   },
   "Dhelmise": {},
   "Diggersby": {
-    "EggMoves": ["Defense Curl", "Rollout"]
+    "EggMoves": [ "Defense Curl", "Rollout" ]
   },
   "Diglett": {
     "Item": true,
-    "EggMoves": ["Ancient Power", "Headbutt", "Final Gambit", "Memento", "Hone Claws"]
+    "EggMoves": [ "Ancient Power", "Headbutt", "Final Gambit", "Memento", "Hone Claws" ]
   },
   "Ditto": {
     "Item": true
   },
   "Dottler": {
     "Item": true,
-    "EggMoves": ["Infestation", "Supersonic", "Sticky Web", "Recover"]
+    "EggMoves": [ "Infestation", "Supersonic", "Sticky Web", "Recover" ]
   },
   "Doublade": {
-    "EggMoves": ["Destiny Bond", "Wide Guard", "Block"]
+    "EggMoves": [ "Destiny Bond", "Wide Guard", "Block" ]
   },
   "Dragalge": {
-    "EggMoves": ["Acid Armor", "Haze", "Twister", "Dragon Tail"]
+    "EggMoves": [ "Acid Armor", "Haze", "Twister", "Dragon Tail" ]
   },
   "Dragapult": {
-    "EggMoves": ["Curse", "Grudge", "Confuse Ray", "Double Team", "Disable", "Dragon Tail", "Sucker Punch"]
+    "EggMoves": [ "Curse", "Grudge", "Confuse Ray", "Double Team", "Disable", "Dragon Tail", "Sucker Punch" ]
   },
   "Dragonair": {
     "Item": true,
-    "EggMoves": ["Aqua Jet", "Dragon Breath", "Extreme Speed", "Mist", "Supersonic", "Water Pulse"]
+    "EggMoves": [ "Aqua Jet", "Dragon Breath", "Extreme Speed", "Mist", "Supersonic", "Water Pulse" ]
   },
   "Dragonite": {
     "Item": true,
-    "EggMoves": ["Aqua Jet", "Dragon Breath", "Extreme Speed", "Mist", "Supersonic", "Water Pulse"]
+    "EggMoves": [ "Aqua Jet", "Dragon Breath", "Extreme Speed", "Mist", "Supersonic", "Water Pulse" ]
   },
   "Drakloak": {
-    "EggMoves": ["Curse", "Grudge", "Confuse Ray", "Double Team", "Disable", "Dragon Tail", "Sucker Punch"]
+    "EggMoves": [ "Curse", "Grudge", "Confuse Ray", "Double Team", "Disable", "Dragon Tail", "Sucker Punch" ]
   },
   "Drampa": {
     "Item": true,
-    "EggMoves": ["Dragon Rush", "Mist", "Tickle"]
+    "EggMoves": [ "Dragon Rush", "Mist", "Tickle" ]
   },
   "Drapion": {
     "Item": true,
-    "EggMoves": ["Sand Attack", "Slash", "Confuse Ray", "Whirlwind"]
+    "EggMoves": [ "Sand Attack", "Slash", "Confuse Ray", "Whirlwind" ]
   },
   "Dratini": {
     "Item": true,
-    "EggMoves": ["Aqua Jet", "Dragon Breath", "Extreme Speed", "Mist", "Supersonic", "Water Pulse"]
+    "EggMoves": [ "Aqua Jet", "Dragon Breath", "Extreme Speed", "Mist", "Supersonic", "Water Pulse" ]
   },
   "Drednaw": {
-    "EggMoves": ["Skull Bash", "Gastro Acid", "Dragon Tail"]
+    "EggMoves": [ "Skull Bash", "Gastro Acid", "Dragon Tail" ]
   },
   "Dreepy": {
-    "EggMoves": ["Curse", "Grudge", "Confuse Ray", "Double Team", "Disable", "Dragon Tail", "Sucker Punch"]
+    "EggMoves": [ "Curse", "Grudge", "Confuse Ray", "Double Team", "Disable", "Dragon Tail", "Sucker Punch" ]
   },
   "Drifblim": {
-    "EggMoves": ["Memento", "Disable", "Haze", "Hypnosis", "Clear Smog", "Defog"]
+    "EggMoves": [ "Memento", "Disable", "Haze", "Hypnosis", "Clear Smog", "Defog" ]
   },
   "Drifloon": {
-    "EggMoves": ["Memento", "Disable", "Haze", "Hypnosis", "Clear Smog", "Defog"]
+    "EggMoves": [ "Memento", "Disable", "Haze", "Hypnosis", "Clear Smog", "Defog" ]
   },
   "Drilbur": {
-    "EggMoves": ["Metal Sound", "Submission", "Slash"]
+    "EggMoves": [ "Metal Sound", "Submission", "Slash" ]
   },
   "Druddigon": {
     "Item": true,
-    "EggMoves": ["Night Slash", "Glare", "Poison Tail", "Sucker Punch"]
+    "EggMoves": [ "Night Slash", "Glare", "Poison Tail", "Sucker Punch" ]
   },
   "Dubwool": {
-    "EggMoves": ["Stomp", "Swagger", "Counter"]
+    "EggMoves": [ "Stomp", "Swagger", "Counter" ]
   },
   "Dugtrio": {
     "Item": true,
-    "EggMoves": ["Ancient Power", "Headbutt", "Final Gambit", "Memento", "Hone Claws"]
+    "EggMoves": [ "Ancient Power", "Headbutt", "Final Gambit", "Memento", "Hone Claws" ]
   },
   "Dunsparce": {
-    "EggMoves": ["Astonish", "Bite", "Curse", "Headbutt", "Magic Coat", "Aqua Tail", "Last Resort"]
+    "EggMoves": [ "Astonish", "Bite", "Curse", "Headbutt", "Magic Coat", "Aqua Tail", "Last Resort" ]
   },
   "Duosion": {
-    "EggMoves": ["Astonish", "Confuse Ray", "Acid Armor"]
+    "EggMoves": [ "Astonish", "Confuse Ray", "Acid Armor" ]
   },
   "Duraludon": {
-    "EggMoves": ["Slash", "Night Slash", "Mirror Coat"]
+    "EggMoves": [ "Slash", "Night Slash", "Mirror Coat" ]
   },
   "Durant": {
-    "EggMoves": ["Struggle Bug", "First Impression", "Metal Burst", "Infestation", "Flail"]
+    "EggMoves": [ "Struggle Bug", "First Impression", "Metal Burst", "Infestation", "Flail" ]
   },
   "Dusclops": {
     "Item": true,
-    "EggMoves": ["Pain Split", "Grudge", "Memento", "Haze"]
+    "EggMoves": [ "Pain Split", "Grudge", "Memento", "Haze" ]
   },
   "Dusknoir": {
     "Item": true,
-    "EggMoves": ["Pain Split", "Grudge", "Memento", "Haze"]
+    "EggMoves": [ "Pain Split", "Grudge", "Memento", "Haze" ]
   },
   "Duskull": {
     "Item": true,
-    "EggMoves": ["Pain Split", "Grudge", "Memento", "Haze"]
+    "EggMoves": [ "Pain Split", "Grudge", "Memento", "Haze" ]
   },
   "Dwebble": {
     "Item": true,
-    "EggMoves": ["Night Slash", "Counter", "Curse", "Block", "Wide Guard", "Knock Off"]
+    "EggMoves": [ "Night Slash", "Counter", "Curse", "Block", "Wide Guard", "Knock Off" ]
   },
   "Eevee": {
-    "EggMoves": ["Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish"]
+    "EggMoves": [ "Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish" ]
   },
   "Eiscue": {
-    "EggMoves": ["Soak", "Aqua Ring", "Belly Drum", "Double-Edge", "Icicle Crash", "Head Smash"]
+    "EggMoves": [ "Soak", "Aqua Ring", "Belly Drum", "Double-Edge", "Icicle Crash", "Head Smash" ]
   },
   "Eldegoss": {
-    "EggMoves": ["Growth", "Leech Seed", "Worry Seed", "Poison Powder", "Stun Spore", "Sleep Powder"]
+    "EggMoves": [ "Growth", "Leech Seed", "Worry Seed", "Poison Powder", "Stun Spore", "Sleep Powder" ]
   },
   "Electabuzz": {
     "Item": true,
-    "EggMoves": ["Cross Chop", "Dynamic Punch", "Focus Punch", "Hammer Arm", "Feint"]
+    "EggMoves": [ "Cross Chop", "Dynamic Punch", "Focus Punch", "Hammer Arm", "Feint" ]
   },
   "Electivire": {
     "Item": true,
-    "EggMoves": ["Cross Chop", "Dynamic Punch", "Focus Punch", "Hammer Arm", "Feint"]
+    "EggMoves": [ "Cross Chop", "Dynamic Punch", "Focus Punch", "Hammer Arm", "Feint" ]
   },
   "Electrike": {
-    "EggMoves": ["Headbutt", "Curse", "Switcheroo", "Spark"]
+    "EggMoves": [ "Headbutt", "Curse", "Switcheroo", "Spark" ]
   },
   "Elekid": {
     "Item": true,
-    "EggMoves": ["Cross Chop", "Dynamic Punch", "Focus Punch", "Hammer Arm", "Feint"]
+    "EggMoves": [ "Cross Chop", "Dynamic Punch", "Focus Punch", "Hammer Arm", "Feint" ]
   },
   "Elgyem": {
-    "EggMoves": ["Disable", "Astonish", "Psych Up", "Destiny Bond"]
+    "EggMoves": [ "Disable", "Astonish", "Psych Up", "Destiny Bond" ]
   },
   "Emolga": {
-    "EggMoves": ["Astonish", "Covet", "Roost", "Shock Wave", "Tickle", "Defog"]
+    "EggMoves": [ "Astonish", "Covet", "Roost", "Shock Wave", "Tickle", "Defog" ]
   },
   "Escavalier": {
-    "EggMoves": ["Counter", "Bug Bite", "Knock Off", "Slash", "Night Slash"]
+    "EggMoves": [ "Counter", "Bug Bite", "Knock Off", "Slash", "Night Slash" ]
   },
   "Espeon": {
-    "EggMoves": ["Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish"]
+    "EggMoves": [ "Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish" ]
   },
   "Espurr": {
-    "EggMoves": ["Yawn", "Tickle"]
+    "EggMoves": [ "Yawn", "Tickle" ]
   },
   "Excadrill": {
-    "EggMoves": ["Metal Sound", "Submission", "Slash"]
+    "EggMoves": [ "Metal Sound", "Submission", "Slash" ]
   },
   "Exeggcute": {
     "Item": true,
-    "EggMoves": ["Ancient Power", "Block", "Curse", "Ingrain", "Moonlight", "Sleep Powder", "Stun Spore", "Poison Powder"]
+    "EggMoves": [ "Ancient Power", "Block", "Curse", "Ingrain", "Moonlight", "Sleep Powder", "Stun Spore", "Poison Powder" ]
   },
   "Exeggutor": {
-    "EggMoves": ["Ancient Power", "Block", "Curse", "Ingrain", "Moonlight", "Sleep Powder", "Stun Spore", "Poison Powder"]
+    "EggMoves": [ "Ancient Power", "Block", "Curse", "Ingrain", "Moonlight", "Sleep Powder", "Stun Spore", "Poison Powder" ]
   },
   "Falinks": {},
   "Farfetch'd-Galar": {
     "Item": true
   },
   "Feebas": {
-    "EggMoves": ["Mirror Coat", "Dragon Breath", "Hypnosis", "Confuse Ray", "Mist", "Haze", "Tickle"]
+    "EggMoves": [ "Mirror Coat", "Dragon Breath", "Hypnosis", "Confuse Ray", "Mist", "Haze", "Tickle" ]
   },
   "Ferroseed": {
     "Item": true,
-    "EggMoves": ["Leech Seed", "Gravity", "Acid Spray", "Toxic", "Knock Off"]
+    "EggMoves": [ "Leech Seed", "Gravity", "Acid Spray", "Toxic", "Knock Off" ]
   },
   "Ferrothorn": {
     "Item": true,
-    "EggMoves": ["Leech Seed", "Gravity", "Acid Spray", "Toxic", "Knock Off"]
+    "EggMoves": [ "Leech Seed", "Gravity", "Acid Spray", "Toxic", "Knock Off" ]
   },
   "Flapple": {
-    "EggMoves": ["Sucker Punch", "Rollout", "Defense Curl", "Recycle"]
+    "EggMoves": [ "Sucker Punch", "Rollout", "Defense Curl", "Recycle" ]
   },
   "Flareon": {
-    "EggMoves": ["Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish"]
+    "EggMoves": [ "Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish" ]
   },
   "Fletchinder": {
-    "EggMoves": ["Flame Charge", "Quick Guard", "Defog"]
+    "EggMoves": [ "Flame Charge", "Quick Guard", "Defog" ]
   },
   "Fletchling": {
-    "EggMoves": ["Flame Charge", "Quick Guard", "Defog"]
+    "EggMoves": [ "Flame Charge", "Quick Guard", "Defog" ]
   },
   "Flygon": {
-    "EggMoves": ["Quick Attack", "Gust", "Flail", "Fury Cutter", "Bug Bite", "Feint", "First Impression"]
+    "EggMoves": [ "Quick Attack", "Gust", "Flail", "Fury Cutter", "Bug Bite", "Feint", "First Impression" ]
   },
   "Fomantis": {
     "Item": true,
-    "EggMoves": ["Aromatherapy", "Defog", "Worry Seed"]
+    "EggMoves": [ "Aromatherapy", "Defog", "Worry Seed" ]
   },
   "Foongus": {
     "Item": true,
-    "EggMoves": ["Defense Curl", "Poison Powder", "Rollout", "Worry Seed"]
+    "EggMoves": [ "Defense Curl", "Poison Powder", "Rollout", "Worry Seed" ]
   },
   "Frillish": {
-    "EggMoves": ["Acid Armor", "Confuse Ray", "Pain Split", "Mist", "Bubble Beam", "Strength Sap"]
+    "EggMoves": [ "Acid Armor", "Confuse Ray", "Pain Split", "Mist", "Bubble Beam", "Strength Sap" ]
   },
   "Froslass": {
-    "EggMoves": ["Block", "Disable", "Switcheroo", "Rollout", "Icicle Crash"]
+    "EggMoves": [ "Block", "Disable", "Switcheroo", "Rollout", "Icicle Crash" ]
   },
   "Frosmoth": {
-    "EggMoves": ["Fairy Wind", "Mirror Coat", "Bug Bite"]
+    "EggMoves": [ "Fairy Wind", "Mirror Coat", "Bug Bite" ]
   },
   "Gallade": {
-    "EggMoves": ["Disable", "Mean Look", "Memento", "Destiny Bond", "Grudge", "Shadow Sneak", "Confuse Ray", "Knock Off"]
+    "EggMoves": [ "Disable", "Mean Look", "Memento", "Destiny Bond", "Grudge", "Shadow Sneak", "Confuse Ray", "Knock Off" ]
   },
   "Galvantula": {
-    "EggMoves": ["Poison Sting", "Lunge", "Struggle Bug", "Double Team", "Infestation"]
+    "EggMoves": [ "Poison Sting", "Lunge", "Struggle Bug", "Double Team", "Infestation" ]
   },
   "Garbodor": {
     "Item": true,
-    "EggMoves": ["Haze", "Curse", "Sand Attack", "Autotomize", "Rollout"]
+    "EggMoves": [ "Haze", "Curse", "Sand Attack", "Autotomize", "Rollout" ]
   },
   "Garchomp": {
-    "EggMoves": ["Thrash", "Metal Claw", "Double-Edge", "Twister"]
+    "EggMoves": [ "Thrash", "Metal Claw", "Double-Edge", "Twister" ]
   },
   "Gardevoir": {
-    "EggMoves": ["Disable", "Mean Look", "Memento", "Destiny Bond", "Grudge", "Shadow Sneak", "Confuse Ray", "Knock Off"]
+    "EggMoves": [ "Disable", "Mean Look", "Memento", "Destiny Bond", "Grudge", "Shadow Sneak", "Confuse Ray", "Knock Off" ]
   },
   "Gastly": {
-    "EggMoves": ["Perish Song", "Haze", "Astonish", "Grudge", "Disable", "Clear Smog", "Smog", "Reflect Type", "Toxic"]
+    "EggMoves": [ "Perish Song", "Haze", "Astonish", "Grudge", "Disable", "Clear Smog", "Smog", "Reflect Type", "Toxic" ]
   },
   "Gastrodon": {
-    "EggMoves": ["Counter", "Mirror Coat", "Stockpile", "Swallow", "Spit Up", "Yawn", "Curse", "Sludge", "Clear Smog", "Mist", "Acid Armor"]
+    "EggMoves": [ "Counter", "Mirror Coat", "Stockpile", "Swallow", "Spit Up", "Yawn", "Curse", "Sludge", "Clear Smog", "Mist", "Acid Armor" ]
   },
   "Gengar": {
-    "EggMoves": ["Perish Song", "Haze", "Astonish", "Grudge", "Disable", "Clear Smog", "Smog", "Reflect Type", "Toxic"]
+    "EggMoves": [ "Perish Song", "Haze", "Astonish", "Grudge", "Disable", "Clear Smog", "Smog", "Reflect Type", "Toxic" ]
   },
   "Gible": {
-    "EggMoves": ["Thrash", "Metal Claw", "Double-Edge", "Twister"]
+    "EggMoves": [ "Thrash", "Metal Claw", "Double-Edge", "Twister" ]
   },
   "Gigalith": {
     "Item": true,
-    "EggMoves": ["Curse", "Autotomize", "Take Down", "Gravity", "Wide Guard"]
+    "EggMoves": [ "Curse", "Autotomize", "Take Down", "Gravity", "Wide Guard" ]
   },
   "Glaceon": {
-    "EggMoves": ["Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish"]
+    "EggMoves": [ "Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish" ]
   },
   "Glalie": {
-    "EggMoves": ["Block", "Disable", "Switcheroo", "Rollout", "Icicle Crash"]
+    "EggMoves": [ "Block", "Disable", "Switcheroo", "Rollout", "Icicle Crash" ]
   },
   "Gloom": {
     "Item": true,
-    "EggMoves": ["Razor Leaf", "Flail", "Synthesis", "Ingrain", "Tickle", "Teeter Dance", "Nature Power", "After You", "Strength Sap", "Leech Seed"]
+    "EggMoves": [ "Razor Leaf", "Flail", "Synthesis", "Ingrain", "Tickle", "Teeter Dance", "Nature Power", "After You", "Strength Sap", "Leech Seed" ]
   },
   "Golbat": {
-    "EggMoves": ["Curse", "Defog", "Gust", "Hypnosis", "Quick Attack", "Whirlwind", "Wing Attack"]
+    "EggMoves": [ "Curse", "Defog", "Gust", "Hypnosis", "Quick Attack", "Whirlwind", "Wing Attack" ]
   },
   "Goldeen": {
     "Item": true,
-    "EggMoves": ["Psybeam", "Haze", "Aqua Tail", "Acupressure", "Mud-Slap"]
+    "EggMoves": [ "Psybeam", "Haze", "Aqua Tail", "Acupressure", "Mud-Slap" ]
   },
   "Golduck": {
-    "EggMoves": ["Clear Smog", "Confuse Ray", "Cross Chop", "Hypnosis", "Psybeam", "Simple Beam", "Yawn"]
+    "EggMoves": [ "Clear Smog", "Confuse Ray", "Cross Chop", "Hypnosis", "Psybeam", "Simple Beam", "Yawn" ]
   },
   "Golett": {
     "Item": true
   },
   "Golisopod": {
-    "EggMoves": ["Metal Claw", "Wide Guard", "Harden", "Aqua Jet", "Rollout"]
+    "EggMoves": [ "Metal Claw", "Wide Guard", "Harden", "Aqua Jet", "Rollout" ]
   },
   "Golurk": {
     "Item": true
   },
   "Goomy": {
     "Item": true,
-    "EggMoves": ["Counter", "Life Dew"]
+    "EggMoves": [ "Counter", "Life Dew" ]
   },
   "Gossifleur": {
-    "EggMoves": ["Growth", "Leech Seed", "Worry Seed", "Poison Powder", "Stun Spore", "Sleep Powder"]
+    "EggMoves": [ "Growth", "Leech Seed", "Worry Seed", "Poison Powder", "Stun Spore", "Sleep Powder" ]
   },
   "Gothita": {
-    "EggMoves": ["Mirror Coat", "Mean Look", "Heal Pulse", "Torment", "Fake Out"]
+    "EggMoves": [ "Mirror Coat", "Mean Look", "Heal Pulse", "Torment", "Fake Out" ]
   },
   "Gothitelle": {
-    "EggMoves": ["Mirror Coat", "Mean Look", "Heal Pulse", "Torment", "Fake Out"]
+    "EggMoves": [ "Mirror Coat", "Mean Look", "Heal Pulse", "Torment", "Fake Out" ]
   },
   "Gothorita": {
-    "EggMoves": ["Mirror Coat", "Mean Look", "Heal Pulse", "Torment", "Fake Out"]
+    "EggMoves": [ "Mirror Coat", "Mean Look", "Heal Pulse", "Torment", "Fake Out" ]
   },
   "Gourgeist": {
-    "EggMoves": ["Disable", "Destiny Bond", "Curse"]
+    "EggMoves": [ "Disable", "Destiny Bond", "Curse" ]
   },
   "Grapploct": {
-    "EggMoves": ["Pain Split", "Soak", "Sucker Punch", "Circle Throw", "Seismic Toss", "Power-Up Punch"]
+    "EggMoves": [ "Pain Split", "Soak", "Sucker Punch", "Circle Throw", "Seismic Toss", "Power-Up Punch" ]
   },
   "Greedent": {
     "Item": true,
-    "EggMoves": ["Rollout", "Defense Curl", "Last Resort", "Belly Drum"]
+    "EggMoves": [ "Rollout", "Defense Curl", "Last Resort", "Belly Drum" ]
   },
   "Grimmsnarl": {},
   "Growlithe": {
-    "EggMoves": ["Thrash", "Double-Edge", "Morning Sun", "Covet", "Double Kick"]
+    "EggMoves": [ "Thrash", "Double-Edge", "Morning Sun", "Covet", "Double Kick" ]
   },
   "Grubbin": {
-    "EggMoves": ["Harden", "Discharge"]
+    "EggMoves": [ "Harden", "Discharge" ]
   },
   "Gurdurr": {
-    "EggMoves": ["Counter", "Detect", "Wide Guard", "Mach Punch", "Power-Up Punch", "Defog"]
+    "EggMoves": [ "Counter", "Detect", "Wide Guard", "Mach Punch", "Power-Up Punch", "Defog" ]
   },
   "Gyarados": {},
   "Hakamo-o": {
     "Item": true,
-    "EggMoves": ["Counter", "Dragon Breath", "Focus Punch"]
+    "EggMoves": [ "Counter", "Dragon Breath", "Focus Punch" ]
   },
   "Happiny": {
     "Item": true,
-    "EggMoves": ["Aromatherapy", "Gravity", "Present", "Seismic Toss"]
+    "EggMoves": [ "Aromatherapy", "Gravity", "Present", "Seismic Toss" ]
   },
   "Hatenna": {
-    "EggMoves": ["Aromatic Mist", "Nuzzle", "After You", "Quash"]
+    "EggMoves": [ "Aromatic Mist", "Nuzzle", "After You", "Quash" ]
   },
   "Hatterene": {
-    "EggMoves": ["Aromatic Mist", "Nuzzle", "After You", "Quash"]
+    "EggMoves": [ "Aromatic Mist", "Nuzzle", "After You", "Quash" ]
   },
   "Hattrem": {
-    "EggMoves": ["Aromatic Mist", "Nuzzle", "After You", "Quash"]
+    "EggMoves": [ "Aromatic Mist", "Nuzzle", "After You", "Quash" ]
   },
   "Haunter": {
-    "EggMoves": ["Perish Song", "Haze", "Astonish", "Grudge", "Disable", "Clear Smog", "Smog", "Reflect Type", "Toxic"]
+    "EggMoves": [ "Perish Song", "Haze", "Astonish", "Grudge", "Disable", "Clear Smog", "Smog", "Reflect Type", "Toxic" ]
   },
   "Hawlucha": {
     "Item": true,
-    "EggMoves": ["Entrainment", "Quick Guard", "Feint", "Defog", "Mean Look", "Cross Chop"]
+    "EggMoves": [ "Entrainment", "Quick Guard", "Feint", "Defog", "Mean Look", "Cross Chop" ]
   },
   "Haxorus": {
-    "EggMoves": ["Counter", "Night Slash", "Endeavor", "Harden", "First Impression", "Counter"]
+    "EggMoves": [ "Counter", "Night Slash", "Endeavor", "Harden", "First Impression", "Counter" ]
   },
   "Heatmor": {
-    "EggMoves": ["Night Slash", "Curse", "Sucker Punch", "Tickle", "Belch"]
+    "EggMoves": [ "Night Slash", "Curse", "Sucker Punch", "Tickle", "Belch" ]
   },
   "Helioptile": {
-    "EggMoves": ["Glare", "Dragon Rush", "Dragon Tail"]
+    "EggMoves": [ "Glare", "Dragon Rush", "Dragon Tail" ]
   },
   "Heracross": {
-    "EggMoves": ["Flail", "Double-Edge", "Harden", "Seismic Toss", "Night Slash", "Feint", "Take Down"]
+    "EggMoves": [ "Flail", "Double-Edge", "Harden", "Seismic Toss", "Night Slash", "Feint", "Take Down" ]
   },
   "Herdier": {
-    "EggMoves": ["After You", "Howl", "Lick", "Mud-Slap", "Yawn", "Covet"]
+    "EggMoves": [ "After You", "Howl", "Lick", "Mud-Slap", "Yawn", "Covet" ]
   },
   "Hippopotas": {
-    "EggMoves": ["Stockpile", "Swallow", "Spit Up", "Curse", "Whirlwind"]
+    "EggMoves": [ "Stockpile", "Swallow", "Spit Up", "Curse", "Whirlwind" ]
   },
   "Hippowdon": {
-    "EggMoves": ["Stockpile", "Swallow", "Spit Up", "Curse", "Whirlwind"]
+    "EggMoves": [ "Stockpile", "Swallow", "Spit Up", "Curse", "Whirlwind" ]
   },
   "Hitmonchan": {
-    "EggMoves": ["Rapid Spin", "High Jump Kick", "Mach Punch", "Mind Reader", "Counter", "Vacuum Wave", "Bullet Punch", "Feint"]
+    "EggMoves": [ "Rapid Spin", "High Jump Kick", "Mach Punch", "Mind Reader", "Counter", "Vacuum Wave", "Bullet Punch", "Feint" ]
   },
   "Hitmonlee": {
-    "EggMoves": ["Rapid Spin", "High Jump Kick", "Mach Punch", "Mind Reader", "Counter", "Vacuum Wave", "Bullet Punch", "Feint"]
+    "EggMoves": [ "Rapid Spin", "High Jump Kick", "Mach Punch", "Mind Reader", "Counter", "Vacuum Wave", "Bullet Punch", "Feint" ]
   },
   "Hitmontop": {
-    "EggMoves": ["Rapid Spin", "High Jump Kick", "Mach Punch", "Mind Reader", "Counter", "Vacuum Wave", "Bullet Punch", "Feint"]
+    "EggMoves": [ "Rapid Spin", "High Jump Kick", "Mach Punch", "Mind Reader", "Counter", "Vacuum Wave", "Bullet Punch", "Feint" ]
   },
   "Honedge": {
-    "EggMoves": ["Destiny Bond", "Wide Guard", "Block"]
+    "EggMoves": [ "Destiny Bond", "Wide Guard", "Block" ]
   },
   "Hoothoot": {
-    "EggMoves": ["Supersonic", "Wing Attack", "Whirlwind", "Feather Dance", "Night Shade", "Defog"]
+    "EggMoves": [ "Supersonic", "Wing Attack", "Whirlwind", "Feather Dance", "Night Shade", "Defog" ]
   },
   "Horsea": {
     "Item": true,
-    "EggMoves": ["Aurora Beam", "Clear Smog", "Disable", "Flail", "Octazooka", "Splash", "Water Pulse"]
+    "EggMoves": [ "Aurora Beam", "Clear Smog", "Disable", "Flail", "Octazooka", "Splash", "Water Pulse" ]
   },
   "Hydreigon": {
-    "EggMoves": ["Double Hit", "Astonish", "Head Smash", "Belch"]
+    "EggMoves": [ "Double Hit", "Astonish", "Head Smash", "Belch" ]
   },
   "Impidimp": {},
   "Indeedee-F": {
-    "EggMoves": ["Psych Up", "Fake Out", "Psycho Shift", "Heal Pulse"]
+    "EggMoves": [ "Psych Up", "Fake Out", "Psycho Shift", "Heal Pulse" ]
   },
   "Indeedee-M": {
-    "EggMoves": ["Psych Up", "Fake Out", "Extrasensory"]
+    "EggMoves": [ "Psych Up", "Fake Out", "Extrasensory" ]
   },
   "Inkay": {
-    "EggMoves": ["Destiny Bond", "Disable", "Acupressure"]
+    "EggMoves": [ "Destiny Bond", "Disable", "Acupressure" ]
   },
   "Jangmo-o": {
     "Item": true,
-    "EggMoves": ["Counter", "Dragon Breath", "Focus Punch"]
+    "EggMoves": [ "Counter", "Dragon Breath", "Focus Punch" ]
   },
   "Jellicent": {
-    "EggMoves": ["Acid Armor", "Confuse Ray", "Pain Split", "Mist", "Bubble Beam", "Strength Sap"]
+    "EggMoves": [ "Acid Armor", "Confuse Ray", "Pain Split", "Mist", "Bubble Beam", "Strength Sap" ]
   },
   "Jigglypuff": {
     "Item": true
   },
   "Jolteon": {
-    "EggMoves": ["Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish"]
+    "EggMoves": [ "Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish" ]
   },
   "Joltik": {
-    "EggMoves": ["Poison Sting", "Lunge", "Struggle Bug", "Double Team", "Infestation"]
+    "EggMoves": [ "Poison Sting", "Lunge", "Struggle Bug", "Double Team", "Infestation" ]
   },
   "Jynx": {
-    "EggMoves": ["Fake Out", "Wish", "Role Play"]
+    "EggMoves": [ "Fake Out", "Wish", "Role Play" ]
   },
   "Kabuto": {
-    "EggMoves": ["Aurora Beam", "Bubble Beam", "Confuse Ray", "Flail", "Knock Off", "Rapid Spin", "Take Down", "Mega Drain"]
+    "EggMoves": [ "Aurora Beam", "Bubble Beam", "Confuse Ray", "Flail", "Knock Off", "Rapid Spin", "Take Down", "Mega Drain" ]
   },
   "Kabutops": {
-    "EggMoves": ["Aurora Beam", "Bubble Beam", "Confuse Ray", "Flail", "Knock Off", "Rapid Spin", "Take Down", "Mega Drain"]
+    "EggMoves": [ "Aurora Beam", "Bubble Beam", "Confuse Ray", "Flail", "Knock Off", "Rapid Spin", "Take Down", "Mega Drain" ]
   },
   "Kadabra": {
     "Item": true,
-    "EggMoves": ["Confusion", "Guard Split", "Magic Coat"]
+    "EggMoves": [ "Confusion", "Guard Split", "Magic Coat" ]
   },
   "Kangaskhan": {
-    "EggMoves": ["Circle Throw", "Counter", "Disable", "Double-Edge", "Endeavor", "Hammer Arm"]
+    "EggMoves": [ "Circle Throw", "Counter", "Disable", "Double-Edge", "Endeavor", "Hammer Arm" ]
   },
   "Karrablast": {
-    "EggMoves": ["Counter", "Bug Bite", "Knock Off", "Slash", "Night Slash"]
+    "EggMoves": [ "Counter", "Bug Bite", "Knock Off", "Slash", "Night Slash" ]
   },
   "Keldeo": {},
   "Kingdra": {
     "Item": true,
-    "EggMoves": ["Aurora Beam", "Clear Smog", "Disable", "Flail", "Octazooka", "Splash", "Water Pulse"]
+    "EggMoves": [ "Aurora Beam", "Clear Smog", "Disable", "Flail", "Octazooka", "Splash", "Water Pulse" ]
   },
   "Kingler": {
-    "EggMoves": ["Knock Off", "Ancient Power", "Hammer Arm", "Slash", "Night Slash"]
+    "EggMoves": [ "Knock Off", "Ancient Power", "Hammer Arm", "Slash", "Night Slash" ]
   },
   "Kirlia": {
-    "EggMoves": ["Disable", "Mean Look", "Memento", "Destiny Bond", "Grudge", "Shadow Sneak", "Confuse Ray", "Knock Off"]
+    "EggMoves": [ "Disable", "Mean Look", "Memento", "Destiny Bond", "Grudge", "Shadow Sneak", "Confuse Ray", "Knock Off" ]
   },
   "Klang": {},
   "Klefki": {
-    "EggMoves": ["Switcheroo", "Magnet Rise"]
+    "EggMoves": [ "Switcheroo", "Magnet Rise" ]
   },
   "Klink": {},
   "Klinklang": {},
   "Koffing": {
     "Item": true,
-    "EggMoves": ["Psybeam", "Pain Split", "Grudge", "Spite", "Curse", "Stockpile", "Swallow", "Spit Up"]
+    "EggMoves": [ "Psybeam", "Pain Split", "Grudge", "Spite", "Curse", "Stockpile", "Swallow", "Spit Up" ]
   },
   "Kommo-o": {
     "Item": true,
-    "EggMoves": ["Counter", "Dragon Breath", "Focus Punch"]
+    "EggMoves": [ "Counter", "Dragon Breath", "Focus Punch" ]
   },
   "Krabby": {
-    "EggMoves": ["Knock Off", "Ancient Power", "Hammer Arm", "Slash", "Night Slash"]
+    "EggMoves": [ "Knock Off", "Ancient Power", "Hammer Arm", "Slash", "Night Slash" ]
   },
   "Krokorok": {
     "Item": true,
-    "EggMoves": ["Counter", "Double-Edge", "Aqua Tail", "Spite"]
+    "EggMoves": [ "Counter", "Double-Edge", "Aqua Tail", "Spite" ]
   },
   "Krookodile": {
     "Item": true,
-    "EggMoves": ["Counter", "Double-Edge", "Aqua Tail", "Spite"]
+    "EggMoves": [ "Counter", "Double-Edge", "Aqua Tail", "Spite" ]
   },
   "Lairon": {
     "Item": true,
-    "EggMoves": ["Curse", "Dragon Rush", "Endeavor", "Head Smash", "Stomp", "Mud-Slap"]
+    "EggMoves": [ "Curse", "Dragon Rush", "Endeavor", "Head Smash", "Stomp", "Mud-Slap" ]
   },
   "Lampent": {
-    "EggMoves": ["Acid Armor", "Haze", "Clear Smog", "Power Split"]
+    "EggMoves": [ "Acid Armor", "Haze", "Clear Smog", "Power Split" ]
   },
   "Lanturn": {
-    "EggMoves": ["Psybeam", "Mist", "Water Pulse", "Soak"]
+    "EggMoves": [ "Psybeam", "Mist", "Water Pulse", "Soak" ]
   },
   "Lapras": {
-    "EggMoves": ["Tickle", "Curse", "Horn Drill", "Ancient Power", "Fissure", "Freeze-Dry", "Sparkling Aria"]
+    "EggMoves": [ "Tickle", "Curse", "Horn Drill", "Ancient Power", "Fissure", "Freeze-Dry", "Sparkling Aria" ]
   },
   "Larvesta": {
-    "EggMoves": ["Harden", "Absorb", "Thrash"]
+    "EggMoves": [ "Harden", "Absorb", "Thrash" ]
   },
   "Larvitar": {
-    "EggMoves": ["Stomp", "Ancient Power", "Curse"]
+    "EggMoves": [ "Stomp", "Ancient Power", "Curse" ]
   },
   "Leafeon": {
-    "EggMoves": ["Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish"]
+    "EggMoves": [ "Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish" ]
   },
   "Lickilicky": {
     "Item": true,
-    "EggMoves": ["Belch", "Curse", "Hammer Arm", "Thrash"]
+    "EggMoves": [ "Belch", "Curse", "Hammer Arm", "Thrash" ]
   },
   "Lickitung": {
     "Item": true,
-    "EggMoves": ["Belch", "Curse", "Hammer Arm", "Thrash"]
+    "EggMoves": [ "Belch", "Curse", "Hammer Arm", "Thrash" ]
   },
   "Liepard": {
-    "EggMoves": ["Yawn", "Covet", "Copycat", "Slash", "Double Team", "Quick Attack"]
+    "EggMoves": [ "Yawn", "Covet", "Copycat", "Slash", "Double Team", "Quick Attack" ]
   },
   "Lileep": {
     "Item": true,
-    "EggMoves": ["Recover", "Mirror Coat", "Tickle", "Bind", "Curse"]
+    "EggMoves": [ "Recover", "Mirror Coat", "Tickle", "Bind", "Curse" ]
   },
   "Lilligant": {
     "Item": true,
-    "EggMoves": ["Ingrain", "Healing Wish", "Sweet Scent", "Worry Seed"]
+    "EggMoves": [ "Ingrain", "Healing Wish", "Sweet Scent", "Worry Seed" ]
   },
   "Lillipup": {
-    "EggMoves": ["After You", "Howl", "Lick", "Mud-Slap", "Yawn", "Covet"]
+    "EggMoves": [ "After You", "Howl", "Lick", "Mud-Slap", "Yawn", "Covet" ]
   },
   "Linoone-Galar": {
-    "EggMoves": ["Parting Shot", "Quick Guard", "Knock Off"]
+    "EggMoves": [ "Parting Shot", "Quick Guard", "Knock Off" ]
   },
   "Litwick": {
-    "EggMoves": ["Acid Armor", "Haze", "Clear Smog", "Power Split"]
+    "EggMoves": [ "Acid Armor", "Haze", "Clear Smog", "Power Split" ]
   },
   "Lombre": {
     "Item": true,
-    "EggMoves": ["Synthesis", "Razor Leaf", "Sweet Scent", "Leech Seed", "Tickle", "Counter", "Teeter Dance"]
+    "EggMoves": [ "Synthesis", "Razor Leaf", "Sweet Scent", "Leech Seed", "Tickle", "Counter", "Teeter Dance" ]
   },
   "Lopunny": {
-    "EggMoves": ["Circle Throw", "Copycat", "Double Hit", "Fake Out", "Flail", "Focus Punch", "Sweet Kiss", "Switcheroo", "Teeter Dance"]
+    "EggMoves": [ "Circle Throw", "Copycat", "Double Hit", "Fake Out", "Flail", "Focus Punch", "Sweet Kiss", "Switcheroo", "Teeter Dance" ]
   },
   "Lotad": {
     "Item": true,
-    "EggMoves": ["Synthesis", "Razor Leaf", "Sweet Scent", "Leech Seed", "Tickle", "Counter", "Teeter Dance"]
+    "EggMoves": [ "Synthesis", "Razor Leaf", "Sweet Scent", "Leech Seed", "Tickle", "Counter", "Teeter Dance" ]
   },
   "Loudred": {
-    "EggMoves": ["Circle Throw", "Disarming Voice", "Endeavor", "Extrasensory", "Hammer Arm", "Smokescreen", "Take Down", "Whirlwind"]
+    "EggMoves": [ "Circle Throw", "Disarming Voice", "Endeavor", "Extrasensory", "Hammer Arm", "Smokescreen", "Take Down", "Whirlwind" ]
   },
   "Lucario": {
-    "EggMoves": ["Cross Chop", "Detect", "Bite", "Mind Reader", "High Jump Kick", "Vacuum Wave", "Bullet Punch", "Circle Throw", "Howl"]
+    "EggMoves": [ "Cross Chop", "Detect", "Bite", "Mind Reader", "High Jump Kick", "Vacuum Wave", "Bullet Punch", "Circle Throw", "Howl" ]
   },
   "Ludicolo": {
     "Item": true,
-    "EggMoves": ["Synthesis", "Razor Leaf", "Sweet Scent", "Leech Seed", "Tickle", "Counter", "Teeter Dance"]
+    "EggMoves": [ "Synthesis", "Razor Leaf", "Sweet Scent", "Leech Seed", "Tickle", "Counter", "Teeter Dance" ]
   },
   "Lunatone": {
     "Item": true
   },
   "Lurantis": {
     "Item": true,
-    "EggMoves": ["Aromatherapy", "Defog", "Worry Seed"]
+    "EggMoves": [ "Aromatherapy", "Defog", "Worry Seed" ]
   },
   "Luxio": {
-    "EggMoves": ["Baby-Doll Eyes", "Take Down", "Double Kick", "Howl", "Night Slash", "Quick Attack", "Shock Wave"]
+    "EggMoves": [ "Baby-Doll Eyes", "Take Down", "Double Kick", "Howl", "Night Slash", "Quick Attack", "Shock Wave" ]
   },
   "Luxray": {
-    "EggMoves": ["Baby-Doll Eyes", "Take Down", "Double Kick", "Howl", "Night Slash", "Quick Attack", "Shock Wave"]
+    "EggMoves": [ "Baby-Doll Eyes", "Take Down", "Double Kick", "Howl", "Night Slash", "Quick Attack", "Shock Wave" ]
   },
-  "Lycanroc": {
-    "EggMoves": ["Thrash", "Endeavor", "Last Resort"]
+  "Lycanroc-Midday": {
+    "EggMoves": [ "Thrash", "Endeavor", "Last Resort" ]
+  },
+  "Lycanroc-Midnight": {
+    "EggMoves": [ "Thrash", "Endeavor", "Last Resort" ]
   },
   "Machamp": {
     "Item": true,
-    "EggMoves": ["Counter", "Bullet Punch", "Tickle", "Quick Guard", "Submission"]
+    "EggMoves": [ "Counter", "Bullet Punch", "Tickle", "Quick Guard", "Submission" ]
   },
   "Machoke": {
     "Item": true,
-    "EggMoves": ["Counter", "Bullet Punch", "Tickle", "Quick Guard", "Submission"]
+    "EggMoves": [ "Counter", "Bullet Punch", "Tickle", "Quick Guard", "Submission" ]
   },
   "Machop": {
     "Item": true,
-    "EggMoves": ["Counter", "Bullet Punch", "Tickle", "Quick Guard", "Submission"]
+    "EggMoves": [ "Counter", "Bullet Punch", "Tickle", "Quick Guard", "Submission" ]
   },
   "Magby": {
     "Item": true,
-    "EggMoves": ["Belch", "Dynamic Punch", "Focus Punch", "Mach Punch", "Cross Chop"]
+    "EggMoves": [ "Belch", "Dynamic Punch", "Focus Punch", "Mach Punch", "Cross Chop" ]
   },
   "Magikarp": {},
   "Magmar": {
     "Item": true,
-    "EggMoves": ["Belch", "Dynamic Punch", "Focus Punch", "Mach Punch", "Cross Chop"]
+    "EggMoves": [ "Belch", "Dynamic Punch", "Focus Punch", "Mach Punch", "Cross Chop" ]
   },
   "Magmortar": {
     "Item": true,
-    "EggMoves": ["Belch", "Dynamic Punch", "Focus Punch", "Mach Punch", "Cross Chop"]
+    "EggMoves": [ "Belch", "Dynamic Punch", "Focus Punch", "Mach Punch", "Cross Chop" ]
   },
   "Magnemite": {
     "Item": true
@@ -883,47 +889,50 @@
     "Item": true
   },
   "Malamar": {
-    "EggMoves": ["Destiny Bond", "Disable", "Acupressure"]
+    "EggMoves": [ "Destiny Bond", "Disable", "Acupressure" ]
   },
   "Mamoswine": {
-    "EggMoves": ["Bite", "Ancient Power", "Double-Edge", "Fissure", "Curse", "Icicle Crash", "Freeze-Dry"]
+    "EggMoves": [ "Bite", "Ancient Power", "Double-Edge", "Fissure", "Curse", "Icicle Crash", "Freeze-Dry" ]
   },
   "Mandibuzz": {
-    "EggMoves": ["Mean Look", "Roost", "Toxic"]
+    "EggMoves": [ "Mean Look", "Roost", "Toxic" ]
   },
   "Manectric": {
-    "EggMoves": ["Headbutt", "Curse", "Switcheroo", "Spark"]
+    "EggMoves": [ "Headbutt", "Curse", "Switcheroo", "Spark" ]
   },
   "Mantine": {
-    "EggMoves": ["Twister", "Haze", "Slam", "Mirror Coat", "Splash", "Tailwind", "Confuse Ray"]
+    "EggMoves": [ "Twister", "Haze", "Slam", "Mirror Coat", "Splash", "Tailwind", "Confuse Ray" ]
   },
   "Mantyke": {
-    "EggMoves": ["Twister", "Haze", "Slam", "Mirror Coat", "Splash", "Tailwind", "Confuse Ray"]
+    "EggMoves": [ "Twister", "Haze", "Slam", "Mirror Coat", "Splash", "Tailwind", "Confuse Ray" ]
   },
   "Maractus": {
     "Item": true,
-    "EggMoves": ["Worry Seed", "Wood Hammer"]
+    "EggMoves": [ "Worry Seed", "Wood Hammer" ]
   },
   "Mareanie": {
     "Item": true,
-    "EggMoves": ["Stockpile", "Swallow", "Spit Up", "Haze", "Infestation"]
+    "EggMoves": [ "Stockpile", "Swallow", "Spit Up", "Haze", "Infestation" ]
   },
   "Marill": {
-    "EggMoves": ["Aqua Jet", "Belly Drum", "Copycat", "Perish Song", "Present", "Sing", "Soak", "Supersonic", "Tickle"]
+    "EggMoves": [ "Aqua Jet", "Belly Drum", "Copycat", "Perish Song", "Present", "Sing", "Soak", "Supersonic", "Tickle" ]
   },
   "Marowak": {
     "Item": true,
-    "EggMoves": ["Ancient Power", "Belly Drum", "Detect", "Double Kick", "Perish Song", "Skull Bash", "Curse", "Leer"]
+    "EggMoves": [ "Ancient Power", "Belly Drum", "Detect", "Double Kick", "Perish Song", "Skull Bash", "Curse", "Leer" ]
   },
   "Mawile": {
     "Item": true,
-    "EggMoves": ["Ancient Power", "Tickle", "Slam", "Seismic Toss", "Power-Up Punch"]
+    "EggMoves": [ "Ancient Power", "Tickle", "Slam", "Seismic Toss", "Power-Up Punch" ]
   },
-  "Meowstic": {
-    "EggMoves": ["Yawn", "Tickle"]
+  "Meowstic-M": {
+    "EggMoves": [ "Yawn", "Tickle" ]
+  },
+  "Meowstic-F": {
+    "EggMoves": [ "Yawn", "Tickle" ]
   },
   "Meowth-Galar": {
-    "EggMoves": ["Spite", "Double-Edge", "Curse", "Flail", "Night Slash", "Covet"]
+    "EggMoves": [ "Spite", "Double-Edge", "Curse", "Flail", "Night Slash", "Covet" ]
   },
   "Metagross": {
     "Item": true
@@ -933,61 +942,64 @@
   },
   "Metapod": {},
   "Mienfoo": {
-    "EggMoves": ["Feint", "Knock Off", "Vital Throw", "Focus Punch"]
+    "EggMoves": [ "Feint", "Knock Off", "Vital Throw", "Focus Punch" ]
   },
   "Mienshao": {
-    "EggMoves": ["Feint", "Knock Off", "Vital Throw", "Focus Punch"]
+    "EggMoves": [ "Feint", "Knock Off", "Vital Throw", "Focus Punch" ]
   },
   "Milcery": {
-    "EggMoves": ["Baby-Doll Eyes", "Last Resort"]
+    "EggMoves": [ "Baby-Doll Eyes", "Last Resort" ]
   },
   "Milotic": {
-    "EggMoves": ["Mirror Coat", "Dragon Breath", "Hypnosis", "Confuse Ray", "Mist", "Haze", "Tickle"]
+    "EggMoves": [ "Mirror Coat", "Dragon Breath", "Hypnosis", "Confuse Ray", "Mist", "Haze", "Tickle" ]
   },
   "Miltank": {
-    "EggMoves": ["Belch", "Curse", "Double-Edge", "Hammer Arm", "Present", "Seismic Toss", "Focus Punch"]
+    "EggMoves": [ "Belch", "Curse", "Double-Edge", "Hammer Arm", "Present", "Seismic Toss", "Focus Punch" ]
   },
   "Mime Jr.": {
-    "EggMoves": ["Hypnosis", "Fake Out", "Confuse Ray", "Power Split", "Tickle"]
+    "EggMoves": [ "Hypnosis", "Fake Out", "Confuse Ray", "Power Split", "Tickle" ]
   },
   "Mimikyu": {
     "Item": true,
-    "EggMoves": ["Grudge", "Destiny Bond", "Curse"]
+    "EggMoves": [ "Grudge", "Destiny Bond", "Curse" ]
   },
   "Minccino": {
-    "EggMoves": ["Tail Whip", "Aqua Tail", "Knock Off", "Flail"]
+    "EggMoves": [ "Tail Whip", "Aqua Tail", "Knock Off", "Flail" ]
   },
   "Moltres-Galar": {},
   "Morelull": {
     "Item": true,
-    "EggMoves": ["Poison Powder", "Stun Spore", "Growth", "Leech Seed"]
+    "EggMoves": [ "Poison Powder", "Stun Spore", "Growth", "Leech Seed" ]
   },
   "Morgrem": {},
   "Morpeko": {
-    "EggMoves": ["Swagger", "Super Fang", "Charge", "Tickle", "Rapid Spin", "Quash", "Parting Shot", "Fake Out"]
+    "EggMoves": [ "Swagger", "Super Fang", "Charge", "Tickle", "Rapid Spin", "Quash", "Parting Shot", "Fake Out" ]
+  },
+  "Mr. Mime-Galar": {
+    "EggMoves": [ "Hypnosis", "Fake Out", "Confuse Ray", "Power Split", "Tickle" ]
   },
   "Mudbray": {
     "Item": true,
-    "EggMoves": ["Double-Edge", "Fissure", "Smack Down", "Roar"]
+    "EggMoves": [ "Double-Edge", "Fissure", "Smack Down", "Roar" ]
   },
   "Mudsdale": {
     "Item": true,
-    "EggMoves": ["Double-Edge", "Fissure", "Smack Down", "Roar"]
+    "EggMoves": [ "Double-Edge", "Fissure", "Smack Down", "Roar" ]
   },
   "Munchlax": {
-    "EggMoves": ["Double-Edge", "Curse", "Fissure", "Counter", "Belch"]
+    "EggMoves": [ "Double-Edge", "Curse", "Fissure", "Counter", "Belch" ]
   },
   "Munna": {
-    "EggMoves": ["Curse", "Healing Wish"]
+    "EggMoves": [ "Curse", "Healing Wish" ]
   },
   "Musharna": {
-    "EggMoves": ["Curse", "Healing Wish"]
+    "EggMoves": [ "Curse", "Healing Wish" ]
   },
   "Natu": {
-    "EggMoves": ["Drill Peck", "Quick Attack", "Feather Dance", "Sucker Punch", "Roost", "Simple Beam"]
+    "EggMoves": [ "Drill Peck", "Quick Attack", "Feather Dance", "Sucker Punch", "Roost", "Simple Beam" ]
   },
   "Nickit": {
-    "EggMoves": ["Quick Guard", "Knock Off", "Howl", "Torment"]
+    "EggMoves": [ "Quick Guard", "Knock Off", "Howl", "Torment" ]
   },
   "Nidoking": {},
   "Nidoqueen": {},
@@ -997,378 +1009,389 @@
   "Nidorino": {},
   "Nincada": {
     "Item": true,
-    "EggMoves": ["Gust", "Night Slash", "Bug Bite", "Final Gambit", "Flail"]
+    "EggMoves": [ "Gust", "Night Slash", "Bug Bite", "Final Gambit", "Flail" ]
   },
   "Ninetales": {
     "Item": true,
-    "EggMoves": ["Hypnosis", "Flail", "Howl", "Memento", "Baby-Doll Eyes", "Roar", "Flame Charge"]
+    "EggMoves": [ "Hypnosis", "Flail", "Howl", "Memento", "Baby-Doll Eyes", "Roar", "Flame Charge" ]
   },
   "Ninjask": {
-    "EggMoves": ["Gust", "Night Slash", "Bug Bite", "Final Gambit", "Flail"]
+    "EggMoves": [ "Gust", "Night Slash", "Bug Bite", "Final Gambit", "Flail" ]
   },
   "Noctowl": {
-    "EggMoves": ["Supersonic", "Wing Attack", "Whirlwind", "Feather Dance", "Night Shade", "Defog"]
+    "EggMoves": [ "Supersonic", "Wing Attack", "Whirlwind", "Feather Dance", "Night Shade", "Defog" ]
   },
   "Noibat": {
-    "EggMoves": ["Defog", "Dragon Rush"]
+    "EggMoves": [ "Defog", "Dragon Rush" ]
   },
   "Noivern": {
-    "EggMoves": ["Defog", "Dragon Rush"]
+    "EggMoves": [ "Defog", "Dragon Rush" ]
   },
   "Nuzleaf": {
     "Item": true,
-    "EggMoves": ["Leech Seed", "Quick Attack", "Take Down", "Worry Seed", "Defog", "Night Slash"]
+    "EggMoves": [ "Leech Seed", "Quick Attack", "Take Down", "Worry Seed", "Defog", "Night Slash" ]
   },
   "Obstagoon": {
-    "EggMoves": ["Parting Shot", "Quick Guard", "Knock Off"]
+    "EggMoves": [ "Parting Shot", "Quick Guard", "Knock Off" ]
   },
   "Octillery": {
-    "EggMoves": ["Octazooka", "Supersonic", "Haze", "Flail", "Water Spout", "Acid Spray"]
+    "EggMoves": [ "Octazooka", "Supersonic", "Haze", "Flail", "Water Spout", "Acid Spray" ]
   },
   "Oddish": {
     "Item": true,
-    "EggMoves": ["Razor Leaf", "Flail", "Synthesis", "Ingrain", "Tickle", "Teeter Dance", "Nature Power", "After You", "Strength Sap", "Leech Seed"]
+    "EggMoves": [ "Razor Leaf", "Flail", "Synthesis", "Ingrain", "Tickle", "Teeter Dance", "Nature Power", "After You", "Strength Sap", "Leech Seed" ]
   },
   "Omanyte": {
-    "EggMoves": ["Aurora Beam", "Bubble Beam", "Haze", "Knock Off", "Reflect Type", "Slam", "Supersonic", "Water Pulse", "Bite", "Tickle"]
+    "EggMoves": [ "Aurora Beam", "Bubble Beam", "Haze", "Knock Off", "Reflect Type", "Slam", "Supersonic", "Water Pulse", "Bite", "Tickle" ]
   },
   "Omastar": {
-    "EggMoves": ["Aurora Beam", "Bubble Beam", "Haze", "Knock Off", "Reflect Type", "Slam", "Supersonic", "Water Pulse", "Bite", "Tickle"]
+    "EggMoves": [ "Aurora Beam", "Bubble Beam", "Haze", "Knock Off", "Reflect Type", "Slam", "Supersonic", "Water Pulse", "Bite", "Tickle" ]
   },
   "Onix": {
-    "EggMoves": ["Flail", "Block", "Defense Curl", "Wide Guard", "Rollout", "Dragon Tail", "Head Smash"]
+    "EggMoves": [ "Flail", "Block", "Defense Curl", "Wide Guard", "Rollout", "Dragon Tail", "Head Smash" ]
   },
   "Oranguru": {
-    "EggMoves": ["Extrasensory", "Yawn", "Last Resort", "Dream Eater"]
+    "EggMoves": [ "Extrasensory", "Yawn", "Last Resort", "Dream Eater" ]
   },
   "Orbeetle": {
     "Item": true,
-    "EggMoves": ["Infestation", "Supersonic", "Sticky Web", "Recover"]
+    "EggMoves": [ "Infestation", "Supersonic", "Sticky Web", "Recover" ]
   },
   "Palossand": {
     "Item": true,
-    "EggMoves": ["Ancient Power", "Destiny Bond", "Spit Up", "Stockpile", "Swallow", "Curse"]
+    "EggMoves": [ "Ancient Power", "Destiny Bond", "Spit Up", "Stockpile", "Swallow", "Curse" ]
   },
   "Palpitoad": {
-    "EggMoves": ["Water Pulse", "Mist", "Toxic", "Mud-Slap"]
+    "EggMoves": [ "Water Pulse", "Mist", "Toxic", "Mud-Slap" ]
   },
   "Pancham": {
     "Item": true,
-    "EggMoves": ["Quash", "Quick Guard", "Storm Throw", "Power Trip", "Seismic Toss"]
+    "EggMoves": [ "Quash", "Quick Guard", "Storm Throw", "Power Trip", "Seismic Toss" ]
   },
   "Pangoro": {
     "Item": true,
-    "EggMoves": ["Quash", "Quick Guard", "Storm Throw", "Power Trip", "Seismic Toss"]
+    "EggMoves": [ "Quash", "Quick Guard", "Storm Throw", "Power Trip", "Seismic Toss" ]
   },
   "Passimian": {
-    "EggMoves": ["Seismic Toss", "Vital Throw", "Quick Guard", "Quick Attack", "Feint", "Counter", "Knock Off"]
+    "EggMoves": [ "Seismic Toss", "Vital Throw", "Quick Guard", "Quick Attack", "Feint", "Counter", "Knock Off" ]
   },
   "Pawniard": {
-    "EggMoves": ["Sucker Punch", "Headbutt", "Mean Look", "Quick Guard"]
+    "EggMoves": [ "Sucker Punch", "Headbutt", "Mean Look", "Quick Guard" ]
   },
   "Pelipper": {
     "Item": true,
-    "EggMoves": ["Twister", "Gust", "Aqua Ring", "Knock Off", "Soak", "Wide Guard", "Air Cutter", "Aerial Ace"]
+    "EggMoves": [ "Twister", "Gust", "Aqua Ring", "Knock Off", "Soak", "Wide Guard", "Air Cutter", "Aerial Ace" ]
   },
   "Perrserker": {
-    "EggMoves": ["Spite", "Double-Edge", "Curse", "Flail", "Night Slash", "Covet"]
+    "EggMoves": [ "Spite", "Double-Edge", "Curse", "Flail", "Night Slash", "Covet" ]
   },
   "Petilil": {
     "Item": true,
-    "EggMoves": ["Ingrain", "Healing Wish", "Sweet Scent", "Worry Seed"]
+    "EggMoves": [ "Ingrain", "Healing Wish", "Sweet Scent", "Worry Seed" ]
   },
   "Phantump": {
-    "EggMoves": ["Grudge", "Sucker Punch", "Disable"]
+    "EggMoves": [ "Grudge", "Sucker Punch", "Disable" ]
   },
   "Pichu": {
-    "EggMoves": ["Present", "Wish", "Charge", "Fake Out", "Tickle", "Flail", "Disarming Voice"]
+    "EggMoves": [ "Present", "Wish", "Charge", "Fake Out", "Tickle", "Flail", "Disarming Voice" ]
   },
   "Pidove": {
-    "EggMoves": ["Hypnosis", "Wish", "Morning Sun", "Night Slash", "Defog"]
+    "EggMoves": [ "Hypnosis", "Wish", "Morning Sun", "Night Slash", "Defog" ]
   },
   "Pikachu": {
     "Item": true,
-    "EggMoves": ["Present", "Wish", "Charge", "Fake Out", "Tickle", "Flail", "Disarming Voice"]
+    "EggMoves": [ "Present", "Wish", "Charge", "Fake Out", "Tickle", "Flail", "Disarming Voice" ]
   },
   "Piloswine": {
-    "EggMoves": ["Bite", "Ancient Power", "Double-Edge", "Fissure", "Curse", "Icicle Crash", "Freeze-Dry"]
+    "EggMoves": [ "Bite", "Ancient Power", "Double-Edge", "Fissure", "Curse", "Icicle Crash", "Freeze-Dry" ]
   },
   "Pincurchin": {
-    "EggMoves": ["Memento", "Sucker Punch"]
+    "EggMoves": [ "Memento", "Sucker Punch" ]
   },
   "Pinsir": {
-    "EggMoves": ["Feint", "Flail", "Thrash", "Fury Attack", "Quick Attack"]
+    "EggMoves": [ "Feint", "Flail", "Thrash", "Fury Attack", "Quick Attack" ]
   },
   "Politoed": {
     "Item": true,
-    "EggMoves": ["Endeavor", "Haze", "Mist", "Mind Reader", "Splash", "Water Pulse"]
+    "EggMoves": [ "Endeavor", "Haze", "Mist", "Mind Reader", "Splash", "Water Pulse" ]
   },
   "Poliwag": {
-    "EggMoves": ["Endeavor", "Haze", "Mist", "Mind Reader", "Splash", "Water Pulse"]
+    "EggMoves": [ "Endeavor", "Haze", "Mist", "Mind Reader", "Splash", "Water Pulse" ]
   },
   "Poliwhirl": {
     "Item": true,
-    "EggMoves": ["Endeavor", "Haze", "Mist", "Mind Reader", "Splash", "Water Pulse"]
+    "EggMoves": [ "Endeavor", "Haze", "Mist", "Mind Reader", "Splash", "Water Pulse" ]
   },
   "Poliwrath": {
     "Item": true,
-    "EggMoves": ["Endeavor", "Haze", "Mist", "Mind Reader", "Splash", "Water Pulse"]
+    "EggMoves": [ "Endeavor", "Haze", "Mist", "Mind Reader", "Splash", "Water Pulse" ]
   },
   "Polteageist": {},
+  "Polteageist-Authentic": {},
   "Ponyta-Galar": {
-    "EggMoves": ["Thrash", "Double Kick", "Hypnosis", "Double-Edge", "Horn Drill", "Morning Sun"]
+    "EggMoves": [ "Thrash", "Double Kick", "Hypnosis", "Double-Edge", "Horn Drill", "Morning Sun" ]
   },
   "Psyduck": {
-    "EggMoves": ["Clear Smog", "Confuse Ray", "Cross Chop", "Hypnosis", "Psybeam", "Simple Beam", "Yawn"]
+    "EggMoves": [ "Clear Smog", "Confuse Ray", "Cross Chop", "Hypnosis", "Psybeam", "Simple Beam", "Yawn" ]
   },
-  "Pumpkaboo": {
-    "EggMoves": ["Disable", "Destiny Bond", "Curse"]
+  "Pumpkaboo-Average": {
+    "EggMoves": [ "Disable", "Destiny Bond", "Curse" ]
+  },
+  "Pumpkaboo-Large": {
+    "EggMoves": [ "Disable", "Destiny Bond", "Curse" ]
+  },
+  "Pumpkaboo-Small": {
+    "EggMoves": [ "Disable", "Destiny Bond", "Curse" ]
+  },
+  "Pumpkaboo-Super": {
+    "EggMoves": [ "Disable", "Destiny Bond", "Curse" ]
   },
   "Pupitar": {
-    "EggMoves": ["Stomp", "Ancient Power", "Curse"]
+    "EggMoves": [ "Stomp", "Ancient Power", "Curse" ]
   },
   "Purrloin": {
-    "EggMoves": ["Yawn", "Covet", "Copycat", "Slash", "Double Team", "Quick Attack"]
+    "EggMoves": [ "Yawn", "Covet", "Copycat", "Slash", "Double Team", "Quick Attack" ]
   },
   "Pyukumuku": {
-    "EggMoves": ["Tickle", "Spite", "Mirror Coat", "Swagger"]
+    "EggMoves": [ "Tickle", "Spite", "Mirror Coat", "Swagger" ]
   },
   "Quagsire": {
-    "EggMoves": ["Ancient Power", "Curse", "Stockpile", "Swallow", "Spit Up", "Counter", "Double Kick", "Recover", "After You", "Acid Spray", "Power-Up Punch"]
+    "EggMoves": [ "Ancient Power", "Curse", "Stockpile", "Swallow", "Spit Up", "Counter", "Double Kick", "Recover", "After You", "Acid Spray", "Power-Up Punch" ]
   },
   "Qwilfish": {
     "Item": true,
-    "EggMoves": ["Flail", "Haze", "Bubble Beam", "Supersonic", "Astonish", "Aqua Jet", "Water Pulse", "Acid Spray"]
+    "EggMoves": [ "Flail", "Haze", "Bubble Beam", "Supersonic", "Astonish", "Aqua Jet", "Water Pulse", "Acid Spray" ]
   },
   "Raichu": {
-    "EggMoves": ["Present", "Wish", "Charge", "Fake Out", "Tickle", "Flail", "Disarming Voice"]
+    "EggMoves": [ "Present", "Wish", "Charge", "Fake Out", "Tickle", "Flail", "Disarming Voice" ]
   },
   "Ralts": {
-    "EggMoves": ["Disable", "Mean Look", "Memento", "Destiny Bond", "Grudge", "Shadow Sneak", "Confuse Ray", "Knock Off"]
+    "EggMoves": [ "Disable", "Mean Look", "Memento", "Destiny Bond", "Grudge", "Shadow Sneak", "Confuse Ray", "Knock Off" ]
   },
   "Rapidash-Galar": {
-    "EggMoves": ["Thrash", "Double Kick", "Hypnosis", "Double-Edge", "Horn Drill", "Morning Sun"]
+    "EggMoves": [ "Thrash", "Double Kick", "Hypnosis", "Double-Edge", "Horn Drill", "Morning Sun" ]
   },
   "Relicanth": {
-    "EggMoves": ["Mud-Slap", "Skull Bash"]
+    "EggMoves": [ "Mud-Slap", "Skull Bash" ]
   },
   "Remoraid": {
-    "EggMoves": ["Octazooka", "Supersonic", "Haze", "Flail", "Water Spout", "Acid Spray"]
+    "EggMoves": [ "Octazooka", "Supersonic", "Haze", "Flail", "Water Spout", "Acid Spray" ]
   },
   "Reuniclus": {
-    "EggMoves": ["Astonish", "Confuse Ray", "Acid Armor"]
+    "EggMoves": [ "Astonish", "Confuse Ray", "Acid Armor" ]
   },
   "Rhydon": {
-    "EggMoves": ["Counter", "Curse", "Dragon Rush", "Skull Bash", "Metal Burst", "Guard Split", "Rock Polish"]
+    "EggMoves": [ "Counter", "Curse", "Dragon Rush", "Skull Bash", "Metal Burst", "Guard Split", "Rock Polish" ]
   },
   "Rhyhorn": {
-    "EggMoves": ["Counter", "Curse", "Dragon Rush", "Skull Bash", "Metal Burst", "Guard Split", "Rock Polish"]
+    "EggMoves": [ "Counter", "Curse", "Dragon Rush", "Skull Bash", "Metal Burst", "Guard Split", "Rock Polish" ]
   },
   "Rhyperior": {
-    "EggMoves": ["Counter", "Curse", "Dragon Rush", "Skull Bash", "Metal Burst", "Guard Split", "Rock Polish"]
+    "EggMoves": [ "Counter", "Curse", "Dragon Rush", "Skull Bash", "Metal Burst", "Guard Split", "Rock Polish" ]
   },
   "Ribombee": {
     "Item": true,
-    "EggMoves": ["Moonblast", "Sticky Web", "Aromatic Mist"]
+    "EggMoves": [ "Moonblast", "Sticky Web", "Aromatic Mist" ]
   },
   "Riolu": {
-    "EggMoves": ["Cross Chop", "Detect", "Bite", "Mind Reader", "High Jump Kick", "Vacuum Wave", "Bullet Punch", "Circle Throw", "Howl"]
+    "EggMoves": [ "Cross Chop", "Detect", "Bite", "Mind Reader", "High Jump Kick", "Vacuum Wave", "Bullet Punch", "Circle Throw", "Howl" ]
   },
   "Rockruff": {
-    "EggMoves": ["Thrash", "Endeavor", "Last Resort"]
+    "EggMoves": [ "Thrash", "Endeavor", "Last Resort" ]
   },
   "Roggenrola": {
     "Item": true,
-    "EggMoves": ["Curse", "Autotomize", "Take Down", "Gravity", "Wide Guard"]
+    "EggMoves": [ "Curse", "Autotomize", "Take Down", "Gravity", "Wide Guard" ]
   },
   "Rolycoly": {
-    "EggMoves": ["Explosion", "Mud-Slap", "Block"]
+    "EggMoves": [ "Explosion", "Mud-Slap", "Block" ]
   },
   "Rookidee": {
-    "EggMoves": ["Sky Attack", "Sand Attack", "Tailwind", "Defog", "Rock Smash", "Spite", "Roost"]
+    "EggMoves": [ "Sky Attack", "Sand Attack", "Tailwind", "Defog", "Rock Smash", "Spite", "Roost" ]
   },
   "Roselia": {
     "Item": true,
-    "EggMoves": ["Cotton Spore", "Sleep Powder", "Razor Leaf", "Extrasensory", "Life Dew"]
+    "EggMoves": [ "Cotton Spore", "Sleep Powder", "Razor Leaf", "Extrasensory", "Life Dew" ]
   },
   "Roserade": {
     "Item": true,
-    "EggMoves": ["Synthesis", "Cotton Spore", "Sleep Powder", "Razor Leaf", "Extrasensory", "Life Dew"]
+    "EggMoves": [ "Synthesis", "Cotton Spore", "Sleep Powder", "Razor Leaf", "Extrasensory", "Life Dew" ]
   },
   "Rotom": {},
   "Rufflet": {},
   "Sableye": {
     "Item": true,
-    "EggMoves": ["Recover", "Flatter", "Feint", "Sucker Punch", "Metal Burst", "Torment"]
+    "EggMoves": [ "Recover", "Flatter", "Feint", "Sucker Punch", "Metal Burst", "Torment" ]
   },
   "Salamence": {
     "Item": true,
-    "EggMoves": ["Defense Curl", "Dragon Rush", "Thrash", "Twister"]
+    "EggMoves": [ "Defense Curl", "Dragon Rush", "Thrash", "Twister" ]
   },
   "Salandit": {
     "Item": true,
-    "EggMoves": ["Belch", "Sand Attack", "Fake Out", "Mud-Slap"]
+    "EggMoves": [ "Belch", "Sand Attack", "Fake Out", "Mud-Slap" ]
   },
   "Salazzle": {
     "Item": true,
-    "EggMoves": ["Belch", "Sand Attack", "Fake Out", "Mud-Slap"]
+    "EggMoves": [ "Belch", "Sand Attack", "Fake Out", "Mud-Slap" ]
   },
   "Sandaconda": {
-    "EggMoves": ["Dragon Rush", "Mud-Slap", "Last Resort", "Belch", "Poison Tail"]
+    "EggMoves": [ "Dragon Rush", "Mud-Slap", "Last Resort", "Belch", "Poison Tail" ]
   },
   "Sandile": {
     "Item": true,
-    "EggMoves": ["Counter", "Double-Edge", "Aqua Tail", "Spite"]
+    "EggMoves": [ "Counter", "Double-Edge", "Aqua Tail", "Spite" ]
   },
   "Sandshrew": {
     "Item": true,
-    "EggMoves": ["Counter", "Flail", "Mud-Slap", "Night Slash", "Metal Claw", "Hone Claws"]
+    "EggMoves": [ "Counter", "Flail", "Mud-Slap", "Night Slash", "Metal Claw", "Hone Claws" ]
   },
   "Sandslash": {
     "Item": true,
-    "EggMoves": ["Counter", "Flail", "Mud-Slap", "Night Slash", "Metal Claw", "Hone Claws"]
+    "EggMoves": [ "Counter", "Flail", "Mud-Slap", "Night Slash", "Metal Claw", "Hone Claws" ]
   },
   "Sandygast": {
     "Item": true,
-    "EggMoves": ["Ancient Power", "Destiny Bond", "Spit Up", "Stockpile", "Swallow", "Curse"]
+    "EggMoves": [ "Ancient Power", "Destiny Bond", "Spit Up", "Stockpile", "Swallow", "Curse" ]
   },
   "Sawk": {
     "Item": true
   },
   "Scizor": {
-    "EggMoves": ["Counter", "Defog", "Night Slash", "Feint", "Quick Guard"]
+    "EggMoves": [ "Counter", "Defog", "Night Slash", "Feint", "Quick Guard" ]
   },
   "Scolipede": {
     "Item": true,
-    "EggMoves": ["Bite", "Fury Cutter"]
+    "EggMoves": [ "Bite", "Fury Cutter" ]
   },
   "Scrafty": {
     "Item": true,
-    "EggMoves": ["Counter", "Detect", "Fake Out", "Quick Guard", "Power-Up Punch", "Acid Spray"]
+    "EggMoves": [ "Counter", "Detect", "Fake Out", "Quick Guard", "Power-Up Punch", "Acid Spray" ]
   },
   "Scraggy": {
     "Item": true,
-    "EggMoves": ["Counter", "Detect", "Fake Out", "Quick Guard", "Power-Up Punch", "Acid Spray"]
+    "EggMoves": [ "Counter", "Detect", "Fake Out", "Quick Guard", "Power-Up Punch", "Acid Spray" ]
   },
   "Scyther": {
-    "EggMoves": ["Counter", "Defog", "Night Slash", "Feint", "Quick Guard"]
+    "EggMoves": [ "Counter", "Defog", "Night Slash", "Feint", "Quick Guard" ]
   },
   "Seadra": {
     "Item": true,
-    "EggMoves": ["Aurora Beam", "Clear Smog", "Disable", "Flail", "Octazooka", "Splash", "Water Pulse"]
+    "EggMoves": [ "Aurora Beam", "Clear Smog", "Disable", "Flail", "Octazooka", "Splash", "Water Pulse" ]
   },
   "Seaking": {
     "Item": true,
-    "EggMoves": ["Psybeam", "Haze", "Aqua Tail", "Acupressure", "Mud-Slap"]
+    "EggMoves": [ "Psybeam", "Haze", "Aqua Tail", "Acupressure", "Mud-Slap" ]
   },
   "Sealeo": {
-    "EggMoves": ["Curse", "Fissure", "Stockpile", "Swallow", "Spit Up", "Water Pulse", "Yawn", "Aqua Ring", "Belly Drum"]
+    "EggMoves": [ "Curse", "Fissure", "Stockpile", "Swallow", "Spit Up", "Water Pulse", "Yawn", "Aqua Ring", "Belly Drum" ]
   },
   "Seedot": {
     "Item": true,
-    "EggMoves": ["Leech Seed", "Quick Attack", "Take Down", "Worry Seed", "Defog", "Night Slash"]
+    "EggMoves": [ "Leech Seed", "Quick Attack", "Take Down", "Worry Seed", "Defog", "Night Slash" ]
   },
   "Seismitoad": {
-    "EggMoves": ["Water Pulse", "Mist", "Toxic", "Mud-Slap"]
+    "EggMoves": [ "Water Pulse", "Mist", "Toxic", "Mud-Slap" ]
   },
   "Sharpedo": {
-    "EggMoves": ["Ancient Power", "Destiny Bond", "Double-Edge", "Thrash", "Water Pulse"]
+    "EggMoves": [ "Ancient Power", "Destiny Bond", "Double-Edge", "Thrash", "Water Pulse" ]
   },
   "Shellder": {
     "Item": true,
-    "EggMoves": ["Bubble Beam", "Water Pulse", "Aqua Ring", "Life Dew"]
+    "EggMoves": [ "Bubble Beam", "Water Pulse", "Aqua Ring", "Life Dew" ]
   },
   "Shellos": {
-    "EggMoves": ["Counter", "Mirror Coat", "Stockpile", "Swallow", "Spit Up", "Yawn", "Curse", "Sludge", "Clear Smog", "Mist", "Acid Armor"]
+    "EggMoves": [ "Counter", "Mirror Coat", "Stockpile", "Swallow", "Spit Up", "Yawn", "Curse", "Sludge", "Clear Smog", "Mist", "Acid Armor" ]
   },
   "Shelmet": {
-    "EggMoves": ["Double-Edge", "Guard Split", "Mind Reader", "Feint"]
+    "EggMoves": [ "Double-Edge", "Guard Split", "Mind Reader", "Feint" ]
   },
   "Shiftry": {
     "Item": true,
-    "EggMoves": ["Leech Seed", "Quick Attack", "Take Down", "Worry Seed", "Defog", "Night Slash"]
+    "EggMoves": [ "Leech Seed", "Quick Attack", "Take Down", "Worry Seed", "Defog", "Night Slash" ]
   },
   "Shiinotic": {
     "Item": true,
-    "EggMoves": ["Poison Powder", "Stun Spore", "Growth", "Leech Seed"]
+    "EggMoves": [ "Poison Powder", "Stun Spore", "Growth", "Leech Seed" ]
   },
   "Shinx": {
-    "EggMoves": ["Baby-Doll Eyes", "Take Down", "Double Kick", "Howl", "Night Slash", "Quick Attack", "Shock Wave"]
+    "EggMoves": [ "Baby-Doll Eyes", "Take Down", "Double Kick", "Howl", "Night Slash", "Quick Attack", "Shock Wave" ]
   },
   "Shuckle": {
-    "EggMoves": ["Sweet Scent", "Knock Off", "Acupressure", "Acid", "Final Gambit", "Defense Curl", "Infestation", "Toxic", "Covet"]
+    "EggMoves": [ "Sweet Scent", "Knock Off", "Acupressure", "Acid", "Final Gambit", "Defense Curl", "Infestation", "Toxic", "Covet" ]
   },
   "Sigilyph": {
-    "EggMoves": ["Psycho Shift", "Ancient Power", "Roost"]
+    "EggMoves": [ "Psycho Shift", "Ancient Power", "Roost" ]
   },
   "Silicobra": {
-    "EggMoves": ["Dragon Rush", "Mud-Slap", "Last Resort", "Belch", "Poison Tail"]
+    "EggMoves": [ "Dragon Rush", "Mud-Slap", "Last Resort", "Belch", "Poison Tail" ]
   },
   "Sinistea": {},
+  "Sinistea-Authentic": {},
   "Sizzlipede": {
-    "EggMoves": ["Knock Off", "Struggle Bug", "Rollout", "Defense Curl"]
+    "EggMoves": [ "Knock Off", "Struggle Bug", "Rollout", "Defense Curl" ]
   },
   "Skarmory": {
     "Item": true,
-    "EggMoves": ["Curse", "Sky Attack", "Whirlwind", "Air Cutter", "Night Slash", "Feint", "Roost"]
+    "EggMoves": [ "Curse", "Sky Attack", "Whirlwind", "Air Cutter", "Night Slash", "Feint", "Roost" ]
   },
   "Skorupi": {
     "Item": true,
-    "EggMoves": ["Sand Attack", "Slash", "Confuse Ray", "Whirlwind"]
+    "EggMoves": [ "Sand Attack", "Slash", "Confuse Ray", "Whirlwind" ]
   },
   "Skrelp": {
-    "EggMoves": ["Acid Armor", "Haze", "Twister", "Dragon Tail"]
+    "EggMoves": [ "Acid Armor", "Haze", "Twister", "Dragon Tail" ]
   },
   "Skuntank": {
-    "EggMoves": ["Leer", "Smog", "Double-Edge", "Astonish", "Haze", "Slash"]
+    "EggMoves": [ "Leer", "Smog", "Double-Edge", "Astonish", "Haze", "Slash" ]
   },
   "Skwovet": {
     "Item": true,
-    "EggMoves": ["Rollout", "Defense Curl", "Last Resort", "Belly Drum"]
+    "EggMoves": [ "Rollout", "Defense Curl", "Last Resort", "Belly Drum" ]
   },
   "Sliggoo": {
     "Item": true,
-    "EggMoves": ["Counter", "Life Dew"]
+    "EggMoves": [ "Counter", "Life Dew" ]
   },
   "Slowpoke-Galar": {
-    "EggMoves": ["Belch", "Belly Drum", "Block", "Stomp"]
+    "EggMoves": [ "Belch", "Belly Drum", "Block", "Stomp" ]
   },
   "Smoochum": {
-    "EggMoves": ["Fake Out", "Wish", "Role Play"]
+    "EggMoves": [ "Fake Out", "Wish", "Role Play" ]
   },
   "Sneasel": {
     "Item": true,
-    "EggMoves": ["Counter", "Spite", "Bite", "Fake Out", "Double Hit", "Ice Shard", "Feint", "Icicle Crash"]
+    "EggMoves": [ "Counter", "Spite", "Bite", "Fake Out", "Double Hit", "Ice Shard", "Feint", "Icicle Crash" ]
   },
   "Snom": {
     "Item": true,
-    "EggMoves": ["Fairy Wind", "Mirror Coat", "Bug Bite"]
+    "EggMoves": [ "Fairy Wind", "Mirror Coat", "Bug Bite" ]
   },
   "Snorlax": {
-    "EggMoves": ["Double-Edge", "Curse", "Fissure", "Counter", "Gastro Acid"]
+    "EggMoves": [ "Double-Edge", "Curse", "Fissure", "Counter", "Gastro Acid" ]
   },
   "Snorunt": {
     "Item": true,
-    "EggMoves": ["Block", "Disable", "Switcheroo", "Rollout", "Icicle Crash"]
+    "EggMoves": [ "Block", "Disable", "Switcheroo", "Rollout", "Icicle Crash" ]
   },
   "Snover": {
     "Item": true,
-    "EggMoves": ["Leech Seed", "Growth", "Double-Edge", "Stomp", "Skull Bash"]
+    "EggMoves": [ "Leech Seed", "Growth", "Double-Edge", "Stomp", "Skull Bash" ]
   },
   "Solosis": {
-    "EggMoves": ["Astonish", "Confuse Ray", "Acid Armor"]
+    "EggMoves": [ "Astonish", "Confuse Ray", "Acid Armor" ]
   },
   "Solrock": {
     "Item": true
   },
   "Spheal": {
-    "EggMoves": ["Curse", "Fissure", "Stockpile", "Swallow", "Spit Up", "Water Pulse", "Yawn", "Aqua Ring", "Belly Drum"]
+    "EggMoves": [ "Curse", "Fissure", "Stockpile", "Swallow", "Spit Up", "Water Pulse", "Yawn", "Aqua Ring", "Belly Drum" ]
   },
   "Spiritomb": {
-    "EggMoves": ["Destiny Bond", "Grudge", "Pain Split", "Smokescreen", "Disable"]
+    "EggMoves": [ "Destiny Bond", "Grudge", "Pain Split", "Smokescreen", "Disable" ]
   },
   "Spritzee": {
-    "EggMoves": ["Disable", "Wish", "After You"]
+    "EggMoves": [ "Disable", "Wish", "After You" ]
   },
   "Starmie": {
     "Item": true
@@ -1378,260 +1401,260 @@
   },
   "Steelix": {
     "Item": true,
-    "EggMoves": ["Flail", "Block", "Defense Curl", "Wide Guard", "Rollout", "Dragon Tail", "Head Smash"]
+    "EggMoves": [ "Flail", "Block", "Defense Curl", "Wide Guard", "Rollout", "Dragon Tail", "Head Smash" ]
   },
   "Steenee": {
     "Item": true,
-    "EggMoves": ["Synthesis", "Acupressure", "Endeavor"]
+    "EggMoves": [ "Synthesis", "Acupressure", "Endeavor" ]
   },
   "Stonjourner": {
-    "EggMoves": ["Curse", "Ancient Power"]
+    "EggMoves": [ "Curse", "Ancient Power" ]
   },
   "Stoutland": {
-    "EggMoves": ["After You", "Howl", "Lick", "Mud-Slap", "Yawn", "Covet"]
+    "EggMoves": [ "After You", "Howl", "Lick", "Mud-Slap", "Yawn", "Covet" ]
   },
   "Stufful": {
-    "EggMoves": ["Force Palm", "Rollout", "Defense Curl", "Stomp"]
+    "EggMoves": [ "Force Palm", "Rollout", "Defense Curl", "Stomp" ]
   },
   "Stunfisk-Galar": {
-    "EggMoves": ["Bind", "Yawn", "Astonish", "Curse", "Spite", "Counter", "Pain Split", "Reflect Type"]
+    "EggMoves": [ "Bind", "Yawn", "Astonish", "Curse", "Spite", "Counter", "Pain Split", "Reflect Type" ]
   },
   "Stunky": {
-    "EggMoves": ["Leer", "Smog", "Double-Edge", "Astonish", "Haze", "Slash"]
+    "EggMoves": [ "Leer", "Smog", "Double-Edge", "Astonish", "Haze", "Slash" ]
   },
   "Sudowoodo": {
-    "EggMoves": ["Headbutt", "Harden", "Defense Curl", "Curse", "Rollout", "Rock Polish"]
+    "EggMoves": [ "Headbutt", "Harden", "Defense Curl", "Curse", "Rollout", "Rock Polish" ]
   },
   "Swablu": {
-    "EggMoves": ["Dragon Rush", "Feather Dance", "Haze", "Defog", "Tailwind", "Astonish", "Roost"]
+    "EggMoves": [ "Dragon Rush", "Feather Dance", "Haze", "Defog", "Tailwind", "Astonish", "Roost" ]
   },
   "Swinub": {
-    "EggMoves": ["Bite", "Ancient Power", "Double-Edge", "Fissure", "Curse", "Icicle Crash", "Freeze-Dry"]
+    "EggMoves": [ "Bite", "Ancient Power", "Double-Edge", "Fissure", "Curse", "Icicle Crash", "Freeze-Dry" ]
   },
   "Swirlix": {
-    "EggMoves": ["After You", "Yawn", "Copycat", "Sticky Web"]
+    "EggMoves": [ "After You", "Yawn", "Copycat", "Sticky Web" ]
   },
   "Swoobat": {
-    "EggMoves": ["Knock Off", "Supersonic", "Roost", "Flatter", "Psycho Shift"]
+    "EggMoves": [ "Knock Off", "Supersonic", "Roost", "Flatter", "Psycho Shift" ]
   },
   "Sylveon": {
-    "EggMoves": ["Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish"]
+    "EggMoves": [ "Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish" ]
   },
   "Talonflame": {
-    "EggMoves": ["Flame Charge", "Quick Guard", "Defog"]
+    "EggMoves": [ "Flame Charge", "Quick Guard", "Defog" ]
   },
   "Tangela": {
-    "EggMoves": ["Confusion", "Endeavor", "Flail", "Leech Seed", "Nature Power", "Rage Powder"]
+    "EggMoves": [ "Confusion", "Endeavor", "Flail", "Leech Seed", "Nature Power", "Rage Powder" ]
   },
   "Tangrowth": {
-    "EggMoves": ["Confusion", "Endeavor", "Flail", "Leech Seed", "Nature Power", "Rage Powder"]
+    "EggMoves": [ "Confusion", "Endeavor", "Flail", "Leech Seed", "Nature Power", "Rage Powder" ]
   },
   "Tauros": {},
   "Tentacool": {
     "Item": true,
-    "EggMoves": ["Acupressure", "Aqua Ring", "Aurora Beam", "Confuse Ray", "Haze", "Knock Off", "Mirror Coat", "Rapid Spin", "Tickle"]
+    "EggMoves": [ "Acupressure", "Aqua Ring", "Aurora Beam", "Confuse Ray", "Haze", "Knock Off", "Mirror Coat", "Rapid Spin", "Tickle" ]
   },
   "Tentacruel": {
     "Item": true,
-    "EggMoves": ["Acupressure", "Aqua Ring", "Aurora Beam", "Confuse Ray", "Haze", "Knock Off", "Mirror Coat", "Rapid Spin", "Tickle"]
+    "EggMoves": [ "Acupressure", "Aqua Ring", "Aurora Beam", "Confuse Ray", "Haze", "Knock Off", "Mirror Coat", "Rapid Spin", "Tickle" ]
   },
   "Terrakion": {},
   "Thievul": {
-    "EggMoves": ["Quick Guard", "Knock Off", "Howl", "Torment"]
+    "EggMoves": [ "Quick Guard", "Knock Off", "Howl", "Torment" ]
   },
   "Throh": {
     "Item": true
   },
   "Timburr": {
-    "EggMoves": ["Counter", "Detect", "Wide Guard", "Mach Punch", "Power-Up Punch", "Defog"]
+    "EggMoves": [ "Counter", "Detect", "Wide Guard", "Mach Punch", "Power-Up Punch", "Defog" ]
   },
   "Tirtouga": {
-    "EggMoves": ["Knock Off", "Rollout", "Rock Throw", "Slam", "Water Pulse", "Block"]
+    "EggMoves": [ "Knock Off", "Rollout", "Rock Throw", "Slam", "Water Pulse", "Block" ]
   },
   "Togedemaru": {
     "Item": true,
-    "EggMoves": ["Present", "Wish", "Fake Out", "Tickle", "Flail", "Disarming Voice"]
+    "EggMoves": [ "Present", "Wish", "Fake Out", "Tickle", "Flail", "Disarming Voice" ]
   },
   "Togekiss": {
-    "EggMoves": ["Present", "Peck", "Psycho Shift", "Extrasensory", "Morning Sun", "Aerial Ace"]
+    "EggMoves": [ "Present", "Peck", "Psycho Shift", "Extrasensory", "Morning Sun", "Aerial Ace" ]
   },
   "Togepi": {
-    "EggMoves": ["Present", "Peck", "Psycho Shift", "Extrasensory", "Morning Sun", "Aerial Ace"]
+    "EggMoves": [ "Present", "Peck", "Psycho Shift", "Extrasensory", "Morning Sun", "Aerial Ace" ]
   },
   "Togetic": {
-    "EggMoves": ["Present", "Peck", "Psycho Shift", "Extrasensory", "Morning Sun", "Aerial Ace"]
+    "EggMoves": [ "Present", "Peck", "Psycho Shift", "Extrasensory", "Morning Sun", "Aerial Ace" ]
   },
   "Torkoal": {
     "Item": true,
-    "EggMoves": ["Yawn", "Fissure", "Skull Bash", "Flail", "Ancient Power"]
+    "EggMoves": [ "Yawn", "Fissure", "Skull Bash", "Flail", "Ancient Power" ]
   },
   "Toxapex": {
     "Item": true,
-    "EggMoves": ["Stockpile", "Swallow", "Spit Up", "Haze", "Infestation"]
+    "EggMoves": [ "Stockpile", "Swallow", "Spit Up", "Haze", "Infestation" ]
   },
   "Toxel": {
-    "EggMoves": ["Endeavor", "Metal Sound", "Power-Up Punch"]
+    "EggMoves": [ "Endeavor", "Metal Sound", "Power-Up Punch" ]
   },
   "Toxicroak": {
     "Item": true,
-    "EggMoves": ["Feint", "Dynamic Punch", "Headbutt", "Vacuum Wave", "Fake Out", "Cross Chop", "Bullet Punch", "Counter", "Quick Guard"]
+    "EggMoves": [ "Feint", "Dynamic Punch", "Headbutt", "Vacuum Wave", "Fake Out", "Cross Chop", "Bullet Punch", "Counter", "Quick Guard" ]
   },
   "Tranquill": {
-    "EggMoves": ["Hypnosis", "Wish", "Morning Sun", "Night Slash", "Defog"]
+    "EggMoves": [ "Hypnosis", "Wish", "Morning Sun", "Night Slash", "Defog" ]
   },
   "Trapinch": {
     "Item": true,
-    "EggMoves": ["Quick Attack", "Gust", "Flail", "Fury Cutter", "Bug Bite", "Feint", "First Impression"]
+    "EggMoves": [ "Quick Attack", "Gust", "Flail", "Fury Cutter", "Bug Bite", "Feint", "First Impression" ]
   },
   "Trevenant": {
-    "EggMoves": ["Grudge", "Sucker Punch", "Disable"]
+    "EggMoves": [ "Grudge", "Sucker Punch", "Disable" ]
   },
   "Trubbish": {
     "Item": true,
-    "EggMoves": ["Haze", "Curse", "Sand Attack", "Autotomize", "Rollout"]
+    "EggMoves": [ "Haze", "Curse", "Sand Attack", "Autotomize", "Rollout" ]
   },
   "Tsareena": {
     "Item": true,
-    "EggMoves": ["Synthesis", "Acupressure", "Endeavor"]
+    "EggMoves": [ "Synthesis", "Acupressure", "Endeavor" ]
   },
   "Turtonator": {
     "Item": true,
-    "EggMoves": ["Wide Guard", "Head Smash", "Rapid Spin", "Curse"]
+    "EggMoves": [ "Wide Guard", "Head Smash", "Rapid Spin", "Curse" ]
   },
   "Tympole": {
-    "EggMoves": ["Water Pulse", "Mist", "Toxic", "Mud-Slap"]
+    "EggMoves": [ "Water Pulse", "Mist", "Toxic", "Mud-Slap" ]
   },
   "Tyranitar": {
-    "EggMoves": ["Stomp", "Ancient Power", "Curse"]
+    "EggMoves": [ "Stomp", "Ancient Power", "Curse" ]
   },
   "Tyrantrum": {
-    "EggMoves": ["Curse", "Rock Throw", "Poison Fang", "Rock Polish"]
+    "EggMoves": [ "Curse", "Rock Throw", "Poison Fang", "Rock Polish" ]
   },
   "Tyrogue": {
-    "EggMoves": ["Rapid Spin", "High Jump Kick", "Mach Punch", "Mind Reader", "Counter", "Vacuum Wave", "Bullet Punch", "Feint"]
+    "EggMoves": [ "Rapid Spin", "High Jump Kick", "Mach Punch", "Mind Reader", "Counter", "Vacuum Wave", "Bullet Punch", "Feint" ]
   },
   "Tyrunt": {
-    "EggMoves": ["Curse", "Rock Throw", "Poison Fang", "Rock Polish"]
+    "EggMoves": [ "Curse", "Rock Throw", "Poison Fang", "Rock Polish" ]
   },
   "Umbreon": {
-    "EggMoves": ["Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish"]
+    "EggMoves": [ "Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish" ]
   },
   "Unfezant": {
-    "EggMoves": ["Hypnosis", "Wish", "Morning Sun", "Night Slash", "Defog"]
+    "EggMoves": [ "Hypnosis", "Wish", "Morning Sun", "Night Slash", "Defog" ]
   },
   "Vanillish": {
     "Item": true,
-    "EggMoves": ["Autotomize", "Magnet Rise", "Ice Shard", "Explosion", "Aurora Veil", "Icicle Crash"]
+    "EggMoves": [ "Autotomize", "Magnet Rise", "Ice Shard", "Explosion", "Aurora Veil", "Icicle Crash" ]
   },
   "Vanillite": {
     "Item": true,
-    "EggMoves": ["Autotomize", "Magnet Rise", "Ice Shard", "Explosion", "Aurora Veil", "Icicle Crash"]
+    "EggMoves": [ "Autotomize", "Magnet Rise", "Ice Shard", "Explosion", "Aurora Veil", "Icicle Crash" ]
   },
   "Vanilluxe": {
     "Item": true,
-    "EggMoves": ["Autotomize", "Magnet Rise", "Ice Shard", "Explosion", "Aurora Veil", "Icicle Crash"]
+    "EggMoves": [ "Autotomize", "Magnet Rise", "Ice Shard", "Explosion", "Aurora Veil", "Icicle Crash" ]
   },
   "Vaporeon": {
-    "EggMoves": ["Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish"]
+    "EggMoves": [ "Flail", "Curse", "Tickle", "Yawn", "Detect", "Double Kick", "Mud-Slap", "Wish" ]
   },
   "Venipede": {
     "Item": true,
-    "EggMoves": ["Bite", "Fury Cutter"]
+    "EggMoves": [ "Bite", "Fury Cutter" ]
   },
   "Vespiquen": {
     "Item": true
   },
   "Vikavolt": {
-    "EggMoves": ["Harden", "Discharge"]
+    "EggMoves": [ "Harden", "Discharge" ]
   },
   "Vileplume": {
     "Item": true,
-    "EggMoves": ["Razor Leaf", "Flail", "Synthesis", "Ingrain", "Tickle", "Teeter Dance", "Nature Power", "After You", "Strength Sap", "Leech Seed"]
+    "EggMoves": [ "Razor Leaf", "Flail", "Synthesis", "Ingrain", "Tickle", "Teeter Dance", "Nature Power", "After You", "Strength Sap", "Leech Seed" ]
   },
   "Virizion": {},
   "Volcarona": {
-    "EggMoves": ["Harden", "Absorb", "Thrash"]
+    "EggMoves": [ "Harden", "Absorb", "Thrash" ]
   },
   "Vullaby": {
-    "EggMoves": ["Mean Look", "Roost", "Toxic"]
+    "EggMoves": [ "Mean Look", "Roost", "Toxic" ]
   },
   "Vulpix": {
     "Item": true,
-    "EggMoves": ["Hypnosis", "Flail", "Howl", "Memento", "Baby-Doll Eyes", "Roar", "Flame Charge"]
+    "EggMoves": [ "Hypnosis", "Flail", "Howl", "Memento", "Baby-Doll Eyes", "Roar", "Flame Charge" ]
   },
   "Wailmer": {
-    "EggMoves": ["Double-Edge", "Thrash", "Curse", "Fissure", "Tickle", "Defense Curl", "Rollout", "Aqua Ring", "Soak"]
+    "EggMoves": [ "Double-Edge", "Thrash", "Curse", "Fissure", "Tickle", "Defense Curl", "Rollout", "Aqua Ring", "Soak" ]
   },
   "Wailord": {
-    "EggMoves": ["Double-Edge", "Thrash", "Curse", "Fissure", "Tickle", "Defense Curl", "Rollout", "Aqua Ring", "Soak"]
+    "EggMoves": [ "Double-Edge", "Thrash", "Curse", "Fissure", "Tickle", "Defense Curl", "Rollout", "Aqua Ring", "Soak" ]
   },
   "Walrein": {
-    "EggMoves": ["Curse", "Fissure", "Stockpile", "Swallow", "Spit Up", "Water Pulse", "Yawn", "Aqua Ring", "Belly Drum"]
+    "EggMoves": [ "Curse", "Fissure", "Stockpile", "Swallow", "Spit Up", "Water Pulse", "Yawn", "Aqua Ring", "Belly Drum" ]
   },
   "Weavile": {
     "Item": true,
-    "EggMoves": ["Counter", "Spite", "Bite", "Fake Out", "Double Hit", "Ice Shard", "Feint", "Icicle Crash"]
+    "EggMoves": [ "Counter", "Spite", "Bite", "Fake Out", "Double Hit", "Ice Shard", "Feint", "Icicle Crash" ]
   },
   "Weezing-Galar": {
     "Item": true,
-    "EggMoves": ["Psybeam", "Pain Split", "Grudge", "Spite", "Curse", "Stockpile", "Swallow", "Spit Up"]
+    "EggMoves": [ "Psybeam", "Pain Split", "Grudge", "Spite", "Curse", "Stockpile", "Swallow", "Spit Up" ]
   },
   "Whimsicott": {
     "Item": true,
-    "EggMoves": ["Tickle", "Memento", "Switcheroo", "Worry Seed", "Nature Power"]
+    "EggMoves": [ "Tickle", "Memento", "Switcheroo", "Worry Seed", "Nature Power" ]
   },
   "Whiscash": {
-    "EggMoves": ["Thrash", "Spark", "Flail", "Take Down"]
+    "EggMoves": [ "Thrash", "Spark", "Flail", "Take Down" ]
   },
   "Whismur": {
-    "EggMoves": ["Circle Throw", "Disarming Voice", "Endeavor", "Extrasensory", "Hammer Arm", "Smokescreen", "Take Down", "Whirlwind"]
+    "EggMoves": [ "Circle Throw", "Disarming Voice", "Endeavor", "Extrasensory", "Hammer Arm", "Smokescreen", "Take Down", "Whirlwind" ]
   },
   "Wigglytuff": {
     "Item": true
   },
   "Wimpod": {
-    "EggMoves": ["Metal Claw", "Wide Guard", "Harden", "Aqua Jet", "Rollout"]
+    "EggMoves": [ "Metal Claw", "Wide Guard", "Harden", "Aqua Jet", "Rollout" ]
   },
   "Wingull": {
     "Item": true,
-    "EggMoves": ["Twister", "Gust", "Aqua Ring", "Knock Off", "Soak", "Wide Guard", "Air Cutter", "Aerial Ace"]
+    "EggMoves": [ "Twister", "Gust", "Aqua Ring", "Knock Off", "Soak", "Wide Guard", "Air Cutter", "Aerial Ace" ]
   },
   "Wishiwashi": {
-    "EggMoves": ["Mist", "Water Pulse", "Take Down"]
+    "EggMoves": [ "Mist", "Water Pulse", "Take Down" ]
   },
   "Wobbuffet": {},
   "Woobat": {
-    "EggMoves": ["Knock Off", "Supersonic", "Roost", "Flatter", "Psycho Shift"]
+    "EggMoves": [ "Knock Off", "Supersonic", "Roost", "Flatter", "Psycho Shift" ]
   },
   "Wooloo": {
-    "EggMoves": ["Stomp", "Swagger", "Counter"]
+    "EggMoves": [ "Stomp", "Swagger", "Counter" ]
   },
   "Wooper": {
-    "EggMoves": ["Ancient Power", "Curse", "Stockpile", "Swallow", "Spit Up", "Counter", "Double Kick", "Recover", "After You", "Acid Spray", "Power-Up Punch"]
+    "EggMoves": [ "Ancient Power", "Curse", "Stockpile", "Swallow", "Spit Up", "Counter", "Double Kick", "Recover", "After You", "Acid Spray", "Power-Up Punch" ]
   },
   "Xatu": {
-    "EggMoves": ["Drill Peck", "Quick Attack", "Feather Dance", "Sucker Punch", "Roost", "Simple Beam"]
+    "EggMoves": [ "Drill Peck", "Quick Attack", "Feather Dance", "Sucker Punch", "Roost", "Simple Beam" ]
   },
   "Yamask-Galar": {
-    "EggMoves": ["Memento"]
+    "EggMoves": [ "Memento" ]
   },
   "Yamper": {
-    "EggMoves": ["Double-Edge", "Sand Attack", "Flame Charge", "Discharge", "Howl"]
+    "EggMoves": [ "Double-Edge", "Sand Attack", "Flame Charge", "Discharge", "Howl" ]
   },
   "Zapdos-Galar": {},
   "Zigzagoon-Galar": {
-    "EggMoves": ["Parting Shot", "Quick Guard", "Knock Off"]
+    "EggMoves": [ "Parting Shot", "Quick Guard", "Knock Off" ]
   },
   "Zoroark": {
-    "EggMoves": ["Copycat", "Counter", "Detect", "Extrasensory", "Memento", "Sucker Punch"]
+    "EggMoves": [ "Copycat", "Counter", "Detect", "Extrasensory", "Memento", "Sucker Punch" ]
   },
   "Zorua": {
-    "EggMoves": ["Copycat", "Counter", "Detect", "Extrasensory", "Memento", "Sucker Punch"]
+    "EggMoves": [ "Copycat", "Counter", "Detect", "Extrasensory", "Memento", "Sucker Punch" ]
   },
   "Zubat": {
-    "EggMoves": ["Curse", "Defog", "Gust", "Hypnosis", "Quick Attack", "Whirlwind", "Wing Attack"]
+    "EggMoves": [ "Curse", "Defog", "Gust", "Hypnosis", "Quick Attack", "Whirlwind", "Wing Attack" ]
   },
   "Zweilous": {
-    "EggMoves": ["Double Hit", "Astonish", "Head Smash", "Belch"]
+    "EggMoves": [ "Double Hit", "Astonish", "Head Smash", "Belch" ]
   }
 }
