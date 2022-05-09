@@ -41,6 +41,6 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: SWSH_OWRNG_Generator_GUI'
   inputs:
-    PathtoPublish: 'SWSH_OWRNG_Generator.WinForms\bin\x64\Release\net6.0windows'
+    PathtoPublish: 'SWSH_OWRNG_Generator.WinForms\bin\Release\net6.0-windows'
     ArtifactName: SWSH_OWRNG_Generator_GUI
   condition: succeededOrFailed()
