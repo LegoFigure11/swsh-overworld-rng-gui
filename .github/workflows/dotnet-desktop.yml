@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        configuration: [Debug]
+        configuration: [Release]
 
     runs-on: windows-latest
 
@@ -36,11 +36,11 @@ jobs:
         Configuration: ${{ matrix.configuration }}
     
     - name: Build
-      run: msbuild /property:Configuration=Debug
+      run: msbuild /property:Configuration=Release
 
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
       with:
         name: SWSH-Overworld-RNG-GUI
         path: |
-          ./SWSH_OWRNG_Generator.WinForms/bin/Debug
+          ./SWSH_OWRNG_Generator.WinForms/bin/Release
