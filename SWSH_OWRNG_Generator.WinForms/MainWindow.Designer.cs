@@ -140,6 +140,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckIsAbilityLocked = new System.Windows.Forms.CheckBox();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.SeedFinderMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.EncounterLookupMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtonUpdateStates = new System.Windows.Forms.Button();
             this.CheckTIDSIDFinder = new System.Windows.Forms.CheckBox();
             this.LabelKOCount = new System.Windows.Forms.Label();
@@ -179,7 +180,6 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.LabelAura = new System.Windows.Forms.Label();
             this.CheckHidden = new System.Windows.Forms.CheckBox();
             this.TIDSIDFinderBrokenTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.EncounterLookupMenu = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -652,6 +652,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // 
             this.Results.AllowUserToAddRows = false;
             this.Results.AllowUserToDeleteRows = false;
+            this.Results.AllowUserToResizeRows = false;
             this.Results.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -682,9 +683,12 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.State1});
             this.Results.DataSource = this.generatorBindingSource;
             this.Results.Location = new System.Drawing.Point(12, 463);
+            this.Results.MultiSelect = false;
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
+            this.Results.RowHeadersVisible = false;
             this.Results.RowHeadersWidth = 62;
+            this.Results.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Results.Size = new System.Drawing.Size(808, 224);
             this.Results.TabIndex = 73;
             // 
@@ -1336,6 +1340,13 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.SeedFinderMenu.Text = "Seed Finder";
             this.SeedFinderMenu.Click += new System.EventHandler(this.SeedFinderMenu_Click);
             // 
+            // EncounterLookupMenu
+            // 
+            this.EncounterLookupMenu.Name = "EncounterLookupMenu";
+            this.EncounterLookupMenu.Size = new System.Drawing.Size(116, 20);
+            this.EncounterLookupMenu.Text = "Encounter Lookup";
+            this.EncounterLookupMenu.Click += new System.EventHandler(this.EncounterLookupMenu_Click);
+            // 
             // ButtonUpdateStates
             // 
             this.ButtonUpdateStates.Location = new System.Drawing.Point(604, 326);
@@ -1792,13 +1803,6 @@ namespace SWSH_OWRNG_Generator.WinForms
             // TIDSIDFinderBrokenTooltip
             // 
             this.TIDSIDFinderBrokenTooltip.ShowAlways = true;
-            // 
-            // EncounterLookupMenu
-            // 
-            this.EncounterLookupMenu.Name = "EncounterLookupMenu";
-            this.EncounterLookupMenu.Size = new System.Drawing.Size(116, 20);
-            this.EncounterLookupMenu.Text = "Encounter Lookup";
-            this.EncounterLookupMenu.Click += new System.EventHandler(this.EncounterLookupMenu_Click);
             // 
             // MainWindow
             // 

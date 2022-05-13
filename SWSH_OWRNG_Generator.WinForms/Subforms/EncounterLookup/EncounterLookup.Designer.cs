@@ -88,14 +88,18 @@
             // 
             this.EncounterLookupResults.AllowUserToAddRows = false;
             this.EncounterLookupResults.AllowUserToDeleteRows = false;
+            this.EncounterLookupResults.AllowUserToResizeRows = false;
             this.EncounterLookupResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EncounterLookupResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EncounterLookupResults.Location = new System.Drawing.Point(12, 41);
+            this.EncounterLookupResults.MultiSelect = false;
             this.EncounterLookupResults.Name = "EncounterLookupResults";
             this.EncounterLookupResults.ReadOnly = true;
+            this.EncounterLookupResults.RowHeadersVisible = false;
             this.EncounterLookupResults.RowTemplate.Height = 25;
+            this.EncounterLookupResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EncounterLookupResults.Size = new System.Drawing.Size(776, 397);
             this.EncounterLookupResults.TabIndex = 4;
             // 
