@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 
@@ -82,11 +81,11 @@ namespace SWSH_OWRNG_Generator.WinForms
             MainWindow.CheckHeldItem.Checked = (bool)EncounterLookupResults[1, e.RowIndex].Value;
             MainWindow.InputEMs.Text = EncounterLookupResults[3, e.RowIndex].Value.ToString();
             MainWindow.CheckIsAbilityLocked.Checked = (string)EncounterLookupResults[4, e.RowIndex].Value != "-";
-            
+
             string[] LevelSubs = ((string)EncounterLookupResults[5, e.RowIndex].Value).Split(" - ");
             string LevelMin = LevelSubs[0], LevelMax;
             if (LevelSubs.Length == 2)
-            {                
+            {
                 LevelMax = LevelSubs[1];
             }
             else
