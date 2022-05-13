@@ -1150,7 +1150,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
         private void EncounterLookupMenu_Click(object sender, EventArgs e)
         {
-            using EncounterLookup EncounterLookupForm = new();
+            using EncounterLookup EncounterLookupForm = new(this);
             EncounterLookupForm.ShowDialog();
         }
     }

@@ -102,6 +102,7 @@
             this.EncounterLookupResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EncounterLookupResults.Size = new System.Drawing.Size(776, 397);
             this.EncounterLookupResults.TabIndex = 4;
+            this.EncounterLookupResults.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.EncounterLookupResults_RowEnter);
             // 
             // EncounterLookup
             // 

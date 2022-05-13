@@ -1970,16 +1970,8 @@ namespace SWSH_OWRNG_Generator.WinForms
         private System.Windows.Forms.ComboBox SelectedMark;
         private System.Windows.Forms.CheckBox CheckShinyCharm;
         private System.Windows.Forms.CheckBox CheckMarkCharm;
-        private System.Windows.Forms.CheckBox CheckWeather;
-        private System.Windows.Forms.CheckBox CheckStatic;
-        private System.Windows.Forms.CheckBox CheckFishing;
-        private System.Windows.Forms.CheckBox CheckHeldItem;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox InputLevelMax;
-        private System.Windows.Forms.TextBox InputLevelMin;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox InputSlotMax;
-        private System.Windows.Forms.TextBox InputSlotMin;
         private System.Windows.Forms.Label LabelLevel;
         private System.Windows.Forms.Label LabelSlot;
         private System.Windows.Forms.Button ButtonSearch;
@@ -2027,7 +2019,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         private System.Windows.Forms.TextBox RetailAdvancesTrackerResultState1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label RetailAdvancesTrackerNumResultsLabel;
-        private System.Windows.Forms.CheckBox CheckIsAbilityLocked;
         private System.Windows.Forms.MenuStrip MainMenu;
         private System.Windows.Forms.ToolStripMenuItem SeedFinderMenu;
         private System.Windows.Forms.Button ButtonUpdateStates;
@@ -2035,9 +2026,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         private System.Windows.Forms.TextBox InputKOCount;
         private System.Windows.Forms.CheckBox CheckTIDSIDFinder;
         private System.Windows.Forms.Label LabelEMs;
-        private System.Windows.Forms.TextBox InputEMs;
         private System.Windows.Forms.Label LabelFlawlessIVs;
-        private System.Windows.Forms.TextBox InputFlawlessIVs;
         private System.Windows.Forms.CheckBox sensBox;
         private System.Windows.Forms.CheckBox CheckCuteCharm;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frame;
@@ -2089,8 +2078,19 @@ namespace SWSH_OWRNG_Generator.WinForms
         private Button ReadEncounterButton;
         private ComboBox SelectedAura;
         private Label LabelAura;
-        private CheckBox CheckHidden;
         private ToolTip TIDSIDFinderBrokenTooltip;
         private ToolStripMenuItem EncounterLookupMenu;
+        public CheckBox CheckHeldItem;
+        public TextBox InputEMs;
+        public CheckBox CheckIsAbilityLocked;
+        public TextBox InputFlawlessIVs;
+        public TextBox InputSlotMin;
+        public TextBox InputSlotMax;
+        public TextBox InputLevelMin;
+        public TextBox InputLevelMax;
+        public CheckBox CheckStatic;
+        public CheckBox CheckWeather;
+        public CheckBox CheckFishing;
+        public CheckBox CheckHidden;
     }
 }
