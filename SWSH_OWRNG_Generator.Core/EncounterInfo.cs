@@ -25,7 +25,7 @@ namespace SWSH_OWRNG_Generator.Core
         public string? Location { get; set; }
         public int[]? Level { get; set; }
         public int[]? Slots { get; set; }
-        public bool? AbilityLocked { get; set; }
+        public bool? LockedAbility { get; set; }
         public int? Ability { set; get; }
         public int? FixedIVs { get; set; }
     }

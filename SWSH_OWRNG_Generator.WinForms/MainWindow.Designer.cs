@@ -140,6 +140,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckIsAbilityLocked = new System.Windows.Forms.CheckBox();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.SeedFinderMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.EncounterLookupMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtonUpdateStates = new System.Windows.Forms.Button();
             this.CheckTIDSIDFinder = new System.Windows.Forms.CheckBox();
             this.LabelKOCount = new System.Windows.Forms.Label();
@@ -179,7 +180,6 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.LabelAura = new System.Windows.Forms.Label();
             this.CheckHidden = new System.Windows.Forms.CheckBox();
             this.TIDSIDFinderBrokenTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.EncounterLookupMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.PokeSprite = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
@@ -654,6 +654,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // 
             this.Results.AllowUserToAddRows = false;
             this.Results.AllowUserToDeleteRows = false;
+            this.Results.AllowUserToResizeRows = false;
             this.Results.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -684,9 +685,12 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.State1});
             this.Results.DataSource = this.generatorBindingSource;
             this.Results.Location = new System.Drawing.Point(12, 463);
+            this.Results.MultiSelect = false;
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
+            this.Results.RowHeadersVisible = false;
             this.Results.RowHeadersWidth = 62;
+            this.Results.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Results.Size = new System.Drawing.Size(808, 224);
             this.Results.TabIndex = 73;
             // 
@@ -1337,6 +1341,13 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.SeedFinderMenu.Size = new System.Drawing.Size(80, 20);
             this.SeedFinderMenu.Text = "Seed Finder";
             this.SeedFinderMenu.Click += new System.EventHandler(this.SeedFinderMenu_Click);
+            // EncounterLookupMenu
+            // 
+            this.EncounterLookupMenu.Name = "EncounterLookupMenu";
+            this.EncounterLookupMenu.Size = new System.Drawing.Size(116, 20);
+            this.EncounterLookupMenu.Text = "Encounter Lookup";
+            this.EncounterLookupMenu.Click += new System.EventHandler(this.EncounterLookupMenu_Click);
+            // 
             // 
             // ButtonUpdateStates
             // 
@@ -1794,17 +1805,6 @@ namespace SWSH_OWRNG_Generator.WinForms
             // TIDSIDFinderBrokenTooltip
             // 
             this.TIDSIDFinderBrokenTooltip.ShowAlways = true;
-
-            //
-            // EncounterLookupMenu
-            //
-
-            this.EncounterLookupMenu.Name = "EncounterLookupMenu";
-            this.EncounterLookupMenu.Size = new System.Drawing.Size(116, 20);
-
-            this.EncounterLookupMenu.Text = "Encounter Lookup";
-            this.EncounterLookupMenu.Click += new System.EventHandler(this.EncounterLookupMenu_Click);
-
             // 
             // PokeSprite
             // 
@@ -1983,16 +1983,8 @@ namespace SWSH_OWRNG_Generator.WinForms
         private System.Windows.Forms.ComboBox SelectedMark;
         private System.Windows.Forms.CheckBox CheckShinyCharm;
         private System.Windows.Forms.CheckBox CheckMarkCharm;
-        private System.Windows.Forms.CheckBox CheckWeather;
-        private System.Windows.Forms.CheckBox CheckStatic;
-        private System.Windows.Forms.CheckBox CheckFishing;
-        private System.Windows.Forms.CheckBox CheckHeldItem;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox InputLevelMax;
-        private System.Windows.Forms.TextBox InputLevelMin;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox InputSlotMax;
-        private System.Windows.Forms.TextBox InputSlotMin;
         private System.Windows.Forms.Label LabelLevel;
         private System.Windows.Forms.Label LabelSlot;
         private System.Windows.Forms.Button ButtonSearch;
@@ -2040,7 +2032,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         private System.Windows.Forms.TextBox RetailAdvancesTrackerResultState1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label RetailAdvancesTrackerNumResultsLabel;
-        private System.Windows.Forms.CheckBox CheckIsAbilityLocked;
         private System.Windows.Forms.MenuStrip MainMenu;
         private System.Windows.Forms.ToolStripMenuItem SeedFinderMenu;
         private System.Windows.Forms.Button ButtonUpdateStates;
@@ -2048,9 +2039,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         private System.Windows.Forms.TextBox InputKOCount;
         private System.Windows.Forms.CheckBox CheckTIDSIDFinder;
         private System.Windows.Forms.Label LabelEMs;
-        private System.Windows.Forms.TextBox InputEMs;
         private System.Windows.Forms.Label LabelFlawlessIVs;
-        private System.Windows.Forms.TextBox InputFlawlessIVs;
         private System.Windows.Forms.CheckBox sensBox;
         private System.Windows.Forms.CheckBox CheckCuteCharm;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frame;
@@ -2102,9 +2091,20 @@ namespace SWSH_OWRNG_Generator.WinForms
         private Button ReadEncounterButton;
         private ComboBox SelectedAura;
         private Label LabelAura;
-        private CheckBox CheckHidden;
         public PictureBox PokeSprite;
         private ToolTip TIDSIDFinderBrokenTooltip;
         private ToolStripMenuItem EncounterLookupMenu;
+        public CheckBox CheckHeldItem;
+        public TextBox InputEMs;
+        public CheckBox CheckIsAbilityLocked;
+        public TextBox InputFlawlessIVs;
+        public TextBox InputSlotMin;
+        public TextBox InputSlotMax;
+        public TextBox InputLevelMin;
+        public TextBox InputLevelMax;
+        public CheckBox CheckStatic;
+        public CheckBox CheckWeather;
+        public CheckBox CheckFishing;
+        public CheckBox CheckHidden;
     }
 }
