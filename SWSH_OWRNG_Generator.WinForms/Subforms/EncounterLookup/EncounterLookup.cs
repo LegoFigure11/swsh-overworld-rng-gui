@@ -109,8 +109,6 @@ namespace SWSH_OWRNG_Generator.WinForms
             bool Static = false, Hidden = false;
             if (EncounterType == "Static") Static = true;
             else if (EncounterType == "Hidden") Hidden = true;
-            MainWindow.CheckStatic.Checked = Static;
-            MainWindow.CheckHidden.Checked = Hidden;
 
             bool Fishing = false, Weather = false;
             string WeatherType = (string)EncounterLookupResults[9, e.RowIndex].Value;
@@ -118,6 +116,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             else if (WeatherType != "Normal Weather") Weather = true;
             MainWindow.CheckFishing.Checked = Fishing;
             MainWindow.CheckWeather.Checked = Weather;
+            MainWindow.CheckStatic.Checked = Static;
+            MainWindow.CheckHidden.Checked = Hidden && !Fishing;
 
             MainWindow.CheckIsAbilityLocked.Checked = (bool)EncounterLookupResults[11, e.RowIndex].Value;
             MainWindow.InputFlawlessIVs.Text = EncounterLookupResults[12, e.RowIndex].Value.ToString();
