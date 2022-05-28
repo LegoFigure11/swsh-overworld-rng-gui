@@ -29546,6 +29546,14 @@
     "Encounters": [
       {
         "Game": "Sword",
+        "EncounterType": "Static",
+        "Location": "Workout Sea",
+        "Weather": "Any Weather",
+        "FixedIVs": 3,
+        "Level": [ 50, 50 ]
+      },
+      {
+        "Game": "Sword",
         "EncounterType": "Symbol",
         "Location": "Lake of Outrage",
         "Weather": "Normal Weather",
@@ -29703,6 +29711,14 @@
         "Weather": "All Weather",
         "Level": [ 43, 48 ],
         "Slots": [ 45, 59 ]
+      },
+      {
+        "Game": "Shield",
+        "EncounterType": "Static",
+        "Location": "Workout Sea",
+        "Weather": "Any Weather",
+        "FixedIVs": 3,
+        "Level": [ 50, 50 ]
       },
       {
         "Game": "Shield",
