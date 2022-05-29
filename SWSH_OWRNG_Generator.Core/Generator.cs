@@ -213,7 +213,7 @@ namespace SWSH_OWRNG_Generator.Core
                     Results.Add(
                         new Frame
                         {
-                            Advances = TIDSIDSearch ? (-(long)(advance + InitialAdvances)).ToString("N0") + " | Roll: " + rollToCheck.ToString("N0") : (advance + InitialAdvances).ToString("N0"),
+                            Advances = TIDSIDSearch ? $"{(-(long)(advance + InitialAdvances)):N0} | Roll: {rollToCheck:N0}" : (advance + InitialAdvances).ToString("N0"),
                             TID = (ushort)(MockPID >> 16),
                             SID = (ushort)MockPID,
                             Animation = (_s0 & 1) ^ (_s1 & 1),
