@@ -141,6 +141,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.SeedFinderMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.EncounterLookupMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.CramomaticMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtonUpdateStates = new System.Windows.Forms.Button();
             this.CheckTIDSIDFinder = new System.Windows.Forms.CheckBox();
             this.LabelKOCount = new System.Windows.Forms.Label();
@@ -1327,7 +1328,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.MainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SeedFinderMenu,
-            this.EncounterLookupMenu});
+            this.EncounterLookupMenu,
+            this.CramomaticMenu});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(831, 24);
@@ -1346,6 +1348,13 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.EncounterLookupMenu.Size = new System.Drawing.Size(116, 20);
             this.EncounterLookupMenu.Text = "Encounter Lookup";
             this.EncounterLookupMenu.Click += new System.EventHandler(this.EncounterLookupMenu_Click);
+            // 
+            // CramomaticMenu
+            // 
+            this.CramomaticMenu.Name = "CramomaticMenu";
+            this.CramomaticMenu.Size = new System.Drawing.Size(95, 20);
+            this.CramomaticMenu.Text = "Cram-o-matic";
+            this.CramomaticMenu.Click += new System.EventHandler(this.CramomaticMenu_Click);
             // 
             // ButtonUpdateStates
             // 
@@ -1945,8 +1954,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         #endregion
 
         private System.Windows.Forms.Label LabelState0;
-        private System.Windows.Forms.TextBox InputState0;
-        private System.Windows.Forms.TextBox InputState1;
         private System.Windows.Forms.Label LabelState1;
         private System.Windows.Forms.TextBox hpMin;
         private System.Windows.Forms.TextBox hpMax;
@@ -2092,5 +2099,8 @@ namespace SWSH_OWRNG_Generator.WinForms
         public CheckBox CheckWeather;
         public CheckBox CheckFishing;
         public CheckBox CheckHidden;
+        private ToolStripMenuItem CramomaticMenu;
+        public TextBox InputState0;
+        public TextBox InputState1;
     }
 }

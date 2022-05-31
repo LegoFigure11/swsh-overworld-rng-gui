@@ -216,7 +216,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
         private void JudgeFilterCompareIVs(uint min, uint max, ComboBox box)
         {
-            box.SelectedIndexChanged -= this.JudgeFilter_SelectedIndexChanged;
+            box.SelectedIndexChanged -= JudgeFilter_SelectedIndexChanged;
             if (min == 0 && max == 0)
             {
                 box.SelectedIndex = 0;
@@ -245,7 +245,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             {
                 box.SelectedIndex = -1;
             }
-            box.SelectedIndexChanged += this.JudgeFilter_SelectedIndexChanged;
+            box.SelectedIndexChanged += JudgeFilter_SelectedIndexChanged;
         }
 
         private void FlawlessIVs_TextChanged(object sender, EventArgs e)
@@ -491,7 +491,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             }
         }
 
-        private void HexInput_KeyPress(object sender, KeyPressEventArgs e)
+        public void HexInput_KeyPress(object sender, KeyPressEventArgs e)
         {
             string s = "";
 
@@ -514,7 +514,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             }
         }
 
-        private void DecInput_KeyPress(object sender, KeyPressEventArgs e)
+        public void DecInput_KeyPress(object sender, KeyPressEventArgs e)
         {
             string s = "";
 
@@ -660,7 +660,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             ButtonSearch.Enabled = true;
         }
 
-        private static void Pad(object sender, char s, int length)
+        public static void Pad(object sender, char s, int length)
         {
             ((TextBox)sender).Text = ((TextBox)sender).Text.PadLeft(length, s);
         }
@@ -1152,6 +1152,12 @@ namespace SWSH_OWRNG_Generator.WinForms
         {
             using EncounterLookup EncounterLookupForm = new(this);
             EncounterLookupForm.ShowDialog();
+        }
+
+        private void CramomaticMenu_Click(object sender, EventArgs e)
+        {
+            using Cram_o_matic CramomaticForm = new(this);
+            CramomaticForm.ShowDialog();
         }
     }
 }
