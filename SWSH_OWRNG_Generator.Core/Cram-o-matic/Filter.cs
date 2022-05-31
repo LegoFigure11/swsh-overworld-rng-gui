@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SWSH_OWRNG_Generator.Core.Cram_o_matic
+﻿namespace SWSH_OWRNG_Generator.Core.Cram_o_matic
 {
     public class Filter
     {
