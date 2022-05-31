@@ -181,6 +181,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckHidden = new System.Windows.Forms.CheckBox();
             this.TIDSIDFinderBrokenTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.PokeSprite = new System.Windows.Forms.PictureBox();
+            this.ScreenShot = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1341,13 +1342,13 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.SeedFinderMenu.Size = new System.Drawing.Size(80, 20);
             this.SeedFinderMenu.Text = "Seed Finder";
             this.SeedFinderMenu.Click += new System.EventHandler(this.SeedFinderMenu_Click);
+            // 
             // EncounterLookupMenu
             // 
             this.EncounterLookupMenu.Name = "EncounterLookupMenu";
             this.EncounterLookupMenu.Size = new System.Drawing.Size(116, 20);
             this.EncounterLookupMenu.Text = "Encounter Lookup";
             this.EncounterLookupMenu.Click += new System.EventHandler(this.EncounterLookupMenu_Click);
-            // 
             // 
             // ButtonUpdateStates
             // 
@@ -1750,7 +1751,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // DaySkipButton
             // 
             this.DaySkipButton.Enabled = false;
-            this.DaySkipButton.Location = new System.Drawing.Point(330, 350);
+            this.DaySkipButton.Location = new System.Drawing.Point(330, 351);
             this.DaySkipButton.Name = "DaySkipButton";
             this.DaySkipButton.Size = new System.Drawing.Size(91, 25);
             this.DaySkipButton.TabIndex = 132;
@@ -1809,15 +1810,27 @@ namespace SWSH_OWRNG_Generator.WinForms
             // PokeSprite
             // 
             this.PokeSprite.Location = new System.Drawing.Point(275, 294);
-            this.PokeSprite.Name = "pictureBox1";
+            this.PokeSprite.Name = "PokeSprite";
             this.PokeSprite.Size = new System.Drawing.Size(48, 53);
             this.PokeSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PokeSprite.TabIndex = 138;
             this.PokeSprite.TabStop = false;
             // 
+            // ScreenShot
+            // 
+            this.ScreenShot.Enabled = false;
+            this.ScreenShot.Location = new System.Drawing.Point(437, 321);
+            this.ScreenShot.Name = "ScreenShot";
+            this.ScreenShot.Size = new System.Drawing.Size(141, 25);
+            this.ScreenShot.TabIndex = 139;
+            this.ScreenShot.Text = "ScreenShot";
+            this.ScreenShot.UseVisualStyleBackColor = true;
+            this.ScreenShot.Click += new System.EventHandler(this.GrabScreenShot_Click);
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 699);
+            this.Controls.Add(this.ScreenShot);
             this.Controls.Add(this.CheckHidden);
             this.Controls.Add(this.SelectedAura);
             this.Controls.Add(this.LabelAura);
@@ -2106,5 +2119,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         public CheckBox CheckWeather;
         public CheckBox CheckFishing;
         public CheckBox CheckHidden;
+        private Button ScreenShot;
     }
 }

@@ -2,7 +2,9 @@
 using SysBot.Base;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
@@ -870,6 +872,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeButtonState(Program.Window.ReadEncounterButton, true);
                 ChangeButtonState(Program.Window.DaySkipButton, true);
                 ChangeTextBoxState(Program.Window.DaySkipAmountInput, true);
+                ChangeButtonState(Program.Window.ScreenShot, true);
                 var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
                 await GetTIDSID(sav).ConfigureAwait(false);
                 Animation.Visible = false;
@@ -893,6 +896,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeButtonState(Program.Window.ReadEncounterButton, false);
                 ChangeButtonState(Program.Window.DaySkipButton, false);
                 ChangeTextBoxState(Program.Window.DaySkipAmountInput, false);
+                ChangeButtonState(Program.Window.ScreenShot, false);
             }
         }
 
@@ -1181,6 +1185,23 @@ namespace SWSH_OWRNG_Generator.WinForms
         {
             using EncounterLookup EncounterLookupForm = new(this);
             EncounterLookupForm.ShowDialog();
+        }
+
+        private void GrabScreenShot_Click(object sender, EventArgs e)
+        {
+            var fn = "screenshot.jpg";
+            if (!SwitchConnection.Connected)
+            {
+                System.Media.SystemSounds.Beep.Play();
+                MessageBox.Show($"Not connected to Switch, screenshot not possible!");
+                return;
+            }
+            var bytes = SwitchConnection.Screengrab(CancellationToken.None).Result;
+            File.WriteAllBytes(fn, bytes);
+            FileStream stream = new(fn, FileMode.Open);
+            var img = Image.FromStream(stream);
+            Clipboard.SetImage(img);
+            stream.Dispose();
         }
     }
 }
