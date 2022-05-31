@@ -1,10 +1,10 @@
 ﻿using System.Text.Json;
 
-namespace SWSH_OWRNG_Generator.Core
+namespace SWSH_OWRNG_Generator.Core.Encounters
 {
     public class EncounterData
     {
-        private readonly static string FileName = "EncounterData.json";
+        private readonly static string FileName = ".\\Encounters\\EncounterData.json";
         private readonly static string JsonString = File.ReadAllText(FileName);
         public readonly Dictionary<string, PkmInfo> Data = JsonSerializer.Deserialize<Dictionary<string, PkmInfo>>(JsonString)!;
     }
