@@ -1196,12 +1196,31 @@ namespace SWSH_OWRNG_Generator.WinForms
                 MessageBox.Show($"Not connected to Switch, screenshot not possible!");
                 return;
             }
+            ShouldReadState = false;
             var bytes = SwitchConnection.Screengrab(CancellationToken.None).Result;
             File.WriteAllBytes(fn, bytes);
             FileStream stream = new(fn, FileMode.Open);
             var img = Image.FromStream(stream);
             Clipboard.SetImage(img);
+            using (Form form = new Form())
+            {
+                Bitmap vimg = (Bitmap)img;
+
+                form.StartPosition = FormStartPosition.CenterScreen;               
+
+                Bitmap original = vimg;
+                Bitmap resized = new Bitmap(original, new Size(original.Width / 2, original.Height / 2));
+
+                PictureBox pb = new PictureBox();
+                pb.Dock = DockStyle.Fill;
+                pb.Image = resized;
+                form.Size = resized.Size;
+
+                form.Controls.Add(pb);                
+                form.ShowDialog();
+            }
             stream.Dispose();
+            ShouldReadState = true;
         }
     }
 }
