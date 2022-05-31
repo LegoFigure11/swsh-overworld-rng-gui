@@ -4,6 +4,9 @@
     <Compile Update="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Subforms\Cram-o-matic\Cram-o-matic.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Subforms\EncounterLookup\EncounterLookup.cs">

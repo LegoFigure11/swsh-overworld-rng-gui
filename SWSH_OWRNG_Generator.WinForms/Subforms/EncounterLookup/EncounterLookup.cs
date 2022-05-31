@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using SWSH_OWRNG_Generator.Core.Encounters;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 
@@ -8,7 +9,7 @@ namespace SWSH_OWRNG_Generator.WinForms
     {
         private static MainWindow MainWindow;
 
-        private readonly static Core.EncounterData Encounters = new();
+        private readonly static EncounterData Encounters = new();
         public EncounterLookup(MainWindow f)
         {
             InitializeComponent();
@@ -25,14 +26,14 @@ namespace SWSH_OWRNG_Generator.WinForms
             if (SelectedSpecies.SelectedItem != null)
             {
                 string SpeciesName = (string)SelectedSpecies.SelectedItem;
-                Core.PkmInfo Data = Encounters.Data[SpeciesName];
+                PkmInfo Data = Encounters.Data[SpeciesName];
 
                 if (Data != null)
                 {
                     if (Data.Encounters != null)
                     {
-                        List<Core.PkmResult> Results = new();
-                        foreach (Core.EncounterDetails Encounter in Data.Encounters)
+                        List<PkmResult> Results = new();
+                        foreach (EncounterDetails Encounter in Data.Encounters)
                         {
                             if (Encounter.Game! != (string)SelectedGame.SelectedItem) continue;
                             bool Item = false;
@@ -50,7 +51,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                             if (Encounter.Slots != null) Slot = $"{Encounter.Slots[0]} - {Encounter.Slots[1]}";
 
                             Results.Add(
-                                new Core.PkmResult
+                                new PkmResult
                                 {
                                     Species = SpeciesName,
                                     EncounterType = Encounter.EncounterType!,
