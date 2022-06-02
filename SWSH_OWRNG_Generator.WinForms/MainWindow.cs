@@ -1159,5 +1159,11 @@ namespace SWSH_OWRNG_Generator.WinForms
             using Cram_o_matic CramomaticForm = new(this);
             CramomaticForm.ShowDialog();
         }
+
+        private void LotoIDMenu_Click(object sender, EventArgs e)
+        {
+            using Loto_ID LotoIDForm = new(this);
+            LotoIDForm.ShowDialog();
+        }
     }
 }

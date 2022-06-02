@@ -142,6 +142,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.SeedFinderMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.EncounterLookupMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.CramomaticMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.LotoIDMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtonUpdateStates = new System.Windows.Forms.Button();
             this.CheckTIDSIDFinder = new System.Windows.Forms.CheckBox();
             this.LabelKOCount = new System.Windows.Forms.Label();
@@ -1329,7 +1330,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SeedFinderMenu,
             this.EncounterLookupMenu,
-            this.CramomaticMenu});
+            this.CramomaticMenu,
+            this.LotoIDMenu});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(831, 24);
@@ -1355,6 +1357,13 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CramomaticMenu.Size = new System.Drawing.Size(95, 20);
             this.CramomaticMenu.Text = "Cram-o-matic";
             this.CramomaticMenu.Click += new System.EventHandler(this.CramomaticMenu_Click);
+            // 
+            // LotoIDMenu
+            // 
+            this.LotoIDMenu.Name = "LotoIDMenu";
+            this.LotoIDMenu.Size = new System.Drawing.Size(59, 20);
+            this.LotoIDMenu.Text = "Loto-ID";
+            this.LotoIDMenu.Click += new System.EventHandler(this.LotoIDMenu_Click);
             // 
             // ButtonUpdateStates
             // 
@@ -1966,8 +1975,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button hpMinFilter;
         private System.Windows.Forms.Button hpMaxFilter;
-        private System.Windows.Forms.TextBox InputTID;
-        private System.Windows.Forms.TextBox InputSID;
         private System.Windows.Forms.Label LabelTIDSID;
         private System.Windows.Forms.Label LabelIDsSlash;
         private System.Windows.Forms.TextBox InputMaxAdv;
@@ -2102,5 +2109,8 @@ namespace SWSH_OWRNG_Generator.WinForms
         private ToolStripMenuItem CramomaticMenu;
         public TextBox InputState0;
         public TextBox InputState1;
+        private ToolStripMenuItem LotoIDMenu;
+        public TextBox InputTID;
+        public TextBox InputSID;
     }
 }
