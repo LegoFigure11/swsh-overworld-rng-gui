@@ -58,7 +58,7 @@
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
 		<PackageReference Include="NLog" Version="4.7.15" />
-		<PackageReference Include="PKHeX.Core" Version="22.3.18" />
+		<PackageReference Include="PKHeX.Core" Version="22.6.1" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="SysBot.Base">
