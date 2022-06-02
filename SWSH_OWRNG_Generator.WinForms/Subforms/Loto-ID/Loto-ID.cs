@@ -16,11 +16,19 @@ namespace SWSH_OWRNG_Generator.WinForms
         public Loto_ID(MainWindow f)
         {
             InitializeComponent();
+            InputState0.Text = f.InputState0.Text;
+            InputState1.Text = f.InputState1.Text;
             MainWindow = f;
             TID7 = ((uint.Parse(f.InputSID.Text) << 16) | uint.Parse(f.InputTID.Text)) % 1_000_000;
             DisplayID = $"{TID7:D6}";
             InputDisplayID.Text = DisplayID;
             LoadIDs();
+
+            InputState0.KeyPress += new KeyPressEventHandler(MainWindow.HexInput_KeyPress);
+            InputState1.KeyPress += new KeyPressEventHandler(MainWindow.HexInput_KeyPress);
+            InputInitialAdv.KeyPress += new KeyPressEventHandler(MainWindow.DecInput_KeyPress);
+            InputMaxAdv.KeyPress += new KeyPressEventHandler(MainWindow.DecInput_KeyPress);
+            InputDisplayID.KeyPress += new KeyPressEventHandler(MainWindow.DecInput_KeyPress);
         }
 
         private void UpdateIDsFromFile()

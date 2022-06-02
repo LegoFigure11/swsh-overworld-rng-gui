@@ -176,7 +176,7 @@
             // InputDisplayID
             // 
             this.InputDisplayID.Location = new System.Drawing.Point(68, 64);
-            this.InputDisplayID.MaxLength = 16;
+            this.InputDisplayID.MaxLength = 6;
             this.InputDisplayID.Name = "InputDisplayID";
             this.InputDisplayID.Size = new System.Drawing.Size(189, 23);
             this.InputDisplayID.TabIndex = 158;
