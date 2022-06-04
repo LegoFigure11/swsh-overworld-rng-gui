@@ -8,5 +8,6 @@
         public bool PPMax { get; set; }
         public bool RareCandy { get; set; }
         public bool MasterBall { get; set; }
+        public bool MenuClose { get; set; }
     }
 }

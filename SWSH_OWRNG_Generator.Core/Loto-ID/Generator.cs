@@ -4,7 +4,7 @@ namespace SWSH_OWRNG_Generator.Core.Loto_ID
 {
     public class Generator
     {
-        public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, HashSet<string> IDs, Filter Filters, IProgress<int> progress)
+        public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, HashSet<string> IDs, Filter Filters, uint NPCCount, IProgress<int> progress)
         {
             List<Frame> Results = new();
 
@@ -29,6 +29,8 @@ namespace SWSH_OWRNG_Generator.Core.Loto_ID
                 // Init new RNG
                 (ulong s0, ulong s1) = go.GetState();
                 Xoroshiro128Plus rng = new(s0, s1);
+                if (Filters.MenuClose)
+                    rng = MenuClose.Generator.Advance(ref rng, NPCCount);
                 uint _1 = (uint)rng.NextInt(10);
                 uint _2 = (uint)rng.NextInt(10);
                 uint _3 = (uint)rng.NextInt(10);

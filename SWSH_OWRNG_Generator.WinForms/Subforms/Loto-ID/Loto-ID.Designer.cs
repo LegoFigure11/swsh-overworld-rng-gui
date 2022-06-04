@@ -53,6 +53,9 @@
             this.CheckPPUp = new System.Windows.Forms.CheckBox();
             this.CheckMooMoo = new System.Windows.Forms.CheckBox();
             this.CheckNoItem = new System.Windows.Forms.CheckBox();
+            this.LabelNPCs = new System.Windows.Forms.Label();
+            this.InputNPCs = new System.Windows.Forms.TextBox();
+            this.CheckMenuClose = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.CramResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LotoIDBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -127,7 +130,7 @@
             this.CramResults.RowHeadersVisible = false;
             this.CramResults.RowTemplate.Height = 25;
             this.CramResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CramResults.Size = new System.Drawing.Size(627, 365);
+            this.CramResults.Size = new System.Drawing.Size(627, 406);
             this.CramResults.TabIndex = 154;
             // 
             // LabelDisplayIDInput
@@ -214,7 +217,7 @@
             this.CheckMaster.AutoSize = true;
             this.CheckMaster.Checked = true;
             this.CheckMaster.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CheckMaster.Location = new System.Drawing.Point(14, 357);
+            this.CheckMaster.Location = new System.Drawing.Point(12, 398);
             this.CheckMaster.Name = "CheckMaster";
             this.CheckMaster.Size = new System.Drawing.Size(116, 19);
             this.CheckMaster.TabIndex = 166;
@@ -224,7 +227,7 @@
             // CheckRareCandy
             // 
             this.CheckRareCandy.AutoSize = true;
-            this.CheckRareCandy.Location = new System.Drawing.Point(14, 332);
+            this.CheckRareCandy.Location = new System.Drawing.Point(12, 373);
             this.CheckRareCandy.Name = "CheckRareCandy";
             this.CheckRareCandy.Size = new System.Drawing.Size(118, 19);
             this.CheckRareCandy.TabIndex = 165;
@@ -234,7 +237,7 @@
             // CheckPPMax
             // 
             this.CheckPPMax.AutoSize = true;
-            this.CheckPPMax.Location = new System.Drawing.Point(14, 307);
+            this.CheckPPMax.Location = new System.Drawing.Point(12, 348);
             this.CheckPPMax.Name = "CheckPPMax";
             this.CheckPPMax.Size = new System.Drawing.Size(98, 19);
             this.CheckPPMax.TabIndex = 164;
@@ -244,7 +247,7 @@
             // CheckPPUp
             // 
             this.CheckPPUp.AutoSize = true;
-            this.CheckPPUp.Location = new System.Drawing.Point(14, 282);
+            this.CheckPPUp.Location = new System.Drawing.Point(12, 323);
             this.CheckPPUp.Name = "CheckPPUp";
             this.CheckPPUp.Size = new System.Drawing.Size(90, 19);
             this.CheckPPUp.TabIndex = 163;
@@ -254,7 +257,7 @@
             // CheckMooMoo
             // 
             this.CheckMooMoo.AutoSize = true;
-            this.CheckMooMoo.Location = new System.Drawing.Point(14, 257);
+            this.CheckMooMoo.Location = new System.Drawing.Point(12, 298);
             this.CheckMooMoo.Name = "CheckMooMoo";
             this.CheckMooMoo.Size = new System.Drawing.Size(134, 19);
             this.CheckMooMoo.TabIndex = 162;
@@ -264,18 +267,51 @@
             // CheckNoItem
             // 
             this.CheckNoItem.AutoSize = true;
-            this.CheckNoItem.Location = new System.Drawing.Point(14, 232);
+            this.CheckNoItem.Location = new System.Drawing.Point(12, 273);
             this.CheckNoItem.Name = "CheckNoItem";
             this.CheckNoItem.Size = new System.Drawing.Size(101, 19);
             this.CheckNoItem.TabIndex = 167;
             this.CheckNoItem.Text = "Show No Item";
             this.CheckNoItem.UseVisualStyleBackColor = true;
             // 
+            // LabelNPCs
+            // 
+            this.LabelNPCs.AutoSize = true;
+            this.LabelNPCs.Location = new System.Drawing.Point(23, 232);
+            this.LabelNPCs.Name = "LabelNPCs";
+            this.LabelNPCs.Size = new System.Drawing.Size(39, 15);
+            this.LabelNPCs.TabIndex = 169;
+            this.LabelNPCs.Text = "NPCs:";
+            // 
+            // InputNPCs
+            // 
+            this.InputNPCs.Enabled = false;
+            this.InputNPCs.Location = new System.Drawing.Point(68, 229);
+            this.InputNPCs.MaxLength = 2;
+            this.InputNPCs.Name = "InputNPCs";
+            this.InputNPCs.Size = new System.Drawing.Size(34, 23);
+            this.InputNPCs.TabIndex = 168;
+            this.InputNPCs.Text = "5";
+            // 
+            // CheckMenuClose
+            // 
+            this.CheckMenuClose.AutoSize = true;
+            this.CheckMenuClose.Location = new System.Drawing.Point(108, 232);
+            this.CheckMenuClose.Name = "CheckMenuClose";
+            this.CheckMenuClose.Size = new System.Drawing.Size(139, 19);
+            this.CheckMenuClose.TabIndex = 170;
+            this.CheckMenuClose.Text = "Consider Menu Close";
+            this.CheckMenuClose.UseVisualStyleBackColor = true;
+            this.CheckMenuClose.CheckedChanged += new System.EventHandler(this.CheckMenuClose_CheckedChanged);
+            // 
             // Loto_ID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 389);
+            this.ClientSize = new System.Drawing.Size(902, 430);
+            this.Controls.Add(this.CheckMenuClose);
+            this.Controls.Add(this.LabelNPCs);
+            this.Controls.Add(this.InputNPCs);
             this.Controls.Add(this.CheckNoItem);
             this.Controls.Add(this.CheckMaster);
             this.Controls.Add(this.CheckRareCandy);
@@ -333,5 +369,8 @@
         private System.Windows.Forms.CheckBox CheckPPUp;
         private System.Windows.Forms.CheckBox CheckMooMoo;
         private System.Windows.Forms.CheckBox CheckNoItem;
+        private System.Windows.Forms.Label LabelNPCs;
+        private System.Windows.Forms.TextBox InputNPCs;
+        private System.Windows.Forms.CheckBox CheckMenuClose;
     }
 }
