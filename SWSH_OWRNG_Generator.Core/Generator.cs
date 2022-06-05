@@ -54,12 +54,11 @@ namespace SWSH_OWRNG_Generator.Core
 
             while (advance < advances)
             {
+                if (progress != null && (advance % ProgressUpdateInterval == 0))
+                    progress.Report(1);
                 long totalRolls = 1; // Placeholder to ensure this is run once normally, also accounts for rolls not being determined yet
                 for (long rollToCheck = 0; rollToCheck < totalRolls; rollToCheck++)
                 {
-                    if (progress != null && (advance % ProgressUpdateInterval == 0))
-                        progress.Report(1);
-
                     // Init new RNG
                     (ulong s0, ulong s1) = go.GetState();
                     Xoroshiro128Plus rng = new(s0, s1);
@@ -84,14 +83,7 @@ namespace SWSH_OWRNG_Generator.Core
 
                         SlotRand = (uint)rng.NextInt(100);
                         if (SlotMin > SlotRand || SlotMax < SlotRand)
-                        {
-                            if (TIDSIDSearch)
-                                go.Prev();
-                            else
-                                go.Next();
-                            advance++;
                             continue;
-                        }
 
                         if (GenerateLevel)
                         {
@@ -113,14 +105,7 @@ namespace SWSH_OWRNG_Generator.Core
                                 Level = LevelMax;
                             }
                             if ((DesiredAura == "Brilliant" && !Brilliant) || (DesiredAura == "None" && Brilliant))
-                            {
-                                if (TIDSIDSearch)
-                                    go.Prev();
-                                else
-                                    go.Next();
-                                advance++;
                                 continue;
-                            }
                         }
                     }
 
@@ -166,47 +151,21 @@ namespace SWSH_OWRNG_Generator.Core
                     FixedSeed = (uint)rng.Next();
                     (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, TSV, Shiny, (int)(FlawlessIVs + BrilliantIVs), MinIVs, MaxIVs);
 
-                    if (TIDSIDSearch)
-                    {
-                        ShinyXOR = 0;
-                    }
-
                     if (!PassIVs ||
                         (DesiredShiny == "Square" && ShinyXOR != 0) ||
                         (DesiredShiny == "Star" && (ShinyXOR > 15 || ShinyXOR == 0)) ||
                         (DesiredShiny == "Star/Square" && ShinyXOR > 15) ||
                         (DesiredShiny == "No" && ShinyXOR < 16)
                         )
-                    {
-                        if (TIDSIDSearch)
-                            go.Prev();
-                        else
-                            go.Next();
-                        advance++;
                         continue;
-                    }
 
                     string Mark = GenerateMark(ref rng, Weather, Fishing, MarkRolls);
 
                     if (!PassesMarkFilter(Mark, DesiredMark))
-                    {
-                        if (TIDSIDSearch)
-                            go.Prev();
-                        else
-                            go.Next();
-                        advance++;
                         continue;
-                    }
 
                     if (!PassesNatureFilter(Natures[(int)Nature], DesiredNature))
-                    {
-                        if (TIDSIDSearch)
-                            go.Prev();
-                        else
-                            go.Next();
-                        advance++;
                         continue;
-                    }
 
                     // Passes all filters!
                     (ulong _s0, ulong _s1) = go.GetState();
