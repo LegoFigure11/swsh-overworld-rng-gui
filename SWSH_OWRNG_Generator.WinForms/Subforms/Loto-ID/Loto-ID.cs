@@ -29,6 +29,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             InputInitialAdv.KeyPress += new KeyPressEventHandler(MainWindow.DecInput_KeyPress);
             InputMaxAdv.KeyPress += new KeyPressEventHandler(MainWindow.DecInput_KeyPress);
             InputDisplayID.KeyPress += new KeyPressEventHandler(MainWindow.DecInput_KeyPress);
+            InputNPCs.KeyPress += new KeyPressEventHandler(MainWindow.DecInput_KeyPress);
         }
 
         private void UpdateIDsFromFile()
