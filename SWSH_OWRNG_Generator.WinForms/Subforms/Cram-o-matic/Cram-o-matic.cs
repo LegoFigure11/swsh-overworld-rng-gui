@@ -21,6 +21,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             InputState1.KeyPress += new KeyPressEventHandler(MainWindow.HexInput_KeyPress);
             InputInitialAdv.KeyPress += new KeyPressEventHandler(MainWindow.DecInput_KeyPress);
             InputMaxAdv.KeyPress += new KeyPressEventHandler(MainWindow.DecInput_KeyPress);
+            InputNPCs.KeyPress += new KeyPressEventHandler(MainWindow.DecInput_KeyPress);
         }
 
         private async void CramSearch_Click(object sender, EventArgs e)
@@ -30,6 +31,14 @@ namespace SWSH_OWRNG_Generator.WinForms
             ulong s0 = ulong.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
             ulong s1 = ulong.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
             MainWindow.Pad(InputInitialAdv, '0', 1);
+            MainWindow.Pad(InputNPCs, '0', 1);
+            uint NPCs = 0;
+            if (CheckMenuClose.Checked)
+            {
+
+                NPCs = uint.Parse(InputNPCs.Text) + 1;
+            }
+
             ulong InitialAdvances = ulong.Parse(InputInitialAdv.Text);
             ulong advances = ulong.Parse(InputMaxAdv.Text);
             if (advances == 0)
@@ -48,6 +57,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             Filters.Apri = CheckApricorn.Checked;
             Filters.SafariSport = CheckSafariSport.Checked;
             Filters.BonusOnly = CheckBonus.Checked;
+            Filters.MenuClose = CheckMenuClose.Checked;
 
             CramProgressBar.Value = 0;
             CramProgressBar.Maximum = (int)advances;
@@ -58,7 +68,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             var progress = new Progress<int>(_ => CramProgressBar.PerformStep());
 
-            List<Core.Cram_o_matic.Frame> Frames = await Task.Run(() => Core.Cram_o_matic.Generator.Generate(s0, s1, advances, InitialAdvances, ItemIndex, progress, Filters));
+            List<Core.Cram_o_matic.Frame> Frames = await Task.Run(() => Core.Cram_o_matic.Generator.Generate(s0, s1, advances, InitialAdvances, ItemIndex, progress, Filters, NPCs));
 
             BindingSource Source = new() { DataSource = Frames };
             CramResults.DataSource = Source;
@@ -67,6 +77,11 @@ namespace SWSH_OWRNG_Generator.WinForms
             CramProgressBar.Value = CramProgressBar.Maximum;
             CramSearch.Text = "Search!";
             CramSearch.Enabled = true;
+        }
+
+        private void CheckMenuClose_CheckedChanged(object sender, EventArgs e)
+        {
+            InputNPCs.Enabled = CheckMenuClose.Checked;
         }
     }
 }

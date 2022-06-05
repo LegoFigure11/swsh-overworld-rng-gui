@@ -51,6 +51,9 @@
             this.CheckApricorn = new System.Windows.Forms.CheckBox();
             this.CheckSafariSport = new System.Windows.Forms.CheckBox();
             this.CheckBonus = new System.Windows.Forms.CheckBox();
+            this.CheckMenuClose = new System.Windows.Forms.CheckBox();
+            this.LabelNPCs = new System.Windows.Forms.Label();
+            this.InputNPCs = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CramResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CramBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -127,7 +130,7 @@
             this.CramResults.RowHeadersVisible = false;
             this.CramResults.RowTemplate.Height = 25;
             this.CramResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CramResults.Size = new System.Drawing.Size(612, 361);
+            this.CramResults.Size = new System.Drawing.Size(612, 388);
             this.CramResults.TabIndex = 138;
             // 
             // LabelMaxAdv
@@ -187,7 +190,7 @@
             // CheckPoke
             // 
             this.CheckPoke.AutoSize = true;
-            this.CheckPoke.Location = new System.Drawing.Point(12, 201);
+            this.CheckPoke.Location = new System.Drawing.Point(12, 230);
             this.CheckPoke.Name = "CheckPoke";
             this.CheckPoke.Size = new System.Drawing.Size(106, 19);
             this.CheckPoke.TabIndex = 145;
@@ -197,7 +200,7 @@
             // CheckGreat
             // 
             this.CheckGreat.AutoSize = true;
-            this.CheckGreat.Location = new System.Drawing.Point(12, 226);
+            this.CheckGreat.Location = new System.Drawing.Point(12, 255);
             this.CheckGreat.Name = "CheckGreat";
             this.CheckGreat.Size = new System.Drawing.Size(108, 19);
             this.CheckGreat.TabIndex = 146;
@@ -207,7 +210,7 @@
             // CheckShop1
             // 
             this.CheckShop1.AutoSize = true;
-            this.CheckShop1.Location = new System.Drawing.Point(12, 251);
+            this.CheckShop1.Location = new System.Drawing.Point(12, 280);
             this.CheckShop1.Name = "CheckShop1";
             this.CheckShop1.Size = new System.Drawing.Size(116, 19);
             this.CheckShop1.TabIndex = 147;
@@ -217,7 +220,7 @@
             // CheckShop2
             // 
             this.CheckShop2.AutoSize = true;
-            this.CheckShop2.Location = new System.Drawing.Point(12, 276);
+            this.CheckShop2.Location = new System.Drawing.Point(12, 305);
             this.CheckShop2.Name = "CheckShop2";
             this.CheckShop2.Size = new System.Drawing.Size(116, 19);
             this.CheckShop2.TabIndex = 148;
@@ -229,7 +232,7 @@
             this.CheckApricorn.AutoSize = true;
             this.CheckApricorn.Checked = true;
             this.CheckApricorn.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CheckApricorn.Location = new System.Drawing.Point(12, 301);
+            this.CheckApricorn.Location = new System.Drawing.Point(12, 330);
             this.CheckApricorn.Name = "CheckApricorn";
             this.CheckApricorn.Size = new System.Drawing.Size(99, 19);
             this.CheckApricorn.TabIndex = 149;
@@ -241,7 +244,7 @@
             this.CheckSafariSport.AutoSize = true;
             this.CheckSafariSport.Checked = true;
             this.CheckSafariSport.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CheckSafariSport.Location = new System.Drawing.Point(12, 326);
+            this.CheckSafariSport.Location = new System.Drawing.Point(12, 355);
             this.CheckSafariSport.Name = "CheckSafariSport";
             this.CheckSafariSport.Size = new System.Drawing.Size(142, 19);
             this.CheckSafariSport.TabIndex = 150;
@@ -253,18 +256,51 @@
             this.CheckBonus.AutoSize = true;
             this.CheckBonus.Checked = true;
             this.CheckBonus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CheckBonus.Location = new System.Drawing.Point(12, 351);
+            this.CheckBonus.Location = new System.Drawing.Point(12, 380);
             this.CheckBonus.Name = "CheckBonus";
             this.CheckBonus.Size = new System.Drawing.Size(156, 19);
             this.CheckBonus.TabIndex = 151;
             this.CheckBonus.Text = "Show Bonus frames only";
             this.CheckBonus.UseVisualStyleBackColor = true;
             // 
+            // CheckMenuClose
+            // 
+            this.CheckMenuClose.AutoSize = true;
+            this.CheckMenuClose.Location = new System.Drawing.Point(108, 204);
+            this.CheckMenuClose.Name = "CheckMenuClose";
+            this.CheckMenuClose.Size = new System.Drawing.Size(139, 19);
+            this.CheckMenuClose.TabIndex = 173;
+            this.CheckMenuClose.Text = "Consider Menu Close";
+            this.CheckMenuClose.UseVisualStyleBackColor = true;
+            this.CheckMenuClose.CheckedChanged += new System.EventHandler(this.CheckMenuClose_CheckedChanged);
+            // 
+            // LabelNPCs
+            // 
+            this.LabelNPCs.AutoSize = true;
+            this.LabelNPCs.Location = new System.Drawing.Point(23, 204);
+            this.LabelNPCs.Name = "LabelNPCs";
+            this.LabelNPCs.Size = new System.Drawing.Size(39, 15);
+            this.LabelNPCs.TabIndex = 172;
+            this.LabelNPCs.Text = "NPCs:";
+            // 
+            // InputNPCs
+            // 
+            this.InputNPCs.Enabled = false;
+            this.InputNPCs.Location = new System.Drawing.Point(68, 201);
+            this.InputNPCs.MaxLength = 2;
+            this.InputNPCs.Name = "InputNPCs";
+            this.InputNPCs.Size = new System.Drawing.Size(34, 23);
+            this.InputNPCs.TabIndex = 171;
+            this.InputNPCs.Text = "20";
+            // 
             // Cram_o_matic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 379);
+            this.ClientSize = new System.Drawing.Size(887, 406);
+            this.Controls.Add(this.CheckMenuClose);
+            this.Controls.Add(this.LabelNPCs);
+            this.Controls.Add(this.InputNPCs);
             this.Controls.Add(this.CheckBonus);
             this.Controls.Add(this.CheckSafariSport);
             this.Controls.Add(this.CheckApricorn);
@@ -318,5 +354,8 @@
         private System.Windows.Forms.CheckBox CheckApricorn;
         private System.Windows.Forms.CheckBox CheckSafariSport;
         private System.Windows.Forms.CheckBox CheckBonus;
+        private System.Windows.Forms.CheckBox CheckMenuClose;
+        private System.Windows.Forms.Label LabelNPCs;
+        private System.Windows.Forms.TextBox InputNPCs;
     }
 }

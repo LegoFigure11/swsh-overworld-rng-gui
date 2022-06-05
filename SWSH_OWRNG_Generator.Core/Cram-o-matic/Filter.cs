@@ -9,5 +9,6 @@
         public bool Apri { get; set; }
         public bool SafariSport { get; set; }
         public bool BonusOnly { get; set; }
+        public bool MenuClose { get; set; }
     }
 }

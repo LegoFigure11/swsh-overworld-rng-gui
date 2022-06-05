@@ -4,7 +4,7 @@ namespace SWSH_OWRNG_Generator.Core.Cram_o_matic
 {
     public static class Generator
     {
-        public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, int ItemIndex, IProgress<int> progress, Filter Filters)
+        public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, int ItemIndex, IProgress<int> progress, Filter Filters, uint NPCCount)
         {
             List<Frame> Results = new();
 
@@ -29,6 +29,9 @@ namespace SWSH_OWRNG_Generator.Core.Cram_o_matic
                 // Init new RNG
                 (ulong s0, ulong s1) = go.GetState();
                 Xoroshiro128Plus rng = new(s0, s1);
+
+                if (Filters.MenuClose)
+                    rng = MenuClose.Generator.Advance(ref rng, NPCCount);
 
                 uint Slot = 4 - (uint)rng.NextInt(4); // Reverse order
                 uint Ball = (uint)rng.NextInt(100);
