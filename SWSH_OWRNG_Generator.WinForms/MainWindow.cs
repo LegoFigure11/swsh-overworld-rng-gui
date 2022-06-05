@@ -765,12 +765,16 @@ namespace SWSH_OWRNG_Generator.WinForms
         private void CheckTIDSIDFinder_CheckedChanged(object sender, EventArgs e)
         {
             bool check = this.CheckTIDSIDFinder.Checked;
-            this.LabelTIDSID.Enabled = !check;
-            this.InputTID.Enabled = !check;
-            this.LabelIDsSlash.Enabled = !check;
-            this.InputSID.Enabled = !check;
-            this.SelectedShiny.Enabled = !check;
-            this.LabelShiny.Enabled = !check;
+            if (check) this.CheckTIDSIDFinder.Checked = false;
+            /* 
+             * Broken
+             * this.LabelTIDSID.Enabled = !check;
+             * this.InputTID.Enabled = !check;
+             * this.LabelIDsSlash.Enabled = !check;
+             * this.InputSID.Enabled = !check;
+             * this.SelectedShiny.Enabled = !check;
+             * this.LabelShiny.Enabled = !check;
+            */
         }
 
         private void SensBox_CheckedChanged(object sender, EventArgs e)
