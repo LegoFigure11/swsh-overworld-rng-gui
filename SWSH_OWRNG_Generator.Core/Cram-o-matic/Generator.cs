@@ -65,6 +65,7 @@ namespace SWSH_OWRNG_Generator.Core.Cram_o_matic
                     new Frame
                     {
                         Advances = (advance + InitialAdvances).ToString("N0"),
+                        Animation = (_s0 & 1) ^ (_s1 & 1),
                         Slot = Slot,
                         Ball = BallType,
                         Bonus = IsBonus,

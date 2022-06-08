@@ -72,6 +72,7 @@ namespace SWSH_OWRNG_Generator.Core.Loto_ID
                     new Frame
                     {
                         Advances = (advance + InitialAdvances).ToString("N0"),
+                        Animation = (_s0 & 1) ^ (_s1 & 1),
                         ID = $"{_1}{_2}{_3}{_4}{_5}",
                         Prize = GetPrize(Item),
                         State0 = _s0.ToString("X16"),

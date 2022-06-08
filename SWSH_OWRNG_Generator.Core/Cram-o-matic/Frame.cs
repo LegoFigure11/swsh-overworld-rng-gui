@@ -3,6 +3,7 @@
     public class Frame
     {
         public string? Advances { get; set; }
+        public ulong Animation { get; set; }
         public uint Slot { get; set; }
         public string? Ball { get; set; }
         public bool Bonus { get; set; }
