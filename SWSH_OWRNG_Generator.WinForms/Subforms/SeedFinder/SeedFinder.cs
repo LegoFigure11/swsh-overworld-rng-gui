@@ -1,4 +1,6 @@
+using PKHeX.Core;
 using System;
+using System.Globalization;
 using System.Numerics;
 using System.Text;
 using System.Windows.Forms;
@@ -109,8 +111,21 @@ namespace SWSH_OWRNG_Generator.WinForms
                 }
                 string s0String = s0.ToString("X16");
                 string s1String = s1.ToString("X16");
-                ResultState0.Text = s0String.Substring(s0String.Length - 16, 16);
-                ResultState1.Text = s1String.Substring(s1String.Length - 16, 16);
+                // TODO: Look at how this works and see if it can be cleaned up
+                // Unsure about the BigInteger -> ulong conversion if we don't go via the string
+                // Won't be hard to look at when I'm less lazy but it works for now
+                s0String = s0String.Substring(s0String.Length - 16, 16);
+                s1String = s1String.Substring(s1String.Length - 16, 16);
+                ulong State0 = ulong.Parse(s0String, NumberStyles.AllowHexSpecifier);
+                ulong State1 = ulong.Parse(s1String, NumberStyles.AllowHexSpecifier);
+                Xoroshiro128Plus rng = new(State0, State1);
+                for (int i = 0; i < 128; i++)
+                {
+                    rng.Next();
+                }
+                (ulong _s0, ulong _s1) = rng.GetState();
+                ResultState0.Text = _s0.ToString("X16");
+                ResultState1.Text = _s1.ToString("X16");
             }
             else
             {
