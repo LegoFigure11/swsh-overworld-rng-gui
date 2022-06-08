@@ -62,7 +62,6 @@ namespace SWSH_OWRNG_Generator.WinForms
             MainWindow.Pad(InputDisplayID, '0', 6);
             ulong s0 = ulong.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
             ulong s1 = ulong.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
-            MainWindow.Pad(InputInitialAdv, '0', 1);
             MainWindow.Pad(InputNPCs, '0', 1);
             uint NPCs = 0;
             if (CheckMenuClose.Checked)
@@ -70,13 +69,16 @@ namespace SWSH_OWRNG_Generator.WinForms
 
                 NPCs = uint.Parse(InputNPCs.Text) + 1;
             }
-            ulong InitialAdvances = ulong.Parse(InputInitialAdv.Text);
+
+            MainWindow.Pad(InputMaxAdv, '0', 1);
             ulong advances = ulong.Parse(InputMaxAdv.Text);
             if (advances == 0)
             {
                 InputMaxAdv.Text = "1";
                 advances = 1;
             }
+            MainWindow.Pad(InputInitialAdv, '0', 1);
+            ulong InitialAdvances = ulong.Parse(InputInitialAdv.Text);
 
             LoadIDs();
             IDList.Add(InputDisplayID.Text);
