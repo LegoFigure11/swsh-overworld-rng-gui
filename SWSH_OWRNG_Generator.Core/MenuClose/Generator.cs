@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PKHeX.Core;
+﻿using PKHeX.Core;
 
 namespace SWSH_OWRNG_Generator.Core.MenuClose
 {
@@ -39,7 +34,7 @@ namespace SWSH_OWRNG_Generator.Core.MenuClose
                 c++;
                 rng.Prev();
             }
-            
+
             return c;
         }
     }
