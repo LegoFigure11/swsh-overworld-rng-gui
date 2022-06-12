@@ -13,6 +13,9 @@
     <Compile Update="Subforms\Loto-ID\Loto-ID.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Subforms\MenuCloseTimeline\MenuCloseTimeline.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Subforms\SeedFinder\SeedFinder.cs">
       <SubType>Form</SubType>
     </Compile>

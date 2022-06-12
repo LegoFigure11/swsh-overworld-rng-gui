@@ -1161,5 +1161,11 @@ namespace SWSH_OWRNG_Generator.WinForms
             using Loto_ID LotoIDForm = new(this);
             LotoIDForm.ShowDialog();
         }
+
+        private void MenuCloseAdvancesViewerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using MenuCloseTimeline MenuCloseTimelineForm = new(this);
+            MenuCloseTimelineForm.ShowDialog();
+        }
     }
 }
