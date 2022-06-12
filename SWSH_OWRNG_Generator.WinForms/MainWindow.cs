@@ -983,12 +983,12 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             var rng = new Xoroshiro128Plus(prevs0, prevs1);
             int i = 0;
-            for (; i < 20_000; i++)
+            for (; i < 20_000; i++) // 20,000 is an arbitrary number to prevent an infinite loop
             {
-                rng.NextInt(0xffffffff);
+                rng.Next();
                 var (s0, s1) = rng.GetState();
                 if (s0 == news0 && s1 == news1)
-                    return i + 1;
+                    return ++i;
             }
             return i;
         }
