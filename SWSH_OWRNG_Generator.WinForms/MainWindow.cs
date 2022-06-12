@@ -1161,5 +1161,23 @@ namespace SWSH_OWRNG_Generator.WinForms
             using Loto_ID LotoIDForm = new(this);
             LotoIDForm.ShowDialog();
         }
+
+        private async void skipbut_Click(object sender, EventArgs e)
+        {
+            int skips = Convert.ToInt32(Program.Window.skipnumb.Text);
+            Program.Window.skipbut.Enabled = false;
+            Program.Window.skipbut.Text = $"0/{skips}";
+            await SwitchConnection.SendAsync(SwitchCommand.DetachController(UseCRLF), CancellationToken.None);
+
+            for(int i = 0; i < skips; i++)
+            {
+                await SwitchConnection.SendAsync(SwitchCommand.Click(SwitchButton.LSTICK, UseCRLF), CancellationToken.None);
+                Program.Window.skipbut.Text = $"{i}/{skips}";
+                await Task.Delay(150);
+            }
+            Program.Window.skipbut.Text = "Short Skips";
+            Program.Window.skipbut.Enabled = true;
+            await SwitchConnection.SendAsync(SwitchCommand.DetachController(UseCRLF), CancellationToken.None);
+        }
     }
 }

@@ -181,6 +181,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.SelectedAura = new System.Windows.Forms.ComboBox();
             this.LabelAura = new System.Windows.Forms.Label();
             this.CheckHidden = new System.Windows.Forms.CheckBox();
+            this.skipbut = new System.Windows.Forms.Button();
+            this.skipnumb = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1816,9 +1818,28 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckHidden.UseVisualStyleBackColor = true;
             this.CheckHidden.CheckedChanged += new System.EventHandler(this.CheckHidden_CheckedChanged);
             // 
+            // skipbut
+            // 
+            this.skipbut.Location = new System.Drawing.Point(433, 329);
+            this.skipbut.Name = "skipbut";
+            this.skipbut.Size = new System.Drawing.Size(75, 23);
+            this.skipbut.TabIndex = 138;
+            this.skipbut.Text = "Short Skips";
+            this.skipbut.UseVisualStyleBackColor = true;
+            this.skipbut.Click += new System.EventHandler(this.skipbut_Click);
+            // 
+            // skipnumb
+            // 
+            this.skipnumb.Location = new System.Drawing.Point(514, 330);
+            this.skipnumb.Name = "skipnumb";
+            this.skipnumb.Size = new System.Drawing.Size(52, 23);
+            this.skipnumb.TabIndex = 139;
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 699);
+            this.Controls.Add(this.skipnumb);
+            this.Controls.Add(this.skipbut);
             this.Controls.Add(this.CheckHidden);
             this.Controls.Add(this.SelectedAura);
             this.Controls.Add(this.LabelAura);
@@ -2105,5 +2126,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         private ToolStripMenuItem LotoIDMenu;
         public TextBox InputTID;
         public TextBox InputSID;
+        public Button skipbut;
+        public TextBox skipnumb;
     }
 }
