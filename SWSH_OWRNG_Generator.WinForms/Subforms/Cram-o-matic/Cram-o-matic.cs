@@ -73,6 +73,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             BindingSource Source = new() { DataSource = Frames };
             CramResults.DataSource = Source;
+            CramResults.Columns["Jump"].Visible = CheckMenuClose.Checked;
             Source.ResetBindings(false);
 
             CramProgressBar.Value = CramProgressBar.Maximum;

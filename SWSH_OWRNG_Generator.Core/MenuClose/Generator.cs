@@ -14,9 +14,9 @@ namespace SWSH_OWRNG_Generator.Core.MenuClose
             rng.NextInt(60);
             return ref rng;
         }
-        public static uint Generate(ulong state0, ulong state1, uint NPCs)
+        public static uint GetAdvances(Xoroshiro128Plus rng, uint NPCs)
         {
-            Xoroshiro128Plus rng = new(state0, state1);
+            (ulong _s0, ulong _s1) = rng.GetState();
             for (uint i = 0; i < NPCs; i++)
             {
                 rng.NextInt(91);
@@ -27,7 +27,7 @@ namespace SWSH_OWRNG_Generator.Core.MenuClose
             uint c = 0;
             while (c < 500) // Prevent infinite loop in case we never find our starting position
             {
-                if (rng.GetState() == (state0, state1))
+                if (rng.GetState() == (_s0, _s1))
                 {
                     break;
                 }

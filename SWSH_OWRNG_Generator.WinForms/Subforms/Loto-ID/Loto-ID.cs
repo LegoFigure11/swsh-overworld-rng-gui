@@ -104,7 +104,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             List<Core.Loto_ID.Frame> Frames = await Task.Run(() => Core.Loto_ID.Generator.Generate(s0, s1, advances, InitialAdvances, IDList, Filters, NPCs, progress));
 
             BindingSource Source = new() { DataSource = Frames };
-            CramResults.DataSource = Source;
+            LotoIdResults.DataSource = Source;
+            LotoIdResults.Columns["Jump"].Visible = CheckMenuClose.Checked;
             Source.ResetBindings(false);
 
             LotoIDProgressBar.Value = LotoIDProgressBar.Maximum;

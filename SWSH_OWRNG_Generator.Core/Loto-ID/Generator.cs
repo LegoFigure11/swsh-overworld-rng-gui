@@ -21,6 +21,8 @@ namespace SWSH_OWRNG_Generator.Core.Loto_ID
             if (ProgressUpdateInterval == 0)
                 ProgressUpdateInterval++;
 
+            string Jump = string.Empty;
+
             while (advance < advances)
             {
                 if (progress != null && (advance % ProgressUpdateInterval == 0))
@@ -30,7 +32,10 @@ namespace SWSH_OWRNG_Generator.Core.Loto_ID
                 (ulong s0, ulong s1) = go.GetState();
                 Xoroshiro128Plus rng = new(s0, s1);
                 if (Filters.MenuClose)
+                {
+                    Jump = $"+{MenuClose.Generator.GetAdvances(rng, NPCCount)}";
                     rng = MenuClose.Generator.Advance(ref rng, NPCCount);
+                }
                 uint _1 = (uint)rng.NextInt(10);
                 uint _2 = (uint)rng.NextInt(10);
                 uint _3 = (uint)rng.NextInt(10);
@@ -73,6 +78,7 @@ namespace SWSH_OWRNG_Generator.Core.Loto_ID
                     {
                         Advances = (advance + InitialAdvances).ToString("N0"),
                         Animation = (_s0 & 1) ^ (_s1 & 1),
+                        Jump = Jump,
                         ID = $"{_1}{_2}{_3}{_4}{_5}",
                         Prize = GetPrize(Item),
                         State0 = _s0.ToString("X16"),

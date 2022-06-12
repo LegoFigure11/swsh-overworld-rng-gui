@@ -21,6 +21,8 @@ namespace SWSH_OWRNG_Generator.Core.Cram_o_matic
             if (ProgressUpdateInterval == 0)
                 ProgressUpdateInterval++;
 
+            string Jump = string.Empty;
+
             while (advance < advances)
             {
                 if (progress != null && (advance % ProgressUpdateInterval == 0))
@@ -31,7 +33,10 @@ namespace SWSH_OWRNG_Generator.Core.Cram_o_matic
                 Xoroshiro128Plus rng = new(s0, s1);
 
                 if (Filters.MenuClose)
+                {
+                    Jump = $"+{MenuClose.Generator.GetAdvances(rng, NPCCount)}";
                     rng = MenuClose.Generator.Advance(ref rng, NPCCount);
+                }
 
                 uint Slot = 4 - (uint)rng.NextInt(4); // Reverse order
                 uint Ball = (uint)rng.NextInt(100);
@@ -66,6 +71,7 @@ namespace SWSH_OWRNG_Generator.Core.Cram_o_matic
                     {
                         Advances = (advance + InitialAdvances).ToString("N0"),
                         Animation = (_s0 & 1) ^ (_s1 & 1),
+                        Jump = Jump,
                         Slot = Slot,
                         Ball = BallType,
                         Bonus = IsBonus,

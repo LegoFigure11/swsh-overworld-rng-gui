@@ -36,7 +36,7 @@
             this.InputInitialAdv = new System.Windows.Forms.TextBox();
             this.LabelMaxAdv = new System.Windows.Forms.Label();
             this.InputMaxAdv = new System.Windows.Forms.TextBox();
-            this.CramResults = new System.Windows.Forms.DataGridView();
+            this.LotoIdResults = new System.Windows.Forms.DataGridView();
             this.LabelDisplayIDInput = new System.Windows.Forms.Label();
             this.LabelState1 = new System.Windows.Forms.Label();
             this.InputState1 = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             this.LabelNPCs = new System.Windows.Forms.Label();
             this.InputNPCs = new System.Windows.Forms.TextBox();
             this.CheckMenuClose = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.CramResults)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LotoIdResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LotoIDBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,24 +114,24 @@
             this.InputMaxAdv.TabIndex = 148;
             this.InputMaxAdv.Text = "5000";
             // 
-            // CramResults
+            // LotoIdResults
             // 
-            this.CramResults.AllowUserToAddRows = false;
-            this.CramResults.AllowUserToDeleteRows = false;
-            this.CramResults.AllowUserToResizeRows = false;
-            this.CramResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LotoIdResults.AllowUserToAddRows = false;
+            this.LotoIdResults.AllowUserToDeleteRows = false;
+            this.LotoIdResults.AllowUserToResizeRows = false;
+            this.LotoIdResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CramResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CramResults.Location = new System.Drawing.Point(263, 12);
-            this.CramResults.MultiSelect = false;
-            this.CramResults.Name = "CramResults";
-            this.CramResults.ReadOnly = true;
-            this.CramResults.RowHeadersVisible = false;
-            this.CramResults.RowTemplate.Height = 25;
-            this.CramResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CramResults.Size = new System.Drawing.Size(627, 406);
-            this.CramResults.TabIndex = 154;
+            this.LotoIdResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LotoIdResults.Location = new System.Drawing.Point(263, 12);
+            this.LotoIdResults.MultiSelect = false;
+            this.LotoIdResults.Name = "LotoIdResults";
+            this.LotoIdResults.ReadOnly = true;
+            this.LotoIdResults.RowHeadersVisible = false;
+            this.LotoIdResults.RowTemplate.Height = 25;
+            this.LotoIdResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LotoIdResults.Size = new System.Drawing.Size(627, 406);
+            this.LotoIdResults.TabIndex = 154;
             // 
             // LabelDisplayIDInput
             // 
@@ -328,7 +328,7 @@
             this.Controls.Add(this.InputInitialAdv);
             this.Controls.Add(this.LabelMaxAdv);
             this.Controls.Add(this.InputMaxAdv);
-            this.Controls.Add(this.CramResults);
+            this.Controls.Add(this.LotoIdResults);
             this.Controls.Add(this.LabelDisplayIDInput);
             this.Controls.Add(this.LabelState1);
             this.Controls.Add(this.InputState1);
@@ -337,7 +337,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Loto_ID";
             this.Text = "Loto-ID";
-            ((System.ComponentModel.ISupportInitialize)(this.CramResults)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LotoIdResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LotoIDBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -352,7 +352,7 @@
         private System.Windows.Forms.TextBox InputInitialAdv;
         private System.Windows.Forms.Label LabelMaxAdv;
         private System.Windows.Forms.TextBox InputMaxAdv;
-        private System.Windows.Forms.DataGridView CramResults;
+        private System.Windows.Forms.DataGridView LotoIdResults;
         private System.Windows.Forms.Label LabelDisplayIDInput;
         private System.Windows.Forms.Label LabelState1;
         private System.Windows.Forms.TextBox InputState1;
