@@ -1005,7 +1005,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         public async Task GetTIDSID(SAV8SWSH sav)
         {
             await Task.Delay(0_100).ConfigureAwait(false);
-            TextboxSetText(Program.Window.InputTID, $"{sav.TID}");
+            TextboxSetText(Program.Window.InputTID, sav.TID.ToString());
             TextboxSetText(Program.Window.InputSID, sav.SID.ToString());
         }
 
