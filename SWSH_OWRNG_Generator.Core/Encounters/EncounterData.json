@@ -29548,7 +29548,7 @@
         "Game": "Sword",
         "EncounterType": "Static",
         "Location": "Workout Sea",
-        "Weather": "Any Weather",
+        "Weather": "All Weather",
         "FixedIVs": 3,
         "Level": [ 50, 50 ]
       },
@@ -29716,7 +29716,7 @@
         "Game": "Shield",
         "EncounterType": "Static",
         "Location": "Workout Sea",
-        "Weather": "Any Weather",
+        "Weather": "All Weather",
         "FixedIVs": 3,
         "Level": [ 50, 50 ]
       },
@@ -42711,7 +42711,7 @@
         "Game": "Sword",
         "EncounterType": "Static",
         "Location": "Giant's Cap",
-        "Weather": "Snowstorm ",
+        "Weather": "Snowstorm",
         "Level": [ 60, 60 ]
       },
       {
@@ -42760,7 +42760,7 @@
         "Game": "Shield",
         "EncounterType": "Static",
         "Location": "Giant's Cap",
-        "Weather": "Snowstorm ",
+        "Weather": "Snowstorm",
         "Level": [ 60, 60 ]
       }
     ]
@@ -57293,7 +57293,7 @@
         "Game": "Sword",
         "EncounterType": "Static",
         "Location": "Hammerlocke Hills",
-        "Weather": "Snowstorm ",
+        "Weather": "Snowstorm",
         "Level": [ 49, 49 ]
       },
       {
@@ -57336,7 +57336,7 @@
         "Game": "Shield",
         "EncounterType": "Static",
         "Location": "Hammerlocke Hills",
-        "Weather": "Snowstorm ",
+        "Weather": "Snowstorm",
         "Level": [ 49, 49 ]
       },
       {
@@ -75380,7 +75380,7 @@
         "Game": "Sword",
         "EncounterType": "Static",
         "Location": "Bridge Field",
-        "Weather": "Snowstorm ",
+        "Weather": "Snowstorm",
         "Level": [ 50, 50 ]
       },
       {
@@ -75489,7 +75489,7 @@
         "Game": "Shield",
         "EncounterType": "Static",
         "Location": "Bridge Field",
-        "Weather": "Snowstorm ",
+        "Weather": "Snowstorm",
         "Level": [ 50, 50 ]
       },
       {
@@ -81428,7 +81428,7 @@
         "Game": "Sword",
         "EncounterType": "Static",
         "Location": "Giant's Bed",
-        "Weather": "Snowstorm ",
+        "Weather": "Snowstorm",
         "Level": [ 63, 63 ]
       },
       {
@@ -81470,7 +81470,7 @@
         "Game": "Sword",
         "EncounterType": "Static",
         "Location": "Old Cemetery",
-        "Weather": "Snowstorm ",
+        "Weather": "Snowstorm",
         "Level": [ 63, 63 ]
       },
       {
@@ -81512,7 +81512,7 @@
         "Game": "Shield",
         "EncounterType": "Static",
         "Location": "Giant's Bed",
-        "Weather": "Snowstorm ",
+        "Weather": "Snowstorm",
         "Level": [ 63, 63 ]
       },
       {
@@ -81554,7 +81554,7 @@
         "Game": "Shield",
         "EncounterType": "Static",
         "Location": "Old Cemetery",
-        "Weather": "Snowstorm ",
+        "Weather": "Snowstorm",
         "Level": [ 63, 63 ]
       }
     ]
