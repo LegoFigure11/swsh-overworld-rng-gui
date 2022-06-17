@@ -1188,5 +1188,11 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ButtonSetText(Program.Window.ShortSkipButton, "Adv.");
             }
         }
+
+        private void MenuCloseAdvancesViewerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using MenuCloseTimeline MenuCloseTimelineForm = new(this);
+            MenuCloseTimelineForm.ShowDialog();
+        }
     }
 }

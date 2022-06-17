@@ -143,6 +143,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.EncounterLookupMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.CramomaticMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.LotoIDMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuCloseAdvancesViewerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtonUpdateStates = new System.Windows.Forms.Button();
             this.CheckTIDSIDFinder = new System.Windows.Forms.CheckBox();
             this.LabelKOCount = new System.Windows.Forms.Label();
@@ -1332,7 +1333,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.SeedFinderMenu,
             this.EncounterLookupMenu,
             this.CramomaticMenu,
-            this.LotoIDMenu});
+            this.LotoIDMenu,
+            this.MenuCloseAdvancesViewerToolStripMenuItem});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(831, 24);
@@ -1341,8 +1343,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             // SeedFinderMenu
             // 
             this.SeedFinderMenu.Name = "SeedFinderMenu";
-            this.SeedFinderMenu.Size = new System.Drawing.Size(80, 20);
-            this.SeedFinderMenu.Text = "Seed Finder";
+            this.SeedFinderMenu.Size = new System.Drawing.Size(112, 20);
+            this.SeedFinderMenu.Text = "Retail Seed Finder";
             this.SeedFinderMenu.Click += new System.EventHandler(this.SeedFinderMenu_Click);
             // 
             // EncounterLookupMenu
@@ -1365,6 +1367,13 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.LotoIDMenu.Size = new System.Drawing.Size(59, 20);
             this.LotoIDMenu.Text = "Loto-ID";
             this.LotoIDMenu.Click += new System.EventHandler(this.LotoIDMenu_Click);
+            // 
+            // MenuCloseAdvancesViewerToolStripMenuItem
+            // 
+            this.MenuCloseAdvancesViewerToolStripMenuItem.Name = "MenuCloseAdvancesViewerToolStripMenuItem";
+            this.MenuCloseAdvancesViewerToolStripMenuItem.Size = new System.Drawing.Size(174, 20);
+            this.MenuCloseAdvancesViewerToolStripMenuItem.Text = "Menu Close Advances Viewer";
+            this.MenuCloseAdvancesViewerToolStripMenuItem.Click += new System.EventHandler(this.MenuCloseAdvancesViewerToolStripMenuItem_Click);
             // 
             // ButtonUpdateStates
             // 
@@ -2130,5 +2139,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         public TextBox InputSID;
         public Button ShortSkipButton;
         private Label LabelSkipMenu;
+        private ToolStripMenuItem MenuCloseAdvancesViewerToolStripMenuItem;
     }
 }
