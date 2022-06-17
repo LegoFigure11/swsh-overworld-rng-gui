@@ -175,14 +175,14 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.ConnectionStatusText = new System.Windows.Forms.Label();
             this.TrackAdv = new System.Windows.Forms.TextBox();
             this.TextBoxCheckEncounter = new System.Windows.Forms.TextBox();
-            this.DaySkipAmountInput = new System.Windows.Forms.TextBox();
+            this.SkipAmountInput = new System.Windows.Forms.TextBox();
             this.DaySkipButton = new System.Windows.Forms.Button();
             this.ReadEncounterButton = new System.Windows.Forms.Button();
             this.SelectedAura = new System.Windows.Forms.ComboBox();
             this.LabelAura = new System.Windows.Forms.Label();
             this.CheckHidden = new System.Windows.Forms.CheckBox();
-            this.skipbut = new System.Windows.Forms.Button();
-            this.skipnumb = new System.Windows.Forms.TextBox();
+            this.ShortSkipButton = new System.Windows.Forms.Button();
+            this.LabelSkipMenu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -1752,25 +1752,25 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.TextBoxCheckEncounter.Size = new System.Drawing.Size(144, 129);
             this.TextBoxCheckEncounter.TabIndex = 130;
             // 
-            // DaySkipAmountInput
+            // SkipAmountInput
             // 
-            this.DaySkipAmountInput.Enabled = false;
-            this.DaySkipAmountInput.Location = new System.Drawing.Point(277, 351);
-            this.DaySkipAmountInput.Name = "DaySkipAmountInput";
-            this.DaySkipAmountInput.Size = new System.Drawing.Size(47, 23);
-            this.DaySkipAmountInput.TabIndex = 131;
-            this.DaySkipAmountInput.Text = "1";
-            this.DaySkipAmountInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.DaySkipAmountInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.SkipAmountInput.Enabled = false;
+            this.SkipAmountInput.Location = new System.Drawing.Point(277, 349);
+            this.SkipAmountInput.Name = "SkipAmountInput";
+            this.SkipAmountInput.Size = new System.Drawing.Size(40, 23);
+            this.SkipAmountInput.TabIndex = 131;
+            this.SkipAmountInput.Text = "1";
+            this.SkipAmountInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SkipAmountInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
             // DaySkipButton
             // 
             this.DaySkipButton.Enabled = false;
-            this.DaySkipButton.Location = new System.Drawing.Point(330, 350);
+            this.DaySkipButton.Location = new System.Drawing.Point(323, 348);
             this.DaySkipButton.Name = "DaySkipButton";
-            this.DaySkipButton.Size = new System.Drawing.Size(91, 25);
+            this.DaySkipButton.Size = new System.Drawing.Size(46, 25);
             this.DaySkipButton.TabIndex = 132;
-            this.DaySkipButton.Text = "DaySkip";
+            this.DaySkipButton.Text = "Days";
             this.DaySkipButton.UseVisualStyleBackColor = true;
             this.DaySkipButton.Click += new System.EventHandler(this.DaySkip_Click);
             // 
@@ -1818,34 +1818,36 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckHidden.UseVisualStyleBackColor = true;
             this.CheckHidden.CheckedChanged += new System.EventHandler(this.CheckHidden_CheckedChanged);
             // 
-            // skipbut
+            // ShortSkipButton
             // 
-            this.skipbut.Location = new System.Drawing.Point(433, 329);
-            this.skipbut.Name = "skipbut";
-            this.skipbut.Size = new System.Drawing.Size(75, 23);
-            this.skipbut.TabIndex = 138;
-            this.skipbut.Text = "Short Skips";
-            this.skipbut.UseVisualStyleBackColor = true;
-            this.skipbut.Click += new System.EventHandler(this.skipbut_Click);
+            this.ShortSkipButton.Location = new System.Drawing.Point(375, 348);
+            this.ShortSkipButton.Name = "ShortSkipButton";
+            this.ShortSkipButton.Size = new System.Drawing.Size(46, 25);
+            this.ShortSkipButton.TabIndex = 138;
+            this.ShortSkipButton.Text = "Adv.";
+            this.ShortSkipButton.UseVisualStyleBackColor = true;
+            this.ShortSkipButton.Click += new System.EventHandler(this.ShortSkipButton_Click);
             // 
-            // skipnumb
+            // LabelSkipMenu
             // 
-            this.skipnumb.Location = new System.Drawing.Point(514, 330);
-            this.skipnumb.Name = "skipnumb";
-            this.skipnumb.Size = new System.Drawing.Size(52, 23);
-            this.skipnumb.TabIndex = 139;
+            this.LabelSkipMenu.AutoSize = true;
+            this.LabelSkipMenu.Location = new System.Drawing.Point(239, 353);
+            this.LabelSkipMenu.Name = "LabelSkipMenu";
+            this.LabelSkipMenu.Size = new System.Drawing.Size(32, 15);
+            this.LabelSkipMenu.TabIndex = 139;
+            this.LabelSkipMenu.Text = "Skip:";
             // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 699);
-            this.Controls.Add(this.skipnumb);
-            this.Controls.Add(this.skipbut);
+            this.Controls.Add(this.LabelSkipMenu);
+            this.Controls.Add(this.ShortSkipButton);
             this.Controls.Add(this.CheckHidden);
             this.Controls.Add(this.SelectedAura);
             this.Controls.Add(this.LabelAura);
             this.Controls.Add(this.ReadEncounterButton);
             this.Controls.Add(this.DaySkipButton);
-            this.Controls.Add(this.DaySkipAmountInput);
+            this.Controls.Add(this.SkipAmountInput);
             this.Controls.Add(this.TextBoxCheckEncounter);
             this.Controls.Add(this.TrackAdv);
             this.Controls.Add(this.ConnectionStatusText);
@@ -2102,7 +2104,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         private Label ConnectionStatusText;
         private TextBox TrackAdv;
         private TextBox TextBoxCheckEncounter;
-        private TextBox DaySkipAmountInput;
+        private TextBox SkipAmountInput;
         private Button DaySkipButton;
         private Button ReadEncounterButton;
         private ComboBox SelectedAura;
@@ -2126,7 +2128,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         private ToolStripMenuItem LotoIDMenu;
         public TextBox InputTID;
         public TextBox InputSID;
-        public Button skipbut;
-        public TextBox skipnumb;
+        public Button ShortSkipButton;
+        private Label LabelSkipMenu;
     }
 }
