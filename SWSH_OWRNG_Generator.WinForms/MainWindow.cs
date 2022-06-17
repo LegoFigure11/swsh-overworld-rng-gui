@@ -864,7 +864,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeButtonState(Program.Window.DisconnectButton, true);
                 ChangeButtonState(Program.Window.ReadEncounterButton, true);
                 ChangeButtonState(Program.Window.DaySkipButton, true);
-                ChangeTextBoxState(Program.Window.DaySkipAmountInput, true);
+                ChangeTextBoxState(Program.Window.SkipAmountInput, true);
                 var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
                 await GetTIDSID(sav).ConfigureAwait(false);
                 await ReadRNGState(CancellationToken.None).ConfigureAwait(false);
@@ -886,7 +886,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeButtonState(Program.Window.DisconnectButton, false);
                 ChangeButtonState(Program.Window.ReadEncounterButton, false);
                 ChangeButtonState(Program.Window.DaySkipButton, false);
-                ChangeTextBoxState(Program.Window.DaySkipAmountInput, false);
+                ChangeTextBoxState(Program.Window.SkipAmountInput, false);
             }
         }
 
@@ -1089,23 +1089,28 @@ namespace SWSH_OWRNG_Generator.WinForms
 
         public async Task DaySkip(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.DaySkip(UseCRLF), token).ConfigureAwait(false);
         public async Task ResetTime(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.ResetTime(UseCRLF), token).ConfigureAwait(false);
+        public async Task DoAnimation(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.Click(SwitchButton.LSTICK, UseCRLF), token).ConfigureAwait(false);
+        public async Task DetatchController(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.DetachController(UseCRLF), token).ConfigureAwait(false);
 
         private async void DaySkip_Click(object sender, EventArgs e)
         {
             if (SwitchConnection.Connected)
             {
-                int output = int.Parse(DaySkipAmountInput.Text);
+                int output = int.Parse(SkipAmountInput.Text);
                 ChangeButtonState(Program.Window.DaySkipButton, false);
+                ChangeButtonState(Program.Window.ShortSkipButton, false);
                 ButtonSetText(Program.Window.DaySkipButton, "Skipping...");
-                for (int i = 0; i < output; i++)
+                for (int i = 0; i < output && SwitchConnection.Connected; i++)
                 {
                     await DaySkip(CancellationToken.None).ConfigureAwait(false);
                     ButtonSetText(Program.Window.DaySkipButton, $"{i + 1}/{output}");
                     await Task.Delay(0_360).ConfigureAwait(false);
                 }
-                await ResetTime(CancellationToken.None).ConfigureAwait(false);
+                if (SwitchConnection.Connected)
+                    await ResetTime(CancellationToken.None).ConfigureAwait(false);
                 ChangeButtonState(Program.Window.DaySkipButton, true);
-                ButtonSetText(Program.Window.DaySkipButton, "DaySkip");
+                ChangeButtonState(Program.Window.ShortSkipButton, true);
+                ButtonSetText(Program.Window.DaySkipButton, "Days");
             }
         }
 
@@ -1160,6 +1165,28 @@ namespace SWSH_OWRNG_Generator.WinForms
         {
             using Loto_ID LotoIDForm = new(this);
             LotoIDForm.ShowDialog();
+        }
+
+        private async void ShortSkipButton_Click(object sender, EventArgs e)
+        {
+            if (SwitchConnection.Connected)
+            {
+                int output = int.Parse(SkipAmountInput.Text);
+                ChangeButtonState(Program.Window.ShortSkipButton, false);
+                ChangeButtonState(Program.Window.DaySkipButton, false);
+                ButtonSetText(Program.Window.ShortSkipButton, "Skipping...");
+                for (int i = 0; i < output && SwitchConnection.Connected; i++)
+                {
+                    await DoAnimation(CancellationToken.None).ConfigureAwait(false);
+                    ButtonSetText(Program.Window.ShortSkipButton, $"{i + 1}/{output}");
+                    await Task.Delay(0_150).ConfigureAwait(false);
+                }
+                ChangeButtonState(Program.Window.ShortSkipButton, true);
+                ChangeButtonState(Program.Window.DaySkipButton, true);
+                if (SwitchConnection.Connected)
+                    await DetatchController(CancellationToken.None);
+                ButtonSetText(Program.Window.ShortSkipButton, "Adv.");
+            }
         }
 
         private void MenuCloseAdvancesViewerToolStripMenuItem_Click(object sender, EventArgs e)
