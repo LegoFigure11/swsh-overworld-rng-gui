@@ -1829,6 +1829,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // 
             // ShortSkipButton
             // 
+            this.ShortSkipButton.Enabled = false;
             this.ShortSkipButton.Location = new System.Drawing.Point(375, 348);
             this.ShortSkipButton.Name = "ShortSkipButton";
             this.ShortSkipButton.Size = new System.Drawing.Size(46, 25);

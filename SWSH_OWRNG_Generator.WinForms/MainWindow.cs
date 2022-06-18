@@ -864,6 +864,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeButtonState(Program.Window.DisconnectButton, true);
                 ChangeButtonState(Program.Window.ReadEncounterButton, true);
                 ChangeButtonState(Program.Window.DaySkipButton, true);
+                ChangeButtonState(Program.Window.ShortSkipButton, true);
                 ChangeTextBoxState(Program.Window.SkipAmountInput, true);
                 var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
                 await GetTIDSID(sav).ConfigureAwait(false);
@@ -886,6 +887,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeButtonState(Program.Window.DisconnectButton, false);
                 ChangeButtonState(Program.Window.ReadEncounterButton, false);
                 ChangeButtonState(Program.Window.DaySkipButton, false);
+                ChangeButtonState(Program.Window.ShortSkipButton, false);
                 ChangeTextBoxState(Program.Window.SkipAmountInput, false);
             }
         }
