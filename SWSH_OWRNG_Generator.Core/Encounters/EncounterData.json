@@ -2942,7 +2942,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -2952,7 +2953,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -2962,7 +2964,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -2972,7 +2975,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -2982,7 +2986,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -2992,7 +2997,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3002,7 +3008,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3012,7 +3019,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3022,7 +3030,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3032,7 +3041,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3042,7 +3052,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3052,7 +3063,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3062,7 +3074,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3072,7 +3085,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3082,7 +3096,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3092,7 +3107,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3102,7 +3118,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3112,7 +3129,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3122,7 +3140,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3132,7 +3151,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3142,7 +3162,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3152,7 +3173,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3162,7 +3184,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3172,7 +3195,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3182,7 +3206,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3192,7 +3217,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3202,7 +3228,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3212,7 +3239,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3222,7 +3250,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3232,7 +3261,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3242,7 +3272,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -3252,7 +3283,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3262,7 +3294,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3272,7 +3305,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3282,7 +3316,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3292,7 +3327,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3302,7 +3338,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3312,7 +3349,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3322,7 +3360,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3332,7 +3371,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3342,7 +3382,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3352,7 +3393,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3362,7 +3404,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3372,7 +3415,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3382,7 +3426,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3392,7 +3437,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3402,7 +3448,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3412,7 +3459,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3422,7 +3470,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3432,7 +3481,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3442,7 +3492,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3452,7 +3503,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3462,7 +3514,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3472,7 +3525,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3482,7 +3536,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3492,7 +3547,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3502,7 +3558,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3512,7 +3569,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3522,7 +3580,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3532,7 +3591,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3542,7 +3602,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3552,7 +3613,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3562,7 +3624,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -3572,7 +3635,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       }
     ]
   },
@@ -24859,6 +24923,14 @@
     "Encounters": [
       {
         "Game": "Sword",
+        "EncounterType": "Static",
+        "Location": "Route 3",
+        "Weather": "Normal Weather",
+        "Level": [ 18, 18 ],
+        "ShinyLocked": true
+      },
+      {
+        "Game": "Sword",
         "EncounterType": "Symbol",
         "Location": "Giant's Mirror (Flying)",
         "Weather": "All Weather",
@@ -24968,6 +25040,14 @@
         "Weather": "Normal Weather",
         "Level": [ 28, 30 ],
         "Slots": [ 65, 79 ]
+      },
+      {
+        "Game": "Shield",
+        "EncounterType": "Static",
+        "Location": "Route 3",
+        "Weather": "Normal Weather",
+        "Level": [ 18, 18 ],
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69322,7 +69402,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69332,7 +69413,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69342,7 +69424,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69352,7 +69435,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69362,7 +69446,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69372,7 +69457,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69382,7 +69468,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69392,7 +69479,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69402,7 +69490,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69412,7 +69501,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69422,7 +69512,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69432,7 +69523,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69442,7 +69534,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69452,7 +69545,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69462,7 +69556,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69472,7 +69567,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69482,7 +69578,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69492,7 +69589,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69502,7 +69600,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69512,7 +69611,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69522,7 +69622,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69532,7 +69633,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69542,7 +69644,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69552,7 +69655,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69562,7 +69666,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69572,7 +69677,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69582,7 +69688,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69592,7 +69699,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69602,7 +69710,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69612,7 +69721,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69622,7 +69732,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69632,7 +69743,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69642,7 +69754,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69652,7 +69765,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69662,7 +69776,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69672,7 +69787,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69682,7 +69798,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69692,7 +69809,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69702,7 +69820,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69712,7 +69831,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69722,7 +69842,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69732,7 +69853,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69742,7 +69864,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69752,7 +69875,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69762,7 +69886,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69772,7 +69897,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69782,7 +69908,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69792,7 +69919,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69802,7 +69930,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69812,7 +69941,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69822,7 +69952,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69832,7 +69963,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69842,7 +69974,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69852,7 +69985,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69862,7 +69996,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -69872,7 +70007,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69882,7 +70018,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69892,7 +70029,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69902,7 +70040,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69912,7 +70051,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69922,7 +70062,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69932,7 +70073,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69942,7 +70084,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69952,7 +70095,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69962,7 +70106,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69972,7 +70117,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69982,7 +70128,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -69992,7 +70139,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70002,7 +70150,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70012,7 +70161,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70022,7 +70172,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70032,7 +70183,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70042,7 +70194,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70052,7 +70205,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70062,7 +70216,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70072,7 +70227,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70082,7 +70238,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70092,7 +70249,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70102,7 +70260,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70112,7 +70271,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70122,7 +70282,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70132,7 +70293,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70142,7 +70304,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70152,7 +70315,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70162,7 +70326,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70172,7 +70337,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70182,7 +70348,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70192,7 +70359,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70202,7 +70370,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70212,7 +70381,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70222,7 +70392,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70232,7 +70403,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70242,7 +70414,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70252,7 +70425,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70262,7 +70436,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70272,7 +70447,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70282,7 +70458,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70292,7 +70469,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70302,7 +70480,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70312,7 +70491,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70322,7 +70502,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70332,7 +70513,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70342,7 +70524,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70352,7 +70535,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70362,7 +70546,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70372,7 +70557,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70382,7 +70568,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70392,7 +70579,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70402,7 +70590,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70412,7 +70601,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70422,7 +70612,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -70432,7 +70623,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       }
     ]
   },
@@ -116311,7 +116503,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116321,7 +116514,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116331,7 +116525,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116341,7 +116536,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116351,7 +116547,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116361,7 +116558,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116371,7 +116569,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116381,7 +116580,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116391,7 +116591,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116401,7 +116602,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116411,7 +116613,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116421,7 +116624,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116431,7 +116635,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116441,7 +116646,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116451,7 +116657,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116461,7 +116668,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116471,7 +116679,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116481,7 +116690,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116491,7 +116701,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116501,7 +116712,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116511,7 +116723,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116521,7 +116734,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116531,7 +116745,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116541,7 +116756,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116551,7 +116767,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116561,7 +116778,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116571,7 +116789,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116581,7 +116800,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116591,7 +116811,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116601,7 +116822,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116611,7 +116833,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116621,7 +116844,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116631,7 +116855,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116641,7 +116866,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116651,7 +116877,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116661,7 +116888,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116671,7 +116899,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116681,7 +116910,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116691,7 +116921,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116701,7 +116932,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116711,7 +116943,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116721,7 +116954,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116731,7 +116965,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Sword",
@@ -116741,7 +116976,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116751,7 +116987,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116761,7 +116998,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116771,7 +117009,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116781,7 +117020,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116791,7 +117031,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116801,7 +117042,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116811,7 +117053,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116821,7 +117064,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116831,7 +117075,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116841,7 +117086,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116851,7 +117097,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116861,7 +117108,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116871,7 +117119,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116881,7 +117130,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116891,7 +117141,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116901,7 +117152,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116911,7 +117163,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116921,7 +117174,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116931,7 +117185,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116941,7 +117196,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116951,7 +117207,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116961,7 +117218,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116971,7 +117229,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116981,7 +117240,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -116991,7 +117251,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117001,7 +117262,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117011,7 +117273,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117021,7 +117284,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117031,7 +117295,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117041,7 +117306,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117051,7 +117317,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117061,7 +117328,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117071,7 +117339,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117081,7 +117350,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117091,7 +117361,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117101,7 +117372,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117111,7 +117383,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117121,7 +117394,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117131,7 +117405,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117141,7 +117416,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117151,7 +117427,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117161,7 +117438,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117171,7 +117449,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       },
       {
         "Game": "Shield",
@@ -117181,7 +117460,8 @@
         "Level": [ 70, 70 ],
         "LockedAbility": true,
         "Ability": 0,
-        "FixedIVs": 3
+        "FixedIVs": 3,
+        "ShinyLocked": true
       }
     ]
   },

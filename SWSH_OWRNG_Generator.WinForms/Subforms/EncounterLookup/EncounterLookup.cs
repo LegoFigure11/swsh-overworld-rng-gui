@@ -39,6 +39,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                             bool Item = false;
                             int FixedIVs = 0;
                             bool AbilityLocked = false;
+                            bool ShinyLocked = false;
                             List<string> EggMoves = new();
                             string Ability = "-";
                             string Slot = "-";
@@ -49,6 +50,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                             if (Encounter.LockedAbility != null) AbilityLocked = (bool)Encounter.LockedAbility;
                             if (Encounter.Ability != null) Ability = Encounter.Ability.ToString();
                             if (Encounter.Slots != null) Slot = $"{Encounter.Slots[0]} - {Encounter.Slots[1]}";
+                            if (Encounter.ShinyLocked != null) ShinyLocked = (bool)Encounter.ShinyLocked;
 
                             Results.Add(
                                 new PkmResult
@@ -63,6 +65,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                                     Weather = Encounter.Weather,
                                     Location = Encounter.Location,
                                     LockedAbility = AbilityLocked,
+                                    ShinyLocked = ShinyLocked,
                                     Ability = Ability,
                                 }
                             );
@@ -121,7 +124,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             MainWindow.CheckHidden.Checked = Hidden && !Fishing;
 
             MainWindow.CheckIsAbilityLocked.Checked = (bool)EncounterLookupResults[11, e.RowIndex].Value;
-            MainWindow.InputFlawlessIVs.Text = EncounterLookupResults[12, e.RowIndex].Value.ToString();
+            MainWindow.CheckShinyLocked.Checked = (bool)EncounterLookupResults[12, e.RowIndex].Value;
+            MainWindow.InputFlawlessIVs.Text = EncounterLookupResults[13, e.RowIndex].Value.ToString();
         }
     }
 }

@@ -2102,7 +2102,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         private System.Windows.Forms.ComboBox SelectedNature;
         private System.Windows.Forms.Label LabelInitialAdv;
         private System.Windows.Forms.TextBox InputInitialAdv;
-        private System.Windows.Forms.CheckBox CheckShinyLocked;
         private System.Windows.Forms.Button ConnectButton;
         private System.Windows.Forms.Button DisconnectButton;
         private System.Windows.Forms.TextBox SwitchIPInput;
@@ -2141,5 +2140,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         public Button ShortSkipButton;
         private Label LabelSkipMenu;
         private ToolStripMenuItem MenuCloseAdvancesViewerToolStripMenuItem;
+        public CheckBox CheckShinyLocked;
     }
 }

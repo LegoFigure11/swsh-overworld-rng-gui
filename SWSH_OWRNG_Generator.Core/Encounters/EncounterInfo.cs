@@ -26,6 +26,7 @@ namespace SWSH_OWRNG_Generator.Core.Encounters
         public int[]? Level { get; set; }
         public int[]? Slots { get; set; }
         public bool? LockedAbility { get; set; }
+        public bool? ShinyLocked { get; set; }
         public int? Ability { set; get; }
         public int? FixedIVs { get; set; }
     }
