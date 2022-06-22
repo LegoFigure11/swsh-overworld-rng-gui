@@ -1,4 +1,6 @@
 ﻿using PKHeX.Core;
+using PKHeX.Drawing.Misc;
+using PKHeX.Drawing.PokeSprite;
 using SysBot.Base;
 using System;
 using System.Collections.Generic;
@@ -864,6 +866,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeButtonState(Program.Window.DisconnectButton, true);
                 ChangeButtonState(Program.Window.ReadEncounterButton, true);
                 ChangeButtonState(Program.Window.DaySkipButton, true);
+                ChangeButtonState(Program.Window.ShortSkipButton, true);
                 ChangeTextBoxState(Program.Window.SkipAmountInput, true);
                 var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
                 await GetTIDSID(sav).ConfigureAwait(false);
@@ -886,6 +889,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeButtonState(Program.Window.DisconnectButton, false);
                 ChangeButtonState(Program.Window.ReadEncounterButton, false);
                 ChangeButtonState(Program.Window.DaySkipButton, false);
+                ChangeButtonState(Program.Window.ShortSkipButton, false);
                 ChangeTextBoxState(Program.Window.SkipAmountInput, false);
             }
         }
@@ -1125,15 +1129,53 @@ namespace SWSH_OWRNG_Generator.WinForms
                 uint offset = 0x8FEA3648;
                 PK8 pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
                 if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
-                    TextboxSetText(Program.Window.TextBoxCheckEncounter, "No encounter present.");
+                    if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
+                    {
+                        TextboxSetText(Program.Window.TextBoxCheckEncounter, "No encounter present.");
+                        PokeSprite.Image = null;
+                        MarkSprite.Image = null;
+                        ShouldReadState = true;
+                        ChangeButtonState(Program.Window.ReadEncounterButton, true);
+                        return;
+                    }
                 bool hasMark = HasMark(pk, out RibbonIndex mark);
                 string markString = hasMark ? $"Mark: {mark.ToString().Replace("Mark", "")}" : string.Empty;
                 string form = pk.Form == 0 ? "" : $"-{pk.Form}";
-
-                string output = $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}Nature: {GameInfo.GetStrings(1).Natures[pk.Nature]}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
+                string gender = string.Empty;
+                switch (pk.Gender)
+                {
+                    case 0: gender = " (M)"; break;
+                    case 1: gender = " (F)"; break;
+                    case 2: break;
+                }
+                string output = $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{gender}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}{GameInfo.GetStrings(1).Natures[pk.Nature]} Nature{Environment.NewLine}Ability: {(Ability)pk.Ability}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
 
                 if (pk.Species > 0 && pk.Species <= 899)
+                {
                     TextboxSetText(Program.Window.TextBoxCheckEncounter, output);
+                    bool isSquare = pk.ShinyXor == 0;
+                    var img = SpriteUtil.GetSprite(pk.Species, pk.Form, pk.Gender, pk.FormArgument, pk.HeldItem, false, pk.IsShiny, 8, false, isSquare);
+                    PokeSprite.Image = img;
+                    if (hasMark)
+                    {
+                        var info = RibbonInfo.GetRibbonInfo(pk);
+                        foreach (var rib in info)
+                        {
+                            if (!rib.HasRibbon)
+                                continue;
+
+                            var mimg = RibbonSpriteUtil.GetRibbonSprite(rib.Name);
+                            if (mimg is not null)
+                            {
+                                MarkSprite.Image = mimg;
+                            }
+                        }
+                    }
+                    else if (!hasMark)
+                    {
+                        MarkSprite.Image = null;
+                    }
+                }
             }
             ShouldReadState = true;
             ChangeButtonState(Program.Window.ReadEncounterButton, true);

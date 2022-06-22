@@ -184,10 +184,14 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckHidden = new System.Windows.Forms.CheckBox();
             this.ShortSkipButton = new System.Windows.Forms.Button();
             this.LabelSkipMenu = new System.Windows.Forms.Label();
+            this.PokeSprite = new System.Windows.Forms.PictureBox();
+            this.MarkSprite = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
             this.MainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PokeSprite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarkSprite)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelState0
@@ -1753,18 +1757,18 @@ namespace SWSH_OWRNG_Generator.WinForms
             // TextBoxCheckEncounter
             // 
             this.TextBoxCheckEncounter.BackColor = System.Drawing.SystemColors.Menu;
-            this.TextBoxCheckEncounter.Location = new System.Drawing.Point(277, 188);
+            this.TextBoxCheckEncounter.Location = new System.Drawing.Point(277, 185);
             this.TextBoxCheckEncounter.Multiline = true;
             this.TextBoxCheckEncounter.Name = "TextBoxCheckEncounter";
             this.TextBoxCheckEncounter.ReadOnly = true;
             this.TextBoxCheckEncounter.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.TextBoxCheckEncounter.Size = new System.Drawing.Size(144, 129);
+            this.TextBoxCheckEncounter.Size = new System.Drawing.Size(144, 106);
             this.TextBoxCheckEncounter.TabIndex = 130;
             // 
             // SkipAmountInput
             // 
             this.SkipAmountInput.Enabled = false;
-            this.SkipAmountInput.Location = new System.Drawing.Point(277, 349);
+            this.SkipAmountInput.Location = new System.Drawing.Point(427, 350);
             this.SkipAmountInput.Name = "SkipAmountInput";
             this.SkipAmountInput.Size = new System.Drawing.Size(40, 23);
             this.SkipAmountInput.TabIndex = 131;
@@ -1775,9 +1779,9 @@ namespace SWSH_OWRNG_Generator.WinForms
             // DaySkipButton
             // 
             this.DaySkipButton.Enabled = false;
-            this.DaySkipButton.Location = new System.Drawing.Point(323, 348);
+            this.DaySkipButton.Location = new System.Drawing.Point(469, 349);
             this.DaySkipButton.Name = "DaySkipButton";
-            this.DaySkipButton.Size = new System.Drawing.Size(46, 25);
+            this.DaySkipButton.Size = new System.Drawing.Size(59, 25);
             this.DaySkipButton.TabIndex = 132;
             this.DaySkipButton.Text = "Days";
             this.DaySkipButton.UseVisualStyleBackColor = true;
@@ -1786,9 +1790,9 @@ namespace SWSH_OWRNG_Generator.WinForms
             // ReadEncounterButton
             // 
             this.ReadEncounterButton.Enabled = false;
-            this.ReadEncounterButton.Location = new System.Drawing.Point(277, 323);
+            this.ReadEncounterButton.Location = new System.Drawing.Point(247, 352);
             this.ReadEncounterButton.Name = "ReadEncounterButton";
-            this.ReadEncounterButton.Size = new System.Drawing.Size(144, 22);
+            this.ReadEncounterButton.Size = new System.Drawing.Size(174, 22);
             this.ReadEncounterButton.TabIndex = 133;
             this.ReadEncounterButton.Text = "Read Encounter";
             this.ReadEncounterButton.UseVisualStyleBackColor = true;
@@ -1829,9 +1833,10 @@ namespace SWSH_OWRNG_Generator.WinForms
             // 
             // ShortSkipButton
             // 
-            this.ShortSkipButton.Location = new System.Drawing.Point(375, 348);
+            this.ShortSkipButton.Enabled = false;
+            this.ShortSkipButton.Location = new System.Drawing.Point(529, 349);
             this.ShortSkipButton.Name = "ShortSkipButton";
-            this.ShortSkipButton.Size = new System.Drawing.Size(46, 25);
+            this.ShortSkipButton.Size = new System.Drawing.Size(59, 25);
             this.ShortSkipButton.TabIndex = 138;
             this.ShortSkipButton.Text = "Adv.";
             this.ShortSkipButton.UseVisualStyleBackColor = true;
@@ -1840,11 +1845,29 @@ namespace SWSH_OWRNG_Generator.WinForms
             // LabelSkipMenu
             // 
             this.LabelSkipMenu.AutoSize = true;
-            this.LabelSkipMenu.Location = new System.Drawing.Point(239, 353);
+            this.LabelSkipMenu.Location = new System.Drawing.Point(427, 332);
             this.LabelSkipMenu.Name = "LabelSkipMenu";
             this.LabelSkipMenu.Size = new System.Drawing.Size(32, 15);
             this.LabelSkipMenu.TabIndex = 139;
             this.LabelSkipMenu.Text = "Skip:";
+            // 
+            // PokeSprite
+            // 
+            this.PokeSprite.Location = new System.Drawing.Point(277, 293);
+            this.PokeSprite.Name = "PokeSprite";
+            this.PokeSprite.Size = new System.Drawing.Size(74, 59);
+            this.PokeSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.PokeSprite.TabIndex = 140;
+            this.PokeSprite.TabStop = false;
+            // 
+            // MarkSprite
+            // 
+            this.MarkSprite.Location = new System.Drawing.Point(356, 310);
+            this.MarkSprite.Name = "MarkSprite";
+            this.MarkSprite.Size = new System.Drawing.Size(48, 42);
+            this.MarkSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.MarkSprite.TabIndex = 141;
+            this.MarkSprite.TabStop = false;
             // 
             // MainWindow
             // 
@@ -1973,6 +1996,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.Controls.Add(this.LabelState0);
             this.Controls.Add(this.ImageRareMark);
             this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.PokeSprite);
+            this.Controls.Add(this.MarkSprite);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1981,6 +2006,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PokeSprite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarkSprite)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2101,7 +2128,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         private System.Windows.Forms.ComboBox SelectedNature;
         private System.Windows.Forms.Label LabelInitialAdv;
         private System.Windows.Forms.TextBox InputInitialAdv;
-        private System.Windows.Forms.CheckBox CheckShinyLocked;
         private System.Windows.Forms.Button ConnectButton;
         private System.Windows.Forms.Button DisconnectButton;
         private System.Windows.Forms.TextBox SwitchIPInput;
@@ -2140,5 +2166,8 @@ namespace SWSH_OWRNG_Generator.WinForms
         public Button ShortSkipButton;
         private Label LabelSkipMenu;
         private ToolStripMenuItem MenuCloseAdvancesViewerToolStripMenuItem;
+        public CheckBox CheckShinyLocked;
+        private PictureBox PokeSprite;
+        private PictureBox MarkSprite;
     }
 }

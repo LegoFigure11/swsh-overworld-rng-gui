@@ -51,7 +51,10 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Content Include="raremark.ico" />
-		<Content Include="SysBot.Base\SysBot.Base.dll" />
+		<Content Include="deps\SysBot.Base.dll" />
+		<Content Include="deps\PKHeX.Drawing.dll" />
+		<Content Include="deps\PKHeX.Drawing.Misc.dll" />
+		<Content Include="deps\PKHeX.Drawing.PokeSprite.dll" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Costura.Fody" Version="5.7.0">
@@ -62,7 +65,16 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="SysBot.Base">
-			<HintPath>SysBot.Base\SysBot.Base.dll</HintPath>
+			<HintPath>deps\SysBot.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="PKHeX.Drawing">
+			<HintPath>deps\PKHeX.Drawing.dll</HintPath>
+		</Reference>
+		<Reference Include="PKHeX.Drawing.Misc">
+			<HintPath>deps\PKHeX.Drawing.Misc.dll</HintPath>
+		</Reference>
+		<Reference Include="PKHeX.Drawing.PokeSprite">
+			<HintPath>deps\PKHeX.Drawing.PokeSprite.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
