@@ -20,4 +20,10 @@
     </None>
   </ItemGroup>
 
+	<ItemGroup>
+		<None Update="Encounters\EncounterData.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	
 </Project>
