@@ -73,7 +73,7 @@
             this.LotoIDSearch.Location = new System.Drawing.Point(12, 145);
             this.LotoIDSearch.Name = "LotoIDSearch";
             this.LotoIDSearch.Size = new System.Drawing.Size(245, 31);
-            this.LotoIDSearch.TabIndex = 150;
+            this.LotoIDSearch.TabIndex = 6;
             this.LotoIDSearch.Text = "Search!";
             this.LotoIDSearch.UseVisualStyleBackColor = true;
             this.LotoIDSearch.Click += new System.EventHandler(this.LotoIDSearch_Click);
@@ -93,7 +93,7 @@
             this.InputInitialAdv.MaxLength = 13;
             this.InputInitialAdv.Name = "InputInitialAdv";
             this.InputInitialAdv.Size = new System.Drawing.Size(189, 23);
-            this.InputInitialAdv.TabIndex = 147;
+            this.InputInitialAdv.TabIndex = 4;
             this.InputInitialAdv.Text = "0";
             // 
             // LabelMaxAdv
@@ -111,7 +111,7 @@
             this.InputMaxAdv.MaxLength = 13;
             this.InputMaxAdv.Name = "InputMaxAdv";
             this.InputMaxAdv.Size = new System.Drawing.Size(189, 23);
-            this.InputMaxAdv.TabIndex = 148;
+            this.InputMaxAdv.TabIndex = 5;
             this.InputMaxAdv.Text = "5000";
             // 
             // LotoIdResults
@@ -119,8 +119,8 @@
             this.LotoIdResults.AllowUserToAddRows = false;
             this.LotoIdResults.AllowUserToDeleteRows = false;
             this.LotoIdResults.AllowUserToResizeRows = false;
-            this.LotoIdResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.LotoIdResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LotoIdResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LotoIdResults.Location = new System.Drawing.Point(263, 12);
@@ -157,7 +157,7 @@
             this.InputState1.MaxLength = 16;
             this.InputState1.Name = "InputState1";
             this.InputState1.Size = new System.Drawing.Size(189, 23);
-            this.InputState1.TabIndex = 146;
+            this.InputState1.TabIndex = 2;
             // 
             // InputState0
             // 
@@ -165,7 +165,7 @@
             this.InputState0.MaxLength = 16;
             this.InputState0.Name = "InputState0";
             this.InputState0.Size = new System.Drawing.Size(189, 23);
-            this.InputState0.TabIndex = 145;
+            this.InputState0.TabIndex = 1;
             // 
             // LabelState0
             // 
@@ -182,7 +182,7 @@
             this.InputDisplayID.MaxLength = 6;
             this.InputDisplayID.Name = "InputDisplayID";
             this.InputDisplayID.Size = new System.Drawing.Size(189, 23);
-            this.InputDisplayID.TabIndex = 158;
+            this.InputDisplayID.TabIndex = 3;
             // 
             // LabelLoadedFromFile
             // 
@@ -198,7 +198,7 @@
             this.ButtonReload.Location = new System.Drawing.Point(206, 198);
             this.ButtonReload.Name = "ButtonReload";
             this.ButtonReload.Size = new System.Drawing.Size(51, 25);
-            this.ButtonReload.TabIndex = 160;
+            this.ButtonReload.TabIndex = 7;
             this.ButtonReload.Text = "Reload";
             this.ButtonReload.UseVisualStyleBackColor = true;
             this.ButtonReload.Click += new System.EventHandler(this.ButtonReload_Click);
@@ -211,6 +211,7 @@
             this.InputLoadedFromFile.ReadOnly = true;
             this.InputLoadedFromFile.Size = new System.Drawing.Size(66, 23);
             this.InputLoadedFromFile.TabIndex = 161;
+            this.InputLoadedFromFile.TabStop = false;
             // 
             // CheckMaster
             // 
@@ -220,7 +221,7 @@
             this.CheckMaster.Location = new System.Drawing.Point(12, 398);
             this.CheckMaster.Name = "CheckMaster";
             this.CheckMaster.Size = new System.Drawing.Size(116, 19);
-            this.CheckMaster.TabIndex = 166;
+            this.CheckMaster.TabIndex = 15;
             this.CheckMaster.Text = "Show Master Ball";
             this.CheckMaster.UseVisualStyleBackColor = true;
             // 
@@ -230,7 +231,7 @@
             this.CheckRareCandy.Location = new System.Drawing.Point(12, 373);
             this.CheckRareCandy.Name = "CheckRareCandy";
             this.CheckRareCandy.Size = new System.Drawing.Size(118, 19);
-            this.CheckRareCandy.TabIndex = 165;
+            this.CheckRareCandy.TabIndex = 14;
             this.CheckRareCandy.Text = "Show Rare Candy";
             this.CheckRareCandy.UseVisualStyleBackColor = true;
             // 
@@ -240,7 +241,7 @@
             this.CheckPPMax.Location = new System.Drawing.Point(12, 348);
             this.CheckPPMax.Name = "CheckPPMax";
             this.CheckPPMax.Size = new System.Drawing.Size(98, 19);
-            this.CheckPPMax.TabIndex = 164;
+            this.CheckPPMax.TabIndex = 13;
             this.CheckPPMax.Text = "Show PP Max";
             this.CheckPPMax.UseVisualStyleBackColor = true;
             // 
@@ -250,7 +251,7 @@
             this.CheckPPUp.Location = new System.Drawing.Point(12, 323);
             this.CheckPPUp.Name = "CheckPPUp";
             this.CheckPPUp.Size = new System.Drawing.Size(90, 19);
-            this.CheckPPUp.TabIndex = 163;
+            this.CheckPPUp.TabIndex = 12;
             this.CheckPPUp.Text = "Show PP Up";
             this.CheckPPUp.UseVisualStyleBackColor = true;
             // 
@@ -260,7 +261,7 @@
             this.CheckMooMoo.Location = new System.Drawing.Point(12, 298);
             this.CheckMooMoo.Name = "CheckMooMoo";
             this.CheckMooMoo.Size = new System.Drawing.Size(134, 19);
-            this.CheckMooMoo.TabIndex = 162;
+            this.CheckMooMoo.TabIndex = 11;
             this.CheckMooMoo.Text = "Show MooMoo Milk";
             this.CheckMooMoo.UseVisualStyleBackColor = true;
             // 
@@ -270,7 +271,7 @@
             this.CheckNoItem.Location = new System.Drawing.Point(12, 273);
             this.CheckNoItem.Name = "CheckNoItem";
             this.CheckNoItem.Size = new System.Drawing.Size(101, 19);
-            this.CheckNoItem.TabIndex = 167;
+            this.CheckNoItem.TabIndex = 10;
             this.CheckNoItem.Text = "Show No Item";
             this.CheckNoItem.UseVisualStyleBackColor = true;
             // 
@@ -290,7 +291,7 @@
             this.InputNPCs.MaxLength = 2;
             this.InputNPCs.Name = "InputNPCs";
             this.InputNPCs.Size = new System.Drawing.Size(34, 23);
-            this.InputNPCs.TabIndex = 168;
+            this.InputNPCs.TabIndex = 8;
             this.InputNPCs.Text = "5";
             // 
             // CheckMenuClose
@@ -299,7 +300,7 @@
             this.CheckMenuClose.Location = new System.Drawing.Point(108, 232);
             this.CheckMenuClose.Name = "CheckMenuClose";
             this.CheckMenuClose.Size = new System.Drawing.Size(139, 19);
-            this.CheckMenuClose.TabIndex = 170;
+            this.CheckMenuClose.TabIndex = 9;
             this.CheckMenuClose.Text = "Consider Menu Close";
             this.CheckMenuClose.UseVisualStyleBackColor = true;
             this.CheckMenuClose.CheckedChanged += new System.EventHandler(this.CheckMenuClose_CheckedChanged);

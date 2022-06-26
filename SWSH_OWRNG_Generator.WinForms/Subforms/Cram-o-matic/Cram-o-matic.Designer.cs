@@ -103,7 +103,7 @@
             this.SelectedItem.Location = new System.Drawing.Point(68, 61);
             this.SelectedItem.Name = "SelectedItem";
             this.SelectedItem.Size = new System.Drawing.Size(189, 23);
-            this.SelectedItem.TabIndex = 136;
+            this.SelectedItem.TabIndex = 3;
             // 
             // LabelItemInput
             // 
@@ -119,8 +119,8 @@
             this.CramResults.AllowUserToAddRows = false;
             this.CramResults.AllowUserToDeleteRows = false;
             this.CramResults.AllowUserToResizeRows = false;
-            this.CramResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.CramResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CramResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CramResults.Location = new System.Drawing.Point(263, 6);
@@ -131,7 +131,7 @@
             this.CramResults.RowTemplate.Height = 25;
             this.CramResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CramResults.Size = new System.Drawing.Size(612, 388);
-            this.CramResults.TabIndex = 138;
+            this.CramResults.TabIndex = 16;
             // 
             // LabelMaxAdv
             // 
@@ -193,7 +193,7 @@
             this.CheckPoke.Location = new System.Drawing.Point(12, 230);
             this.CheckPoke.Name = "CheckPoke";
             this.CheckPoke.Size = new System.Drawing.Size(106, 19);
-            this.CheckPoke.TabIndex = 145;
+            this.CheckPoke.TabIndex = 9;
             this.CheckPoke.Text = "Show Poké Ball";
             this.CheckPoke.UseVisualStyleBackColor = true;
             // 
@@ -203,7 +203,7 @@
             this.CheckGreat.Location = new System.Drawing.Point(12, 255);
             this.CheckGreat.Name = "CheckGreat";
             this.CheckGreat.Size = new System.Drawing.Size(108, 19);
-            this.CheckGreat.TabIndex = 146;
+            this.CheckGreat.TabIndex = 10;
             this.CheckGreat.Text = "Show Great Ball";
             this.CheckGreat.UseVisualStyleBackColor = true;
             // 
@@ -213,7 +213,7 @@
             this.CheckShop1.Location = new System.Drawing.Point(12, 280);
             this.CheckShop1.Name = "CheckShop1";
             this.CheckShop1.Size = new System.Drawing.Size(116, 19);
-            this.CheckShop1.TabIndex = 147;
+            this.CheckShop1.TabIndex = 11;
             this.CheckShop1.Text = "Show Shop Ball 1";
             this.CheckShop1.UseVisualStyleBackColor = true;
             // 
@@ -223,7 +223,7 @@
             this.CheckShop2.Location = new System.Drawing.Point(12, 305);
             this.CheckShop2.Name = "CheckShop2";
             this.CheckShop2.Size = new System.Drawing.Size(116, 19);
-            this.CheckShop2.TabIndex = 148;
+            this.CheckShop2.TabIndex = 12;
             this.CheckShop2.Text = "Show Shop Ball 2";
             this.CheckShop2.UseVisualStyleBackColor = true;
             // 
@@ -235,7 +235,7 @@
             this.CheckApricorn.Location = new System.Drawing.Point(12, 330);
             this.CheckApricorn.Name = "CheckApricorn";
             this.CheckApricorn.Size = new System.Drawing.Size(99, 19);
-            this.CheckApricorn.TabIndex = 149;
+            this.CheckApricorn.TabIndex = 13;
             this.CheckApricorn.Text = "Show Apriball";
             this.CheckApricorn.UseVisualStyleBackColor = true;
             // 
@@ -247,7 +247,7 @@
             this.CheckSafariSport.Location = new System.Drawing.Point(12, 355);
             this.CheckSafariSport.Name = "CheckSafariSport";
             this.CheckSafariSport.Size = new System.Drawing.Size(142, 19);
-            this.CheckSafariSport.TabIndex = 150;
+            this.CheckSafariSport.TabIndex = 14;
             this.CheckSafariSport.Text = "Show Safari/Sport Ball";
             this.CheckSafariSport.UseVisualStyleBackColor = true;
             // 
@@ -259,7 +259,7 @@
             this.CheckBonus.Location = new System.Drawing.Point(12, 380);
             this.CheckBonus.Name = "CheckBonus";
             this.CheckBonus.Size = new System.Drawing.Size(156, 19);
-            this.CheckBonus.TabIndex = 151;
+            this.CheckBonus.TabIndex = 15;
             this.CheckBonus.Text = "Show Bonus frames only";
             this.CheckBonus.UseVisualStyleBackColor = true;
             // 
@@ -269,7 +269,7 @@
             this.CheckMenuClose.Location = new System.Drawing.Point(108, 204);
             this.CheckMenuClose.Name = "CheckMenuClose";
             this.CheckMenuClose.Size = new System.Drawing.Size(139, 19);
-            this.CheckMenuClose.TabIndex = 173;
+            this.CheckMenuClose.TabIndex = 8;
             this.CheckMenuClose.Text = "Consider Menu Close";
             this.CheckMenuClose.UseVisualStyleBackColor = true;
             this.CheckMenuClose.CheckedChanged += new System.EventHandler(this.CheckMenuClose_CheckedChanged);
@@ -290,7 +290,7 @@
             this.InputNPCs.MaxLength = 2;
             this.InputNPCs.Name = "InputNPCs";
             this.InputNPCs.Size = new System.Drawing.Size(34, 23);
-            this.InputNPCs.TabIndex = 171;
+            this.InputNPCs.TabIndex = 7;
             this.InputNPCs.Text = "20";
             // 
             // Cram_o_matic
