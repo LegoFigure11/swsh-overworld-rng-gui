@@ -119,8 +119,8 @@
             this.LotoIdResults.AllowUserToAddRows = false;
             this.LotoIdResults.AllowUserToDeleteRows = false;
             this.LotoIdResults.AllowUserToResizeRows = false;
-            this.LotoIdResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.LotoIdResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LotoIdResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LotoIdResults.Location = new System.Drawing.Point(263, 12);
