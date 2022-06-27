@@ -1129,31 +1129,29 @@ namespace SWSH_OWRNG_Generator.WinForms
                 uint offset = 0x8FEA3648;
                 PK8 pk = await ReadPokemon(offset, 0x158).ConfigureAwait(false);
                 if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
-                    if (pk.Species == 0 || pk.Species > 0 && pk.Species > 899)
-                    {
-                        TextboxSetText(Program.Window.TextBoxCheckEncounter, "No encounter present.");
-                        PokeSprite.Image = null;
-                        MarkSprite.Image = null;
-                        ShouldReadState = true;
-                        ChangeButtonState(Program.Window.ReadEncounterButton, true);
-                        return;
-                    }
+                {
+                    TextboxSetText(Program.Window.TextBoxCheckEncounter, "No encounter present.");
+                    PokeSprite.Image = null;
+                    MarkSprite.Image = null;
+                    ShouldReadState = true;
+                    ChangeButtonState(Program.Window.ReadEncounterButton, true);
+                    return;
+                }
                 bool hasMark = HasMark(pk, out RibbonIndex mark);
+                bool isSquare = pk.ShinyXor == 0;
                 string markString = hasMark ? $"Mark: {mark.ToString().Replace("Mark", "")}" : string.Empty;
                 string form = pk.Form == 0 ? "" : $"-{pk.Form}";
-                string gender = string.Empty;
-                switch (pk.Gender)
+                string gender = pk.Gender switch
                 {
-                    case 0: gender = " (M)"; break;
-                    case 1: gender = " (F)"; break;
-                    case 2: break;
-                }
-                string output = $"{(pk.ShinyXor == 0 ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{gender}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}{GameInfo.GetStrings(1).Natures[pk.Nature]} Nature{Environment.NewLine}Ability: {(Ability)pk.Ability}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
+                    0 => " (M)",
+                    1 => " (F)",
+                    _ => string.Empty
+                };
+                string output = $"{(isSquare ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{gender}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}{GameInfo.GetStrings(1).Natures[pk.Nature]} Nature{Environment.NewLine}Ability: {GameInfo.GetStrings(1).Ability[pk.Ability]}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
 
                 if (pk.Species > 0 && pk.Species <= 899)
                 {
                     TextboxSetText(Program.Window.TextBoxCheckEncounter, output);
-                    bool isSquare = pk.ShinyXor == 0;
                     var img = SpriteUtil.GetSprite(pk.Species, pk.Form, pk.Gender, pk.FormArgument, pk.HeldItem, false, pk.IsShiny, 8, false, isSquare);
                     PokeSprite.Image = img;
                     if (hasMark)
