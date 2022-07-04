@@ -582,6 +582,12 @@ namespace SWSH_OWRNG_Generator.WinForms
             }
             Pad(InputInitialAdv, '0', 1);
             ulong InitialAdvances = ulong.Parse(InputInitialAdv.Text);
+            Pad(InputNPCs, '0', 1);
+            uint NPCs = 0;
+            if (CheckMenuClose.Checked)
+            {
+                NPCs = uint.Parse(InputNPCs.Text) + 1;
+            }
             uint TID = ushort.Parse(InputTID.Text);
             uint SID = ushort.Parse(InputSID.Text);
             uint SlotMin = ushort.Parse(InputSlotMin.Text);
@@ -602,6 +608,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             bool IsCuteCharm = CheckCuteCharm.Checked;
             bool IsShinyLocked = CheckShinyLocked.Checked;
             bool IsHidden = CheckHidden.Checked;
+            bool UseMenuClose = CheckMenuClose.Checked;
             string DesiredMark = (string)SelectedMark.SelectedItem;
             string DesiredShiny = (string)SelectedShiny.SelectedItem;
             string DesiredNature = (string)SelectedNature.SelectedItem;
@@ -641,6 +648,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             Results.Columns["Slot"].Visible = !Static;
             Results.Columns["Brilliant"].Visible = !Static;
             Results.Columns["Ability"].Visible = !IsAbilityLocked;
+            Results.Columns["Jump"].Visible = UseMenuClose;
 
             progressBar1.Value = 0;
             progressBar1.Maximum = (int)advances;
@@ -651,7 +659,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             List<Core.Frame> Frames = await Task.Run(() => Core.Generator.Generate(
                 s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
                 DesiredNature, DesiredAura, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
-                IsCuteCharm, IsShinyLocked, IsHidden, TIDSIDSearch, InitialAdvances, progress
+                IsCuteCharm, IsShinyLocked, IsHidden, TIDSIDSearch, InitialAdvances, UseMenuClose, NPCs, progress
             ));
             BindingSource Source = new() { DataSource = Frames };
             Results.DataSource = Source;
@@ -1233,6 +1241,11 @@ namespace SWSH_OWRNG_Generator.WinForms
         {
             using MenuCloseTimeline MenuCloseTimelineForm = new(this);
             MenuCloseTimelineForm.ShowDialog();
+        }
+
+        private void CheckMenuClose_CheckedChanged(object sender, EventArgs e)
+        {
+            InputNPCs.Enabled = CheckMenuClose.Checked;
         }
     }
 }

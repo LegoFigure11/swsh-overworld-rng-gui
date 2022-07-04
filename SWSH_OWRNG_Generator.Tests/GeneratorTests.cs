@@ -28,7 +28,7 @@ public sealed class GeneratorTests
     {
         List<Frame> Frames = Generator.Generate(
             s0, s1, 1000, TID, SID, ShinyCharm, MarkCharm, Weather, true, Fishing, HeldItem, Ignore, Ignore, Ignore, Ignore,
-            0, 0, 0, 0, MinIVs, MaxIVs, false, 0, 0, 0, false, false, false, false, 0, Progress
+            0, 0, 0, 0, MinIVs, MaxIVs, false, 0, 0, 0, false, false, false, false, 0, false, 0, Progress
         );
         Frames.Should().NotBeNull();
         Frames.Where(f => f.Shiny != "No").Count().Should().Be(0);
@@ -43,7 +43,7 @@ public sealed class GeneratorTests
     {
         List<Frame> Frames = Generator.Generate(
             s0, s1, 60000, TID, SID, ShinyCharm, MarkCharm, Weather, false, Fishing, HeldItem, Ignore, Ignore, Ignore, Ignore,
-            34, 36, 0, 99, MinIVs, MaxIVs, false, 4, 500, 0, false, false, false, false, 0, Progress
+            34, 36, 0, 99, MinIVs, MaxIVs, false, 4, 500, 0, false, false, false, false, 0, false, 0, Progress
         );
         Frames.Should().NotBeNull();
         Frames.Where(f => f.Shiny != "No" && f.Brilliant == "Y").Count().Should().Be(3);
@@ -51,8 +51,8 @@ public sealed class GeneratorTests
         Frames.Where(f => f.PID == "4ED54E82" && f.EC == "5C7EDFDF" && f.Slot == 94 && f.Level == 36 && f.HP == 31 && f.Atk == 31 && f.Def == 11 && f.SpA == 11 && f.SpD == 21 && f.Spe == 21 && f.Mark == "Peeved").Count().Should().Be(1);
 
         Frames = Generator.Generate(
-            s0, s1, (uint)5000, TID, SID, true, true, true, false, false, false, "Ignore", "Ignore", "Ignore", "Ignore",
-            34, 36, 0, 99, MinIVs, MaxIVs, false, 4, 500, 0, false, false, false, false, 50000, Progress
+            s0, s1, 5000, TID, SID, true, true, true, false, false, false, "Ignore", "Ignore", "Ignore", "Ignore",
+            34, 36, 0, 99, MinIVs, MaxIVs, false, 4, 500, 0, false, false, false, false, 50000, false, 0, Progress
         );
         Frames.Where(f => f.Shiny != "No").Count().Should().Be(10);
     }

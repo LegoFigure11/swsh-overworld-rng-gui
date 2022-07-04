@@ -12,7 +12,8 @@ namespace SWSH_OWRNG_Generator.Core
             ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
             bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, string DesiredNature, string DesiredAura,
             uint LevelMin, uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
-            uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool IsShinyLocked, bool IsHidden, bool TIDSIDSearch, ulong InitialAdvances, IProgress<int> progress
+            uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool IsShinyLocked, bool IsHidden, bool TIDSIDSearch, ulong InitialAdvances,
+            bool MenuClose, uint NPCCount, IProgress<int> progress
             )
         {
             List<Frame> Results = new();
@@ -38,6 +39,7 @@ namespace SWSH_OWRNG_Generator.Core
             string Gender;
             bool PassIVs, Brilliant, Shiny;
             ulong advance = 0;
+            string Jump = string.Empty;
 
             (BrilliantThreshold, BrilliantRolls) = GenerateBrilliantInfo(KOs);
 
@@ -62,6 +64,11 @@ namespace SWSH_OWRNG_Generator.Core
                     // Init new RNG
                     (ulong s0, ulong s1) = go.GetState();
                     Xoroshiro128Plus rng = new(s0, s1);
+                    if (MenuClose)
+                    {
+                        Jump = $"+{Core.MenuClose.Generator.GetAdvances(rng, NPCCount)}";
+                        rng = Core.MenuClose.Generator.Advance(ref rng, NPCCount);
+                    }
                     Brilliant = false;
                     Gender = "";
                     uint LeadRand;
@@ -176,6 +183,7 @@ namespace SWSH_OWRNG_Generator.Core
                             TID = (ushort)(MockPID >> 16),
                             SID = (ushort)MockPID,
                             Animation = (_s0 & 1) ^ (_s1 & 1),
+                            Jump = Jump,
                             Level = Level,
                             Slot = SlotRand,
                             PID = PID.ToString("X8"),

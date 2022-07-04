@@ -13,10 +13,10 @@ namespace SWSH_OWRNG_Generator.WinForms
         public EncounterLookup(MainWindow f)
         {
             InitializeComponent();
-            this.SelectedGame.SelectedIndex = 0;
+            SelectedGame.SelectedIndex = 0;
             foreach (string SpeciesName in Encounters.Data.Keys)
             {
-                this.SelectedSpecies.Items.Add(SpeciesName);
+                SelectedSpecies.Items.Add(SpeciesName);
             }
             MainWindow = f;
         }
