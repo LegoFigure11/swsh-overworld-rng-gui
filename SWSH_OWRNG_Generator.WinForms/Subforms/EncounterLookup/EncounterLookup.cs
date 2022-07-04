@@ -116,8 +116,20 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             bool Fishing = false, Weather = false;
             string WeatherType = (string)EncounterLookupResults[9, e.RowIndex].Value;
-            if (WeatherType == "Fishing") Fishing = true;
-            else if (WeatherType != "Normal Weather") Weather = true;
+            switch (WeatherType)
+            {
+                case "Fishing":
+                    Fishing = true;
+                    break;
+
+                case "Normal Weather":
+                case "All Weather":
+                    break;
+
+                default:
+                    Weather = true;
+                    break;
+            }
             MainWindow.CheckFishing.Checked = Fishing;
             MainWindow.CheckWeather.Checked = Weather;
             MainWindow.CheckStatic.Checked = Static;
