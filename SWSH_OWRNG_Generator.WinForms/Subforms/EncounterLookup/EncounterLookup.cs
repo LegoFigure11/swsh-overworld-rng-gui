@@ -110,9 +110,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             MainWindow.InputSlotMax.Text = SlotMax;
 
             string EncounterType = (string)EncounterLookupResults[8, e.RowIndex].Value;
-            bool Static = false, Hidden = false;
-            if (EncounterType == "Static") Static = true;
-            else if (EncounterType == "Hidden") Hidden = true;
+            bool Static = EncounterType == "Static";
+            bool Hidden = EncounterType == "Hidden";
 
             string WeatherType = (string)EncounterLookupResults[9, e.RowIndex].Value;
             bool Fishing = WeatherType == "Fishing";
