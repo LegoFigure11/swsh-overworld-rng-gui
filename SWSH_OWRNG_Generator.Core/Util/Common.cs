@@ -85,6 +85,9 @@ namespace SWSH_OWRNG_Generator.Core.Util
                 }
             }
 
+            // uint Height = (uint)go.NextInt(129) + (uint)go.NextInt(128);
+            // uint Weight = (uint)go.NextInt(129) + (uint)go.NextInt(128);
+
             return (FixedEC, FixedPID, IVs, GetTSV(GetTSV(FixedPID >> 16, FixedPID & 0xFFFF), TSV), PassIVs);
         }
     }
