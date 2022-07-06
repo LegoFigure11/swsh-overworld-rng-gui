@@ -588,41 +588,42 @@ namespace SWSH_OWRNG_Generator.WinForms
             {
                 NPCs = uint.Parse(InputNPCs.Text) + 1;
             }
-            uint TID = ushort.Parse(InputTID.Text);
-            uint SID = ushort.Parse(InputSID.Text);
-            uint SlotMin = ushort.Parse(InputSlotMin.Text);
-            uint SlotMax = ushort.Parse(InputSlotMax.Text);
-            uint LevelMin = ushort.Parse(InputLevelMin.Text);
-            uint LevelMax = ushort.Parse(InputLevelMax.Text);
-            uint KOCount = ushort.Parse(InputKOCount.Text);
-            uint EMCount = ushort.Parse(InputEMs.Text);
-            uint FlawlessIVs = ushort.Parse(InputFlawlessIVs.Text);
-            bool ShinyCharm = CheckShinyCharm.Checked;
-            bool MarkCharm = CheckMarkCharm.Checked;
-            bool Weather = CheckWeather.Checked;
-            bool Static = CheckStatic.Checked;
-            bool Fishing = CheckFishing.Checked;
-            bool HeldItem = CheckHeldItem.Checked;
-            bool IsAbilityLocked = CheckIsAbilityLocked.Checked;
-            bool TIDSIDSearch = CheckTIDSIDFinder.Checked;
-            bool IsCuteCharm = CheckCuteCharm.Checked;
-            bool IsShinyLocked = CheckShinyLocked.Checked;
-            bool IsHidden = CheckHidden.Checked;
-            bool UseMenuClose = CheckMenuClose.Checked;
-            string DesiredMark = (string)SelectedMark.SelectedItem;
-            string DesiredShiny = (string)SelectedShiny.SelectedItem;
-            string DesiredNature = (string)SelectedNature.SelectedItem;
-            string DesiredAura = (string)SelectedAura.SelectedItem;
-            uint[] MinIVs = { ushort.Parse(hpMin.Text), ushort.Parse(atkMin.Text), ushort.Parse(defMin.Text), ushort.Parse(spaMin.Text), ushort.Parse(spdMin.Text), ushort.Parse(speMin.Text) };
-            uint[] MaxIVs = { ushort.Parse(hpMax.Text), ushort.Parse(atkMax.Text), ushort.Parse(defMax.Text), ushort.Parse(spaMax.Text), ushort.Parse(spdMax.Text), ushort.Parse(speMax.Text) };
+            Core.Overworld.Filter Filters = new();
+            Filters.TSV = Core.Util.Common.GetTSV(ushort.Parse(InputTID.Text), ushort.Parse(InputSID.Text));
+            Filters.SlotMin = ushort.Parse(InputSlotMin.Text);
+            Filters.SlotMax = ushort.Parse(InputSlotMax.Text);
+            Filters.LevelMin = ushort.Parse(InputLevelMin.Text);
+            Filters.LevelMax = ushort.Parse(InputLevelMax.Text);
+            Filters.KOs = ushort.Parse(InputKOCount.Text);
+            Filters.EggMoveCount = ushort.Parse(InputEMs.Text);
+            Filters.FlawlessIVs = ushort.Parse(InputFlawlessIVs.Text);
+            Filters.ShinyRolls = CheckShinyCharm.Checked ? 3 : 1;
+            Filters.MarkRolls = CheckMarkCharm.Checked ? 3 : 1;
+            Filters.Weather = CheckWeather.Checked;
+            Filters.Static = CheckStatic.Checked;
+            Filters.Fishing = CheckFishing.Checked;
+            Filters.HeldItem = CheckHeldItem.Checked;
+            Filters.AbilityLocked = CheckIsAbilityLocked.Checked;
+            Filters.TIDSIDSearch = CheckTIDSIDFinder.Checked;
+            Filters.CuteCharm = CheckCuteCharm.Checked;
+            Filters.ShinyLocked = CheckShinyLocked.Checked;
+            Filters.Hidden = CheckHidden.Checked;
+            Filters.MenuClose = CheckMenuClose.Checked;
+            Filters.DesiredMark = (string)SelectedMark.SelectedItem;
+            Filters.DesiredShiny = (string)SelectedShiny.SelectedItem;
+            Filters.DesiredNature = (string)SelectedNature.SelectedItem;
+            Filters.DesiredAura = (string)SelectedAura.SelectedItem;
+            Filters.MinIVs = new uint[] { ushort.Parse(hpMin.Text), ushort.Parse(atkMin.Text), ushort.Parse(defMin.Text), ushort.Parse(spaMin.Text), ushort.Parse(spdMin.Text), ushort.Parse(speMin.Text) };
+            Filters.MaxIVs = new uint[] { ushort.Parse(hpMax.Text), ushort.Parse(atkMax.Text), ushort.Parse(defMax.Text), ushort.Parse(spaMax.Text), ushort.Parse(spdMax.Text), ushort.Parse(speMax.Text) };
+
             int[] WrongIVs = new int[6];
             string message = "";
             string[] stats = { "HP", "Atk", "Def", "SpA", "SpD", "Spe" };
             int err = 0;
 
-            for (int i = 0; i < MinIVs.Length; i++)
+            for (int i = 0; i < Filters.MinIVs.Length; i++)
             {
-                if (MinIVs[i] > MaxIVs[i])
+                if (Filters.MinIVs[i] > Filters.MaxIVs[i])
                 {
                     message += $"Error in stat filter: {stats[i]}!\n";
                     err = 1;
@@ -642,13 +643,13 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             Results.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.EnableResizing;
             Results.Rows.Clear();
-            Results.Columns["TID"].Visible = TIDSIDSearch;
-            Results.Columns["SID"].Visible = TIDSIDSearch;
-            Results.Columns["Level"].Visible = !Static;
-            Results.Columns["Slot"].Visible = !Static;
-            Results.Columns["Brilliant"].Visible = !Static;
-            Results.Columns["Ability"].Visible = !IsAbilityLocked;
-            Results.Columns["Jump"].Visible = UseMenuClose;
+            Results.Columns["TID"].Visible = Filters.TIDSIDSearch;
+            Results.Columns["SID"].Visible = Filters.TIDSIDSearch;
+            Results.Columns["Level"].Visible = !Filters.Static;
+            Results.Columns["Slot"].Visible = !Filters.Static;
+            Results.Columns["Brilliant"].Visible = !Filters.Static;
+            Results.Columns["Ability"].Visible = !Filters.AbilityLocked;
+            Results.Columns["Jump"].Visible = Filters.MenuClose;
 
             progressBar1.Value = 0;
             progressBar1.Maximum = (int)advances;
@@ -656,11 +657,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             var progress = new Progress<int>(_ => progressBar1.PerformStep());
 
-            List<Core.Frame> Frames = await Task.Run(() => Core.Generator.Generate(
-                s0, s1, advances, TID, SID, ShinyCharm, MarkCharm, Weather, Static, Fishing, HeldItem, DesiredMark, DesiredShiny,
-                DesiredNature, DesiredAura, LevelMin, LevelMax, SlotMin, SlotMax, MinIVs, MaxIVs, IsAbilityLocked, EMCount, KOCount, FlawlessIVs,
-                IsCuteCharm, IsShinyLocked, IsHidden, TIDSIDSearch, InitialAdvances, UseMenuClose, NPCs, progress
-            ));
+            List<Core.Frame> Frames = await Task.Run(() => Core.Generator.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs));
             BindingSource Source = new() { DataSource = Frames };
             Results.DataSource = Source;
             Source.ResetBindings(false);

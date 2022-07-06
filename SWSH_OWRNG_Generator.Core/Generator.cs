@@ -8,22 +8,13 @@ namespace SWSH_OWRNG_Generator.Core
         private static readonly string[] PersonalityMarks = { "Rowdy", "AbsentMinded", "Jittery", "Excited", "Charismatic", "Calmness", "Intense", "ZonedOut", "Joyful", "Angry", "Smiley", "Teary", "Upbeat", "Peeved", "Intellectual", "Ferocious", "Crafty", "Scowling", "Kindly", "Flustered", "PumpedUp", "ZeroEnergy", "Prideful", "Unsure", "Humble", "Thorny", "Vigor", "Slump" };
 
         // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
-        public static List<Frame> Generate(
-            ulong state0, ulong state1, ulong advances, uint TID, uint SID, bool ShinyCharm, bool MarkCharm, bool Weather,
-            bool Static, bool Fishing, bool HeldItem, string DesiredMark, string DesiredShiny, string DesiredNature, string DesiredAura,
-            uint LevelMin, uint LevelMax, uint SlotMin, uint SlotMax, uint[] MinIVs, uint[] MaxIVs, bool IsAbilityLocked, uint EggMoveCount,
-            uint KOs, uint FlawlessIVs, bool IsCuteCharm, bool IsShinyLocked, bool IsHidden, bool TIDSIDSearch, ulong InitialAdvances,
-            bool MenuClose, uint NPCCount, IProgress<int> progress
-            )
+        public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, IProgress<int> progress, Overworld.Filter Filters, uint NPCs)
         {
             List<Frame> Results = new();
 
-            int ShinyRolls = ShinyCharm ? 3 : 1;
-            int MarkRolls = MarkCharm ? 3 : 1;
-            uint TSV = GetTSV(TID, SID);
             uint[] IVs;
-            bool GenerateLevel = LevelMin != LevelMax;
-            uint LevelDelta = LevelMax - LevelMin + 1;
+            bool GenerateLevel = Filters.LevelMin != Filters.LevelMax;
+            uint LevelDelta = Filters.LevelMax - Filters.LevelMin + 1;
             uint EC;
             uint PID;
             uint SlotRand = 0;
@@ -41,7 +32,7 @@ namespace SWSH_OWRNG_Generator.Core
             ulong advance = 0;
             string Jump = string.Empty;
 
-            (BrilliantThreshold, BrilliantRolls) = GenerateBrilliantInfo(KOs);
+            (BrilliantThreshold, BrilliantRolls) = Util.Common.GenerateBrilliantInfo(Filters.KOs);
 
             ulong ProgressUpdateInterval = advances / 100;
             if (ProgressUpdateInterval == 0)
@@ -64,74 +55,74 @@ namespace SWSH_OWRNG_Generator.Core
                     // Init new RNG
                     (ulong s0, ulong s1) = go.GetState();
                     Xoroshiro128Plus rng = new(s0, s1);
-                    if (MenuClose)
+                    if (Filters.MenuClose)
                     {
-                        Jump = $"+{Core.MenuClose.Generator.GetAdvances(rng, NPCCount)}";
-                        rng = Core.MenuClose.Generator.Advance(ref rng, NPCCount);
+                        Jump = $"+{MenuClose.Generator.GetAdvances(rng, NPCs)}";
+                        rng = MenuClose.Generator.Advance(ref rng, NPCs);
                     }
                     Brilliant = false;
                     Gender = "";
                     uint LeadRand;
-                    if (Static)
+                    if (Filters.Static)
                     {
                         LeadRand = (uint)rng.NextInt(100);
-                        if (IsCuteCharm && LeadRand < 66)
+                        if (Filters.CuteCharm && LeadRand < 66)
                             Gender = "CC";
                     }
                     else
                     {
-                        if (!Fishing)
+                        if (!Filters.Fishing)
                             rng.NextInt();
                         rng.NextInt(100);
 
                         LeadRand = (uint)rng.NextInt(100);
-                        if (IsCuteCharm && LeadRand < 66)
+                        if (Filters.CuteCharm && LeadRand < 66)
                             Gender = "CC";
 
                         SlotRand = (uint)rng.NextInt(100);
-                        if (SlotMin > SlotRand || SlotMax < SlotRand)
+                        if (Filters.SlotMin > SlotRand || Filters.SlotMax < SlotRand)
                             continue;
 
                         if (GenerateLevel)
                         {
-                            Level = LevelMin + (uint)rng.NextInt(LevelDelta);
+                            Level = Filters.LevelMin + (uint)rng.NextInt(LevelDelta);
                         }
                         else
                         {
-                            Level = LevelMin;
+                            Level = Filters.LevelMin;
                         }
 
-                        GenerateMark(ref rng, Weather, Fishing, MarkRolls); // Double Mark Gen happens always
+                        GenerateMark(ref rng, Filters.Weather, Filters.Fishing, Filters.MarkRolls); // Double Mark Gen happens always
 
-                        if (!IsHidden)
+                        if (!Filters.Hidden)
                         {
                             BrilliantRand = (uint)rng.NextInt(1000);
                             if (BrilliantRand < BrilliantThreshold)
                             {
                                 Brilliant = true;
-                                Level = LevelMax;
+                                Level = Filters.LevelMax;
                             }
-                            if ((DesiredAura == "Brilliant" && !Brilliant) || (DesiredAura == "None" && Brilliant))
+                            if ((Filters.DesiredAura == "Brilliant" && !Brilliant) || (Filters.DesiredAura == "None" && Brilliant))
                                 continue;
                         }
                     }
 
                     Shiny = false;
                     uint MockPID = 0;
-                    if (TIDSIDSearch)
-                        totalRolls = ShinyRolls + (Brilliant ? BrilliantRolls : 0);
-                    if (!IsShinyLocked)
+                    if (Filters.TIDSIDSearch)
+                        totalRolls = Filters.ShinyRolls + (Brilliant ? BrilliantRolls : 0);
+                    if (!Filters.ShinyLocked)
                     {
-                        for (int roll = 0; roll < ShinyRolls + (Brilliant ? BrilliantRolls : 0); roll++)
+                        for (int roll = 0; roll < Filters.ShinyRolls + (Brilliant ? BrilliantRolls : 0); roll++)
                         {
                             MockPID = (uint)rng.Next();
-                            if (TIDSIDSearch)
+                            if (Filters.TIDSIDSearch)
                             {
                                 Shiny = roll == rollToCheck; // Account for pid loop ending early
-                                TSV = (MockPID >> 16) ^ (MockPID & 0xFFFF);
+                                Filters.TSV = Util.Common.GetTSV(MockPID >> 16, MockPID & 0xFFFF);
                             }
                             else
-                                Shiny = ((MockPID >> 16) ^ (MockPID & 0xFFFF) ^ TSV) < 16;
+                                Shiny = Util.Common.GetTSV(Util.Common.GetTSV(MockPID >> 16, MockPID & 0xFFFF), Filters.TSV) < 16;
                             if (Shiny)
                                 break;
                         }
@@ -141,37 +132,37 @@ namespace SWSH_OWRNG_Generator.Core
                         Gender = rng.NextInt(2) == 0 ? "F" : "M";
                     Nature = (uint)rng.NextInt(25);
                     AbilityRoll = 2;
-                    if (!IsAbilityLocked)
+                    if (!Filters.AbilityLocked)
                         AbilityRoll = (uint)rng.NextInt(2);
 
-                    if (!Static && HeldItem)
-                        rng.NextInt(100);
+                    if (!Filters.Static && Filters.HeldItem)
+                        rng.NextInt(100); // Held Item
 
                     BrilliantIVs = 0;
                     if (Brilliant)
                     {
                         BrilliantIVs = (int)rng.NextInt(2) | 2;
-                        if (EggMoveCount > 1)
-                            rng.NextInt(EggMoveCount);
+                        if (Filters.EggMoveCount > 1)
+                            rng.NextInt(Filters.EggMoveCount); // Egg Move Index
                     }
 
                     FixedSeed = (uint)rng.Next();
-                    (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, TSV, Shiny, (int)(FlawlessIVs + BrilliantIVs), MinIVs, MaxIVs);
+                    (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, Filters.TSV, Shiny, (int)(Filters.FlawlessIVs + BrilliantIVs), Filters.MinIVs!, Filters.MaxIVs!);
 
                     if (!PassIVs ||
-                        (DesiredShiny == "Square" && ShinyXOR != 0) ||
-                        (DesiredShiny == "Star" && (ShinyXOR > 15 || ShinyXOR == 0)) ||
-                        (DesiredShiny == "Star/Square" && ShinyXOR > 15) ||
-                        (DesiredShiny == "No" && ShinyXOR < 16)
+                        (Filters.DesiredShiny == "Square" && ShinyXOR != 0) ||
+                        (Filters.DesiredShiny == "Star" && (ShinyXOR > 15 || ShinyXOR == 0)) ||
+                        (Filters.DesiredShiny == "Star/Square" && ShinyXOR > 15) ||
+                        (Filters.DesiredShiny == "No" && ShinyXOR < 16)
                         )
                         continue;
 
-                    string Mark = GenerateMark(ref rng, Weather, Fishing, MarkRolls);
+                    string Mark = GenerateMark(ref rng, Filters.Weather, Filters.Fishing, Filters.MarkRolls);
 
-                    if (!PassesMarkFilter(Mark, DesiredMark))
+                    if (!PassesMarkFilter(Mark, Filters.DesiredMark!))
                         continue;
 
-                    if (!PassesNatureFilter(Natures[(int)Nature], DesiredNature))
+                    if (!PassesNatureFilter(Natures[(int)Nature], Filters.DesiredNature!))
                         continue;
 
                     // Passes all filters!
@@ -179,7 +170,7 @@ namespace SWSH_OWRNG_Generator.Core
                     Results.Add(
                         new Frame
                         {
-                            Advances = TIDSIDSearch ? $"{(-(long)(advance + InitialAdvances)):N0} | Roll: {rollToCheck:N0}" : (advance + InitialAdvances).ToString("N0"),
+                            Advances = Filters.TIDSIDSearch ? $"{(-(long)(advance + InitialAdvances)):N0} | Roll: {rollToCheck:N0}" : (advance + InitialAdvances).ToString("N0"),
                             TID = (ushort)(MockPID >> 16),
                             SID = (ushort)MockPID,
                             Animation = (_s0 & 1) ^ (_s1 & 1),
@@ -205,7 +196,7 @@ namespace SWSH_OWRNG_Generator.Core
                         }
                     );
                 }
-                if (TIDSIDSearch)
+                if (Filters.TIDSIDSearch)
                     go.Prev();
                 else
                     go.Next();
@@ -213,11 +204,6 @@ namespace SWSH_OWRNG_Generator.Core
             }
 
             return Results;
-        }
-
-        public static uint GetTSV(uint TID, uint SID)
-        {
-            return TID ^ SID;
         }
 
         public static string GenerateMark(ref Xoroshiro128Plus go, bool Weather, bool Fishing, int MarkRolls)
@@ -287,7 +273,7 @@ namespace SWSH_OWRNG_Generator.Core
                 }
             }
 
-            return (FixedEC, FixedPID, IVs, GetTSV(FixedPID >> 16, FixedPID & 0xFFFF) ^ TSV, PassIVs);
+            return (FixedEC, FixedPID, IVs, Util.Common.GetTSV(Util.Common.GetTSV(FixedPID >> 16, FixedPID & 0xFFFF), TSV), PassIVs);
         }
 
         private static bool PassesMarkFilter(string Mark, string DesiredMark)
@@ -299,18 +285,6 @@ namespace SWSH_OWRNG_Generator.Core
         {
             return (DesiredNature == Nature) || (DesiredNature == "Ignore");
         }
-
-        private static (uint, uint) GenerateBrilliantInfo(uint KOs) => KOs switch
-        {
-            >= 500 => (30, 6),
-            >= 300 => (30, 5),
-            >= 200 => (30, 4),
-            >= 100 => (30, 3),
-            >= 50 => (25, 2),
-            >= 20 => (20, 1),
-            >= 1 => (15, 1),
-            _ => (0, 0),
-        };
 
         public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)
         {

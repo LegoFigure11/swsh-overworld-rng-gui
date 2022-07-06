@@ -80,7 +80,4 @@
 	<ItemGroup>
 		<ProjectReference Include="..\SWSH_OWRNG_Generator.Core\SWSH_OWRNG_Generator.Core.csproj" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Properties\" />
-	</ItemGroup>
 </Project>
