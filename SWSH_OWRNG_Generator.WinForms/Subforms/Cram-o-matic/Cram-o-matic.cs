@@ -50,15 +50,17 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             int ItemIndex = SelectedItem.SelectedIndex;
 
-            Core.Cram_o_matic.Filter Filters = new();
-            Filters.Poke = CheckPoke.Checked;
-            Filters.Great = CheckGreat.Checked;
-            Filters.Shop1 = CheckShop1.Checked;
-            Filters.Shop2 = CheckShop2.Checked;
-            Filters.Apri = CheckApricorn.Checked;
-            Filters.SafariSport = CheckSafariSport.Checked;
-            Filters.BonusOnly = CheckBonus.Checked;
-            Filters.MenuClose = CheckMenuClose.Checked;
+            Core.Cram_o_matic.Filter Filters = new()
+            {
+                Poke = CheckPoke.Checked,
+                Great = CheckGreat.Checked,
+                Shop1 = CheckShop1.Checked,
+                Shop2 = CheckShop2.Checked,
+                Apri = CheckApricorn.Checked,
+                SafariSport = CheckSafariSport.Checked,
+                BonusOnly = CheckBonus.Checked,
+                MenuClose = CheckMenuClose.Checked
+            };
 
             CramProgressBar.Value = 0;
             CramProgressBar.Maximum = (int)advances;

@@ -5,7 +5,7 @@ namespace SWSH_OWRNG_Generator.Core
     public static class Generator
     {
         private static readonly IReadOnlyList<string> Natures = GameInfo.GetStrings(1).Natures;
-        
+
         // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
         public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, IProgress<int> progress, Overworld.Filter Filters, uint NPCs)
         {

@@ -24,22 +24,24 @@ public sealed class GeneratorTests
     [InlineData(0x69CABBA9ECABBA9Eu, 0xCABBA9ECABBA9E69u)]
     public void GenerateStatic(in ulong s0, in ulong s1)
     {
-        Core.Overworld.Filter Filters = new();
-        Filters.TSV = TSV;
-        Filters.ShinyRolls = ShinyRolls;
-        Filters.MarkRolls = MarkRolls;
-        Filters.MinIVs = MinIVs;
-        Filters.MaxIVs = MaxIVs;
-        Filters.Weather = false;
-        Filters.Static = true;
-        Filters.Fishing = false;
-        Filters.Hidden = false;
-        Filters.ShinyLocked = false;
-        Filters.AbilityLocked = false;
-        Filters.DesiredShiny = Ignore;
-        Filters.DesiredMark = Ignore;
-        Filters.DesiredAura = Ignore;
-        Filters.DesiredNature = Ignore;
+        Core.Overworld.Filter Filters = new()
+        {
+            TSV = TSV,
+            ShinyRolls = ShinyRolls,
+            MarkRolls = MarkRolls,
+            MinIVs = MinIVs,
+            MaxIVs = MaxIVs,
+            Weather = false,
+            Static = true,
+            Fishing = false,
+            Hidden = false,
+            ShinyLocked = false,
+            AbilityLocked = false,
+            DesiredShiny = Ignore,
+            DesiredMark = Ignore,
+            DesiredAura = Ignore,
+            DesiredNature = Ignore
+        };
         List<Frame> Frames = Generator.Generate(s0, s1, 1000, 0, Progress, Filters, 0);
         Frames.Should().NotBeNull();
         Frames.Where(f => f.Shiny != "No").Count().Should().Be(0);
@@ -52,31 +54,33 @@ public sealed class GeneratorTests
     [InlineData(0xAAAAAAAAAAAAAAAAu, 0x50C1AB1ECABBA6E5u)]
     public void GenerateSymbol(in ulong s0, in ulong s1)
     {
-        Core.Overworld.Filter Filters = new();
-        Filters.TSV = TSV;
-        Filters.ShinyRolls = ShinyRolls;
-        Filters.MarkRolls = MarkRolls;
-        Filters.MinIVs = MinIVs;
-        Filters.MaxIVs = MaxIVs;
-        Filters.Weather = false;
-        Filters.Static = false;
-        Filters.Fishing = false;
-        Filters.Hidden = false;
-        Filters.HeldItem = false;
-        Filters.ShinyLocked = false;
-        Filters.AbilityLocked = false;
-        Filters.CuteCharm = false;
-        Filters.DesiredShiny = Ignore;
-        Filters.DesiredMark = Ignore;
-        Filters.DesiredAura = Ignore;
-        Filters.DesiredNature = Ignore;
-        Filters.LevelMin = 34;
-        Filters.LevelMax = 36;
-        Filters.SlotMin = 0;
-        Filters.SlotMax = 99;
-        Filters.EggMoveCount = EggMoveCount;
-        Filters.KOs = KOs;
-        Filters.FlawlessIVs = 0;
+        Core.Overworld.Filter Filters = new()
+        {
+            TSV = TSV,
+            ShinyRolls = ShinyRolls,
+            MarkRolls = MarkRolls,
+            MinIVs = MinIVs,
+            MaxIVs = MaxIVs,
+            Weather = false,
+            Static = false,
+            Fishing = false,
+            Hidden = false,
+            HeldItem = false,
+            ShinyLocked = false,
+            AbilityLocked = false,
+            CuteCharm = false,
+            DesiredShiny = Ignore,
+            DesiredMark = Ignore,
+            DesiredAura = Ignore,
+            DesiredNature = Ignore,
+            LevelMin = 34,
+            LevelMax = 36,
+            SlotMin = 0,
+            SlotMax = 99,
+            EggMoveCount = EggMoveCount,
+            KOs = KOs,
+            FlawlessIVs = 0
+        };
 
         List<Frame> Frames = Generator.Generate(s0, s1, 60000, 0, Progress, Filters, 0);
         Frames.Should().NotBeNull();

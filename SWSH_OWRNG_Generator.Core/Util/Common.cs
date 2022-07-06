@@ -21,6 +21,7 @@ namespace SWSH_OWRNG_Generator.Core.Util
             >= 1 => (15, 1),
             _ => (0, 0),
         };
+
         public static string GenerateMark(ref Xoroshiro128Plus go, bool Weather, bool Fishing, int MarkRolls)
         {
             for (int i = 0; i < MarkRolls; i++)
@@ -41,6 +42,7 @@ namespace SWSH_OWRNG_Generator.Core.Util
             }
             return "None";
         }
+
         public static (uint, uint, uint[], uint, bool) CalculateFixed(uint FixedSeed, uint TSV, bool Shiny, int ForcedIVs, uint[] MinIVs, uint[] MaxIVs)
         {
             Xoroshiro128Plus go = new(FixedSeed, 0x82A2B175229D6A5B);

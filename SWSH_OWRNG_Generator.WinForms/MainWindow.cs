@@ -588,33 +588,35 @@ namespace SWSH_OWRNG_Generator.WinForms
             {
                 NPCs = uint.Parse(InputNPCs.Text) + 1;
             }
-            Core.Overworld.Filter Filters = new();
-            Filters.TSV = Core.Util.Common.GetTSV(ushort.Parse(InputTID.Text), ushort.Parse(InputSID.Text));
-            Filters.SlotMin = ushort.Parse(InputSlotMin.Text);
-            Filters.SlotMax = ushort.Parse(InputSlotMax.Text);
-            Filters.LevelMin = ushort.Parse(InputLevelMin.Text);
-            Filters.LevelMax = ushort.Parse(InputLevelMax.Text);
-            Filters.KOs = ushort.Parse(InputKOCount.Text);
-            Filters.EggMoveCount = ushort.Parse(InputEMs.Text);
-            Filters.FlawlessIVs = ushort.Parse(InputFlawlessIVs.Text);
-            Filters.ShinyRolls = CheckShinyCharm.Checked ? 3 : 1;
-            Filters.MarkRolls = CheckMarkCharm.Checked ? 3 : 1;
-            Filters.Weather = CheckWeather.Checked;
-            Filters.Static = CheckStatic.Checked;
-            Filters.Fishing = CheckFishing.Checked;
-            Filters.HeldItem = CheckHeldItem.Checked;
-            Filters.AbilityLocked = CheckIsAbilityLocked.Checked;
-            Filters.TIDSIDSearch = CheckTIDSIDFinder.Checked;
-            Filters.CuteCharm = CheckCuteCharm.Checked;
-            Filters.ShinyLocked = CheckShinyLocked.Checked;
-            Filters.Hidden = CheckHidden.Checked;
-            Filters.MenuClose = CheckMenuClose.Checked;
-            Filters.DesiredMark = (string)SelectedMark.SelectedItem;
-            Filters.DesiredShiny = (string)SelectedShiny.SelectedItem;
-            Filters.DesiredNature = (string)SelectedNature.SelectedItem;
-            Filters.DesiredAura = (string)SelectedAura.SelectedItem;
-            Filters.MinIVs = new uint[] { ushort.Parse(hpMin.Text), ushort.Parse(atkMin.Text), ushort.Parse(defMin.Text), ushort.Parse(spaMin.Text), ushort.Parse(spdMin.Text), ushort.Parse(speMin.Text) };
-            Filters.MaxIVs = new uint[] { ushort.Parse(hpMax.Text), ushort.Parse(atkMax.Text), ushort.Parse(defMax.Text), ushort.Parse(spaMax.Text), ushort.Parse(spdMax.Text), ushort.Parse(speMax.Text) };
+            Core.Overworld.Filter Filters = new()
+            {
+                TSV = Core.Util.Common.GetTSV(ushort.Parse(InputTID.Text), ushort.Parse(InputSID.Text)),
+                SlotMin = ushort.Parse(InputSlotMin.Text),
+                SlotMax = ushort.Parse(InputSlotMax.Text),
+                LevelMin = ushort.Parse(InputLevelMin.Text),
+                LevelMax = ushort.Parse(InputLevelMax.Text),
+                KOs = ushort.Parse(InputKOCount.Text),
+                EggMoveCount = ushort.Parse(InputEMs.Text),
+                FlawlessIVs = ushort.Parse(InputFlawlessIVs.Text),
+                ShinyRolls = CheckShinyCharm.Checked ? 3 : 1,
+                MarkRolls = CheckMarkCharm.Checked ? 3 : 1,
+                Weather = CheckWeather.Checked,
+                Static = CheckStatic.Checked,
+                Fishing = CheckFishing.Checked,
+                HeldItem = CheckHeldItem.Checked,
+                AbilityLocked = CheckIsAbilityLocked.Checked,
+                TIDSIDSearch = CheckTIDSIDFinder.Checked,
+                CuteCharm = CheckCuteCharm.Checked,
+                ShinyLocked = CheckShinyLocked.Checked,
+                Hidden = CheckHidden.Checked,
+                MenuClose = CheckMenuClose.Checked,
+                DesiredMark = (string)SelectedMark.SelectedItem,
+                DesiredShiny = (string)SelectedShiny.SelectedItem,
+                DesiredNature = (string)SelectedNature.SelectedItem,
+                DesiredAura = (string)SelectedAura.SelectedItem,
+                MinIVs = new uint[] { ushort.Parse(hpMin.Text), ushort.Parse(atkMin.Text), ushort.Parse(defMin.Text), ushort.Parse(spaMin.Text), ushort.Parse(spdMin.Text), ushort.Parse(speMin.Text) },
+                MaxIVs = new uint[] { ushort.Parse(hpMax.Text), ushort.Parse(atkMax.Text), ushort.Parse(defMax.Text), ushort.Parse(spaMax.Text), ushort.Parse(spdMax.Text), ushort.Parse(speMax.Text) }
+            };
 
             int[] WrongIVs = new int[6];
             string message = "";

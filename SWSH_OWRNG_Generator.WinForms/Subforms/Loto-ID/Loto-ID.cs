@@ -90,14 +90,16 @@ namespace SWSH_OWRNG_Generator.WinForms
             LotoIDSearch.Text = "Calculating...";
             LotoIDSearch.Enabled = false;
 
-            Core.Loto_ID.Filter Filters = new();
-            Filters.None = CheckNoItem.Checked;
-            Filters.MooMoo = CheckMooMoo.Checked;
-            Filters.PPUp = CheckPPUp.Checked;
-            Filters.PPMax = CheckPPMax.Checked;
-            Filters.RareCandy = CheckRareCandy.Checked;
-            Filters.MasterBall = CheckMaster.Checked;
-            Filters.MenuClose = CheckMenuClose.Checked;
+            Core.Loto_ID.Filter Filters = new()
+            {
+                None = CheckNoItem.Checked,
+                MooMoo = CheckMooMoo.Checked,
+                PPUp = CheckPPUp.Checked,
+                PPMax = CheckPPMax.Checked,
+                RareCandy = CheckRareCandy.Checked,
+                MasterBall = CheckMaster.Checked,
+                MenuClose = CheckMenuClose.Checked
+            };
 
             var progress = new Progress<int>(_ => LotoIDProgressBar.PerformStep());
 
