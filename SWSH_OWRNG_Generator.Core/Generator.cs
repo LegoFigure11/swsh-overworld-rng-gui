@@ -5,8 +5,7 @@ namespace SWSH_OWRNG_Generator.Core
     public static class Generator
     {
         private static readonly IReadOnlyList<string> Natures = GameInfo.GetStrings(1).Natures;
-        private static readonly string[] PersonalityMarks = { "Rowdy", "AbsentMinded", "Jittery", "Excited", "Charismatic", "Calmness", "Intense", "ZonedOut", "Joyful", "Angry", "Smiley", "Teary", "Upbeat", "Peeved", "Intellectual", "Ferocious", "Crafty", "Scowling", "Kindly", "Flustered", "PumpedUp", "ZeroEnergy", "Prideful", "Unsure", "Humble", "Thorny", "Vigor", "Slump" };
-
+        
         // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
         public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, IProgress<int> progress, Overworld.Filter Filters, uint NPCs)
         {
@@ -92,7 +91,7 @@ namespace SWSH_OWRNG_Generator.Core
                             Level = Filters.LevelMin;
                         }
 
-                        GenerateMark(ref rng, Filters.Weather, Filters.Fishing, Filters.MarkRolls); // Double Mark Gen happens always
+                        Util.Common.GenerateMark(ref rng, Filters.Weather, Filters.Fishing, Filters.MarkRolls); // Double Mark Gen happens always
 
                         if (!Filters.Hidden)
                         {
@@ -128,26 +127,32 @@ namespace SWSH_OWRNG_Generator.Core
                         }
                     }
 
+                    // Gender
                     if (Gender != "CC")
                         Gender = rng.NextInt(2) == 0 ? "F" : "M";
+                    // Nature
                     Nature = (uint)rng.NextInt(25);
+                    // Ability
                     AbilityRoll = 2;
                     if (!Filters.AbilityLocked)
                         AbilityRoll = (uint)rng.NextInt(2);
 
+                    // Held Item
                     if (!Filters.Static && Filters.HeldItem)
-                        rng.NextInt(100); // Held Item
+                        rng.NextInt(100);
 
                     BrilliantIVs = 0;
                     if (Brilliant)
                     {
+                        // Brilliant IVs
                         BrilliantIVs = (int)rng.NextInt(2) | 2;
+                        // Brilliant Egg Move
                         if (Filters.EggMoveCount > 1)
-                            rng.NextInt(Filters.EggMoveCount); // Egg Move Index
+                            rng.NextInt(Filters.EggMoveCount);
                     }
 
                     FixedSeed = (uint)rng.Next();
-                    (EC, PID, IVs, ShinyXOR, PassIVs) = CalculateFixed(FixedSeed, Filters.TSV, Shiny, (int)(Filters.FlawlessIVs + BrilliantIVs), Filters.MinIVs!, Filters.MaxIVs!);
+                    (EC, PID, IVs, ShinyXOR, PassIVs) = Util.Common.CalculateFixed(FixedSeed, Filters.TSV, Shiny, (int)(Filters.FlawlessIVs + BrilliantIVs), Filters.MinIVs!, Filters.MaxIVs!);
 
                     if (!PassIVs ||
                         (Filters.DesiredShiny == "Square" && ShinyXOR != 0) ||
@@ -157,7 +162,7 @@ namespace SWSH_OWRNG_Generator.Core
                         )
                         continue;
 
-                    string Mark = GenerateMark(ref rng, Filters.Weather, Filters.Fishing, Filters.MarkRolls);
+                    string Mark = Util.Common.GenerateMark(ref rng, Filters.Weather, Filters.Fishing, Filters.MarkRolls);
 
                     if (!PassesMarkFilter(Mark, Filters.DesiredMark!))
                         continue;
@@ -206,75 +211,6 @@ namespace SWSH_OWRNG_Generator.Core
             return Results;
         }
 
-        public static string GenerateMark(ref Xoroshiro128Plus go, bool Weather, bool Fishing, int MarkRolls)
-        {
-            for (int i = 0; i < MarkRolls; i++)
-            {
-                uint rare = (uint)go.NextInt(1000);
-                uint pers = (uint)go.NextInt(100);
-                uint unco = (uint)go.NextInt(50);
-                uint weat = (uint)go.NextInt(50);
-                uint time = (uint)go.NextInt(50);
-                uint fish = (uint)go.NextInt(25);
-
-                if (rare == 0) return "Rare";
-                if (pers == 0) return PersonalityMarks[go.NextInt(28)];
-                if (unco == 0) return "Uncommon";
-                if (weat == 0 && Weather) return "Weather";
-                if (time == 0) return "Time";
-                if (fish == 0 && Fishing) return "Fishing";
-            }
-            return "None";
-        }
-
-        private static uint FixedEC, FixedPID, FixedIVIndex, i;
-        private static bool PassIVs;
-        public static (uint, uint, uint[], uint, bool) CalculateFixed(uint FixedSeed, uint TSV, bool Shiny, int ForcedIVs, uint[] MinIVs, uint[] MaxIVs)
-        {
-            Xoroshiro128Plus go = new(FixedSeed, 0x82A2B175229D6A5B);
-            FixedEC = (uint)go.Next();
-            FixedPID = (uint)go.Next();
-            if (!Shiny)
-            {
-                if (((FixedPID >> 16) ^ (FixedPID & 0xFFFF) ^ TSV) < 16)
-                    FixedPID ^= 0x10000000; // Antishiny
-            }
-            else
-            {
-                if (((FixedPID >> 16) ^ (FixedPID & 0xFFFF) ^ TSV) >= 16)
-                    FixedPID = (((TSV ^ (FixedPID & 0xFFFF)) << 16) | (FixedPID & 0xFFFF)) & 0xFFFFFFFF;
-            }
-
-            uint[] IVs = { 32, 32, 32, 32, 32, 32 };
-            PassIVs = true;
-            for (i = 0; i < ForcedIVs; i++)
-            {
-                FixedIVIndex = (uint)go.NextInt(6);
-                while (IVs[FixedIVIndex] != 32)
-                {
-                    FixedIVIndex = (uint)go.NextInt(6);
-                }
-                IVs[FixedIVIndex] = 31;
-                if (IVs[FixedIVIndex] > MaxIVs[FixedIVIndex])
-                {
-                    PassIVs = false;
-                    break;
-                }
-            }
-
-            for (i = 0; i < 6 && PassIVs; i++)
-            {
-                if (IVs[i] == 32)
-                    IVs[i] = (uint)go.NextInt(32);
-                if (IVs[i] < MinIVs[i] || IVs[i] > MaxIVs[i])
-                {
-                    PassIVs = false;
-                    break;
-                }
-            }
-
-            return (FixedEC, FixedPID, IVs, Util.Common.GetTSV(Util.Common.GetTSV(FixedPID >> 16, FixedPID & 0xFFFF), TSV), PassIVs);
-        }
 
         private static bool PassesMarkFilter(string Mark, string DesiredMark)
         {
