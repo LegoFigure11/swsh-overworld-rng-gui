@@ -80,7 +80,6 @@ namespace SWSH_OWRNG_Generator.WinForms
             MainWindow.Pad(InputInitialAdv, '0', 1);
             ulong InitialAdvances = ulong.Parse(InputInitialAdv.Text);
 
-            LoadIDs();
             IDList.Add(InputDisplayID.Text);
 
             LotoIDProgressBar.Value = 0;
