@@ -5,14 +5,19 @@ _by [@LegoFigure11](https://github.com/LegoFigure11/), [@shinyfinder](https://gi
 
 This program is designed for searching for Overworld RNG targets in Pokémon Sword and Shield.
 
-![](https://i.imgur.com/np96S7j.png)
+Cram-o-matic Ball RNG and Loto-ID Item RNG are also supported!
+
+![](https://i.imgur.com/wkZB9YJ.png)
 
 Special thanks and credits to:
 =====
 
-- [@Lincoln-LM](https://github.com/Lincoln-LM/) and the rest of the [PyNXReader](https://github.com/Lincoln-LM/PyNXReader) contributors, as the generator code is largely based off their scripts! 
+- [@Lincoln-LM](https://github.com/Lincoln-LM/) and the rest of the [PyNXReader](https://github.com/Lincoln-LM/PyNXReader) contributors, as the generator code is largely based off their scripts!
 - [@kwsch](https://github.com/kwsch/), [@Lusamine](https://github.com/Lusamine/), [@SciresM](https://github.com/sciresm/), and [@zaksabeast](https://github.com/zaksabeast/) for their initial research and proof-of-concepts.
 - [@niart120](https://github.com/niart120/) for [Project_Xe](https://github.com/niart120/Project_Xe) where the motions->state algorithm comes from!
-- SysBot.Base connectivity & various Poketasks from [@kwsch](https://github.com/kwsch)'s [SysBot.NET](https://github.com/kwsch/SysBot.NET) modified for this project. 
+- SysBot.Base connectivity & various Poketasks from [@kwsch](https://github.com/kwsch)'s [SysBot.NET](https://github.com/kwsch/SysBot.NET) modified for this project.
+- [@kwsch](https://github.com/kwsch)'s [PKHeX](https://github.com/kwsch/PKHeX/) and its abundance of libraries that are leveraged by this program.
+- [@kwsch](https://github.com/kwsch)'s [pkNX](https://github.com/kwsch/pkNX) for encounter data dumps.
 - [@Lusamine](https://github.com/Lusamine/)'s [moarencounterbots](https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots) branch for the RNG Monitor & advances tracking.
-- [@Koi-3088](https://github.com/Koi-3088) for the DaySkipping and ResetTime SysBot.Base call tasks, made possible via his [Hybrid SysBot.Base](https://github.com/Koi-3088/sys-usb-botbase) <- you will need to use this if you want to use the DaySkip button to advance frames quickly.
+- [@Koi-3088](https://github.com/Koi-3088) for the DaySkipping and ResetTime SysBot.Base call tasks, made possible via his [Hybrid SysBot.Base](https://github.com/Koi-3088/sys-usb-botbase) which is required for full functionality.
+- [@Billo-PS](https://github.com/Billo-PS) for making [https://billo-guides.github.io/](https://billo-guides.github.io/) and for his endless testing and bug reports.
