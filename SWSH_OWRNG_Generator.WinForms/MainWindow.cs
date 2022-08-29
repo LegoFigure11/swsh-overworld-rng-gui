@@ -519,112 +519,119 @@ namespace SWSH_OWRNG_Generator.WinForms
             }
         }
 
+        readonly CancellationTokenSource source = new();
+        readonly CancellationToken token;
+
         private async void ButtonSearch_Click(object sender, EventArgs e)
         {
-            Pad(InputState0, '0', 16);
-            Pad(InputState1, '0', 16);
-            Pad(InputTID, '0', 5);
-            Pad(InputSID, '0', 5);
-            Pad(InputSlotMin, '0', 1);
-            Pad(InputSlotMax, '0', 1);
-            Pad(InputLevelMin, '0', 1);
-            Pad(InputLevelMax, '0', 1);
-            ulong s0 = ulong.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
-            ulong s1 = ulong.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
-            Pad(InputMaxAdv, '0', 1);
-            ulong advances = ulong.Parse(InputMaxAdv.Text);
-            if (advances == 0)
+            if (ButtonSearch.Text == "Cancel")
             {
-                InputMaxAdv.Text = "1";
-                advances = 1;
+                if (source != null) source.Cancel();
             }
-            Pad(InputInitialAdv, '0', 1);
-            ulong InitialAdvances = ulong.Parse(InputInitialAdv.Text);
-            Pad(InputNPCs, '0', 1);
-            uint NPCs = 0;
-            if (CheckMenuClose.Checked)
+            else
             {
-                NPCs = uint.Parse(InputNPCs.Text) + 1;
-            }
-            Core.Overworld.Filter Filters = new()
-            {
-                TSV = Core.Util.Common.GetTSV(ushort.Parse(InputTID.Text), ushort.Parse(InputSID.Text)),
-                SlotMin = ushort.Parse(InputSlotMin.Text),
-                SlotMax = ushort.Parse(InputSlotMax.Text),
-                LevelMin = ushort.Parse(InputLevelMin.Text),
-                LevelMax = ushort.Parse(InputLevelMax.Text),
-                KOs = ushort.Parse(InputKOCount.Text),
-                EggMoveCount = ushort.Parse(InputEMs.Text),
-                FlawlessIVs = ushort.Parse(InputFlawlessIVs.Text),
-                ShinyRolls = CheckShinyCharm.Checked ? 3 : 1,
-                MarkRolls = CheckMarkCharm.Checked ? 3 : 1,
-                Weather = CheckWeather.Checked,
-                Static = CheckStatic.Checked,
-                Fishing = CheckFishing.Checked,
-                HeldItem = CheckHeldItem.Checked,
-                AbilityLocked = CheckIsAbilityLocked.Checked,
-                TIDSIDSearch = CheckTIDSIDFinder.Checked,
-                CuteCharm = CheckCuteCharm.Checked,
-                ShinyLocked = CheckShinyLocked.Checked,
-                Hidden = CheckHidden.Checked,
-                MenuClose = CheckMenuClose.Checked,
-                DesiredMark = (string)SelectedMark.SelectedItem,
-                DesiredShiny = (string)SelectedShiny.SelectedItem,
-                DesiredNature = (string)SelectedNature.SelectedItem,
-                DesiredAura = (string)SelectedAura.SelectedItem,
-                MinIVs = new uint[] { ushort.Parse(hpMin.Text), ushort.Parse(atkMin.Text), ushort.Parse(defMin.Text), ushort.Parse(spaMin.Text), ushort.Parse(spdMin.Text), ushort.Parse(speMin.Text) },
-                MaxIVs = new uint[] { ushort.Parse(hpMax.Text), ushort.Parse(atkMax.Text), ushort.Parse(defMax.Text), ushort.Parse(spaMax.Text), ushort.Parse(spdMax.Text), ushort.Parse(speMax.Text) }
-            };
-
-            int[] WrongIVs = new int[6];
-            string message = "";
-            string[] stats = { "HP", "Atk", "Def", "SpA", "SpD", "Spe" };
-            int err = 0;
-
-            for (int i = 0; i < Filters.MinIVs.Length; i++)
-            {
-                if (Filters.MinIVs[i] > Filters.MaxIVs[i])
+                Pad(InputState0, '0', 16);
+                Pad(InputState1, '0', 16);
+                Pad(InputTID, '0', 5);
+                Pad(InputSID, '0', 5);
+                Pad(InputSlotMin, '0', 1);
+                Pad(InputSlotMax, '0', 1);
+                Pad(InputLevelMin, '0', 1);
+                Pad(InputLevelMax, '0', 1);
+                ulong s0 = ulong.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
+                ulong s1 = ulong.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
+                Pad(InputMaxAdv, '0', 1);
+                ulong advances = ulong.Parse(InputMaxAdv.Text);
+                if (advances == 0)
                 {
-                    message += $"Error in stat filter: {stats[i]}!\n";
-                    err = 1;
+                    InputMaxAdv.Text = "1";
+                    advances = 1;
                 }
+                Pad(InputInitialAdv, '0', 1);
+                ulong InitialAdvances = ulong.Parse(InputInitialAdv.Text);
+                Pad(InputNPCs, '0', 1);
+                uint NPCs = 0;
+                if (CheckMenuClose.Checked)
+                {
+                    NPCs = uint.Parse(InputNPCs.Text) + 1;
+                }
+                Core.Overworld.Filter Filters = new()
+                {
+                    TSV = Core.Util.Common.GetTSV(ushort.Parse(InputTID.Text), ushort.Parse(InputSID.Text)),
+                    SlotMin = ushort.Parse(InputSlotMin.Text),
+                    SlotMax = ushort.Parse(InputSlotMax.Text),
+                    LevelMin = ushort.Parse(InputLevelMin.Text),
+                    LevelMax = ushort.Parse(InputLevelMax.Text),
+                    KOs = ushort.Parse(InputKOCount.Text),
+                    EggMoveCount = ushort.Parse(InputEMs.Text),
+                    FlawlessIVs = ushort.Parse(InputFlawlessIVs.Text),
+                    ShinyRolls = CheckShinyCharm.Checked ? 3 : 1,
+                    MarkRolls = CheckMarkCharm.Checked ? 3 : 1,
+                    Weather = CheckWeather.Checked,
+                    Static = CheckStatic.Checked,
+                    Fishing = CheckFishing.Checked,
+                    HeldItem = CheckHeldItem.Checked,
+                    AbilityLocked = CheckIsAbilityLocked.Checked,
+                    TIDSIDSearch = CheckTIDSIDFinder.Checked,
+                    CuteCharm = CheckCuteCharm.Checked,
+                    ShinyLocked = CheckShinyLocked.Checked,
+                    Hidden = CheckHidden.Checked,
+                    MenuClose = CheckMenuClose.Checked,
+                    DesiredMark = (string)SelectedMark.SelectedItem,
+                    DesiredShiny = (string)SelectedShiny.SelectedItem,
+                    DesiredNature = (string)SelectedNature.SelectedItem,
+                    DesiredAura = (string)SelectedAura.SelectedItem,
+                    MinIVs = new uint[] { ushort.Parse(hpMin.Text), ushort.Parse(atkMin.Text), ushort.Parse(defMin.Text), ushort.Parse(spaMin.Text), ushort.Parse(spdMin.Text), ushort.Parse(speMin.Text) },
+                    MaxIVs = new uint[] { ushort.Parse(hpMax.Text), ushort.Parse(atkMax.Text), ushort.Parse(defMax.Text), ushort.Parse(spaMax.Text), ushort.Parse(spdMax.Text), ushort.Parse(speMax.Text) }
+                };
+
+                int[] WrongIVs = new int[6];
+                string message = "";
+                string[] stats = { "HP", "Atk", "Def", "SpA", "SpD", "Spe" };
+                int err = 0;
+
+                for (int i = 0; i < Filters.MinIVs.Length; i++)
+                {
+                    if (Filters.MinIVs[i] > Filters.MaxIVs[i])
+                    {
+                        message += $"Error in stat filter: {stats[i]}!\n";
+                        err = 1;
+                    }
+                }
+
+                if (err != 0)
+                {
+                    message += "\nMin IV filter cannot be greater than Max IV filter!";
+                    const string caption = "Error!";
+                    DialogResult result = MessageBox.Show(message, caption);
+                    return;
+                }
+
+                ButtonSearch.Text = "Cancel";
+
+                Results.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.EnableResizing;
+                Results.Rows.Clear();
+                Results.Columns["TID"].Visible = Filters.TIDSIDSearch;
+                Results.Columns["SID"].Visible = Filters.TIDSIDSearch;
+                Results.Columns["Level"].Visible = !Filters.Static;
+                Results.Columns["Slot"].Visible = !Filters.Static;
+                Results.Columns["Brilliant"].Visible = !Filters.Static;
+                Results.Columns["Ability"].Visible = !Filters.AbilityLocked;
+                Results.Columns["Jump"].Visible = Filters.MenuClose;
+
+                progressBar1.Value = 0;
+                progressBar1.Maximum = (int)advances;
+                progressBar1.Step = progressBar1.Maximum / 100;
+
+                var progress = new Progress<int>(_ => progressBar1.PerformStep());
+
+                List<Core.Frame> Frames = await Task.Run(() => Core.Generator.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), token);
+                BindingSource Source = new() { DataSource = Frames };
+                Results.DataSource = Source;
+                Source.ResetBindings(false);
             }
-
-            if (err != 0)
-            {
-                message += "\nMin IV filter cannot be greater than Max IV filter!";
-                const string caption = "Error!";
-                DialogResult result = MessageBox.Show(message, caption);
-                return;
-            }
-
-            ButtonSearch.Text = "Calculating...";
-            ButtonSearch.Enabled = false;
-
-            Results.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.EnableResizing;
-            Results.Rows.Clear();
-            Results.Columns["TID"].Visible = Filters.TIDSIDSearch;
-            Results.Columns["SID"].Visible = Filters.TIDSIDSearch;
-            Results.Columns["Level"].Visible = !Filters.Static;
-            Results.Columns["Slot"].Visible = !Filters.Static;
-            Results.Columns["Brilliant"].Visible = !Filters.Static;
-            Results.Columns["Ability"].Visible = !Filters.AbilityLocked;
-            Results.Columns["Jump"].Visible = Filters.MenuClose;
-
-            progressBar1.Value = 0;
-            progressBar1.Maximum = (int)advances;
-            progressBar1.Step = progressBar1.Maximum / 100;
-
-            var progress = new Progress<int>(_ => progressBar1.PerformStep());
-
-            List<Core.Frame> Frames = await Task.Run(() => Core.Generator.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs));
-            BindingSource Source = new() { DataSource = Frames };
-            Results.DataSource = Source;
-            Source.ResetBindings(false);
-
             progressBar1.Value = progressBar1.Maximum;
             ButtonSearch.Text = "Search!";
-            ButtonSearch.Enabled = true;
         }
 
         public static void Pad(object sender, char s, int length)
