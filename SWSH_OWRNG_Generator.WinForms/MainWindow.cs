@@ -128,14 +128,6 @@ namespace SWSH_OWRNG_Generator.WinForms
             DaySkipButton.TabIndex = i++;
         }
 
-        private void HpMinFilter_Click(object sender, EventArgs e)
-        {
-            hpMin.Clear();
-            hpMin.Text = "0";
-            hpMax.Clear();
-            hpMax.Text = "0";
-        }
-
         private void Filter_LostFocus(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
@@ -353,28 +345,58 @@ namespace SWSH_OWRNG_Generator.WinForms
             }
         }
 
-        private void HpMaxFilter_Click(object sender, EventArgs e)
+        private void StatMinFilter_Click(object sender, EventArgs e)
         {
-            hpMin.Clear();
-            hpMin.Text = "31";
-            hpMax.Clear();
-            hpMax.Text = "31";
+            string Min = "0";
+            string Max = ModifierKeys == Keys.Shift ? "1" : "0";
+            switch (((Button)sender).Name)
+            {
+                case "hpMinFilter":
+                    SetIvFilters(hpMin, hpMax, Min, Max);
+                    break;
+                case "atkMinFilter":
+                    SetIvFilters(atkMin, atkMax, Min, Max);
+                    break;
+                case "defMinFilter":
+                    SetIvFilters(defMin, defMax, Min, Max);
+                    break;
+                case "spaMinFilter":
+                    SetIvFilters(spaMin, spaMax, Min, Max);
+                    break;
+                case "spdMinFilter":
+                    SetIvFilters(spdMin, spdMax, Min, Max);
+                    break;
+                case "speMinFilter":
+                    SetIvFilters(speMin, speMax, Min, Max);
+                    break;
+            }
         }
 
-        private void AtkMinFilter_Click(object sender, EventArgs e)
+        private void StatMaxFilter_Click(object sender, EventArgs e)
         {
-            atkMin.Clear();
-            atkMin.Text = "0";
-            atkMax.Clear();
-            atkMax.Text = "0";
-        }
-
-        private void AtkMaxFilter_Click(object sender, EventArgs e)
-        {
-            atkMin.Clear();
-            atkMin.Text = "31";
-            atkMax.Clear();
-            atkMax.Text = "31";
+            string Min = ModifierKeys == Keys.Shift ? "30" : "31";
+            string Max = "31";
+            switch (((Button)sender).Name)
+            {
+                case "hpMaxFilter":
+                    SetIvFilters(hpMin, hpMax, Min, Max);
+                    break;
+                case "atkMaxFilter":
+                    SetIvFilters(atkMin, atkMax, Min, Max);
+                    break;
+                case "defMaxFilter":
+                    SetIvFilters(defMin, defMax, Min, Max);
+                    break;
+                case "spaMaxFilter":
+                    SetIvFilters(spaMin, spaMax, Min, Max);
+                    break;
+                case "spdMaxFilter":
+                    SetIvFilters(spdMin, spdMax, Min, Max);
+                    break;
+                case "speMaxFilter":
+                    SetIvFilters(speMin, speMax, Min, Max);
+                    break;
+            }
         }
 
         private void CheckStatic_CheckedChanged(object sender, EventArgs e)
@@ -389,70 +411,6 @@ namespace SWSH_OWRNG_Generator.WinForms
             CheckHeldItem.Enabled = !check;
             SelectedAura.Enabled = !check;
             CheckHidden.Enabled = !check;
-        }
-
-        private void DefMinFilter_Click(object sender, EventArgs e)
-        {
-            defMin.Clear();
-            defMin.Text = "0";
-            defMax.Clear();
-            defMax.Text = "0";
-        }
-
-        private void SpaMinFilter_Click(object sender, EventArgs e)
-        {
-            spaMin.Clear();
-            spaMin.Text = "0";
-            spaMax.Clear();
-            spaMax.Text = "0";
-        }
-
-        private void DefMaxFilter_Click(object sender, EventArgs e)
-        {
-            defMin.Clear();
-            defMin.Text = "31";
-            defMax.Clear();
-            defMax.Text = "31";
-        }
-
-        private void SpaMaxFilter_Click(object sender, EventArgs e)
-        {
-            spaMin.Clear();
-            spaMin.Text = "31";
-            spaMax.Clear();
-            spaMax.Text = "31";
-        }
-
-        private void SpdMinFilter_Click(object sender, EventArgs e)
-        {
-            spdMin.Clear();
-            spdMin.Text = "0";
-            spdMax.Clear();
-            spdMax.Text = "0";
-        }
-
-        private void SpdMaxFilter_Click(object sender, EventArgs e)
-        {
-            spdMin.Clear();
-            spdMin.Text = "31";
-            spdMax.Clear();
-            spdMax.Text = "31";
-        }
-
-        private void SpeMinFilter_Click(object sender, EventArgs e)
-        {
-            speMin.Clear();
-            speMin.Text = "0";
-            speMax.Clear();
-            speMax.Text = "0";
-        }
-
-        private void SpeMaxFilter_Click(object sender, EventArgs e)
-        {
-            speMin.Clear();
-            speMin.Text = "31";
-            speMax.Clear();
-            speMax.Text = "31";
         }
 
         private void InputStatePaste_KeyDown(object sender, KeyEventArgs e)
