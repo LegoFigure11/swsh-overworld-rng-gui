@@ -519,14 +519,13 @@ namespace SWSH_OWRNG_Generator.WinForms
             }
         }
 
-        readonly CancellationTokenSource source = new();
-        readonly CancellationToken token;
+        private readonly CancellationTokenSource Source = new();
 
         private async void ButtonSearch_Click(object sender, EventArgs e)
         {
             if (ButtonSearch.Text == "Cancel")
             {
-                if (source != null) source.Cancel();
+                if (Source != null) Source.Cancel();
             }
             else
             {
@@ -625,12 +624,15 @@ namespace SWSH_OWRNG_Generator.WinForms
 
                 var progress = new Progress<int>(_ => progressBar1.PerformStep());
 
-                List<Core.Frame> Frames = await Task.Run(() => Core.Generator.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), token);
+                List<Core.Frame> Frames = await Task.Run(() => Core.Generator.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
+                ButtonSearch.Text = $"Preparing {Frames.Count:N0} results...";
+                ButtonSearch.Enabled = false;
                 BindingSource Source = new() { DataSource = Frames };
                 Results.DataSource = Source;
                 Source.ResetBindings(false);
             }
             progressBar1.Value = progressBar1.Maximum;
+            ButtonSearch.Enabled = true;
             ButtonSearch.Text = "Search!";
         }
 
