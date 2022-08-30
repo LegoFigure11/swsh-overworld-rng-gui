@@ -399,6 +399,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.InputMaxAdv.Size = new System.Drawing.Size(102, 23);
             this.InputMaxAdv.TabIndex = 4;
             this.InputMaxAdv.Text = "50000";
+            this.InputMaxAdv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputMaxAdv.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // LabelMaxAdv
             // 
@@ -1662,6 +1664,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.InputInitialAdv.Size = new System.Drawing.Size(102, 23);
             this.InputInitialAdv.TabIndex = 112;
             this.InputInitialAdv.Text = "0";
+            this.InputInitialAdv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            this.InputInitialAdv.Leave += new System.EventHandler(this.SetToZero_LostFocus);
             // 
             // CheckShinyLocked
             // 
