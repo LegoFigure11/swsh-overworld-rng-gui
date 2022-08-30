@@ -876,7 +876,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                     continue;
                 if (uint.TryParse(Program.Window.InputRAMOffset.Text, NumberStyles.HexNumber, null, out uint Offset))
                 {
-                    int TotalAdvances = 0;
+                    ulong TotalAdvances = 0;
                     var (s0, s1) = await GetGlobalRNGState(Offset, token).ConfigureAwait(false);
                     TextboxSetText(Program.Window.InputState0, $"{s0:x16}");
                     TextboxSetText(Program.Window.InputState1, $"{s1:x16}");
@@ -954,13 +954,13 @@ namespace SWSH_OWRNG_Generator.WinForms
             return (s0, s1);
         }
 
-        public static int GetAdvancesPassed(ulong prevs0, ulong prevs1, ulong news0, ulong news1)
+        public static ulong GetAdvancesPassed(ulong prevs0, ulong prevs1, ulong news0, ulong news1)
         {
             if (prevs0 == news0 && prevs1 == news1)
                 return 0;
 
             var rng = new Xoroshiro128Plus(prevs0, prevs1);
-            int i = 0;
+            ulong i = 0;
             for (; i < 20_000; i++) // 20,000 is an arbitrary number to prevent an infinite loop
             {
                 rng.Next();
