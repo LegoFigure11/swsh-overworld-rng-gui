@@ -145,7 +145,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         private void SetToZero_LostFocus(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
-            if (int.TryParse(textBox.Text, out int i))
+            if (long.TryParse(textBox.Text, out long i))
             {
                 if (i < 0) textBox.Text = "0";
             }
