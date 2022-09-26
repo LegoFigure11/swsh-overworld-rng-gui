@@ -9,6 +9,8 @@ Cram-o-matic Ball RNG and Loto-ID Item RNG are also supported!
 
 ![](https://i.imgur.com/wkZB9YJ.png)
 
+## Usage Guide: [https://legofigure11.github.io/misc/swsh-owrng-tool/](https://legofigure11.github.io/misc/swsh-owrng-tool/)
+
 Special thanks and credits to:
 =====
 
