@@ -85,5 +85,35 @@ namespace SWSH_OWRNG_Generator.WinForms.Properties {
                 this["MarkCharm"] = value;
             }
         }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool FocusWindow
+        {
+            get
+            {
+                return ((bool)(this["FocusWindow"]));
+            }
+            set
+            {
+                this["FocusWindow"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool PlayTone
+        {
+            get
+            {
+                return ((bool)(this["PlayTone"]));
+            }
+            set
+            {
+                this["PlayTone"] = value;
+            }
+        }
     }
 }

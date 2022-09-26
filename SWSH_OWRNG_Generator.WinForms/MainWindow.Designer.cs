@@ -190,6 +190,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckMenuClose = new System.Windows.Forms.CheckBox();
             this.LabelNPCs = new System.Windows.Forms.Label();
             this.InputNPCs = new System.Windows.Forms.TextBox();
+            this.CheckFocusWindow = new System.Windows.Forms.CheckBox();
+            this.CheckPlayTone = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -423,7 +425,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // ImageRareMark
             // 
             this.ImageRareMark.Image = global::SWSH_OWRNG_Generator.WinForms.Properties.Resources.raremark;
-            this.ImageRareMark.Location = new System.Drawing.Point(667, 339);
+            this.ImageRareMark.Location = new System.Drawing.Point(706, 339);
             this.ImageRareMark.Name = "ImageRareMark";
             this.ImageRareMark.Size = new System.Drawing.Size(91, 90);
             this.ImageRareMark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1917,9 +1919,33 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.InputNPCs.Text = "5";
             this.InputNPCs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
             // 
+            // CheckFocusWindow
+            // 
+            this.CheckFocusWindow.AutoSize = true;
+            this.CheckFocusWindow.Location = new System.Drawing.Point(596, 380);
+            this.CheckFocusWindow.Name = "CheckFocusWindow";
+            this.CheckFocusWindow.Size = new System.Drawing.Size(104, 19);
+            this.CheckFocusWindow.TabIndex = 176;
+            this.CheckFocusWindow.Text = "Focus Window";
+            this.CheckFocusWindow.UseVisualStyleBackColor = true;
+            this.CheckFocusWindow.CheckedChanged += new System.EventHandler(this.CheckFocusWindow_CheckChanged);
+            // 
+            // CheckPlayTone
+            // 
+            this.CheckPlayTone.AutoSize = true;
+            this.CheckPlayTone.Location = new System.Drawing.Point(596, 403);
+            this.CheckPlayTone.Name = "CheckPlayTone";
+            this.CheckPlayTone.Size = new System.Drawing.Size(76, 19);
+            this.CheckPlayTone.TabIndex = 177;
+            this.CheckPlayTone.Text = "Play Tone";
+            this.CheckPlayTone.UseVisualStyleBackColor = true;
+            this.CheckPlayTone.CheckedChanged += new System.EventHandler(this.CheckPlayTone_CheckedChanged);
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 699);
+            this.Controls.Add(this.CheckPlayTone);
+            this.Controls.Add(this.CheckFocusWindow);
             this.Controls.Add(this.CheckMenuClose);
             this.Controls.Add(this.LabelNPCs);
             this.Controls.Add(this.InputNPCs);
@@ -2224,5 +2250,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         private DataGridViewTextBoxColumn Mark;
         private DataGridViewTextBoxColumn State0;
         private DataGridViewTextBoxColumn State1;
+        public CheckBox CheckFocusWindow;
+        public CheckBox CheckPlayTone;
     }
 }

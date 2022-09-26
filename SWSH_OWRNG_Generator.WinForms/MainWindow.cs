@@ -1,6 +1,7 @@
 ﻿using PKHeX.Core;
 using PKHeX.Drawing.Misc;
 using PKHeX.Drawing.PokeSprite;
+using SWSH_OWRNG_Generator.WinForms.Properties;
 using SysBot.Base;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,9 @@ namespace SWSH_OWRNG_Generator.WinForms
 {
     public partial class MainWindow : Form
     {
-        private readonly static SwitchConnectionConfig Config = new() { Protocol = SwitchProtocol.WiFi, IP = Properties.Settings.Default.SwitchIP, Port = 6000 };
+        private readonly static SwitchConnectionConfig Config = new() { Protocol = SwitchProtocol.WiFi, IP = Settings.Default.SwitchIP, Port = 6000 };
         public SwitchSocketAsync SwitchConnection = new(Config);
+
         public MainWindow()
         {
             string build = string.Empty;
@@ -25,18 +27,20 @@ namespace SWSH_OWRNG_Generator.WinForms
             build = $" (dev-{date:yyyyMMdd})";
 #endif
             var v = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            this.Text = "SwSh OWRNG Generator GUI v" + v.Major + "." + v.Minor + "." + v.Build + build;
+            Text = "SwSh OWRNG Generator GUI v" + v.Major + "." + v.Minor + "." + v.Build + build;
 
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SwitchIPInput.Text = Properties.Settings.Default.SwitchIP;
-            InputTID.Text = Properties.Settings.Default.TID;
-            InputSID.Text = Properties.Settings.Default.SID;
-            CheckShinyCharm.Checked = Properties.Settings.Default.ShinyCharm;
-            CheckMarkCharm.Checked = Properties.Settings.Default.MarkCharm;
+            SwitchIPInput.Text = Settings.Default.SwitchIP;
+            InputTID.Text = Settings.Default.TID;
+            InputSID.Text = Settings.Default.SID;
+            CheckShinyCharm.Checked = Settings.Default.ShinyCharm;
+            CheckMarkCharm.Checked = Settings.Default.MarkCharm;
+            CheckPlayTone.Checked = Settings.Default.PlayTone;
+            CheckFocusWindow.Checked = Settings.Default.FocusWindow;
 
             SelectedMark.SelectedIndex = 0;
             SelectedShiny.SelectedIndex = 0;
@@ -257,10 +261,10 @@ namespace SWSH_OWRNG_Generator.WinForms
             TextBox textBox = (TextBox)sender;
             if (textBox.Text != "192.168.0.0")
             {
-                Properties.Settings.Default.SwitchIP = SwitchIPInput.Text;
+                Settings.Default.SwitchIP = SwitchIPInput.Text;
                 Config.IP = SwitchIPInput.Text;
             }
-            Properties.Settings.Default.Save();
+            Settings.Default.Save();
         }
 
         private void TIDSID_TextChanged(object sender, EventArgs e)
@@ -274,14 +278,13 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             if (textBox.Name == "InputTID")
             {
-                Properties.Settings.Default.TID = InputTID.Text;
+                Settings.Default.TID = InputTID.Text;
             }
             else
             {
-                Properties.Settings.Default.SID = InputSID.Text;
+                Settings.Default.SID = InputSID.Text;
             }
-
-            Properties.Settings.Default.Save();
+            Settings.Default.Save();
         }
 
         private void SaveCheckbox_CheckChanged(object sender, EventArgs e)
@@ -290,14 +293,14 @@ namespace SWSH_OWRNG_Generator.WinForms
             switch (checkBox.Name)
             {
                 case "CheckShinyCharm":
-                    Properties.Settings.Default.ShinyCharm = checkBox.Checked;
+                    Settings.Default.ShinyCharm = checkBox.Checked;
                     break;
 
                 case "CheckMarkCharm":
-                    Properties.Settings.Default.MarkCharm = checkBox.Checked;
+                    Settings.Default.MarkCharm = checkBox.Checked;
                     break;
             }
-            Properties.Settings.Default.Save();
+            Settings.Default.Save();
         }
 
         private void ResetFilters(object sender, EventArgs e)
@@ -633,6 +636,18 @@ namespace SWSH_OWRNG_Generator.WinForms
             }
             progressBar1.Value = progressBar1.Maximum;
             ButtonSearch.Enabled = true;
+
+            if (CheckPlayTone.Checked)
+            {
+                System.Media.SystemSounds.Asterisk.Play();
+            }
+
+            if (CheckFocusWindow.Checked)
+            {
+                WindowState = FormWindowState.Normal;
+                Activate();
+            }
+
             ButtonSearch.Text = "Search!";
         }
 
@@ -1212,6 +1227,18 @@ namespace SWSH_OWRNG_Generator.WinForms
         private void CheckMenuClose_CheckedChanged(object sender, EventArgs e)
         {
             InputNPCs.Enabled = CheckMenuClose.Checked;
+        }
+
+        private void CheckFocusWindow_CheckChanged(object sender, EventArgs e)
+        {
+            Settings.Default.FocusWindow = CheckFocusWindow.Checked;
+            Settings.Default.Save();
+        }
+
+        private void CheckPlayTone_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.Default.PlayTone = CheckPlayTone.Checked;
+            Settings.Default.Save();
         }
     }
 }
