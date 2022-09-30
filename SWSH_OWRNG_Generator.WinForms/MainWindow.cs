@@ -526,6 +526,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
         private async void ButtonSearch_Click(object sender, EventArgs e)
         {
+            FormWindowState _FormWindowState = WindowState;
             if (ButtonSearch.Text == "Cancel")
             {
                 if (Source != null) Source.Cancel();
@@ -644,7 +645,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             if (CheckFocusWindow.Checked)
             {
-                WindowState = FormWindowState.Normal;
+                WindowState = _FormWindowState;
                 Activate();
             }
 
