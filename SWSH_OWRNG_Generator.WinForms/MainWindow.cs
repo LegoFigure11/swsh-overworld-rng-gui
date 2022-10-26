@@ -1,7 +1,7 @@
 ﻿using PKHeX.Core;
 using PKHeX.Drawing.Misc;
 using PKHeX.Drawing.PokeSprite;
-using SWSH_OWRNG_Generator.Core.OWRNG.Generators;
+using SWSH_OWRNG_Generator.Core.Overworld.Generators;
 using SWSH_OWRNG_Generator.WinForms.Properties;
 using SysBot.Base;
 using System;
@@ -629,7 +629,15 @@ namespace SWSH_OWRNG_Generator.WinForms
 
                 var progress = new Progress<int>(_ => progressBar1.PerformStep());
 
-                List<Core.Frame> Frames = await Task.Run(() => Generator.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
+                List<Core.Overworld.Frame> Frames;
+                if (Filters.Static)
+                {
+                    Frames = await Task.Run(() => Static.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
+                }
+                else
+                {
+                    Frames = await Task.Run(() => Generator.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
+                }
                 ButtonSearch.Text = $"Preparing {Frames.Count:N0} results...";
                 ButtonSearch.Enabled = false;
                 BindingSource Source = new() { DataSource = Frames };
@@ -696,7 +704,7 @@ namespace SWSH_OWRNG_Generator.WinForms
 
             var progress = new Progress<int>(_ => RetailAdvancesTrackerProgressBar.PerformStep());
 
-            RetailAdvancesGeneratorString = await Task.Run(() => Generator.GenerateRetailSequence(s0, s1, Initial, Max, progress));
+            RetailAdvancesGeneratorString = await Task.Run(() => Core.Util.Common.GenerateRetailSequence(s0, s1, Initial, Max, progress));
 
             RetailAdvancesTrackerProgressBar.Value = RetailAdvancesTrackerProgressBar.Maximum;
             RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";

@@ -1,4 +1,4 @@
-﻿namespace SWSH_OWRNG_Generator.Core
+﻿namespace SWSH_OWRNG_Generator.Core.Overworld
 {
     public class Frame
     {

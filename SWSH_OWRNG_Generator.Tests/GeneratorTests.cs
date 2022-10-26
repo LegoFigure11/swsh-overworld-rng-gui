@@ -1,6 +1,6 @@
 using FluentAssertions;
-using SWSH_OWRNG_Generator.Core;
-using SWSH_OWRNG_Generator.Core.OWRNG.Generators;
+using SWSH_OWRNG_Generator.Core.Overworld;
+using SWSH_OWRNG_Generator.Core.Overworld.Generators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +25,7 @@ public sealed class GeneratorTests
     [InlineData(0x69CABBA9ECABBA9Eu, 0xCABBA9ECABBA9E69u)]
     public void GenerateStatic(in ulong s0, in ulong s1)
     {
-        Core.Overworld.Filter Filters = new()
+        Filter Filters = new()
         {
             TSV = TSV,
             ShinyRolls = ShinyRolls,
@@ -43,7 +43,7 @@ public sealed class GeneratorTests
             DesiredAura = Ignore,
             DesiredNature = Ignore
         };
-        List<Frame> Frames = Generator.Generate(s0, s1, 1000, 0, Progress, Filters, 0);
+        List<Frame> Frames = Static.Generate(s0, s1, 1000, 0, Progress, Filters, 0);
         Frames.Should().NotBeNull();
         Frames.Where(f => f.Shiny != "No").Count().Should().Be(0);
         Frames.Where(f => f.Mark == "Rare").Count().Should().Be(1);
@@ -55,7 +55,7 @@ public sealed class GeneratorTests
     [InlineData(0xAAAAAAAAAAAAAAAAu, 0x50C1AB1ECABBA6E5u)]
     public void GenerateSymbol(in ulong s0, in ulong s1)
     {
-        Core.Overworld.Filter Filters = new()
+        Filter Filters = new()
         {
             TSV = TSV,
             ShinyRolls = ShinyRolls,

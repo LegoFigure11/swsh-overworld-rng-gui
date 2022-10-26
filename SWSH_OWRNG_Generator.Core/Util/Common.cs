@@ -5,11 +5,23 @@ namespace SWSH_OWRNG_Generator.Core.Util
     public class Common
     {
         private static readonly string[] PersonalityMarks = { "Rowdy", "AbsentMinded", "Jittery", "Excited", "Charismatic", "Calmness", "Intense", "ZonedOut", "Joyful", "Angry", "Smiley", "Teary", "Upbeat", "Peeved", "Intellectual", "Ferocious", "Crafty", "Scowling", "Kindly", "Flustered", "PumpedUp", "ZeroEnergy", "Prideful", "Unsure", "Humble", "Thorny", "Vigor", "Slump" };
+        public static readonly IReadOnlyList<string> Natures = GameInfo.GetStrings(1).Natures;
+
+        public static bool PassesNatureFilter(int Nature, string DesiredNature)
+        {
+            return DesiredNature == Natures[Nature] || DesiredNature == "Ignore";
+        }
+
+        public static bool PassesMarkFilter(string Mark, string DesiredMark)
+        {
+            return !(DesiredMark == "Any Mark" && Mark == "None" || DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare") || DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark);
+        }
 
         public static uint GetTSV(uint TID, uint SID)
         {
             return TID ^ SID;
         }
+
         public static (uint, uint) GenerateBrilliantInfo(uint KOs) => KOs switch
         {
             >= 500 => (30, 6),
@@ -91,6 +103,27 @@ namespace SWSH_OWRNG_Generator.Core.Util
             // uint Weight = (uint)go.NextInt(129) + (uint)go.NextInt(128);
 
             return (FixedEC, FixedPID, IVs, GetTSV(GetTSV(FixedPID >> 16, FixedPID & 0xFFFF), TSV), PassIVs);
+        }
+
+        public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)
+        {
+            Xoroshiro128Plus go = new(state0, state1);
+            for (int i = 0; i < start; i++)
+                go.Next();
+
+            string ret = string.Empty;
+            ulong ProgressUpdateInterval = (start + max) / 100;
+            if (ProgressUpdateInterval == 0)
+                ProgressUpdateInterval++;
+
+            for (uint i = 0; i < max; i++)
+            {
+                if (progress != null && i % ProgressUpdateInterval == 0)
+                    progress.Report(1);
+                ret += go.Next() & 1;
+            }
+
+            return ret;
         }
     }
 }

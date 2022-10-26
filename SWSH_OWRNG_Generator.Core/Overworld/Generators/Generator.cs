@@ -1,15 +1,15 @@
 ﻿using PKHeX.Core;
 
-namespace SWSH_OWRNG_Generator.Core.OWRNG.Generators
+namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
 {
     public static class Generator
     {
         private static readonly IReadOnlyList<string> Natures = GameInfo.GetStrings(1).Natures;
 
         // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
-        public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, IProgress<int> progress, Overworld.Filter Filters, uint NPCs)
+        public static List<Overworld.Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, IProgress<int> progress, Overworld.Filter Filters, uint NPCs)
         {
-            List<Frame> Results = new();
+            List<Overworld.Frame> Results = new();
 
             uint[] IVs;
             bool GenerateLevel = Filters.LevelMin != Filters.LevelMax;
@@ -173,7 +173,7 @@ namespace SWSH_OWRNG_Generator.Core.OWRNG.Generators
                     // Passes all filters!
                     (ulong _s0, ulong _s1) = go.GetState();
                     Results.Add(
-                        new Frame
+                        new Overworld.Frame
                         {
                             Advances = Filters.TIDSIDSearch ? $"{-(long)(advance + InitialAdvances):N0} | Roll: {rollToCheck:N0}" : (advance + InitialAdvances).ToString("N0"),
                             TID = (ushort)(MockPID >> 16),
