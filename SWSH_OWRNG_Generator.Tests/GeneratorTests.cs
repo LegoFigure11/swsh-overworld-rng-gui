@@ -1,5 +1,6 @@
 using FluentAssertions;
 using SWSH_OWRNG_Generator.Core;
+using SWSH_OWRNG_Generator.Core.OWRNG.Generators;
 using System;
 using System.Collections.Generic;
 using System.Linq;

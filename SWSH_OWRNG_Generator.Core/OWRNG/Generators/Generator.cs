@@ -1,6 +1,6 @@
 ﻿using PKHeX.Core;
 
-namespace SWSH_OWRNG_Generator.Core
+namespace SWSH_OWRNG_Generator.Core.OWRNG.Generators
 {
     public static class Generator
     {
@@ -46,7 +46,7 @@ namespace SWSH_OWRNG_Generator.Core
 
             while (advance < advances)
             {
-                if (progress != null && (advance % ProgressUpdateInterval == 0))
+                if (progress != null && advance % ProgressUpdateInterval == 0)
                     progress.Report(1);
                 long totalRolls = 1; // Placeholder to ensure this is run once normally, also accounts for rolls not being determined yet
                 for (long rollToCheck = 0; rollToCheck < totalRolls; rollToCheck++)
@@ -101,7 +101,7 @@ namespace SWSH_OWRNG_Generator.Core
                                 Brilliant = true;
                                 Level = Filters.LevelMax;
                             }
-                            if ((Filters.DesiredAura == "Brilliant" && !Brilliant) || (Filters.DesiredAura == "None" && Brilliant))
+                            if (Filters.DesiredAura == "Brilliant" && !Brilliant || Filters.DesiredAura == "None" && Brilliant)
                                 continue;
                         }
                     }
@@ -155,10 +155,10 @@ namespace SWSH_OWRNG_Generator.Core
                     (EC, PID, IVs, ShinyXOR, PassIVs) = Util.Common.CalculateFixed(FixedSeed, Filters.TSV, Shiny, (int)(Filters.FlawlessIVs + BrilliantIVs), Filters.MinIVs!, Filters.MaxIVs!);
 
                     if (!PassIVs ||
-                        (Filters.DesiredShiny == "Square" && ShinyXOR != 0) ||
-                        (Filters.DesiredShiny == "Star" && (ShinyXOR > 15 || ShinyXOR == 0)) ||
-                        (Filters.DesiredShiny == "Star/Square" && ShinyXOR > 15) ||
-                        (Filters.DesiredShiny == "No" && ShinyXOR < 16)
+                        Filters.DesiredShiny == "Square" && ShinyXOR != 0 ||
+                        Filters.DesiredShiny == "Star" && (ShinyXOR > 15 || ShinyXOR == 0) ||
+                        Filters.DesiredShiny == "Star/Square" && ShinyXOR > 15 ||
+                        Filters.DesiredShiny == "No" && ShinyXOR < 16
                         )
                         continue;
 
@@ -175,16 +175,16 @@ namespace SWSH_OWRNG_Generator.Core
                     Results.Add(
                         new Frame
                         {
-                            Advances = Filters.TIDSIDSearch ? $"{(-(long)(advance + InitialAdvances)):N0} | Roll: {rollToCheck:N0}" : (advance + InitialAdvances).ToString("N0"),
+                            Advances = Filters.TIDSIDSearch ? $"{-(long)(advance + InitialAdvances):N0} | Roll: {rollToCheck:N0}" : (advance + InitialAdvances).ToString("N0"),
                             TID = (ushort)(MockPID >> 16),
                             SID = (ushort)MockPID,
-                            Animation = (_s0 & 1) ^ (_s1 & 1),
+                            Animation = _s0 & 1 ^ _s1 & 1,
                             Jump = Jump,
                             Level = Level,
                             Slot = SlotRand,
                             PID = PID.ToString("X8"),
                             EC = EC.ToString("X8"),
-                            Shiny = ShinyXOR == 0 ? "Square" : (ShinyXOR < 16 ? "Star" : "No"),
+                            Shiny = ShinyXOR == 0 ? "Square" : ShinyXOR < 16 ? "Star" : "No",
                             Brilliant = Brilliant ? "Y" : "-",
                             Ability = AbilityRoll == 0 ? 1 : 0,
                             Nature = Natures[(int)Nature],
@@ -214,12 +214,12 @@ namespace SWSH_OWRNG_Generator.Core
 
         private static bool PassesMarkFilter(string Mark, string DesiredMark)
         {
-            return !((DesiredMark == "Any Mark" && Mark == "None") || (DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare")) || (DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark));
+            return !(DesiredMark == "Any Mark" && Mark == "None" || DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare") || DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark);
         }
 
         private static bool PassesNatureFilter(string Nature, string DesiredNature)
         {
-            return (DesiredNature == Nature) || (DesiredNature == "Ignore");
+            return DesiredNature == Nature || DesiredNature == "Ignore";
         }
 
         public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)
@@ -235,7 +235,7 @@ namespace SWSH_OWRNG_Generator.Core
 
             for (uint i = 0; i < max; i++)
             {
-                if (progress != null && (i % ProgressUpdateInterval == 0))
+                if (progress != null && i % ProgressUpdateInterval == 0)
                     progress.Report(1);
                 ret += go.Next() & 1;
             }
