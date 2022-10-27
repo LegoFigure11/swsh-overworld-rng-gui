@@ -60,7 +60,11 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
 
                 SlotRand = (uint)rng.NextInt(100);
                 if (Filters.SlotMin > SlotRand || Filters.SlotMax < SlotRand)
+                {
+                    go.Next();
+                    advance++;
                     continue;
+                }
 
                 if (GenerateLevel)
                 {
