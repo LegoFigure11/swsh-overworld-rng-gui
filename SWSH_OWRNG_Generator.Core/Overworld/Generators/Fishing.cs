@@ -23,6 +23,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
             uint BrilliantThreshold;
             uint BrilliantRolls;
             int BrilliantIVs;
+            uint MockPID;
             string Gender;
             bool PassIVs, Brilliant, Shiny;
             ulong advance = 0;
@@ -91,7 +92,6 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                 }
 
                 Shiny = false;
-                uint MockPID = 0;
 
                 if (!Filters.ShinyLocked)
                 {
