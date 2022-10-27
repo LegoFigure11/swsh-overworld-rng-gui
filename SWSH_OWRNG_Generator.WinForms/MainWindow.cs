@@ -634,6 +634,10 @@ namespace SWSH_OWRNG_Generator.WinForms
                 {
                     Frames = await Task.Run(() => Static.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
                 }
+                else if (Filters.Hidden)
+                {
+                    Frames = await Task.Run(() => Hidden.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
+                }
                 else
                 {
                     Frames = await Task.Run(() => Generator.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
