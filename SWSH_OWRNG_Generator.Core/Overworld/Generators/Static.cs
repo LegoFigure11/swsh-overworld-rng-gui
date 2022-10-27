@@ -17,6 +17,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
             uint AbilityRoll;
             uint FixedSeed;
             uint ShinyXOR;
+            uint MockPID;
             string Gender;
             bool PassIVs, Shiny;
             ulong advance = 0;
@@ -53,7 +54,6 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
 
 
                 Shiny = false;
-                uint MockPID = 0;
                 if (!Filters.ShinyLocked)
                 {
                     for (int roll = 0; roll < Filters.ShinyRolls; roll++)
@@ -113,13 +113,11 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                     new Frame
                     {
                         Advances = (advance + InitialAdvances).ToString("N0"),
-                        TID = (ushort)(MockPID >> 16),
-                        SID = (ushort)MockPID,
                         Animation = _s0 & 1 ^ _s1 & 1,
                         Jump = Jump,
                         PID = PID.ToString("X8"),
                         EC = EC.ToString("X8"),
-                        Shiny = ShinyXOR == 0 ? "Square" : ShinyXOR < 16 ? "Star" : "No",
+                        Shiny = ShinyXOR == 0 ? "Square" : ShinyXOR < 16 ? $"Star ({ShinyXOR})" : "No",
                         Ability = AbilityRoll == 0 ? 1 : 0,
                         Nature = Util.Common.Natures[(int)Nature],
                         Gender = Gender,

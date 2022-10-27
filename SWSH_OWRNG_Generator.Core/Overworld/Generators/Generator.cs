@@ -7,9 +7,9 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
         private static readonly IReadOnlyList<string> Natures = GameInfo.GetStrings(1).Natures;
 
         // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
-        public static List<Overworld.Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, IProgress<int> progress, Overworld.Filter Filters, uint NPCs)
+        public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, IProgress<int> progress, Overworld.Filter Filters, uint NPCs)
         {
-            List<Overworld.Frame> Results = new();
+            List<Frame> Results = new();
 
             uint[] IVs;
             bool GenerateLevel = Filters.LevelMin != Filters.LevelMax;
@@ -173,7 +173,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                     // Passes all filters!
                     (ulong _s0, ulong _s1) = go.GetState();
                     Results.Add(
-                        new Overworld.Frame
+                        new Frame
                         {
                             Advances = Filters.TIDSIDSearch ? $"{-(long)(advance + InitialAdvances):N0} | Roll: {rollToCheck:N0}" : (advance + InitialAdvances).ToString("N0"),
                             TID = (ushort)(MockPID >> 16),
@@ -184,7 +184,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                             Slot = SlotRand,
                             PID = PID.ToString("X8"),
                             EC = EC.ToString("X8"),
-                            Shiny = ShinyXOR == 0 ? "Square" : ShinyXOR < 16 ? "Star" : "No",
+                            Shiny = ShinyXOR == 0 ? "Square" : ShinyXOR < 16 ? $"Star ({ShinyXOR})" : "No",
                             Brilliant = Brilliant ? "Y" : "-",
                             Ability = AbilityRoll == 0 ? 1 : 0,
                             Nature = Natures[(int)Nature],
