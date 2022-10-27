@@ -2,8 +2,6 @@
 
 namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
 {
-
-
     public static class Static
     {
         public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, IProgress<int> progress, Filter Filters, uint NPCs)
