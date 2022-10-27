@@ -83,7 +83,7 @@ public sealed class GeneratorTests
             FlawlessIVs = 0
         };
 
-        List<Frame> Frames = Generator.Generate(s0, s1, 60000, 0, Progress, Filters, 0);
+        List<Frame> Frames = Symbol.Generate(s0, s1, 60000, 0, Progress, Filters, 0);
         Frames.Should().NotBeNull();
         Frames.Where(f => f.Shiny != "No" && f.Brilliant == "Y").Count().Should().Be(3);
         Frames.Where(f => f.PID == "4ED54E82" && f.EC == "5C7EDFDF").Count().Should().Be(3);
