@@ -48,6 +48,8 @@ namespace SWSH_OWRNG_Generator.WinForms
             SelectedNature.SelectedIndex = 0;
             SelectedAura.SelectedIndex = 0;
 
+            SpriteName.AllowShinySprite = true;
+
             // Set Tab Indexes Manually
             // This will make life easier when adding more fields later on
             // (aka Lego can't find the button that made this nice to do)
