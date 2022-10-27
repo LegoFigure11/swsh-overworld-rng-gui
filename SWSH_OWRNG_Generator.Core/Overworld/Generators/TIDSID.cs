@@ -2,12 +2,9 @@
 
 namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
 {
-    public static class Generator
+    public static class TIDSID
     {
-        private static readonly IReadOnlyList<string> Natures = GameInfo.GetStrings(1).Natures;
-
-        // Heavily derived from https://github.com/Lincoln-LM/PyNXReader/
-        public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, IProgress<int> progress, Overworld.Filter Filters, uint NPCs)
+        public static List<Frame> Generate(ulong state0, ulong state1, ulong advances, ulong InitialAdvances, IProgress<int> progress, Overworld.Filter Filters)
         {
             List<Frame> Results = new();
 
@@ -54,11 +51,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                     // Init new RNG
                     (ulong s0, ulong s1) = go.GetState();
                     Xoroshiro128Plus rng = new(s0, s1);
-                    if (Filters.MenuClose)
-                    {
-                        Jump = $"+{MenuClose.Generator.GetAdvances(rng, NPCs)}";
-                        rng = MenuClose.Generator.Advance(ref rng, NPCs);
-                    }
+
                     Brilliant = false;
                     Gender = "";
                     uint LeadRand;
@@ -132,6 +125,8 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                         Gender = rng.NextInt(2) == 0 ? "F" : "M";
                     // Nature
                     Nature = (uint)rng.NextInt(25);
+                    if (!Util.Common.PassesNatureFilter((int)Nature, Filters.DesiredNature!))
+                        continue;
                     // Ability
                     AbilityRoll = 2;
                     if (!Filters.AbilityLocked)
@@ -164,10 +159,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
 
                     string Mark = Util.Common.GenerateMark(ref rng, Filters.Weather, Filters.Fishing, Filters.MarkRolls);
 
-                    if (!PassesMarkFilter(Mark, Filters.DesiredMark!))
-                        continue;
-
-                    if (!PassesNatureFilter(Natures[(int)Nature], Filters.DesiredNature!))
+                    if (!Util.Common.PassesMarkFilter(Mark, Filters.DesiredMark!))
                         continue;
 
                     // Passes all filters!
@@ -175,7 +167,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                     Results.Add(
                         new Frame
                         {
-                            Advances = Filters.TIDSIDSearch ? $"{-(long)(advance + InitialAdvances):N0} | Roll: {rollToCheck:N0}" : (advance + InitialAdvances).ToString("N0"),
+                            Advances = $"{-(long)(advance + InitialAdvances):N0} | Roll: {rollToCheck:N0}",
                             TID = (ushort)(MockPID >> 16),
                             SID = (ushort)MockPID,
                             Animation = _s0 & 1 ^ _s1 & 1,
@@ -187,7 +179,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                             Shiny = ShinyXOR == 0 ? "Square" : ShinyXOR < 16 ? $"Star ({ShinyXOR})" : "No",
                             Brilliant = Brilliant ? "Y" : "-",
                             Ability = AbilityRoll == 0 ? 1 : 0,
-                            Nature = Natures[(int)Nature],
+                            Nature = Util.Common.Natures[(int)Nature],
                             Gender = Gender,
                             HP = IVs[0],
                             Atk = IVs[1],
@@ -201,46 +193,10 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                         }
                     );
                 }
-                if (Filters.TIDSIDSearch)
-                    go.Prev();
-                else
-                    go.Next();
+                go.Prev();
                 advance++;
             }
-
             return Results;
-        }
-
-
-        private static bool PassesMarkFilter(string Mark, string DesiredMark)
-        {
-            return !(DesiredMark == "Any Mark" && Mark == "None" || DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare") || DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark);
-        }
-
-        private static bool PassesNatureFilter(string Nature, string DesiredNature)
-        {
-            return DesiredNature == Nature || DesiredNature == "Ignore";
-        }
-
-        public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)
-        {
-            Xoroshiro128Plus go = new(state0, state1);
-            for (int i = 0; i < start; i++)
-                go.Next();
-
-            string ret = string.Empty;
-            ulong ProgressUpdateInterval = (start + max) / 100;
-            if (ProgressUpdateInterval == 0)
-                ProgressUpdateInterval++;
-
-            for (uint i = 0; i < max; i++)
-            {
-                if (progress != null && i % ProgressUpdateInterval == 0)
-                    progress.Report(1);
-                ret += go.Next() & 1;
-            }
-
-            return ret;
         }
     }
 }

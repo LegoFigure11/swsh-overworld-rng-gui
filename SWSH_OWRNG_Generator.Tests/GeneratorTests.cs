@@ -89,7 +89,7 @@ public sealed class GeneratorTests
         Frames.Where(f => f.PID == "4ED54E82" && f.EC == "5C7EDFDF").Count().Should().Be(3);
         Frames.Where(f => f.PID == "4ED54E82" && f.EC == "5C7EDFDF" && f.Slot == 94 && f.Level == 36 && f.HP == 31 && f.Atk == 31 && f.Def == 11 && f.SpA == 11 && f.SpD == 21 && f.Spe == 21 && f.Mark == "Peeved").Count().Should().Be(1);
 
-        Frames = Generator.Generate(s0, s1, 5000, 50000, Progress, Filters, 0);
+        Frames = Symbol.Generate(s0, s1, 5000, 50000, Progress, Filters, 0);
         Frames.Where(f => f.Shiny != "No").Count().Should().Be(10);
     }
 }

@@ -632,7 +632,11 @@ namespace SWSH_OWRNG_Generator.WinForms
                 var progress = new Progress<int>(_ => progressBar1.PerformStep());
 
                 List<Core.Overworld.Frame> Frames;
-                if (Filters.Static)
+                if (Filters.TIDSIDSearch)
+                {
+                    Frames = await Task.Run(() => TIDSID.Generate(s0, s1, advances, InitialAdvances, progress, Filters), CancellationToken.None);
+                }
+                else if (Filters.Static)
                 {
                     Frames = await Task.Run(() => Static.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
                 }
@@ -644,19 +648,9 @@ namespace SWSH_OWRNG_Generator.WinForms
                 {
                     Frames = await Task.Run(() => Fishing.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
                 }
-                /* else if (Filters.TIDSIDSearch)
-                 * {
-                 *      Frames = await Task.Run(() => TIDSID.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
-                 * }
-                 * else
-                 */
-                else if (!Filters.TIDSIDSearch)
-                {
-                    Frames = await Task.Run(() => Symbol.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
-                }
                 else
                 {
-                    Frames = await Task.Run(() => Generator.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
+                    Frames = await Task.Run(() => Symbol.Generate(s0, s1, advances, InitialAdvances, progress, Filters, NPCs), CancellationToken.None);
                 }
                 ButtonSearch.Text = $"Preparing {Frames.Count:N0} results...";
                 ButtonSearch.Enabled = false;
