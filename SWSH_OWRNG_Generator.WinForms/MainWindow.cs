@@ -1152,7 +1152,9 @@ namespace SWSH_OWRNG_Generator.WinForms
                     1 => " (F)",
                     _ => string.Empty
                 };
-                string output = $"{(isSquare ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{gender}{Environment.NewLine}PID: {pk.PID:X8}{Environment.NewLine}EC: {pk.EncryptionConstant:X8}{Environment.NewLine}{GameInfo.GetStrings(1).Natures[pk.Nature]} Nature{Environment.NewLine}Ability: {GameInfo.GetStrings(1).Ability[pk.Ability]}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
+                string PIDstring = sensBox.Checked ? $"****{pk.PID & 0xFFFF:X4}" : $"{pk.PID:X8}";
+                string ECstring = sensBox.Checked ? $"****{pk.EncryptionConstant & 0xFFFF:X4}" : $"{pk.EncryptionConstant:X8}";
+                string output = $"{(isSquare ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{gender}{Environment.NewLine}PID: {PIDstring}{Environment.NewLine}EC: {ECstring}{Environment.NewLine}{GameInfo.GetStrings(1).Natures[pk.Nature]} Nature{Environment.NewLine}Ability: {GameInfo.GetStrings(1).Ability[pk.Ability]}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
 
                 if (pk.Species > 0 && pk.Species <= 899)
                 {
