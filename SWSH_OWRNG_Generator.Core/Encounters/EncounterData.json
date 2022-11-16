@@ -21370,6 +21370,7 @@
   },
   "Clefairy": {
     "Item": true,
+    "EggMoves": [ "Present", "Wish", "Aromatherapy", "Tickle", "Heal Pulse" ],
     "Encounters": [
       {
         "Game": "Sword",
@@ -72856,6 +72857,7 @@
     ]
   },
   "Nidoran-F": {
+    "EggMoves": [ "Counter", "Disable", "Poison Tail", "Skull Bash", "Supersonic", "Take Down", "Poison Fang" ],
     "Encounters": [
       {
         "Game": "Sword",
@@ -73442,6 +73444,7 @@
     ]
   },
   "Nidoran-M": {
+    "EggMoves": [ "Confusion", "Counter", "Disable", "Head Smash", "Poison Tail", "Sucker Punch", "Supersonic", "Take Down", "Horn Drill", "Thrash" ],
     "Encounters": [
       {
         "Game": "Sword",
