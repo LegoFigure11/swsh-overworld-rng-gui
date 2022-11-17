@@ -87,5 +87,10 @@ namespace SWSH_OWRNG_Generator.WinForms
         {
             InputNPCs.Enabled = CheckMenuClose.Checked;
         }
+
+        private void Cram_o_matic_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainWindow.CramFormOpen = false;
+        }
     }
 }

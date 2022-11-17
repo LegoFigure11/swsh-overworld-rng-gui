@@ -61,5 +61,10 @@ namespace SWSH_OWRNG_Generator.WinForms
             TimelineSearch.Text = "Search!";
             TimelineSearch.Enabled = true;
         }
+
+        private void MenuCloseTimeline_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainWindow.MenuCloseTimelineFormOpen = false;
+        }
     }
 }

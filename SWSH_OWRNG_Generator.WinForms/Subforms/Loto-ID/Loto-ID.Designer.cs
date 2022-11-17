@@ -119,8 +119,8 @@
             this.LotoIdResults.AllowUserToAddRows = false;
             this.LotoIdResults.AllowUserToDeleteRows = false;
             this.LotoIdResults.AllowUserToResizeRows = false;
-            this.LotoIdResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.LotoIdResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LotoIdResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LotoIdResults.Location = new System.Drawing.Point(263, 12);
@@ -338,6 +338,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Loto_ID";
             this.Text = "Loto-ID";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Loto_ID_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.LotoIdResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LotoIDBindingSource)).EndInit();
             this.ResumeLayout(false);

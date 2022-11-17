@@ -216,6 +216,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuCloseTimeline";
             this.Text = " MenuCloseTimeline";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuCloseTimeline_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.TimelineResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

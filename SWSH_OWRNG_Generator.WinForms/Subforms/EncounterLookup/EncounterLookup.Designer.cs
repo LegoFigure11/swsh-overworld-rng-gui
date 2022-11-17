@@ -117,6 +117,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EncounterLookup";
             this.Text = "Encounter Lookup";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EncounterLookup_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.EncounterLookupResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EncounterBindingSource)).EndInit();
             this.ResumeLayout(false);

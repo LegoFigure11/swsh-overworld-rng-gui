@@ -20,6 +20,11 @@ namespace SWSH_OWRNG_Generator.WinForms
         private readonly static SwitchConnectionConfig Config = new() { Protocol = SwitchProtocol.WiFi, IP = Settings.Default.SwitchIP, Port = 6000 };
         public SwitchSocketAsync SwitchConnection = new(Config);
 
+        public bool EncounterFormOpen = false;
+        public bool CramFormOpen = false;
+        public bool LotoIDFormOpen = false;
+        public bool MenuCloseTimelineFormOpen = false;
+
         public MainWindow()
         {
             string build = string.Empty;
@@ -772,33 +777,33 @@ namespace SWSH_OWRNG_Generator.WinForms
             using SeedFinder form1 = new();
             if (form1.ShowDialog() == DialogResult.OK)
             {
-                this.InputState0.Text = form1.State0;
-                this.InputState1.Text = form1.State1;
+                InputState0.Text = form1.State0;
+                InputState1.Text = form1.State1;
             }
         }
 
         private void CheckTIDSIDFinder_CheckedChanged(object sender, EventArgs e)
         {
-            bool check = this.CheckTIDSIDFinder.Checked;
-            this.LabelTIDSID.Enabled = !check;
-            this.InputTID.Enabled = !check;
-            this.LabelIDsSlash.Enabled = !check;
-            this.InputSID.Enabled = !check;
-            this.SelectedShiny.Enabled = !check;
-            this.LabelShiny.Enabled = !check;
+            bool check = CheckTIDSIDFinder.Checked;
+            LabelTIDSID.Enabled = !check;
+            InputTID.Enabled = !check;
+            LabelIDsSlash.Enabled = !check;
+            InputSID.Enabled = !check;
+            SelectedShiny.Enabled = !check;
+            LabelShiny.Enabled = !check;
         }
 
         private void SensBox_CheckedChanged(object sender, EventArgs e)
         {
             bool check = sensBox.Checked;
-            this.PID.Visible = !check;
-            this.EC.Visible = !check;
-            this.State0.Visible = !check;
-            this.State1.Visible = !check;
-            this.InputState0.UseSystemPasswordChar = check;
-            this.InputState1.UseSystemPasswordChar = check;
-            this.RetailAdvancesTrackerResultState0.UseSystemPasswordChar = check;
-            this.RetailAdvancesTrackerResultState1.UseSystemPasswordChar = check;
+            PID.Visible = !check;
+            EC.Visible = !check;
+            State0.Visible = !check;
+            State1.Visible = !check;
+            InputState0.UseSystemPasswordChar = check;
+            InputState1.UseSystemPasswordChar = check;
+            RetailAdvancesTrackerResultState0.UseSystemPasswordChar = check;
+            RetailAdvancesTrackerResultState1.UseSystemPasswordChar = check;
         }
 
         private static void SetIvFilters(TextBox statLower, TextBox statUpper, string min, string max)
@@ -1204,22 +1209,49 @@ namespace SWSH_OWRNG_Generator.WinForms
             Brilliant.Visible = !check;
         }
 
+        EncounterLookup EncounterForm;
         private void EncounterLookupMenu_Click(object sender, EventArgs e)
         {
-            using EncounterLookup EncounterLookupForm = new(this);
-            EncounterLookupForm.ShowDialog();
+            if (!EncounterFormOpen)
+            {
+                EncounterFormOpen = true;
+                EncounterForm = new EncounterLookup(this);
+                EncounterForm.Show();
+            } 
+            else
+            {
+                EncounterForm.Focus();
+            }
         }
 
+        Cram_o_matic CramForm;
         private void CramomaticMenu_Click(object sender, EventArgs e)
         {
-            using Cram_o_matic CramomaticForm = new(this);
-            CramomaticForm.ShowDialog();
+            if (!CramFormOpen)
+            {
+                CramFormOpen = true;
+                CramForm = new Cram_o_matic(this);
+                CramForm.Show();
+            }
+            else
+            {
+                CramForm.Focus();
+            }
         }
 
+        Loto_ID LotoIDForm;
         private void LotoIDMenu_Click(object sender, EventArgs e)
         {
-            using Loto_ID LotoIDForm = new(this);
-            LotoIDForm.ShowDialog();
+            if (!LotoIDFormOpen)
+            {
+                LotoIDFormOpen = true;
+                LotoIDForm = new Loto_ID(this);
+                LotoIDForm.Show();
+            }
+            else
+            {
+                LotoIDForm.Focus();
+            }
         }
 
         private async void ShortSkipButton_Click(object sender, EventArgs e)
@@ -1244,10 +1276,19 @@ namespace SWSH_OWRNG_Generator.WinForms
             }
         }
 
+        MenuCloseTimeline MenuCloseTimelineForm;
         private void MenuCloseAdvancesViewerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using MenuCloseTimeline MenuCloseTimelineForm = new(this);
-            MenuCloseTimelineForm.ShowDialog();
+            if (!MenuCloseTimelineFormOpen)
+            {
+                MenuCloseTimelineFormOpen = true;
+                MenuCloseTimelineForm = new MenuCloseTimeline(this);
+                MenuCloseTimelineForm.Show();
+            }
+            else
+            {
+                MenuCloseTimelineForm.Focus();
+            }
         }
 
         private void CheckMenuClose_CheckedChanged(object sender, EventArgs e)

@@ -119,8 +119,8 @@
             this.CramResults.AllowUserToAddRows = false;
             this.CramResults.AllowUserToDeleteRows = false;
             this.CramResults.AllowUserToResizeRows = false;
-            this.CramResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.CramResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CramResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CramResults.Location = new System.Drawing.Point(263, 6);
@@ -324,6 +324,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cram_o_matic";
             this.Text = "Cram-o-matic";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Cram_o_matic_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.CramResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CramBindingSource)).EndInit();
             this.ResumeLayout(false);

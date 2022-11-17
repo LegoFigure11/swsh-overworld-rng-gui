@@ -115,5 +115,10 @@ namespace SWSH_OWRNG_Generator.WinForms
         {
             InputNPCs.Enabled = CheckMenuClose.Checked;
         }
+
+        private void Loto_ID_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainWindow.LotoIDFormOpen = false;
+        }
     }
 }
