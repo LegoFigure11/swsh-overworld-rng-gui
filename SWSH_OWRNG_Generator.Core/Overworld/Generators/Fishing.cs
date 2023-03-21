@@ -140,6 +140,12 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
 
                 FixedSeed = (uint)rng.Next();
                 (EC, PID, IVs, ShinyXOR, PassIVs) = Util.Common.CalculateFixed(FixedSeed, Filters.TSV, Shiny, (int)(Filters.FlawlessIVs + BrilliantIVs), Filters.MinIVs!, Filters.MaxIVs!);
+                if (Filters.Is3Segment && PID % 100 != 0)
+                {
+                    go.Next();
+                    advance++;
+                    continue;
+                }
 
                 if (!PassIVs ||
                     Filters.DesiredShiny == "Square" && ShinyXOR != 0 ||

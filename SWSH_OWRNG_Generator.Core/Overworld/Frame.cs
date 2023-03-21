@@ -7,6 +7,7 @@
         public ushort SID { get; set; }
         public ulong Animation { get; set; }
         public string? Jump { get; set; }
+        public string? Steps { get; set; }
         public uint Level { get; set; }
         public uint Slot { get; set; }
         public string? PID { get; set; }

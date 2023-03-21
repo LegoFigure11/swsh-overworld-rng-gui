@@ -25,6 +25,9 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
             ulong advance = 0;
             string Jump = string.Empty;
 
+            byte steps = 0;
+            byte[] enc = { 22, 44, 66, 88 };
+
             ulong ProgressUpdateInterval = advances / 100;
             if (ProgressUpdateInterval == 0)
                 ProgressUpdateInterval++;
@@ -54,7 +57,14 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                 rng.NextInt();
                 rng.NextInt(100);
 
-                uint LeadRand = (uint)rng.NextInt(100);
+                uint LeadRand = 0;
+                //for (steps = 0; steps < enc.Length; steps++)
+                //{
+                //uint EncRand = (uint)rng.NextInt(100);
+                LeadRand = (uint)rng.NextInt(100);
+                //if (EncRand < enc[steps]) break;
+                //}
+
                 if (Filters.CuteCharm && LeadRand < 66)
                     Gender = "CC";
 
@@ -112,6 +122,12 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
 
                 FixedSeed = (uint)rng.Next();
                 (EC, PID, IVs, ShinyXOR, PassIVs) = Util.Common.CalculateFixed(FixedSeed, Filters.TSV, Shiny, (int)Filters.FlawlessIVs, Filters.MinIVs!, Filters.MaxIVs!);
+                if (Filters.Is3Segment && PID % 100 != 0)
+                {
+                    go.Next();
+                    advance++;
+                    continue;
+                }
 
                 if (!PassIVs ||
                     Filters.DesiredShiny == "Square" && ShinyXOR != 0 ||
@@ -142,6 +158,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                         Advances = (advance + InitialAdvances).ToString("N0"),
                         Animation = _s0 & 1 ^ _s1 & 1,
                         Jump = Jump,
+                        Steps = (steps + 1).ToString(),
                         Level = Level,
                         Slot = SlotRand,
                         PID = PID.ToString("X8"),

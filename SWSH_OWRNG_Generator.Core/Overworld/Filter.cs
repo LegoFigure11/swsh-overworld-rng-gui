@@ -28,5 +28,6 @@
         public uint[]? MinIVs { get; set; }
         public uint[]? MaxIVs { get; set; }
         public bool MenuClose { get; set; }
+        public bool Is3Segment { get; set; }
     }
 }

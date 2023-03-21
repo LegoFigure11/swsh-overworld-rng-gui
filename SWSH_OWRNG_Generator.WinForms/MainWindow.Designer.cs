@@ -79,6 +79,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jump = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Steps = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Brilliant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -192,6 +193,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.InputNPCs = new System.Windows.Forms.TextBox();
             this.CheckFocusWindow = new System.Windows.Forms.CheckBox();
             this.CheckPlayTone = new System.Windows.Forms.CheckBox();
+            this.Check3Seg = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
@@ -680,6 +682,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.SID,
             this.Animation,
             this.Jump,
+            this.Steps,
             this.Brilliant,
             this.Level,
             this.Slot,
@@ -754,6 +757,14 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.Jump.Name = "Jump";
             this.Jump.ReadOnly = true;
             this.Jump.Width = 59;
+            // 
+            // Steps
+            // 
+            this.Steps.DataPropertyName = "Steps";
+            this.Steps.HeaderText = "Steps";
+            this.Steps.Name = "Steps";
+            this.Steps.ReadOnly = true;
+            this.Steps.Width = 59;
             // 
             // Brilliant
             // 
@@ -1941,9 +1952,20 @@ namespace SWSH_OWRNG_Generator.WinForms
             this.CheckPlayTone.UseVisualStyleBackColor = true;
             this.CheckPlayTone.CheckedChanged += new System.EventHandler(this.CheckPlayTone_CheckedChanged);
             // 
+            // Check3Seg
+            // 
+            this.Check3Seg.AutoSize = true;
+            this.Check3Seg.Location = new System.Drawing.Point(145, 321);
+            this.Check3Seg.Name = "Check3Seg";
+            this.Check3Seg.Size = new System.Drawing.Size(115, 19);
+            this.Check3Seg.TabIndex = 178;
+            this.Check3Seg.Text = "3 Segment Only?";
+            this.Check3Seg.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(831, 699);
+            this.Controls.Add(this.Check3Seg);
             this.Controls.Add(this.CheckPlayTone);
             this.Controls.Add(this.CheckFocusWindow);
             this.Controls.Add(this.CheckMenuClose);
@@ -2227,11 +2249,14 @@ namespace SWSH_OWRNG_Generator.WinForms
         private CheckBox CheckMenuClose;
         private Label LabelNPCs;
         private TextBox InputNPCs;
+        public CheckBox CheckFocusWindow;
+        public CheckBox CheckPlayTone;
         private DataGridViewTextBoxColumn Frame;
         private DataGridViewTextBoxColumn TID;
         private DataGridViewTextBoxColumn SID;
         private DataGridViewTextBoxColumn Animation;
         private DataGridViewTextBoxColumn Jump;
+        private DataGridViewTextBoxColumn Steps;
         private DataGridViewTextBoxColumn Brilliant;
         private DataGridViewTextBoxColumn Level;
         private DataGridViewTextBoxColumn Slot;
@@ -2250,7 +2275,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         private DataGridViewTextBoxColumn Mark;
         private DataGridViewTextBoxColumn State0;
         private DataGridViewTextBoxColumn State1;
-        public CheckBox CheckFocusWindow;
-        public CheckBox CheckPlayTone;
+        private CheckBox Check3Seg;
     }
 }

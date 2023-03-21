@@ -537,7 +537,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             FormWindowState _FormWindowState = WindowState;
             if (ButtonSearch.Text == "Cancel")
             {
-                if (Source != null) Source.Cancel();
+                Source?.Cancel();
             }
             else
             {
@@ -588,6 +588,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                     ShinyLocked = CheckShinyLocked.Checked,
                     Hidden = CheckHidden.Checked,
                     MenuClose = CheckMenuClose.Checked,
+                    Is3Segment = Check3Seg.Checked,
                     DesiredMark = (string)SelectedMark.SelectedItem,
                     DesiredShiny = (string)SelectedShiny.SelectedItem,
                     DesiredNature = (string)SelectedNature.SelectedItem,
@@ -626,9 +627,10 @@ namespace SWSH_OWRNG_Generator.WinForms
                 Results.Columns["SID"].Visible = Filters.TIDSIDSearch;
                 Results.Columns["Level"].Visible = !Filters.Static;
                 Results.Columns["Slot"].Visible = !Filters.Static;
-                Results.Columns["Brilliant"].Visible = !Filters.Static;
+                Results.Columns["Brilliant"].Visible = !Filters.Static && !Filters.Hidden;
                 Results.Columns["Ability"].Visible = !Filters.AbilityLocked;
                 Results.Columns["Jump"].Visible = Filters.MenuClose;
+                Results.Columns["Steps"].Visible = Filters.Hidden;
 
                 progressBar1.Value = 0;
                 progressBar1.Maximum = (int)advances;
@@ -1217,7 +1219,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 EncounterFormOpen = true;
                 EncounterForm = new EncounterLookup(this);
                 EncounterForm.Show();
-            } 
+            }
             else
             {
                 EncounterForm.Focus();
