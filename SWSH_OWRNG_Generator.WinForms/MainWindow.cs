@@ -52,6 +52,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             SelectedShiny.SelectedIndex = 0;
             SelectedNature.SelectedIndex = 0;
             SelectedAura.SelectedIndex = 0;
+            SelectedHeight.SelectedIndex = 0;
 
             SpriteName.AllowShinySprite = true;
 
@@ -593,6 +594,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                     DesiredShiny = (string)SelectedShiny.SelectedItem,
                     DesiredNature = (string)SelectedNature.SelectedItem,
                     DesiredAura = (string)SelectedAura.SelectedItem,
+                    DesiredHeight = (string)SelectedHeight.SelectedItem,
                     MinIVs = new uint[] { ushort.Parse(hpMin.Text), ushort.Parse(atkMin.Text), ushort.Parse(defMin.Text), ushort.Parse(spaMin.Text), ushort.Parse(spdMin.Text), ushort.Parse(speMin.Text) },
                     MaxIVs = new uint[] { ushort.Parse(hpMax.Text), ushort.Parse(atkMax.Text), ushort.Parse(defMax.Text), ushort.Parse(spaMax.Text), ushort.Parse(spdMax.Text), ushort.Parse(speMax.Text) }
                 };
@@ -1029,8 +1031,8 @@ namespace SWSH_OWRNG_Generator.WinForms
         public async Task GetTIDSID(SAV8SWSH sav)
         {
             await Task.Delay(0_100).ConfigureAwait(false);
-            TextboxSetText(Program.Window.InputTID, sav.TID.ToString());
-            TextboxSetText(Program.Window.InputSID, sav.SID.ToString());
+            TextboxSetText(Program.Window.InputTID, sav.TID16.ToString());
+            TextboxSetText(Program.Window.InputSID, sav.SID16.ToString());
         }
 
         delegate void TextboxSetTextCallback(TextBox sender, string Text);
@@ -1169,7 +1171,9 @@ namespace SWSH_OWRNG_Generator.WinForms
                 };
                 string PIDstring = sensBox.Checked ? $"****{pk.PID & 0xFFFF:X4}" : $"{pk.PID:X8}";
                 string ECstring = sensBox.Checked ? $"****{pk.EncryptionConstant & 0xFFFF:X4}" : $"{pk.EncryptionConstant:X8}";
-                string output = $"{(isSquare ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{gender}{Environment.NewLine}PID: {PIDstring}{Environment.NewLine}EC: {ECstring}{Environment.NewLine}{GameInfo.GetStrings(1).Natures[pk.Nature]} Nature{Environment.NewLine}Ability: {GameInfo.GetStrings(1).Ability[pk.Ability]}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{Environment.NewLine}{markString}";
+                var scaleS = (IScaledSize)pk;
+                string scale = $"{Environment.NewLine}Height: {PokeSizeDetailedUtil.GetSizeRating(scaleS.HeightScalar)} ({scaleS.HeightScalar})";
+                string output = $"{(isSquare ? "■ - " : pk.ShinyXor <= 16 ? "★ - " : "")}{(Species)pk.Species}{form}{gender}{Environment.NewLine}PID: {PIDstring}{Environment.NewLine}EC: {ECstring}{Environment.NewLine}{GameInfo.GetStrings(1).Natures[pk.Nature]} Nature{Environment.NewLine}Ability: {GameInfo.GetStrings(1).Ability[pk.Ability]}{Environment.NewLine}IVs: {pk.IV_HP}/{pk.IV_ATK}/{pk.IV_DEF}/{pk.IV_SPA}/{pk.IV_SPD}/{pk.IV_SPE}{scale}{Environment.NewLine}{markString}";
 
                 if (pk.Species > 0 && pk.Species <= 899)
                 {
