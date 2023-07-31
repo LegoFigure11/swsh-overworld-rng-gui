@@ -24,7 +24,7 @@
         public uint SpD { get; set; }
         public uint Spe { get; set; }
         public string? Height { get; set; }
-        public string? Mark { get; set; }        
+        public string? Mark { get; set; }
         public string? State0 { get; set; }
         public string? State1 { get; set; }
     }
