@@ -5,7 +5,7 @@
 		<UseWindowsForms>true</UseWindowsForms>
 		<LangVersion>10</LangVersion>
 		<IsWebBootstrapper>false</IsWebBootstrapper>
-		<Version>2.2.2</Version>
+		<Version>3.0.0</Version>
 		<AssemblyTitle>SWSH_OWRNG_Generator_GUI</AssemblyTitle>
 		<Product>SWSH_OWRNG_Generator_GUI</Product>
 		<Copyright>Copyright © 2022</Copyright>
