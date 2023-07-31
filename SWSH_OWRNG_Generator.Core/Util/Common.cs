@@ -1,5 +1,4 @@
 ﻿using PKHeX.Core;
-using static System.Formats.Asn1.AsnWriter;
 
 namespace SWSH_OWRNG_Generator.Core.Util
 {
@@ -20,9 +19,17 @@ namespace SWSH_OWRNG_Generator.Core.Util
 
         public static bool PassesHeightFilter(int Scale, string DesiredHeight)
         {
-            return DesiredHeight == "Ignore" || DesiredHeight == "XXXS" && Scale == 0 || DesiredHeight == "XXS" && Scale >= 1 && Scale <= 24 || DesiredHeight == "XS" && Scale >= 25 && Scale <= 59 ||
-                DesiredHeight == "S" && Scale >= 66 && Scale <= 99 || DesiredHeight == "M" && Scale >= 100 && Scale <= 155 || DesiredHeight == "L" && Scale >= 156 && Scale <= 195 ||
-                DesiredHeight == "XL" && Scale >= 196 && Scale <= 230 || DesiredHeight == "XXL" && Scale >= 231 && Scale <= 254 || DesiredHeight == "XXXL" && Scale == 255;
+            return DesiredHeight == "Ignore" ||
+                DesiredHeight == "XXXS" && Scale == 0 ||
+                DesiredHeight == "XXS" && Scale >= 1 && Scale <= 24 ||
+                DesiredHeight == "XS" && Scale >= 25 && Scale <= 59 ||
+                DesiredHeight == "S" && Scale >= 66 && Scale <= 99 ||
+                DesiredHeight == "M" && Scale >= 100 && Scale <= 155 ||
+                DesiredHeight == "L" && Scale >= 156 && Scale <= 195 ||
+                DesiredHeight == "XL" && Scale >= 196 && Scale <= 230 ||
+                DesiredHeight == "XXL" && Scale >= 231 && Scale <= 254 ||
+                DesiredHeight == "XXXL" && Scale == 255 ||
+                DesiredHeight == "XXXS or XXXL" && (Scale == 0 || Scale == 255);
         }
 
         public static uint GetTSV(uint TID, uint SID)
@@ -42,23 +49,18 @@ namespace SWSH_OWRNG_Generator.Core.Util
             _ => (0, 0),
         };
 
-        public static string GenerateHeightScale(uint Height)
+        public static string GenerateHeightScale(uint Height) => Height switch
         {
-            string result = string.Empty;
-            switch (Height)
-            {
-                case uint h when h == 0: result = $"XXXS ({Height})"; break;
-                case uint h when h >= 1 && h <= 24: result = $"XXS ({Height})"; break;
-                case uint h when h >= 25 && h <= 59: result = $"XS ({Height})"; break;
-                case uint h when h >= 66 && h <= 99: result = $"S ({Height})"; break;
-                case uint h when h >= 100 && h <= 155: result = $"M ({Height})"; break;
-                case uint h when h >= 156 && h <= 195: result = $"L ({Height})"; break;
-                case uint h when h >= 196 && h <= 230: result = $"XL ({Height})"; break;
-                case uint h when h >= 231 && h <= 254: result = $"XXL ({Height})"; break;
-                case uint h when h == 255: result = $"XXXL ({Height})"; break;
-            }
-            return result;
-        }
+            >= 255 => $"XXXL ({Height})",
+            >= 231 => $"XXL ({Height})",
+            >= 196 => $"XL ({Height})",
+            >= 156 => $"L ({Height})",
+            >= 100 => $"M ({Height})",
+            >= 66 => $"S ({Height})",
+            >= 25 => $"XS ({Height})",
+            >= 1 => $"XXS ({Height})",
+            _ => $"XXXS ({Height})",
+        };
 
         public static string GenerateMark(ref Xoroshiro128Plus go, bool Weather, bool Fishing, int MarkRolls)
         {
