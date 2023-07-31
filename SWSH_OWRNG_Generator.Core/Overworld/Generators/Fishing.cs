@@ -26,6 +26,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
             uint MockPID;
             string Gender;
             bool PassIVs, Brilliant, Shiny;
+            uint Height;
             ulong advance = 0;
             string Jump = string.Empty;
 
@@ -139,7 +140,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                 }
 
                 FixedSeed = (uint)rng.Next();
-                (EC, PID, IVs, ShinyXOR, PassIVs) = Util.Common.CalculateFixed(FixedSeed, Filters.TSV, Shiny, (int)(Filters.FlawlessIVs + BrilliantIVs), Filters.MinIVs!, Filters.MaxIVs!);
+                (EC, PID, IVs, ShinyXOR, PassIVs, Height) = Util.Common.CalculateFixed(FixedSeed, Filters.TSV, Shiny, (int)(Filters.FlawlessIVs + BrilliantIVs), Filters.MinIVs!, Filters.MaxIVs!);
                 if (Filters.Is3Segment && PID % 100 != 0)
                 {
                     go.Next();
@@ -155,6 +156,14 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                     )
                 {
                     go.Next();
+                    advance++;
+                    continue;
+                }
+
+                string HeightScale = Util.Common.GenerateHeightScale(Height);
+
+                if (!Util.Common.PassesHeightFilter((int)Height, Filters.DesiredHeight!))
+                {
                     advance++;
                     continue;
                 }
@@ -192,6 +201,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                         SpD = IVs[4],
                         Spe = IVs[5],
                         Mark = Mark,
+                        Height = HeightScale,
                         State0 = _s0.ToString("X16"),
                         State1 = _s1.ToString("X16"),
                     }

@@ -30,2186 +30,2082 @@ namespace SWSH_OWRNG_Generator.WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            this.LabelState0 = new System.Windows.Forms.Label();
-            this.InputState0 = new System.Windows.Forms.TextBox();
-            this.InputState1 = new System.Windows.Forms.TextBox();
-            this.LabelState1 = new System.Windows.Forms.Label();
-            this.hpMin = new System.Windows.Forms.TextBox();
-            this.hpMax = new System.Windows.Forms.TextBox();
-            this.hpFilter = new System.Windows.Forms.Label();
-            this.atkFilter = new System.Windows.Forms.Label();
-            this.defFilter = new System.Windows.Forms.Label();
-            this.spaFilter = new System.Windows.Forms.Label();
-            this.spdFilter = new System.Windows.Forms.Label();
-            this.speFilter = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.hpMinFilter = new System.Windows.Forms.Button();
-            this.hpMaxFilter = new System.Windows.Forms.Button();
-            this.InputTID = new System.Windows.Forms.TextBox();
-            this.InputSID = new System.Windows.Forms.TextBox();
-            this.LabelTIDSID = new System.Windows.Forms.Label();
-            this.LabelIDsSlash = new System.Windows.Forms.Label();
-            this.InputMaxAdv = new System.Windows.Forms.TextBox();
-            this.LabelMaxAdv = new System.Windows.Forms.Label();
-            this.LabelMark = new System.Windows.Forms.Label();
-            this.ImageRareMark = new System.Windows.Forms.PictureBox();
-            this.SelectedMark = new System.Windows.Forms.ComboBox();
-            this.CheckShinyCharm = new System.Windows.Forms.CheckBox();
-            this.CheckMarkCharm = new System.Windows.Forms.CheckBox();
-            this.CheckWeather = new System.Windows.Forms.CheckBox();
-            this.CheckStatic = new System.Windows.Forms.CheckBox();
-            this.CheckFishing = new System.Windows.Forms.CheckBox();
-            this.CheckHeldItem = new System.Windows.Forms.CheckBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.InputLevelMax = new System.Windows.Forms.TextBox();
-            this.InputLevelMin = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.InputSlotMax = new System.Windows.Forms.TextBox();
-            this.InputSlotMin = new System.Windows.Forms.TextBox();
-            this.LabelLevel = new System.Windows.Forms.Label();
-            this.LabelSlot = new System.Windows.Forms.Label();
-            this.ButtonSearch = new System.Windows.Forms.Button();
-            this.SelectedShiny = new System.Windows.Forms.ComboBox();
-            this.LabelShiny = new System.Windows.Forms.Label();
-            this.Results = new System.Windows.Forms.DataGridView();
-            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Animation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jump = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Steps = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brilliant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Atk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Def = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Spe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label12 = new System.Windows.Forms.Label();
-            this.speMinFilter = new System.Windows.Forms.Button();
-            this.defMax = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.spdMinFilter = new System.Windows.Forms.Button();
-            this.spdMaxFilter = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.speMaxFilter = new System.Windows.Forms.Button();
-            this.spaMin = new System.Windows.Forms.TextBox();
-            this.atkMinFilter = new System.Windows.Forms.Button();
-            this.spdMin = new System.Windows.Forms.TextBox();
-            this.spdMax = new System.Windows.Forms.TextBox();
-            this.speMin = new System.Windows.Forms.TextBox();
-            this.speMax = new System.Windows.Forms.TextBox();
-            this.atkMax = new System.Windows.Forms.TextBox();
-            this.atkMaxFilter = new System.Windows.Forms.Button();
-            this.defMin = new System.Windows.Forms.TextBox();
-            this.defMinFilter = new System.Windows.Forms.Button();
-            this.spaMinFilter = new System.Windows.Forms.Button();
-            this.defMaxFilter = new System.Windows.Forms.Button();
-            this.spaMax = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.atkMin = new System.Windows.Forms.TextBox();
-            this.spaMaxFilter = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.RetailAdvancesTrackerLabel = new System.Windows.Forms.Label();
-            this.RetailAdvancesTrackerInitialInputLabel = new System.Windows.Forms.Label();
-            this.RetailAdvancesTrackerMaxAdvInputLabel = new System.Windows.Forms.Label();
-            this.RetailAdvancesTrackerInitialInput = new System.Windows.Forms.TextBox();
-            this.RetailAdvancesTrackerMaxInput = new System.Windows.Forms.TextBox();
-            this.RetailAdvancesTrackerGenerateButton = new System.Windows.Forms.Button();
-            this.RetailAdvancesTrackerProgressBar = new System.Windows.Forms.ProgressBar();
-            this.RetailAdvancesTrackerSequenceInput = new System.Windows.Forms.TextBox();
-            this.RetailAdvancesTrackerSequenceLabel = new System.Windows.Forms.Label();
-            this.RetailAdvancesTrackerResultState0 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.RetailAdvancesTrackerResultState1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.RetailAdvancesTrackerNumResultsLabel = new System.Windows.Forms.Label();
-            this.CheckIsAbilityLocked = new System.Windows.Forms.CheckBox();
-            this.MainMenu = new System.Windows.Forms.MenuStrip();
-            this.SeedFinderMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.EncounterLookupMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.CramomaticMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.LotoIDMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuCloseAdvancesViewerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ButtonUpdateStates = new System.Windows.Forms.Button();
-            this.CheckTIDSIDFinder = new System.Windows.Forms.CheckBox();
-            this.LabelKOCount = new System.Windows.Forms.Label();
-            this.InputKOCount = new System.Windows.Forms.TextBox();
-            this.LabelEMs = new System.Windows.Forms.Label();
-            this.InputEMs = new System.Windows.Forms.TextBox();
-            this.LabelFlawlessIVs = new System.Windows.Forms.Label();
-            this.InputFlawlessIVs = new System.Windows.Forms.TextBox();
-            this.sensBox = new System.Windows.Forms.CheckBox();
-            this.CheckCuteCharm = new System.Windows.Forms.CheckBox();
-            this.hpJudgeFilter = new System.Windows.Forms.ComboBox();
-            this.atkJudgeFilter = new System.Windows.Forms.ComboBox();
-            this.defJudgeFilter = new System.Windows.Forms.ComboBox();
-            this.spaJudgeFilter = new System.Windows.Forms.ComboBox();
-            this.spdJudgeFilter = new System.Windows.Forms.ComboBox();
-            this.speJudgeFilter = new System.Windows.Forms.ComboBox();
-            this.DesiredNature = new System.Windows.Forms.Label();
-            this.SelectedNature = new System.Windows.Forms.ComboBox();
-            this.LabelInitialAdv = new System.Windows.Forms.Label();
-            this.InputInitialAdv = new System.Windows.Forms.TextBox();
-            this.CheckShinyLocked = new System.Windows.Forms.CheckBox();
-            this.ConnectButton = new System.Windows.Forms.Button();
-            this.DisconnectButton = new System.Windows.Forms.Button();
-            this.SwitchIPInput = new System.Windows.Forms.TextBox();
-            this.SwitchIPLabel = new System.Windows.Forms.Label();
-            this.CurrentAdvancesLabel = new System.Windows.Forms.Label();
-            this.InputRAMOffset = new System.Windows.Forms.TextBox();
-            this.InputRAMOffsetLabel = new System.Windows.Forms.Label();
-            this.ConnectionStatusLabel = new System.Windows.Forms.Label();
-            this.ConnectionStatusText = new System.Windows.Forms.Label();
-            this.TrackAdv = new System.Windows.Forms.TextBox();
-            this.TextBoxCheckEncounter = new System.Windows.Forms.TextBox();
-            this.SkipAmountInput = new System.Windows.Forms.TextBox();
-            this.DaySkipButton = new System.Windows.Forms.Button();
-            this.ReadEncounterButton = new System.Windows.Forms.Button();
-            this.SelectedAura = new System.Windows.Forms.ComboBox();
-            this.LabelAura = new System.Windows.Forms.Label();
-            this.CheckHidden = new System.Windows.Forms.CheckBox();
-            this.ShortSkipButton = new System.Windows.Forms.Button();
-            this.LabelSkipMenu = new System.Windows.Forms.Label();
-            this.PokeSprite = new System.Windows.Forms.PictureBox();
-            this.MarkSprite = new System.Windows.Forms.PictureBox();
-            this.CheckMenuClose = new System.Windows.Forms.CheckBox();
-            this.LabelNPCs = new System.Windows.Forms.Label();
-            this.InputNPCs = new System.Windows.Forms.TextBox();
-            this.CheckFocusWindow = new System.Windows.Forms.CheckBox();
-            this.CheckPlayTone = new System.Windows.Forms.CheckBox();
-            this.Check3Seg = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Results)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).BeginInit();
-            this.MainMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PokeSprite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MarkSprite)).BeginInit();
-            this.SuspendLayout();
+            LabelState0 = new Label();
+            InputState0 = new TextBox();
+            InputState1 = new TextBox();
+            LabelState1 = new Label();
+            hpMin = new TextBox();
+            hpMax = new TextBox();
+            hpFilter = new Label();
+            atkFilter = new Label();
+            defFilter = new Label();
+            spaFilter = new Label();
+            spdFilter = new Label();
+            speFilter = new Label();
+            label10 = new Label();
+            hpMinFilter = new Button();
+            hpMaxFilter = new Button();
+            InputTID = new TextBox();
+            InputSID = new TextBox();
+            LabelTIDSID = new Label();
+            LabelIDsSlash = new Label();
+            InputMaxAdv = new TextBox();
+            LabelMaxAdv = new Label();
+            LabelMark = new Label();
+            ImageRareMark = new PictureBox();
+            SelectedMark = new ComboBox();
+            CheckShinyCharm = new CheckBox();
+            CheckMarkCharm = new CheckBox();
+            CheckWeather = new CheckBox();
+            CheckStatic = new CheckBox();
+            CheckFishing = new CheckBox();
+            CheckHeldItem = new CheckBox();
+            label20 = new Label();
+            InputLevelMax = new TextBox();
+            InputLevelMin = new TextBox();
+            label21 = new Label();
+            InputSlotMax = new TextBox();
+            InputSlotMin = new TextBox();
+            LabelLevel = new Label();
+            LabelSlot = new Label();
+            ButtonSearch = new Button();
+            SelectedShiny = new ComboBox();
+            LabelShiny = new Label();
+            Results = new DataGridView();
+            Frame = new DataGridViewTextBoxColumn();
+            TID = new DataGridViewTextBoxColumn();
+            SID = new DataGridViewTextBoxColumn();
+            Animation = new DataGridViewTextBoxColumn();
+            Jump = new DataGridViewTextBoxColumn();
+            Steps = new DataGridViewTextBoxColumn();
+            Brilliant = new DataGridViewTextBoxColumn();
+            Level = new DataGridViewTextBoxColumn();
+            Slot = new DataGridViewTextBoxColumn();
+            PID = new DataGridViewTextBoxColumn();
+            EC = new DataGridViewTextBoxColumn();
+            Shiny = new DataGridViewTextBoxColumn();
+            Ability = new DataGridViewTextBoxColumn();
+            Nature = new DataGridViewTextBoxColumn();
+            Gender = new DataGridViewTextBoxColumn();
+            HP = new DataGridViewTextBoxColumn();
+            Atk = new DataGridViewTextBoxColumn();
+            Def = new DataGridViewTextBoxColumn();
+            SpA = new DataGridViewTextBoxColumn();
+            SpD = new DataGridViewTextBoxColumn();
+            Spe = new DataGridViewTextBoxColumn();
+            Height = new DataGridViewTextBoxColumn();
+            Mark = new DataGridViewTextBoxColumn();
+            State0 = new DataGridViewTextBoxColumn();
+            State1 = new DataGridViewTextBoxColumn();
+            generatorBindingSource = new BindingSource(components);
+            label12 = new Label();
+            speMinFilter = new Button();
+            defMax = new TextBox();
+            label13 = new Label();
+            label15 = new Label();
+            spdMinFilter = new Button();
+            spdMaxFilter = new Button();
+            label11 = new Label();
+            speMaxFilter = new Button();
+            spaMin = new TextBox();
+            atkMinFilter = new Button();
+            spdMin = new TextBox();
+            spdMax = new TextBox();
+            speMin = new TextBox();
+            speMax = new TextBox();
+            atkMax = new TextBox();
+            atkMaxFilter = new Button();
+            defMin = new TextBox();
+            defMinFilter = new Button();
+            spaMinFilter = new Button();
+            defMaxFilter = new Button();
+            spaMax = new TextBox();
+            label14 = new Label();
+            atkMin = new TextBox();
+            spaMaxFilter = new Button();
+            progressBar1 = new ProgressBar();
+            RetailAdvancesTrackerLabel = new Label();
+            RetailAdvancesTrackerInitialInputLabel = new Label();
+            RetailAdvancesTrackerMaxAdvInputLabel = new Label();
+            RetailAdvancesTrackerInitialInput = new TextBox();
+            RetailAdvancesTrackerMaxInput = new TextBox();
+            RetailAdvancesTrackerGenerateButton = new Button();
+            RetailAdvancesTrackerProgressBar = new ProgressBar();
+            RetailAdvancesTrackerSequenceInput = new TextBox();
+            RetailAdvancesTrackerSequenceLabel = new Label();
+            RetailAdvancesTrackerResultState0 = new TextBox();
+            label3 = new Label();
+            RetailAdvancesTrackerResultState1 = new TextBox();
+            label2 = new Label();
+            RetailAdvancesTrackerNumResultsLabel = new Label();
+            CheckIsAbilityLocked = new CheckBox();
+            MainMenu = new MenuStrip();
+            SeedFinderMenu = new ToolStripMenuItem();
+            EncounterLookupMenu = new ToolStripMenuItem();
+            CramomaticMenu = new ToolStripMenuItem();
+            LotoIDMenu = new ToolStripMenuItem();
+            MenuCloseAdvancesViewerToolStripMenuItem = new ToolStripMenuItem();
+            ButtonUpdateStates = new Button();
+            CheckTIDSIDFinder = new CheckBox();
+            LabelKOCount = new Label();
+            InputKOCount = new TextBox();
+            LabelEMs = new Label();
+            InputEMs = new TextBox();
+            LabelFlawlessIVs = new Label();
+            InputFlawlessIVs = new TextBox();
+            sensBox = new CheckBox();
+            CheckCuteCharm = new CheckBox();
+            hpJudgeFilter = new ComboBox();
+            atkJudgeFilter = new ComboBox();
+            defJudgeFilter = new ComboBox();
+            spaJudgeFilter = new ComboBox();
+            spdJudgeFilter = new ComboBox();
+            speJudgeFilter = new ComboBox();
+            DesiredNature = new Label();
+            SelectedNature = new ComboBox();
+            LabelInitialAdv = new Label();
+            InputInitialAdv = new TextBox();
+            CheckShinyLocked = new CheckBox();
+            ConnectButton = new Button();
+            DisconnectButton = new Button();
+            SwitchIPInput = new TextBox();
+            SwitchIPLabel = new Label();
+            CurrentAdvancesLabel = new Label();
+            InputRAMOffset = new TextBox();
+            InputRAMOffsetLabel = new Label();
+            ConnectionStatusLabel = new Label();
+            ConnectionStatusText = new Label();
+            TrackAdv = new TextBox();
+            TextBoxCheckEncounter = new TextBox();
+            SkipAmountInput = new TextBox();
+            DaySkipButton = new Button();
+            ReadEncounterButton = new Button();
+            SelectedAura = new ComboBox();
+            LabelAura = new Label();
+            CheckHidden = new CheckBox();
+            ShortSkipButton = new Button();
+            LabelSkipMenu = new Label();
+            PokeSprite = new PictureBox();
+            MarkSprite = new PictureBox();
+            CheckMenuClose = new CheckBox();
+            LabelNPCs = new Label();
+            InputNPCs = new TextBox();
+            CheckFocusWindow = new CheckBox();
+            CheckPlayTone = new CheckBox();
+            Check3Seg = new CheckBox();
+            LabelHeight = new Label();
+            SelectedHeight = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)ImageRareMark).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Results).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)generatorBindingSource).BeginInit();
+            MainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PokeSprite).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)MarkSprite).BeginInit();
+            SuspendLayout();
             // 
             // LabelState0
             // 
-            this.LabelState0.AutoSize = true;
-            this.LabelState0.Location = new System.Drawing.Point(12, 30);
-            this.LabelState0.Name = "LabelState0";
-            this.LabelState0.Size = new System.Drawing.Size(53, 15);
-            this.LabelState0.TabIndex = 0;
-            this.LabelState0.Text = "State[0]: ";
+            LabelState0.AutoSize = true;
+            LabelState0.Location = new System.Drawing.Point(12, 30);
+            LabelState0.Name = "LabelState0";
+            LabelState0.Size = new System.Drawing.Size(53, 15);
+            LabelState0.TabIndex = 0;
+            LabelState0.Text = "State[0]: ";
             // 
             // InputState0
             // 
-            this.InputState0.Location = new System.Drawing.Point(68, 27);
-            this.InputState0.MaxLength = 16;
-            this.InputState0.Name = "InputState0";
-            this.InputState0.Size = new System.Drawing.Size(189, 23);
-            this.InputState0.TabIndex = 0;
-            this.InputState0.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
-            this.InputState0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
+            InputState0.Location = new System.Drawing.Point(68, 27);
+            InputState0.MaxLength = 16;
+            InputState0.Name = "InputState0";
+            InputState0.Size = new System.Drawing.Size(189, 23);
+            InputState0.TabIndex = 0;
+            InputState0.KeyDown += InputStatePaste_KeyDown;
+            InputState0.KeyPress += HexInput_KeyPress;
             // 
             // InputState1
             // 
-            this.InputState1.Location = new System.Drawing.Point(68, 53);
-            this.InputState1.MaxLength = 16;
-            this.InputState1.Name = "InputState1";
-            this.InputState1.Size = new System.Drawing.Size(189, 23);
-            this.InputState1.TabIndex = 1;
-            this.InputState1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InputStatePaste_KeyDown);
-            this.InputState1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
+            InputState1.Location = new System.Drawing.Point(68, 53);
+            InputState1.MaxLength = 16;
+            InputState1.Name = "InputState1";
+            InputState1.Size = new System.Drawing.Size(189, 23);
+            InputState1.TabIndex = 1;
+            InputState1.KeyDown += InputStatePaste_KeyDown;
+            InputState1.KeyPress += HexInput_KeyPress;
             // 
             // LabelState1
             // 
-            this.LabelState1.AutoSize = true;
-            this.LabelState1.Location = new System.Drawing.Point(12, 57);
-            this.LabelState1.Name = "LabelState1";
-            this.LabelState1.Size = new System.Drawing.Size(50, 15);
-            this.LabelState1.TabIndex = 3;
-            this.LabelState1.Text = "State[1]:";
+            LabelState1.AutoSize = true;
+            LabelState1.Location = new System.Drawing.Point(12, 57);
+            LabelState1.Name = "LabelState1";
+            LabelState1.Size = new System.Drawing.Size(50, 15);
+            LabelState1.TabIndex = 3;
+            LabelState1.Text = "State[1]:";
             // 
             // hpMin
             // 
-            this.hpMin.Location = new System.Drawing.Point(330, 27);
-            this.hpMin.Name = "hpMin";
-            this.hpMin.Size = new System.Drawing.Size(28, 23);
-            this.hpMin.TabIndex = 5;
-            this.hpMin.Text = "0";
-            this.hpMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.hpMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.hpMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.hpMin.Leave += new System.EventHandler(this.Filter_LostFocus);
+            hpMin.Location = new System.Drawing.Point(330, 27);
+            hpMin.Name = "hpMin";
+            hpMin.Size = new System.Drawing.Size(28, 23);
+            hpMin.TabIndex = 5;
+            hpMin.Text = "0";
+            hpMin.TextAlign = HorizontalAlignment.Center;
+            hpMin.TextChanged += IVs_TextChanged;
+            hpMin.KeyPress += DecInput_KeyPress;
+            hpMin.Leave += Filter_LostFocus;
             // 
             // hpMax
             // 
-            this.hpMax.Location = new System.Drawing.Point(380, 27);
-            this.hpMax.Name = "hpMax";
-            this.hpMax.Size = new System.Drawing.Size(28, 23);
-            this.hpMax.TabIndex = 6;
-            this.hpMax.Text = "31";
-            this.hpMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.hpMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.hpMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.hpMax.Leave += new System.EventHandler(this.Filter_LostFocus);
+            hpMax.Location = new System.Drawing.Point(380, 27);
+            hpMax.Name = "hpMax";
+            hpMax.Size = new System.Drawing.Size(28, 23);
+            hpMax.TabIndex = 6;
+            hpMax.Text = "31";
+            hpMax.TextAlign = HorizontalAlignment.Center;
+            hpMax.TextChanged += IVs_TextChanged;
+            hpMax.KeyPress += DecInput_KeyPress;
+            hpMax.Leave += Filter_LostFocus;
             // 
             // hpFilter
             // 
-            this.hpFilter.AutoSize = true;
-            this.hpFilter.Location = new System.Drawing.Point(298, 30);
-            this.hpFilter.Name = "hpFilter";
-            this.hpFilter.Size = new System.Drawing.Size(26, 15);
-            this.hpFilter.TabIndex = 16;
-            this.hpFilter.Text = "HP:";
-            this.hpFilter.Click += new System.EventHandler(this.ResetFilters);
+            hpFilter.AutoSize = true;
+            hpFilter.Location = new System.Drawing.Point(298, 30);
+            hpFilter.Name = "hpFilter";
+            hpFilter.Size = new System.Drawing.Size(26, 15);
+            hpFilter.TabIndex = 16;
+            hpFilter.Text = "HP:";
+            hpFilter.Click += ResetFilters;
             // 
             // atkFilter
             // 
-            this.atkFilter.AutoSize = true;
-            this.atkFilter.Location = new System.Drawing.Point(296, 56);
-            this.atkFilter.Name = "atkFilter";
-            this.atkFilter.Size = new System.Drawing.Size(28, 15);
-            this.atkFilter.TabIndex = 17;
-            this.atkFilter.Text = "Atk:";
-            this.atkFilter.Click += new System.EventHandler(this.ResetFilters);
+            atkFilter.AutoSize = true;
+            atkFilter.Location = new System.Drawing.Point(296, 56);
+            atkFilter.Name = "atkFilter";
+            atkFilter.Size = new System.Drawing.Size(28, 15);
+            atkFilter.TabIndex = 17;
+            atkFilter.Text = "Atk:";
+            atkFilter.Click += ResetFilters;
             // 
             // defFilter
             // 
-            this.defFilter.AutoSize = true;
-            this.defFilter.Location = new System.Drawing.Point(296, 80);
-            this.defFilter.Name = "defFilter";
-            this.defFilter.Size = new System.Drawing.Size(28, 15);
-            this.defFilter.TabIndex = 18;
-            this.defFilter.Text = "Def:";
-            this.defFilter.Click += new System.EventHandler(this.ResetFilters);
+            defFilter.AutoSize = true;
+            defFilter.Location = new System.Drawing.Point(296, 80);
+            defFilter.Name = "defFilter";
+            defFilter.Size = new System.Drawing.Size(28, 15);
+            defFilter.TabIndex = 18;
+            defFilter.Text = "Def:";
+            defFilter.Click += ResetFilters;
             // 
             // spaFilter
             // 
-            this.spaFilter.AutoSize = true;
-            this.spaFilter.Location = new System.Drawing.Point(293, 106);
-            this.spaFilter.Name = "spaFilter";
-            this.spaFilter.Size = new System.Drawing.Size(31, 15);
-            this.spaFilter.TabIndex = 19;
-            this.spaFilter.Text = "SpA:";
-            this.spaFilter.Click += new System.EventHandler(this.ResetFilters);
+            spaFilter.AutoSize = true;
+            spaFilter.Location = new System.Drawing.Point(293, 106);
+            spaFilter.Name = "spaFilter";
+            spaFilter.Size = new System.Drawing.Size(31, 15);
+            spaFilter.TabIndex = 19;
+            spaFilter.Text = "SpA:";
+            spaFilter.Click += ResetFilters;
             // 
             // spdFilter
             // 
-            this.spdFilter.AutoSize = true;
-            this.spdFilter.Location = new System.Drawing.Point(293, 131);
-            this.spdFilter.Name = "spdFilter";
-            this.spdFilter.Size = new System.Drawing.Size(31, 15);
-            this.spdFilter.TabIndex = 20;
-            this.spdFilter.Text = "SpD:";
-            this.spdFilter.Click += new System.EventHandler(this.ResetFilters);
+            spdFilter.AutoSize = true;
+            spdFilter.Location = new System.Drawing.Point(293, 131);
+            spdFilter.Name = "spdFilter";
+            spdFilter.Size = new System.Drawing.Size(31, 15);
+            spdFilter.TabIndex = 20;
+            spdFilter.Text = "SpD:";
+            spdFilter.Click += ResetFilters;
             // 
             // speFilter
             // 
-            this.speFilter.AutoSize = true;
-            this.speFilter.Location = new System.Drawing.Point(295, 157);
-            this.speFilter.Name = "speFilter";
-            this.speFilter.Size = new System.Drawing.Size(29, 15);
-            this.speFilter.TabIndex = 21;
-            this.speFilter.Text = "Spe:";
-            this.speFilter.Click += new System.EventHandler(this.ResetFilters);
+            speFilter.AutoSize = true;
+            speFilter.Location = new System.Drawing.Point(295, 157);
+            speFilter.Name = "speFilter";
+            speFilter.Size = new System.Drawing.Size(29, 15);
+            speFilter.TabIndex = 21;
+            speFilter.Text = "Spe:";
+            speFilter.Click += ResetFilters;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(364, 30);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(12, 15);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "-";
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(364, 30);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(12, 15);
+            label10.TabIndex = 22;
+            label10.Text = "-";
             // 
             // hpMinFilter
             // 
-            this.hpMinFilter.Location = new System.Drawing.Point(427, 26);
-            this.hpMinFilter.Name = "hpMinFilter";
-            this.hpMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.hpMinFilter.TabIndex = 17;
-            this.hpMinFilter.Text = "0";
-            this.hpMinFilter.UseVisualStyleBackColor = true;
-            this.hpMinFilter.Click += new System.EventHandler(this.StatMinFilter_Click);
+            hpMinFilter.Location = new System.Drawing.Point(427, 26);
+            hpMinFilter.Name = "hpMinFilter";
+            hpMinFilter.Size = new System.Drawing.Size(29, 20);
+            hpMinFilter.TabIndex = 17;
+            hpMinFilter.Text = "0";
+            hpMinFilter.UseVisualStyleBackColor = true;
+            hpMinFilter.Click += StatMinFilter_Click;
             // 
             // hpMaxFilter
             // 
-            this.hpMaxFilter.Location = new System.Drawing.Point(461, 26);
-            this.hpMaxFilter.Name = "hpMaxFilter";
-            this.hpMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.hpMaxFilter.TabIndex = 18;
-            this.hpMaxFilter.Text = "31";
-            this.hpMaxFilter.UseVisualStyleBackColor = true;
-            this.hpMaxFilter.Click += new System.EventHandler(this.StatMaxFilter_Click);
+            hpMaxFilter.Location = new System.Drawing.Point(461, 26);
+            hpMaxFilter.Name = "hpMaxFilter";
+            hpMaxFilter.Size = new System.Drawing.Size(29, 20);
+            hpMaxFilter.TabIndex = 18;
+            hpMaxFilter.Text = "31";
+            hpMaxFilter.UseVisualStyleBackColor = true;
+            hpMaxFilter.Click += StatMaxFilter_Click;
             // 
             // InputTID
             // 
-            this.InputTID.Location = new System.Drawing.Point(66, 82);
-            this.InputTID.MaxLength = 5;
-            this.InputTID.Name = "InputTID";
-            this.InputTID.Size = new System.Drawing.Size(44, 23);
-            this.InputTID.TabIndex = 2;
-            this.InputTID.Text = "01390";
-            this.InputTID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
-            this.InputTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputTID.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputTID.Location = new System.Drawing.Point(66, 82);
+            InputTID.MaxLength = 5;
+            InputTID.Name = "InputTID";
+            InputTID.Size = new System.Drawing.Size(44, 23);
+            InputTID.TabIndex = 2;
+            InputTID.Text = "01390";
+            InputTID.TextChanged += TIDSID_TextChanged;
+            InputTID.KeyPress += DecInput_KeyPress;
+            InputTID.Leave += SetToZero_LostFocus;
             // 
             // InputSID
             // 
-            this.InputSID.Location = new System.Drawing.Point(124, 82);
-            this.InputSID.MaxLength = 5;
-            this.InputSID.Name = "InputSID";
-            this.InputSID.Size = new System.Drawing.Size(44, 23);
-            this.InputSID.TabIndex = 3;
-            this.InputSID.Text = "01337";
-            this.InputSID.TextChanged += new System.EventHandler(this.TIDSID_TextChanged);
-            this.InputSID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputSID.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputSID.Location = new System.Drawing.Point(124, 82);
+            InputSID.MaxLength = 5;
+            InputSID.Name = "InputSID";
+            InputSID.Size = new System.Drawing.Size(44, 23);
+            InputSID.TabIndex = 3;
+            InputSID.Text = "01337";
+            InputSID.TextChanged += TIDSID_TextChanged;
+            InputSID.KeyPress += DecInput_KeyPress;
+            InputSID.Leave += SetToZero_LostFocus;
             // 
             // LabelTIDSID
             // 
-            this.LabelTIDSID.AutoSize = true;
-            this.LabelTIDSID.Location = new System.Drawing.Point(5, 84);
-            this.LabelTIDSID.Name = "LabelTIDSID";
-            this.LabelTIDSID.Size = new System.Drawing.Size(55, 15);
-            this.LabelTIDSID.TabIndex = 47;
-            this.LabelTIDSID.Text = "TID / SID:";
+            LabelTIDSID.AutoSize = true;
+            LabelTIDSID.Location = new System.Drawing.Point(5, 84);
+            LabelTIDSID.Name = "LabelTIDSID";
+            LabelTIDSID.Size = new System.Drawing.Size(55, 15);
+            LabelTIDSID.TabIndex = 47;
+            LabelTIDSID.Text = "TID / SID:";
             // 
             // LabelIDsSlash
             // 
-            this.LabelIDsSlash.AutoSize = true;
-            this.LabelIDsSlash.Location = new System.Drawing.Point(111, 86);
-            this.LabelIDsSlash.Name = "LabelIDsSlash";
-            this.LabelIDsSlash.Size = new System.Drawing.Size(12, 15);
-            this.LabelIDsSlash.TabIndex = 48;
-            this.LabelIDsSlash.Text = "/";
+            LabelIDsSlash.AutoSize = true;
+            LabelIDsSlash.Location = new System.Drawing.Point(111, 86);
+            LabelIDsSlash.Name = "LabelIDsSlash";
+            LabelIDsSlash.Size = new System.Drawing.Size(12, 15);
+            LabelIDsSlash.TabIndex = 48;
+            LabelIDsSlash.Text = "/";
             // 
             // InputMaxAdv
             // 
-            this.InputMaxAdv.Location = new System.Drawing.Point(66, 134);
-            this.InputMaxAdv.MaxLength = 13;
-            this.InputMaxAdv.Name = "InputMaxAdv";
-            this.InputMaxAdv.Size = new System.Drawing.Size(102, 23);
-            this.InputMaxAdv.TabIndex = 4;
-            this.InputMaxAdv.Text = "50000";
-            this.InputMaxAdv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputMaxAdv.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputMaxAdv.Location = new System.Drawing.Point(66, 134);
+            InputMaxAdv.MaxLength = 13;
+            InputMaxAdv.Name = "InputMaxAdv";
+            InputMaxAdv.Size = new System.Drawing.Size(102, 23);
+            InputMaxAdv.TabIndex = 4;
+            InputMaxAdv.Text = "50000";
+            InputMaxAdv.KeyPress += DecInput_KeyPress;
+            InputMaxAdv.Leave += SetToZero_LostFocus;
             // 
             // LabelMaxAdv
             // 
-            this.LabelMaxAdv.AutoSize = true;
-            this.LabelMaxAdv.Location = new System.Drawing.Point(45, 137);
-            this.LabelMaxAdv.Name = "LabelMaxAdv";
-            this.LabelMaxAdv.Size = new System.Drawing.Size(15, 15);
-            this.LabelMaxAdv.TabIndex = 50;
-            this.LabelMaxAdv.Text = "+";
+            LabelMaxAdv.AutoSize = true;
+            LabelMaxAdv.Location = new System.Drawing.Point(45, 137);
+            LabelMaxAdv.Name = "LabelMaxAdv";
+            LabelMaxAdv.Size = new System.Drawing.Size(15, 15);
+            LabelMaxAdv.TabIndex = 50;
+            LabelMaxAdv.Text = "+";
             // 
             // LabelMark
             // 
-            this.LabelMark.AutoSize = true;
-            this.LabelMark.Location = new System.Drawing.Point(435, 268);
-            this.LabelMark.Name = "LabelMark";
-            this.LabelMark.Size = new System.Drawing.Size(37, 15);
-            this.LabelMark.TabIndex = 52;
-            this.LabelMark.Text = "Mark:";
+            LabelMark.AutoSize = true;
+            LabelMark.Location = new System.Drawing.Point(436, 261);
+            LabelMark.Name = "LabelMark";
+            LabelMark.Size = new System.Drawing.Size(37, 15);
+            LabelMark.TabIndex = 52;
+            LabelMark.Text = "Mark:";
             // 
             // ImageRareMark
             // 
-            this.ImageRareMark.Image = global::SWSH_OWRNG_Generator.WinForms.Properties.Resources.raremark;
-            this.ImageRareMark.Location = new System.Drawing.Point(706, 339);
-            this.ImageRareMark.Name = "ImageRareMark";
-            this.ImageRareMark.Size = new System.Drawing.Size(91, 90);
-            this.ImageRareMark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ImageRareMark.TabIndex = 53;
-            this.ImageRareMark.TabStop = false;
+            ImageRareMark.Image = Properties.Resources.raremark;
+            ImageRareMark.Location = new System.Drawing.Point(706, 339);
+            ImageRareMark.Name = "ImageRareMark";
+            ImageRareMark.Size = new System.Drawing.Size(91, 90);
+            ImageRareMark.SizeMode = PictureBoxSizeMode.CenterImage;
+            ImageRareMark.TabIndex = 53;
+            ImageRareMark.TabStop = false;
             // 
             // SelectedMark
             // 
-            this.SelectedMark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SelectedMark.FormattingEnabled = true;
-            this.SelectedMark.Items.AddRange(new object[] {
-            "Ignore",
-            "None",
-            "Any Mark",
-            "Any Personality",
-            "Uncommon",
-            "Time",
-            "Weather",
-            "Fishing",
-            "Rare",
-            "Rowdy",
-            "AbsentMinded",
-            "Jittery",
-            "Excited",
-            "Charismatic",
-            "Calmness",
-            "Intense",
-            "ZonedOut",
-            "Joyful",
-            "Angry",
-            "Smiley",
-            "Teary",
-            "Upbeat",
-            "Peeved",
-            "Intellectual",
-            "Ferocious",
-            "Crafty",
-            "Scowling",
-            "Kindly",
-            "Flustered",
-            "PumpedUp",
-            "ZeroEnergy",
-            "Prideful",
-            "Unsure",
-            "Humble",
-            "Thorny",
-            "Vigor",
-            "Slump"});
-            this.SelectedMark.Location = new System.Drawing.Point(475, 265);
-            this.SelectedMark.Name = "SelectedMark";
-            this.SelectedMark.Size = new System.Drawing.Size(103, 23);
-            this.SelectedMark.TabIndex = 29;
+            SelectedMark.DropDownStyle = ComboBoxStyle.DropDownList;
+            SelectedMark.FormattingEnabled = true;
+            SelectedMark.Items.AddRange(new object[] { "Ignore", "None", "Any Mark", "Any Personality", "Uncommon", "Time", "Weather", "Fishing", "Rare", "Rowdy", "AbsentMinded", "Jittery", "Excited", "Charismatic", "Calmness", "Intense", "ZonedOut", "Joyful", "Angry", "Smiley", "Teary", "Upbeat", "Peeved", "Intellectual", "Ferocious", "Crafty", "Scowling", "Kindly", "Flustered", "PumpedUp", "ZeroEnergy", "Prideful", "Unsure", "Humble", "Thorny", "Vigor", "Slump" });
+            SelectedMark.Location = new System.Drawing.Point(475, 258);
+            SelectedMark.Name = "SelectedMark";
+            SelectedMark.Size = new System.Drawing.Size(103, 23);
+            SelectedMark.TabIndex = 29;
             // 
             // CheckShinyCharm
             // 
-            this.CheckShinyCharm.AutoSize = true;
-            this.CheckShinyCharm.Location = new System.Drawing.Point(174, 85);
-            this.CheckShinyCharm.Name = "CheckShinyCharm";
-            this.CheckShinyCharm.Size = new System.Drawing.Size(94, 19);
-            this.CheckShinyCharm.TabIndex = 31;
-            this.CheckShinyCharm.Text = "Shiny Charm";
-            this.CheckShinyCharm.UseVisualStyleBackColor = true;
-            this.CheckShinyCharm.CheckedChanged += new System.EventHandler(this.SaveCheckbox_CheckChanged);
+            CheckShinyCharm.AutoSize = true;
+            CheckShinyCharm.Location = new System.Drawing.Point(174, 85);
+            CheckShinyCharm.Name = "CheckShinyCharm";
+            CheckShinyCharm.Size = new System.Drawing.Size(94, 19);
+            CheckShinyCharm.TabIndex = 31;
+            CheckShinyCharm.Text = "Shiny Charm";
+            CheckShinyCharm.UseVisualStyleBackColor = true;
+            CheckShinyCharm.CheckedChanged += SaveCheckbox_CheckChanged;
             // 
             // CheckMarkCharm
             // 
-            this.CheckMarkCharm.AutoSize = true;
-            this.CheckMarkCharm.Location = new System.Drawing.Point(174, 110);
-            this.CheckMarkCharm.Name = "CheckMarkCharm";
-            this.CheckMarkCharm.Size = new System.Drawing.Size(92, 19);
-            this.CheckMarkCharm.TabIndex = 33;
-            this.CheckMarkCharm.Text = "Mark Charm";
-            this.CheckMarkCharm.UseVisualStyleBackColor = true;
-            this.CheckMarkCharm.CheckedChanged += new System.EventHandler(this.SaveCheckbox_CheckChanged);
+            CheckMarkCharm.AutoSize = true;
+            CheckMarkCharm.Location = new System.Drawing.Point(174, 110);
+            CheckMarkCharm.Name = "CheckMarkCharm";
+            CheckMarkCharm.Size = new System.Drawing.Size(92, 19);
+            CheckMarkCharm.TabIndex = 33;
+            CheckMarkCharm.Text = "Mark Charm";
+            CheckMarkCharm.UseVisualStyleBackColor = true;
+            CheckMarkCharm.CheckedChanged += SaveCheckbox_CheckChanged;
             // 
             // CheckWeather
             // 
-            this.CheckWeather.AutoSize = true;
-            this.CheckWeather.Location = new System.Drawing.Point(12, 183);
-            this.CheckWeather.Name = "CheckWeather";
-            this.CheckWeather.Size = new System.Drawing.Size(70, 19);
-            this.CheckWeather.TabIndex = 35;
-            this.CheckWeather.Text = "Weather";
-            this.CheckWeather.UseVisualStyleBackColor = true;
+            CheckWeather.AutoSize = true;
+            CheckWeather.Location = new System.Drawing.Point(12, 183);
+            CheckWeather.Name = "CheckWeather";
+            CheckWeather.Size = new System.Drawing.Size(70, 19);
+            CheckWeather.TabIndex = 35;
+            CheckWeather.Text = "Weather";
+            CheckWeather.UseVisualStyleBackColor = true;
             // 
             // CheckStatic
             // 
-            this.CheckStatic.AutoSize = true;
-            this.CheckStatic.Location = new System.Drawing.Point(12, 160);
-            this.CheckStatic.Name = "CheckStatic";
-            this.CheckStatic.Size = new System.Drawing.Size(55, 19);
-            this.CheckStatic.TabIndex = 32;
-            this.CheckStatic.Text = "Static";
-            this.CheckStatic.UseVisualStyleBackColor = true;
-            this.CheckStatic.CheckedChanged += new System.EventHandler(this.CheckStatic_CheckedChanged);
+            CheckStatic.AutoSize = true;
+            CheckStatic.Location = new System.Drawing.Point(12, 160);
+            CheckStatic.Name = "CheckStatic";
+            CheckStatic.Size = new System.Drawing.Size(55, 19);
+            CheckStatic.TabIndex = 32;
+            CheckStatic.Text = "Static";
+            CheckStatic.UseVisualStyleBackColor = true;
+            CheckStatic.CheckedChanged += CheckStatic_CheckedChanged;
             // 
             // CheckFishing
             // 
-            this.CheckFishing.AutoSize = true;
-            this.CheckFishing.Location = new System.Drawing.Point(12, 206);
-            this.CheckFishing.Name = "CheckFishing";
-            this.CheckFishing.Size = new System.Drawing.Size(64, 19);
-            this.CheckFishing.TabIndex = 34;
-            this.CheckFishing.Text = "Fishing";
-            this.CheckFishing.UseVisualStyleBackColor = true;
+            CheckFishing.AutoSize = true;
+            CheckFishing.Location = new System.Drawing.Point(12, 206);
+            CheckFishing.Name = "CheckFishing";
+            CheckFishing.Size = new System.Drawing.Size(64, 19);
+            CheckFishing.TabIndex = 34;
+            CheckFishing.Text = "Fishing";
+            CheckFishing.UseVisualStyleBackColor = true;
             // 
             // CheckHeldItem
             // 
-            this.CheckHeldItem.AutoSize = true;
-            this.CheckHeldItem.Location = new System.Drawing.Point(12, 252);
-            this.CheckHeldItem.Name = "CheckHeldItem";
-            this.CheckHeldItem.Size = new System.Drawing.Size(124, 19);
-            this.CheckHeldItem.TabIndex = 36;
-            this.CheckHeldItem.Text = "Random held item";
-            this.CheckHeldItem.UseVisualStyleBackColor = true;
+            CheckHeldItem.AutoSize = true;
+            CheckHeldItem.Location = new System.Drawing.Point(12, 252);
+            CheckHeldItem.Name = "CheckHeldItem";
+            CheckHeldItem.Size = new System.Drawing.Size(124, 19);
+            CheckHeldItem.TabIndex = 36;
+            CheckHeldItem.Text = "Random held item";
+            CheckHeldItem.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(216, 284);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(12, 15);
-            this.label20.TabIndex = 64;
-            this.label20.Text = "-";
+            label20.AutoSize = true;
+            label20.Location = new System.Drawing.Point(216, 284);
+            label20.Name = "label20";
+            label20.Size = new System.Drawing.Size(12, 15);
+            label20.TabIndex = 64;
+            label20.Text = "-";
             // 
             // InputLevelMax
             // 
-            this.InputLevelMax.Location = new System.Drawing.Point(232, 281);
-            this.InputLevelMax.MaxLength = 2;
-            this.InputLevelMax.Name = "InputLevelMax";
-            this.InputLevelMax.Size = new System.Drawing.Size(28, 23);
-            this.InputLevelMax.TabIndex = 39;
-            this.InputLevelMax.Text = "0";
-            this.InputLevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.InputLevelMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.InputLevelMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputLevelMax.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputLevelMax.Location = new System.Drawing.Point(232, 281);
+            InputLevelMax.MaxLength = 2;
+            InputLevelMax.Name = "InputLevelMax";
+            InputLevelMax.Size = new System.Drawing.Size(28, 23);
+            InputLevelMax.TabIndex = 39;
+            InputLevelMax.Text = "0";
+            InputLevelMax.TextAlign = HorizontalAlignment.Center;
+            InputLevelMax.TextChanged += LevelSlot_TextChanged;
+            InputLevelMax.KeyPress += DecInput_KeyPress;
+            InputLevelMax.Leave += SetToZero_LostFocus;
             // 
             // InputLevelMin
             // 
-            this.InputLevelMin.Location = new System.Drawing.Point(182, 281);
-            this.InputLevelMin.MaxLength = 2;
-            this.InputLevelMin.Name = "InputLevelMin";
-            this.InputLevelMin.Size = new System.Drawing.Size(28, 23);
-            this.InputLevelMin.TabIndex = 38;
-            this.InputLevelMin.Text = "0";
-            this.InputLevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.InputLevelMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.InputLevelMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputLevelMin.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputLevelMin.Location = new System.Drawing.Point(182, 281);
+            InputLevelMin.MaxLength = 2;
+            InputLevelMin.Name = "InputLevelMin";
+            InputLevelMin.Size = new System.Drawing.Size(28, 23);
+            InputLevelMin.TabIndex = 38;
+            InputLevelMin.Text = "0";
+            InputLevelMin.TextAlign = HorizontalAlignment.Center;
+            InputLevelMin.TextChanged += LevelSlot_TextChanged;
+            InputLevelMin.KeyPress += DecInput_KeyPress;
+            InputLevelMin.Leave += SetToZero_LostFocus;
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(216, 258);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(12, 15);
-            this.label21.TabIndex = 67;
-            this.label21.Text = "-";
+            label21.AutoSize = true;
+            label21.Location = new System.Drawing.Point(216, 258);
+            label21.Name = "label21";
+            label21.Size = new System.Drawing.Size(12, 15);
+            label21.TabIndex = 67;
+            label21.Text = "-";
             // 
             // InputSlotMax
             // 
-            this.InputSlotMax.Location = new System.Drawing.Point(232, 255);
-            this.InputSlotMax.MaxLength = 2;
-            this.InputSlotMax.Name = "InputSlotMax";
-            this.InputSlotMax.Size = new System.Drawing.Size(28, 23);
-            this.InputSlotMax.TabIndex = 41;
-            this.InputSlotMax.Text = "99";
-            this.InputSlotMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.InputSlotMax.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.InputSlotMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputSlotMax.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputSlotMax.Location = new System.Drawing.Point(232, 255);
+            InputSlotMax.MaxLength = 2;
+            InputSlotMax.Name = "InputSlotMax";
+            InputSlotMax.Size = new System.Drawing.Size(28, 23);
+            InputSlotMax.TabIndex = 41;
+            InputSlotMax.Text = "99";
+            InputSlotMax.TextAlign = HorizontalAlignment.Center;
+            InputSlotMax.TextChanged += LevelSlot_TextChanged;
+            InputSlotMax.KeyPress += DecInput_KeyPress;
+            InputSlotMax.Leave += SetToZero_LostFocus;
             // 
             // InputSlotMin
             // 
-            this.InputSlotMin.Location = new System.Drawing.Point(182, 255);
-            this.InputSlotMin.MaxLength = 2;
-            this.InputSlotMin.Name = "InputSlotMin";
-            this.InputSlotMin.Size = new System.Drawing.Size(28, 23);
-            this.InputSlotMin.TabIndex = 40;
-            this.InputSlotMin.Text = "0";
-            this.InputSlotMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.InputSlotMin.TextChanged += new System.EventHandler(this.LevelSlot_TextChanged);
-            this.InputSlotMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputSlotMin.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputSlotMin.Location = new System.Drawing.Point(182, 255);
+            InputSlotMin.MaxLength = 2;
+            InputSlotMin.Name = "InputSlotMin";
+            InputSlotMin.Size = new System.Drawing.Size(28, 23);
+            InputSlotMin.TabIndex = 40;
+            InputSlotMin.Text = "0";
+            InputSlotMin.TextAlign = HorizontalAlignment.Center;
+            InputSlotMin.TextChanged += LevelSlot_TextChanged;
+            InputSlotMin.KeyPress += DecInput_KeyPress;
+            InputSlotMin.Leave += SetToZero_LostFocus;
             // 
             // LabelLevel
             // 
-            this.LabelLevel.AutoSize = true;
-            this.LabelLevel.Location = new System.Drawing.Point(139, 284);
-            this.LabelLevel.Name = "LabelLevel";
-            this.LabelLevel.Size = new System.Drawing.Size(37, 15);
-            this.LabelLevel.TabIndex = 68;
-            this.LabelLevel.Text = "Level:";
+            LabelLevel.AutoSize = true;
+            LabelLevel.Location = new System.Drawing.Point(139, 284);
+            LabelLevel.Name = "LabelLevel";
+            LabelLevel.Size = new System.Drawing.Size(37, 15);
+            LabelLevel.TabIndex = 68;
+            LabelLevel.Text = "Level:";
             // 
             // LabelSlot
             // 
-            this.LabelSlot.AutoSize = true;
-            this.LabelSlot.Location = new System.Drawing.Point(146, 258);
-            this.LabelSlot.Name = "LabelSlot";
-            this.LabelSlot.Size = new System.Drawing.Size(30, 15);
-            this.LabelSlot.TabIndex = 69;
-            this.LabelSlot.Text = "Slot:";
+            LabelSlot.AutoSize = true;
+            LabelSlot.Location = new System.Drawing.Point(146, 258);
+            LabelSlot.Name = "LabelSlot";
+            LabelSlot.Size = new System.Drawing.Size(30, 15);
+            LabelSlot.TabIndex = 69;
+            LabelSlot.Text = "Slot:";
             // 
             // ButtonSearch
             // 
-            this.ButtonSearch.Location = new System.Drawing.Point(247, 377);
-            this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.Size = new System.Drawing.Size(341, 46);
-            this.ButtonSearch.TabIndex = 42;
-            this.ButtonSearch.Text = "Search!";
-            this.ButtonSearch.UseVisualStyleBackColor = true;
-            this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
+            ButtonSearch.Location = new System.Drawing.Point(247, 377);
+            ButtonSearch.Name = "ButtonSearch";
+            ButtonSearch.Size = new System.Drawing.Size(341, 46);
+            ButtonSearch.TabIndex = 42;
+            ButtonSearch.Text = "Search!";
+            ButtonSearch.UseVisualStyleBackColor = true;
+            ButtonSearch.Click += ButtonSearch_Click;
             // 
             // SelectedShiny
             // 
-            this.SelectedShiny.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SelectedShiny.FormattingEnabled = true;
-            this.SelectedShiny.Items.AddRange(new object[] {
-            "Ignore",
-            "No",
-            "Square",
-            "Star",
-            "Star/Square"});
-            this.SelectedShiny.Location = new System.Drawing.Point(475, 238);
-            this.SelectedShiny.Name = "SelectedShiny";
-            this.SelectedShiny.Size = new System.Drawing.Size(103, 23);
-            this.SelectedShiny.TabIndex = 30;
+            SelectedShiny.DropDownStyle = ComboBoxStyle.DropDownList;
+            SelectedShiny.FormattingEnabled = true;
+            SelectedShiny.Items.AddRange(new object[] { "Ignore", "No", "Square", "Star", "Star/Square" });
+            SelectedShiny.Location = new System.Drawing.Point(475, 231);
+            SelectedShiny.Name = "SelectedShiny";
+            SelectedShiny.Size = new System.Drawing.Size(103, 23);
+            SelectedShiny.TabIndex = 30;
             // 
             // LabelShiny
             // 
-            this.LabelShiny.AutoSize = true;
-            this.LabelShiny.Location = new System.Drawing.Point(433, 242);
-            this.LabelShiny.Name = "LabelShiny";
-            this.LabelShiny.Size = new System.Drawing.Size(39, 15);
-            this.LabelShiny.TabIndex = 71;
-            this.LabelShiny.Text = "Shiny:";
+            LabelShiny.AutoSize = true;
+            LabelShiny.Location = new System.Drawing.Point(434, 235);
+            LabelShiny.Name = "LabelShiny";
+            LabelShiny.Size = new System.Drawing.Size(39, 15);
+            LabelShiny.TabIndex = 71;
+            LabelShiny.Text = "Shiny:";
             // 
             // Results
             // 
-            this.Results.AllowUserToAddRows = false;
-            this.Results.AllowUserToDeleteRows = false;
-            this.Results.AllowUserToResizeRows = false;
-            this.Results.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Results.AutoGenerateColumns = false;
-            this.Results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Frame,
-            this.TID,
-            this.SID,
-            this.Animation,
-            this.Jump,
-            this.Steps,
-            this.Brilliant,
-            this.Level,
-            this.Slot,
-            this.PID,
-            this.EC,
-            this.Shiny,
-            this.Ability,
-            this.Nature,
-            this.Gender,
-            this.HP,
-            this.Atk,
-            this.Def,
-            this.SpA,
-            this.SpD,
-            this.Spe,
-            this.Mark,
-            this.State0,
-            this.State1});
-            this.Results.DataSource = this.generatorBindingSource;
-            this.Results.Location = new System.Drawing.Point(12, 463);
-            this.Results.MultiSelect = false;
-            this.Results.Name = "Results";
-            this.Results.ReadOnly = true;
-            this.Results.RowHeadersVisible = false;
-            this.Results.RowHeadersWidth = 62;
-            this.Results.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Results.Size = new System.Drawing.Size(808, 224);
-            this.Results.TabIndex = 73;
+            Results.AllowUserToAddRows = false;
+            Results.AllowUserToDeleteRows = false;
+            Results.AllowUserToResizeRows = false;
+            Results.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Results.AutoGenerateColumns = false;
+            Results.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Results.Columns.AddRange(new DataGridViewColumn[] { Frame, TID, SID, Animation, Jump, Steps, Brilliant, Level, Slot, PID, EC, Shiny, Ability, Nature, Gender, HP, Atk, Def, SpA, SpD, Spe, Height, Mark, State0, State1 });
+            Results.DataSource = generatorBindingSource;
+            Results.Location = new System.Drawing.Point(12, 463);
+            Results.MultiSelect = false;
+            Results.Name = "Results";
+            Results.ReadOnly = true;
+            Results.RowHeadersVisible = false;
+            Results.RowHeadersWidth = 62;
+            Results.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            Results.Size = new System.Drawing.Size(808, 224);
+            Results.TabIndex = 73;
             // 
             // Frame
             // 
-            this.Frame.DataPropertyName = "Advances";
-            this.Frame.HeaderText = "Frame";
-            this.Frame.MinimumWidth = 8;
-            this.Frame.Name = "Frame";
-            this.Frame.ReadOnly = true;
-            this.Frame.Width = 150;
+            Frame.DataPropertyName = "Advances";
+            Frame.HeaderText = "Frame";
+            Frame.MinimumWidth = 8;
+            Frame.Name = "Frame";
+            Frame.ReadOnly = true;
+            Frame.Width = 150;
             // 
             // TID
             // 
-            this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TID.DataPropertyName = "TID";
-            this.TID.HeaderText = "TID";
-            this.TID.MinimumWidth = 8;
-            this.TID.Name = "TID";
-            this.TID.ReadOnly = true;
-            this.TID.Width = 49;
+            TID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            TID.DataPropertyName = "TID";
+            TID.HeaderText = "TID";
+            TID.MinimumWidth = 8;
+            TID.Name = "TID";
+            TID.ReadOnly = true;
+            TID.Width = 49;
             // 
             // SID
             // 
-            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.SID.DataPropertyName = "SID";
-            this.SID.HeaderText = "SID";
-            this.SID.MinimumWidth = 8;
-            this.SID.Name = "SID";
-            this.SID.ReadOnly = true;
-            this.SID.Width = 49;
+            SID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            SID.DataPropertyName = "SID";
+            SID.HeaderText = "SID";
+            SID.MinimumWidth = 8;
+            SID.Name = "SID";
+            SID.ReadOnly = true;
+            SID.Width = 49;
             // 
             // Animation
             // 
-            this.Animation.DataPropertyName = "Animation";
-            this.Animation.HeaderText = "Animation";
-            this.Animation.MinimumWidth = 8;
-            this.Animation.Name = "Animation";
-            this.Animation.ReadOnly = true;
-            this.Animation.Width = 60;
+            Animation.DataPropertyName = "Animation";
+            Animation.HeaderText = "Animation";
+            Animation.MinimumWidth = 8;
+            Animation.Name = "Animation";
+            Animation.ReadOnly = true;
+            Animation.Width = 60;
             // 
             // Jump
             // 
-            this.Jump.DataPropertyName = "Jump";
-            this.Jump.HeaderText = "Jump";
-            this.Jump.Name = "Jump";
-            this.Jump.ReadOnly = true;
-            this.Jump.Width = 59;
+            Jump.DataPropertyName = "Jump";
+            Jump.HeaderText = "Jump";
+            Jump.Name = "Jump";
+            Jump.ReadOnly = true;
+            Jump.Width = 59;
             // 
             // Steps
             // 
-            this.Steps.DataPropertyName = "Steps";
-            this.Steps.HeaderText = "Steps";
-            this.Steps.Name = "Steps";
-            this.Steps.ReadOnly = true;
-            this.Steps.Width = 59;
+            Steps.DataPropertyName = "Steps";
+            Steps.HeaderText = "Steps";
+            Steps.Name = "Steps";
+            Steps.ReadOnly = true;
+            Steps.Width = 59;
             // 
             // Brilliant
             // 
-            this.Brilliant.DataPropertyName = "Brilliant";
-            this.Brilliant.HeaderText = "Brilliant";
-            this.Brilliant.MinimumWidth = 6;
-            this.Brilliant.Name = "Brilliant";
-            this.Brilliant.ReadOnly = true;
-            this.Brilliant.Width = 59;
+            Brilliant.DataPropertyName = "Brilliant";
+            Brilliant.HeaderText = "Brilliant";
+            Brilliant.MinimumWidth = 6;
+            Brilliant.Name = "Brilliant";
+            Brilliant.ReadOnly = true;
+            Brilliant.Width = 59;
             // 
             // Level
             // 
-            this.Level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Level.DataPropertyName = "Level";
-            this.Level.HeaderText = "Level";
-            this.Level.MinimumWidth = 8;
-            this.Level.Name = "Level";
-            this.Level.ReadOnly = true;
-            this.Level.Width = 59;
+            Level.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            Level.DataPropertyName = "Level";
+            Level.HeaderText = "Level";
+            Level.MinimumWidth = 8;
+            Level.Name = "Level";
+            Level.ReadOnly = true;
+            Level.Width = 59;
             // 
             // Slot
             // 
-            this.Slot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Slot.DataPropertyName = "Slot";
-            this.Slot.HeaderText = "Slot";
-            this.Slot.MinimumWidth = 8;
-            this.Slot.Name = "Slot";
-            this.Slot.ReadOnly = true;
-            this.Slot.Width = 52;
+            Slot.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            Slot.DataPropertyName = "Slot";
+            Slot.HeaderText = "Slot";
+            Slot.MinimumWidth = 8;
+            Slot.Name = "Slot";
+            Slot.ReadOnly = true;
+            Slot.Width = 52;
             // 
             // PID
             // 
-            this.PID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.PID.DataPropertyName = "PID";
-            this.PID.HeaderText = "PID";
-            this.PID.MinimumWidth = 8;
-            this.PID.Name = "PID";
-            this.PID.ReadOnly = true;
-            this.PID.Width = 50;
+            PID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            PID.DataPropertyName = "PID";
+            PID.HeaderText = "PID";
+            PID.MinimumWidth = 8;
+            PID.Name = "PID";
+            PID.ReadOnly = true;
+            PID.Width = 50;
             // 
             // EC
             // 
-            this.EC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.EC.DataPropertyName = "EC";
-            this.EC.HeaderText = "EC";
-            this.EC.MinimumWidth = 8;
-            this.EC.Name = "EC";
-            this.EC.ReadOnly = true;
-            this.EC.Width = 46;
+            EC.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            EC.DataPropertyName = "EC";
+            EC.HeaderText = "EC";
+            EC.MinimumWidth = 8;
+            EC.Name = "EC";
+            EC.ReadOnly = true;
+            EC.Width = 46;
             // 
             // Shiny
             // 
-            this.Shiny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Shiny.DataPropertyName = "Shiny";
-            this.Shiny.HeaderText = "Shiny";
-            this.Shiny.MinimumWidth = 8;
-            this.Shiny.Name = "Shiny";
-            this.Shiny.ReadOnly = true;
-            this.Shiny.Width = 61;
+            Shiny.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Shiny.DataPropertyName = "Shiny";
+            Shiny.HeaderText = "Shiny";
+            Shiny.MinimumWidth = 8;
+            Shiny.Name = "Shiny";
+            Shiny.ReadOnly = true;
+            Shiny.Width = 61;
             // 
             // Ability
             // 
-            this.Ability.DataPropertyName = "Ability";
-            this.Ability.HeaderText = "Ability";
-            this.Ability.MinimumWidth = 8;
-            this.Ability.Name = "Ability";
-            this.Ability.ReadOnly = true;
-            this.Ability.Width = 50;
+            Ability.DataPropertyName = "Ability";
+            Ability.HeaderText = "Ability";
+            Ability.MinimumWidth = 8;
+            Ability.Name = "Ability";
+            Ability.ReadOnly = true;
+            Ability.Width = 50;
             // 
             // Nature
             // 
-            this.Nature.DataPropertyName = "Nature";
-            this.Nature.HeaderText = "Nature";
-            this.Nature.MinimumWidth = 8;
-            this.Nature.Name = "Nature";
-            this.Nature.ReadOnly = true;
-            this.Nature.Width = 75;
+            Nature.DataPropertyName = "Nature";
+            Nature.HeaderText = "Nature";
+            Nature.MinimumWidth = 8;
+            Nature.Name = "Nature";
+            Nature.ReadOnly = true;
+            Nature.Width = 75;
             // 
             // Gender
             // 
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "Gender";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            this.Gender.Width = 125;
+            Gender.DataPropertyName = "Gender";
+            Gender.HeaderText = "Gender";
+            Gender.MinimumWidth = 6;
+            Gender.Name = "Gender";
+            Gender.ReadOnly = true;
+            Gender.Width = 125;
             // 
             // HP
             // 
-            this.HP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.HP.DataPropertyName = "HP";
-            this.HP.HeaderText = "HP";
-            this.HP.MinimumWidth = 8;
-            this.HP.Name = "HP";
-            this.HP.ReadOnly = true;
-            this.HP.Width = 34;
+            HP.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            HP.DataPropertyName = "HP";
+            HP.HeaderText = "HP";
+            HP.MinimumWidth = 8;
+            HP.Name = "HP";
+            HP.ReadOnly = true;
+            HP.Width = 34;
             // 
             // Atk
             // 
-            this.Atk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Atk.DataPropertyName = "Atk";
-            this.Atk.HeaderText = "Atk";
-            this.Atk.MinimumWidth = 8;
-            this.Atk.Name = "Atk";
-            this.Atk.ReadOnly = true;
-            this.Atk.Width = 34;
+            Atk.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Atk.DataPropertyName = "Atk";
+            Atk.HeaderText = "Atk";
+            Atk.MinimumWidth = 8;
+            Atk.Name = "Atk";
+            Atk.ReadOnly = true;
+            Atk.Width = 34;
             // 
             // Def
             // 
-            this.Def.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Def.DataPropertyName = "Def";
-            this.Def.HeaderText = "Def";
-            this.Def.MinimumWidth = 8;
-            this.Def.Name = "Def";
-            this.Def.ReadOnly = true;
-            this.Def.Width = 34;
+            Def.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Def.DataPropertyName = "Def";
+            Def.HeaderText = "Def";
+            Def.MinimumWidth = 8;
+            Def.Name = "Def";
+            Def.ReadOnly = true;
+            Def.Width = 34;
             // 
             // SpA
             // 
-            this.SpA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SpA.DataPropertyName = "SpA";
-            this.SpA.HeaderText = "SpA";
-            this.SpA.MinimumWidth = 8;
-            this.SpA.Name = "SpA";
-            this.SpA.ReadOnly = true;
-            this.SpA.Width = 34;
+            SpA.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            SpA.DataPropertyName = "SpA";
+            SpA.HeaderText = "SpA";
+            SpA.MinimumWidth = 8;
+            SpA.Name = "SpA";
+            SpA.ReadOnly = true;
+            SpA.Width = 34;
             // 
             // SpD
             // 
-            this.SpD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SpD.DataPropertyName = "SpD";
-            this.SpD.HeaderText = "SpD";
-            this.SpD.MinimumWidth = 8;
-            this.SpD.Name = "SpD";
-            this.SpD.ReadOnly = true;
-            this.SpD.Width = 34;
+            SpD.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            SpD.DataPropertyName = "SpD";
+            SpD.HeaderText = "SpD";
+            SpD.MinimumWidth = 8;
+            SpD.Name = "SpD";
+            SpD.ReadOnly = true;
+            SpD.Width = 34;
             // 
             // Spe
             // 
-            this.Spe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Spe.DataPropertyName = "Spe";
-            this.Spe.HeaderText = "Spe";
-            this.Spe.MinimumWidth = 8;
-            this.Spe.Name = "Spe";
-            this.Spe.ReadOnly = true;
-            this.Spe.Width = 34;
+            Spe.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Spe.DataPropertyName = "Spe";
+            Spe.HeaderText = "Spe";
+            Spe.MinimumWidth = 8;
+            Spe.Name = "Spe";
+            Spe.ReadOnly = true;
+            Spe.Width = 34;
+            // 
+            // Height
+            // 
+            Height.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Height.DataPropertyName = "Height";
+            Height.HeaderText = "Height";
+            Height.MinimumWidth = 8;
+            Height.Name = "Height";
+            Height.ReadOnly = true;
+            Height.Width = 68;
             // 
             // Mark
             // 
-            this.Mark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Mark.DataPropertyName = "Mark";
-            this.Mark.HeaderText = "Mark";
-            this.Mark.MinimumWidth = 8;
-            this.Mark.Name = "Mark";
-            this.Mark.ReadOnly = true;
-            this.Mark.Width = 59;
+            Mark.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Mark.DataPropertyName = "Mark";
+            Mark.HeaderText = "Mark";
+            Mark.MinimumWidth = 8;
+            Mark.Name = "Mark";
+            Mark.ReadOnly = true;
+            Mark.Width = 59;
             // 
             // State0
             // 
-            this.State0.DataPropertyName = "State0";
-            this.State0.HeaderText = "State0";
-            this.State0.MinimumWidth = 8;
-            this.State0.Name = "State0";
-            this.State0.ReadOnly = true;
-            this.State0.Width = 150;
+            State0.DataPropertyName = "State0";
+            State0.HeaderText = "State0";
+            State0.MinimumWidth = 8;
+            State0.Name = "State0";
+            State0.ReadOnly = true;
+            State0.Width = 150;
             // 
             // State1
             // 
-            this.State1.DataPropertyName = "State1";
-            this.State1.HeaderText = "State1";
-            this.State1.MinimumWidth = 8;
-            this.State1.Name = "State1";
-            this.State1.ReadOnly = true;
-            this.State1.Width = 150;
+            State1.DataPropertyName = "State1";
+            State1.HeaderText = "State1";
+            State1.MinimumWidth = 8;
+            State1.Name = "State1";
+            State1.ReadOnly = true;
+            State1.Width = 150;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(364, 80);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(12, 15);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "-";
+            label12.AutoSize = true;
+            label12.Location = new System.Drawing.Point(364, 80);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(12, 15);
+            label12.TabIndex = 26;
+            label12.Text = "-";
             // 
             // speMinFilter
             // 
-            this.speMinFilter.Location = new System.Drawing.Point(426, 154);
-            this.speMinFilter.Name = "speMinFilter";
-            this.speMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.speMinFilter.TabIndex = 27;
-            this.speMinFilter.Text = "0";
-            this.speMinFilter.UseVisualStyleBackColor = true;
-            this.speMinFilter.Click += new System.EventHandler(this.StatMinFilter_Click);
+            speMinFilter.Location = new System.Drawing.Point(426, 154);
+            speMinFilter.Name = "speMinFilter";
+            speMinFilter.Size = new System.Drawing.Size(29, 20);
+            speMinFilter.TabIndex = 27;
+            speMinFilter.Text = "0";
+            speMinFilter.UseVisualStyleBackColor = true;
+            speMinFilter.Click += StatMinFilter_Click;
             // 
             // defMax
             // 
-            this.defMax.Location = new System.Drawing.Point(380, 77);
-            this.defMax.Name = "defMax";
-            this.defMax.Size = new System.Drawing.Size(28, 23);
-            this.defMax.TabIndex = 10;
-            this.defMax.Text = "31";
-            this.defMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.defMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.defMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.defMax.Leave += new System.EventHandler(this.Filter_LostFocus);
+            defMax.Location = new System.Drawing.Point(380, 77);
+            defMax.Name = "defMax";
+            defMax.Size = new System.Drawing.Size(28, 23);
+            defMax.TabIndex = 10;
+            defMax.Text = "31";
+            defMax.TextAlign = HorizontalAlignment.Center;
+            defMax.TextChanged += IVs_TextChanged;
+            defMax.KeyPress += DecInput_KeyPress;
+            defMax.Leave += Filter_LostFocus;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(364, 107);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(12, 15);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "-";
+            label13.AutoSize = true;
+            label13.Location = new System.Drawing.Point(364, 107);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(12, 15);
+            label13.TabIndex = 28;
+            label13.Text = "-";
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(364, 157);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(12, 15);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "-";
+            label15.AutoSize = true;
+            label15.Location = new System.Drawing.Point(364, 157);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(12, 15);
+            label15.TabIndex = 32;
+            label15.Text = "-";
             // 
             // spdMinFilter
             // 
-            this.spdMinFilter.Location = new System.Drawing.Point(426, 128);
-            this.spdMinFilter.Name = "spdMinFilter";
-            this.spdMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.spdMinFilter.TabIndex = 25;
-            this.spdMinFilter.Text = "0";
-            this.spdMinFilter.UseVisualStyleBackColor = true;
-            this.spdMinFilter.Click += new System.EventHandler(this.StatMinFilter_Click);
+            spdMinFilter.Location = new System.Drawing.Point(426, 128);
+            spdMinFilter.Name = "spdMinFilter";
+            spdMinFilter.Size = new System.Drawing.Size(29, 20);
+            spdMinFilter.TabIndex = 25;
+            spdMinFilter.Text = "0";
+            spdMinFilter.UseVisualStyleBackColor = true;
+            spdMinFilter.Click += StatMinFilter_Click;
             // 
             // spdMaxFilter
             // 
-            this.spdMaxFilter.Location = new System.Drawing.Point(461, 128);
-            this.spdMaxFilter.Name = "spdMaxFilter";
-            this.spdMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.spdMaxFilter.TabIndex = 26;
-            this.spdMaxFilter.Text = "31";
-            this.spdMaxFilter.UseVisualStyleBackColor = true;
-            this.spdMaxFilter.Click += new System.EventHandler(this.StatMaxFilter_Click);
+            spdMaxFilter.Location = new System.Drawing.Point(461, 128);
+            spdMaxFilter.Name = "spdMaxFilter";
+            spdMaxFilter.Size = new System.Drawing.Size(29, 20);
+            spdMaxFilter.TabIndex = 26;
+            spdMaxFilter.Text = "31";
+            spdMaxFilter.UseVisualStyleBackColor = true;
+            spdMaxFilter.Click += StatMaxFilter_Click;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(364, 54);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(12, 15);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "-";
+            label11.AutoSize = true;
+            label11.Location = new System.Drawing.Point(364, 54);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(12, 15);
+            label11.TabIndex = 24;
+            label11.Text = "-";
             // 
             // speMaxFilter
             // 
-            this.speMaxFilter.Location = new System.Drawing.Point(461, 154);
-            this.speMaxFilter.Name = "speMaxFilter";
-            this.speMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.speMaxFilter.TabIndex = 28;
-            this.speMaxFilter.Text = "31";
-            this.speMaxFilter.UseVisualStyleBackColor = true;
-            this.speMaxFilter.Click += new System.EventHandler(this.StatMaxFilter_Click);
+            speMaxFilter.Location = new System.Drawing.Point(461, 154);
+            speMaxFilter.Name = "speMaxFilter";
+            speMaxFilter.Size = new System.Drawing.Size(29, 20);
+            speMaxFilter.TabIndex = 28;
+            speMaxFilter.Text = "31";
+            speMaxFilter.UseVisualStyleBackColor = true;
+            speMaxFilter.Click += StatMaxFilter_Click;
             // 
             // spaMin
             // 
-            this.spaMin.Location = new System.Drawing.Point(330, 102);
-            this.spaMin.Name = "spaMin";
-            this.spaMin.Size = new System.Drawing.Size(28, 23);
-            this.spaMin.TabIndex = 11;
-            this.spaMin.Text = "0";
-            this.spaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.spaMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.spaMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.spaMin.Leave += new System.EventHandler(this.Filter_LostFocus);
+            spaMin.Location = new System.Drawing.Point(330, 102);
+            spaMin.Name = "spaMin";
+            spaMin.Size = new System.Drawing.Size(28, 23);
+            spaMin.TabIndex = 11;
+            spaMin.Text = "0";
+            spaMin.TextAlign = HorizontalAlignment.Center;
+            spaMin.TextChanged += IVs_TextChanged;
+            spaMin.KeyPress += DecInput_KeyPress;
+            spaMin.Leave += Filter_LostFocus;
             // 
             // atkMinFilter
             // 
-            this.atkMinFilter.Location = new System.Drawing.Point(427, 52);
-            this.atkMinFilter.Name = "atkMinFilter";
-            this.atkMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.atkMinFilter.TabIndex = 19;
-            this.atkMinFilter.Text = "0";
-            this.atkMinFilter.UseVisualStyleBackColor = true;
-            this.atkMinFilter.Click += new System.EventHandler(this.StatMinFilter_Click);
+            atkMinFilter.Location = new System.Drawing.Point(427, 52);
+            atkMinFilter.Name = "atkMinFilter";
+            atkMinFilter.Size = new System.Drawing.Size(29, 20);
+            atkMinFilter.TabIndex = 19;
+            atkMinFilter.Text = "0";
+            atkMinFilter.UseVisualStyleBackColor = true;
+            atkMinFilter.Click += StatMinFilter_Click;
             // 
             // spdMin
             // 
-            this.spdMin.Location = new System.Drawing.Point(330, 128);
-            this.spdMin.Name = "spdMin";
-            this.spdMin.Size = new System.Drawing.Size(28, 23);
-            this.spdMin.TabIndex = 13;
-            this.spdMin.Text = "0";
-            this.spdMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.spdMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.spdMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.spdMin.Leave += new System.EventHandler(this.Filter_LostFocus);
+            spdMin.Location = new System.Drawing.Point(330, 128);
+            spdMin.Name = "spdMin";
+            spdMin.Size = new System.Drawing.Size(28, 23);
+            spdMin.TabIndex = 13;
+            spdMin.Text = "0";
+            spdMin.TextAlign = HorizontalAlignment.Center;
+            spdMin.TextChanged += IVs_TextChanged;
+            spdMin.KeyPress += DecInput_KeyPress;
+            spdMin.Leave += Filter_LostFocus;
             // 
             // spdMax
             // 
-            this.spdMax.Location = new System.Drawing.Point(380, 128);
-            this.spdMax.Name = "spdMax";
-            this.spdMax.Size = new System.Drawing.Size(28, 23);
-            this.spdMax.TabIndex = 14;
-            this.spdMax.Text = "31";
-            this.spdMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.spdMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.spdMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.spdMax.Leave += new System.EventHandler(this.Filter_LostFocus);
+            spdMax.Location = new System.Drawing.Point(380, 128);
+            spdMax.Name = "spdMax";
+            spdMax.Size = new System.Drawing.Size(28, 23);
+            spdMax.TabIndex = 14;
+            spdMax.Text = "31";
+            spdMax.TextAlign = HorizontalAlignment.Center;
+            spdMax.TextChanged += IVs_TextChanged;
+            spdMax.KeyPress += DecInput_KeyPress;
+            spdMax.Leave += Filter_LostFocus;
             // 
             // speMin
             // 
-            this.speMin.Location = new System.Drawing.Point(330, 154);
-            this.speMin.Name = "speMin";
-            this.speMin.Size = new System.Drawing.Size(28, 23);
-            this.speMin.TabIndex = 15;
-            this.speMin.Text = "0";
-            this.speMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.speMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.speMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.speMin.Leave += new System.EventHandler(this.Filter_LostFocus);
+            speMin.Location = new System.Drawing.Point(330, 154);
+            speMin.Name = "speMin";
+            speMin.Size = new System.Drawing.Size(28, 23);
+            speMin.TabIndex = 15;
+            speMin.Text = "0";
+            speMin.TextAlign = HorizontalAlignment.Center;
+            speMin.TextChanged += IVs_TextChanged;
+            speMin.KeyPress += DecInput_KeyPress;
+            speMin.Leave += Filter_LostFocus;
             // 
             // speMax
             // 
-            this.speMax.Location = new System.Drawing.Point(380, 154);
-            this.speMax.Name = "speMax";
-            this.speMax.Size = new System.Drawing.Size(28, 23);
-            this.speMax.TabIndex = 16;
-            this.speMax.Text = "31";
-            this.speMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.speMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.speMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.speMax.Leave += new System.EventHandler(this.Filter_LostFocus);
+            speMax.Location = new System.Drawing.Point(380, 154);
+            speMax.Name = "speMax";
+            speMax.Size = new System.Drawing.Size(28, 23);
+            speMax.TabIndex = 16;
+            speMax.Text = "31";
+            speMax.TextAlign = HorizontalAlignment.Center;
+            speMax.TextChanged += IVs_TextChanged;
+            speMax.KeyPress += DecInput_KeyPress;
+            speMax.Leave += Filter_LostFocus;
             // 
             // atkMax
             // 
-            this.atkMax.Location = new System.Drawing.Point(380, 53);
-            this.atkMax.Name = "atkMax";
-            this.atkMax.Size = new System.Drawing.Size(28, 23);
-            this.atkMax.TabIndex = 8;
-            this.atkMax.Text = "31";
-            this.atkMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.atkMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.atkMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.atkMax.Leave += new System.EventHandler(this.Filter_LostFocus);
+            atkMax.Location = new System.Drawing.Point(380, 53);
+            atkMax.Name = "atkMax";
+            atkMax.Size = new System.Drawing.Size(28, 23);
+            atkMax.TabIndex = 8;
+            atkMax.Text = "31";
+            atkMax.TextAlign = HorizontalAlignment.Center;
+            atkMax.TextChanged += IVs_TextChanged;
+            atkMax.KeyPress += DecInput_KeyPress;
+            atkMax.Leave += Filter_LostFocus;
             // 
             // atkMaxFilter
             // 
-            this.atkMaxFilter.Location = new System.Drawing.Point(461, 52);
-            this.atkMaxFilter.Name = "atkMaxFilter";
-            this.atkMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.atkMaxFilter.TabIndex = 20;
-            this.atkMaxFilter.Text = "31";
-            this.atkMaxFilter.UseVisualStyleBackColor = true;
-            this.atkMaxFilter.Click += new System.EventHandler(this.StatMaxFilter_Click);
+            atkMaxFilter.Location = new System.Drawing.Point(461, 52);
+            atkMaxFilter.Name = "atkMaxFilter";
+            atkMaxFilter.Size = new System.Drawing.Size(29, 20);
+            atkMaxFilter.TabIndex = 20;
+            atkMaxFilter.Text = "31";
+            atkMaxFilter.UseVisualStyleBackColor = true;
+            atkMaxFilter.Click += StatMaxFilter_Click;
             // 
             // defMin
             // 
-            this.defMin.Location = new System.Drawing.Point(330, 77);
-            this.defMin.Name = "defMin";
-            this.defMin.Size = new System.Drawing.Size(28, 23);
-            this.defMin.TabIndex = 9;
-            this.defMin.Text = "0";
-            this.defMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.defMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.defMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.defMin.Leave += new System.EventHandler(this.Filter_LostFocus);
+            defMin.Location = new System.Drawing.Point(330, 77);
+            defMin.Name = "defMin";
+            defMin.Size = new System.Drawing.Size(28, 23);
+            defMin.TabIndex = 9;
+            defMin.Text = "0";
+            defMin.TextAlign = HorizontalAlignment.Center;
+            defMin.TextChanged += IVs_TextChanged;
+            defMin.KeyPress += DecInput_KeyPress;
+            defMin.Leave += Filter_LostFocus;
             // 
             // defMinFilter
             // 
-            this.defMinFilter.Location = new System.Drawing.Point(427, 77);
-            this.defMinFilter.Name = "defMinFilter";
-            this.defMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.defMinFilter.TabIndex = 21;
-            this.defMinFilter.Text = "0";
-            this.defMinFilter.UseVisualStyleBackColor = true;
-            this.defMinFilter.Click += new System.EventHandler(this.StatMinFilter_Click);
+            defMinFilter.Location = new System.Drawing.Point(427, 77);
+            defMinFilter.Name = "defMinFilter";
+            defMinFilter.Size = new System.Drawing.Size(29, 20);
+            defMinFilter.TabIndex = 21;
+            defMinFilter.Text = "0";
+            defMinFilter.UseVisualStyleBackColor = true;
+            defMinFilter.Click += StatMinFilter_Click;
             // 
             // spaMinFilter
             // 
-            this.spaMinFilter.Location = new System.Drawing.Point(427, 103);
-            this.spaMinFilter.Name = "spaMinFilter";
-            this.spaMinFilter.Size = new System.Drawing.Size(29, 20);
-            this.spaMinFilter.TabIndex = 23;
-            this.spaMinFilter.Text = "0";
-            this.spaMinFilter.UseVisualStyleBackColor = true;
-            this.spaMinFilter.Click += new System.EventHandler(this.StatMinFilter_Click);
+            spaMinFilter.Location = new System.Drawing.Point(427, 103);
+            spaMinFilter.Name = "spaMinFilter";
+            spaMinFilter.Size = new System.Drawing.Size(29, 20);
+            spaMinFilter.TabIndex = 23;
+            spaMinFilter.Text = "0";
+            spaMinFilter.UseVisualStyleBackColor = true;
+            spaMinFilter.Click += StatMinFilter_Click;
             // 
             // defMaxFilter
             // 
-            this.defMaxFilter.Location = new System.Drawing.Point(461, 77);
-            this.defMaxFilter.Name = "defMaxFilter";
-            this.defMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.defMaxFilter.TabIndex = 22;
-            this.defMaxFilter.Text = "31";
-            this.defMaxFilter.UseVisualStyleBackColor = true;
-            this.defMaxFilter.Click += new System.EventHandler(this.StatMaxFilter_Click);
+            defMaxFilter.Location = new System.Drawing.Point(461, 77);
+            defMaxFilter.Name = "defMaxFilter";
+            defMaxFilter.Size = new System.Drawing.Size(29, 20);
+            defMaxFilter.TabIndex = 22;
+            defMaxFilter.Text = "31";
+            defMaxFilter.UseVisualStyleBackColor = true;
+            defMaxFilter.Click += StatMaxFilter_Click;
             // 
             // spaMax
             // 
-            this.spaMax.Location = new System.Drawing.Point(380, 103);
-            this.spaMax.Name = "spaMax";
-            this.spaMax.Size = new System.Drawing.Size(28, 23);
-            this.spaMax.TabIndex = 12;
-            this.spaMax.Text = "31";
-            this.spaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.spaMax.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.spaMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.spaMax.Leave += new System.EventHandler(this.Filter_LostFocus);
+            spaMax.Location = new System.Drawing.Point(380, 103);
+            spaMax.Name = "spaMax";
+            spaMax.Size = new System.Drawing.Size(28, 23);
+            spaMax.TabIndex = 12;
+            spaMax.Text = "31";
+            spaMax.TextAlign = HorizontalAlignment.Center;
+            spaMax.TextChanged += IVs_TextChanged;
+            spaMax.KeyPress += DecInput_KeyPress;
+            spaMax.Leave += Filter_LostFocus;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(364, 130);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(12, 15);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "-";
+            label14.AutoSize = true;
+            label14.Location = new System.Drawing.Point(364, 130);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(12, 15);
+            label14.TabIndex = 30;
+            label14.Text = "-";
             // 
             // atkMin
             // 
-            this.atkMin.Location = new System.Drawing.Point(330, 52);
-            this.atkMin.Name = "atkMin";
-            this.atkMin.Size = new System.Drawing.Size(28, 23);
-            this.atkMin.TabIndex = 7;
-            this.atkMin.Text = "0";
-            this.atkMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.atkMin.TextChanged += new System.EventHandler(this.IVs_TextChanged);
-            this.atkMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.atkMin.Leave += new System.EventHandler(this.Filter_LostFocus);
+            atkMin.Location = new System.Drawing.Point(330, 52);
+            atkMin.Name = "atkMin";
+            atkMin.Size = new System.Drawing.Size(28, 23);
+            atkMin.TabIndex = 7;
+            atkMin.Text = "0";
+            atkMin.TextAlign = HorizontalAlignment.Center;
+            atkMin.TextChanged += IVs_TextChanged;
+            atkMin.KeyPress += DecInput_KeyPress;
+            atkMin.Leave += Filter_LostFocus;
             // 
             // spaMaxFilter
             // 
-            this.spaMaxFilter.Location = new System.Drawing.Point(461, 103);
-            this.spaMaxFilter.Name = "spaMaxFilter";
-            this.spaMaxFilter.Size = new System.Drawing.Size(29, 20);
-            this.spaMaxFilter.TabIndex = 24;
-            this.spaMaxFilter.Text = "31";
-            this.spaMaxFilter.UseVisualStyleBackColor = true;
-            this.spaMaxFilter.Click += new System.EventHandler(this.StatMaxFilter_Click);
+            spaMaxFilter.Location = new System.Drawing.Point(461, 103);
+            spaMaxFilter.Name = "spaMaxFilter";
+            spaMaxFilter.Size = new System.Drawing.Size(29, 20);
+            spaMaxFilter.TabIndex = 24;
+            spaMaxFilter.Text = "31";
+            spaMaxFilter.UseVisualStyleBackColor = true;
+            spaMaxFilter.Click += StatMaxFilter_Click;
             // 
             // progressBar1
             // 
-            this.progressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.progressBar1.Location = new System.Drawing.Point(247, 429);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(341, 21);
-            this.progressBar1.TabIndex = 74;
+            progressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            progressBar1.Location = new System.Drawing.Point(247, 429);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new System.Drawing.Size(341, 21);
+            progressBar1.TabIndex = 74;
             // 
             // RetailAdvancesTrackerLabel
             // 
-            this.RetailAdvancesTrackerLabel.AutoSize = true;
-            this.RetailAdvancesTrackerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.RetailAdvancesTrackerLabel.Location = new System.Drawing.Point(602, 29);
-            this.RetailAdvancesTrackerLabel.Name = "RetailAdvancesTrackerLabel";
-            this.RetailAdvancesTrackerLabel.Size = new System.Drawing.Size(148, 13);
-            this.RetailAdvancesTrackerLabel.TabIndex = 75;
-            this.RetailAdvancesTrackerLabel.Text = "Retail Advances Tracker";
+            RetailAdvancesTrackerLabel.AutoSize = true;
+            RetailAdvancesTrackerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            RetailAdvancesTrackerLabel.Location = new System.Drawing.Point(602, 29);
+            RetailAdvancesTrackerLabel.Name = "RetailAdvancesTrackerLabel";
+            RetailAdvancesTrackerLabel.Size = new System.Drawing.Size(148, 13);
+            RetailAdvancesTrackerLabel.TabIndex = 75;
+            RetailAdvancesTrackerLabel.Text = "Retail Advances Tracker";
             // 
             // RetailAdvancesTrackerInitialInputLabel
             // 
-            this.RetailAdvancesTrackerInitialInputLabel.AutoSize = true;
-            this.RetailAdvancesTrackerInitialInputLabel.Location = new System.Drawing.Point(602, 55);
-            this.RetailAdvancesTrackerInitialInputLabel.Name = "RetailAdvancesTrackerInitialInputLabel";
-            this.RetailAdvancesTrackerInitialInputLabel.Size = new System.Drawing.Size(66, 15);
-            this.RetailAdvancesTrackerInitialInputLabel.TabIndex = 76;
-            this.RetailAdvancesTrackerInitialInputLabel.Text = "Initial Adv.:";
+            RetailAdvancesTrackerInitialInputLabel.AutoSize = true;
+            RetailAdvancesTrackerInitialInputLabel.Location = new System.Drawing.Point(602, 55);
+            RetailAdvancesTrackerInitialInputLabel.Name = "RetailAdvancesTrackerInitialInputLabel";
+            RetailAdvancesTrackerInitialInputLabel.Size = new System.Drawing.Size(66, 15);
+            RetailAdvancesTrackerInitialInputLabel.TabIndex = 76;
+            RetailAdvancesTrackerInitialInputLabel.Text = "Initial Adv.:";
             // 
             // RetailAdvancesTrackerMaxAdvInputLabel
             // 
-            this.RetailAdvancesTrackerMaxAdvInputLabel.AutoSize = true;
-            this.RetailAdvancesTrackerMaxAdvInputLabel.Location = new System.Drawing.Point(648, 81);
-            this.RetailAdvancesTrackerMaxAdvInputLabel.Name = "RetailAdvancesTrackerMaxAdvInputLabel";
-            this.RetailAdvancesTrackerMaxAdvInputLabel.Size = new System.Drawing.Size(15, 15);
-            this.RetailAdvancesTrackerMaxAdvInputLabel.TabIndex = 77;
-            this.RetailAdvancesTrackerMaxAdvInputLabel.Text = "+";
+            RetailAdvancesTrackerMaxAdvInputLabel.AutoSize = true;
+            RetailAdvancesTrackerMaxAdvInputLabel.Location = new System.Drawing.Point(648, 81);
+            RetailAdvancesTrackerMaxAdvInputLabel.Name = "RetailAdvancesTrackerMaxAdvInputLabel";
+            RetailAdvancesTrackerMaxAdvInputLabel.Size = new System.Drawing.Size(15, 15);
+            RetailAdvancesTrackerMaxAdvInputLabel.TabIndex = 77;
+            RetailAdvancesTrackerMaxAdvInputLabel.Text = "+";
             // 
             // RetailAdvancesTrackerInitialInput
             // 
-            this.RetailAdvancesTrackerInitialInput.Location = new System.Drawing.Point(667, 52);
-            this.RetailAdvancesTrackerInitialInput.MaxLength = 16;
-            this.RetailAdvancesTrackerInitialInput.Name = "RetailAdvancesTrackerInitialInput";
-            this.RetailAdvancesTrackerInitialInput.Size = new System.Drawing.Size(145, 23);
-            this.RetailAdvancesTrackerInitialInput.TabIndex = 78;
-            this.RetailAdvancesTrackerInitialInput.Text = "0";
-            this.RetailAdvancesTrackerInitialInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.RetailAdvancesTrackerInitialInput.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            RetailAdvancesTrackerInitialInput.Location = new System.Drawing.Point(667, 52);
+            RetailAdvancesTrackerInitialInput.MaxLength = 16;
+            RetailAdvancesTrackerInitialInput.Name = "RetailAdvancesTrackerInitialInput";
+            RetailAdvancesTrackerInitialInput.Size = new System.Drawing.Size(145, 23);
+            RetailAdvancesTrackerInitialInput.TabIndex = 78;
+            RetailAdvancesTrackerInitialInput.Text = "0";
+            RetailAdvancesTrackerInitialInput.KeyPress += DecInput_KeyPress;
+            RetailAdvancesTrackerInitialInput.Leave += SetToZero_LostFocus;
             // 
             // RetailAdvancesTrackerMaxInput
             // 
-            this.RetailAdvancesTrackerMaxInput.Location = new System.Drawing.Point(667, 78);
-            this.RetailAdvancesTrackerMaxInput.MaxLength = 16;
-            this.RetailAdvancesTrackerMaxInput.Name = "RetailAdvancesTrackerMaxInput";
-            this.RetailAdvancesTrackerMaxInput.Size = new System.Drawing.Size(145, 23);
-            this.RetailAdvancesTrackerMaxInput.TabIndex = 79;
-            this.RetailAdvancesTrackerMaxInput.Text = "10000";
-            this.RetailAdvancesTrackerMaxInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.RetailAdvancesTrackerMaxInput.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            RetailAdvancesTrackerMaxInput.Location = new System.Drawing.Point(667, 78);
+            RetailAdvancesTrackerMaxInput.MaxLength = 16;
+            RetailAdvancesTrackerMaxInput.Name = "RetailAdvancesTrackerMaxInput";
+            RetailAdvancesTrackerMaxInput.Size = new System.Drawing.Size(145, 23);
+            RetailAdvancesTrackerMaxInput.TabIndex = 79;
+            RetailAdvancesTrackerMaxInput.Text = "10000";
+            RetailAdvancesTrackerMaxInput.KeyPress += DecInput_KeyPress;
+            RetailAdvancesTrackerMaxInput.Leave += SetToZero_LostFocus;
             // 
             // RetailAdvancesTrackerGenerateButton
             // 
-            this.RetailAdvancesTrackerGenerateButton.Location = new System.Drawing.Point(605, 111);
-            this.RetailAdvancesTrackerGenerateButton.Name = "RetailAdvancesTrackerGenerateButton";
-            this.RetailAdvancesTrackerGenerateButton.Size = new System.Drawing.Size(207, 20);
-            this.RetailAdvancesTrackerGenerateButton.TabIndex = 80;
-            this.RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";
-            this.RetailAdvancesTrackerGenerateButton.UseVisualStyleBackColor = true;
-            this.RetailAdvancesTrackerGenerateButton.Click += new System.EventHandler(this.RetailAdvancesTrackerGenerateButton_Click);
+            RetailAdvancesTrackerGenerateButton.Location = new System.Drawing.Point(605, 111);
+            RetailAdvancesTrackerGenerateButton.Name = "RetailAdvancesTrackerGenerateButton";
+            RetailAdvancesTrackerGenerateButton.Size = new System.Drawing.Size(207, 20);
+            RetailAdvancesTrackerGenerateButton.TabIndex = 80;
+            RetailAdvancesTrackerGenerateButton.Text = "Generate Pattern";
+            RetailAdvancesTrackerGenerateButton.UseVisualStyleBackColor = true;
+            RetailAdvancesTrackerGenerateButton.Click += RetailAdvancesTrackerGenerateButton_Click;
             // 
             // RetailAdvancesTrackerProgressBar
             // 
-            this.RetailAdvancesTrackerProgressBar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.RetailAdvancesTrackerProgressBar.Location = new System.Drawing.Point(606, 135);
-            this.RetailAdvancesTrackerProgressBar.Name = "RetailAdvancesTrackerProgressBar";
-            this.RetailAdvancesTrackerProgressBar.Size = new System.Drawing.Size(205, 10);
-            this.RetailAdvancesTrackerProgressBar.TabIndex = 81;
+            RetailAdvancesTrackerProgressBar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            RetailAdvancesTrackerProgressBar.Location = new System.Drawing.Point(606, 135);
+            RetailAdvancesTrackerProgressBar.Name = "RetailAdvancesTrackerProgressBar";
+            RetailAdvancesTrackerProgressBar.Size = new System.Drawing.Size(205, 10);
+            RetailAdvancesTrackerProgressBar.TabIndex = 81;
             // 
             // RetailAdvancesTrackerSequenceInput
             // 
-            this.RetailAdvancesTrackerSequenceInput.Location = new System.Drawing.Point(605, 172);
-            this.RetailAdvancesTrackerSequenceInput.MaxLength = 30;
-            this.RetailAdvancesTrackerSequenceInput.Name = "RetailAdvancesTrackerSequenceInput";
-            this.RetailAdvancesTrackerSequenceInput.ReadOnly = true;
-            this.RetailAdvancesTrackerSequenceInput.Size = new System.Drawing.Size(207, 23);
-            this.RetailAdvancesTrackerSequenceInput.TabIndex = 82;
-            this.RetailAdvancesTrackerSequenceInput.TextChanged += new System.EventHandler(this.RetailAdvancesTrackerSequenceInput_TextChanged);
-            this.RetailAdvancesTrackerSequenceInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BinInput_KeyPress);
+            RetailAdvancesTrackerSequenceInput.Location = new System.Drawing.Point(605, 172);
+            RetailAdvancesTrackerSequenceInput.MaxLength = 30;
+            RetailAdvancesTrackerSequenceInput.Name = "RetailAdvancesTrackerSequenceInput";
+            RetailAdvancesTrackerSequenceInput.ReadOnly = true;
+            RetailAdvancesTrackerSequenceInput.Size = new System.Drawing.Size(207, 23);
+            RetailAdvancesTrackerSequenceInput.TabIndex = 82;
+            RetailAdvancesTrackerSequenceInput.TextChanged += RetailAdvancesTrackerSequenceInput_TextChanged;
+            RetailAdvancesTrackerSequenceInput.KeyPress += BinInput_KeyPress;
             // 
             // RetailAdvancesTrackerSequenceLabel
             // 
-            this.RetailAdvancesTrackerSequenceLabel.AutoSize = true;
-            this.RetailAdvancesTrackerSequenceLabel.Location = new System.Drawing.Point(602, 156);
-            this.RetailAdvancesTrackerSequenceLabel.Name = "RetailAdvancesTrackerSequenceLabel";
-            this.RetailAdvancesTrackerSequenceLabel.Size = new System.Drawing.Size(213, 15);
-            this.RetailAdvancesTrackerSequenceLabel.TabIndex = 83;
-            this.RetailAdvancesTrackerSequenceLabel.Text = "Input Sequence (0: Physical, 1: Special):";
+            RetailAdvancesTrackerSequenceLabel.AutoSize = true;
+            RetailAdvancesTrackerSequenceLabel.Location = new System.Drawing.Point(602, 156);
+            RetailAdvancesTrackerSequenceLabel.Name = "RetailAdvancesTrackerSequenceLabel";
+            RetailAdvancesTrackerSequenceLabel.Size = new System.Drawing.Size(213, 15);
+            RetailAdvancesTrackerSequenceLabel.TabIndex = 83;
+            RetailAdvancesTrackerSequenceLabel.Text = "Input Sequence (0: Physical, 1: Special):";
             // 
             // RetailAdvancesTrackerResultState0
             // 
-            this.RetailAdvancesTrackerResultState0.Location = new System.Drawing.Point(605, 241);
-            this.RetailAdvancesTrackerResultState0.MaxLength = 16;
-            this.RetailAdvancesTrackerResultState0.Name = "RetailAdvancesTrackerResultState0";
-            this.RetailAdvancesTrackerResultState0.ReadOnly = true;
-            this.RetailAdvancesTrackerResultState0.Size = new System.Drawing.Size(207, 23);
-            this.RetailAdvancesTrackerResultState0.TabIndex = 84;
-            this.RetailAdvancesTrackerResultState0.TabStop = false;
+            RetailAdvancesTrackerResultState0.Location = new System.Drawing.Point(605, 241);
+            RetailAdvancesTrackerResultState0.MaxLength = 16;
+            RetailAdvancesTrackerResultState0.Name = "RetailAdvancesTrackerResultState0";
+            RetailAdvancesTrackerResultState0.ReadOnly = true;
+            RetailAdvancesTrackerResultState0.Size = new System.Drawing.Size(207, 23);
+            RetailAdvancesTrackerResultState0.TabIndex = 84;
+            RetailAdvancesTrackerResultState0.TabStop = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(602, 268);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 15);
-            this.label3.TabIndex = 87;
-            this.label3.Text = "Current State[1]:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(602, 268);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(93, 15);
+            label3.TabIndex = 87;
+            label3.Text = "Current State[1]:";
             // 
             // RetailAdvancesTrackerResultState1
             // 
-            this.RetailAdvancesTrackerResultState1.Location = new System.Drawing.Point(605, 284);
-            this.RetailAdvancesTrackerResultState1.MaxLength = 16;
-            this.RetailAdvancesTrackerResultState1.Name = "RetailAdvancesTrackerResultState1";
-            this.RetailAdvancesTrackerResultState1.ReadOnly = true;
-            this.RetailAdvancesTrackerResultState1.Size = new System.Drawing.Size(207, 23);
-            this.RetailAdvancesTrackerResultState1.TabIndex = 86;
-            this.RetailAdvancesTrackerResultState1.TabStop = false;
+            RetailAdvancesTrackerResultState1.Location = new System.Drawing.Point(605, 284);
+            RetailAdvancesTrackerResultState1.MaxLength = 16;
+            RetailAdvancesTrackerResultState1.Name = "RetailAdvancesTrackerResultState1";
+            RetailAdvancesTrackerResultState1.ReadOnly = true;
+            RetailAdvancesTrackerResultState1.Size = new System.Drawing.Size(207, 23);
+            RetailAdvancesTrackerResultState1.TabIndex = 86;
+            RetailAdvancesTrackerResultState1.TabStop = false;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(602, 225);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 15);
-            this.label2.TabIndex = 85;
-            this.label2.Text = "Current State[0]:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(602, 225);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(93, 15);
+            label2.TabIndex = 85;
+            label2.Text = "Current State[0]:";
             // 
             // RetailAdvancesTrackerNumResultsLabel
             // 
-            this.RetailAdvancesTrackerNumResultsLabel.AutoSize = true;
-            this.RetailAdvancesTrackerNumResultsLabel.Location = new System.Drawing.Point(602, 200);
-            this.RetailAdvancesTrackerNumResultsLabel.Name = "RetailAdvancesTrackerNumResultsLabel";
-            this.RetailAdvancesTrackerNumResultsLabel.Size = new System.Drawing.Size(118, 15);
-            this.RetailAdvancesTrackerNumResultsLabel.TabIndex = 88;
-            this.RetailAdvancesTrackerNumResultsLabel.Text = "Possible Results: N/A";
+            RetailAdvancesTrackerNumResultsLabel.AutoSize = true;
+            RetailAdvancesTrackerNumResultsLabel.Location = new System.Drawing.Point(602, 200);
+            RetailAdvancesTrackerNumResultsLabel.Name = "RetailAdvancesTrackerNumResultsLabel";
+            RetailAdvancesTrackerNumResultsLabel.Size = new System.Drawing.Size(118, 15);
+            RetailAdvancesTrackerNumResultsLabel.TabIndex = 88;
+            RetailAdvancesTrackerNumResultsLabel.Text = "Possible Results: N/A";
             // 
             // CheckIsAbilityLocked
             // 
-            this.CheckIsAbilityLocked.AutoSize = true;
-            this.CheckIsAbilityLocked.Location = new System.Drawing.Point(12, 275);
-            this.CheckIsAbilityLocked.Name = "CheckIsAbilityLocked";
-            this.CheckIsAbilityLocked.Size = new System.Drawing.Size(101, 19);
-            this.CheckIsAbilityLocked.TabIndex = 37;
-            this.CheckIsAbilityLocked.Text = "Locked Ability";
-            this.CheckIsAbilityLocked.UseVisualStyleBackColor = true;
+            CheckIsAbilityLocked.AutoSize = true;
+            CheckIsAbilityLocked.Location = new System.Drawing.Point(12, 275);
+            CheckIsAbilityLocked.Name = "CheckIsAbilityLocked";
+            CheckIsAbilityLocked.Size = new System.Drawing.Size(101, 19);
+            CheckIsAbilityLocked.TabIndex = 37;
+            CheckIsAbilityLocked.Text = "Locked Ability";
+            CheckIsAbilityLocked.UseVisualStyleBackColor = true;
             // 
             // MainMenu
             // 
-            this.MainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SeedFinderMenu,
-            this.EncounterLookupMenu,
-            this.CramomaticMenu,
-            this.LotoIDMenu,
-            this.MenuCloseAdvancesViewerToolStripMenuItem});
-            this.MainMenu.Location = new System.Drawing.Point(0, 0);
-            this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(831, 24);
-            this.MainMenu.TabIndex = 137;
+            MainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            MainMenu.Items.AddRange(new ToolStripItem[] { SeedFinderMenu, EncounterLookupMenu, CramomaticMenu, LotoIDMenu, MenuCloseAdvancesViewerToolStripMenuItem });
+            MainMenu.Location = new System.Drawing.Point(0, 0);
+            MainMenu.Name = "MainMenu";
+            MainMenu.Size = new System.Drawing.Size(831, 24);
+            MainMenu.TabIndex = 137;
             // 
             // SeedFinderMenu
             // 
-            this.SeedFinderMenu.Name = "SeedFinderMenu";
-            this.SeedFinderMenu.Size = new System.Drawing.Size(112, 20);
-            this.SeedFinderMenu.Text = "Retail Seed Finder";
-            this.SeedFinderMenu.Click += new System.EventHandler(this.SeedFinderMenu_Click);
+            SeedFinderMenu.Name = "SeedFinderMenu";
+            SeedFinderMenu.Size = new System.Drawing.Size(112, 20);
+            SeedFinderMenu.Text = "Retail Seed Finder";
+            SeedFinderMenu.Click += SeedFinderMenu_Click;
             // 
             // EncounterLookupMenu
             // 
-            this.EncounterLookupMenu.Name = "EncounterLookupMenu";
-            this.EncounterLookupMenu.Size = new System.Drawing.Size(116, 20);
-            this.EncounterLookupMenu.Text = "Encounter Lookup";
-            this.EncounterLookupMenu.Click += new System.EventHandler(this.EncounterLookupMenu_Click);
+            EncounterLookupMenu.Name = "EncounterLookupMenu";
+            EncounterLookupMenu.Size = new System.Drawing.Size(116, 20);
+            EncounterLookupMenu.Text = "Encounter Lookup";
+            EncounterLookupMenu.Click += EncounterLookupMenu_Click;
             // 
             // CramomaticMenu
             // 
-            this.CramomaticMenu.Name = "CramomaticMenu";
-            this.CramomaticMenu.Size = new System.Drawing.Size(95, 20);
-            this.CramomaticMenu.Text = "Cram-o-matic";
-            this.CramomaticMenu.Click += new System.EventHandler(this.CramomaticMenu_Click);
+            CramomaticMenu.Name = "CramomaticMenu";
+            CramomaticMenu.Size = new System.Drawing.Size(95, 20);
+            CramomaticMenu.Text = "Cram-o-matic";
+            CramomaticMenu.Click += CramomaticMenu_Click;
             // 
             // LotoIDMenu
             // 
-            this.LotoIDMenu.Name = "LotoIDMenu";
-            this.LotoIDMenu.Size = new System.Drawing.Size(59, 20);
-            this.LotoIDMenu.Text = "Loto-ID";
-            this.LotoIDMenu.Click += new System.EventHandler(this.LotoIDMenu_Click);
+            LotoIDMenu.Name = "LotoIDMenu";
+            LotoIDMenu.Size = new System.Drawing.Size(59, 20);
+            LotoIDMenu.Text = "Loto-ID";
+            LotoIDMenu.Click += LotoIDMenu_Click;
             // 
             // MenuCloseAdvancesViewerToolStripMenuItem
             // 
-            this.MenuCloseAdvancesViewerToolStripMenuItem.Name = "MenuCloseAdvancesViewerToolStripMenuItem";
-            this.MenuCloseAdvancesViewerToolStripMenuItem.Size = new System.Drawing.Size(174, 20);
-            this.MenuCloseAdvancesViewerToolStripMenuItem.Text = "Menu Close Advances Viewer";
-            this.MenuCloseAdvancesViewerToolStripMenuItem.Click += new System.EventHandler(this.MenuCloseAdvancesViewerToolStripMenuItem_Click);
+            MenuCloseAdvancesViewerToolStripMenuItem.Name = "MenuCloseAdvancesViewerToolStripMenuItem";
+            MenuCloseAdvancesViewerToolStripMenuItem.Size = new System.Drawing.Size(174, 20);
+            MenuCloseAdvancesViewerToolStripMenuItem.Text = "Menu Close Advances Viewer";
+            MenuCloseAdvancesViewerToolStripMenuItem.Click += MenuCloseAdvancesViewerToolStripMenuItem_Click;
             // 
             // ButtonUpdateStates
             // 
-            this.ButtonUpdateStates.Location = new System.Drawing.Point(604, 310);
-            this.ButtonUpdateStates.Name = "ButtonUpdateStates";
-            this.ButtonUpdateStates.Size = new System.Drawing.Size(209, 29);
-            this.ButtonUpdateStates.TabIndex = 89;
-            this.ButtonUpdateStates.Text = "Update States";
-            this.ButtonUpdateStates.UseVisualStyleBackColor = true;
-            this.ButtonUpdateStates.Click += new System.EventHandler(this.ButtonUpdateStates_Click);
+            ButtonUpdateStates.Location = new System.Drawing.Point(604, 310);
+            ButtonUpdateStates.Name = "ButtonUpdateStates";
+            ButtonUpdateStates.Size = new System.Drawing.Size(209, 29);
+            ButtonUpdateStates.TabIndex = 89;
+            ButtonUpdateStates.Text = "Update States";
+            ButtonUpdateStates.UseVisualStyleBackColor = true;
+            ButtonUpdateStates.Click += ButtonUpdateStates_Click;
             // 
             // CheckTIDSIDFinder
             // 
-            this.CheckTIDSIDFinder.AutoSize = true;
-            this.CheckTIDSIDFinder.Location = new System.Drawing.Point(174, 135);
-            this.CheckTIDSIDFinder.Name = "CheckTIDSIDFinder";
-            this.CheckTIDSIDFinder.Size = new System.Drawing.Size(123, 19);
-            this.CheckTIDSIDFinder.TabIndex = 90;
-            this.CheckTIDSIDFinder.Text = "Search For TID/SID";
-            this.CheckTIDSIDFinder.UseVisualStyleBackColor = true;
-            this.CheckTIDSIDFinder.CheckedChanged += new System.EventHandler(this.CheckTIDSIDFinder_CheckedChanged);
+            CheckTIDSIDFinder.AutoSize = true;
+            CheckTIDSIDFinder.Location = new System.Drawing.Point(174, 135);
+            CheckTIDSIDFinder.Name = "CheckTIDSIDFinder";
+            CheckTIDSIDFinder.Size = new System.Drawing.Size(123, 19);
+            CheckTIDSIDFinder.TabIndex = 90;
+            CheckTIDSIDFinder.Text = "Search For TID/SID";
+            CheckTIDSIDFinder.UseVisualStyleBackColor = true;
+            CheckTIDSIDFinder.CheckedChanged += CheckTIDSIDFinder_CheckedChanged;
             // 
             // LabelKOCount
             // 
-            this.LabelKOCount.AutoSize = true;
-            this.LabelKOCount.Location = new System.Drawing.Point(165, 180);
-            this.LabelKOCount.Name = "LabelKOCount";
-            this.LabelKOCount.Size = new System.Drawing.Size(61, 15);
-            this.LabelKOCount.TabIndex = 91;
-            this.LabelKOCount.Text = "KO Count:";
+            LabelKOCount.AutoSize = true;
+            LabelKOCount.Location = new System.Drawing.Point(165, 180);
+            LabelKOCount.Name = "LabelKOCount";
+            LabelKOCount.Size = new System.Drawing.Size(61, 15);
+            LabelKOCount.TabIndex = 91;
+            LabelKOCount.Text = "KO Count:";
             // 
             // InputKOCount
             // 
-            this.InputKOCount.Location = new System.Drawing.Point(232, 177);
-            this.InputKOCount.MaxLength = 3;
-            this.InputKOCount.Name = "InputKOCount";
-            this.InputKOCount.Size = new System.Drawing.Size(28, 23);
-            this.InputKOCount.TabIndex = 90;
-            this.InputKOCount.Text = "500";
-            this.InputKOCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.InputKOCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputKOCount.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputKOCount.Location = new System.Drawing.Point(232, 177);
+            InputKOCount.MaxLength = 3;
+            InputKOCount.Name = "InputKOCount";
+            InputKOCount.Size = new System.Drawing.Size(28, 23);
+            InputKOCount.TabIndex = 90;
+            InputKOCount.Text = "500";
+            InputKOCount.TextAlign = HorizontalAlignment.Center;
+            InputKOCount.KeyPress += DecInput_KeyPress;
+            InputKOCount.Leave += SetToZero_LostFocus;
             // 
             // LabelEMs
             // 
-            this.LabelEMs.AutoSize = true;
-            this.LabelEMs.Location = new System.Drawing.Point(148, 232);
-            this.LabelEMs.Name = "LabelEMs";
-            this.LabelEMs.Size = new System.Drawing.Size(78, 15);
-            this.LabelEMs.TabIndex = 93;
-            this.LabelEMs.Text = "Possible EMs:";
+            LabelEMs.AutoSize = true;
+            LabelEMs.Location = new System.Drawing.Point(148, 232);
+            LabelEMs.Name = "LabelEMs";
+            LabelEMs.Size = new System.Drawing.Size(78, 15);
+            LabelEMs.TabIndex = 93;
+            LabelEMs.Text = "Possible EMs:";
             // 
             // InputEMs
             // 
-            this.InputEMs.Location = new System.Drawing.Point(232, 229);
-            this.InputEMs.MaxLength = 2;
-            this.InputEMs.Name = "InputEMs";
-            this.InputEMs.Size = new System.Drawing.Size(28, 23);
-            this.InputEMs.TabIndex = 92;
-            this.InputEMs.Text = "4";
-            this.InputEMs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.InputEMs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputEMs.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputEMs.Location = new System.Drawing.Point(232, 229);
+            InputEMs.MaxLength = 2;
+            InputEMs.Name = "InputEMs";
+            InputEMs.Size = new System.Drawing.Size(28, 23);
+            InputEMs.TabIndex = 92;
+            InputEMs.Text = "4";
+            InputEMs.TextAlign = HorizontalAlignment.Center;
+            InputEMs.KeyPress += DecInput_KeyPress;
+            InputEMs.Leave += SetToZero_LostFocus;
             // 
             // LabelFlawlessIVs
             // 
-            this.LabelFlawlessIVs.AutoSize = true;
-            this.LabelFlawlessIVs.Location = new System.Drawing.Point(155, 206);
-            this.LabelFlawlessIVs.Name = "LabelFlawlessIVs";
-            this.LabelFlawlessIVs.Size = new System.Drawing.Size(71, 15);
-            this.LabelFlawlessIVs.TabIndex = 95;
-            this.LabelFlawlessIVs.Text = "Flawless IVs:";
+            LabelFlawlessIVs.AutoSize = true;
+            LabelFlawlessIVs.Location = new System.Drawing.Point(155, 206);
+            LabelFlawlessIVs.Name = "LabelFlawlessIVs";
+            LabelFlawlessIVs.Size = new System.Drawing.Size(71, 15);
+            LabelFlawlessIVs.TabIndex = 95;
+            LabelFlawlessIVs.Text = "Flawless IVs:";
             // 
             // InputFlawlessIVs
             // 
-            this.InputFlawlessIVs.Location = new System.Drawing.Point(232, 203);
-            this.InputFlawlessIVs.MaxLength = 1;
-            this.InputFlawlessIVs.Name = "InputFlawlessIVs";
-            this.InputFlawlessIVs.Size = new System.Drawing.Size(28, 23);
-            this.InputFlawlessIVs.TabIndex = 94;
-            this.InputFlawlessIVs.Text = "0";
-            this.InputFlawlessIVs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.InputFlawlessIVs.TextChanged += new System.EventHandler(this.FlawlessIVs_TextChanged);
-            this.InputFlawlessIVs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputFlawlessIVs.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputFlawlessIVs.Location = new System.Drawing.Point(232, 203);
+            InputFlawlessIVs.MaxLength = 1;
+            InputFlawlessIVs.Name = "InputFlawlessIVs";
+            InputFlawlessIVs.Size = new System.Drawing.Size(28, 23);
+            InputFlawlessIVs.TabIndex = 94;
+            InputFlawlessIVs.Text = "0";
+            InputFlawlessIVs.TextAlign = HorizontalAlignment.Center;
+            InputFlawlessIVs.TextChanged += FlawlessIVs_TextChanged;
+            InputFlawlessIVs.KeyPress += DecInput_KeyPress;
+            InputFlawlessIVs.Leave += SetToZero_LostFocus;
             // 
             // sensBox
             // 
-            this.sensBox.AutoSize = true;
-            this.sensBox.Location = new System.Drawing.Point(447, 188);
-            this.sensBox.Name = "sensBox";
-            this.sensBox.Size = new System.Drawing.Size(133, 19);
-            this.sensBox.TabIndex = 96;
-            this.sensBox.Text = "Hide Sensitive Fields";
-            this.sensBox.UseVisualStyleBackColor = true;
-            this.sensBox.CheckedChanged += new System.EventHandler(this.SensBox_CheckedChanged);
+            sensBox.AutoSize = true;
+            sensBox.Location = new System.Drawing.Point(447, 181);
+            sensBox.Name = "sensBox";
+            sensBox.Size = new System.Drawing.Size(133, 19);
+            sensBox.TabIndex = 96;
+            sensBox.Text = "Hide Sensitive Fields";
+            sensBox.UseVisualStyleBackColor = true;
+            sensBox.CheckedChanged += SensBox_CheckedChanged;
             // 
             // CheckCuteCharm
             // 
-            this.CheckCuteCharm.AutoSize = true;
-            this.CheckCuteCharm.Location = new System.Drawing.Point(12, 321);
-            this.CheckCuteCharm.Name = "CheckCuteCharm";
-            this.CheckCuteCharm.Size = new System.Drawing.Size(118, 19);
-            this.CheckCuteCharm.TabIndex = 97;
-            this.CheckCuteCharm.Text = "Cute Charm Lead";
-            this.CheckCuteCharm.UseVisualStyleBackColor = true;
+            CheckCuteCharm.AutoSize = true;
+            CheckCuteCharm.Location = new System.Drawing.Point(12, 321);
+            CheckCuteCharm.Name = "CheckCuteCharm";
+            CheckCuteCharm.Size = new System.Drawing.Size(118, 19);
+            CheckCuteCharm.TabIndex = 97;
+            CheckCuteCharm.Text = "Cute Charm Lead";
+            CheckCuteCharm.UseVisualStyleBackColor = true;
             // 
             // hpJudgeFilter
             // 
-            this.hpJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.hpJudgeFilter.FormattingEnabled = true;
-            this.hpJudgeFilter.Items.AddRange(new object[] {
-            "No Good",
-            "Decent",
-            "Pretty Good",
-            "Very Good",
-            "Fantastic",
-            "Best"});
-            this.hpJudgeFilter.Location = new System.Drawing.Point(496, 25);
-            this.hpJudgeFilter.Name = "hpJudgeFilter";
-            this.hpJudgeFilter.Size = new System.Drawing.Size(82, 23);
-            this.hpJudgeFilter.TabIndex = 104;
-            this.hpJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
+            hpJudgeFilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            hpJudgeFilter.FormattingEnabled = true;
+            hpJudgeFilter.Items.AddRange(new object[] { "No Good", "Decent", "Pretty Good", "Very Good", "Fantastic", "Best" });
+            hpJudgeFilter.Location = new System.Drawing.Point(496, 25);
+            hpJudgeFilter.Name = "hpJudgeFilter";
+            hpJudgeFilter.Size = new System.Drawing.Size(82, 23);
+            hpJudgeFilter.TabIndex = 104;
+            hpJudgeFilter.SelectedIndexChanged += JudgeFilter_SelectedIndexChanged;
             // 
             // atkJudgeFilter
             // 
-            this.atkJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.atkJudgeFilter.FormattingEnabled = true;
-            this.atkJudgeFilter.Items.AddRange(new object[] {
-            "No Good",
-            "Decent",
-            "Pretty Good",
-            "Very Good",
-            "Fantastic",
-            "Best"});
-            this.atkJudgeFilter.Location = new System.Drawing.Point(496, 51);
-            this.atkJudgeFilter.Name = "atkJudgeFilter";
-            this.atkJudgeFilter.Size = new System.Drawing.Size(82, 23);
-            this.atkJudgeFilter.TabIndex = 105;
-            this.atkJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
+            atkJudgeFilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            atkJudgeFilter.FormattingEnabled = true;
+            atkJudgeFilter.Items.AddRange(new object[] { "No Good", "Decent", "Pretty Good", "Very Good", "Fantastic", "Best" });
+            atkJudgeFilter.Location = new System.Drawing.Point(496, 51);
+            atkJudgeFilter.Name = "atkJudgeFilter";
+            atkJudgeFilter.Size = new System.Drawing.Size(82, 23);
+            atkJudgeFilter.TabIndex = 105;
+            atkJudgeFilter.SelectedIndexChanged += JudgeFilter_SelectedIndexChanged;
             // 
             // defJudgeFilter
             // 
-            this.defJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.defJudgeFilter.FormattingEnabled = true;
-            this.defJudgeFilter.Items.AddRange(new object[] {
-            "No Good",
-            "Decent",
-            "Pretty Good",
-            "Very Good",
-            "Fantastic",
-            "Best"});
-            this.defJudgeFilter.Location = new System.Drawing.Point(496, 77);
-            this.defJudgeFilter.Name = "defJudgeFilter";
-            this.defJudgeFilter.Size = new System.Drawing.Size(82, 23);
-            this.defJudgeFilter.TabIndex = 106;
-            this.defJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
+            defJudgeFilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            defJudgeFilter.FormattingEnabled = true;
+            defJudgeFilter.Items.AddRange(new object[] { "No Good", "Decent", "Pretty Good", "Very Good", "Fantastic", "Best" });
+            defJudgeFilter.Location = new System.Drawing.Point(496, 77);
+            defJudgeFilter.Name = "defJudgeFilter";
+            defJudgeFilter.Size = new System.Drawing.Size(82, 23);
+            defJudgeFilter.TabIndex = 106;
+            defJudgeFilter.SelectedIndexChanged += JudgeFilter_SelectedIndexChanged;
             // 
             // spaJudgeFilter
             // 
-            this.spaJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.spaJudgeFilter.FormattingEnabled = true;
-            this.spaJudgeFilter.Items.AddRange(new object[] {
-            "No Good",
-            "Decent",
-            "Pretty Good",
-            "Very Good",
-            "Fantastic",
-            "Best"});
-            this.spaJudgeFilter.Location = new System.Drawing.Point(496, 102);
-            this.spaJudgeFilter.Name = "spaJudgeFilter";
-            this.spaJudgeFilter.Size = new System.Drawing.Size(82, 23);
-            this.spaJudgeFilter.TabIndex = 107;
-            this.spaJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
+            spaJudgeFilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            spaJudgeFilter.FormattingEnabled = true;
+            spaJudgeFilter.Items.AddRange(new object[] { "No Good", "Decent", "Pretty Good", "Very Good", "Fantastic", "Best" });
+            spaJudgeFilter.Location = new System.Drawing.Point(496, 102);
+            spaJudgeFilter.Name = "spaJudgeFilter";
+            spaJudgeFilter.Size = new System.Drawing.Size(82, 23);
+            spaJudgeFilter.TabIndex = 107;
+            spaJudgeFilter.SelectedIndexChanged += JudgeFilter_SelectedIndexChanged;
             // 
             // spdJudgeFilter
             // 
-            this.spdJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.spdJudgeFilter.FormattingEnabled = true;
-            this.spdJudgeFilter.Items.AddRange(new object[] {
-            "No Good",
-            "Decent",
-            "Pretty Good",
-            "Very Good",
-            "Fantastic",
-            "Best"});
-            this.spdJudgeFilter.Location = new System.Drawing.Point(496, 127);
-            this.spdJudgeFilter.Name = "spdJudgeFilter";
-            this.spdJudgeFilter.Size = new System.Drawing.Size(82, 23);
-            this.spdJudgeFilter.TabIndex = 108;
-            this.spdJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
+            spdJudgeFilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            spdJudgeFilter.FormattingEnabled = true;
+            spdJudgeFilter.Items.AddRange(new object[] { "No Good", "Decent", "Pretty Good", "Very Good", "Fantastic", "Best" });
+            spdJudgeFilter.Location = new System.Drawing.Point(496, 127);
+            spdJudgeFilter.Name = "spdJudgeFilter";
+            spdJudgeFilter.Size = new System.Drawing.Size(82, 23);
+            spdJudgeFilter.TabIndex = 108;
+            spdJudgeFilter.SelectedIndexChanged += JudgeFilter_SelectedIndexChanged;
             // 
             // speJudgeFilter
             // 
-            this.speJudgeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.speJudgeFilter.FormattingEnabled = true;
-            this.speJudgeFilter.Items.AddRange(new object[] {
-            "No Good",
-            "Decent",
-            "Pretty Good",
-            "Very Good",
-            "Fantastic",
-            "Best"});
-            this.speJudgeFilter.Location = new System.Drawing.Point(496, 153);
-            this.speJudgeFilter.Name = "speJudgeFilter";
-            this.speJudgeFilter.Size = new System.Drawing.Size(82, 23);
-            this.speJudgeFilter.TabIndex = 109;
-            this.speJudgeFilter.SelectedIndexChanged += new System.EventHandler(this.JudgeFilter_SelectedIndexChanged);
+            speJudgeFilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            speJudgeFilter.FormattingEnabled = true;
+            speJudgeFilter.Items.AddRange(new object[] { "No Good", "Decent", "Pretty Good", "Very Good", "Fantastic", "Best" });
+            speJudgeFilter.Location = new System.Drawing.Point(496, 153);
+            speJudgeFilter.Name = "speJudgeFilter";
+            speJudgeFilter.Size = new System.Drawing.Size(82, 23);
+            speJudgeFilter.TabIndex = 109;
+            speJudgeFilter.SelectedIndexChanged += JudgeFilter_SelectedIndexChanged;
             // 
             // DesiredNature
             // 
-            this.DesiredNature.AutoSize = true;
-            this.DesiredNature.Location = new System.Drawing.Point(427, 214);
-            this.DesiredNature.Name = "DesiredNature";
-            this.DesiredNature.Size = new System.Drawing.Size(46, 15);
-            this.DesiredNature.TabIndex = 110;
-            this.DesiredNature.Text = "Nature:";
+            DesiredNature.AutoSize = true;
+            DesiredNature.Location = new System.Drawing.Point(428, 207);
+            DesiredNature.Name = "DesiredNature";
+            DesiredNature.Size = new System.Drawing.Size(46, 15);
+            DesiredNature.TabIndex = 110;
+            DesiredNature.Text = "Nature:";
             // 
             // SelectedNature
             // 
-            this.SelectedNature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SelectedNature.FormattingEnabled = true;
-            this.SelectedNature.Items.AddRange(new object[] {
-            "Ignore",
-            "Hardy",
-            "Lonely",
-            "Brave",
-            "Adamant",
-            "Naughty",
-            "Bold",
-            "Docile",
-            "Relaxed",
-            "Impish",
-            "Lax",
-            "Timid",
-            "Hasty",
-            "Serious",
-            "Jolly",
-            "Naive",
-            "Modest",
-            "Mild",
-            "Quiet",
-            "Bashful",
-            "Rash",
-            "Calm",
-            "Gentle",
-            "Sassy",
-            "Careful",
-            "Quirky"});
-            this.SelectedNature.Location = new System.Drawing.Point(475, 211);
-            this.SelectedNature.Name = "SelectedNature";
-            this.SelectedNature.Size = new System.Drawing.Size(103, 23);
-            this.SelectedNature.TabIndex = 111;
+            SelectedNature.DropDownStyle = ComboBoxStyle.DropDownList;
+            SelectedNature.FormattingEnabled = true;
+            SelectedNature.Items.AddRange(new object[] { "Ignore", "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" });
+            SelectedNature.Location = new System.Drawing.Point(475, 204);
+            SelectedNature.Name = "SelectedNature";
+            SelectedNature.Size = new System.Drawing.Size(103, 23);
+            SelectedNature.TabIndex = 111;
             // 
             // LabelInitialAdv
             // 
-            this.LabelInitialAdv.AutoSize = true;
-            this.LabelInitialAdv.Location = new System.Drawing.Point(3, 111);
-            this.LabelInitialAdv.Name = "LabelInitialAdv";
-            this.LabelInitialAdv.Size = new System.Drawing.Size(57, 15);
-            this.LabelInitialAdv.TabIndex = 113;
-            this.LabelInitialAdv.Text = "Init. Adv.:";
+            LabelInitialAdv.AutoSize = true;
+            LabelInitialAdv.Location = new System.Drawing.Point(3, 111);
+            LabelInitialAdv.Name = "LabelInitialAdv";
+            LabelInitialAdv.Size = new System.Drawing.Size(57, 15);
+            LabelInitialAdv.TabIndex = 113;
+            LabelInitialAdv.Text = "Init. Adv.:";
             // 
             // InputInitialAdv
             // 
-            this.InputInitialAdv.Location = new System.Drawing.Point(66, 108);
-            this.InputInitialAdv.MaxLength = 13;
-            this.InputInitialAdv.Name = "InputInitialAdv";
-            this.InputInitialAdv.Size = new System.Drawing.Size(102, 23);
-            this.InputInitialAdv.TabIndex = 112;
-            this.InputInitialAdv.Text = "0";
-            this.InputInitialAdv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
-            this.InputInitialAdv.Leave += new System.EventHandler(this.SetToZero_LostFocus);
+            InputInitialAdv.Location = new System.Drawing.Point(66, 108);
+            InputInitialAdv.MaxLength = 13;
+            InputInitialAdv.Name = "InputInitialAdv";
+            InputInitialAdv.Size = new System.Drawing.Size(102, 23);
+            InputInitialAdv.TabIndex = 112;
+            InputInitialAdv.Text = "0";
+            InputInitialAdv.KeyPress += DecInput_KeyPress;
+            InputInitialAdv.Leave += SetToZero_LostFocus;
             // 
             // CheckShinyLocked
             // 
-            this.CheckShinyLocked.AutoSize = true;
-            this.CheckShinyLocked.Location = new System.Drawing.Point(12, 298);
-            this.CheckShinyLocked.Name = "CheckShinyLocked";
-            this.CheckShinyLocked.Size = new System.Drawing.Size(96, 19);
-            this.CheckShinyLocked.TabIndex = 114;
-            this.CheckShinyLocked.Text = "Shiny Locked";
-            this.CheckShinyLocked.UseVisualStyleBackColor = true;
+            CheckShinyLocked.AutoSize = true;
+            CheckShinyLocked.Location = new System.Drawing.Point(12, 298);
+            CheckShinyLocked.Name = "CheckShinyLocked";
+            CheckShinyLocked.Size = new System.Drawing.Size(96, 19);
+            CheckShinyLocked.TabIndex = 114;
+            CheckShinyLocked.Text = "Shiny Locked";
+            CheckShinyLocked.UseVisualStyleBackColor = true;
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Location = new System.Drawing.Point(51, 429);
-            this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(75, 23);
-            this.ConnectButton.TabIndex = 115;
-            this.ConnectButton.Text = "Connect";
-            this.ConnectButton.UseVisualStyleBackColor = true;
-            this.ConnectButton.Click += new System.EventHandler(this.Connect_ClickAsync);
+            ConnectButton.Location = new System.Drawing.Point(51, 429);
+            ConnectButton.Name = "ConnectButton";
+            ConnectButton.Size = new System.Drawing.Size(75, 23);
+            ConnectButton.TabIndex = 115;
+            ConnectButton.Text = "Connect";
+            ConnectButton.UseVisualStyleBackColor = true;
+            ConnectButton.Click += Connect_ClickAsync;
             // 
             // DisconnectButton
             // 
-            this.DisconnectButton.Enabled = false;
-            this.DisconnectButton.Location = new System.Drawing.Point(136, 429);
-            this.DisconnectButton.Name = "DisconnectButton";
-            this.DisconnectButton.Size = new System.Drawing.Size(75, 23);
-            this.DisconnectButton.TabIndex = 116;
-            this.DisconnectButton.Text = "Disconnect";
-            this.DisconnectButton.UseVisualStyleBackColor = true;
-            this.DisconnectButton.Click += new System.EventHandler(this.Disconnect_Click);
+            DisconnectButton.Enabled = false;
+            DisconnectButton.Location = new System.Drawing.Point(136, 429);
+            DisconnectButton.Name = "DisconnectButton";
+            DisconnectButton.Size = new System.Drawing.Size(75, 23);
+            DisconnectButton.TabIndex = 116;
+            DisconnectButton.Text = "Disconnect";
+            DisconnectButton.UseVisualStyleBackColor = true;
+            DisconnectButton.Click += Disconnect_Click;
             // 
             // SwitchIPInput
             // 
-            this.SwitchIPInput.Location = new System.Drawing.Point(108, 364);
-            this.SwitchIPInput.Name = "SwitchIPInput";
-            this.SwitchIPInput.Size = new System.Drawing.Size(103, 23);
-            this.SwitchIPInput.TabIndex = 117;
-            this.SwitchIPInput.Text = "192.168.0.0";
-            this.SwitchIPInput.TextChanged += new System.EventHandler(this.CheckForIP);
+            SwitchIPInput.Location = new System.Drawing.Point(108, 364);
+            SwitchIPInput.Name = "SwitchIPInput";
+            SwitchIPInput.Size = new System.Drawing.Size(103, 23);
+            SwitchIPInput.TabIndex = 117;
+            SwitchIPInput.Text = "192.168.0.0";
+            SwitchIPInput.TextChanged += CheckForIP;
             // 
             // SwitchIPLabel
             // 
-            this.SwitchIPLabel.AutoSize = true;
-            this.SwitchIPLabel.Location = new System.Drawing.Point(44, 367);
-            this.SwitchIPLabel.Name = "SwitchIPLabel";
-            this.SwitchIPLabel.Size = new System.Drawing.Size(58, 15);
-            this.SwitchIPLabel.TabIndex = 118;
-            this.SwitchIPLabel.Text = "Switch IP:";
+            SwitchIPLabel.AutoSize = true;
+            SwitchIPLabel.Location = new System.Drawing.Point(44, 367);
+            SwitchIPLabel.Name = "SwitchIPLabel";
+            SwitchIPLabel.Size = new System.Drawing.Size(58, 15);
+            SwitchIPLabel.TabIndex = 118;
+            SwitchIPLabel.Text = "Switch IP:";
             // 
             // CurrentAdvancesLabel
             // 
-            this.CurrentAdvancesLabel.AutoSize = true;
-            this.CurrentAdvancesLabel.Location = new System.Drawing.Point(39, 406);
-            this.CurrentAdvancesLabel.Name = "CurrentAdvancesLabel";
-            this.CurrentAdvancesLabel.Size = new System.Drawing.Size(63, 15);
-            this.CurrentAdvancesLabel.TabIndex = 120;
-            this.CurrentAdvancesLabel.Text = "Curr. Adv.:";
-            this.CurrentAdvancesLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            CurrentAdvancesLabel.AutoSize = true;
+            CurrentAdvancesLabel.Location = new System.Drawing.Point(39, 406);
+            CurrentAdvancesLabel.Name = "CurrentAdvancesLabel";
+            CurrentAdvancesLabel.Size = new System.Drawing.Size(63, 15);
+            CurrentAdvancesLabel.TabIndex = 120;
+            CurrentAdvancesLabel.Text = "Curr. Adv.:";
+            CurrentAdvancesLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // InputRAMOffset
             // 
-            this.InputRAMOffset.Location = new System.Drawing.Point(108, 338);
-            this.InputRAMOffset.Name = "InputRAMOffset";
-            this.InputRAMOffset.Size = new System.Drawing.Size(103, 23);
-            this.InputRAMOffset.TabIndex = 123;
-            this.InputRAMOffset.Text = "4C2AAC18";
-            this.InputRAMOffset.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexInput_KeyPress);
+            InputRAMOffset.Location = new System.Drawing.Point(108, 338);
+            InputRAMOffset.Name = "InputRAMOffset";
+            InputRAMOffset.Size = new System.Drawing.Size(103, 23);
+            InputRAMOffset.TabIndex = 123;
+            InputRAMOffset.Text = "4C2AAC18";
+            InputRAMOffset.KeyPress += HexInput_KeyPress;
             // 
             // InputRAMOffsetLabel
             // 
-            this.InputRAMOffsetLabel.AutoSize = true;
-            this.InputRAMOffsetLabel.Location = new System.Drawing.Point(60, 341);
-            this.InputRAMOffsetLabel.Name = "InputRAMOffsetLabel";
-            this.InputRAMOffsetLabel.Size = new System.Drawing.Size(42, 15);
-            this.InputRAMOffsetLabel.TabIndex = 124;
-            this.InputRAMOffsetLabel.Text = "Offset:";
+            InputRAMOffsetLabel.AutoSize = true;
+            InputRAMOffsetLabel.Location = new System.Drawing.Point(60, 341);
+            InputRAMOffsetLabel.Name = "InputRAMOffsetLabel";
+            InputRAMOffsetLabel.Size = new System.Drawing.Size(42, 15);
+            InputRAMOffsetLabel.TabIndex = 124;
+            InputRAMOffsetLabel.Text = "Offset:";
             // 
             // ConnectionStatusLabel
             // 
-            this.ConnectionStatusLabel.AutoSize = true;
-            this.ConnectionStatusLabel.Location = new System.Drawing.Point(61, 387);
-            this.ConnectionStatusLabel.Name = "ConnectionStatusLabel";
-            this.ConnectionStatusLabel.Size = new System.Drawing.Size(42, 15);
-            this.ConnectionStatusLabel.TabIndex = 125;
-            this.ConnectionStatusLabel.Text = "Status:";
+            ConnectionStatusLabel.AutoSize = true;
+            ConnectionStatusLabel.Location = new System.Drawing.Point(61, 387);
+            ConnectionStatusLabel.Name = "ConnectionStatusLabel";
+            ConnectionStatusLabel.Size = new System.Drawing.Size(42, 15);
+            ConnectionStatusLabel.TabIndex = 125;
+            ConnectionStatusLabel.Text = "Status:";
             // 
             // ConnectionStatusText
             // 
-            this.ConnectionStatusText.AutoSize = true;
-            this.ConnectionStatusText.Location = new System.Drawing.Point(108, 387);
-            this.ConnectionStatusText.Name = "ConnectionStatusText";
-            this.ConnectionStatusText.Size = new System.Drawing.Size(91, 15);
-            this.ConnectionStatusText.TabIndex = 126;
-            this.ConnectionStatusText.Text = "Not Connected.";
+            ConnectionStatusText.AutoSize = true;
+            ConnectionStatusText.Location = new System.Drawing.Point(108, 387);
+            ConnectionStatusText.Name = "ConnectionStatusText";
+            ConnectionStatusText.Size = new System.Drawing.Size(91, 15);
+            ConnectionStatusText.TabIndex = 126;
+            ConnectionStatusText.Text = "Not Connected.";
             // 
             // TrackAdv
             // 
-            this.TrackAdv.Location = new System.Drawing.Point(108, 403);
-            this.TrackAdv.Name = "TrackAdv";
-            this.TrackAdv.ReadOnly = true;
-            this.TrackAdv.Size = new System.Drawing.Size(103, 23);
-            this.TrackAdv.TabIndex = 128;
-            this.TrackAdv.Text = "Connect Switch!";
+            TrackAdv.Location = new System.Drawing.Point(108, 403);
+            TrackAdv.Name = "TrackAdv";
+            TrackAdv.ReadOnly = true;
+            TrackAdv.Size = new System.Drawing.Size(103, 23);
+            TrackAdv.TabIndex = 128;
+            TrackAdv.Text = "Connect Switch!";
             // 
             // TextBoxCheckEncounter
             // 
-            this.TextBoxCheckEncounter.BackColor = System.Drawing.SystemColors.Menu;
-            this.TextBoxCheckEncounter.Location = new System.Drawing.Point(277, 180);
-            this.TextBoxCheckEncounter.Multiline = true;
-            this.TextBoxCheckEncounter.Name = "TextBoxCheckEncounter";
-            this.TextBoxCheckEncounter.ReadOnly = true;
-            this.TextBoxCheckEncounter.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.TextBoxCheckEncounter.Size = new System.Drawing.Size(144, 114);
-            this.TextBoxCheckEncounter.TabIndex = 130;
+            TextBoxCheckEncounter.BackColor = System.Drawing.SystemColors.Menu;
+            TextBoxCheckEncounter.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            TextBoxCheckEncounter.Location = new System.Drawing.Point(277, 180);
+            TextBoxCheckEncounter.Multiline = true;
+            TextBoxCheckEncounter.Name = "TextBoxCheckEncounter";
+            TextBoxCheckEncounter.ReadOnly = true;
+            TextBoxCheckEncounter.ScrollBars = ScrollBars.Horizontal;
+            TextBoxCheckEncounter.Size = new System.Drawing.Size(144, 114);
+            TextBoxCheckEncounter.TabIndex = 130;
             // 
             // SkipAmountInput
             // 
-            this.SkipAmountInput.Enabled = false;
-            this.SkipAmountInput.Location = new System.Drawing.Point(427, 350);
-            this.SkipAmountInput.Name = "SkipAmountInput";
-            this.SkipAmountInput.Size = new System.Drawing.Size(40, 23);
-            this.SkipAmountInput.TabIndex = 131;
-            this.SkipAmountInput.Text = "1";
-            this.SkipAmountInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.SkipAmountInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            SkipAmountInput.Enabled = false;
+            SkipAmountInput.Location = new System.Drawing.Point(427, 350);
+            SkipAmountInput.Name = "SkipAmountInput";
+            SkipAmountInput.Size = new System.Drawing.Size(40, 23);
+            SkipAmountInput.TabIndex = 131;
+            SkipAmountInput.Text = "1";
+            SkipAmountInput.TextAlign = HorizontalAlignment.Right;
+            SkipAmountInput.KeyPress += DecInput_KeyPress;
             // 
             // DaySkipButton
             // 
-            this.DaySkipButton.Enabled = false;
-            this.DaySkipButton.Location = new System.Drawing.Point(469, 349);
-            this.DaySkipButton.Name = "DaySkipButton";
-            this.DaySkipButton.Size = new System.Drawing.Size(59, 25);
-            this.DaySkipButton.TabIndex = 132;
-            this.DaySkipButton.Text = "Days";
-            this.DaySkipButton.UseVisualStyleBackColor = true;
-            this.DaySkipButton.Click += new System.EventHandler(this.DaySkip_Click);
+            DaySkipButton.Enabled = false;
+            DaySkipButton.Location = new System.Drawing.Point(469, 349);
+            DaySkipButton.Name = "DaySkipButton";
+            DaySkipButton.Size = new System.Drawing.Size(59, 25);
+            DaySkipButton.TabIndex = 132;
+            DaySkipButton.Text = "Days";
+            DaySkipButton.UseVisualStyleBackColor = true;
+            DaySkipButton.Click += DaySkip_Click;
             // 
             // ReadEncounterButton
             // 
-            this.ReadEncounterButton.Enabled = false;
-            this.ReadEncounterButton.Location = new System.Drawing.Point(247, 352);
-            this.ReadEncounterButton.Name = "ReadEncounterButton";
-            this.ReadEncounterButton.Size = new System.Drawing.Size(174, 22);
-            this.ReadEncounterButton.TabIndex = 133;
-            this.ReadEncounterButton.Text = "Read Encounter";
-            this.ReadEncounterButton.UseVisualStyleBackColor = true;
-            this.ReadEncounterButton.Click += new System.EventHandler(this.ReadEncounter_ClickAsync);
+            ReadEncounterButton.Enabled = false;
+            ReadEncounterButton.Location = new System.Drawing.Point(247, 352);
+            ReadEncounterButton.Name = "ReadEncounterButton";
+            ReadEncounterButton.Size = new System.Drawing.Size(174, 22);
+            ReadEncounterButton.TabIndex = 133;
+            ReadEncounterButton.Text = "Read Encounter";
+            ReadEncounterButton.UseVisualStyleBackColor = true;
+            ReadEncounterButton.Click += ReadEncounter_ClickAsync;
             // 
             // SelectedAura
             // 
-            this.SelectedAura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SelectedAura.FormattingEnabled = true;
-            this.SelectedAura.Items.AddRange(new object[] {
-            "Ignore",
-            "None",
-            "Brilliant"});
-            this.SelectedAura.Location = new System.Drawing.Point(475, 292);
-            this.SelectedAura.Name = "SelectedAura";
-            this.SelectedAura.Size = new System.Drawing.Size(103, 23);
-            this.SelectedAura.TabIndex = 134;
+            SelectedAura.DropDownStyle = ComboBoxStyle.DropDownList;
+            SelectedAura.FormattingEnabled = true;
+            SelectedAura.Items.AddRange(new object[] { "Ignore", "None", "Brilliant" });
+            SelectedAura.Location = new System.Drawing.Point(475, 285);
+            SelectedAura.Name = "SelectedAura";
+            SelectedAura.Size = new System.Drawing.Size(103, 23);
+            SelectedAura.TabIndex = 134;
             // 
             // LabelAura
             // 
-            this.LabelAura.AutoSize = true;
-            this.LabelAura.Location = new System.Drawing.Point(437, 295);
-            this.LabelAura.Name = "LabelAura";
-            this.LabelAura.Size = new System.Drawing.Size(35, 15);
-            this.LabelAura.TabIndex = 135;
-            this.LabelAura.Text = "Aura:";
+            LabelAura.AutoSize = true;
+            LabelAura.Location = new System.Drawing.Point(436, 288);
+            LabelAura.Name = "LabelAura";
+            LabelAura.Size = new System.Drawing.Size(35, 15);
+            LabelAura.TabIndex = 135;
+            LabelAura.Text = "Aura:";
             // 
             // CheckHidden
             // 
-            this.CheckHidden.AutoSize = true;
-            this.CheckHidden.Location = new System.Drawing.Point(12, 229);
-            this.CheckHidden.Name = "CheckHidden";
-            this.CheckHidden.Size = new System.Drawing.Size(65, 19);
-            this.CheckHidden.TabIndex = 136;
-            this.CheckHidden.Text = "Hidden";
-            this.CheckHidden.UseVisualStyleBackColor = true;
-            this.CheckHidden.CheckedChanged += new System.EventHandler(this.CheckHidden_CheckedChanged);
+            CheckHidden.AutoSize = true;
+            CheckHidden.Location = new System.Drawing.Point(12, 229);
+            CheckHidden.Name = "CheckHidden";
+            CheckHidden.Size = new System.Drawing.Size(65, 19);
+            CheckHidden.TabIndex = 136;
+            CheckHidden.Text = "Hidden";
+            CheckHidden.UseVisualStyleBackColor = true;
+            CheckHidden.CheckedChanged += CheckHidden_CheckedChanged;
             // 
             // ShortSkipButton
             // 
-            this.ShortSkipButton.Enabled = false;
-            this.ShortSkipButton.Location = new System.Drawing.Point(529, 349);
-            this.ShortSkipButton.Name = "ShortSkipButton";
-            this.ShortSkipButton.Size = new System.Drawing.Size(59, 25);
-            this.ShortSkipButton.TabIndex = 138;
-            this.ShortSkipButton.Text = "Adv.";
-            this.ShortSkipButton.UseVisualStyleBackColor = true;
-            this.ShortSkipButton.Click += new System.EventHandler(this.ShortSkipButton_Click);
+            ShortSkipButton.Enabled = false;
+            ShortSkipButton.Location = new System.Drawing.Point(529, 349);
+            ShortSkipButton.Name = "ShortSkipButton";
+            ShortSkipButton.Size = new System.Drawing.Size(59, 25);
+            ShortSkipButton.TabIndex = 138;
+            ShortSkipButton.Text = "Adv.";
+            ShortSkipButton.UseVisualStyleBackColor = true;
+            ShortSkipButton.Click += ShortSkipButton_Click;
             // 
             // LabelSkipMenu
             // 
-            this.LabelSkipMenu.AutoSize = true;
-            this.LabelSkipMenu.Location = new System.Drawing.Point(427, 332);
-            this.LabelSkipMenu.Name = "LabelSkipMenu";
-            this.LabelSkipMenu.Size = new System.Drawing.Size(32, 15);
-            this.LabelSkipMenu.TabIndex = 139;
-            this.LabelSkipMenu.Text = "Skip:";
+            LabelSkipMenu.AutoSize = true;
+            LabelSkipMenu.Location = new System.Drawing.Point(427, 332);
+            LabelSkipMenu.Name = "LabelSkipMenu";
+            LabelSkipMenu.Size = new System.Drawing.Size(32, 15);
+            LabelSkipMenu.TabIndex = 139;
+            LabelSkipMenu.Text = "Skip:";
             // 
             // PokeSprite
             // 
-            this.PokeSprite.Location = new System.Drawing.Point(305, 295);
-            this.PokeSprite.Name = "PokeSprite";
-            this.PokeSprite.Size = new System.Drawing.Size(74, 57);
-            this.PokeSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.PokeSprite.TabIndex = 140;
-            this.PokeSprite.TabStop = false;
+            PokeSprite.Location = new System.Drawing.Point(305, 295);
+            PokeSprite.Name = "PokeSprite";
+            PokeSprite.Size = new System.Drawing.Size(74, 57);
+            PokeSprite.SizeMode = PictureBoxSizeMode.CenterImage;
+            PokeSprite.TabIndex = 140;
+            PokeSprite.TabStop = false;
             // 
             // MarkSprite
             // 
-            this.MarkSprite.Location = new System.Drawing.Point(378, 310);
-            this.MarkSprite.Name = "MarkSprite";
-            this.MarkSprite.Size = new System.Drawing.Size(48, 42);
-            this.MarkSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.MarkSprite.TabIndex = 141;
-            this.MarkSprite.TabStop = false;
+            MarkSprite.Location = new System.Drawing.Point(378, 310);
+            MarkSprite.Name = "MarkSprite";
+            MarkSprite.Size = new System.Drawing.Size(48, 42);
+            MarkSprite.SizeMode = PictureBoxSizeMode.CenterImage;
+            MarkSprite.TabIndex = 141;
+            MarkSprite.TabStop = false;
             // 
             // CheckMenuClose
             // 
-            this.CheckMenuClose.AutoSize = true;
-            this.CheckMenuClose.Location = new System.Drawing.Point(681, 432);
-            this.CheckMenuClose.Name = "CheckMenuClose";
-            this.CheckMenuClose.Size = new System.Drawing.Size(139, 19);
-            this.CheckMenuClose.TabIndex = 174;
-            this.CheckMenuClose.Text = "Consider Menu Close";
-            this.CheckMenuClose.UseVisualStyleBackColor = true;
-            this.CheckMenuClose.CheckedChanged += new System.EventHandler(this.CheckMenuClose_CheckedChanged);
+            CheckMenuClose.AutoSize = true;
+            CheckMenuClose.Location = new System.Drawing.Point(681, 432);
+            CheckMenuClose.Name = "CheckMenuClose";
+            CheckMenuClose.Size = new System.Drawing.Size(139, 19);
+            CheckMenuClose.TabIndex = 174;
+            CheckMenuClose.Text = "Consider Menu Close";
+            CheckMenuClose.UseVisualStyleBackColor = true;
+            CheckMenuClose.CheckedChanged += CheckMenuClose_CheckedChanged;
             // 
             // LabelNPCs
             // 
-            this.LabelNPCs.AutoSize = true;
-            this.LabelNPCs.Location = new System.Drawing.Point(596, 433);
-            this.LabelNPCs.Name = "LabelNPCs";
-            this.LabelNPCs.Size = new System.Drawing.Size(39, 15);
-            this.LabelNPCs.TabIndex = 175;
-            this.LabelNPCs.Text = "NPCs:";
+            LabelNPCs.AutoSize = true;
+            LabelNPCs.Location = new System.Drawing.Point(596, 433);
+            LabelNPCs.Name = "LabelNPCs";
+            LabelNPCs.Size = new System.Drawing.Size(39, 15);
+            LabelNPCs.TabIndex = 175;
+            LabelNPCs.Text = "NPCs:";
             // 
             // InputNPCs
             // 
-            this.InputNPCs.Enabled = false;
-            this.InputNPCs.Location = new System.Drawing.Point(641, 430);
-            this.InputNPCs.MaxLength = 2;
-            this.InputNPCs.Name = "InputNPCs";
-            this.InputNPCs.Size = new System.Drawing.Size(34, 23);
-            this.InputNPCs.TabIndex = 173;
-            this.InputNPCs.Text = "5";
-            this.InputNPCs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecInput_KeyPress);
+            InputNPCs.Enabled = false;
+            InputNPCs.Location = new System.Drawing.Point(641, 430);
+            InputNPCs.MaxLength = 2;
+            InputNPCs.Name = "InputNPCs";
+            InputNPCs.Size = new System.Drawing.Size(34, 23);
+            InputNPCs.TabIndex = 173;
+            InputNPCs.Text = "5";
+            InputNPCs.KeyPress += DecInput_KeyPress;
             // 
             // CheckFocusWindow
             // 
-            this.CheckFocusWindow.AutoSize = true;
-            this.CheckFocusWindow.Location = new System.Drawing.Point(596, 380);
-            this.CheckFocusWindow.Name = "CheckFocusWindow";
-            this.CheckFocusWindow.Size = new System.Drawing.Size(104, 19);
-            this.CheckFocusWindow.TabIndex = 176;
-            this.CheckFocusWindow.Text = "Focus Window";
-            this.CheckFocusWindow.UseVisualStyleBackColor = true;
-            this.CheckFocusWindow.CheckedChanged += new System.EventHandler(this.CheckFocusWindow_CheckChanged);
+            CheckFocusWindow.AutoSize = true;
+            CheckFocusWindow.Location = new System.Drawing.Point(596, 380);
+            CheckFocusWindow.Name = "CheckFocusWindow";
+            CheckFocusWindow.Size = new System.Drawing.Size(104, 19);
+            CheckFocusWindow.TabIndex = 176;
+            CheckFocusWindow.Text = "Focus Window";
+            CheckFocusWindow.UseVisualStyleBackColor = true;
+            CheckFocusWindow.CheckedChanged += CheckFocusWindow_CheckChanged;
             // 
             // CheckPlayTone
             // 
-            this.CheckPlayTone.AutoSize = true;
-            this.CheckPlayTone.Location = new System.Drawing.Point(596, 403);
-            this.CheckPlayTone.Name = "CheckPlayTone";
-            this.CheckPlayTone.Size = new System.Drawing.Size(76, 19);
-            this.CheckPlayTone.TabIndex = 177;
-            this.CheckPlayTone.Text = "Play Tone";
-            this.CheckPlayTone.UseVisualStyleBackColor = true;
-            this.CheckPlayTone.CheckedChanged += new System.EventHandler(this.CheckPlayTone_CheckedChanged);
+            CheckPlayTone.AutoSize = true;
+            CheckPlayTone.Location = new System.Drawing.Point(596, 403);
+            CheckPlayTone.Name = "CheckPlayTone";
+            CheckPlayTone.Size = new System.Drawing.Size(76, 19);
+            CheckPlayTone.TabIndex = 177;
+            CheckPlayTone.Text = "Play Tone";
+            CheckPlayTone.UseVisualStyleBackColor = true;
+            CheckPlayTone.CheckedChanged += CheckPlayTone_CheckedChanged;
             // 
             // Check3Seg
             // 
-            this.Check3Seg.AutoSize = true;
-            this.Check3Seg.Location = new System.Drawing.Point(145, 321);
-            this.Check3Seg.Name = "Check3Seg";
-            this.Check3Seg.Size = new System.Drawing.Size(115, 19);
-            this.Check3Seg.TabIndex = 178;
-            this.Check3Seg.Text = "3 Segment Only?";
-            this.Check3Seg.UseVisualStyleBackColor = true;
+            Check3Seg.AutoSize = true;
+            Check3Seg.Location = new System.Drawing.Point(145, 311);
+            Check3Seg.Name = "Check3Seg";
+            Check3Seg.Size = new System.Drawing.Size(115, 19);
+            Check3Seg.TabIndex = 178;
+            Check3Seg.Text = "3 Segment Only?";
+            Check3Seg.UseVisualStyleBackColor = true;
+            // 
+            // LabelHeight
+            // 
+            LabelHeight.AutoSize = true;
+            LabelHeight.Location = new System.Drawing.Point(427, 314);
+            LabelHeight.Name = "LabelHeight";
+            LabelHeight.Size = new System.Drawing.Size(46, 15);
+            LabelHeight.TabIndex = 179;
+            LabelHeight.Text = "Height:";
+            // 
+            // SelectedHeight
+            // 
+            SelectedHeight.DropDownStyle = ComboBoxStyle.DropDownList;
+            SelectedHeight.FormattingEnabled = true;
+            SelectedHeight.Items.AddRange(new object[] { "Ignore", "XXXS or XXXL", "XXXS (0)", "XXS (1-30)", "XS (31-60)", "S (61-99)", "M (100-160)", "L (161-195)", "XL (196-241)", "XXL (242-254)", "XXXL (255)" });
+            SelectedHeight.Location = new System.Drawing.Point(475, 312);
+            SelectedHeight.Name = "SelectedHeight";
+            SelectedHeight.Size = new System.Drawing.Size(103, 23);
+            SelectedHeight.TabIndex = 180;
             // 
             // MainWindow
             // 
-            this.ClientSize = new System.Drawing.Size(831, 699);
-            this.Controls.Add(this.Check3Seg);
-            this.Controls.Add(this.CheckPlayTone);
-            this.Controls.Add(this.CheckFocusWindow);
-            this.Controls.Add(this.CheckMenuClose);
-            this.Controls.Add(this.LabelNPCs);
-            this.Controls.Add(this.InputNPCs);
-            this.Controls.Add(this.LabelSkipMenu);
-            this.Controls.Add(this.ShortSkipButton);
-            this.Controls.Add(this.CheckHidden);
-            this.Controls.Add(this.SelectedAura);
-            this.Controls.Add(this.LabelAura);
-            this.Controls.Add(this.ReadEncounterButton);
-            this.Controls.Add(this.DaySkipButton);
-            this.Controls.Add(this.SkipAmountInput);
-            this.Controls.Add(this.TextBoxCheckEncounter);
-            this.Controls.Add(this.TrackAdv);
-            this.Controls.Add(this.ConnectionStatusText);
-            this.Controls.Add(this.ConnectionStatusLabel);
-            this.Controls.Add(this.InputRAMOffsetLabel);
-            this.Controls.Add(this.InputRAMOffset);
-            this.Controls.Add(this.CurrentAdvancesLabel);
-            this.Controls.Add(this.SwitchIPLabel);
-            this.Controls.Add(this.SwitchIPInput);
-            this.Controls.Add(this.DisconnectButton);
-            this.Controls.Add(this.ConnectButton);
-            this.Controls.Add(this.CheckShinyLocked);
-            this.Controls.Add(this.LabelInitialAdv);
-            this.Controls.Add(this.InputInitialAdv);
-            this.Controls.Add(this.SelectedNature);
-            this.Controls.Add(this.DesiredNature);
-            this.Controls.Add(this.speJudgeFilter);
-            this.Controls.Add(this.spdJudgeFilter);
-            this.Controls.Add(this.spaJudgeFilter);
-            this.Controls.Add(this.defJudgeFilter);
-            this.Controls.Add(this.atkJudgeFilter);
-            this.Controls.Add(this.hpJudgeFilter);
-            this.Controls.Add(this.CheckCuteCharm);
-            this.Controls.Add(this.sensBox);
-            this.Controls.Add(this.CheckTIDSIDFinder);
-            this.Controls.Add(this.LabelFlawlessIVs);
-            this.Controls.Add(this.InputFlawlessIVs);
-            this.Controls.Add(this.LabelEMs);
-            this.Controls.Add(this.InputEMs);
-            this.Controls.Add(this.LabelKOCount);
-            this.Controls.Add(this.InputKOCount);
-            this.Controls.Add(this.ButtonUpdateStates);
-            this.Controls.Add(this.CheckIsAbilityLocked);
-            this.Controls.Add(this.RetailAdvancesTrackerNumResultsLabel);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.RetailAdvancesTrackerResultState1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.RetailAdvancesTrackerResultState0);
-            this.Controls.Add(this.RetailAdvancesTrackerSequenceLabel);
-            this.Controls.Add(this.RetailAdvancesTrackerSequenceInput);
-            this.Controls.Add(this.RetailAdvancesTrackerProgressBar);
-            this.Controls.Add(this.RetailAdvancesTrackerGenerateButton);
-            this.Controls.Add(this.RetailAdvancesTrackerMaxInput);
-            this.Controls.Add(this.RetailAdvancesTrackerInitialInput);
-            this.Controls.Add(this.RetailAdvancesTrackerMaxAdvInputLabel);
-            this.Controls.Add(this.RetailAdvancesTrackerInitialInputLabel);
-            this.Controls.Add(this.RetailAdvancesTrackerLabel);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.Results);
-            this.Controls.Add(this.SelectedShiny);
-            this.Controls.Add(this.LabelShiny);
-            this.Controls.Add(this.ButtonSearch);
-            this.Controls.Add(this.LabelSlot);
-            this.Controls.Add(this.LabelLevel);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.InputSlotMax);
-            this.Controls.Add(this.InputSlotMin);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.InputLevelMax);
-            this.Controls.Add(this.InputLevelMin);
-            this.Controls.Add(this.CheckHeldItem);
-            this.Controls.Add(this.CheckFishing);
-            this.Controls.Add(this.CheckStatic);
-            this.Controls.Add(this.CheckWeather);
-            this.Controls.Add(this.CheckMarkCharm);
-            this.Controls.Add(this.CheckShinyCharm);
-            this.Controls.Add(this.SelectedMark);
-            this.Controls.Add(this.LabelMark);
-            this.Controls.Add(this.LabelMaxAdv);
-            this.Controls.Add(this.InputMaxAdv);
-            this.Controls.Add(this.LabelIDsSlash);
-            this.Controls.Add(this.LabelTIDSID);
-            this.Controls.Add(this.InputSID);
-            this.Controls.Add(this.InputTID);
-            this.Controls.Add(this.speMaxFilter);
-            this.Controls.Add(this.speMinFilter);
-            this.Controls.Add(this.spdMaxFilter);
-            this.Controls.Add(this.spdMinFilter);
-            this.Controls.Add(this.spaMaxFilter);
-            this.Controls.Add(this.spaMinFilter);
-            this.Controls.Add(this.defMaxFilter);
-            this.Controls.Add(this.defMinFilter);
-            this.Controls.Add(this.atkMaxFilter);
-            this.Controls.Add(this.atkMinFilter);
-            this.Controls.Add(this.hpMaxFilter);
-            this.Controls.Add(this.hpMinFilter);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.speMax);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.spdMax);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.spaMax);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.defMax);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.atkMax);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.speFilter);
-            this.Controls.Add(this.spdFilter);
-            this.Controls.Add(this.spaFilter);
-            this.Controls.Add(this.defFilter);
-            this.Controls.Add(this.atkFilter);
-            this.Controls.Add(this.hpFilter);
-            this.Controls.Add(this.speMin);
-            this.Controls.Add(this.spdMin);
-            this.Controls.Add(this.spaMin);
-            this.Controls.Add(this.defMin);
-            this.Controls.Add(this.atkMin);
-            this.Controls.Add(this.hpMax);
-            this.Controls.Add(this.hpMin);
-            this.Controls.Add(this.LabelState1);
-            this.Controls.Add(this.InputState1);
-            this.Controls.Add(this.InputState0);
-            this.Controls.Add(this.LabelState0);
-            this.Controls.Add(this.ImageRareMark);
-            this.Controls.Add(this.MainMenu);
-            this.Controls.Add(this.PokeSprite);
-            this.Controls.Add(this.MarkSprite);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MainWindow";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ImageRareMark)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Results)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generatorBindingSource)).EndInit();
-            this.MainMenu.ResumeLayout(false);
-            this.MainMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PokeSprite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MarkSprite)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            ClientSize = new System.Drawing.Size(831, 699);
+            Controls.Add(SelectedHeight);
+            Controls.Add(Check3Seg);
+            Controls.Add(CheckPlayTone);
+            Controls.Add(CheckFocusWindow);
+            Controls.Add(CheckMenuClose);
+            Controls.Add(LabelNPCs);
+            Controls.Add(InputNPCs);
+            Controls.Add(LabelSkipMenu);
+            Controls.Add(ShortSkipButton);
+            Controls.Add(CheckHidden);
+            Controls.Add(SelectedAura);
+            Controls.Add(LabelAura);
+            Controls.Add(ReadEncounterButton);
+            Controls.Add(DaySkipButton);
+            Controls.Add(SkipAmountInput);
+            Controls.Add(TextBoxCheckEncounter);
+            Controls.Add(TrackAdv);
+            Controls.Add(ConnectionStatusText);
+            Controls.Add(ConnectionStatusLabel);
+            Controls.Add(InputRAMOffsetLabel);
+            Controls.Add(InputRAMOffset);
+            Controls.Add(CurrentAdvancesLabel);
+            Controls.Add(SwitchIPLabel);
+            Controls.Add(SwitchIPInput);
+            Controls.Add(DisconnectButton);
+            Controls.Add(ConnectButton);
+            Controls.Add(CheckShinyLocked);
+            Controls.Add(LabelInitialAdv);
+            Controls.Add(InputInitialAdv);
+            Controls.Add(SelectedNature);
+            Controls.Add(DesiredNature);
+            Controls.Add(speJudgeFilter);
+            Controls.Add(spdJudgeFilter);
+            Controls.Add(spaJudgeFilter);
+            Controls.Add(defJudgeFilter);
+            Controls.Add(atkJudgeFilter);
+            Controls.Add(hpJudgeFilter);
+            Controls.Add(CheckCuteCharm);
+            Controls.Add(sensBox);
+            Controls.Add(CheckTIDSIDFinder);
+            Controls.Add(LabelFlawlessIVs);
+            Controls.Add(InputFlawlessIVs);
+            Controls.Add(LabelEMs);
+            Controls.Add(InputEMs);
+            Controls.Add(LabelKOCount);
+            Controls.Add(InputKOCount);
+            Controls.Add(ButtonUpdateStates);
+            Controls.Add(CheckIsAbilityLocked);
+            Controls.Add(RetailAdvancesTrackerNumResultsLabel);
+            Controls.Add(label3);
+            Controls.Add(RetailAdvancesTrackerResultState1);
+            Controls.Add(label2);
+            Controls.Add(RetailAdvancesTrackerResultState0);
+            Controls.Add(RetailAdvancesTrackerSequenceLabel);
+            Controls.Add(RetailAdvancesTrackerSequenceInput);
+            Controls.Add(RetailAdvancesTrackerProgressBar);
+            Controls.Add(RetailAdvancesTrackerGenerateButton);
+            Controls.Add(RetailAdvancesTrackerMaxInput);
+            Controls.Add(RetailAdvancesTrackerInitialInput);
+            Controls.Add(RetailAdvancesTrackerMaxAdvInputLabel);
+            Controls.Add(RetailAdvancesTrackerInitialInputLabel);
+            Controls.Add(RetailAdvancesTrackerLabel);
+            Controls.Add(progressBar1);
+            Controls.Add(Results);
+            Controls.Add(SelectedShiny);
+            Controls.Add(LabelShiny);
+            Controls.Add(ButtonSearch);
+            Controls.Add(LabelSlot);
+            Controls.Add(LabelLevel);
+            Controls.Add(label21);
+            Controls.Add(InputSlotMax);
+            Controls.Add(InputSlotMin);
+            Controls.Add(label20);
+            Controls.Add(InputLevelMax);
+            Controls.Add(InputLevelMin);
+            Controls.Add(CheckHeldItem);
+            Controls.Add(CheckFishing);
+            Controls.Add(CheckStatic);
+            Controls.Add(CheckWeather);
+            Controls.Add(CheckMarkCharm);
+            Controls.Add(CheckShinyCharm);
+            Controls.Add(SelectedMark);
+            Controls.Add(LabelMark);
+            Controls.Add(LabelMaxAdv);
+            Controls.Add(InputMaxAdv);
+            Controls.Add(LabelIDsSlash);
+            Controls.Add(LabelTIDSID);
+            Controls.Add(InputSID);
+            Controls.Add(InputTID);
+            Controls.Add(speMaxFilter);
+            Controls.Add(speMinFilter);
+            Controls.Add(spdMaxFilter);
+            Controls.Add(spdMinFilter);
+            Controls.Add(spaMaxFilter);
+            Controls.Add(spaMinFilter);
+            Controls.Add(defMaxFilter);
+            Controls.Add(defMinFilter);
+            Controls.Add(atkMaxFilter);
+            Controls.Add(atkMinFilter);
+            Controls.Add(hpMaxFilter);
+            Controls.Add(hpMinFilter);
+            Controls.Add(label15);
+            Controls.Add(speMax);
+            Controls.Add(label14);
+            Controls.Add(spdMax);
+            Controls.Add(label13);
+            Controls.Add(spaMax);
+            Controls.Add(label12);
+            Controls.Add(defMax);
+            Controls.Add(label11);
+            Controls.Add(atkMax);
+            Controls.Add(label10);
+            Controls.Add(speFilter);
+            Controls.Add(spdFilter);
+            Controls.Add(spaFilter);
+            Controls.Add(defFilter);
+            Controls.Add(atkFilter);
+            Controls.Add(hpFilter);
+            Controls.Add(speMin);
+            Controls.Add(spdMin);
+            Controls.Add(spaMin);
+            Controls.Add(defMin);
+            Controls.Add(atkMin);
+            Controls.Add(hpMax);
+            Controls.Add(hpMin);
+            Controls.Add(LabelState1);
+            Controls.Add(InputState1);
+            Controls.Add(InputState0);
+            Controls.Add(LabelState0);
+            Controls.Add(ImageRareMark);
+            Controls.Add(MainMenu);
+            Controls.Add(PokeSprite);
+            Controls.Add(MarkSprite);
+            Controls.Add(LabelHeight);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Name = "MainWindow";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)ImageRareMark).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Results).EndInit();
+            ((System.ComponentModel.ISupportInitialize)generatorBindingSource).EndInit();
+            MainMenu.ResumeLayout(false);
+            MainMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)PokeSprite).EndInit();
+            ((System.ComponentModel.ISupportInitialize)MarkSprite).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Label LabelState0;
-        private System.Windows.Forms.Label LabelState1;
-        private System.Windows.Forms.TextBox hpMin;
-        private System.Windows.Forms.TextBox hpMax;
-        private System.Windows.Forms.Label hpFilter;
-        private System.Windows.Forms.Label atkFilter;
-        private System.Windows.Forms.Label defFilter;
-        private System.Windows.Forms.Label spaFilter;
-        private System.Windows.Forms.Label spdFilter;
-        private System.Windows.Forms.Label speFilter;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button hpMinFilter;
-        private System.Windows.Forms.Button hpMaxFilter;
-        private System.Windows.Forms.Label LabelTIDSID;
-        private System.Windows.Forms.Label LabelIDsSlash;
-        private System.Windows.Forms.TextBox InputMaxAdv;
-        private System.Windows.Forms.Label LabelMaxAdv;
-        private System.Windows.Forms.Label LabelMark;
-        private System.Windows.Forms.PictureBox ImageRareMark;
-        private System.Windows.Forms.ComboBox SelectedMark;
-        private System.Windows.Forms.CheckBox CheckShinyCharm;
-        private System.Windows.Forms.CheckBox CheckMarkCharm;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label LabelLevel;
-        private System.Windows.Forms.Label LabelSlot;
-        private System.Windows.Forms.Button ButtonSearch;
-        private System.Windows.Forms.ComboBox SelectedShiny;
-        private System.Windows.Forms.Label LabelShiny;
-        private System.Windows.Forms.DataGridView Results;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button speMinFilter;
-        private System.Windows.Forms.TextBox defMax;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button spdMinFilter;
-        private System.Windows.Forms.Button spdMaxFilter;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button speMaxFilter;
-        private System.Windows.Forms.TextBox spaMin;
-        private System.Windows.Forms.Button atkMinFilter;
-        private System.Windows.Forms.TextBox spdMin;
-        private System.Windows.Forms.TextBox spdMax;
-        private System.Windows.Forms.TextBox speMin;
-        private System.Windows.Forms.TextBox speMax;
-        private System.Windows.Forms.TextBox atkMax;
-        private System.Windows.Forms.Button atkMaxFilter;
-        private System.Windows.Forms.TextBox defMin;
-        private System.Windows.Forms.Button defMinFilter;
-        private System.Windows.Forms.Button spaMinFilter;
-        private System.Windows.Forms.Button defMaxFilter;
-        private System.Windows.Forms.TextBox spaMax;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox atkMin;
-        private System.Windows.Forms.Button spaMaxFilter;
-        private System.Windows.Forms.BindingSource generatorBindingSource;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label RetailAdvancesTrackerLabel;
-        private System.Windows.Forms.Label RetailAdvancesTrackerInitialInputLabel;
-        private System.Windows.Forms.Label RetailAdvancesTrackerMaxAdvInputLabel;
-        private System.Windows.Forms.TextBox RetailAdvancesTrackerInitialInput;
-        private System.Windows.Forms.TextBox RetailAdvancesTrackerMaxInput;
-        private System.Windows.Forms.Button RetailAdvancesTrackerGenerateButton;
-        private System.Windows.Forms.ProgressBar RetailAdvancesTrackerProgressBar;
-        private System.Windows.Forms.TextBox RetailAdvancesTrackerSequenceInput;
-        private System.Windows.Forms.Label RetailAdvancesTrackerSequenceLabel;
-        private System.Windows.Forms.TextBox RetailAdvancesTrackerResultState0;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox RetailAdvancesTrackerResultState1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label RetailAdvancesTrackerNumResultsLabel;
-        private System.Windows.Forms.MenuStrip MainMenu;
-        private System.Windows.Forms.ToolStripMenuItem SeedFinderMenu;
-        private System.Windows.Forms.Button ButtonUpdateStates;
-        private System.Windows.Forms.Label LabelKOCount;
-        private System.Windows.Forms.TextBox InputKOCount;
-        private System.Windows.Forms.CheckBox CheckTIDSIDFinder;
-        private System.Windows.Forms.Label LabelEMs;
-        private System.Windows.Forms.Label LabelFlawlessIVs;
-        private System.Windows.Forms.CheckBox sensBox;
-        private System.Windows.Forms.CheckBox CheckCuteCharm;
-        private System.Windows.Forms.ComboBox hpJudgeFilter;
-        private System.Windows.Forms.ComboBox atkJudgeFilter;
-        private System.Windows.Forms.ComboBox defJudgeFilter;
-        private System.Windows.Forms.ComboBox spaJudgeFilter;
-        private System.Windows.Forms.ComboBox spdJudgeFilter;
-        private System.Windows.Forms.ComboBox speJudgeFilter;
-        private System.Windows.Forms.Label DesiredNature;
-        private System.Windows.Forms.ComboBox SelectedNature;
-        private System.Windows.Forms.Label LabelInitialAdv;
-        private System.Windows.Forms.TextBox InputInitialAdv;
-        private System.Windows.Forms.Button ConnectButton;
-        private System.Windows.Forms.Button DisconnectButton;
-        private System.Windows.Forms.TextBox SwitchIPInput;
-        private System.Windows.Forms.Label SwitchIPLabel;
-        private System.Windows.Forms.Label CurrentAdvancesLabel;
+        private Label LabelState0;
+        private Label LabelState1;
+        private TextBox hpMin;
+        private TextBox hpMax;
+        private Label hpFilter;
+        private Label atkFilter;
+        private Label defFilter;
+        private Label spaFilter;
+        private Label spdFilter;
+        private Label speFilter;
+        private Label label10;
+        private Button hpMinFilter;
+        private Button hpMaxFilter;
+        private Label LabelTIDSID;
+        private Label LabelIDsSlash;
+        private TextBox InputMaxAdv;
+        private Label LabelMaxAdv;
+        private Label LabelMark;
+        private PictureBox ImageRareMark;
+        private ComboBox SelectedMark;
+        private CheckBox CheckShinyCharm;
+        private CheckBox CheckMarkCharm;
+        private Label label20;
+        private Label label21;
+        private Label LabelLevel;
+        private Label LabelSlot;
+        private Button ButtonSearch;
+        private ComboBox SelectedShiny;
+        private Label LabelShiny;
+        private DataGridView Results;
+        private Label label12;
+        private Button speMinFilter;
+        private TextBox defMax;
+        private Label label13;
+        private Label label15;
+        private Button spdMinFilter;
+        private Button spdMaxFilter;
+        private Label label11;
+        private Button speMaxFilter;
+        private TextBox spaMin;
+        private Button atkMinFilter;
+        private TextBox spdMin;
+        private TextBox spdMax;
+        private TextBox speMin;
+        private TextBox speMax;
+        private TextBox atkMax;
+        private Button atkMaxFilter;
+        private TextBox defMin;
+        private Button defMinFilter;
+        private Button spaMinFilter;
+        private Button defMaxFilter;
+        private TextBox spaMax;
+        private Label label14;
+        private TextBox atkMin;
+        private Button spaMaxFilter;
+        private BindingSource generatorBindingSource;
+        private ProgressBar progressBar1;
+        private Label RetailAdvancesTrackerLabel;
+        private Label RetailAdvancesTrackerInitialInputLabel;
+        private Label RetailAdvancesTrackerMaxAdvInputLabel;
+        private TextBox RetailAdvancesTrackerInitialInput;
+        private TextBox RetailAdvancesTrackerMaxInput;
+        private Button RetailAdvancesTrackerGenerateButton;
+        private ProgressBar RetailAdvancesTrackerProgressBar;
+        private TextBox RetailAdvancesTrackerSequenceInput;
+        private Label RetailAdvancesTrackerSequenceLabel;
+        private TextBox RetailAdvancesTrackerResultState0;
+        private Label label3;
+        private TextBox RetailAdvancesTrackerResultState1;
+        private Label label2;
+        private Label RetailAdvancesTrackerNumResultsLabel;
+        private MenuStrip MainMenu;
+        private ToolStripMenuItem SeedFinderMenu;
+        private Button ButtonUpdateStates;
+        private Label LabelKOCount;
+        private TextBox InputKOCount;
+        private CheckBox CheckTIDSIDFinder;
+        private Label LabelEMs;
+        private Label LabelFlawlessIVs;
+        private CheckBox sensBox;
+        private CheckBox CheckCuteCharm;
+        private ComboBox hpJudgeFilter;
+        private ComboBox atkJudgeFilter;
+        private ComboBox defJudgeFilter;
+        private ComboBox spaJudgeFilter;
+        private ComboBox spdJudgeFilter;
+        private ComboBox speJudgeFilter;
+        private Label DesiredNature;
+        private ComboBox SelectedNature;
+        private Label LabelInitialAdv;
+        private TextBox InputInitialAdv;
+        private Button ConnectButton;
+        private Button DisconnectButton;
+        private TextBox SwitchIPInput;
+        private Label SwitchIPLabel;
+        private Label CurrentAdvancesLabel;
         private TextBox InputRAMOffset;
         private Label InputRAMOffsetLabel;
         private Label ConnectionStatusLabel;
@@ -2251,6 +2147,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         private TextBox InputNPCs;
         public CheckBox CheckFocusWindow;
         public CheckBox CheckPlayTone;
+        private CheckBox Check3Seg;
         private DataGridViewTextBoxColumn Frame;
         private DataGridViewTextBoxColumn TID;
         private DataGridViewTextBoxColumn SID;
@@ -2272,9 +2169,11 @@ namespace SWSH_OWRNG_Generator.WinForms
         private DataGridViewTextBoxColumn SpA;
         private DataGridViewTextBoxColumn SpD;
         private DataGridViewTextBoxColumn Spe;
+        private new DataGridViewTextBoxColumn Height;
         private DataGridViewTextBoxColumn Mark;
         private DataGridViewTextBoxColumn State0;
         private DataGridViewTextBoxColumn State1;
-        private CheckBox Check3Seg;
+        private Label LabelHeight;
+        private ComboBox SelectedHeight;
     }
 }

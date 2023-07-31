@@ -18,6 +18,7 @@
         public string? DesiredShiny { get; set; }
         public string? DesiredNature { get; set; }
         public string? DesiredAura { get; set; }
+        public string? DesiredHeight { get; set; }
         public uint LevelMin { get; set; }
         public uint LevelMax { get; set; }
         public uint SlotMin { get; set; }

@@ -1,4 +1,5 @@
 ﻿using PKHeX.Core;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace SWSH_OWRNG_Generator.Core.Util
 {
@@ -17,6 +18,13 @@ namespace SWSH_OWRNG_Generator.Core.Util
             return !(DesiredMark == "Any Mark" && Mark == "None" || DesiredMark == "Any Personality" && (Mark == "None" || Mark == "Uncommon" || Mark == "Time" || Mark == "Weather" || Mark == "Fishing" || Mark == "Rare") || DesiredMark != "Ignore" && DesiredMark != "Any Mark" && DesiredMark != "Any Personality" && Mark != DesiredMark);
         }
 
+        public static bool PassesHeightFilter(int Scale, string DesiredHeight)
+        {
+            return DesiredHeight == "Ignore" || DesiredHeight == "XXXS" && Scale == 0 || DesiredHeight == "XXS" && Scale >= 1 && Scale <= 24 || DesiredHeight == "XS" && Scale >= 25 && Scale <= 59 ||
+                DesiredHeight == "S" && Scale >= 66 && Scale <= 99 || DesiredHeight == "M" && Scale >= 100 && Scale <= 155 || DesiredHeight == "L" && Scale >= 156 && Scale <= 195 ||
+                DesiredHeight == "XL" && Scale >= 196 && Scale <= 230 || DesiredHeight == "XXL" && Scale >= 231 && Scale <= 254 || DesiredHeight == "XXXL" && Scale == 255;
+        }
+
         public static uint GetTSV(uint TID, uint SID)
         {
             return TID ^ SID;
@@ -33,6 +41,24 @@ namespace SWSH_OWRNG_Generator.Core.Util
             >= 1 => (15, 1),
             _ => (0, 0),
         };
+
+        public static string GenerateHeightScale(uint Height)
+        {
+            string result = string.Empty;
+            switch (Height)
+            {
+                case uint h when h == 0: result = $"XXXS ({Height})"; break;
+                case uint h when h >= 1 && h <= 24: result = $"XXS ({Height})"; break;
+                case uint h when h >= 25 && h <= 59: result = $"XS ({Height})"; break;
+                case uint h when h >= 66 && h <= 99: result = $"S ({Height})"; break;
+                case uint h when h >= 100 && h <= 155: result = $"M ({Height})"; break;
+                case uint h when h >= 156 && h <= 195: result = $"L ({Height})"; break;
+                case uint h when h >= 196 && h <= 230: result = $"XL ({Height})"; break;
+                case uint h when h >= 231 && h <= 254: result = $"XXL ({Height})"; break;
+                case uint h when h == 255: result = $"XXXL ({Height})"; break;
+            }
+            return result;
+        }
 
         public static string GenerateMark(ref Xoroshiro128Plus go, bool Weather, bool Fishing, int MarkRolls)
         {
@@ -55,7 +81,7 @@ namespace SWSH_OWRNG_Generator.Core.Util
             return "None";
         }
 
-        public static (uint, uint, uint[], uint, bool) CalculateFixed(uint FixedSeed, uint TSV, bool Shiny, int ForcedIVs, uint[] MinIVs, uint[] MaxIVs)
+        public static (uint, uint, uint[], uint, bool, uint) CalculateFixed(uint FixedSeed, uint TSV, bool Shiny, int ForcedIVs, uint[] MinIVs, uint[] MaxIVs)
         {
             Xoroshiro128Plus go = new(FixedSeed, 0x82A2B175229D6A5B);
             uint FixedEC = (uint)go.Next();
@@ -99,10 +125,10 @@ namespace SWSH_OWRNG_Generator.Core.Util
                 }
             }
 
-            // uint Height = (uint)go.NextInt(129) + (uint)go.NextInt(128);
+            uint Height = (uint)go.NextInt(129) + (uint)go.NextInt(128);
             // uint Weight = (uint)go.NextInt(129) + (uint)go.NextInt(128);
 
-            return (FixedEC, FixedPID, IVs, GetTSV(GetTSV(FixedPID >> 16, FixedPID & 0xFFFF), TSV), PassIVs);
+            return (FixedEC, FixedPID, IVs, GetTSV(GetTSV(FixedPID >> 16, FixedPID & 0xFFFF), TSV), PassIVs, Height);
         }
 
         public static string GenerateRetailSequence(ulong state0, ulong state1, uint start, uint max, IProgress<int> progress)
