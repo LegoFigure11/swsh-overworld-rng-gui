@@ -39,7 +39,7 @@ jobs:
       run: msbuild /property:Configuration=Debug
 
     - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: SWSH-Overworld-RNG-GUI
         path: |
