@@ -20,16 +20,16 @@ namespace SWSH_OWRNG_Generator.Core.Util
         public static bool PassesHeightFilter(int Scale, string DesiredHeight)
         {
             return DesiredHeight == "Ignore" ||
-                DesiredHeight == "XXXS" && Scale == 0 ||
-                DesiredHeight == "XXS" && Scale >= 1 && Scale <= 24 ||
-                DesiredHeight == "XS" && Scale >= 25 && Scale <= 59 ||
-                DesiredHeight == "S" && Scale >= 66 && Scale <= 99 ||
-                DesiredHeight == "M" && Scale >= 100 && Scale <= 155 ||
-                DesiredHeight == "L" && Scale >= 156 && Scale <= 195 ||
-                DesiredHeight == "XL" && Scale >= 196 && Scale <= 230 ||
-                DesiredHeight == "XXL" && Scale >= 231 && Scale <= 254 ||
-                DesiredHeight == "XXXL" && Scale == 255 ||
-                DesiredHeight == "XXXS or XXXL" && (Scale == 0 || Scale == 255);
+                (DesiredHeight == "XXXS (0)" && Scale == 0) ||
+                (DesiredHeight == "XXS (1 - 24)" && Scale >= 1 && Scale <= 24) ||
+                (DesiredHeight == "XS (25 - 59)" && Scale >= 25 && Scale <= 59) ||
+                (DesiredHeight == "S (66 - 99)" && Scale >= 66 && Scale <= 99) ||
+                (DesiredHeight == "M (100 - 155)" && Scale >= 100 && Scale <= 155) ||
+                (DesiredHeight == "L (156 - 195)" && Scale >= 156 && Scale <= 195) ||
+                (DesiredHeight == "XL (196 - 230)" && Scale >= 196 && Scale <= 230) ||
+                (DesiredHeight == "XXL (231 - 245)" && Scale >= 231 && Scale <= 254) ||
+                (DesiredHeight == "XXXL (255)" && Scale == 255) ||
+                (DesiredHeight == "XXXS or XXXL" && (Scale == 0 || Scale == 255));
         }
 
         public static uint GetTSV(uint TID, uint SID)

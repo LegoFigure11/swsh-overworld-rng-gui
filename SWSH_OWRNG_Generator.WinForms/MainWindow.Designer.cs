@@ -1851,7 +1851,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // 
             SelectedHeight.DropDownStyle = ComboBoxStyle.DropDownList;
             SelectedHeight.FormattingEnabled = true;
-            SelectedHeight.Items.AddRange(new object[] { "Ignore", "XXXS or XXXL", "XXXS (0)", "XXS (1-30)", "XS (31-60)", "S (61-99)", "M (100-160)", "L (161-195)", "XL (196-241)", "XXL (242-254)", "XXXL (255)" });
+            SelectedHeight.Items.AddRange(new object[] { "Ignore", "XXXS or XXXL", "XXXS (0)", "XXS (1 - 24)", "XS (25 - 59)", "S (66 - 99)", "M (100 - 155)", "L (156 - 195)", "XL (196 - 230)", "XXL (231 - 245)", "XXXL (255)" });
             SelectedHeight.Location = new System.Drawing.Point(475, 312);
             SelectedHeight.Name = "SelectedHeight";
             SelectedHeight.Size = new System.Drawing.Size(103, 23);
