@@ -160,10 +160,9 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                     continue;
                 }
 
-                string HeightScale = Util.Common.GenerateHeightScale(Height);
-
                 if (!Util.Common.PassesHeightFilter((int)Height, Filters.DesiredHeight!))
                 {
+                    go.Next();
                     advance++;
                     continue;
                 }
@@ -201,7 +200,7 @@ namespace SWSH_OWRNG_Generator.Core.Overworld.Generators
                         SpD = IVs[4],
                         Spe = IVs[5],
                         Mark = Mark,
-                        Height = HeightScale,
+                        Height = Util.Common.GenerateHeightScale(Height),
                         State0 = _s0.ToString("X16"),
                         State1 = _s1.ToString("X16"),
                     }
