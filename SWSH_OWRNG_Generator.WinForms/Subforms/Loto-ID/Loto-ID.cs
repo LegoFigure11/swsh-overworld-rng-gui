@@ -65,7 +65,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             MainWindow.Pad(InputNPCs, '0', 1);
             uint NPCs = 0;
             if (CheckMenuClose.Checked)
-                NPCs = uint.Parse(InputNPCs.Text) + 1;
+                NPCs = uint.Parse(InputNPCs.Text);
 
             MainWindow.Pad(InputMaxAdv, '0', 1);
             ulong advances = ulong.Parse(InputMaxAdv.Text);

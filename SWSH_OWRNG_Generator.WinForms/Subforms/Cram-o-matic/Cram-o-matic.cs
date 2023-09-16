@@ -34,7 +34,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             uint NPCs = 0;
             if (CheckMenuClose.Checked)
             {
-                NPCs = uint.Parse(InputNPCs.Text) + 1;
+                NPCs = uint.Parse(InputNPCs.Text);
             }
 
 
