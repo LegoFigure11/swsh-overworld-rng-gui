@@ -30,7 +30,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             ulong s0 = ulong.Parse(InputState0.Text, NumberStyles.AllowHexSpecifier);
             ulong s1 = ulong.Parse(InputState1.Text, NumberStyles.AllowHexSpecifier);
             MainWindow.Pad(InputNPCs, '0', 1);
-            uint NPCs = uint.Parse(InputNPCs.Text) + 1;
+            uint NPCs = uint.Parse(InputNPCs.Text);
 
             MainWindow.Pad(InputMaxAdv, '0', 1);
             ulong advances = ulong.Parse(InputMaxAdv.Text);
