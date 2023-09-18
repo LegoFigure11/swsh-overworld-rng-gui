@@ -8,7 +8,7 @@
 		<Version>3.0.1</Version>
 		<AssemblyTitle>SWSH_OWRNG_Generator_GUI</AssemblyTitle>
 		<Product>SWSH_OWRNG_Generator_GUI</Product>
-		<Copyright>Copyright © 2022</Copyright>
+		<Copyright>Copyright © 2023</Copyright>
 		<StartupObject>SWSH_OWRNG_Generator.WinForms.Program</StartupObject>
 	</PropertyGroup>
 	<PropertyGroup>
