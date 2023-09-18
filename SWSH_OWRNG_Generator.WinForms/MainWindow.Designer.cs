@@ -197,6 +197,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             Check3Seg = new CheckBox();
             LabelHeight = new Label();
             SelectedHeight = new ComboBox();
+            CheckUseFilters = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)ImageRareMark).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Results).BeginInit();
             ((System.ComponentModel.ISupportInitialize)generatorBindingSource).BeginInit();
@@ -1857,9 +1858,22 @@ namespace SWSH_OWRNG_Generator.WinForms
             SelectedHeight.Size = new System.Drawing.Size(103, 23);
             SelectedHeight.TabIndex = 180;
             // 
+            // CheckUseFilters
+            // 
+            CheckUseFilters.AutoSize = true;
+            CheckUseFilters.Checked = true;
+            CheckUseFilters.CheckState = CheckState.Checked;
+            CheckUseFilters.Location = new System.Drawing.Point(596, 358);
+            CheckUseFilters.Name = "CheckUseFilters";
+            CheckUseFilters.Size = new System.Drawing.Size(95, 19);
+            CheckUseFilters.TabIndex = 181;
+            CheckUseFilters.Text = "Enable Filters";
+            CheckUseFilters.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             ClientSize = new System.Drawing.Size(831, 699);
+            Controls.Add(CheckUseFilters);
             Controls.Add(SelectedHeight);
             Controls.Add(Check3Seg);
             Controls.Add(CheckPlayTone);
@@ -2175,5 +2189,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         private DataGridViewTextBoxColumn State1;
         private Label LabelHeight;
         private ComboBox SelectedHeight;
+        public CheckBox CheckUseFilters;
     }
 }

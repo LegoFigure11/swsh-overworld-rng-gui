@@ -599,6 +599,20 @@ namespace SWSH_OWRNG_Generator.WinForms
                     MaxIVs = new uint[] { ushort.Parse(hpMax.Text), ushort.Parse(atkMax.Text), ushort.Parse(defMax.Text), ushort.Parse(spaMax.Text), ushort.Parse(spdMax.Text), ushort.Parse(speMax.Text) }
                 };
 
+                if (!CheckUseFilters.Checked)
+                {
+                    Filters.Is3Segment = false;
+                    Filters.DesiredMark = "Ignore";
+                    Filters.DesiredNature = "Ignore";
+                    Filters.DesiredShiny = "Ignore";
+                    Filters.DesiredHeight = "Ignore";
+                    Filters.DesiredAura = "Ignore";
+                    Filters.SlotMin = 0;
+                    Filters.SlotMax = 99;
+                    Filters.MinIVs = new uint[] { 0, 0, 0, 0, 0, 0 };
+                    Filters.MaxIVs = new uint[] { 31, 31, 31, 31, 31, 31 };
+                }
+
                 int[] WrongIVs = new int[6];
                 string message = "";
                 string[] stats = { "HP", "Atk", "Def", "SpA", "SpD", "Spe" };
