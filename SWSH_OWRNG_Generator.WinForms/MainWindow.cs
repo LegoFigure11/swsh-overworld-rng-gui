@@ -903,6 +903,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeButtonState(Program.Window.ReadEncounterButton, true);
                 ChangeButtonState(Program.Window.DaySkipButton, true);
                 ChangeButtonState(Program.Window.ShortSkipButton, true);
+                ChangeButtonState(Program.Window.NTPButton, true);
                 ChangeTextBoxState(Program.Window.SkipAmountInput, true);
                 var sav = await GetFakeTrainerSAV(CancellationToken.None).ConfigureAwait(false);
                 await GetTIDSID(sav).ConfigureAwait(false);
@@ -926,6 +927,7 @@ namespace SWSH_OWRNG_Generator.WinForms
                 ChangeButtonState(Program.Window.ReadEncounterButton, false);
                 ChangeButtonState(Program.Window.DaySkipButton, false);
                 ChangeButtonState(Program.Window.ShortSkipButton, false);
+                ChangeButtonState(Program.Window.NTPButton, false);
                 ChangeTextBoxState(Program.Window.SkipAmountInput, false);
             }
         }
@@ -1131,6 +1133,11 @@ namespace SWSH_OWRNG_Generator.WinForms
         public async Task ResetTime(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.ResetTime(UseCRLF), token).ConfigureAwait(false);
         public async Task DoAnimation(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.Click(SwitchButton.LSTICK, UseCRLF), token).ConfigureAwait(false);
         public async Task DetatchController(CancellationToken token) => await SwitchConnection.SendAsync(SwitchCommand.DetachController(UseCRLF), token).ConfigureAwait(false);
+        private async Task ResetTimeNTP(CancellationToken token)
+        {
+            var command = Encoding.ASCII.GetBytes($"resetTimeNTP{(UseCRLF ? "\r\n" : "")}");
+            await SwitchConnection.SendAsync(command, token).ConfigureAwait(false);
+        }
 
         private async void DaySkip_Click(object sender, EventArgs e)
         {
@@ -1146,8 +1153,6 @@ namespace SWSH_OWRNG_Generator.WinForms
                     ButtonSetText(Program.Window.DaySkipButton, $"{i + 1}/{output}");
                     await Task.Delay(0_360).ConfigureAwait(false);
                 }
-                if (SwitchConnection.Connected)
-                    await ResetTime(CancellationToken.None).ConfigureAwait(false);
                 ChangeButtonState(Program.Window.DaySkipButton, true);
                 ChangeButtonState(Program.Window.ShortSkipButton, true);
                 ButtonSetText(Program.Window.DaySkipButton, "Days");
@@ -1326,6 +1331,14 @@ namespace SWSH_OWRNG_Generator.WinForms
         {
             Settings.Default.PlayTone = CheckPlayTone.Checked;
             Settings.Default.Save();
+        }
+
+        private async void NTPButton_Click(object sender, EventArgs e)
+        {
+            if (SwitchConnection.Connected)
+            {
+                await ResetTimeNTP(CancellationToken.None);
+            }
         }
     }
 }

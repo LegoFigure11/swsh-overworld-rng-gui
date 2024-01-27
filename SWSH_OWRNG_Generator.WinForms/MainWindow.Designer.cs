@@ -198,6 +198,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             LabelHeight = new Label();
             SelectedHeight = new ComboBox();
             CheckUseFilters = new CheckBox();
+            NTPButton = new Button();
             ((System.ComponentModel.ISupportInitialize)ImageRareMark).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Results).BeginInit();
             ((System.ComponentModel.ISupportInitialize)generatorBindingSource).BeginInit();
@@ -1678,7 +1679,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // SkipAmountInput
             // 
             SkipAmountInput.Enabled = false;
-            SkipAmountInput.Location = new System.Drawing.Point(427, 350);
+            SkipAmountInput.Location = new System.Drawing.Point(424, 350);
             SkipAmountInput.Name = "SkipAmountInput";
             SkipAmountInput.Size = new System.Drawing.Size(40, 23);
             SkipAmountInput.TabIndex = 131;
@@ -1689,9 +1690,9 @@ namespace SWSH_OWRNG_Generator.WinForms
             // DaySkipButton
             // 
             DaySkipButton.Enabled = false;
-            DaySkipButton.Location = new System.Drawing.Point(469, 349);
+            DaySkipButton.Location = new System.Drawing.Point(466, 349);
             DaySkipButton.Name = "DaySkipButton";
-            DaySkipButton.Size = new System.Drawing.Size(59, 25);
+            DaySkipButton.Size = new System.Drawing.Size(41, 25);
             DaySkipButton.TabIndex = 132;
             DaySkipButton.Text = "Days";
             DaySkipButton.UseVisualStyleBackColor = true;
@@ -1741,9 +1742,9 @@ namespace SWSH_OWRNG_Generator.WinForms
             // ShortSkipButton
             // 
             ShortSkipButton.Enabled = false;
-            ShortSkipButton.Location = new System.Drawing.Point(529, 349);
+            ShortSkipButton.Location = new System.Drawing.Point(509, 349);
             ShortSkipButton.Name = "ShortSkipButton";
-            ShortSkipButton.Size = new System.Drawing.Size(59, 25);
+            ShortSkipButton.Size = new System.Drawing.Size(40, 25);
             ShortSkipButton.TabIndex = 138;
             ShortSkipButton.Text = "Adv.";
             ShortSkipButton.UseVisualStyleBackColor = true;
@@ -1870,9 +1871,21 @@ namespace SWSH_OWRNG_Generator.WinForms
             CheckUseFilters.Text = "Enable Filters";
             CheckUseFilters.UseVisualStyleBackColor = true;
             // 
+            // NTPButton
+            // 
+            NTPButton.Enabled = false;
+            NTPButton.Location = new System.Drawing.Point(551, 349);
+            NTPButton.Name = "NTPButton";
+            NTPButton.Size = new System.Drawing.Size(37, 25);
+            NTPButton.TabIndex = 182;
+            NTPButton.Text = "NTP";
+            NTPButton.UseVisualStyleBackColor = true;
+            NTPButton.Click += NTPButton_Click;
+            // 
             // MainWindow
             // 
             ClientSize = new System.Drawing.Size(831, 699);
+            Controls.Add(NTPButton);
             Controls.Add(CheckUseFilters);
             Controls.Add(SelectedHeight);
             Controls.Add(Check3Seg);
@@ -2190,5 +2203,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         private Label LabelHeight;
         private ComboBox SelectedHeight;
         public CheckBox CheckUseFilters;
+        public Button button1;
+        public Button NTPButton;
     }
 }
