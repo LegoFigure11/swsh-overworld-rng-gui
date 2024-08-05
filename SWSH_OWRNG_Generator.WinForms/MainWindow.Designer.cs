@@ -146,6 +146,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             EncounterLookupMenu = new ToolStripMenuItem();
             CramomaticMenu = new ToolStripMenuItem();
             LotoIDMenu = new ToolStripMenuItem();
+            WattTraderMenu = new ToolStripMenuItem();
             MenuCloseAdvancesViewerToolStripMenuItem = new ToolStripMenuItem();
             ButtonUpdateStates = new Button();
             CheckTIDSIDFinder = new CheckBox();
@@ -1308,7 +1309,7 @@ namespace SWSH_OWRNG_Generator.WinForms
             // MainMenu
             // 
             MainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            MainMenu.Items.AddRange(new ToolStripItem[] { SeedFinderMenu, EncounterLookupMenu, CramomaticMenu, LotoIDMenu, MenuCloseAdvancesViewerToolStripMenuItem });
+            MainMenu.Items.AddRange(new ToolStripItem[] { SeedFinderMenu, EncounterLookupMenu, CramomaticMenu, LotoIDMenu, WattTraderMenu, MenuCloseAdvancesViewerToolStripMenuItem });
             MainMenu.Location = new System.Drawing.Point(0, 0);
             MainMenu.Name = "MainMenu";
             MainMenu.Size = new System.Drawing.Size(831, 24);
@@ -1341,6 +1342,13 @@ namespace SWSH_OWRNG_Generator.WinForms
             LotoIDMenu.Size = new System.Drawing.Size(59, 20);
             LotoIDMenu.Text = "Loto-ID";
             LotoIDMenu.Click += LotoIDMenu_Click;
+            // 
+            // WattTraderMenu
+            // 
+            WattTraderMenu.Name = "WattTraderMenu";
+            WattTraderMenu.Size = new System.Drawing.Size(79, 20);
+            WattTraderMenu.Text = "Watt Trader";
+            WattTraderMenu.Click += WattTraderMenu_Click;
             // 
             // MenuCloseAdvancesViewerToolStripMenuItem
             // 
@@ -2205,5 +2213,6 @@ namespace SWSH_OWRNG_Generator.WinForms
         public CheckBox CheckUseFilters;
         public Button button1;
         public Button NTPButton;
+        private ToolStripMenuItem WattTraderMenu;
     }
 }

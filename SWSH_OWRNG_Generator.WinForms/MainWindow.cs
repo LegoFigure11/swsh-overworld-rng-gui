@@ -3,6 +3,7 @@ using PKHeX.Drawing.Misc;
 using PKHeX.Drawing.PokeSprite;
 using SWSH_OWRNG_Generator.Core.Overworld.Generators;
 using SWSH_OWRNG_Generator.WinForms.Properties;
+using SWSH_OWRNG_Generator.WinForms.Subforms.WattTrader;
 using SysBot.Base;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace SWSH_OWRNG_Generator.WinForms
         public bool EncounterFormOpen = false;
         public bool CramFormOpen = false;
         public bool LotoIDFormOpen = false;
+        public bool WattTraderFormOpen = false;
         public bool MenuCloseTimelineFormOpen = false;
 
         public MainWindow()
@@ -1276,6 +1278,21 @@ namespace SWSH_OWRNG_Generator.WinForms
             else
             {
                 LotoIDForm.Focus();
+            }
+        }
+
+        WattTrader WattTraderForm;
+        private void WattTraderMenu_Click(object sender, EventArgs e)
+        {
+            if (!WattTraderFormOpen)
+            {
+                WattTraderFormOpen = true;
+                WattTraderForm = new WattTrader(this);
+                WattTraderForm.Show();
+            }
+            else
+            {
+                WattTraderForm.Focus();
             }
         }
 
