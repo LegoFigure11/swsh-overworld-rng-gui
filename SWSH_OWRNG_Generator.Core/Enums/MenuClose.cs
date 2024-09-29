@@ -4,7 +4,5 @@
     {
         Regular,
         HoldingDirection,
-        CaveRegular,
-        CaveHoldingDirection
     }
 }
