@@ -12,7 +12,7 @@ namespace SWSH_OWRNG_Generator.Core.MenuClose
             }
             if (Mode != (byte)MenuCloseType.HoldingDirection)
             {
-                // these rng calls are not correct in all weathers as player fidget logic can change based on weather
+                // These rng calls are not correct in all weathers as player fidget logic can change based on weather
                 rng.Next();
                 rng.NextInt(60);
             }
