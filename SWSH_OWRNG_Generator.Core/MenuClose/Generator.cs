@@ -10,19 +10,11 @@ namespace SWSH_OWRNG_Generator.Core.MenuClose
             {
                 rng.NextInt(91);
             }
-            rng.Next();
-            rng.NextInt(60);
-            if (Mode == (byte)MenuCloseType.HoldingDirection)
+            if (Mode != (byte)MenuCloseType.HoldingDirection)
             {
-                rng.NextInt(360);
-            }
-            else if (Mode == (byte)MenuCloseType.CaveRegular)
-            {
-                // Not implemented
-            }
-            else if (Mode == (byte)MenuCloseType.CaveHoldingDirection)
-            {
-                // Not implemented
+                // These rng calls are not correct in all weathers as player fidget logic can change based on weather
+                rng.Next();
+                rng.NextInt(60);
             }
             return ref rng;
         }
