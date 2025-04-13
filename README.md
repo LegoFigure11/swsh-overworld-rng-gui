@@ -1,3 +1,9 @@
+# ⚠️ THIS TOOL IS EXTREMELY OUTDATED AND INACCURATE, AND HAS BEEN SUCCEEDED BY [OWOOW](https://github.com/LegoFigure11/owoow). PLEASE MIGRATE TO THE NEW TOOL AND NEW REPO INSTEAD OF USING THIS!! ⚠️
+
+Repo has been left public for archival purposes.
+
+
+
 # swsh-overworld-rng-gui
 [![.NET Core Desktop](https://img.shields.io/github/actions/workflow/status/LegoFigure11/swsh-overworld-rng-gui/dotnet-desktop.yml?branch=main)](https://github.com/LegoFigure11/swsh-overworld-rng-gui/actions/workflows/dotnet-desktop.yml)
 [![GitHub License](https://img.shields.io/github/license/legofigure11/swsh-overworld-rng-gui?color=ff69b4)](https://github.com/LegoFigure11/swsh-overworld-rng-gui/blob/main/LICENSE)
